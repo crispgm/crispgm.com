@@ -1,5 +1,5 @@
 <?php
-require_once('../Michelf/Markdown.php');
+require_once('Michelf/Markdown.php');
 
 use \Michelf\Markdown;
 
