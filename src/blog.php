@@ -1,4 +1,5 @@
 <?php
+
 require_once('Michelf/Markdown.php');
 
 use \Michelf\Markdown;
@@ -166,4 +167,3 @@ class Blog{
 		return Markdown::defaultTransform($markdown);
 	}
 }
-?>
