@@ -42,8 +42,8 @@ class Generator{
 		$total_blog = $blog->getBlogNum();
 		$total_page = intval(ceil($total_blog/$blogs_per_page));
 
-		$html = '';
 		for ($i = $page_num; $i <= $total_page; $i++){
+			$html = '';
 			// head
 			$html .= self::get_head();
 			$html .= "\n";
@@ -67,12 +67,17 @@ class Generator{
 			// page
 			$np = $i + 1;
 			$pp = $i - 1;
-			if ( $pp >= 1 || $np<=$total_page ){
+			if ($pp >= 1 || $np<=$total_page) {
 				$html .= "<nav id=\"page_num\">";
-				if ( $pp >= 1 ){
-					$html .= "<a href=\"http://crispgm.github.io/index-{$pp}.html\" id=\"prev\">Prev</a>";
+				if ($pp >= 1) {
+					if ($pp === 1) {
+						$html .= "<a href=\"http://crispgm.github.io/index.html\" id=\"prev\">Prev</a>";
+					}
+					else{
+						$html .= "<a href=\"http://crispgm.github.io/index-{$pp}.html\" id=\"prev\">Prev</a>";
+					}
 				}
-				if ( $np <= $total_page ){
+				if ($np <= $total_page) {
 					$html .= "<a href=\"http://crispgm.github.io/index-{$np}.html\" id=\"next\">Next</a>";
 				}
 				$html .= "</nav>";

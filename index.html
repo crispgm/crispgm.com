@@ -40,6 +40,31 @@
 <div class="article_date">2014/01/10</div>
 </div>
 <div class="article_main">
+<p>Mac Mail用户体验非常不错</p>
+
+<p>不过在国内网络状况下，和gmail一起总是会有点问题</p>
+
+<p>收件箱里选择删除一封gmail邮件，并用command+q关掉Mail</p>
+
+<p>如果删除gmail失败的话就会报错，之后Mail就会处于一种卡死的状态，退不出来也进不去</p>
+
+<p>只能选择</p>
+
+<pre><code>$ ps aux|grep Mail
+$ kill -9 xxxx
+</code></pre>
+
+<p>这个事情遇多了，搞了个更简单粗暴的shell脚本</p>
+
+<pre><code>#!/bin/bash
+PID=$(ps aux|grep $1|grep -v grep|tail -1|awk '{print $2}')
+kill -9 $PID
+</code></pre>
+
+<p>执行一键暴力杀死Mail进程（重名被误杀后果自负）</p>
+
+<pre><code>$ sh kill.sh Mail
+</code></pre>
 </div></div>
 <div class="article">
 <div class="article_head">
@@ -47,6 +72,25 @@
 <div class="article_date">2013/12/30</div>
 </div>
 <div class="article_main">
+<p>最近，在工作种遇到了两个有点棘手的问题。前者是不小心打错命令建立了一个"--"两个减号开头的文件，想删除删不掉；后者是，减少机器后单机文件数过多，导致定时脚本里的tar执行失败了。</p>
+
+<h4>在shell中删除减号开头的文件</h4>
+
+<p>解决方法：</p>
+
+<pre><code>rm -- "--xxxx"
+</code></pre>
+
+<h4>argument list too long</h4>
+
+<p>由于文件数增加，脚本出现错误tar: argument list too long，也就是说tar参数太多了</p>
+
+<p>解决方法：</p>
+
+<pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  
+tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
+rm /tmp/20131229.list
+</code></pre>
 </div></div>
 <div class="article">
 <div class="article_head">
@@ -54,6 +98,39 @@
 <div class="article_date">2013/11/25</div>
 </div>
 <div class="article_main">
+<p>这首歌本来没歌词，名叫《威风堂堂》进行曲(Pomp and Circumstance March No.1 in D major，威风堂堂D大调第一进行曲)，英国著名作曲家埃尔加作曲。后来加上了歌词后，变成了著名爱国歌曲，甚至英格兰橄榄球队的“国歌”就是它。不过一般来说在前面一堆是不会唱的，只有副歌(Chorus)部分才会唱。</p>
+
+<pre><code>Land of hope and glory,
+Mother of the free.
+How shall we extol thee,
+who are born of thee.
+
+Wider still and wider,
+shall thy bounds be set?
+God who made thee mighty,
+make thee mightier yet.
+</code></pre>
+
+<p>本人渣翻译：</p>
+
+<pre><code>希望与光荣之地，
+自由的母亲。
+我等为你而生，
+该怎样赞美你？
+
+疆界在变广，
+什么时候能被设定。
+让你碉堡的神，
+使你更加碉堡。
+</code></pre>
+
+<p>这段歌词的确很霸气，第二段第一句，当然对比起现在英国的国力，这歌词的内容已经名存实亡了很多</p>
+
+<p>附上视频链接：<a href="http://v.youku.com/v_show/id_XMjA3NDIwMzA0.html">BBC Proms - Land of Hope and Glory</a></p>
+
+<p>合唱：BBC Singers, BBC Symphony Chorus<br />
+演奏：BBC Symphony Orchestra<br />
+指挥：Jiří Bělohlávek  </p>
 </div></div>
 <div class="article">
 <div class="article_head">
@@ -61,6 +138,15 @@
 <div class="article_date">2013/11/09</div>
 </div>
 <div class="article_main">
+<p>随着终场哨声的响起，恒大有惊无险的夺冠了！</p>
+
+<p>亚冠冠军。</p>
+
+<p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p>
+
+<p>想起大学时踢新生杯和院系杯时，就是这种心情。</p>
+
+<p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>
 </div></div>
 <div class="article">
 <div class="article_head">
@@ -68,6 +154,29 @@
 <div class="article_date">2013/11/03</div>
 </div>
 <div class="article_main">
+<h4>mac下ssh避免多次输入密码</h4>
+
+<p>编辑文件</p>
+
+<pre><code>$ sudo vim /etc/ssh_config
+</code></pre>
+
+<p>加入</p>
+
+<pre><code>Host *   
+ControlMaster auto  
+ControlPath ~/.ssh/master-%r@%h:%p  
+</code></pre>
+
+<p>保存后，重新启动终端即可生效</p>
+
+<h4>mac终端显示颜色</h4>
+
+<p>修改~/.bash_profile，添加</p>
+
+<pre><code>export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad
+</code></pre>
 </div></div>
 <div class="article">
 <div class="article_head">
@@ -75,6 +184,13 @@
 <div class="article_date">2013/11/01</div>
 </div>
 <div class="article_main">
+<p>Chrome小插件，可以对选中的文字调用service，查bug利器，功能简单实用。</p>
+
+<p>由于没有发布到Chrome Web Store，所以安装时，请在开发者模式下把crx包拖入chrome中。</p>
+
+<p><img src="http://crispgm.sinaapp.com/static/img/servicecaller.png" alt="" /></p>
+
+<p><a href="https://github.com/crispgm/chrome_tieba_service_caller">项目 GitHub</a></p>
 </div></div>
 <nav id="page_num"><a href="http://crispgm.github.io/index-2.html" id="next">Next</a></nav></div>
 <div>

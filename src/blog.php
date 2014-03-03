@@ -138,7 +138,7 @@ class Blog{
 			return false;
 		
 		$md_file = $blog_info['markdown'];
-		$md_path = "doc/$md_file";
+		$md_path = "../doc/$md_file";
 		if ( !is_file($md_path) )
 			return false;
 
