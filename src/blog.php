@@ -95,6 +95,11 @@ class Blog{
 	{
 		return $this->blogs;
 	}
+
+	public function getAllPages()
+	{
+		return $this->pages;
+	}
 	
 	public function getBlogNum()
 	{
