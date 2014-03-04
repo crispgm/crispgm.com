@@ -1,6 +1,4 @@
-Mac Mail用户体验非常不错
-
-不过在国内网络状况下，和gmail一起总是会有点问题
+Mac Mail在国内网络状况下，和gmail一起总是会有点问题
 
 收件箱里选择删除一封gmail邮件，并用command+q关掉Mail
 
