@@ -38,28 +38,24 @@
 <div class="container">
 
 <div class="article"><div class="article_head"><div class="article_title">my nginx module</div>
-</div><div class="article_main"><p>/*<br />
-   * ngx<em>http</em>crisp<em>hello</em>module<br />
-   * copyright(c) David Zhang<br />
-   */</p>
+</div><div class="article_main"><pre><code>#include &lt;ngx_config.h&gt;  
+#include &lt;ngx_core.h&gt;  
+#include &lt;ngx_http.h&gt;
 
-<p>#include &lt;ngx<em>config.h><br />
-  #include &lt;ngx</em>core.h><br />
-  #include &lt;ngx_http.h></p>
+static char *ngx_http_crisp_hello_conf(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);  
+static ngx_int_t ngx_http_crisp_hello_handler(ngx_http_request_t *r);
 
-<p>static char *ngx_http_crisp_hello_conf(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);<br />
-  static ngx_int_t ngx_http_crisp_hello_handler(ngx_http_request_t *r);</p>
-
-<p>static ngx<em>command</em>t ngx<em>http</em>crisp<em>hello</em>commands[] = {<br />
-    {<br />
-      ngx<em>string("crisp</em>hello"),<br />
-      NGX<em>HTTP</em>MAIN<em>CONF | NGX</em>HTTP<em>SRV</em>CONF | NGX<em>HTTP</em>LOC<em>CONF | NGX</em>HTTP<em>LMT</em>CONF | NGX<em>CONF</em>NOARGS,<br />
-      ngx<em>http</em>crisp<em>hello</em>conf,<br />
-      NGX<em>HTTP</em>LOC<em>CONF</em>OFFSET,<br />
-      NULL<br />
-    },<br />
-    ngx<em>null</em>command<br />
-  };</p>
+static ngx_command_t ngx_http_crisp_hello_commands[] = {  
+  {  
+    ngx_string("crisp_hello"),  
+    NGX_HTTP_MAIN_CONF | NGX_HTTP_SRV_CONF | NGX_HTTP_LOC_CONF | NGX_HTTP_LMT_CONF | NGX_CONF_NOARGS,  
+    ngx_http_crisp_hello_conf,  
+    NGX_HTTP_LOC_CONF_OFFSET,  
+    NULL  
+  },  
+  ngx_null_command  
+};
+</code></pre>
 </div>
 </div></div>
 <div>
