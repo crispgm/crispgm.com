@@ -1,7 +1,7 @@
 <?php
 require_once('blog.php');
 
-class Generator
+class CrispBlogGenerator
 {
     private static $head = null;
     private static $foot = null;
@@ -44,7 +44,6 @@ class Generator
             $html .= "\n";
 
             $title = $blog_info['title'];
-			$type = $blog_info['type'];
 			$date = $blog_info['date'];
 			$markdown = $blog->getBlogHTML($blog_name);
 
@@ -67,17 +66,16 @@ class Generator
 
     private static function gen_pages()
     {
-    	$blog = new Blog($blogs_per_page);
+    	$blog = new Blog();
     	$all_pages = $blog->getAllPages();
-    	foreach ($all_pages as $blog_name => $blog_info) {
+
+    	foreach ($all_pages as $page_name => $page_info) {
     		$html = '';
     		$html .= self::get_head();
             $html .= "\n";
 
-            $title = $blog_info['title'];
-			$type = $blog_info['type'];
-			$date = $blog_info['date'];
-			$markdown = $blog->getBlogHTML($blog_name);
+            $title = $page_info['title'];
+			$markdown = $blog->getPageHTML($page_name);
 
 			$html .= '<div class="article">';
 			$html .= '<div class="article_head">';
@@ -88,7 +86,7 @@ class Generator
 
             $html .= self::get_foot();
             $html .= "\n";
-            file_put_contents("../page/{$blog_name}.html", $html);
+            file_put_contents("../page/{$page_name}.html", $html);
     	}
     }
 
@@ -159,7 +157,6 @@ class Generator
         self::gen_blogs();
         self::gen_pages();
     }
-
 }
 
-Generator::generate();
+CrispBlogGenerator::generate();

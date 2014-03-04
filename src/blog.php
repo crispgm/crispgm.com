@@ -80,10 +80,6 @@ class Blog{
 			'title'    => 'My Profile',
 			'markdown' => 'my-profile.md',
 		),
-		'project' => array(
-			'title'    => 'My Project',
-			'markdown' => 'my-projects.md',
-		),
 	);
 	
 	public function __construct($blog_num_per_page = 10)
@@ -164,7 +160,7 @@ class Blog{
 			return false;
 		
 		$md_file = $page_info['markdown'];
-		$md_path = "doc/$md_file";
+		$md_path = "../doc/$md_file";
 		if ( !is_file($md_path) )
 			return false;
 
