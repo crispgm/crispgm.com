@@ -96,3 +96,7 @@ footer{
 	height: 36px;
 	overflow: hidden;
 }
+pre code{
+    border: 1px #aaaaaa solid;
+    border-radius: 2px;
+}
