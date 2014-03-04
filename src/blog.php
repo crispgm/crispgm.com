@@ -80,6 +80,10 @@ class Blog{
 			'title'    => 'My Profile',
 			'markdown' => 'my-profile.md',
 		),
+        'test' => array(
+            'title' => 'my nginx module',
+            'markdown' => 'test.md',
+        ),
 	);
 	
 	public function __construct($blog_num_per_page = 10)

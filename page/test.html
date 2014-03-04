@@ -37,15 +37,29 @@
 </div>
 <div class="container">
 
-<div class="article"><div class="article_head"><div class="article_title">About</div>
-</div><div class="article_main"><p>Copyright &copy; David Zhang, 2014.</p>
+<div class="article"><div class="article_head"><div class="article_title">my nginx module</div>
+</div><div class="article_main"><p>/*<br />
+   * ngx<em>http</em>crisp<em>hello</em>module<br />
+   * copyright(c) David Zhang<br />
+   */</p>
 
-<p>Powered by GitHub, Bootstrap, Highlight.js, PHP, Markdown &amp; Disqus.</p>
+<p>#include &lt;ngx<em>config.h><br />
+  #include &lt;ngx</em>core.h><br />
+  #include &lt;ngx_http.h></p>
 
-<p>All the blogs are licensed under a
-<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</a></p>
+<p>static char *ngx_http_crisp_hello_conf(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);<br />
+  static ngx_int_t ngx_http_crisp_hello_handler(ngx_http_request_t *r);</p>
 
-<p><img src="http://crispgm.github.io/image/cc-by-nc-nd.png" alt="Creative Commons License" /></p>
+<p>static ngx<em>command</em>t ngx<em>http</em>crisp<em>hello</em>commands[] = {<br />
+    {<br />
+      ngx<em>string("crisp</em>hello"),<br />
+      NGX<em>HTTP</em>MAIN<em>CONF | NGX</em>HTTP<em>SRV</em>CONF | NGX<em>HTTP</em>LOC<em>CONF | NGX</em>HTTP<em>LMT</em>CONF | NGX<em>CONF</em>NOARGS,<br />
+      ngx<em>http</em>crisp<em>hello</em>conf,<br />
+      NGX<em>HTTP</em>LOC<em>CONF</em>OFFSET,<br />
+      NULL<br />
+    },<br />
+    ngx<em>null</em>command<br />
+  };</p>
 </div>
 </div></div>
 <div>
