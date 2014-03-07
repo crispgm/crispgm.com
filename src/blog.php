@@ -39,7 +39,7 @@ class Blog{
 			'date'     => '2013/11/01',
 		),
 		'awk-scripts' => array(
-			'title' => 'AWK日志统计脚本',
+			'title' => 'awk日志统计脚本',
 			'markdown' => 'awk-scripts.md',
 			'date' => '2013/07/20',
 		),
