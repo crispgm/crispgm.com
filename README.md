@@ -12,20 +12,29 @@ This is my github blog, which uses markdown and php to generate a whole blog sit
 
 > modify blog.php and add your new blog entry info here
 
-     cd crispgm.github.io/src  
-     vim blog.php
+     cd crispgm.github.io  
+     vim src/blog.php
+
+     protected $blogs = array(  
+        array(  
+            'title'    => 'foobar',  
+            'markdown' => 'foo-bar.md',  
+            'date'     => '2014-03-08',  
+        ),  
+     );
 
 > create a markdown file with the name in blog.php array
     
-    touch foo-bar.md
+    vim doc/foo-bar.md
 
-> run generator script
+add the content and save the file.
 
-    php generator.php
+> make
+
+    sh make.sh
 
 > commit to github
 
-    cd ..  
     git add *  
     git commit -m "yourmessage"  
     git push
