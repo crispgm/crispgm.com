@@ -6,8 +6,8 @@ Mac Mail在国内网络状况下，和gmail一起总是会有点问题
 
 只能选择
 
-	$ ps aux|grep Mail
-	$ kill -9 xxxx
+	ps aux|grep Mail
+	kill -9 xxxx
 
 这个事情遇多了，搞了个更简单粗暴的shell脚本
 
@@ -17,5 +17,5 @@ Mac Mail在国内网络状况下，和gmail一起总是会有点问题
 
 执行一键暴力杀死Mail进程（重名被误杀后果自负）
 
-	$ sh kill.sh Mail
+	sh kill.sh Mail
 

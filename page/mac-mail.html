@@ -45,8 +45,8 @@
 
 <p>只能选择</p>
 
-<pre><code>$ ps aux|grep Mail
-$ kill -9 xxxx
+<pre><code>ps aux|grep Mail
+kill -9 xxxx
 </code></pre>
 
 <p>这个事情遇多了，搞了个更简单粗暴的shell脚本</p>
@@ -58,7 +58,7 @@ kill -9 $PID
 
 <p>执行一键暴力杀死Mail进程（重名被误杀后果自负）</p>
 
-<pre><code>$ sh kill.sh Mail
+<pre><code>sh kill.sh Mail
 </code></pre>
 </div>
 </div>    <div id="disqus_thread"></div>

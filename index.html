@@ -64,8 +64,8 @@ sudo kextload   /System/Library/Extensions/AppleHDA.kext
 
 <p>只能选择</p>
 
-<pre><code>$ ps aux|grep Mail
-$ kill -9 xxxx
+<pre><code>ps aux|grep Mail
+kill -9 xxxx
 </code></pre>
 
 <p>这个事情遇多了，搞了个更简单粗暴的shell脚本</p>
@@ -77,7 +77,7 @@ kill -9 $PID
 
 <p>执行一键暴力杀死Mail进程（重名被误杀后果自负）</p>
 
-<pre><code>$ sh kill.sh Mail
+<pre><code>sh kill.sh Mail
 </code></pre>
 </div></div>
 <div class="article">
@@ -180,7 +180,7 @@ rm /tmp/20131229.list
 
 <p>编辑文件</p>
 
-<pre><code>$ sudo vim /etc/ssh_config
+<pre><code>sudo vim /etc/ssh_config
 </code></pre>
 
 <p>加入</p>

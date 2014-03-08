@@ -2,7 +2,7 @@
 
 编辑文件
 
-    $ sudo vim /etc/ssh_config
+    sudo vim /etc/ssh_config
 
 加入
 
