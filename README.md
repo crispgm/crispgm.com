@@ -6,14 +6,16 @@ This is my github blog, which uses markdown and php to generate a whole blog sit
 
 #### Usage
 
-> get the source
+> Get the code
 
     git clone https://github.com/crispgm/crispgm.github.io.git
 
-> modify blog.php and add your new blog entry info here
+> Modify blog.php
 
      cd crispgm.github.io  
      vim src/blog.php
+
+> And then add your new blog entry info here
 
      protected $blogs = array(  
         array(  
@@ -23,17 +25,17 @@ This is my github blog, which uses markdown and php to generate a whole blog sit
         ),  
      );
 
-> create a markdown file with the name in blog.php array
+> Create a markdown file with the name in blog.php array
     
     vim doc/foo-bar.md
 
-add the content and save the file.
+> And add the content and save the file.
 
-> make
+> Make
 
     sh make.sh
 
-> commit to github
+> Commit to github
 
     git add *  
     git commit -m "yourmessage"  
