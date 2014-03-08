@@ -9,7 +9,7 @@ class Blog{
     
     protected $blogs = array(
         'mac-sound' => array(
-            'title'    => 'Macbook合盖子或者休眠后后没声音',
+            'title'    => 'Macbook合盖子或者休眠后没声音',
             'markdown' => 'mac-sound.md',
             'date'     => '2014/03/08',
         ),
