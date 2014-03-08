@@ -8,6 +8,11 @@ class Blog{
     protected $blog_num_per_page;
     
     protected $blogs = array(
+        'aaa' => array(
+            'title' => 'bbb',
+            'markdown' => 'aaa.md',
+            'date' => '2014/03/08',
+        ),
         'mac-sound' => array(
             'title'    => 'Macbook合盖子或者休眠后没声音',
             'markdown' => 'mac-sound.md',
