@@ -8,6 +8,11 @@ class Blog{
     protected $blog_num_per_page;
     
     protected $blogs = array(
+        'fiddler-proxy' => array(
+            'title'    => 'Fiddler网络调试工具',
+            'markdown' => 'fiddler-proxy.md',
+            'date'     => '2014/03/21',
+        ),
         'mac-sound' => array(
             'title'    => 'Macbook合盖子或者休眠后没声音',
             'markdown' => 'mac-sound.md',
@@ -84,10 +89,6 @@ class Blog{
         'profile' => array(
             'title'    => 'My Profile',
             'markdown' => 'my-profile.md',
-        ),
-        'test' => array(
-            'title' => 'my nginx module',
-            'markdown' => 'test.md',
         ),
     );
     
