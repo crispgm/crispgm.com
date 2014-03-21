@@ -74,15 +74,15 @@ Android
 进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
 </code></pre>
 
-<p><img src="http://crispgm.github.io/image/fiddler/capturing.png" alt="Fiddler Filters" /></p>
+<p><img src="http://crispgm.github.io/image/fiddler/capturing.png" alt="Fiddler Capturing" /></p>
 
 <p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
 
-<p><img src="http://crispgm.github.io/image/fiddler/request.png" alt="Fiddler Filters" /></p>
+<p><img src="http://crispgm.github.io/image/fiddler/request.png" alt="Fiddler Request" /></p>
 
 <p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
 
-<p><img src="http://crispgm.github.io/image/fiddler/response.png" alt="Fiddler Filters" /></p>
+<p><img src="http://crispgm.github.io/image/fiddler/response.png" alt="Fiddler Response" /></p>
 
 <h3>Web Debugging</h3>
 
@@ -138,26 +138,37 @@ Android
 
 <p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
 
+<p><img src="http://crispgm.github.io/image/fiddler/autoresponder.png" alt="Fiddler AutoResponder" /></p>
+
 <h3>FiddlerScript</h3>
 
 <p>FiddlerScript以C#语言形式，直接修改Request和Response，对于熟练的专业用户来说，会更加方便灵活。</p>
 
 <p>打开FiddlerScript标签，在OnBeforeRequest函数中修改：</p>
 
-<ul>
-<li><p>添加Headers</p>
+<blockquote>
+  <p>添加Headers</p>
+</blockquote>
 
-<p>oSession.oRequest["http<em>x</em>bd_logid"] = "12345678";</p></li>
-<li><p>添加Cookies</p>
+<pre><code>oSession.oRequest["http_net_type"] = "1";
+</code></pre>
 
-<p>// 增加预览机标识
-oSession.oRequest.headers.Add("Cookie", "pub_env=1");</p></li>
-<li><p>匹配URL，防止添加的字段干扰到其他网页</p>
+<blockquote>
+  <p>添加Cookies</p>
+</blockquote>
 
-<p>if (oSession.uriContains("c.tieba.baidu.com")) {
-    oSession.oRequest.headers.Add("Cookie", "pub_env=1");
-}</p></li>
-</ul>
+<pre><code>// 增加预览机标识
+oSession.oRequest.headers.Add("Cookie", "pub_env=1");
+</code></pre>
+
+<blockquote>
+  <p>匹配URL，防止添加的字段干扰到其他网页</p>
+</blockquote>
+
+<pre><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
+    oSession.oRequest.headers.Add("Cookie", "pub_env=1");  
+}
+</code></pre>
 
 <p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>
 </div>

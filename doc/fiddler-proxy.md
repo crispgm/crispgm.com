@@ -36,15 +36,15 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
     Android
     进入设置 -> WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
 
-![Fiddler Filters](http://crispgm.github.io/image/fiddler/capturing.png)
+![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
 
 选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。
 
-![Fiddler Filters](http://crispgm.github.io/image/fiddler/request.png)
+![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
 
 如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。
 
-![Fiddler Filters](http://crispgm.github.io/image/fiddler/response.png)
+![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
 
 ### Web Debugging
 
@@ -92,25 +92,27 @@ AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoR
 
 将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。
 
+![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
+
 ### FiddlerScript
 
 FiddlerScript以C#语言形式，直接修改Request和Response，对于熟练的专业用户来说，会更加方便灵活。
 
 打开FiddlerScript标签，在OnBeforeRequest函数中修改：
 
-* 添加Headers
+> 添加Headers
 
-	oSession.oRequest["http_x_bd_logid"] = "12345678";
+	oSession.oRequest["http_net_type"] = "1";
 
-* 添加Cookies
+> 添加Cookies
 
 	// 增加预览机标识
 	oSession.oRequest.headers.Add("Cookie", "pub_env=1");
 
-* 匹配URL，防止添加的字段干扰到其他网页
+> 匹配URL，防止添加的字段干扰到其他网页
 
-	if (oSession.uriContains("c.tieba.baidu.com")) {
-		oSession.oRequest.headers.Add("Cookie", "pub_env=1");
+	if (oSession.uriContains("c.tieba.baidu.com")) {  
+		oSession.oRequest.headers.Add("Cookie", "pub_env=1");  
 	}
 
 更多用法，请参考[Fiddler Documentation](http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse)
