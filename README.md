@@ -12,18 +12,18 @@ This is my github blog, which uses markdown and php to generate a static blog si
 
 > Modify blog.php
 
-     cd crispgm.github.io  
-     vim src/blog.php
+    cd crispgm.github.io  
+    vim src/blog.php
 
 > And then add your new blog entry info here
 
-     protected $blogs = array(  
+    protected $blogs = array(  
         array(  
             'title'    => 'foobar',  
             'markdown' => 'foo-bar.md',  
             'date'     => '2014-03-08',  
         ),  
-     );
+    );
 
 > Create a markdown file with the name in blog.php array
     
