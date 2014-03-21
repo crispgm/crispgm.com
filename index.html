@@ -69,11 +69,7 @@
 
 <h3>网络请求抓取</h3>
 
-<p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求</p>
-
-<p><img src="http://crispgm.github.io/image/fiddler/capturing.png" alt="Fiddler Filters" /></p>
-
-<p>并且可以通过代理功能，将其他在同一WIFI中手机或电脑代理到你的IP上，这时就可以获取它们的网络请求。</p>
+<p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。</p>
 
 <pre><code>iPhone  
 进入Settings -&gt; WLAN，单击你连接中的WIFI，在HTTP PROXY下选择Manual，然后Server填写Fiddler所在机器在此WIFI中的IP地址，Port是默认的8888。
@@ -81,6 +77,8 @@
 Android
 进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
 </code></pre>
+
+<p><img src="http://crispgm.github.io/image/fiddler/capturing.png" alt="Fiddler Filters" /></p>
 
 <p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
 
