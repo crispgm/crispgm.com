@@ -4,4 +4,4 @@
 简单的说，就是在Terminal执行下面两条
 
     sudo kextunload /System/Library/Extensions/AppleHDA.kext  
-    sudo kextload   /System/Library/Extensions/AppleHDA.kext
+    sudo kextload /System/Library/Extensions/AppleHDA.kext
