@@ -88,7 +88,43 @@ Android
 
 <p><img src="http://crispgm.github.io/image/fiddler/response.png" alt="Fiddler Filters" /></p>
 
-<h3>Filter</h3>
+<h3>Web Debugging</h3>
+
+<p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
+
+<ul>
+<li>HOSTS</li>
+</ul>
+
+<p>等同于操作系统的HOSTS文件。</p>
+
+<ul>
+<li>Filters</li>
+</ul>
+
+<p>可以修改Request或Response的包体。</p>
+
+<ul>
+<li>AutoResponder</li>
+</ul>
+
+<p>可以截获请求，直接将请求代理到指定URL进行响应。</p>
+
+<ul>
+<li>FiddlerScript</li>
+</ul>
+
+<p>以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</p>
+
+<h3>HOSTS</h3>
+
+<p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p>
+
+<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
+
+<p><img src="http://crispgm.github.io/image/fiddler/hosts.png" alt="Fiddler Hosts" /></p>
+
+<h3>Filters</h3>
 
 <p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取</p>
 
@@ -96,15 +132,38 @@ Android
 
 <p>在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。</p>
 
+<p>除此之外，还可以直接修改Request或Response包体。</p>
+
 <p><img src="http://crispgm.github.io/image/fiddler/filters.png" alt="Fiddler Filters" /></p>
 
-<h3>HOSTS</h3>
+<h3>AutoResponder</h3>
 
-<p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便，不用进入C:\Windows\System32\Drivers\Etc\HOSTS。</p>
+<p>AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。</p>
 
-<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)</p>
+<p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
 
-<p><img src="http://crispgm.github.io/image/fiddler/hosts.png" alt="Fiddler Hosts" /></p>
+<h3>FiddlerScript</h3>
+
+<p>FiddlerScript以C#语言形式，直接修改Request和Response，对于熟练的专业用户来说，会更加方便灵活。</p>
+
+<p>打开FiddlerScript标签，在OnBeforeRequest函数中修改：</p>
+
+<ul>
+<li><p>添加Headers</p>
+
+<p>oSession.oRequest["http<em>x</em>bd_logid"] = "12345678";</p></li>
+<li><p>添加Cookies</p>
+
+<p>// 增加预览机标识
+oSession.oRequest.headers.Add("Cookie", "pub_env=1");</p></li>
+<li><p>匹配URL，防止添加的字段干扰到其他网页</p>
+
+<p>if (oSession.uriContains("c.tieba.baidu.com")) {
+    oSession.oRequest.headers.Add("Cookie", "pub_env=1");
+}</p></li>
+</ul>
+
+<p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>
 </div></div>
 <div class="article">
 <div class="article_head">
