@@ -2,7 +2,7 @@
 
 #### Introduction
 
-This is my github blog, which uses markdown and php to generate a whole blog site.
+This is my github blog, which uses markdown and php to generate a static blog site.
 
 #### Usage
 
