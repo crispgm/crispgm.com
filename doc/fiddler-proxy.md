@@ -96,9 +96,11 @@ AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoR
 
 ### FiddlerScript
 
-FiddlerScript以C#语言形式，直接修改Request和Response，对于熟练的专业用户来说，会更加方便灵活。
+FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。
 
-打开FiddlerScript标签，在OnBeforeRequest函数中修改：
+使用FidderScript建议安装第一节所说的插件，安装后就可以直接打开FiddlerScript标签，直接修改代码。
+
+在OnBeforeRequest函数中修改：
 
 > 添加Headers
 
@@ -116,3 +118,4 @@ FiddlerScript以C#语言形式，直接修改Request和Response，对于熟练�
 	}
 
 更多用法，请参考[Fiddler Documentation](http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse)
+
