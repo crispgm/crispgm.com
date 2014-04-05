@@ -72,6 +72,9 @@
 
 Android
 进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
+
+PC本地  
+用ProxySwitchy一类的插件，代理到localhost:8888
 </code></pre>
 
 <p><img src="http://crispgm.github.io/image/fiddler/capturing.png" alt="Fiddler Capturing" /></p>
@@ -137,6 +140,8 @@ Android
 <p>AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。</p>
 
 <p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
+
+<p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p>
 
 <p><img src="http://crispgm.github.io/image/fiddler/autoresponder.png" alt="Fiddler AutoResponder" /></p>
 

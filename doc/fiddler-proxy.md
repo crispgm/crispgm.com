@@ -36,6 +36,9 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
     Android
     进入设置 -> WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
 
+    PC本地  
+    用ProxySwitchy一类的插件，代理到localhost:8888
+
 ![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
 
 选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。
@@ -91,6 +94,8 @@ Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不�
 AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。
 
 将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。
+
+此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。
 
 ![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
 
