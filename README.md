@@ -36,7 +36,7 @@ This is my github blog, which uses markdown and php to generate a static blog si
 
 > Add the content and save the file
 
-    \#\#\# hello, markdown
+    ### hello, markdown
 
 > Make
 
