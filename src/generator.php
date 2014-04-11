@@ -36,24 +36,24 @@ class CrispBlogGenerator
 
     private static function gen_blogs()
     {
-    	$blog = new Blog($blogs_per_page);
-    	$all_blogs = $blog->getAllBlogs();
-    	foreach ($all_blogs as $blog_name => $blog_info) {
-    		$html = '';
-    		$html .= self::get_head();
+        $blog = new Blog($blogs_per_page);
+        $all_blogs = $blog->getAllBlogs();
+        foreach ($all_blogs as $blog_name => $blog_info) {
+            $html = '';
+            $html .= self::get_head();
             $html .= "\n";
 
             $title = $blog_info['title'];
-			$date = $blog_info['date'];
-			$markdown = $blog->getBlogHTML($blog_name);
+            $date = $blog_info['date'];
+            $markdown = $blog->getBlogHTML($blog_name);
 
-			$html .= '<div class="article">';
-			$html .= '<div class="article_head">';
-			$html .= "<div class=\"article_title\">$title</div>\n";
-			$html .= "<div class=\"article_date\">$date</div>\n";
-			$html .= '</div>';
-			$html .= "<div class=\"article_main\">$markdown</div>\n";
-			$html .= '</div>';
+            $html .= '<div class="article">';
+            $html .= '<div class="article_head">';
+            $html .= "<div class=\"article_title\">$title</div>\n";
+            $html .= "<div class=\"article_date\">$date</div>\n";
+            $html .= '</div>';
+            $html .= "<div class=\"article_main\">$markdown</div>\n";
+            $html .= '</div>';
 
             $html .= self::get_comment();
             $html .= "\n";
@@ -61,33 +61,33 @@ class CrispBlogGenerator
             $html .= self::get_foot();
             $html .= "\n";
             file_put_contents("../page/{$blog_name}.html", $html);
-    	}
+        }
     }
 
     private static function gen_pages()
     {
-    	$blog = new Blog();
-    	$all_pages = $blog->getAllPages();
+        $blog = new Blog();
+        $all_pages = $blog->getAllPages();
 
-    	foreach ($all_pages as $page_name => $page_info) {
-    		$html = '';
-    		$html .= self::get_head();
+        foreach ($all_pages as $page_name => $page_info) {
+            $html = '';
+            $html .= self::get_head();
             $html .= "\n";
 
             $title = $page_info['title'];
-			$markdown = $blog->getPageHTML($page_name);
+            $markdown = $blog->getPageHTML($page_name);
 
-			$html .= '<div class="article">';
-			$html .= '<div class="article_head">';
-			$html .= "<div class=\"article_title\">$title</div>\n";
-			$html .= '</div>';
-			$html .= "<div class=\"article_main\">$markdown</div>\n";
-			$html .= '</div>';
+            $html .= '<div class="article">';
+            $html .= '<div class="article_head">';
+            $html .= "<div class=\"article_title\">$title</div>\n";
+            $html .= '</div>';
+            $html .= "<div class=\"article_main\">$markdown</div>\n";
+            $html .= '</div>';
 
             $html .= self::get_foot();
             $html .= "\n";
             file_put_contents("../page/{$page_name}.html", $html);
-    	}
+        }
     }
 
     private static function gen_index()
