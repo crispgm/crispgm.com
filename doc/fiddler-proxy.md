@@ -1,4 +1,4 @@
-### 什么是Fiddler
+#### 什么是Fiddler
 
 Fiddler官方给Fiddler的描述语是Web Debugging Proxy，也就是web调试代理工具。
 
@@ -16,7 +16,7 @@ Fiddler官方给Fiddler的描述语是Web Debugging Proxy，也就是web调试�
 
 本文，主要讨论前三项功能的使用方法，包括Fiddler的基础配置和功能以及使用内置FiddlerScript脚本进行复杂功能调试。
 
-### 准备和配置
+#### 准备和配置
 
 Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户，有一个基于Mono的Alpha版本，经本人Mac实际测试，基本上算是不能用的状态。因此，不建议使用。
 
@@ -26,7 +26,7 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
 
 准备完毕后，请打开Fiddler进入Tools->Fiddler Options，在Connections中勾选Allow remote computers to connect，并重新启动Fiddler。
 
-### 网络请求抓取
+#### 网络请求抓取
 
 完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。
 
@@ -53,7 +53,7 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
 ![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
 --->
 
-### Web Debugging
+#### Web Debugging
 
 在进行调试时，我们可以使用Fiddler的几种调试功能：
 
@@ -65,7 +65,7 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
 
 * FiddlerScript，以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。
 
-### HOSTS
+#### HOSTS
 
 Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。
 
@@ -74,7 +74,7 @@ Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不�
 ![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)
 --->
 
-### Filters
+#### Filters
 
 很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取
 
@@ -86,7 +86,8 @@ Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不�
 <!---
 ![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)
 --->
-### AutoResponder
+
+#### AutoResponder
 
 AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。
 
@@ -97,7 +98,7 @@ AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoR
 ![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
 --->
 
-### FiddlerScript
+#### FiddlerScript
 
 FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。
 
