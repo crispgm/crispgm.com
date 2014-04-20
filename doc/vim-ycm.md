@@ -6,11 +6,11 @@
 
 * C-family languages, based on clang/llvm
 
-** C
+    * C
 
-** C++
+    * C++
 
-** Objective-C
+    * Objective-C
 
 * Python, [Jedi](https://github.com/davidhalter/jedi)-based
     
@@ -40,7 +40,7 @@ ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac O
     
     Bundle 'Valloric/YouCompleteMe'
 
-保存重启vim后_:BundleInstall_，就开始安装了。这个__安装__并没有包括__编译__，只是把ycm的vim、python以及C++代码下载下来。
+保存重启vim后_:BundleInstall_，就开始安装了。这个 __安装__ 并没有包括 __编译__ ，只是把ycm的vim、python以及C++代码下载下来。
 
 然后进入YouCompleteMe的目录开始编译，_--clang-completer_是启用C family languages提示(为的就是这功能，果断要加上)
 
