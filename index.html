@@ -170,45 +170,30 @@ PC本地
 用ProxySwitchy一类的插件，代理到localhost:8888
 </code></pre>
 
-<p><!---
+<!---
 ![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
 --->
 选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。
+
 <!---
 ![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
 --->
 如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。
+
 <!---
 ![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
----></p>
+--->
 
 <h3>Web Debugging</h3>
 
 <p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
 
 <ul>
-<li>HOSTS</li>
+<li><p>HOSTS，等同于操作系统的HOSTS文件。</p></li>
+<li><p>Filters，可以修改Request或Response的包体。</p></li>
+<li><p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p></li>
+<li><p>FiddlerScript，以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</p></li>
 </ul>
-
-<p>等同于操作系统的HOSTS文件。</p>
-
-<ul>
-<li>Filters</li>
-</ul>
-
-<p>可以修改Request或Response的包体。</p>
-
-<ul>
-<li>AutoResponder</li>
-</ul>
-
-<p>可以截获请求，直接将请求代理到指定URL进行响应。</p>
-
-<ul>
-<li>FiddlerScript</li>
-</ul>
-
-<p>以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</p>
 
 <h3>HOSTS</h3>
 
