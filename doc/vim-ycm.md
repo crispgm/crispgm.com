@@ -2,6 +2,13 @@
 
 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) 是一个vim插件，简称为ycm，支持基于语义的代码补全和代码语法检查功能。
 
+常用的补全插件如ctags和AutoComplPop等是基于文本的，类似于搜索时的suggest功能。不过，前者是事先扫描文本生成tags文件，后者是对当前打开的文件内容进行扫描。
+如果tags或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。
+
+所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入.之后ycm可以补全提示对象的成员变量和成员函数等。
+
+一些成熟的IDE如Visual Studio和Eclipse都具有这种能力。
+
 目前ycm支持5种程序语言:
 
 * C-family languages, based on clang/llvm
@@ -40,7 +47,7 @@ ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac O
     
     Bundle 'Valloric/YouCompleteMe'
 
-保存重启vim后_:BundleInstall_，就开始安装了。这个 __安装__ 并没有包括 __编译__ ，只是把ycm的vim、python以及C++代码下载下来。
+保存重启vim后_:BundleInstall_，就开始安装了。这个安装并没有包括编译，只是把ycm的vim、python以及C++代码下载下来。
 
 然后进入YouCompleteMe的目录开始编译，_--clang-completer_是启用C family languages提示(为的就是这功能，果断要加上)
 
