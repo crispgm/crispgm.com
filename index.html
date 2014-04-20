@@ -170,15 +170,17 @@ PC本地
 用ProxySwitchy一类的插件，代理到localhost:8888
 </code></pre>
 
-<p><img src="http://crispgm.github.io/image/fiddler/capturing.png" alt="Fiddler Capturing" /></p>
-
-<p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
-
-<p><img src="http://crispgm.github.io/image/fiddler/request.png" alt="Fiddler Request" /></p>
-
-<p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
-
-<p><img src="http://crispgm.github.io/image/fiddler/response.png" alt="Fiddler Response" /></p>
+<p><!---
+![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
+--->
+选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。
+<!---
+![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
+--->
+如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。
+<!---
+![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
+---></p>
 
 <h3>Web Debugging</h3>
 
@@ -212,9 +214,10 @@ PC本地
 
 <p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p>
 
-<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
-
-<p><img src="http://crispgm.github.io/image/fiddler/hosts.png" alt="Fiddler Hosts" /></p>
+<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。
+<!---
+![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)
+---></p>
 
 <h3>Filters</h3>
 
@@ -224,9 +227,10 @@ PC本地
 
 <p>在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。</p>
 
-<p>除此之外，还可以直接修改Request或Response包体。</p>
-
-<p><img src="http://crispgm.github.io/image/fiddler/filters.png" alt="Fiddler Filters" /></p>
+<p>除此之外，还可以直接修改Request或Response包体。
+<!---
+![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)
+---></p>
 
 <h3>AutoResponder</h3>
 
@@ -234,9 +238,10 @@ PC本地
 
 <p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
 
-<p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p>
-
-<p><img src="http://crispgm.github.io/image/fiddler/autoresponder.png" alt="Fiddler AutoResponder" /></p>
+<p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。
+<!---
+![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
+---></p>
 
 <h3>FiddlerScript</h3>
 

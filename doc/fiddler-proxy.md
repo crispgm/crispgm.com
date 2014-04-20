@@ -39,16 +39,17 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
     PC本地  
     用ProxySwitchy一类的插件，代理到localhost:8888
 
+<!---
 ![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
-
+--->
 选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。
-
+<!---
 ![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
-
+--->
 如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。
-
+<!---
 ![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
-
+--->
 ### Web Debugging
 
 在进行调试时，我们可以使用Fiddler的几种调试功能：
@@ -74,9 +75,9 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
 Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。
 
 而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。
-
+<!---
 ![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)
-
+--->
 ### Filters
 
 很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取
@@ -86,9 +87,9 @@ Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不�
 在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。
 
 除此之外，还可以直接修改Request或Response包体。
-
+<!---
 ![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)
-
+--->
 ### AutoResponder
 
 AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。
@@ -96,9 +97,9 @@ AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoR
 将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。
 
 此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。
-
+<!---
 ![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
-
+--->
 ### FiddlerScript
 
 FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。
