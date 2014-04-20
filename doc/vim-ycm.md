@@ -4,9 +4,17 @@
 
 目前ycm支持5种程序语言:
 
-    C/C++/Objective-C (c-family languages, 基于clang/llvm)
-    Python (基于[Jedi](https://github.com/davidhalter/jedi)实现)
-    C# (基于[OmniSharp](https://github.com/nosami/OmniSharpServer))
+* C-family languages, based on clang/llvm
+
+** C
+
+** C++
+
+** Objective-C
+
+* Python, [Jedi](https://github.com/davidhalter/jedi)-based
+    
+* C#, [OmniSharp](https://github.com/nosami/OmniSharpServer))-based
 
 至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。
 
@@ -32,7 +40,7 @@ ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac O
     
     Bundle 'Valloric/YouCompleteMe'
 
-保存重启vim后:BundleInstall，就开始_安装_了。这个安装并不是真正完全安装，只是把ycm的vim、python以及C++代码下载下来。
+保存重启vim后_:BundleInstall_，就开始安装了。这个__安装__并没有包括__编译__，只是把ycm的vim、python以及C++代码下载下来。
 
 然后进入YouCompleteMe的目录开始编译，_--clang-completer_是启用C family languages提示(为的就是这功能，果断要加上)
 
