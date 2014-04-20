@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Crisp Home</title>
+<link rel="stylesheet" href="http://crispgm.github.io/static/bootstrap.min.css">
+<link rel="stylesheet" href="http://crispgm.github.io/static/bootstrap-theme.min.css">
+<link rel="stylesheet" href="http://crispgm.github.io/static/style.css">
+<link rel="stylesheet" href="http://crispgm.github.io/static/vs.css">
+<script src="http://crispgm.github.io/static/highlight.pack.js"></script>
+<script src="http://crispgm.github.io/static/bootstrap.min.js"></script>
+<script src="http://crispgm.github.io/static/jquery-2.0.3.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="container">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://crispgm.github.io/">Crisp Home</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://github.com/crispgm">Github</a></li>
+            <li><a href="http://crispgm.github.io/page/about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+</div>
+<div class="container">
+
+<div class="article"><div class="article_head"><div class="article_title">YouCompleteMe Installation Guide on Mac</div>
+<div class="article_date">2014/04/20</div>
+</div><div class="article_main"><h4>What is YouCompleteMe</h4>
+
+<p><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> 是一个vim插件，简称为ycm，支持基于语义的代码补全和代码语法检查功能。</p>
+
+<p>目前ycm支持5种程序语言:</p>
+
+<pre><code>C/C++/Objective-C (c-family languages, 基于clang/llvm)
+Python (基于[Jedi](https://github.com/davidhalter/jedi)实现)
+C# (基于[OmniSharp](https://github.com/nosami/OmniSharpServer))
+</code></pre>
+
+<p>至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。</p>
+
+<p>ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac OSX 10.9 Maverics介绍一下如何安装成功爽上ycm。</p>
+
+<h4>Dependencies</h4>
+
+<ul>
+<li><p>macvim 7.4，直接去macvim主页下载的就能用</p></li>
+<li><p>cmake，建议使用homebrew安装</p></li>
+<li><p><a href="https://github.com/gmarik/Vundle.vim">vundle</a>，安装起来很容易，按照github上面的介绍来就行</p></li>
+<li><p>Python，具体版本不详2.7应该总是没问题的</p></li>
+</ul>
+
+<h4>Installation</h4>
+
+<p>安装完vundle后，修改.vimrc</p>
+
+<pre><code>vim ~/.vimrc
+</code></pre>
+
+<p>加入</p>
+
+<pre><code>Bundle 'Valloric/YouCompleteMe'
+</code></pre>
+
+<p>保存重启vim后:BundleInstall，就开始_安装_了。这个安装并不是真正完全安装，只是把ycm的vim、python以及C++代码下载下来。</p>
+
+<p>然后进入YouCompleteMe的目录开始编译，<em>--clang-completer</em>是启用C family languages提示(为的就是这功能，果断要加上)</p>
+
+<pre><code>cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+</code></pre>
+
+<p>到此，插件已经编译完毕，基本上可以使用了。不过此时进入编辑cpp文件，发现代码提示怎么还是基于omnifunc呢？原来缺少了一条配置。</p>
+
+<h4>Configuration</h4>
+
+<p>编辑~/.vimrc文件，加入</p>
+
+<pre><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+</code></pre>
+
+<p>重新进入vim，已经可以正常对代码进行提示。</p>
+
+<h4>In The End</h4>
+
+<p><img src="http://crispgm.github.io/image/ycm.png" alt="" /></p>
+
+<p>Congrats to myself! </p>
+
+<p>ycm提示出了对象md的成员函数(f标识)和成员变量(m标识)等信息。</p>
+
+<p>对于Mac来说，由于作者(据我观察)就使用Mac，而且Mac OSX版本比较统一，因此按照作者的Mac OSX Super-quick installation步骤基本可以顺利安装。</p>
+
+<p>不过在其他Linux上可就不一样了，我在公司的开发机上编译clang-completer就一直没成功，等到有空的时候再去折腾下。</p>
+
+<p>Good luck to everyone!</p>
+</div>
+</div>    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    
+    var disqus_shortname = 'crispgm'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+<div>
+<footer>
+	Copyright &copy; Crisp, 2014.
+</footer>
+</div>
+</body>
+</html>

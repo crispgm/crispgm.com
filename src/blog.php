@@ -10,6 +10,11 @@ class Blog{
     protected $blog_num_per_page;
     
     protected $blogs = array(
+        'vim-ycm' => array(
+            'title'    => 'YouCompleteMe Installation Guide on Mac',
+            'markdown' => 'vim-ycm.md',
+            'date'     => '2014/04/20',
+        ),
         'fiddler-proxy' => array(
             'title'    => 'Fiddler网络调试工具',
             'markdown' => 'fiddler-proxy.md',
