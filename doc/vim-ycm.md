@@ -11,17 +11,11 @@
 
 目前ycm支持5种程序语言:
 
-* C-family languages, based on clang/llvm
+* C/C++/Objective-C \[llvm\]
 
-    * C
-
-    * C++
-
-    * Objective-C
-
-* Python, [Jedi](https://github.com/davidhalter/jedi)-based
+* Python \[[Jedi](https://github.com/davidhalter/jedi)\]
     
-* C#, [OmniSharp](https://github.com/nosami/OmniSharpServer))-based
+* C# \[[OmniSharp](https://github.com/nosami/OmniSharpServer)\]
 
 至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。
 
