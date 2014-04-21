@@ -29,13 +29,13 @@ ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac O
 
 #### Dependencies
 
-* macvim 7.4，直接去macvim主页下载的就能用
+* vim 7.3.584+ 
 
 * cmake，建议使用homebrew安装
 
 * [vundle](https://github.com/gmarik/Vundle.vim)，安装起来很容易，按照github上面的介绍来就行
 
-* Python，具体版本不详2.7应该总是没问题的
+* Python 2.6+
 
 #### Installation
 
