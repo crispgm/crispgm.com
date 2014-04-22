@@ -118,7 +118,7 @@ FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Requ
 > 匹配URL，防止添加的字段干扰到其他网页
 
 	if (oSession.uriContains("c.tieba.baidu.com")) {  
-		oSession.oRequest.headers.Add("Cookie", "pub_env=1");  
+        // TODO
 	}
 
 更多用法，请参考[Fiddler Documentation](http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse)
