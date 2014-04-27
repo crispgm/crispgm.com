@@ -1,5 +1,5 @@
 /*
- * Theme of Crisp Home
+ * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2014
  * Powered by {less}
  */
@@ -18,17 +18,32 @@ body
     text-align: center;
 }
 
+#menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 32px;
+    padding-top: 12px;
+    background-color: #000000;
+    font-size: 16px;
+    text-align: left;
+    #menu_home{
+        position: absolute;
+        left: 16px;
+    }
+    #menu_link{
+        position: absolute;
+        right: 16px;
+    }
+}
+
 #container
 {
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     width: 860px;
     text-align: left;
-}
-
-#menu{
-    //border-bottom: 1px solid @border-gray;
-    font-size: 20px;
 }
 
 a{
