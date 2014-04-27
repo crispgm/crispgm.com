@@ -1,0 +1,122 @@
+/*
+ * Theme of Crisp Home
+ * Copyright(c) David Zhang, 2014
+ * Powered by {less}
+ */
+
+@border-gray: #aaaaaa;
+
+body
+{
+    margin: 0;
+    //padding-top: 20px;
+    //padding-bottom: 20px;
+    font-family: "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", Helvetica, Arial, Verdana, Courier;
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+#container
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 860px;
+    text-align: left;
+}
+
+#menu{
+    //border-bottom: 1px solid @border-gray;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #08c;
+    &:link, &:visited{
+    }
+    &:hover{
+        background-color: #08c;
+        color: #ffffff;
+    }
+}
+
+ul li{
+    p{
+        margin: 0;
+    }
+}
+
+.article
+{
+    margin-top: 12px;
+    // head
+    .article_head{
+        position: relative;
+        height: 32px;
+        border-bottom: 1px solid @border-gray;
+        // title
+        .article_title{
+            position: absolute;
+            left: 0;
+            padding-top: 4px;
+            font-size: 20px;
+        }
+        // date
+        .article_date{
+            position: absolute;
+            right: 0;
+            padding-top: 4px;
+            font-size: 16px;
+            text-align: right;
+        }
+    }
+    // main
+    .article_main{
+        margin-top: 4px;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+}
+
+#disqus_thread{
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+footer{
+    text-align: center;
+    font-size: 18px;
+    height: 36px;
+    overflow: hidden;
+}
+
+#page{
+    position: relative;
+    margin-bottom: 8px;
+    padding-top: 4px;
+    border-top: 1px solid #bcb;
+    font-size: 20px;
+    height: 32px;
+    text-align: center;
+    #next{
+        position: absolute;
+        right: 12px;
+    }
+    #prev{
+        position: absolute;
+        left: 12px;
+    }
+}
+
+img{
+    border: 0;
+}
+
+pre{
+    border: 1px solid @border-gray;
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 12px;
+}
