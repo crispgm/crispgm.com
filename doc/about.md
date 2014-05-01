@@ -19,23 +19,26 @@ Education:
 > [Southeast University](http://www.seu.edu.cn)  
 > [Queensland University of Technology](http://www.qut.edu.au)
 
-Devices:
-> iPhone, Mac Book Air, Kindle Paperwhite
-
-Apps:
-> Cross-platform: Chrome, vim, Wunderlist, Evernote, QQ, BaiduYun, Sublime Text 2
-
-> iPhone Only: WeChat, Instagram, Pocket
-
-> Mac Only: homebrew, RIME squirrel
-
-> Windows Only: Clover, QQ拼音纯净版, Fiddler
-
-Musics:
+Muscis:
 > AKB48, Rameses B, Owl City, classical music
 
 Sports:
 > soccer, rugby union, hiking
 
-[_](http://crispgm.github.io/image/gwp1.jpg)
+Devices:
+> iPhone, Mac Book Air, Kindle Paperwhite
 
+Apps:
+> Cross-platform:  
+> Chrome, vim, Wunderlist, Evernote, QQ, BaiduYun, Sublime Text 2
+
+> iPhone Only:  
+> WeChat, Instagram, Pocket
+
+> Mac Only:  
+> homebrew, RIME squirrel
+
+> Windows Only:  
+> Clover, QQ拼音纯净版, Fiddler
+
+[~](http://crispgm.github.io/image/gwp1.jpg)
