@@ -11,7 +11,7 @@ All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-N
 
 I enjoy simplicity and minimalism.  
 I enjoy simple but highly scalable softwares and applications.  
-I enjoy fantastic softwares and apps like Chrome, vim, GitHub, SublimeText, Foobar 2000, Wunderlist, Evernote, Pocket and Instagram.  
+I enjoy fantastic softwares and apps, including Chrome, vim, GitHub, SublimeText, Foobar 2000, Wunderlist, Evernote, Pocket and Instagram.  
 I enjoy building customized configurations, web pages, software extensions and utility scripts.  
 I enjoy reading books with Kindle and [girl](http://crispgm.github.io/image/gwp1.jpg) [wearing](http://crispgm.github.io/image/gwp2.jpg) [pantyhose](http://crispgm.github.io/image/gwp3.jpg).  
 
