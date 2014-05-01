@@ -1,5 +1,4 @@
-About
-==========
+### About
 
 I am David Zhang and I enjoy simplicity and minimalism. 
 Exploring new apps, tools and features of is my favorite hobby. 
@@ -7,8 +6,7 @@ Exploring new apps, tools and features of is my favorite hobby.
 This is my personal blog, which is mostly about programming. I also post on experiences and sharing of fantastic tools.
 All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](http://creativecommons.org/licenses/by-nc-nd/4.0/) 
 
-My List
-==========
+### My List
 
 Programming:
 > PHP, nginx, awk, shell, C/C++  
@@ -24,15 +22,14 @@ Education:
 Devices:
 > iPhone, Mac Book Air, Kindle Paperwhite
 
-Apps:  
-> Cross-platform:
-> > Chrome, vim, Wunderlist, Evernote, QQ, BaiduYun, Sublime Text 2
-> On iPhone:
-> > WeChat, Instagram, Pocket
-> On Mac:
-> > homebrew, RIME squirrel
-> Windows Only:
-> > Clover, QQ拼音纯净版, Fiddler
+Apps:
+> Cross-platform: Chrome, vim, Wunderlist, Evernote, QQ, BaiduYun, Sublime Text 2
+
+> iPhone Only: WeChat, Instagram, Pocket
+
+> Mac Only: homebrew, RIME squirrel
+
+> Windows Only: Clover, QQ拼音纯净版, Fiddler
 
 Musics:
 > AKB48, Rameses B, Owl City, classical music
