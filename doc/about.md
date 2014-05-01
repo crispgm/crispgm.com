@@ -9,4 +9,5 @@ All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-N
 
 [ANTI 360](http://weiquan.anquan.baidu.com/)
 
-![A beautiful girl](http://crispgm.github.io/image/gwp1.jpg)
+[.](http://crispgm.github.io/image/gwp1.jpg)
+
