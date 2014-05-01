@@ -26,14 +26,14 @@ Devices:
 > iPhone, Mac Book Air, Kindle Paperwhite
 
 Apps:  
-Cross-platform:
-> Chrome, vim, Wunderlist, Evernote, QQ, BaiduYun, Sublime Text 2   
-On iPhone:
-> WeChat, Instagram, Pocket  
-On Mac:
-> homebrew, RIME squirrel  
-Windows Only:
-> Clover, QQ拼音纯净版, Fiddler
+> Cross-platform:
+    > Chrome, vim, Wunderlist, Evernote, QQ, BaiduYun, Sublime Text 2
+> On iPhone:
+    > WeChat, Instagram, Pocket
+> On Mac:
+    > homebrew, RIME squirrel
+> Windows Only:
+    > Clover, QQ拼音纯净版, Fiddler
 
 Musics:
 > AKB48, Rameses B, Owl City, classical music
