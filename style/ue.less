@@ -5,13 +5,13 @@
  */
 
 @border-gray: #aaaaaa;
+@text-font: "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", Helvetica, Arial, Courier;
+@code-font: Menlo, "Source Code Pro", "Segoe UI", Helvetica, Arial, Courier;
 
 body
 {
     margin: 0;
-    //padding-top: 20px;
-    //padding-bottom: 20px;
-    font-family: Menlo, "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", Helvetica, Arial, Verdana, Courier;
+    font-family: @text-font; 
     font-size: 14px;
     color: #333;
     word-wrap: break-word;
@@ -127,11 +127,14 @@ footer{
 
 img{
     border: 0;
+    width: 860px; 
 }
 
 pre{
     border: 1px solid @border-gray;
     border-radius: 2px;
     padding: 4px;
+    font-family: @code-font;
     font-size: 12px;
 }
+

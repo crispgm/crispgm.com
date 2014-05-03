@@ -5,7 +5,7 @@
  */
 body {
   margin: 0;
-  font-family: Menlo, "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", Helvetica, Arial, Verdana, Courier;
+  font-family: "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", Helvetica, Arial, Courier;
   font-size: 14px;
   color: #333;
   word-wrap: break-word;
@@ -102,10 +102,12 @@ footer {
 }
 img {
   border: 0;
+  width: 860px;
 }
 pre {
   border: 1px solid #aaaaaa;
   border-radius: 2px;
   padding: 4px;
+  font-family: Menlo, "Source Code Pro", "Segoe UI", Helvetica, Arial, Courier;
   font-size: 12px;
 }
