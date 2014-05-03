@@ -7,6 +7,7 @@ body {
   margin: 0;
   font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier;
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
   color: #333;
   word-wrap: break-word;
   text-align: center;
