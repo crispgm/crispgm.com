@@ -34,6 +34,10 @@ h4 {
   position: absolute;
   right: 16px;
 }
+#menu a:hover {
+  background-color: #08c;
+  color: #ffffff;
+}
 #container {
   margin-top: 60px;
   margin-left: auto;
@@ -44,10 +48,6 @@ h4 {
 a {
   text-decoration: none;
   color: #08c;
-}
-a:hover {
-  background-color: #08c;
-  color: #ffffff;
 }
 ul li p {
   margin: 0;
