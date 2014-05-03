@@ -44,9 +44,7 @@
 <div class="article_date">2013/11/03</div>
 </div>
 <div class="article_main">
-<blockquote>
-  <p>mac下ssh避免多次输入密码</p>
-</blockquote>
+<h4>mac下ssh避免多次输入密码</h4>
 
 <p>编辑文件</p>
 
@@ -62,9 +60,7 @@ ControlPath ~/.ssh/master-%r@%h:%p
 
 <p>保存后，重新启动终端即可生效</p>
 
-<blockquote>
-  <p>mac终端显示颜色</p>
-</blockquote>
+<h4>mac终端显示颜色</h4>
 
 <p>修改~/.bash_profile，添加</p>
 
@@ -96,12 +92,7 @@ export LSCOLORS=gxfxaxdxcxegedabagacad
 
 <h4>扫描整个日志，从Timer字段开始定位，过滤掉无用的tbapi开头的timer</h4>
 
-<pre><code>less ui.log |  
-awk 'BEGIN{FS="Timer\\["}{print $2}' |  
-awk 'BEGIN{FS="\\]"}{print $1}' |  
-awk '{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}' |  
-awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' |  
-sort -n
+<pre><code>less ui.log | awk 'BEGIN{FS="Timer\\["}{print $2}' | awk 'BEGIN{FS="\\]"}{print $1}' | awk '{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}' | awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | sort -n
 </code></pre>
 
 <h4>每2s自动tail 500条，原理同上</h4>
