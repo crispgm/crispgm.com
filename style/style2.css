@@ -112,7 +112,9 @@ pre {
   border: 1px solid #aaaaaa;
   border-radius: 2px;
   padding: 4px;
-  background-color: #dddddd;
   font-family: Menlo, "Source Code Pro", Consolas, Courier;
   font-size: 14px;
+}
+pre code {
+  background-color: #dddddd;
 }
