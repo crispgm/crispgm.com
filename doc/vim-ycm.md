@@ -14,7 +14,7 @@
 * C/C++/Objective-C \[llvm\]
 
 * Python \[[Jedi](https://github.com/davidhalter/jedi)\]
-    
+
 * C# \[[OmniSharp](https://github.com/nosami/OmniSharpServer)\]
 
 至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。
@@ -23,7 +23,7 @@ ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac O
 
 #### Dependencies
 
-* vim 7.3.584+ 
+* vim 7.3.584+
 
 * cmake，建议使用homebrew安装
 
