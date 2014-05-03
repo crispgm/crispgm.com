@@ -60,7 +60,7 @@ ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac O
 
 #### In The End
 
-![](http://crispgm.github.io/image/ycm.png)
+![](http://crispgm.github.io/image/ycm-demo.png)
 
 Congrats to myself! 
 
