@@ -7,10 +7,9 @@
 
 所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入.之后ycm可以补全提示对象的成员变量和成员函数等。
 一般的成熟IDE如Visual Studio和Eclipse都具有这种能力。
+
 目前ycm支持5种程序语言:
-C/C++/Objective-C(基于clang)，
-Python(基于[Jedi](https://github.com/davidhalter/jedi))和
-C# (基于[OmniSharp](https://github.com/nosami/OmniSharpServer))。
+C/C++/Objective-C(基于clang)，Python(基于[Jedi](https://github.com/davidhalter/jedi))和C# (基于[OmniSharp](https://github.com/nosami/OmniSharpServer))。
 
 至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。
 
