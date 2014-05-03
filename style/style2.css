@@ -34,9 +34,6 @@ h4 {
   position: absolute;
   right: 16px;
 }
-#menu a:hover {
-  color: #ffffff;
-}
 #container {
   margin-top: 60px;
   margin-left: auto;
@@ -47,6 +44,9 @@ h4 {
 a {
   text-decoration: none;
   color: #08c;
+}
+a:hover {
+  text-decoration: underline;
 }
 ul li p {
   margin: 0;
@@ -76,12 +76,6 @@ ul li p {
   margin-top: 4px;
   padding-bottom: 12px;
   font-size: 14px;
-}
-.article a {
-  text-decoration: none;
-}
-.article a:hover {
-  text-decoration: underline;
 }
 #disqus_thread {
   margin-top: 8px;
