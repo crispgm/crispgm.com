@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Crisp Blog</title>
+<link rel="stylesheet" href="/style/style2.css">
+<link rel="stylesheet" href="/style/vs.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script src="/script/highlight.pack.js"></script>
+<script src="/script/jquery-2.0.3.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="menu">
+    <div id="menu_home">
+        <a href="http://www.crispgm.com">Crisp Blog</a>
+    </div>
+    <div id="menu_link">
+        <a href="http://github.com/crispgm">Github</a>&nbsp;
+        <a href="/page/about.html">About</a>
+    </div>
+</div>
+<div id="container">
+
+<div class="article"><div class="article_head"><div class="article_title">Mac OSX 10.9 Maverics 清除DNS缓存</div>
+<div class="article_date">2014/05/03</div>
+</div><div class="article_main"><p>不说废话，正确的清除DNS缓存方式为：</p>
+
+<pre><code>dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
+</code></pre>
+</div>
+</div>    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    
+    var disqus_shortname = 'crispgm'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+<div>
+<footer>
+	Copyright &copy; Crisp, 2014.
+</footer>
+</div>
+</body>
+</html>
