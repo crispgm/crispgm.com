@@ -14,4 +14,3 @@ Exploring fantastic softwares and apps is my favorite hobby.
 And I make use of them, including Chrome, vim, GitHub, SublimeText, Foobar 2000, Wunderlist, Evernote, Pocket and Instagram.
 In addition, I enjoy building web pages, customized configurations, software extensions and utility scripts.
 In spare time, I like reading books with Kindle and [girl](http://crispgm.github.io/image/gwp1.jpg) [wearing](http://crispgm.github.io/image/gwp2.jpg) [pantyhose](http://crispgm.github.io/image/gwp3.jpg).  
-
