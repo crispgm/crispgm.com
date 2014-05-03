@@ -78,6 +78,12 @@ ul li p {
   padding-bottom: 12px;
   font-size: 14px;
 }
+.article a {
+  text-decoration: none;
+}
+.article a:hover {
+  text-decoration: underline;
+}
 #disqus_thread {
   margin-top: 8px;
   padding-top: 8px;
