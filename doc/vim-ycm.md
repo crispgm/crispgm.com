@@ -6,20 +6,15 @@
 如果tags或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。
 
 所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入.之后ycm可以补全提示对象的成员变量和成员函数等。
-
-一些成熟的IDE如Visual Studio和Eclipse都具有这种能力。
-
+一般的成熟IDE如Visual Studio和Eclipse都具有这种能力。
 目前ycm支持5种程序语言:
-
-* C/C++/Objective-C \[llvm\]
-
-* Python \[[Jedi](https://github.com/davidhalter/jedi)\]
-
-* C# \[[OmniSharp](https://github.com/nosami/OmniSharpServer)\]
+C/C++/Objective-C(基于clang)，
+Python(基于[Jedi](https://github.com/davidhalter/jedi))和
+C# (基于[OmniSharp](https://github.com/nosami/OmniSharpServer))。
 
 至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。
 
-ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac OSX 10.9 Maverics介绍一下如何安装成功爽上ycm。
+ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac OSX 10.9 Mavericks介绍一下如何安装成功爽上ycm。
 
 #### Dependencies
 
