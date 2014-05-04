@@ -35,10 +35,11 @@ h4 {
   right: 16px;
 }
 #menu #menu_link a {
-  color: #cccccc;
+  color: #bbbbbb;
 }
 #menu #menu_link a:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 #container {
   margin-top: 60px;
