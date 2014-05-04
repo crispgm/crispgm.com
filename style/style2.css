@@ -29,6 +29,13 @@ h4 {
   position: absolute;
   left: 16px;
 }
+#menu #menu_home a {
+  color: #08c;
+}
+#menu #menu_home a:hover {
+  color: #66b7e0;
+  text-decoration: none;
+}
 #menu #menu_link {
   position: absolute;
   right: 16px;
