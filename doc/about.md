@@ -1,4 +1,9 @@
-### About
+### About crispgm.com
+
+Copyright &copy; David Zhang, 2014. 
+All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](http://creativecommons.org/licenses/by-nc-nd/4.0/) 
+
+### About me
 
 I am David Zhang, graduated from Southeast University and later Queensland University of Technology.
 Currently, I work as an engineer for Baidu Inc.
@@ -7,7 +12,6 @@ I mostly use and are familiar with PHP, awk, shell, nginx and C/C++.
 This is my personal blog, built with open source power like Github Pages, Markdown and PHP.
 The theme of the pages is inspired by [ArchLinux.org](http://www.archlinux.org).
 It is mostly about computer stuffs, especially on programming tips and sharing of fantastic tools.
-All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](http://creativecommons.org/licenses/by-nc-nd/4.0/) 
 
 I enjoy simplicity and minimalism.
 Exploring fantastic softwares and apps is my favorite hobby.
