@@ -18,6 +18,7 @@
 
 __Chrome__ 速度快，自带同步，全平台支持，还可以不同类型终端之间访问书签和打开的页面。
 强大的插件支持，去优酷广告、JSON格式化显示和HTTP代理都很需要。
+此外，iPad Chrome用起来真心很舒服。
 
 _Why not Safari?_
 
@@ -30,6 +31,7 @@ _Why not Safari?_
 __Sublime Text__
 
 __Dash__
+API文档查询工具，收录了各种编程语言和框架之类的API Documentation、User Manual和Cheat Sheet什么的。从此查文档不用现场Google了。
 
 __Apple Mail__
 并不喜欢在手机上看工作邮件，使用iPhone自带收一些私人邮件完全满足需求。
@@ -69,13 +71,13 @@ __Evernote__
 参加买一送三买了VIP，其实用不上绝大多数功能，主要用到就是Presentation Mode以及iPhone上的密码锁。
 至于iPhone上的名片扫描功能之类的，感觉略鸡肋。
 
-_百度云_
+__百度云__
 2TB真心赞，离线下载可以省去用迅雷。之前有一个像素的解锁瑕疵，iPhone上至少已经修复了。况且目前还是内网用户，没有不用的理由，唯一缺点就是Mac上没有客户端只有同步盘。
 
-_Dropbox_
+__Dropbox__
 对于本人来说，算是百度云的冷备，毕竟墙外数据安全性强点。但又毕竟在墙内会比较卡，而且Dropbox容量只有2G，所以用于备份一些重要数据。
 
-_Google Translate_
+__Google Translate__
 偶尔查个单词。
 
 __Instragram__
