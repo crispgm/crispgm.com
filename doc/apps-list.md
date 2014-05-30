@@ -30,9 +30,6 @@ _Why not Safari?_
 __Apple Mail__
 并不喜欢在手机上看工作邮件，使用iPhone自带收一些私人邮件完全满足需求。
 
-__Outlook__
-虽说略占资源，但Windows上似乎也没有特别给力的替代品。Foxmail稍显简单了点，跟公司的Exchange交互也有问题。
-
 __Reeder__
 售价RMB30，绝对物有所值，免费可以选Feedly，但收费的话我推荐Reeder。
 Feedly不挂VPN实在会经常刷不出来，挂了VPN速度也不快。
@@ -75,6 +72,10 @@ _Dropbox_
 对于本人来说，算是百度云的冷备，毕竟墙外数据安全性强点。但又毕竟在墙内会比较卡，而且Dropbox容量只有2G，所以用于备份一些重要数据。
 
 __WeChat__
+主要沟通工具。
+
+__QQ__
+只在iPad上用，HD版本体验极好，iPhone上功能比较杂。
 
 __Instragram__
 比较文艺范的图片社交软件，可以围观各种文艺妹子，就是加载速度什么的略慢。
