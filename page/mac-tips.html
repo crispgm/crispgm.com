@@ -24,29 +24,17 @@
 <div class="article"><div class="article_head"><div class="article_title">mac终端小技巧合集</div>
 <div class="article_date">2013/11/03</div>
 </div><div class="article_main"><h4>mac下ssh避免多次输入密码</h4>
-
 <p>编辑文件</p>
-
-<pre><code>sudo vim /etc/ssh_config
-</code></pre>
-
+<pre><code>sudo vim /etc/ssh_config</code></pre>
 <p>加入</p>
-
 <pre><code>Host *   
 ControlMaster auto  
-ControlPath ~/.ssh/master-%r@%h:%p  
-</code></pre>
-
+ControlPath ~/.ssh/master-%r@%h:%p  </code></pre>
 <p>保存后，重新启动终端即可生效</p>
-
 <h4>mac终端显示颜色</h4>
-
 <p>修改~/.bash_profile，添加</p>
-
 <pre><code>export CLICOLOR=1
-export LSCOLORS=gxfxaxdxcxegedabagacad
-</code></pre>
-</div>
+export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre></div>
 </div>    <div id="disqus_thread"></div>
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

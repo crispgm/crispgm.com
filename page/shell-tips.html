@@ -24,25 +24,15 @@
 <div class="article"><div class="article_head"><div class="article_title">shell两个小问题解决方法</div>
 <div class="article_date">2013/12/30</div>
 </div><div class="article_main"><p>最近，在工作种遇到了两个有点棘手的问题。前者是不小心打错命令建立了一个"--"两个减号开头的文件，想删除删不掉；后者是，减少机器后单机文件数过多，导致定时脚本里的tar执行失败了。</p>
-
 <h4>在shell中删除减号开头的文件</h4>
-
 <p>解决方法：</p>
-
-<pre><code>rm -- "--xxxx"
-</code></pre>
-
+<pre><code>rm -- "--xxxx"</code></pre>
 <h4>argument list too long</h4>
-
 <p>由于文件数增加，脚本出现错误tar: argument list too long，也就是说tar参数太多了</p>
-
 <p>解决方法：</p>
-
 <pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  
 tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
-rm /tmp/20131229.list
-</code></pre>
-</div>
+rm /tmp/20131229.list</code></pre></div>
 </div>    <div id="disqus_thread"></div>
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
