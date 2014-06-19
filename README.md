@@ -1,2 +1,2 @@
-[Crisp Blog](http://crispgm.github.io)
+[Crisp Blog, VISIT http://crispgm.com](http://crispgm.com)
 
