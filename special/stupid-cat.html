@@ -3,7 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title>我用了0步围住神经猫，你能超过我吗？</title>
+        <script src="http://crispgm.com/script/jquery-2.0.3.min.js"></script>
     </head>
     <body>
+        <span>
+            玩你妹的神经猫，想我几步填在这
+        </span>
+        <span>
+            <input type="number" id="step" value="0">
+            <input type="button" id="submit" value="设置">
+        </span>
     </body>
+    <script>
+$("#submit").click(function(){
+    n = $("#step").val();
+    document.title = "我用了"+n+"步围住神经猫，你能超过我吗？";
+});
+    </script>
 </html>
