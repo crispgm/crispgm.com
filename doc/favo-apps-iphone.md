@@ -17,7 +17,7 @@
 
 #### 正文
 
-* General
+#### _General_
 
 __Chrome__
 PC上必备，因此手机上也装了它，这样可以同步使用收藏夹和访问其他设备上Chrome打开了的网页。
@@ -37,7 +37,7 @@ __Apple Maps__
 不喜欢那些功能复杂的地图，集成了寻路、打车和附近商家之类的功能。
 只需要一个准确详细的地图的话，我想它已经足够好。
 
-* Reading
+#### _Reading_
 
 __Reeder__
 售价￥30，绝对物有所值，免费可以选Feedly，但收费的话我推荐Reeder。
@@ -70,7 +70,7 @@ Instapaper同Pocket是宿敌，定位相似，价格￥25。
 但它的文章抓取速度比Pocket慢太多了，不知是不是国内网络的原因。
 综合的来说，价格算是值得，但我想Pocket其实已经够了。
 
-* 生产力
+#### _Productivity_
 
 __Wunderlist__
 德国出品，wunder是德语wonder的意思。
@@ -104,7 +104,7 @@ __欧陆词典 EuDic__
 之前用Google Translate，毕竟不是专业词典，精确性不太好。
 欧陆词典检索速度很快，功能简单够用。
 
-* Social
+#### _Social_
 
 __WeChat__
 主要沟通工具。虽然很臃肿了，但真心不能不用。
@@ -122,7 +122,7 @@ __Instragram__
 图片社交软件，可以围观各种文艺妹子，就是加载速度什么的略慢。
 不过后来一想，能看到就不错了，这货用的是<del>facebook</del>的CDN！
 
-* Weather
+#### _Weather_
 
 __Yahoo Weather__
 获得过设计大奖，界面非常漂亮，背景图是根据地理位置从Flickr上获取的美图，非常美的app。
@@ -144,7 +144,7 @@ __Apple Weather__
 __Air Quality__
 由于天气类app中没有选择国产，所以需要用它查看空气污染指数。
 
-* Finance
+#### _Finance_
 
 __支付宝__
 很实用的app，移动支付必备，AA也很方便，而且还可以当作支付Token用。
@@ -154,7 +154,7 @@ __招商银行__
 前者主要功能是查询和管理工资卡，后者是处理信用卡事宜。
 当然，作为用户体验最好的国内银行之一，招商银行的客户端在银行界那也是没得说！
 
-* Workout
+#### _Workout_
 
 __Abs Workout: Get Your Six Pack__
 练腹肌用的，你懂的。
