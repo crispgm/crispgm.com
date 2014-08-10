@@ -161,3 +161,8 @@ __Abs Workout: Get Your Six Pack__
 
 _Updated on August 10, to be continued._
 
+#### 相关阅读
+
+* 我喜欢的应用——iPad篇
+* [我喜欢的应用——Mac篇](http://crispgm.com/page/favo-apps-mac.html)
+* 我喜欢的应用——Win7篇
