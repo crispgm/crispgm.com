@@ -34,7 +34,10 @@ kill -9 xxxx</code></pre>
 <pre><code>#!/bin/bash
 PID=$(ps aux|grep $1|grep -v grep|tail -1|awk '{print $2}')
 kill -9 $PID</code></pre>
-<p>直到后来，我试了下zsh的自动补全参数功能，输入kill -9之后再输入Mail就会自己智能获取PID，因此这个脚本瞬间没意义了。</p></div>
+<p>直到后来，我试了下zsh的自动补全参数功能，输入kill -9之后再输入Mail就会自己智能获取PID，因此这个脚本瞬间没意义了。</p>
+<p>又过了没多久，发现有pgrep这命令，于是没zsh一样轻取。</p>
+<p>最后，我换成了Airmail.</p>
+<p>THE END</p></div>
 </div>    <div id="disqus_thread"></div>
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
