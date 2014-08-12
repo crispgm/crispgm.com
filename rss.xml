@@ -9,8 +9,8 @@
 <title>Crisp Blog</title>
 <link>http://crispgm.com</link>
 <description>Crisp 个人博客</description>
-<language>zh-cn</language>
-<lastBuildDate>Tue, 12 Aug 2014 16:06:06 +0000</lastBuildDate>
+<atom:link href="http://crispgm.com/rss.xml" rel="self" type="application/rss+xml"/><author>Crisp</author><language>zh-cn</language>
+<lastBuildDate>Tue, 12 Aug 2014 16:10:56 +0000</lastBuildDate>
 <item>
 <title><![CDATA[我喜欢的应用——Mac篇]]></title>
 <link></link>
