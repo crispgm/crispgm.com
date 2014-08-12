@@ -86,7 +86,7 @@ Mac版微信是Native Client，不过功能上跟网页版保持一致。
 <li><a href="http://crispgm.com/page/favo-apps-iphone.html">我喜欢的应用——iPhone篇</a></li>
 <li>我喜欢的应用——iPad篇</li>
 <li>我喜欢的应用——Win7篇</li>
-</ul>]]</content:encoded>
+</ul>]]></content:encoded>
 </item>
 <item>
 <title>我喜欢的应用——iPhone篇</title>
@@ -224,7 +224,7 @@ UI也比较高大上，就是设计是按照4/4s长度来的，所以底部会�
 <li>我喜欢的应用——iPad篇</li>
 <li><a href="http://crispgm.com/page/favo-apps-mac.html">我喜欢的应用——Mac篇</a></li>
 <li>我喜欢的应用——Win7篇</li>
-</ul>]]</content:encoded>
+</ul>]]></content:encoded>
 </item>
 <item>
 <title>Mac OSX 10.9 Mavericks清除DNS缓存</title>
@@ -232,7 +232,7 @@ UI也比较高大上，就是设计是按照4/4s长度来的，所以底部会�
 <pubDate>1399075200</pubDate>
 <content:encoded><![CDATA[<p>不说废话，正确的清除DNS缓存方式为：</p>
 <pre><code>dscacheutil -flushcache
-sudo killall -HUP mDNSResponder</code></pre>]]</content:encoded>
+sudo killall -HUP mDNSResponder</code></pre>]]></content:encoded>
 </item>
 <item>
 <title>YouCompleteMe Installation Guide on Mac</title>
@@ -281,7 +281,7 @@ C/C++/Objective-C(基于clang)，Python(基于<a href="https://github.com/davidh
 <p>ycm提示出了对象md的成员函数(f标识)和成员变量(m标识)等信息。</p>
 <p>对于Mac来说，由于作者(据我观察)就使用Mac，而且Mac OSX版本比较统一，因此按照作者的Mac OSX Super-quick installation步骤基本可以顺利安装。</p>
 <p>不过在其他Linux上可就不一样了，我在公司的开发机上编译clang-completer就一直没成功，等到有空的时候再去折腾下。</p>
-<p>Good luck to everyone!</p>]]</content:encoded>
+<p>Good luck to everyone!</p>]]></content:encoded>
 </item>
 <item>
 <title>Fiddler网络调试工具</title>
@@ -386,7 +386,7 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
 <pre><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
     // TODO
 }</code></pre>
-<p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>]]</content:encoded>
+<p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>]]></content:encoded>
 </item>
 <item>
 <title>Macbook合盖子或者休眠后没声音</title>
@@ -396,7 +396,7 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
 忍了很久后，今天终于找到<a href="http://www.v2ex.com/t/95465">解决方法</a></p>
 <p>简单的说，就是在Terminal执行下面两条</p>
 <pre><code>sudo kextunload /System/Library/Extensions/AppleHDA.kext  
-sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre>]]</content:encoded>
+sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre>]]></content:encoded>
 </item>
 <item>
 <title>Mac Mail无法退出</title>
@@ -415,7 +415,7 @@ kill -9 $PID</code></pre>
 <p>直到后来，我试了下zsh的自动补全参数功能，输入kill -9之后再输入Mail就会自己智能获取PID，因此这个脚本瞬间没意义了。</p>
 <p>又过了没多久，发现有pgrep这命令，于是没zsh一样轻取。</p>
 <p>最后，我换成了Airmail.</p>
-<p>THE END</p>]]</content:encoded>
+<p>THE END</p>]]></content:encoded>
 </item>
 <item>
 <title>shell两个小问题解决方法</title>
@@ -430,7 +430,7 @@ kill -9 $PID</code></pre>
 <p>解决方法：</p>
 <pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  
 tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
-rm /tmp/20131229.list</code></pre>]]</content:encoded>
+rm /tmp/20131229.list</code></pre>]]></content:encoded>
 </item>
 <item>
 <title>Land of Hope and Glory</title>
@@ -462,7 +462,7 @@ make thee mightier yet.</p>
 <p>附上视频链接：<a href="http://v.youku.com/v_show/id_XMjA3NDIwMzA0.html">BBC Proms - Land of Hope and Glory</a></p>
 <p>合唱：BBC Singers, BBC Symphony Chorus<br />
 演奏：BBC Symphony Orchestra<br />
-指挥：Jiří Bělohlávek  </p>]]</content:encoded>
+指挥：Jiří Bělohlávek  </p>]]></content:encoded>
 </item>
 <item>
 <title>恒大夺冠</title>
@@ -472,7 +472,7 @@ make thee mightier yet.</p>
 <p>亚冠冠军。</p>
 <p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p>
 <p>想起大学时踢新生杯和院系杯时，就是这种心情。</p>
-<p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>]]</content:encoded>
+<p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>]]></content:encoded>
 </item>
 <item>
 <title>mac终端小技巧合集</title>
@@ -489,7 +489,7 @@ ControlPath ~/.ssh/master-%r@%h:%p  </code></pre>
 <h4>mac终端显示颜色</h4>
 <p>修改~/.bash_profile，添加</p>
 <pre><code>export CLICOLOR=1
-export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]</content:encoded>
+export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]></content:encoded>
 </item>
 <item>
 <title>自制chrome调用贴吧service插件正式发布</title>
@@ -498,7 +498,7 @@ export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]</content:encoded>
 <content:encoded><![CDATA[<p>Chrome小插件，可以对选中的文字调用service，查bug利器，功能简单实用。</p>
 <p>由于没有发布到Chrome Web Store，所以安装时，请在开发者模式下把crx包拖入chrome中。</p>
 <p><img alt="" src="http://crispgm.sinaapp.com/static/img/servicecaller.png" /></p>
-<p><a href="https://github.com/crispgm/chrome_tieba_service_caller">项目 GitHub</a></p>]]</content:encoded>
+<p><a href="https://github.com/crispgm/chrome_tieba_service_caller">项目 GitHub</a></p>]]></content:encoded>
 </item>
 <item>
 <title>awk日志统计脚本</title>
@@ -510,7 +510,7 @@ export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]</content:encoded>
 <h4>每2s自动tail 500条，原理同上</h4>
 <p>（ps：符号转义好恶心啊）</p>
 <pre><code>set +o history
-watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  </code></pre>]]</content:encoded>
+watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  </code></pre>]]></content:encoded>
 </item>
 <item>
 <title>回忆一下教过我的老师</title>
@@ -565,7 +565,7 @@ watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\
 以至于让我很感动 就算我考的差也会很相信我<br />
 我一直很感激 虽然她那个英语口音实在不咋地<br />
 后来 随着考试改革 我英语真的nb了 我的作文经常被拿去当她的范文让我都不太好意思了“显得太高调了”<br />
-而且她身材极好 典型的bg killer 哈哈！</p>]]</content:encoded>
+而且她身材极好 典型的bg killer 哈哈！</p>]]></content:encoded>
 </item>
 <item>
 <title>我们的使命</title>
@@ -609,7 +609,7 @@ watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\
 但我们坚持没有下场<br />
 我们的守门员不幸骨折了<br />
 然而 我们的使命仍然指向那个方向！<br />
-（PS 上句话证明 使命是个指针。。。）</p>]]</content:encoded>
+（PS 上句话证明 使命是个指针。。。）</p>]]></content:encoded>
 </item>
 <item>
 <title>很奇葩</title>
@@ -628,7 +628,7 @@ watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\
 <p>Crisp 21:10:22<br />
 我tm不gay</p>
 <p>Crisp 21:10:26<br />
-也得有个gf吧？</p>]]</content:encoded>
+也得有个gf吧？</p>]]></content:encoded>
 </item>
 <item>
 <title>物理题真是有意思~~</title>
@@ -636,7 +636,7 @@ watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\
 <pubDate>1147564800</pubDate>
 <content:encoded><![CDATA[<p>暖水瓶里有0.5kg、25摄氏度的水，一个学生（估计小李当年）想用摇晃的方法把凉水变为开水，设每摇一次水落差15CM，每分钟要30次，不计所有散失，它需要___天能把水摇成开水？（水的比热容4.2<em>10^3J(kg</em>c）） </p>
 <p>经过计算要5天，摇啊摇，最好小李摇到抽筋，摇到虚脱，摇到…… </p>
-<p>然后我们就不用再听他充满想象力的废话。。</p>]]</content:encoded>
+<p>然后我们就不用再听他充满想象力的废话。。</p>]]></content:encoded>
 </item>
 </channel>
 </rss>
