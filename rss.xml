@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
                     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
                     xmlns:dc="http://purl.org/dc/elements/1.1/"
                     xmlns:atom="http://www.w3.org/2005/Atom"
@@ -10,7 +10,7 @@
 <link>http://crispgm.com</link>
 <description>Crisp 个人博客</description>
 <language>zh-cn</language>
-<lastBuildDate>Tue, 12 Aug 2014 16:04:43 +0000</lastBuildDate>
+<lastBuildDate>Tue, 12 Aug 2014 16:06:06 +0000</lastBuildDate>
 <item>
 <title><![CDATA[我喜欢的应用——Mac篇]]></title>
 <link></link>
