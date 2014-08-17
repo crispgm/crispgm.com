@@ -1,6 +1,6 @@
-#### Copyright &copy; 芒果派
+##### Copyright &copy; 芒果派
 
-#### 转自 [http://atomatopie.tumblr.com/post/94999424136](http://atomatopie.tumblr.com/post/94999424136)
+##### 转自 [http://atomatopie.tumblr.com/post/94999424136](http://atomatopie.tumblr.com/post/94999424136)
 
 回想和小琳琳在一起的时候，我们在无意间做了很多都是是彼此的第一次的事情。
 
