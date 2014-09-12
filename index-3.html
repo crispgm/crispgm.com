@@ -24,6 +24,24 @@
 
 <div class="article">
 <div class="article_head">
+<div class="article_title"><a href="http://crispgm.com/page/mac-tips.html">mac终端小技巧合集</a></div>
+<div class="article_date">2013/11/03</div>
+</div>
+<div class="article_main">
+<h4>mac下ssh避免多次输入密码</h4>
+<p>编辑文件</p>
+<pre><code>sudo vim /etc/ssh_config</code></pre>
+<p>加入</p>
+<pre><code>Host *   
+ControlMaster auto  
+ControlPath ~/.ssh/master-%r@%h:%p  </code></pre>
+<p>保存后，重新启动终端即可生效</p>
+<h4>mac终端显示颜色</h4>
+<p>修改~/.bash_profile，添加</p>
+<pre><code>export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre></div></div>
+<div class="article">
+<div class="article_head">
 <div class="article_title"><a href="http://crispgm.com/page/service-caller.html">自制chrome调用贴吧service插件正式发布</a></div>
 <div class="article_date">2013/11/01</div>
 </div>
@@ -166,16 +184,7 @@ watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\
 我tm不gay</p>
 <p>Crisp 21:10:26<br />
 也得有个gf吧？</p></div></div>
-<div class="article">
-<div class="article_head">
-<div class="article_title"><a href="http://crispgm.com/page/funny-physics.html">物理题真是有意思~~</a></div>
-<div class="article_date">2006/05/14</div>
-</div>
-<div class="article_main">
-<p>暖水瓶里有0.5kg、25摄氏度的水，一个学生（估计小李当年）想用摇晃的方法把凉水变为开水，设每摇一次水落差15CM，每分钟要30次，不计所有散失，它需要___天能把水摇成开水？（水的比热容4.2<em>10^3J(kg</em>c）） </p>
-<p>经过计算要5天，摇啊摇，最好小李摇到抽筋，摇到虚脱，摇到…… </p>
-<p>然后我们就不用再听他充满想象力的废话。。</p></div></div>
-<nav id="page"><a href="http://crispgm.com/index-2.html" id="prev">prev</a></nav></div>
+<nav id="page"><a href="http://crispgm.com/index-2.html" id="prev">prev</a><a href="http://crispgm.com/index-4.html" id="next">next</a></nav></div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

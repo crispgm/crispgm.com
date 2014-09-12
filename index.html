@@ -24,6 +24,43 @@
 
 <div class="article">
 <div class="article_head">
+<div class="article_title"><a href="http://crispgm.com/page/mysql-update-multirows.html">MySQL更新多条记录的不同值</a></div>
+<div class="article_date">2014/09/12</div>
+</div>
+<div class="article_main">
+<p>MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：</p>
+<pre><code class="language-sql">UPDATE table_name  
+SET column_value=1  
+WHERE column_id IN (1,2,3);</code></pre>
+<p>如果更新多行数据，且值是不同的，往往会使用for循环进行更新。如：</p>
+<pre><code class="language-php">foreach ($data_list as $item) {  
+    $sql = "UPDATE table_name SET column={$item['value']} WHERE column={$item['id']}";  
+    $ret = mysql_query($sql);  
+    if ($ret === false) {  
+        //...
+    }  
+}  </code></pre>
+<p>这样写网络交互次数比较多，可能会导致性能问题，看起来也不优雅。
+那能否一条SQL搞定呢？答案是肯定的。</p>
+<pre><code class="language-sql">UPDATE table_name  
+SET column_value = CASE column_id  
+    WHEN 1 THEN 0  
+    WHEN 2 THEN 1  
+    WHEN 3 THEN 2  
+WHERE column_id IN(1,2,3);</code></pre>
+<p>同理，也可以使用此方法设置多行多个值。</p>
+<pre><code class="language-sql">UPDATE table_name  
+SET column_value = CASE column_id  
+    WHEN 1 THEN 0  
+    WHEN 2 THEN 1  
+    WHEN 3 THEN 2,  
+SET column_desc = CASE column_id  
+    WHEN 1 THEN 'test 1'
+    WHEN 2 THEN 'test 2'
+    WHEN 3 THEN 'test 3'
+WHERE column_id IN(1,2,3);</code></pre></div></div>
+<div class="article">
+<div class="article_head">
 <div class="article_title"><a href="http://crispgm.com/page/moon-and-stars.html">看月亮和看星星</a></div>
 <div class="article_date">2014/08/17</div>
 </div>
@@ -315,112 +352,6 @@ C/C++/Objective-C(基于clang)，Python(基于<a href="https://github.com/davidh
 <p>对于Mac来说，由于作者(据我观察)就使用Mac，而且Mac OSX版本比较统一，因此按照作者的Mac OSX Super-quick installation步骤基本可以顺利安装。</p>
 <p>不过在其他Linux上可就不一样了，我在公司的开发机上编译clang-completer就一直没成功，等到有空的时候再去折腾下。</p>
 <p>Good luck to everyone!</p></div></div>
-<div class="article">
-<div class="article_head">
-<div class="article_title"><a href="http://crispgm.com/page/fiddler-proxy.html">Fiddler网络调试工具</a></div>
-<div class="article_date">2014/03/21</div>
-</div>
-<div class="article_main">
-<h4>什么是Fiddler</h4>
-<p>Fiddler官方给Fiddler的描述语是Web Debugging Proxy，也就是web调试代理工具。</p>
-<p>主要功能有：</p>
-<ul>
-<li>
-<p>截取HTTP/HTTPS请求</p>
-</li>
-<li>
-<p>修改Session</p>
-</li>
-<li>
-<p>网络调试</p>
-</li>
-<li>
-<p>安全测试</p>
-</li>
-<li>性能测试</li>
-</ul>
-<p>本文，主要讨论前三项功能的使用方法，包括Fiddler的基础配置和功能以及使用内置FiddlerScript脚本进行复杂功能调试。</p>
-<h4>准备和配置</h4>
-<p>Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户，有一个基于Mono的Alpha版本，经本人Mac实际测试，基本上算是不能用的状态。因此，不建议使用。</p>
-<p>下载地址：<a href="http://www.telerik.com/download/fiddler"><a href="http://www.telerik.com/download/fiddler">http://www.telerik.com/download/fiddler</a></a></p>
-<p>安装完毕后，为了使用后续功能，建议安装<a href="http://www.telerik.com/download/fiddler/fiddlerscript-editor">FiddlerScript Editor</a>插件，否则修改FiddlerScript会比较麻烦。</p>
-<p>准备完毕后，请打开Fiddler进入Tools->Fiddler Options，在Connections中勾选Allow remote computers to connect，并重新启动Fiddler。</p>
-<h4>网络请求抓取</h4>
-<p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。</p>
-<pre><code>iPhone  
-进入Settings -&gt; WLAN，单击你连接中的WIFI，在HTTP PROXY下选择Manual，然后Server填写Fiddler所在机器在此WIFI中的IP地址，Port是默认的8888。
-
-Android
-进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
-
-PC本地  
-用ProxySwitchy一类的插件，代理到localhost:8888</code></pre>
-<!---
-![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
---->
-<p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
-<!---
-![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
---->
-<p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
-<!---
-![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
---->
-<h4>Web Debugging</h4>
-<p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
-<ul>
-<li>
-<p>HOSTS，等同于操作系统的HOSTS文件。</p>
-</li>
-<li>
-<p>Filters，可以修改Request或Response的包体。</p>
-</li>
-<li>
-<p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p>
-</li>
-<li>FiddlerScript，以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</li>
-</ul>
-<h4>HOSTS</h4>
-<p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p>
-<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
-<!---
-![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)
---->
-<h4>Filters</h4>
-<p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取</p>
-<p>首先进入Filters标签，勾选Use Filters</p>
-<p>在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。</p>
-<p>除此之外，还可以直接修改Request或Response包体。</p>
-<!---
-![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)
---->
-<h4>AutoResponder</h4>
-<p>AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。</p>
-<p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
-<p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p>
-<!---
-![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
---->
-<h4>FiddlerScript</h4>
-<p>FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。</p>
-<p>使用FidderScript建议安装第一节所说的插件，安装后就可以直接打开FiddlerScript标签，直接修改代码。</p>
-<p>在OnBeforeRequest函数中修改：</p>
-<blockquote>
-<p>添加Headers</p>
-</blockquote>
-<pre><code>oSession.oRequest["http_net_type"] = "1";</code></pre>
-<blockquote>
-<p>添加Cookies</p>
-</blockquote>
-<pre><code>// 增加预览机标识
-oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
-<blockquote>
-<p>匹配URL，防止添加的字段干扰到其他网页</p>
-</blockquote>
-<pre><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
-    // TODO
-}</code></pre>
-<p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p></div></div>
 <nav id="page"><a href="http://crispgm.com/index-2.html" id="next">next</a></nav></div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
