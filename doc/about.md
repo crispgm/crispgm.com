@@ -10,6 +10,7 @@ All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-N
 I am David Zhang, a web developer and software engineer in Baidu,
 mainly focus on PHP, C, nginx, mysql and awk. 
 I am strongly against piracy software and advocate free software.
+
 I enjoy minimalism and simplicity.
 In spare time, I have interests in a variety of fields.
 Apple devices and Kindle are my favorite devices.
