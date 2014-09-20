@@ -9,6 +9,7 @@ All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-N
 ### About Crisp
 I am David Zhang, a web developer and software engineer in Baidu,
 mainly focus on PHP, C, nginx, mysql and awk. 
+I graduted from Southeast University and got master of IT in Queensland of Technology.
 I am strongly against piracy software and advocate free software.
 
 I enjoy minimalism and simplicity.
