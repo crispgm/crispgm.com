@@ -20,3 +20,7 @@ I like listening to classical music especially waltz of Strauss family.
 AKB48 and Owl City are my favorites as well.
 Since childhood, I have been big fan of magazines about fighter planes and warships.
 Feel free to contact me via email(crispgm at gmail.com) and [Weibo](http://www.weibo.com/crispgm).
+
+### Links
+[Doumao Blog](http://doumaomao.github.io/)  
+

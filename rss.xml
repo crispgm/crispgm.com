@@ -10,152 +10,152 @@
 <link>http://crispgm.com</link>
 <description>Crisp 个人博客</description>
 <atom:link href="http://crispgm.com/rss.xml" rel="self" type="application/rss+xml"/><author>Crisp</author><language>zh-cn</language>
-<lastBuildDate>Sat, 20 Sep 2014 15:54:36 +0000</lastBuildDate>
+<lastBuildDate>Tue, 23 Sep 2014 20:56:52 +0800</lastBuildDate>
 <item>
 <title><![CDATA[Mac截图修改保存路径]]></title>
 <link>http://crispgm.com/page/mac-screenshot-path.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mac-screenshot-path.html</guid>
-<pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
+<pubDate>Sat, 20 Sep 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>Mac OSX 提供<a href="http://support.apple.com/kb/HT1343?viewlocale=zh_CN">快捷键</a>进行截图，它们分别是：</p><table><thead><tr><th>组合键</th><th>功能</th></tr></thead><tbody><tr><td>Command-Shift-3</td><td>将屏幕捕捉到文件</td></tr><tr><td>Command-Shift-Control-3</td><td>将屏幕内容捕捉到剪贴板</td></tr><tr><td>Command-Shift-4</td><td>将所选屏幕内容捕捉到一个文件，或按空格键仅捕捉一个窗口</td></tr><tr><td>Command-Shift-Control-4</td><td>将所选屏幕内容捕捉到剪贴板，或按空格键仅捕捉一个窗口</td></tr></tbody></table><p>功能非常赞，用起来唯一不方便的就是文件会自动保存到桌面。我们可以通过下面的方法，设置默认的截图保存位置。</p><pre><code># /path/to/screenshot 是要设置的路径  defaults write com.apple.screencapture location /path/to/screenshot  killall SystemUIServer</code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[MySQL更新多条记录的不同值]]></title>
 <link>http://crispgm.com/page/mysql-update-multirows.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mysql-update-multirows.html</guid>
-<pubDate>Fri, 12 Sep 2014 00:00:00 +0000</pubDate>
+<pubDate>Fri, 12 Sep 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：</p><pre><code class="language-sql">UPDATE table_name  SET column_value=1  WHERE column_id IN (1,2,3);</code></pre><p>如果更新多行数据，且值是不同的，往往会使用for循环进行更新。如：</p><pre><code class="language-php">foreach ($data_list as $item) {      $sql = "UPDATE table_name SET column={$item['value']} WHERE column={$item['id']}";      $ret = mysql_query($sql);      if ($ret === false) {          //...    }  }  </code></pre><p>这样写网络交互次数比较多，可能会导致性能问题，看起来也不优雅。那能否一条SQL搞定呢？答案是肯定的。</p><pre><code class="language-sql">UPDATE table_name  SET column_value = CASE column_id      WHEN 1 THEN 0      WHEN 2 THEN 1      WHEN 3 THEN 2  WHERE column_id IN(1,2,3);</code></pre><p>同理，也可以使用此方法设置多行多个值。</p><pre><code class="language-sql">UPDATE table_name  SET column_value = CASE column_id      WHEN 1 THEN 0      WHEN 2 THEN 1      WHEN 3 THEN 2,  SET column_desc = CASE column_id      WHEN 1 THEN 'test 1'    WHEN 2 THEN 'test 2'    WHEN 3 THEN 'test 3'WHERE column_id IN(1,2,3);</code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[[翻译]PHP: int(强制转换) vs. intval()]]></title>
 <link>http://crispgm.com/page/php-casting-vs-intval.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/php-casting-vs-intval.html</guid>
-<pubDate>Wed, 03 Sep 2014 00:00:00 +0000</pubDate>
+<pubDate>Wed, 03 Sep 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h3>原文信息</h3><p>Original Page: </p><blockquote><p><a href="http://hakre.wordpress.com/2010/05/13/php-casting-vs-intval">PHP: Casting vs. intval()</a></p><p>By <strong>Hakre</strong>, <a href="http://hakre.wordpress.com">hakre.wordpress.com</a>  </p><p>May 13th, 2010</p></blockquote><h3>正文</h3><p>在PHP中，使用<code>(int)$var</code>方式进行类型转换比使用<code>intval($var)</code>函数方式快400%到650%。</p><h4>运行测试</h4><p>(int)$val vs. intval($val) 速度对比[测试 #1]</p><table><thead><tr><th>#</th><th>INPUT</th><th>(INT)$val</th><th>INTVAL($val)</th><th>RATIO</th></tr></thead><tbody><tr><td>#0</td><td>42</td><td>: 0.068180</td><td>/ 0.448819</td><td>658%</td></tr><tr><td>#1</td><td>-42</td><td>: 0.067972</td><td>/ 0.448907</td><td>660%</td></tr><tr><td>#2</td><td>4.2</td><td>: 0.072348</td><td>/ 0.450288</td><td>622%</td></tr><tr><td>#3</td><td>'42'</td><td>: 0.087305</td><td>/ 0.469350</td><td>537%</td></tr><tr><td>#4</td><td>'+42'</td><td>: 0.087590</td><td>/ 0.471153</td><td>537%</td></tr><tr><td>#5</td><td>'-42'</td><td>: 0.089154</td><td>/ 0.469826</td><td>526%</td></tr><tr><td>#6</td><td>34</td><td>: 0.068234</td><td>/ 0.451035</td><td>661%</td></tr><tr><td>#7</td><td>'042'</td><td>: 0.089344</td><td>/ 0.470391</td><td>526%</td></tr><tr><td>#8</td><td>0x1A</td><td>: 0.072989</td><td>/ 0.451909</td><td>619%</td></tr><tr><td>#9</td><td>'1e10'</td><td>: 0.088196</td><td>/ 0.469347</td><td>532%</td></tr><tr><td>#10</td><td>26</td><td>: 0.068378</td><td>/ 0.449884</td><td>657%</td></tr><tr><td>#11</td><td>42000000</td><td>: 0.068770</td><td>/ 0.449416</td><td>653%</td></tr><tr><td>#12</td><td>2147483647</td><td>: 0.068927</td><td>/ 0.448028</td><td>650%</td></tr><tr><td>#13</td><td>2147483648</td><td>: 0.072599</td><td>/ 0.450618</td><td>620%</td></tr><tr><td>#14</td><td>4.2E+20</td><td>: 0.086305</td><td>/ 0.467347</td><td>541%</td></tr><tr><td>#15</td><td>'420000000000000000000'</td><td>: 0.102120</td><td>/ 0.484245</td><td>474%</td></tr><tr><td>#16</td><td>array()</td><td>: 0.092310</td><td>/ 0.472185</td><td>511%</td></tr><tr><td>#17</td><td>array('foo', 'bar')</td><td>: 0.112644</td><td>/ 0.494482</td><td>438%</td></tr></tbody></table><p>(int)$val vs. intval($val) 速度对比[测试 #2]</p><table><thead><tr><th>#</th><th>INPUT</th><th>(INT)$val</th><th>INTVAL($val)</th><th>RATIO</th></tr></thead><tbody><tr><td>#0</td><td>42</td><td>: 0.045576</td><td>/ 0.194759</td><td>427%</td></tr><tr><td>#1</td><td>-42</td><td>: 0.042457</td><td>/ 0.194273</td><td>457%</td></tr><tr><td>#2</td><td>4.2</td><td>: 0.047853</td><td>/ 0.196049</td><td>409%</td></tr><tr><td>#3</td><td>'42'</td><td>: 0.055792</td><td>/ 0.209531</td><td>375%</td></tr><tr><td>#4</td><td>'+42'</td><td>: 0.055158</td><td>/ 0.208236</td><td>377%</td></tr><tr><td>#5</td><td>'-42'</td><td>: 0.056604</td><td>/ 0.209486</td><td>370%</td></tr><tr><td>#6</td><td>34</td><td>: 0.042580</td><td>/ 0.194606</td><td>457%</td></tr><tr><td>#7</td><td>'042'</td><td>: 0.056834</td><td>/ 0.209276</td><td>368%</td></tr><tr><td>#8</td><td>0x1A</td><td>: 0.045320</td><td>/ 0.196626</td><td>433%</td></tr><tr><td>#9</td><td>'1e10'</td><td>: 0.054923</td><td>/ 0.209295</td><td>381%</td></tr><tr><td>#10</td><td>26</td><td>: 0.042582</td><td>/ 0.195295</td><td>458%</td></tr><tr><td>#11</td><td>42000000</td><td>: 0.042673</td><td>/ 0.194469</td><td>455%</td></tr><tr><td>#12</td><td>2147483647</td><td>: 0.042560</td><td>/ 0.194363</td><td>456%</td></tr><tr><td>#13</td><td>2147483648</td><td>: 0.045553</td><td>/ 0.197149</td><td>432%</td></tr><tr><td>#14</td><td>4.2E+20</td><td>: 0.054069</td><td>/ 0.206131</td><td>381%</td></tr><tr><td>#15</td><td>'420000000000000000000'</td><td>: 0.066170</td><td>/ 0.218996</td><td>330%</td></tr><tr><td>#16</td><td>array()</td><td>: 0.057587</td><td>/ 0.210010</td><td>364%</td></tr><tr><td>#17</td><td>array('foo', 'bar')</td><td>: 0.071908</td><td>/ 0.224338</td><td>311%</td></tr></tbody></table><p>这组测试每个项目进行了100000次。两个测试都在windows上运行。第一个使用的是PHP 5.2.8</p><h4>intval()和int的结果对比</h4><p>(待续)</p><h4>结论</h4><p>使用(int)类型转换，便捷而且没有负面效果。事实上，它在速度快的同时，还和intval()函数有完全一样的结果。两者甚至还会有同样的warning信息。</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[看月亮和看星星]]></title>
 <link>http://crispgm.com/page/moon-and-stars.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/moon-and-stars.html</guid>
-<pubDate>Sun, 17 Aug 2014 00:00:00 +0000</pubDate>
+<pubDate>Sun, 17 Aug 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h5>Copyright &copy; 芒果派</h5><h5>转自 <a href="http://atomatopie.tumblr.com/post/94999424136"><a href="http://atomatopie.tumblr.com/post/94999424136">http://atomatopie.tumblr.com/post/94999424136</a></a></h5><p>回想和小琳琳在一起的时候，我们在无意间做了很多都是是彼此的第一次的事情。</p><p>比如有一次，我们吃完晚饭去gym锻炼，走到campus square的时候，天上就开始飘起了雪花，生长在大湖建的小琳琳从来没看过下雪，当时惊喜地像个小孩，印象里，他好像特别兴奋地说，这是初雪啊，今年的初雪啊，我真没想到这辈子第一次看雪，竟然是跟小罗罗一起看的啊！我就在一旁吃吃地笑，嘲笑他没见过世面。除了看雪，我们还一起去看过月亮，看过星星，这个也就是今天要说的故事。</p><p>有一天晚上，我们从实验室出来，当时正好台风sandy扫荡过屌丝镇，惠风和畅，天朗气清。突然，小琳琳指着天上的月亮说，你看月晕。我第一次听到这个名词，似懂非懂地看着月亮，那月亮很亮，清澈的玉盘被蒙上羞涩的棉纱，周围出现了一个银白色的光环。我问小琳琳，月晕是什么啊？小琳琳说，月光通过云层中的冰晶时，经折射而成的光在月亮周围形成光圈，有时也呈银白色光圈，这些‘晕’其实就是卷层云，我们上科学课的时候也说到，冷空气遇到暖和的湿空气，就形成要下雨的云，这时，天上很冷，水滴都冻成了六角形的冰晶，当晚上的月光照射这些冰晶时，就形成了月晕。其实，小琳琳当时也解释了一大堆，后来我全给忘了，以上的释义全部来源于百度百科。我们就一边看着月亮，一边走回家，在家门口还给月晕拍了照片，结果因为像素太渣，拍下来的照片像是黑夜里的一盏白炽灯。我和小琳琳都觉得很可惜，于是我俩决定要买一台单反，下次再看到月晕的时候就可以拍下来。现在虽然有了单反，但这一拍星星拍月亮的计划却永远地流产了，也不知道我这辈子还能不能再看见一次月晕。</p><p>还有一次，也是冬天，我们从实验室出来，小琳琳说，今天天上星星好多啊，你看，猎户座！我就傻乎乎地问他哪个是猎户座。小琳琳嘲笑我说，猎户座是最好找的星座，因为有三颗小星星连成一条线，还有两颗大星星在下面组成了一个梯形。于是在北斗七星之后，我终于又认识了一个星座。看完猎户座，我还觉得不过瘾，朝小琳琳瞎嚷嚷说，好久没坐车了，我们开着车去山顶看吧。小琳琳想了一会说，你是萌萌萌小罗罗吗，那我们去mountain top campus看星星吧。我说，好啊好啊，正好可以试试star walk准不准。</p><p>小琳琳开着他的煤矿老板专用小雅阁，沿着盘山公路开到了山顶。天气实在太冷，我哆哆嗦嗦地打开了star walk准备校准。就在这时，小琳琳向我展示了他高逼格的天文知识，他指着我们头顶的一颗星星说，这颗最亮的星星是天鹅座β星，英文叫Albireo，它距离地球385光年，我们现在用裸眼观测天鹅座β是一颗单星。在那一瞬间，我对小琳琳真的崇拜地一塌糊涂，由衷地惊呆了。但小琳琳继续很冷静地向我解说，但事实上，借助天文望远镜观察，通常所谓的天鹅座β实际上是颗双星，一颗是黄色的，另一个是蓝色的，从地球观测相距34弧秒，因为两颗子星的颜色正好相反，所以这是全天颜色差距最显著的双星，过去，人们认为它们仅仅是光学双星，两者之间并没像真正的双星系统那样有公共点做轨道运行，无论如何，尽管两者间的距离遥远，但现在一般都认为它们是真正的双星。我听得云里雾里，但实在是被小琳琳这满腹天文经纶佩服地五体投地，只是嘿嘿嘿地笑了几下，认真地看着天鹅座。突然，一个闪着绿光、蓝光、黄光的飞行体快速移动，“小琳琳，那是飞碟吗？”我几乎是喊了出来！“你是超级幸运星小罗罗吗？”“嗯？什么？那是飞碟还是啥！”我还是不敢相信自己的眼睛，小琳琳却笑着说，“那颗是行星啊！超级幸运小罗罗，我们刚刚目击了颗小行星啊，全世界每年只有约250个人才能看到呢！”我看着小琳琳，傻傻地说不出话来，只听得小琳琳说，“因为太空各种旋转，总会有新的小行星误入能被地球观测到的区域！”说完，他跑去车里拿出了笔，在纸上写起了各路公式，我不明所以地看着他，不知道他要做什么。只见小琳琳图了一会，突然开口说，“算好啦！”“什么？”小琳琳指着小行星划过的天边说，今晚的这颗小行星就是我们一起新发现的，我给他命名为2014LL 南瓜派星，因为你做的南瓜派是世界上最好吃的南瓜派。我哈哈哈哈大笑，“小琳琳，你还能再土一点吗？”他却一本正经地说，“这是实话，我最喜欢芒果派做的南瓜派。”我内心好是欢喜，只顾抿着嘴傻笑。小琳琳继续说，“刚我算了，这颗南瓜派星，哈哈，我也觉得这个名字好好笑，这颗南瓜派星的周期是83年，83年以后我们还要一起看！”“哈哈哈”我心里又是高兴，又是感动，却还是傻不拉几地煞风景地问了句，“83年以后还不知道能不能看见呢！”“你是超级笨笨小罗罗吗？”小琳琳拍着我头反问道，“那就代表要永远在一起拉！”甜言蜜语听得我又惊又喜，一冲动就bia叽一下在小琳琳脸上亲了一口。</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[我喜欢的应用——Mac篇]]></title>
 <link>http://crispgm.com/page/favo-apps-mac.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/favo-apps-mac.html</guid>
-<pubDate>Sun, 10 Aug 2014 00:00:00 +0000</pubDate>
+<pubDate>Sun, 10 Aug 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h4>前言</h4><blockquote><p>子贡问为仁。子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”</p><p>——孔子（春秋）《论语·卫灵公》</p></blockquote><p>平时在工作生活中，特别注意对工具的选择和使用，无论是在PC、MAC、iPhone、iPad以至vim和shell中都是如此。探索和体验新的工具是平时的一个小爱好。</p><p>开始前，说几个也许有点扯的前提：</p><ul><li>极简主义者，不喜欢功能和UI特别复杂的app</li><li>喜欢反应快速的东西</li><li>略有强迫症，图标非常不搭的app有点受不了，所以同等情况下会选择图标好看的，实在不可替代就丢到Folder中 :)</li><li>有娱乐但没有游戏，本人爱玩游戏但对手机游戏完全无爱</li></ul><h4>正文</h4><h4><em>Development</em></h4><p><strong>Chrome</strong>速度快，自带同步，全平台支持，还可以不同类型终端之间访问书签和打开的页面。强大的插件支持，去优酷广告、JSON格式化显示和HTTP代理都很需要。</p><p><em>Why not Safari?</em></p><ol><li><p>对Chrome的插件有强需求</p></li><li><p>本人偶尔会开发Chrome插件</p></li><li><p>在Windows上肯定会选择Chrome</p></li><li>喜欢Chrome的设计</li></ol><p><strong>Sublime Text</strong>Sublime不是真的免费软件，但免费就可以使用全功能，只是会不定期提示你购买。当时刚回国，卡里有几十澳元，因为很喜欢这个软件，也就付费了。其实用的并不熟，大部分情况下只用到他自带的语法高亮、主题、语法提示、缩进调整和代码自动格式化相关的一些功能，这些功能都很nice。Sublime也支持"插件"(叫做package)。比如写Markdown时可以用MarkdownEditing即时预览。近期，我打算对Sublime的高级用法进行下探索，以后会单独发文介绍的。</p><p><em>ps</em>: Sublime有一个很吸引人的特性，就是多行编辑。不过，在我一次进行了一次选择了两万行再结尾加逗号的尝试后，发现这个功能在量大(其实两万真不能算量大)的时候完全没法用。</p><p><strong>Dash</strong>API文档查询工具，收录了各种编程语言、框架和工具之类的API Documentation、User Manual和Cheat Sheet什么的。从此查文档不用现场Google了。</p><h4><em>Productivity</em></h4><p><strong>Apple Mail</strong>本来打算使用Mac自带Mail，结果发现非常的不给力，于是放弃。主要有两点比较不能忍受：</p><ol><li>收取Gmail有时会导致进程hang死，为此还专门研究了<a href="http://crispgm.com/page/mac-mail.html">解决方法</a>。</li><li>加载和删除邮件操作非常慢，经常删个垃圾邮件删半天。</li></ol><p><strong>Airmail</strong>Airmail可以说是现在Mac最火的email client，购入后(￥12)只是收收生活上的邮件，所以其实也没有认真用。只能说体验挺好的，特别是跟Gmail配合的很好，具体优点有待更深层体会。目前还有些小毛病，比如126邮箱无法删除邮件。</p><p><strong>Wunderlist</strong>我最喜欢的应用，没有之一。之前<a href="http://crispgm.com/page/favo-apps-iphone.html">iPhone篇</a>中已有介绍，在此不再介绍。需要说一句的是，Mac版同步能力也很弱，可能比手机还弱。</p><p><strong>Evernote</strong>强大印象笔记！之前<a href="http://crispgm.com/page/favo-apps-iphone.html">iPhone篇</a>中已有介绍，在此不再介绍。</p><p><strong>欧陆词典 EuDic</strong>之前用Google Translate，毕竟不是专业词典，精确性不太好。欧陆词典检索速度很快，功能简单够用。</p><h4><em>Social</em></h4><p><strong>WeChat</strong>微信本来只有手机版，后来出了网页版，至于iPad和Windows用户只能并没有独立的版本。而对于相对小众的Mac，却有Mac版的微信，不得不说算是一种福利了。Mac版微信是Native Client，不过功能上跟网页版保持一致。需要手机扫码才能登陆，只支持正常的聊天功能，不支持朋友圈等扩展功能。</p><p><strong>QQ</strong>原先版本的Mac qq就是一废品，而打开现在的3.1.2，绝对是一款好产品了。界面极简，设计也是Mac风格，不一样的qq体验。</p><h4>相关阅读</h4><ul><li><a href="http://crispgm.com/page/favo-apps-iphone.html">我喜欢的应用——iPhone篇</a></li><li>我喜欢的应用——iPad篇</li><li>我喜欢的应用——Win7篇</li></ul>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[我喜欢的应用——iPhone篇]]></title>
 <link>http://crispgm.com/page/favo-apps-iphone.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/favo-apps-iphone.html</guid>
-<pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
+<pubDate>Thu, 29 May 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h4>前言</h4><blockquote><p>子贡问为仁。子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”</p><p>——孔子（春秋）《论语·卫灵公》</p></blockquote><p>平时在工作生活中，特别注意对工具的选择和使用，无论是在PC、MAC、iPhone、iPad以至vim和shell中都是如此。探索和体验新的工具是平时的一个小爱好。</p><p>开始前，说几个也许有点扯的前提：</p><ul><li>极简主义者，不喜欢功能和UI特别复杂的app</li><li>喜欢反应快速的东西</li><li>略有强迫症，图标非常不搭的app有点受不了，所以同等情况下会选择图标好看的，实在不可替代就丢到Folder中 :)</li><li>有娱乐但没有游戏，本人爱玩游戏但对手机游戏完全无爱</li></ul><h4>正文</h4><h4><em>General</em></h4><p><strong>Chrome</strong>PC上必备，因此手机上也装了它，这样可以同步使用收藏夹和访问其他设备上Chrome打开了的网页。</p><p><strong>Safari</strong>Safari是某种意义上鉴定一个人英语水平的一个单词:)，一般人会认为它读作['sæfəri]，实际上应该读作[sə'färi]或[sə'fari]。</p><p>虽说我常使用Chrome，但那更多的是受PC习惯影响，单说在iPhone上，Safari已经足够好。</p><p><strong>Apple Mail</strong>并不很热衷在手机上看工作邮件，使用iPhone自带收一些私人邮件完全满足需求。况且，手机上的Mail比Mac上的Mail稳定的多。</p><p><strong>Apple Maps</strong>虽说刚出来时被人吐槽，不过我用的时候已经很带感了。不喜欢那些功能复杂的地图，集成了寻路、打车和附近商家之类的功能。只需要一个准确详细的地图的话，我想它已经足够好。</p><h4><em>Reading</em></h4><p><strong>Reeder</strong>售价￥30，绝对物有所值，免费可以选Feedly，但收费的话我推荐Reeder。Feedly不挂VPN实在会经常刷不出来，挂了VPN速度也不快。反观Reeder可以直接登录Feedly帐号，速度还飞快，UI设计也更有阅读质感。值得一提的是，Reeder的share功能反应特别快，分享到Pocket一点就行，完全无滞后感。</p><p><strong>Pocket</strong>传说中的Read it later，Reeder中的RSS源比较多，希望深度阅读的认为，可以从Reeder中share到Pocket。从阅读体验来说，其实Reeder更好些，但Pocket也逊色的不多。最近刚出了Premium版，就是太贵了点，价格跟Evernote完全一致。可以离线存储文章，从此不用再担心出现死链了。不过，我们也可以选择把需要永久保存的内容直接再share到Evernote上。因此，这就形成了一个<em>阅读链</em>。</p><p><em>阅读链</em>：</p><ol><li><p>Reeder订阅RSS</p></li><li><p>Reeder初步阅读，把感兴趣的share到Pocket</p></li><li>Pocket上深度阅读，把有用的永久保存在Evernote</li></ol><p><em>PS:</em> 真的书籍就不在手机或平板上阅读了，有Kindle和实体书。</p><p><strong>Instapaper</strong>Instapaper同Pocket是宿敌，定位相似，价格￥25。个人体验是Instapaper更专注阅读纯文本，对于文本的排版比Pocket略好。跟Reeder的设计风格相似，颇为神似，两者配合起来很有感觉。但它的文章抓取速度比Pocket慢太多了，不知是不是国内网络的原因。综合的来说，价格算是值得，但我想Pocket其实已经够了。</p><h4><em>Productivity</em></h4><p><strong>Wunderlist</strong>德国出品，wunder是德语wonder的意思。简洁易用的TODO list类app，平时自己要做的事情都记在上面。UI设计不跟风，至今还不是扁平化但却仍旧觉得很美。勾选操作也很有快感！缺点是iOS/Mac上同步极其不稳定。</p><p>2014.7.31 Wunderlist 3发布。这是一次大版本的升级，完成了技术重构和界面设计。Wunderlist终于变成了扁平风格。其他方面，主要的升级就是分享list和更简单的Collaboration。以及所谓的Real-time sync，不过实测表明，iOS/Mac上同步依旧不给力，比原先提升的很有限，远远算不上实时。</p><p><strong>Evernote</strong>强大印象笔记！免费基本可以用的很滋润。对于一些数据量比较大的同学可能每个月60M比较不够，需要每个月可以使用1G的VIP服务。参加买一送三买了VIP，其实用不上绝大多数功能，主要用到就是Presentation Mode以及iPhone上的密码锁。Presentation Mode是我最喜欢的VIP功能，就是把笔记当作幻灯片演示。平时工作时我会用印象笔记当Office用，可以记事、可以做表格、可以展示note。</p><p><strong>百度云</strong>2TB真心赞，离线下载可以省去用迅雷。之前有一个像素的解锁瑕疵，iPhone上至少已经修复了。况且目前还是内网用户，没有不用的理由。</p><p><strong>Dropbox</strong>对于本人来说，算是百度云的冷备，毕竟墙外数据安全性强点。但又毕竟在墙内会比较卡，而且Dropbox容量只有2G，所以用于备份一些重要数据。</p><p><strong>欧陆词典 EuDic</strong>之前用Google Translate，毕竟不是专业词典，精确性不太好。欧陆词典检索速度很快，功能简单够用。</p><h4><em>Social</em></h4><p><strong>WeChat</strong>主要沟通工具。虽然很臃肿了，但真心不能不用。</p><p><strong>QQ</strong>基本功能的用户体验很好，但iPhone版极其臃肿，功能很杂。幸好的是，腾讯的标签页设计的很合理，额外的功能同基础功能，有一种眼不见心不烦的意思。</p><p><strong>VVebo</strong>官方微博客户端功能好多，体积好大，完全用不上。买了WeicoPro但是近期的版本质量好差很容易crash，而且页面排版也不是很满意。VVebo简洁功能够用，阅读感觉好！</p><p><strong>Instragram</strong>图片社交软件，可以围观各种文艺妹子，就是加载速度什么的略慢。不过后来一想，能看到就不错了，这货用的是<del>facebook</del>的CDN！</p><h4><em>Weather</em></h4><p><strong>Yahoo Weather</strong>获得过设计大奖，界面非常漂亮，背景图是根据地理位置从Flickr上获取的美图，非常美的app。缺点是由于每次进去都要下高清图，因此流量消耗不小。还有就是Flickr上的城市美图项目已经不更新了，所以图片是有限的。</p><p><strong>Weather Dial</strong>极简主义设计的天气app，卖的就是设计，价格要12元，限免时拿下。不支持多城市，只支持地理定位当前城市，功能上比较普通。</p><p><strong>Accu Weather</strong>史上最准确的天气预报app，精确到小时，没别的，就是精确。UI也比较高大上，就是设计是按照4/4s长度来的，所以底部会有留白。还有就是图标很难看。</p><p><strong>Apple Weather</strong>简单实用的天气app，完全可以满足大多数日常需求。</p><p><strong>Air Quality</strong>由于天气类app中没有选择国产，所以需要用它查看空气污染指数。</p><h4><em>Finance</em></h4><p><strong>支付宝</strong>很实用的app，移动支付必备，AA也很方便，而且还可以当作支付Token用。</p><p><strong>招商银行</strong>其中装了两个，一个是招商银行客户端而另一个是掌上生活。前者主要功能是查询和管理工资卡，后者是处理信用卡事宜。当然，作为用户体验最好的国内银行之一，招商银行的客户端在银行界那也是没得说！</p><h4><em>Workout</em></h4><p><strong>Abs Workout: Get Your Six Pack</strong>练腹肌用的，你懂的。</p><p><em>Updated on August 10, to be continued.</em></p><h4>相关阅读</h4><ul><li>我喜欢的应用——iPad篇</li><li><a href="http://crispgm.com/page/favo-apps-mac.html">我喜欢的应用——Mac篇</a></li><li>我喜欢的应用——Win7篇</li></ul>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[Mac OSX 10.9 Mavericks清除DNS缓存]]></title>
 <link>http://crispgm.com/page/mac-dns-flush.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mac-dns-flush.html</guid>
-<pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
+<pubDate>Sat, 03 May 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>不说废话，正确的清除DNS缓存方式为：</p><pre><code>dscacheutil -flushcachesudo killall -HUP mDNSResponder</code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[YouCompleteMe Installation Guide on Mac]]></title>
 <link>http://crispgm.com/page/vim-youcompleteme.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/vim-youcompleteme.html</guid>
-<pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
+<pubDate>Sun, 20 Apr 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h4>What is YouCompleteMe</h4><p><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> 是一个vim插件，简称为ycm，支持基于语义的代码补全和代码语法检查功能。</p><p>常用的补全插件如ctags和AutoComplPop等是基于文本的，类似于搜索时的suggest功能。不过，前者是事先扫描文本生成tags文件，后者是对当前打开的文件内容进行扫描。如果tags或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。</p><p>所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入.之后ycm可以补全提示对象的成员变量和成员函数等。一般的成熟IDE如Visual Studio和Eclipse都具有这种能力。</p><p>目前ycm支持5种程序语言:C/C++/Objective-C(基于clang)，Python(基于<a href="https://github.com/davidhalter/jedi">Jedi</a>)和C# (基于<a href="https://github.com/nosami/OmniSharpServer">OmniSharp</a>)。</p><p>至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。</p><p>ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac OSX 10.9 Mavericks介绍一下如何安装成功爽上ycm。</p><h4>Dependencies</h4><ul><li><p>vim 7.3.584+</p></li><li><p>cmake，建议使用homebrew安装</p></li><li><p><a href="https://github.com/gmarik/Vundle.vim">vundle</a>，安装起来很容易，按照github上面的介绍来就行</p></li><li>Python 2.6+</li></ul><h4>Installation</h4><p>安装完vundle后，修改.vimrc</p><pre><code>vim ~/.vimrc</code></pre><p>加入</p><pre><code>Bundle 'Valloric/YouCompleteMe'</code></pre><p>保存重启vim后<em>:BundleInstall</em>，就开始安装了。这个安装并没有包括编译，只是把ycm的vim、python以及C++代码下载下来。</p><p>然后进入YouCompleteMe的目录开始编译，<em>--clang-completer</em>是启用C family languages提示(为的就是这功能，果断要加上)</p><pre><code>cd ~/.vim/bundle/YouCompleteMe./install.sh --clang-completer</code></pre><p>到此，插件已经编译完毕，基本上可以使用了。不过此时进入编辑cpp文件，发现代码提示怎么还是基于omnifunc呢？原来缺少了一条配置。</p><h4>Configuration</h4><p>编辑~/.vimrc文件，加入</p><pre><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'</code></pre><p>重新进入vim，已经可以正常对代码进行提示。</p><h4>In The End</h4><p><img alt="" src="http://crispgm.github.io/image/ycm-demo.png" /></p><p>Congrats to myself! </p><p>ycm提示出了对象md的成员函数(f标识)和成员变量(m标识)等信息。</p><p>对于Mac来说，由于作者(据我观察)就使用Mac，而且Mac OSX版本比较统一，因此按照作者的Mac OSX Super-quick installation步骤基本可以顺利安装。</p><p>不过在其他Linux上可就不一样了，我在公司的开发机上编译clang-completer就一直没成功，等到有空的时候再去折腾下。</p><p>Good luck to everyone!</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[Fiddler网络调试工具]]></title>
 <link>http://crispgm.com/page/fiddler-proxy.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/fiddler-proxy.html</guid>
-<pubDate>Fri, 21 Mar 2014 00:00:00 +0000</pubDate>
+<pubDate>Fri, 21 Mar 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h4>什么是Fiddler</h4><p>Fiddler官方给Fiddler的描述语是Web Debugging Proxy，也就是web调试代理工具。</p><p>主要功能有：</p><ul><li><p>截取HTTP/HTTPS请求</p></li><li><p>修改Session</p></li><li><p>网络调试</p></li><li><p>安全测试</p></li><li>性能测试</li></ul><p>本文，主要讨论前三项功能的使用方法，包括Fiddler的基础配置和功能以及使用内置FiddlerScript脚本进行复杂功能调试。</p><h4>准备和配置</h4><p>Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户，有一个基于Mono的Alpha版本，经本人Mac实际测试，基本上算是不能用的状态。因此，不建议使用。</p><p>下载地址：<a href="http://www.telerik.com/download/fiddler"><a href="http://www.telerik.com/download/fiddler">http://www.telerik.com/download/fiddler</a></a></p><p>安装完毕后，为了使用后续功能，建议安装<a href="http://www.telerik.com/download/fiddler/fiddlerscript-editor">FiddlerScript Editor</a>插件，否则修改FiddlerScript会比较麻烦。</p><p>准备完毕后，请打开Fiddler进入Tools->Fiddler Options，在Connections中勾选Allow remote computers to connect，并重新启动Fiddler。</p><h4>网络请求抓取</h4><p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。</p><pre><code>iPhone  进入Settings -&gt; WLAN，单击你连接中的WIFI，在HTTP PROXY下选择Manual，然后Server填写Fiddler所在机器在此WIFI中的IP地址，Port是默认的8888。Android进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。PC本地  用ProxySwitchy一类的插件，代理到localhost:8888</code></pre><!---![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)---><p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p><!---![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)---><p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p><!---![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)---><h4>Web Debugging</h4><p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p><ul><li><p>HOSTS，等同于操作系统的HOSTS文件。</p></li><li><p>Filters，可以修改Request或Response的包体。</p></li><li><p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p></li><li>FiddlerScript，以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</li></ul><h4>HOSTS</h4><p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p><p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p><!---![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)---><h4>Filters</h4><p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取</p><p>首先进入Filters标签，勾选Use Filters</p><p>在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。</p><p>除此之外，还可以直接修改Request或Response包体。</p><!---![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)---><h4>AutoResponder</h4><p>AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。</p><p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p><p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p><!---![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)---><h4>FiddlerScript</h4><p>FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。</p><p>使用FidderScript建议安装第一节所说的插件，安装后就可以直接打开FiddlerScript标签，直接修改代码。</p><p>在OnBeforeRequest函数中修改：</p><blockquote><p>添加Headers</p></blockquote><pre><code>oSession.oRequest["http_net_type"] = "1";</code></pre><blockquote><p>添加Cookies</p></blockquote><pre><code>// 增加预览机标识oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre><blockquote><p>匹配URL，防止添加的字段干扰到其他网页</p></blockquote><pre><code>if (oSession.uriContains("c.tieba.baidu.com")) {      // TODO}</code></pre><p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[Macbook合盖子或者休眠后没声音]]></title>
 <link>http://crispgm.com/page/mac-sound.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mac-sound.html</guid>
-<pubDate>Sat, 08 Mar 2014 00:00:00 +0000</pubDate>
+<pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>在安装有OSX 10.9 Mavericks的Mac中，包括升级或者直接购买的Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况<br />忍了很久后，今天终于找到<a href="http://www.v2ex.com/t/95465">解决方法</a></p><p>简单的说，就是在Terminal执行下面两条</p><pre><code>sudo kextunload /System/Library/Extensions/AppleHDA.kext  sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[Mac Mail无法退出]]></title>
 <link>http://crispgm.com/page/mac-mail.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mac-mail.html</guid>
-<pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
+<pubDate>Fri, 10 Jan 2014 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>Mac Mail在国内网络状况下，和gmail一起总是会有点问题。收件箱里选择删除一封gmail邮件，并用command+q关掉Mail。如果删除gmail失败的话就会报错，之后Mail就会处于一种卡死的状态，退不出来也进不去。只能选择：</p><pre><code>ps aux|grep Mailkill -9 xxxx</code></pre><p>这个事情遇多了，搞了个更简单粗暴的shell脚本</p><pre><code>#!/bin/bashPID=$(ps aux|grep $1|grep -v grep|tail -1|awk '{print $2}')kill -9 $PID</code></pre><p>直到后来，我试了下zsh的自动补全参数功能，输入kill -9之后再输入Mail就会自己智能获取PID，因此这个脚本瞬间没意义了。</p><p>又过了没多久，发现有pgrep这命令，于是没zsh一样轻取。</p><p>最后，我换成了Airmail.</p><p>THE END</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[shell两个小问题解决方法]]></title>
 <link>http://crispgm.com/page/shell-tips.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/shell-tips.html</guid>
-<pubDate>Mon, 30 Dec 2013 00:00:00 +0000</pubDate>
+<pubDate>Mon, 30 Dec 2013 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>最近，在工作种遇到了两个有点棘手的问题。前者是不小心打错命令建立了一个"--"两个减号开头的文件，想删除删不掉；后者是，减少机器后单机文件数过多，导致定时脚本里的tar执行失败了。</p><h4>在shell中删除减号开头的文件</h4><p>解决方法：</p><pre><code>rm -- "--xxxx"</code></pre><h4>argument list too long</h4><p>由于文件数增加，脚本出现错误tar: argument list too long，也就是说tar参数太多了</p><p>解决方法：</p><pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  rm /tmp/20131229.list</code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[Land of Hope and Glory]]></title>
 <link>http://crispgm.com/page/inspiring-songs.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/inspiring-songs.html</guid>
-<pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
+<pubDate>Mon, 25 Nov 2013 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>这首歌本来没歌词，名叫《威风堂堂》进行曲(Pomp and Circumstance March No.1 in D major，威风堂堂D大调第一进行曲)，英国著名作曲家埃尔加作曲。后来加上了歌词后，变成了著名爱国歌曲，甚至英格兰橄榄球队的“国歌”就是它。不过一般来说在前面一堆是不会唱的，只有副歌(Chorus)部分才会唱。</p><blockquote><p>Land of hope and glory,<br />Mother of the free.</p><p>How shall we extol thee,<br />who are born of thee.</p><p>Wider still and wider,<br />shall thy bounds be set?</p><p>God who made thee mighty,<br />make thee mightier yet.</p></blockquote><p>本人渣翻译：</p><blockquote><p>希望与光荣之地，<br />自由的母亲。</p><p>我等为你而生，<br />该怎样赞美你？</p><p>疆界在变广，<br />什么时候能被设定。</p><p>让你碉堡的神，<br />使你更加碉堡。</p></blockquote><p>这段歌词的确很霸气，第二段第一句，当然对比起现在英国的国力，这歌词的内容已经名存实亡了很多</p><p>附上视频链接：<a href="http://v.youku.com/v_show/id_XMjA3NDIwMzA0.html">BBC Proms - Land of Hope and Glory</a></p><p>合唱：BBC Singers, BBC Symphony Chorus<br />演奏：BBC Symphony Orchestra<br />指挥：Jiří Bělohlávek  </p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[恒大夺冠]]></title>
 <link>http://crispgm.com/page/guangzhou-fc.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/guangzhou-fc.html</guid>
-<pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
+<pubDate>Sat, 09 Nov 2013 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>随着终场哨声的响起，恒大有惊无险的夺冠了！</p><p>亚冠冠军。</p><p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p><p>想起大学时踢新生杯和院系杯时，就是这种心情。</p><p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[mac终端小技巧合集]]></title>
 <link>http://crispgm.com/page/mac-tips.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mac-tips.html</guid>
-<pubDate>Sun, 03 Nov 2013 00:00:00 +0000</pubDate>
+<pubDate>Sun, 03 Nov 2013 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h4>mac下ssh避免多次输入密码</h4><p>编辑文件</p><pre><code>sudo vim /etc/ssh_config</code></pre><p>加入</p><pre><code>Host *   ControlMaster auto  ControlPath ~/.ssh/master-%r@%h:%p  </code></pre><p>保存后，重新启动终端即可生效</p><h4>mac终端显示颜色</h4><p>修改~/.bash_profile，添加</p><pre><code>export CLICOLOR=1export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[自制chrome调用贴吧service插件正式发布]]></title>
 <link>http://crispgm.com/page/service-caller.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/service-caller.html</guid>
-<pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
+<pubDate>Fri, 01 Nov 2013 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>Chrome小插件，可以对选中的文字调用service，查bug利器，功能简单实用。</p><p>由于没有发布到Chrome Web Store，所以安装时，请在开发者模式下把crx包拖入chrome中。</p><p><img alt="" src="http://crispgm.sinaapp.com/static/img/servicecaller.png" /></p><p><a href="https://github.com/crispgm/chrome_tieba_service_caller">项目 GitHub</a></p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[awk日志统计脚本]]></title>
 <link>http://crispgm.com/page/awk-scripts.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/awk-scripts.html</guid>
-<pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
+<pubDate>Sat, 20 Jul 2013 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>使用awk统计日志中各项平均耗时</p><h4>扫描整个日志，从Timer字段开始定位，过滤掉无用的tbapi开头的timer</h4><pre><code>less ui.log | awk 'BEGIN{FS="Timer\\["}{print $2}' | awk 'BEGIN{FS="\\]"}{print $1}' | awk '{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}' | awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | sort -n</code></pre><h4>每2s自动tail 500条，原理同上</h4><p>（ps：符号转义好恶心啊）</p><pre><code>set +o historywatch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  </code></pre>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[回忆一下教过我的老师]]></title>
 <link>http://crispgm.com/page/my-teachers.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/my-teachers.html</guid>
-<pubDate>Sat, 05 Jun 2010 00:00:00 +0000</pubDate>
+<pubDate>Sat, 05 Jun 2010 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<h4>小学-1</h4><p>一开始在哈尔滨，那时候我非常怕老师，平时非常傻、灰常胆小，老师说啥我都听的<br />印象自然也不深 完全是未开发的大脑</p><h4>小学-2</h4><p>后来搬去深圳了<br />大概到了五年级 开始变成正常人了 稍微长大了<br />班主任叶老师是交语文的 但是经常写错一些字 这和哈尔滨原来的班主任形成鲜明对比<br />原来的裴老师教语文和数学的 而且写字不会错<br />后来校内找到原来的同学 发现他们分享的照片<br />裴老师已经升级为校长了 强力哈！<br />深圳这位老师对我还是很不错的<br />不记得什么原因他觉得我的知识面很广<br />还让我给“知识竞赛”出题 第一次有了点被“赏识”的感觉</p><h4>初中</h4><p>张老师<br />语文+年纪组长，很特别的一个，是个传说中的丁克，40岁还没孩子<br />但是经常号称要孩子 以此为理由辞去年纪组长<br />对我们态度很好 最喜欢的就是她布置的作文总是很好<br />没有那种为了考试而写而教学的感觉 “随笔”很轻松很快乐<br />每周都会有一节课读优秀随笔给我们听</p><p>陈老师<br />英语老师，教课没的说，口语没的说</p><p>申老师<br />班主任，因为意外认识了我妈，所以对我态度很好的<br />最搞笑的是他说我很孝顺…</p><p>李老师<br />历史滴，历史可是我那时的重要课程<br />她穿着够时尚，叫李维静，被我们称为李virgin~呵呵<br />初中时我可是历史帝，当然对我很好 </p><h4>高中</h4><p>不得不说 我高中悲剧了</p><p>首先是语文老师+1班班主任<br />完全“势力”形（仅限于学习成绩）<br />学习不认真的会被她很鄙视<br />我一直觉得自己还挺认真的 不料这一班居然都比我认真<br />我tm就悲剧了 比如背课文背的慢 上课记笔记不积极之类的…<br />记得我一开始很不适应 成绩很一般 她表示对我异常的不信任提醒我小心被好班T<br />我后来其中年级18 她表示很惊讶…<br />期末我运气好考了第六 她没一点“祝福”就说我一直没有用全力……伤啊<br />后来高二真悲剧了 真被t了 一点都不怀念 反而想换个环境<br />孔老师RP没问题 的确算德高望重 很负责任<br />但是教学方法很老套很无聊枯燥 完全为了考试 扼杀创造力<br />我个性不算强的人都被她整成这样 何况zx zz。。。</p><p>肖老师<br />也就是英语老师lisa<br />比起孔老师的“鄙视” lisa可以说是及其赏识我的<br />以至于让我很感动 就算我考的差也会很相信我<br />我一直很感激 虽然她那个英语口音实在不咋地<br />后来 随着考试改革 我英语真的nb了 我的作文经常被拿去当她的范文让我都不太好意思了“显得太高调了”<br />而且她身材极好 典型的bg killer 哈哈！</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[我们的使命]]></title>
 <link>http://crispgm.com/page/our-duty.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/our-duty.html</guid>
-<pubDate>Sun, 18 May 2008 00:00:00 +0000</pubDate>
+<pubDate>Sun, 18 May 2008 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>电脑节的讲座中<br />翟院长结束时说：让我们一起为中国计算机而奋斗！<br />尽管那时散场，心里向往着回宿舍堕落<br />但我却凝视着幕布：<br />这就是我们的使命！ </p><p>14点本来是个艳阳高照的时间<br />但今天阴天了 下雨了 灰蒙蒙的<br />我有些困得走进球场<br />出乎意料的是校歌响起了<br />我小声的唱着 仿佛感受到了什么<br />对，使命感！我们的使命！<br />我们要奋斗！我们拼了！</p><p>上半场却是很打击<br />我们被进了球，并且守门员受伤下了场<br />但我们有使命的召唤<br />并且我们新生都有一个感觉：<br />历史即将重演，新生杯半决赛时我们就是先落后一球<br />然后点球赢了<br />还在幻想时 进球就来了 又是任意球 魏博直接进了！<br />使命让我们拼搏，让我们获胜！<br />进入加时 英扎吉发威了 张硕打入一球 似乎马上就将获得胜利<br />然后 不久交院一个吊球<br />我和7号靠在一起<br />球离我们几万米<br />然后他和我碰了一下顺势摔倒<br />居然是点球 我很无言 很失落 被扳平了<br />之后我们球门被围攻 我们消耗着人品进入了点球大战</p><p>我很疲惫<br />是我人生中第一次感觉到我要抽筋了<br />这时突然场上倒了N个人<br />貌似抽筋了3个。。。。比赛如此惨烈，完全是靠意志支撑<br />于是 点球来了。。刚哥，我们临时客串门将扑出了对方的射门<br />我们一起冲上去 抱住了英雄们</p><p>这场跌宕起伏的比赛<br />双发都有大量抽筋的<br />但我们坚持没有下场<br />我们的守门员不幸骨折了<br />然而 我们的使命仍然指向那个方向！<br />（PS 上句话证明 使命是个指针。。。）</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[很奇葩]]></title>
 <link>http://crispgm.com/page/funny-chat.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/funny-chat.html</guid>
-<pubDate>Tue, 28 Jul 2009 00:00:00 +0000</pubDate>
+<pubDate>Tue, 28 Jul 2009 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>櫻婲傷逝 21:09:58<br />你就不能全身心投入计算机事业吗</p><p>Crisp 21:10:03<br />不能</p><p>Crisp 21:10:05<br />我是凡人</p><p>Crisp 21:10:15<br />图灵投身了吧？</p><p>Crisp 21:10:19<br />他不还要gay嘛</p><p>Crisp 21:10:22<br />我tm不gay</p><p>Crisp 21:10:26<br />也得有个gf吧？</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[物理题真是有意思~~]]></title>
 <link>http://crispgm.com/page/funny-physics.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/funny-physics.html</guid>
-<pubDate>Sun, 14 May 2006 00:00:00 +0000</pubDate>
+<pubDate>Sun, 14 May 2006 00:00:00 +0800</pubDate>
 <content:encoded><![CDATA[<p>暖水瓶里有0.5kg、25摄氏度的水，一个学生（估计小李当年）想用摇晃的方法把凉水变为开水，设每摇一次水落差15CM，每分钟要30次，不计所有散失，它需要___天能把水摇成开水？（水的比热容4.2<em>10^3J(kg</em>c）） </p><p>经过计算要5天，摇啊摇，最好小李摇到抽筋，摇到虚脱，摇到…… </p><p>然后我们就不用再听他充满想象力的废话。。</p>]]></content:encoded>
 </item>
 </channel>
