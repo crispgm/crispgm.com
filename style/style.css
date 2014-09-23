@@ -30,10 +30,11 @@ h4 {
   left: 16px;
 }
 #menu #menu_home a {
-  color: #08c;
+  /*color: #08c;*/
 }
 #menu #menu_home a:hover {
-  color: #66b7e0;
+  /*color: #66b7e0;*/
+  color: #bbbbbb;
   text-decoration: none;
 }
 #menu #menu_link {
