@@ -31,10 +31,11 @@ h4 {
 }
 #menu #menu_home a {
   /*color: #08c;*/
+  color: #bbbbbb;
 }
 #menu #menu_home a:hover {
   /*color: #66b7e0;*/
-  color: #bbbbbb;
+  color: #ffffff;
   text-decoration: none;
 }
 #menu #menu_link {
