@@ -203,4 +203,4 @@ int
 #### 最终结论
 
 1. int比intval()快3-6倍。  
-2. SEND\_VAR和DO\_FACALL操作，是导致int比intval()快很多的原因。
+2. SEND\_VAR和DO\_FCALL操作，是导致int比intval()快很多的原因。
