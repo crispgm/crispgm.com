@@ -174,8 +174,8 @@ _*: 在上一个测试中，结果未通过_
 
 #### 扩展阅读
 
-[PHP: Is there any particular difference between intval and (int)?](http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int)  
-[Fastest way to convert string to integer in PHP](http://stackoverflow.com/questions/239136/fastest-way-to-convert-string-to-integer-in-php)
+* [PHP: Is there any particular difference between intval and (int)?](http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int)  
+* [Fastest way to convert string to integer in PHP](http://stackoverflow.com/questions/239136/fastest-way-to-convert-string-to-integer-in-php)
 
 #### 深层原因
 
