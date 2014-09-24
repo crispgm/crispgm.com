@@ -166,8 +166,41 @@ Original Page:
 
 _*: 在上一个测试中，结果未通过_
 
-#### 结论
+#### 测试结论
 
 使用(int)类型转换，便捷而且没有负面效果。
 事实上，它在速度快的同时，还和intval()函数有完全一样的结果。
 两者甚至还会有同样的warning信息。
+
+#### 扩展阅读
+
+[PHP: Is there any particular difference between intval and (int)?](http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int)  
+[Fastest way to convert string to integer in PHP](http://stackoverflow.com/questions/239136/fastest-way-to-convert-string-to-integer-in-php)
+
+#### 深层原因
+
+对于作者的结论，网友Joseph Scott对OPCODE进行了分析，解释了其深层原因。
+
+intval()  
+---
+
+    0 ASSIGN  
+    1 SEND_VAR  
+    2 DO_FCALL  
+    3 ASSIGN  
+    4 RETURN  
+    5* ZEND_HANDLE_EXCEPTION
+
+int  
+---
+
+    0 ASSIGN  
+    1 CAST  
+    2 ASSIGN  
+    3 RETURN  
+    4* ZEND_HANDLE_EXCEPTION
+
+#### 最终结论
+
+1. int比intval()快3-6倍。  
+2. SEND\_VAR和DO\_FACALL操作，是导致int比intval()快很多的原因。
