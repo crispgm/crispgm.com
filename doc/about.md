@@ -6,6 +6,10 @@ Copyright &copy; David Zhang, 2014.
 
 All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](http://creativecommons.org/licenses/by-nc-nd/4.0/) 
 
+Powered by GitHub Pages.
+All the articles are written in [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) format.
+Generated with [CrispBlogGenerator](https://github.com/crispgm/CrispBlogGenerator), with power of PHP, Parsedown, less and jQuery.
+
 ### About Crisp
 I am David Zhang, a web developer and software engineer in Baidu,
 mainly focus on PHP, C, nginx, mysql and awk. 
