@@ -25,6 +25,19 @@ AKB48 and Owl City are my favorites as well.
 Since childhood, I have been big fan of magazines about fighter planes and warships.
 Feel free to contact me via email(crispgm at gmail.com) and [Weibo](http://www.weibo.com/crispgm).
 
+#### Shout out My Voice
+
+For all protesters in Hong Kong,
+
+I support __Occupy Central__ movement and admire your courage.
+What you have done shows us how to strive for freedom and democracy.
+
+No Internet Censorship.
+
+Unblock Google/YouTube/Facebook/Twitter/Instagram.
+
+Today I shout out my voice and hope you can win.
+
 ### Links
 [Doumao Blog](http://doumaomao.github.io/)  
 
