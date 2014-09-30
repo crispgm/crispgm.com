@@ -30,6 +30,7 @@ Feel free to contact me via email(crispgm at gmail.com) and [Weibo](http://www.w
 For all protesters in Hong Kong,
 
 I support __Occupy Central__ movement and admire your courage.
+
 What you have done shows us how to strive for freedom and democracy.
 
 No Internet Censorship.
