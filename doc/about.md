@@ -33,11 +33,11 @@ I support __Occupy Central__ movement and admire your courage.
 
 What you have done shows us how to strive for freedom and democracy.
 
+_Today I shout out my voice and hope you can win._
+
 No Internet Censorship.
 
 Unblock Google/YouTube/Facebook/Twitter/Instagram.
-
-Today I shout out my voice and hope you can win.
 
 ### Links
 [Doumao Blog](http://doumaomao.github.io/)  
