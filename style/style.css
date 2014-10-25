@@ -67,29 +67,20 @@ ul li p {
   margin: 0;
 }
 .article {
-  margin-top: 12px;
-}
-.article .article_head {
-  position: relative;
-  height: 32px;
+  margin-top: 74px;
   border-bottom: 1px solid #aaaaaa;
 }
-.article .article_head .article_title {
-  position: absolute;
-  left: 0;
-  padding-top: 4px;
-  font-size: 20px;
+.article_head {
 }
-.article .article_head .article_date {
-  position: absolute;
-  right: 0;
-  padding-top: 4px;
+.article_title {
+  font-size: 36px;
+}
+.article_date {
   font-size: 16px;
-  text-align: right;
 }
-.article .article_main {
-  margin-top: 4px;
-  padding-bottom: 12px;
+.article_main {
+  margin-top: 24px;
+  padding-bottom: 62px;
   font-size: 14px;
 }
 #disqus_thread {
@@ -106,7 +97,6 @@ footer {
   position: relative;
   margin-bottom: 8px;
   padding-top: 4px;
-  border-top: 1px solid #bcb;
   font-size: 18px;
   height: 32px;
   text-align: center;
