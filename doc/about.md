@@ -34,6 +34,7 @@ __My Tags__
 * iDevices & Kindle
 * Soccer & Rugby
 * Classical Music
+* IU
 * AKB48
 * Owl City
 * Documentary Films

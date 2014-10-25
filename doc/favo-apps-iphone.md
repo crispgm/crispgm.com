@@ -90,6 +90,13 @@ __Evernote__
 Presentation Mode是我最喜欢的VIP功能，就是把笔记当作幻灯片演示。
 平时工作时我会用印象笔记当Office用，可以记事、可以做表格、可以展示note。
 
+__OneNote__
+随着对Evernote使用的深入，其看似简单实则复杂的功能还有薄弱的排版和阅读效果，开始被我诟病。
+Microsoft OneNote作为Office的一部分，功能一上来就是"真复杂"。
+但优点是排版效果极佳，而且同样保持了简单易用。
+对于梳理资料而存在的话，完全可以取代Evernote。
+并且Nadella上台后，也推出了iOS和Mac版本，唯一缺点就是同步速度略慢。
+
 __百度云__
 2TB真心赞，离线下载可以省去用迅雷。
 之前有一个像素的解锁瑕疵，iPhone上至少已经修复了。
@@ -165,3 +172,4 @@ _Updated on August 10, to be continued._
 * 我喜欢的应用——iPad篇
 * [我喜欢的应用——Mac篇](http://crispgm.com/page/favo-apps-mac.html)
 * 我喜欢的应用——Win7篇
+
