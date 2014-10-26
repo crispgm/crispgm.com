@@ -13,3 +13,7 @@ Command-Shift-Control-4  |将所选屏幕内容捕捉到剪贴板，或按空格
     # /path/to/screenshot 是要设置的路径  
     defaults write com.apple.screencapture location /path/to/screenshot  
     killall SystemUIServer
+
+还有开发者做了一个Mac App实现此功能，有兴趣的可以搜索下。
+不过，我想对于geek来说，这种方法已经足够 :)
+

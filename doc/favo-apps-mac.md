@@ -79,8 +79,27 @@ Mac版微信是Native Client，不过功能上跟网页版保持一致。
 需要手机扫码才能登陆，只支持正常的聊天功能，不支持朋友圈等扩展功能。
 
 __QQ__
-原先版本的Mac qq就是一废品，而打开现在的3.1.2，绝对是一款好产品了。
+原先版本的Mac qq就是一废品，而更新到现在的版本，绝对是一款好产品了。
 界面极简，设计也是Mac风格，不一样的qq体验。
+
+#### Music & Video
+
+__网易云音乐__
+原因同iPhone版。
+
+__iTunes Internet Radio__
+iTunes真心坑货，但其自带的iTunes Internet Radio却是精品。
+里面分类齐全，速度也稳定。Classical Music频道是我最爱。
+
+__VLC__
+Mac上国产万能型播放器还未大规模登陆，VLC作为一款开源播放器能够满足播放QuickTime不支持格式的需求。
+
+#### Tools
+
+__Language Switcher__
+作用很简单，可以以单个app为纬度，设置它的locale.
+我的Mac设置的是英文，所以大多国际化的程序会默认把界面设成英文界面，并且不能调整。
+但有些软件<strike>Mac QQ</strike>英死早，就可以用它切换回中文而不是把Mac都换成中文。
 
 #### 相关阅读
 

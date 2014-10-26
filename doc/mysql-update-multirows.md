@@ -44,3 +44,5 @@ SET column_desc = CASE column_id
     WHEN 3 THEN 'test 3'
 WHERE column_id IN(1,2,3);
 ```
+
+END.
