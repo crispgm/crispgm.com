@@ -19,10 +19,10 @@ h4 {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 36px;
-  padding-top: 8px;
+  height: 50px;
+  padding-top: 16px;
   background-color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   text-align: left;
 }
 #menu #menu_home {
@@ -50,7 +50,7 @@ h4 {
   text-decoration: none;
 }
 #container {
-  margin-top: 60px;
+  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
   width: 860px;
