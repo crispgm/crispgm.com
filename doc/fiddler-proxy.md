@@ -63,7 +63,7 @@ Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户�
 
 * AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。
 
-* FiddlerScript，以FiddlerScript(C#)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。
+* FiddlerScript，以FiddlerScript(JScript.NET)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。
 
 #### HOSTS
 
