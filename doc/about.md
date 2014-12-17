@@ -20,7 +20,7 @@ __Contact Me__
 * Weibo
     * [@crispgm](http://weibo.com/crispgm)
 * Instagram
-    * [@crispgm](http://www.instragram.com/crispgm)
+    * [@crispgm](http://www.instagram.com/crispgm)
 
 __Occupation__
 * Baidu, Inc.
