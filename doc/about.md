@@ -52,5 +52,5 @@ __My Views__
 * [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
 * Against Piracy Software
 * Advocate Free Software
-* [Born with Pride](http://jiaoao.smartisan.com) LOL
+
 

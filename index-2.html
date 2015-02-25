@@ -187,9 +187,10 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
 <div class="article_main">
 <p>在安装有OSX 10.9 Mavericks的Mac中，包括升级或者直接购买的Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况<br />
 忍了很久后，今天终于找到<a href="http://www.v2ex.com/t/95465">解决方法</a></p>
-<p>简单的说，就是在Terminal执行下面两条</p>
+<p>解决方法：</p>
 <pre><code>sudo kextunload /System/Library/Extensions/AppleHDA.kext  
-sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre></div></div>
+sudo kextload /System/Library/Extensions/AppleHDA.kext</code></pre>
+<p>OSX 升级到 10.10 Yosemite，此问题没有再出现过，应该是苹果彻底修复了。</p></div></div>
 <div class="article">
 <div class="article_head">
 <div class="article_title"><a href="http://crispgm.com/page/mac-mail.html">Mac Mail无法退出</a></div>
