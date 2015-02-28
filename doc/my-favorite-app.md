@@ -14,12 +14,24 @@
 * 略有强迫症，图标非常不搭的app有点受不了，所以同等情况下会选择图标好看的，实在不可替代就丢到Folder中 :)
 * 有娱乐但没有游戏，本人爱玩游戏但对手机游戏完全无爱
 
+### 更新记录
+
+__2015-02-28__: 1. 由于iPad使用不多，移除了相关内容 2. 工具类增加WordBook
+
+__2015-02-25__: 1. 用欧陆词典替代了Bing词典 2. 增加奇点 3. 修复文本小bug
+
+__2014-10-26__: 合并“我喜欢的应用——iPhone篇”和“我喜欢的应用——Mac篇”为“我喜欢的应用”
+
+__2014/08/10__: 我喜欢的应用——Mac篇
+
+__2014/05/29__: 我喜欢的应用——iPhone篇
+
 ### 正文
 
 #### _Development_
 
 __Chrome__  
-_Windows, Mac, iPhone, iPad_
+_Windows, Mac, iPhone_
 
 速度快，自带同步，全平台支持，还可以不同类型终端之间访问书签和打开的页面。
 强大的插件支持，去优酷广告、JSON格式化显示和HTTP代理都很需要。
@@ -78,7 +90,7 @@ Airmail可以说是现在Mac最火的email client，购入后(￥12)只是收收
 ps: 邮箱这块其实我也没太想好，Windows上就outlook，Mac上用Airmail，iPhone上用Apple Mail，各有优势但也都没有特别满意。
 
 __Wunderlist__  
-_Mac, iPhone, iPad, WebApp_
+_Mac, iPhone, WebApp_
 
 德国出品，Wunder是德语Wonder的意思。
 简洁易用的TODO list类app，平时自己要做的事情都记在上面。
@@ -92,7 +104,7 @@ Wunderlist终于变成了扁平风格。
 以及所谓的Real-time Sync，不过实测表明，iOS/Mac上同步能力提升的比较明显，不过还远远算不上实时。
 
 __OneNote__  
-_Windows, Mac, iPhone, iPad_
+_Windows, Mac, iPhone_
 
 随着对Evernote使用的深入，其看似简单实则复杂的功能还有薄弱的排版和阅读效果，开始被我诟病。
 Microsoft OneNote作为Office的一部分，功能一上来就是"真复杂"。
@@ -103,7 +115,7 @@ Microsoft OneNote作为Office的一部分，功能一上来就是"真复杂"。
 [备选]曾经出现在列表中的Evernote
 
 __百度云__  
-_Windows, iPhone, iPad, WebApp_
+_Windows, iPhone, WebApp_
 
 2TB真心赞，离线下载可以省去用迅雷。
 之前有一个像素的解锁瑕疵，iPhone上至少已经修复了。
@@ -116,27 +128,34 @@ __Dropbox__
 但又毕竟在墙内会比较卡，而且Dropbox容量只有2G，所以用于备份一些重要数据，但是完全不够用！
 
 __OneDrive__
+_Windows, iPhone, WebApp_
 
 也就是曾经的SkyDrive。数据安全性强，容量比起Dropbox还是够用很多的，纯备份已经足够了。
 
 __欧陆词典__
+_Windows, iPhone_
 
 虽感觉不是很极简，但反应就是快。
+
+__WordBook__
+_iPhone_
+
+售价¥12最好的词典app（英英词典），响应快内容准，字体漂亮。
 
 [备选]必应词典, Google Translate
 
 #### _Reading_
 
 __Reeder__  
-_Mac, iPhone, iPad_
+_Mac, iPhone_
 
-售价￥30，绝对物有所值，免费可以选Feedly，但收费的话我推荐Reeder。
+售价¥30，绝对物有所值，免费可以选Feedly，但收费的话我推荐Reeder。
 Feedly不挂VPN实在会经常刷不出来，挂了VPN速度也不快。
 反观Reeder可以直接登录Feedly帐号，速度还飞快，UI设计也更有阅读质感。
 值得一提的是，Reeder的share功能反应特别快，分享到Pocket一点就行，完全无滞后感。
 
 __Pocket__  
-_Mac, iPhone, iPad_
+_Mac, iPhone_
 
 传说中的Read it later，Reeder中的RSS源比较多，希望深度阅读的认为，可以从Reeder中share到Pocket。
 从阅读体验来说，其实Reeder更好些，但Pocket也逊色的不多。
@@ -148,7 +167,7 @@ _PS:_ 真的书籍就不在手机或平板上阅读了，有Kindle和实体书�
 __Instapaper__  
 _iPhone_
 
-Instapaper同Pocket是宿敌，定位相似，价格￥25。
+Instapaper同Pocket是宿敌，定位相似，价格¥25。
 个人体验是Instapaper更专注阅读纯文本，对于文本的排版比Pocket略好。
 跟Reeder的设计风格相似，颇为神似，两者配合起来很有感觉。
 但它的文章抓取速度比Pocket慢太多了，不知是不是国内网络的原因。
@@ -157,7 +176,7 @@ Instapaper同Pocket是宿敌，定位相似，价格￥25。
 #### _Social_
 
 __微信 WeChat__  
-_Mac, iPhone, iPad_
+_Windows, Mac, iPhone_
 
 主要沟通工具。
 即使张晓龙说不想让微信做的太重，但它的确已经超贵，
@@ -170,7 +189,7 @@ Mac版微信是Native Client，不过功能上跟网页版保持一致。
 值得一提的是，微信是国内少数开发iPhone和iPad合一版app的公司。
 
 __QQ__  
-_Windows, Mac, iPhone, iPad_
+_Windows, Mac, iPhone_
 
 QQ这块得分开说，因为不同版本的QQ简直不是一个软件。
 
@@ -186,9 +205,6 @@ QQ这块得分开说，因为不同版本的QQ简直不是一个软件。
 腾讯的标签页设计的很合理，额外的功能同基础功能，有一种眼不见心不烦的意思。
 之前的版本是一种比较白静的UI设计，看着挺舒服。
 不过，新版UI一出，完全丑得不能忍，遂删除。
-
-* iPad
-国内的公司对iPad客户端大多开发滞后，所以还保持着跟上一代iPhone QQ一样的功能和UI，这也是没有被我卸载的原因。
 
 __VVebo__  
 _iPhone_
@@ -221,7 +237,7 @@ Foobar 2000有很多自己的标签，并得到了一部分注重音质喜欢折
 但这不正是发烧友们和Geek们所爱好的东西？因此，我爱Foobar 2000。
 
 __网易云音乐__  
-_Windows, Mac, iPhone, iPad_
+_Windows, Mac, iPhone_
 
 用户体验好，歌曲库资源多。
 不过社交感做得太强了，但我认识的好友都不用它“社交”。
