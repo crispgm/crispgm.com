@@ -127,17 +127,17 @@ __Dropbox__
 对于本人来说，算是百度云的冷备，墙外数据安全性明显保障性强。
 但又毕竟在墙内会比较卡，而且Dropbox容量只有2G，所以用于备份一些重要数据，但是完全不够用！
 
-__OneDrive__
+__OneDrive__  
 _Windows, iPhone, WebApp_
 
 也就是曾经的SkyDrive。数据安全性强，容量比起Dropbox还是够用很多的，纯备份已经足够了。
 
-__欧陆词典__
+__欧陆词典__  
 _Windows, iPhone_
 
 虽感觉不是很极简，但反应就是快。
 
-__WordBook__
+__WordBook__  
 _iPhone_
 
 售价¥12最好的词典app（英英词典），响应快内容准，字体漂亮。
