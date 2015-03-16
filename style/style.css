@@ -18,29 +18,37 @@ h4 {
 #menu {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 50px;
-  padding-top: 16px;
+  left: 0;
+  width: 320px;
+  height: 100%;
   background-color: #000000;
   font-size: 24px;
   text-align: left;
 }
+#menu #menu_icon {
+  margin-top: 60px;
+  text-align: center;
+}
+#menu #menu_icon img {
+  border: 0;
+  height: 200px;
+  width: 200px;
+}
 #menu #menu_home {
-  position: absolute;
-  left: 16px;
+  font-size: 36px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 #menu #menu_home a {
-  /*color: #08c;*/
   color: #bbbbbb;
 }
 #menu #menu_home a:hover {
-  /*color: #66b7e0;*/
   color: #ffffff;
   text-decoration: none;
 }
 #menu #menu_link {
-  position: absolute;
-  right: 16px;
+  margin-left: 60px;
 }
 #menu #menu_link a {
   color: #bbbbbb;
@@ -49,11 +57,17 @@ h4 {
   color: #ffffff;
   text-decoration: none;
 }
+#menu #menu_copy {
+  position: fixed;
+  bottom: 8px;
+  margin-left: 60px;
+  font-size: 18px;
+  text-align: center;
+  color: #bbbbbb;
+}
 #container {
-  margin-top: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 860px;
+  margin-left: 410px;
+  margin-right: 80px;
   text-align: left;
 }
 a {
@@ -67,13 +81,13 @@ ul li p {
   margin: 0;
 }
 .article {
-  margin-top: 74px;
+  margin-top: 50px;
   border-bottom: 1px solid #aaaaaa;
 }
 .article_head {
 }
 .article_title {
-  font-size: 36px;
+  font-size: 32px;
 }
 .article_date {
   font-size: 16px;
