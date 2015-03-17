@@ -1,3 +1,4 @@
 # ignore Thumb.db
 Thumb.db
 image/Thumb.db
+*.swp
