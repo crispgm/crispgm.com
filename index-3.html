@@ -30,7 +30,7 @@
         <a href="/rss.xml" target="_blank">Subscribe</a>
     </div>
     <div id="menu_link">
-        <a href="http://yeyekooo.crispgm.com" target="_blank">Yeyekooo</a>
+        <a href="http://yeyekooo.crispgm.com">Yeyekooo</a>
     </div>
     <div id="menu_link">
         <a href="http://github.com/crispgm" target="_blank">GitHub</a>
@@ -49,43 +49,57 @@
 
 <div class="article">
 <div class="article_head">
-<div class="article_title"><a href="/page/mysql-update-multirows.html">MySQL更新多条记录的不同值</a></div>
-<div class="article_date">2014/09/12</div>
+<div class="article_title"><a href="/page/guangzhou-fc.html">恒大夺冠</a></div>
+<div class="article_date">2013/11/09</div>
 </div>
 <div class="article_main">
-<p>MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：</p>
-<pre><code class="language-sql">UPDATE table_name  
-SET column_value=1  
-WHERE column_id IN (1,2,3);</code></pre>
-<p>如果更新多行数据，且值是不同的，往往会使用for循环进行更新。如：</p>
-<pre><code class="language-php">foreach ($data_list as $item) {  
-    $sql = "UPDATE table_name SET column={$item['value']} WHERE column={$item['id']}";  
-    $ret = mysql_query($sql);  
-    if ($ret === false) {  
-        //...
-    }  
-}  </code></pre>
-<p>这样写网络交互次数比较多，可能会导致性能问题，看起来也不优雅。
-那能否一条SQL搞定呢？答案是肯定的。</p>
-<pre><code class="language-sql">UPDATE table_name  
-SET column_value = CASE column_id  
-    WHEN 1 THEN 0  
-    WHEN 2 THEN 1  
-    WHEN 3 THEN 2  
-WHERE column_id IN(1,2,3);</code></pre>
-<p>同理，也可以使用此方法设置多行多个值。</p>
-<pre><code class="language-sql">UPDATE table_name  
-SET column_value = CASE column_id  
-    WHEN 1 THEN 0  
-    WHEN 2 THEN 1  
-    WHEN 3 THEN 2,  
-SET column_desc = CASE column_id  
-    WHEN 1 THEN 'test 1'
-    WHEN 2 THEN 'test 2'
-    WHEN 3 THEN 'test 3'
-WHERE column_id IN(1,2,3);</code></pre>
-<p>END.</p></div></div>
-<nav id="page"><a href="/index-2.html" id="prev">prev</a><a href="/index-4.html" id="next">next</a></nav></div>
+<p>随着终场哨声的响起，恒大有惊无险的夺冠了！</p>
+<p>亚冠冠军。</p>
+<p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p>
+<p>想起大学时踢新生杯和院系杯时，就是这种心情。</p>
+<p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p></div></div>
+<div class="article">
+<div class="article_head">
+<div class="article_title"><a href="/page/mac-tips.html">mac终端小技巧合集</a></div>
+<div class="article_date">2013/11/03</div>
+</div>
+<div class="article_main">
+<h4>mac下ssh避免多次输入密码</h4>
+<p>编辑文件</p>
+<pre><code>sudo vim /etc/ssh_config</code></pre>
+<p>加入</p>
+<pre><code>Host *   
+ControlMaster auto  
+ControlPath ~/.ssh/master-%r@%h:%p  </code></pre>
+<p>保存后，重新启动终端即可生效</p>
+<h4>mac终端显示颜色</h4>
+<p>修改~/.bash_profile，添加</p>
+<pre><code>export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre></div></div>
+<div class="article">
+<div class="article_head">
+<div class="article_title"><a href="/page/service-caller.html">自制chrome调用贴吧service插件正式发布</a></div>
+<div class="article_date">2013/11/01</div>
+</div>
+<div class="article_main">
+<p>Chrome小插件，可以对选中的文字调用service，查bug利器，功能简单实用。</p>
+<p>由于没有发布到Chrome Web Store，所以安装时，请在开发者模式下把crx包拖入chrome中。</p>
+<p><img alt="" src="http://crispgm.sinaapp.com/static/img/servicecaller.png" /></p>
+<p><a href="https://github.com/crispgm/chrome_tieba_service_caller">项目 GitHub</a></p></div></div>
+<div class="article">
+<div class="article_head">
+<div class="article_title"><a href="/page/awk-scripts.html">awk日志统计脚本</a></div>
+<div class="article_date">2013/07/20</div>
+</div>
+<div class="article_main">
+<p>使用awk统计日志中各项平均耗时</p>
+<h4>扫描整个日志，从Timer字段开始定位，过滤掉无用的tbapi开头的timer</h4>
+<pre><code>less ui.log | awk 'BEGIN{FS="Timer\\["}{print $2}' | awk 'BEGIN{FS="\\]"}{print $1}' | awk '{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}' | awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | sort -n</code></pre>
+<h4>每2s自动tail 500条，原理同上</h4>
+<p>（ps：符号转义好恶心啊）</p>
+<pre><code>set +o history
+watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  </code></pre></div></div>
+<nav id="page"><a href="/index-2.html" id="prev">prev</a></nav></div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
