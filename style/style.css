@@ -47,13 +47,13 @@ h4 {
   color: #ffffff;
   text-decoration: none;
 }
-#menu #menu_link {
+#menu .menu_link {
   margin-left: 60px;
 }
-#menu #menu_link a {
+#menu .menu_link a {
   color: #bbbbbb;
 }
-#menu #menu_link a:hover {
+#menu .menu_link a:hover {
   color: #ffffff;
   text-decoration: none;
 }
