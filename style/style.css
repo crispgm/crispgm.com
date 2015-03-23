@@ -19,15 +19,14 @@ h4 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 320px;
+  width: 300px;
   height: 100%;
   background-color: #000000;
-  font-size: 24px;
   text-align: left;
 }
 #menu #menu_icon {
-  margin-top: 60px;
-  text-align: center;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 #menu #menu_icon img {
   border: 0;
@@ -36,9 +35,9 @@ h4 {
 }
 #menu #menu_home {
   font-size: 36px;
-  margin-left: 60px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 #menu #menu_home a {
   color: #bbbbbb;
@@ -47,26 +46,27 @@ h4 {
   color: #ffffff;
   text-decoration: none;
 }
-#menu .menu_link {
-  margin-left: 60px;
+.menu_link {
+  margin-left: 40px;
+  font-size: 20px;
 }
-#menu .menu_link a {
+.menu_link a {
   color: #bbbbbb;
 }
-#menu .menu_link a:hover {
+.menu_link a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 #menu #menu_copy {
   position: fixed;
   bottom: 8px;
-  margin-left: 60px;
+  margin-left: 40px;
   font-size: 18px;
   text-align: center;
   color: #bbbbbb;
 }
 #container {
-  margin-left: 410px;
+  margin-left: 360px;
   margin-right: 80px;
   text-align: left;
 }
@@ -81,7 +81,7 @@ ul li p {
   margin: 0;
 }
 .article {
-  margin-top: 50px;
+  margin-top: 40px;
 /*  border-bottom: 1px solid #aaaaaa;*/
 }
 .article_head {
