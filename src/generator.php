@@ -36,7 +36,7 @@ class CrispBlogGenerator
 
     private static function gen_blogs()
     {
-        $blog = new Blog($blogs_per_page);
+        $blog = new Blog();
         $all_blogs = $blog->getAllBlogs();
         foreach ($all_blogs as $blog_name => $blog_info) {
             $html = '';
@@ -210,7 +210,7 @@ class CrispBlogGenerator
         $blog = new Blog($blogs_per_page);
         $blogs = $blog->getAllBlogs();
 
-        $html .= self::get_head();
+        $html = self::get_head();
         $html = str_replace('{{title}}', "Archive - Crisp Blog", $html);
         $html .= "\n";
         $html .= "<div class=\"article\">\n";
@@ -222,8 +222,7 @@ class CrispBlogGenerator
         foreach ($blogs as $blog_name => $blog_info) {
             $title = $blog_info['title'];
             $date = $blog_info['date'];
-            
-            $html .= "<div>[$date] <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
+            $html .= "<div>$date - <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
         }
         $html .= "</div></div>\n";
 
