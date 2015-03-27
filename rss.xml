@@ -10,13 +10,13 @@
 <link>http://crispgm.com</link>
 <description>Crisp 个人博客</description>
 <atom:link href="http://crispgm.com/rss.xml" rel="self" type="application/rss+xml"/><author>Crisp</author><language>zh-cn</language>
-<lastBuildDate>Fri, 27 Mar 2015 18:45:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 27 Mar 2015 18:53:47 +0800</lastBuildDate>
 <item>
 <title><![CDATA[Minimalism Period Tracker]]></title>
 <link>http://crispgm.com/page/period-tracker-app.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/period-tracker-app.html</guid>
 <pubDate>Fri, 27 Mar 2015 00:00:00 +0800</pubDate>
-<content:encoded><![CDATA[<h3>极简主义生理周期追踪app</h3><h4>背景</h4><p>为了当个相对体贴的男友，把女朋友(@yeyeko)的生理周期追踪app装了起来，并且使用了各类国内外app。包括美柚、大姨吗、Clue和Glow。</p><p>国产缺点比较明显：</p><ol><li>无关功能极多，比如：很Low的社区</li><li>界面跟美图秀秀类似，粉色大行其道，毫无设计感</li><li>大姨吗支持给男朋友用，功能特别少</li></ol><p>国外的两款界面还是比较美观的，但也带有社区类，且没有“男朋友”模式。</p><h4>设计思路</h4><ol><li>极简主义风格设计，去除无用的功能</li><li>更好的信息传递方式</li></ol><h4>技术实现</h4><ul><li>客户端计划只会支持iOS，使用Swift实现</li><li>服务端使用golang在Linode上搭建</li><li>数据库采用NoSQL或MySQL</li></ul><h4>计划</h4><p>TODO</p>]]></content:encoded>
+<content:encoded><![CDATA[<h3>极简主义生理周期追踪app</h3><h4>背景</h4><p>为了当个相对体贴的男友，把<a href="http://yeyekooo.crispgm.com">女朋友</a>的生理周期追踪app装了起来，并且使用了各类国内外app。包括美柚、大姨吗、Clue和Glow。</p><p>国产缺点比较明显：</p><ol><li>无关功能极多，比如：很Low的社区</li><li>界面跟美图秀秀类似，粉色大行其道，毫无设计感</li><li>大姨吗支持给男朋友用，功能特别少</li></ol><p>国外的两款界面还是比较美观的，但也带有社区类，且没有“男朋友”模式。</p><h4>设计思路</h4><ol><li>极简主义风格设计，去除无用的功能</li><li>更好的信息传递方式</li></ol><h4>技术实现</h4><ul><li>客户端计划只会支持iOS，使用Swift实现</li><li>服务端使用golang在Linode上搭建</li><li>数据库采用NoSQL或MySQL</li></ul><h4>计划</h4><p>TODO</p>]]></content:encoded>
 </item>
 <item>
 <title><![CDATA[我喜欢的应用]]></title>
