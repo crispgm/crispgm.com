@@ -89,6 +89,13 @@ ul li p {
 .article_title {
   font-size: 32px;
 }
+.article_title a {
+    text-decoration: none;
+    color: black;
+}
+.article_title a:hover {
+    text-decoration: underline;
+}
 .article_date {
   font-size: 16px;
 }

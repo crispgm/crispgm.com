@@ -20,25 +20,25 @@
     <div id="menu_home">
         <a href="/">Crisp Blog</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
+        <a href="http://yeyekooo.crispgm.com">Yeyeko</a>
+    </div>
+    <div class="menu_link">
         <a href="/page/about.html">About</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="/archive.html">Archive</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="/rss.xml" target="_blank">Subscribe</a>
     </div>
-    <div id="menu_link">
-        <a href="http://yeyekooo.crispgm.com">Yeyekooo</a>
-    </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://github.com/crispgm" target="_blank">GitHub</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://instagram.com/crispgm" target="_blank">Instagram</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://weibo.com/crispgm" target="_blank">Weibo</a>
     </div>
     <div id="menu_copy">
@@ -49,37 +49,20 @@
 
 <div class="article">
 <div class="article_head">
-<div class="article_title"><a href="/page/inspiring-songs.html">Land of Hope and Glory</a></div>
-<div class="article_date">2013/11/25</div>
+<div class="article_title"><a href="/page/shell-tips.html">shell两个小问题解决方法</a></div>
+<div class="article_date">2013/12/30</div>
 </div>
 <div class="article_main">
-<p>这首歌本来没歌词，名叫《威风堂堂》进行曲(Pomp and Circumstance March No.1 in D major，威风堂堂D大调第一进行曲)，英国著名作曲家埃尔加作曲。后来加上了歌词后，变成了著名爱国歌曲，甚至英格兰橄榄球队的“国歌”就是它。不过一般来说在前面一堆是不会唱的，只有副歌(Chorus)部分才会唱。</p>
-<blockquote>
-<p>Land of hope and glory,<br />
-Mother of the free.</p>
-<p>How shall we extol thee,<br />
-who are born of thee.</p>
-<p>Wider still and wider,<br />
-shall thy bounds be set?</p>
-<p>God who made thee mighty,<br />
-make thee mightier yet.</p>
-</blockquote>
-<p>本人渣翻译：</p>
-<blockquote>
-<p>希望与光荣之地，<br />
-自由的母亲。</p>
-<p>我等为你而生，<br />
-该怎样赞美你？</p>
-<p>疆界在变广，<br />
-什么时候能被设定。</p>
-<p>让你碉堡的神，<br />
-使你更加碉堡。</p>
-</blockquote>
-<p>这段歌词的确很霸气，第二段第一句，当然对比起现在英国的国力，这歌词的内容已经名存实亡了很多</p>
-<p>附上视频链接：<a href="http://v.youku.com/v_show/id_XMjA3NDIwMzA0.html">BBC Proms - Land of Hope and Glory</a></p>
-<p>合唱：BBC Singers, BBC Symphony Chorus<br />
-演奏：BBC Symphony Orchestra<br />
-指挥：Jiří Bělohlávek  </p></div></div>
+<p>最近，在工作种遇到了两个有点棘手的问题。前者是不小心打错命令建立了一个"--"两个减号开头的文件，想删除删不掉；后者是，减少机器后单机文件数过多，导致定时脚本里的tar执行失败了。</p>
+<h4>在shell中删除减号开头的文件</h4>
+<p>解决方法：</p>
+<pre><code>rm -- "--xxxx"</code></pre>
+<h4>argument list too long</h4>
+<p>由于文件数增加，脚本出现错误tar: argument list too long，也就是说tar参数太多了</p>
+<p>解决方法：</p>
+<pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  
+tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
+rm /tmp/20131229.list</code></pre></div></div>
 <nav id="page"><a href="/index-11.html" id="prev">prev</a><a href="/index-13.html" id="next">next</a></nav></div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

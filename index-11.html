@@ -20,25 +20,25 @@
     <div id="menu_home">
         <a href="/">Crisp Blog</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
+        <a href="http://yeyekooo.crispgm.com">Yeyeko</a>
+    </div>
+    <div class="menu_link">
         <a href="/page/about.html">About</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="/archive.html">Archive</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="/rss.xml" target="_blank">Subscribe</a>
     </div>
-    <div id="menu_link">
-        <a href="http://yeyekooo.crispgm.com">Yeyekooo</a>
-    </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://github.com/crispgm" target="_blank">GitHub</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://instagram.com/crispgm" target="_blank">Instagram</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://weibo.com/crispgm" target="_blank">Weibo</a>
     </div>
     <div id="menu_copy">
@@ -49,20 +49,24 @@
 
 <div class="article">
 <div class="article_head">
-<div class="article_title"><a href="/page/shell-tips.html">shell两个小问题解决方法</a></div>
-<div class="article_date">2013/12/30</div>
+<div class="article_title"><a href="/page/mac-mail.html">Mac Mail无法退出</a></div>
+<div class="article_date">2014/01/10</div>
 </div>
 <div class="article_main">
-<p>最近，在工作种遇到了两个有点棘手的问题。前者是不小心打错命令建立了一个"--"两个减号开头的文件，想删除删不掉；后者是，减少机器后单机文件数过多，导致定时脚本里的tar执行失败了。</p>
-<h4>在shell中删除减号开头的文件</h4>
-<p>解决方法：</p>
-<pre><code>rm -- "--xxxx"</code></pre>
-<h4>argument list too long</h4>
-<p>由于文件数增加，脚本出现错误tar: argument list too long，也就是说tar参数太多了</p>
-<p>解决方法：</p>
-<pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  
-tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
-rm /tmp/20131229.list</code></pre></div></div>
+<p>Mac Mail在国内网络状况下，和gmail一起总是会有点问题。
+收件箱里选择删除一封gmail邮件，并用command+q关掉Mail。
+如果删除gmail失败的话就会报错，之后Mail就会处于一种卡死的状态，退不出来也进不去。
+只能选择：</p>
+<pre><code>ps aux|grep Mail
+kill -9 xxxx</code></pre>
+<p>这个事情遇多了，搞了个更简单粗暴的shell脚本</p>
+<pre><code>#!/bin/bash
+PID=$(ps aux|grep $1|grep -v grep|tail -1|awk '{print $2}')
+kill -9 $PID</code></pre>
+<p>直到后来，我试了下zsh的自动补全参数功能，输入kill -9之后再输入Mail就会自己智能获取PID，因此这个脚本瞬间没意义了。</p>
+<p>又过了没多久，发现有pgrep这命令，于是没zsh一样轻取。</p>
+<p>最后，我换成了Airmail.</p>
+<p>THE END</p></div></div>
 <nav id="page"><a href="/index-10.html" id="prev">prev</a><a href="/index-12.html" id="next">next</a></nav></div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>mac终端小技巧合集 - Crisp Blog</title>
+<title>Minimalism Period Tracker - Crisp Blog</title>
 <link rel="stylesheet" href="/style/style.css">
 <link rel="stylesheet" href="/style/vs.css">
 <link rel="stylesheet" href="/style/opensans.css">
@@ -47,20 +47,30 @@
 </div>
 <div id="container">
 
-<div class="article"><div class="article_head"><div class="article_title">mac终端小技巧合集</div>
-<div class="article_date">2013/11/03</div>
-</div><div class="article_main"><h4>mac下ssh避免多次输入密码</h4>
-<p>编辑文件</p>
-<pre><code>sudo vim /etc/ssh_config</code></pre>
-<p>加入</p>
-<pre><code>Host *   
-ControlMaster auto  
-ControlPath ~/.ssh/master-%r@%h:%p  </code></pre>
-<p>保存后，重新启动终端即可生效</p>
-<h4>mac终端显示颜色</h4>
-<p>修改~/.bash_profile，添加</p>
-<pre><code>export CLICOLOR=1
-export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre></div>
+<div class="article"><div class="article_head"><div class="article_title">Minimalism Period Tracker</div>
+<div class="article_date">2015/03/27</div>
+</div><div class="article_main"><h3>极简主义生理周期追踪app</h3>
+<h4>背景</h4>
+<p>为了当个相对体贴的男友，把妹子(@yeyeko)的生理周期追踪app装了起来，并且使用了各类国内外app。包括美柚、大姨吗、Clue和Glow。</p>
+<p>缺点比较明显：</p>
+<ol>
+<li>无关功能极多，比如：很Low的社区</li>
+<li>界面跟美图秀秀类似，粉色大行其道，毫无设计感</li>
+<li>大姨吗支持给男朋友用，功能特别少</li>
+</ol>
+<h4>设计思路</h4>
+<ol>
+<li>极简主义风格设计，去除无用的功能</li>
+<li>更好的信息传递方式</li>
+</ol>
+<h4>技术实现</h4>
+<ul>
+<li>客户端计划只会支持iOS，使用Swift实现</li>
+<li>服务端使用golang在Linode上搭建</li>
+<li>数据库采用NoSQL或MySQL</li>
+</ul>
+<h4>计划</h4>
+<p>TODO</p></div>
 </div>    <div id="disqus_thread"></div>
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

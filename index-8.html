@@ -20,25 +20,25 @@
     <div id="menu_home">
         <a href="/">Crisp Blog</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
+        <a href="http://yeyekooo.crispgm.com">Yeyeko</a>
+    </div>
+    <div class="menu_link">
         <a href="/page/about.html">About</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="/archive.html">Archive</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="/rss.xml" target="_blank">Subscribe</a>
     </div>
-    <div id="menu_link">
-        <a href="http://yeyekooo.crispgm.com">Yeyekooo</a>
-    </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://github.com/crispgm" target="_blank">GitHub</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://instagram.com/crispgm" target="_blank">Instagram</a>
     </div>
-    <div id="menu_link">
+    <div class="menu_link">
         <a href="http://weibo.com/crispgm" target="_blank">Weibo</a>
     </div>
     <div id="menu_copy">
@@ -49,110 +49,54 @@
 
 <div class="article">
 <div class="article_head">
-<div class="article_title"><a href="/page/fiddler-proxy.html">Fiddler网络调试工具</a></div>
-<div class="article_date">2014/03/21</div>
+<div class="article_title"><a href="/page/vim-youcompleteme.html">YouCompleteMe Installation Guide on Mac</a></div>
+<div class="article_date">2014/04/20</div>
 </div>
 <div class="article_main">
-<h4>什么是Fiddler</h4>
-<p>Fiddler官方给Fiddler的描述语是Web Debugging Proxy，也就是web调试代理工具。</p>
-<p>主要功能有：</p>
+<h4>What is YouCompleteMe</h4>
+<p><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> 是一个vim插件，简称为ycm，支持基于语义的代码补全和代码语法检查功能。</p>
+<p>常用的补全插件如ctags和AutoComplPop等是基于文本的，类似于搜索时的suggest功能。不过，前者是事先扫描文本生成tags文件，后者是对当前打开的文件内容进行扫描。
+如果tags或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。</p>
+<p>所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入.之后ycm可以补全提示对象的成员变量和成员函数等。
+一般的成熟IDE如Visual Studio和Eclipse都具有这种能力。</p>
+<p>目前ycm支持5种程序语言:
+C/C++/Objective-C(基于clang)，Python(基于<a href="https://github.com/davidhalter/jedi">Jedi</a>)和C# (基于<a href="https://github.com/nosami/OmniSharpServer">OmniSharp</a>)。</p>
+<p>至于其他语言，ycm会调用vim omnifunc来匹配，因此不是很有必要使用ycm。</p>
+<p>ycm虽然功能十分强大，不过编译安装较为复杂，本文基于Mac OSX 10.9 Mavericks介绍一下如何安装成功爽上ycm。</p>
+<h4>Dependencies</h4>
 <ul>
 <li>
-<p>截取HTTP/HTTPS请求</p>
+<p>vim 7.3.584+</p>
 </li>
 <li>
-<p>修改Session</p>
+<p>cmake，建议使用homebrew安装</p>
 </li>
 <li>
-<p>网络调试</p>
+<p><a href="https://github.com/gmarik/Vundle.vim">vundle</a>，安装起来很容易，按照github上面的介绍来就行</p>
 </li>
-<li>
-<p>安全测试</p>
-</li>
-<li>性能测试</li>
+<li>Python 2.6+</li>
 </ul>
-<p>本文，主要讨论前三项功能的使用方法，包括Fiddler的基础配置和功能以及使用内置FiddlerScript脚本进行复杂功能调试。</p>
-<h4>准备和配置</h4>
-<p>Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户，有一个基于Mono的Alpha版本，经本人Mac实际测试，基本上算是不能用的状态。因此，不建议使用。</p>
-<p>下载地址：<a href="http://www.telerik.com/download/fiddler"><a href="http://www.telerik.com/download/fiddler">http://www.telerik.com/download/fiddler</a></a></p>
-<p>安装完毕后，为了使用后续功能，建议安装<a href="http://www.telerik.com/download/fiddler/fiddlerscript-editor">FiddlerScript Editor</a>插件，否则修改FiddlerScript会比较麻烦。</p>
-<p>准备完毕后，请打开Fiddler进入Tools->Fiddler Options，在Connections中勾选Allow remote computers to connect，并重新启动Fiddler。</p>
-<h4>网络请求抓取</h4>
-<p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。</p>
-<pre><code>iPhone  
-进入Settings -&gt; WLAN，单击你连接中的WIFI，在HTTP PROXY下选择Manual，然后Server填写Fiddler所在机器在此WIFI中的IP地址，Port是默认的8888。
-
-Android
-进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
-
-PC本地  
-用ProxySwitchy一类的插件，代理到localhost:8888</code></pre>
-<!---
-![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
---->
-<p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
-<!---
-![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
---->
-<p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
-<!---
-![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
---->
-<h4>Web Debugging</h4>
-<p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
-<ul>
-<li>
-<p>HOSTS，等同于操作系统的HOSTS文件。</p>
-</li>
-<li>
-<p>Filters，可以修改Request或Response的包体。</p>
-</li>
-<li>
-<p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p>
-</li>
-<li>FiddlerScript，以FiddlerScript(JScript.NET)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</li>
-</ul>
-<h4>HOSTS</h4>
-<p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p>
-<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
-<!---
-![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)
---->
-<h4>Filters</h4>
-<p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取</p>
-<p>首先进入Filters标签，勾选Use Filters</p>
-<p>在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。</p>
-<p>除此之外，还可以直接修改Request或Response包体。</p>
-<!---
-![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)
---->
-<h4>AutoResponder</h4>
-<p>AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。</p>
-<p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
-<p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p>
-<!---
-![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
---->
-<h4>FiddlerScript</h4>
-<p>FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。</p>
-<p>使用FidderScript建议安装第一节所说的插件，安装后就可以直接打开FiddlerScript标签，直接修改代码。</p>
-<p>在OnBeforeRequest函数中修改：</p>
-<blockquote>
-<p>添加Headers</p>
-</blockquote>
-<pre><code>oSession.oRequest["http_net_type"] = "1";</code></pre>
-<blockquote>
-<p>添加Cookies</p>
-</blockquote>
-<pre><code>// 增加预览机标识
-oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
-<blockquote>
-<p>匹配URL，防止添加的字段干扰到其他网页</p>
-</blockquote>
-<pre><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
-    // TODO
-}</code></pre>
-<p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p></div></div>
+<h4>Installation</h4>
+<p>安装完vundle后，修改.vimrc</p>
+<pre><code>vim ~/.vimrc</code></pre>
+<p>加入</p>
+<pre><code>Bundle 'Valloric/YouCompleteMe'</code></pre>
+<p>保存重启vim后<em>:BundleInstall</em>，就开始安装了。这个安装并没有包括编译，只是把ycm的vim、python以及C++代码下载下来。</p>
+<p>然后进入YouCompleteMe的目录开始编译，<em>--clang-completer</em>是启用C family languages提示(为的就是这功能，果断要加上)</p>
+<pre><code>cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer</code></pre>
+<p>到此，插件已经编译完毕，基本上可以使用了。不过此时进入编辑cpp文件，发现代码提示怎么还是基于omnifunc呢？原来缺少了一条配置。</p>
+<h4>Configuration</h4>
+<p>编辑~/.vimrc文件，加入</p>
+<pre><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'</code></pre>
+<p>重新进入vim，已经可以正常对代码进行提示。</p>
+<h4>In The End</h4>
+<p><img alt="" src="http://crispgm.github.io/image/ycm-demo.png" /></p>
+<p>Congrats to myself! </p>
+<p>ycm提示出了对象md的成员函数(f标识)和成员变量(m标识)等信息。</p>
+<p>对于Mac来说，由于作者(据我观察)就使用Mac，而且Mac OSX版本比较统一，因此按照作者的Mac OSX Super-quick installation步骤基本可以顺利安装。</p>
+<p>不过在其他Linux上可就不一样了，我在公司的开发机上编译clang-completer就一直没成功，等到有空的时候再去折腾下。</p>
+<p>Good luck to everyone!</p></div></div>
 <nav id="page"><a href="/index-7.html" id="prev">prev</a><a href="/index-9.html" id="next">next</a></nav></div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
