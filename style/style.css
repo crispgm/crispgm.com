@@ -25,12 +25,10 @@ h4 {
   width: 20%;
   height: 100%;
   background-color: #000000;
-  text-align: left;
+  text-align: center;
 }
-#menu #menu_home {
+#menu_home {
   font-size: 2.8em;
-  text-align: right;
-  margin-right: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -42,14 +40,13 @@ h4 {
   text-decoration: none;
 }
 .menu_link {
-  text-align: right;
-  margin-right: 30px;
   font-size: 1.2em;
 }
 #container {
   margin-left: 21%;
   margin-right: 80px;
-  text-align: left;
+  text-align: center;
+  width: 79%;
 }
 a {
   text-decoration: none;
@@ -62,6 +59,10 @@ ul li p {
   margin: 0;
 }
 .article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  text-align: left;
   margin-top: 40px;
 }
 .article_head {
@@ -93,6 +94,7 @@ footer {
   font-size: 18px;
   height: 36px;
   overflow: hidden;
+  margin-left: 20%;
 }
 #page {
   position: relative;
@@ -110,11 +112,11 @@ footer {
 }
 #page #next {
   position: absolute;
-  right: 12px;
+  right: 5%;
 }
 #page #prev {
   position: absolute;
-  left: 12px;
+  left: 5%;
 }
 img {
   border: 0;
