@@ -102,6 +102,12 @@ footer {
   height: 32px;
   text-align: center;
 }
+#page a {
+  color: black;
+}
+#page a:hover {
+  text-decoration: underline;
+}
 #page #next {
   position: absolute;
   right: 12px;
