@@ -46,6 +46,11 @@ h4 {
   margin-right: 30px;
   font-size: 1.2em;
 }
+.menu_link {
+    width: 32px;
+    height: 32px;
+    border: 0;
+}
 #container {
   margin-left: 21%;
   margin-right: 80px;
