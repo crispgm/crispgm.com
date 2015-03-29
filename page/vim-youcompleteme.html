@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/style/style.css">
 <link rel="stylesheet" href="/style/vs.css">
 <link rel="stylesheet" href="/style/opensans.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="/script/highlight.pack.js"></script>
 <script src="/script/jquery-2.0.3.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -16,21 +17,13 @@
         <a href="/">Crisp Blog</a>
     </div>
     <div class="menu_link">
-        <a href="http://yeyekooo.crispgm.com">Yeyeko</a>
-    </div>
-    <div class="menu_link">
-        <a href="/page/about.html">About</a>
-    </div>
-    <div class="menu_link">
-        <a href="/archive.html">Archive</a>
-    </div>
-    <div class="menu_link">
-        <a href="/rss.xml" target="_blank">Subscribe</a>
-    </div>
-    <div class="menu_link">
-        <a href="http://github.com/crispgm" target="_blank"><img alt="GitHub" src="/image/GitHub-Mark-Light-32px.png"></a>
-        <a href="http://instagram.com/crispgm" target="_blank"><img alt="Instagram" src="/image/Instagram_Icon_Large.png"></a>
-        <a href="http://weibo.com/crispgm" target="_blank"><img alt="Weibo" src="/image/Weibo-Logo-32px.png"></a>
+        <a href="http://yeyekooo.crispgm.com"><i class="fa fa-heart-o fa-lg"></i></a>
+        <a href="/page/about.html"><i class="fa fa-user fa-lg"></i></a>
+        <a href="/archive.html"><i class="fa fa-folder-o fa-lg"></i></a>
+        <a href="/rss.xml" target="_blank"><i class="fa fa-rss fa-lg"></i></a>
+        <a href="http://github.com/crispgm" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+        <a href="http://instagram.com/crispgm" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+        <a href="http://weibo.com/crispgm" target="_blank"><i class="fa fa-weibo fa-lg"></i></a>
     </div>
 </div>
 <div id="container">
@@ -66,7 +59,7 @@ C/C++/Objective-C(基于clang)，Python(基于<a href="https://github.com/davidh
 <p>加入</p>
 <pre><code>Bundle 'Valloric/YouCompleteMe'</code></pre>
 <p>保存重启vim后<em>:BundleInstall</em>，就开始安装了。这个安装并没有包括编译，只是把ycm的vim、python以及C++代码下载下来。</p>
-<p>然后进入YouCompleteMe的目录开始编译，<em>--clang-completer</em>是启用C family languages提示(为的就是这功能，果断要加上)</p>
+<p>然后进入YouCompleteMe的目录开始编译，_--clang-completer_是启用C family languages提示(为的就是这功能，果断要加上)</p>
 <pre><code>cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer</code></pre>
 <p>到此，插件已经编译完毕，基本上可以使用了。不过此时进入编辑cpp文件，发现代码提示怎么还是基于omnifunc呢？原来缺少了一条配置。</p>

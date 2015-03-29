@@ -28,11 +28,11 @@ h4 {
   text-align: left;
 }
 #menu #menu_home {
-  font-size: 2.0em;
+  font-size: 2.8em;
   text-align: right;
   margin-right: 20px;
-  margin-top: 38px;
-  margin-bottom: 44px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 #menu a {
   color: #bbbbbb;
@@ -45,11 +45,6 @@ h4 {
   text-align: right;
   margin-right: 30px;
   font-size: 1.2em;
-}
-.menu_link {
-    width: 32px;
-    height: 32px;
-    border: 0;
 }
 #container {
   margin-left: 21%;
