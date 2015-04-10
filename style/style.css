@@ -47,6 +47,7 @@ h4 {
 }
 .menu_icon {
   position: absolute;
+  text-align: center;
   width: 30px;
 }
 .menu_text {
