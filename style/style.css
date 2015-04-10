@@ -22,13 +22,13 @@ h4 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20%;
+  width: 18%;
   height: 100%;
   background-color: #000000;
   text-align: center;
 }
 #menu_home {
-  font-size: 2.8em;
+  font-size: 2.4em;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -40,7 +40,18 @@ h4 {
   text-decoration: none;
 }
 .menu_link {
+  text-align: left;
   font-size: 1.2em;
+  margin-left: 40px;
+  width: 100%;
+}
+.menu_icon {
+  position: absolute;
+  width: 30px;
+}
+.menu_text {
+  margin-left: 40px;
+  text-align: left;
 }
 #container {
   margin-left: 21%;
