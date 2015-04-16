@@ -11,7 +11,6 @@ body {
   color: #333;
   word-wrap: break-word;
   text-align: center;
-  height: 100%;
 }
 h3 {
   font-size: 1.4em;
@@ -30,10 +29,9 @@ ul li p {
   margin: 0;
 }
 #menu {
-  margin: 0;
   width: 100%;
+  height: 80px;
   background-color: #000000;
-  text-align: center;
 }
 #menu a {
   color: #bbbbbb;
@@ -43,26 +41,25 @@ ul li p {
   text-decoration: none;
 }
 #menu_home {
-  font-size: 2.4em;
-  padding-top: 20px;
-  height: 80px;
+  text-align: center;
+  font-size: 2.25em;
   width: 100%;
+  height: 50px;
+  margin: 0;
+  padding-top: 4px;
 }
 #menu_links {
-  height: 30px;
   width: 100%;
-  text-align: center;
+  height: 30px;
 }
 #container {
   text-align: center;
+  margin-left: 4px;
   width: 100%;
 }
 .article {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+  width: 100%;
   text-align: left;
-  margin-top: 40px;
 }
 .article_head {
 }
@@ -77,28 +74,22 @@ ul li p {
     text-decoration: underline;
 }
 .article_date {
-  font-size: 16px;
+  font-size: 1em;
 }
 .article_main {
-  margin-top: 24px;
-  padding-bottom: 62px;
-  font-size: 14px;
+  font-size: 1em;
 }
 #disqus_thread {
   margin-top: 8px;
   padding-top: 8px;
 }
 footer {
-  text-align: center;
-  font-size: 18px;
+  font-size: 1em;
   height: 36px;
-  overflow: hidden;
 }
 #page {
-  position: relative;
   margin-bottom: 8px;
-  padding-top: 4px;
-  font-size: 18px;
+  font-size: 1em;
   height: 32px;
   text-align: center;
 }
@@ -108,17 +99,9 @@ footer {
 #page a:hover {
   text-decoration: underline;
 }
-#page #next {
-  position: absolute;
-  right: 5%;
-}
-#page #prev {
-  position: absolute;
-  left: 5%;
-}
 img {
   border: 0;
-  width: 860px;
+  max-width: 100%;
 }
 pre {
   border: 1px solid #aaaaaa;
