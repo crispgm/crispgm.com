@@ -34,6 +34,10 @@ class CrispBlogGenerator
         return self::$comment;
     }
 
+    private static function get_recommend()
+    {
+    }
+
     private static function gen_blogs()
     {
         $blog = new Blog();
@@ -55,7 +59,7 @@ class CrispBlogGenerator
             $html .= '</div>';
             $html .= "<div class=\"article_main\">$markdown</div>\n";
             $html .= '</div>';
-
+            $html .= "\n";
             $html .= self::get_comment();
             $html .= "\n";
 
@@ -80,9 +84,6 @@ class CrispBlogGenerator
             $markdown = $blog->getPageHTML($page_name);
 
             $html .= '<div class="article">';
-            //$html .= '<div class="article_head">';
-            //$html .= "<div class=\"article_title\">$title</div>\n";
-            //$html .= '</div>';
             $html .= "<div class=\"article_main\">$markdown</div>\n";
             $html .= '</div>';
 
@@ -94,13 +95,11 @@ class CrispBlogGenerator
 
     private static function gen_index()
     {
-        $page_num = 1;
         $blogs_per_page = 1;
         $blog = new Blog($blogs_per_page);
         $total_blog = $blog->getBlogNum();
-        $total_page = intval(ceil($total_blog/$blogs_per_page));
 
-        for ($i = $page_num; $i <= $total_page; $i++){
+        for ($i = 1; $i <= $total_blog; $i++){
             $html = '';
             // head
             $html .= self::get_head();
@@ -125,19 +124,30 @@ class CrispBlogGenerator
 
             // page
             $np = $i + 1;
-            $pp = $i - 1;
-            if ($pp >= 1 || $np<=$total_page) {
+            if ($pp >= 1 || $np<=$total_blog) {
                 $html .= "<nav id=\"page\">";
                 if ($pp >= 1) {
+                    $last_page = $blog->getBlogsByPage($pp);
+                    foreach ($last_page as $last_blog) {
+                        break;
+                    }
+                    $last_blog_title = $last_blog['title'];
+                    $last_blog_name = $last_blog['markdown'];
                     if ($pp === 1) {
-                        $html .= "<a href=\"/index.html\" id=\"prev\">prev</a>";
+                        $html .= "<a href=\"/{$last_blog_name}.html\" id=\"prev\">Prev - {$last_blog_title}</a>";
                     }
                     else{
-                        $html .= "<a href=\"/index-{$pp}.html\" id=\"prev\">prev</a>";
+                        $html .= "<a href=\"/{$last_blog_name}.html\" id=\"prev\">Prev - {$last_blog_title}</a>";
                     }
                 }
-                if ($np <= $total_page) {
-                    $html .= "<a href=\"/index-{$np}.html\" id=\"next\">next</a>";
+                if ($np <= $total_blog) {
+                    $next_page = $blog->getBlogsByPage($np);
+                    foreach ($next_page as $next_blog) {
+                        break;
+                    }
+                    $next_blog_title = $next_blog['title'];
+                    $next_blog_name = $next_blog['markdown'];
+                    $html .= "<a href=\"/{$next_blog_name}.html\" id=\"next\">Next - {$next_blog_title}</a>";
                 }
                 $html .= "</nav>";
             }
@@ -145,12 +155,8 @@ class CrispBlogGenerator
             // foot
             $html .= self::get_foot();
             $html .= "\n";
-            if ($i === 1) {
-                file_put_contents("../index.html", $html);
-            }
-            else{
-                file_put_contents("../index-{$i}.html", $html);
-            }
+            file_put_contents("../index.html", $html);
+            break;
         }
     }
 

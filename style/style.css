@@ -4,70 +4,70 @@
  * Powered by {less}
  */
 body {
-  margin: 0;
-  font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  color: #333;
-  word-wrap: break-word;
-  text-align: center;
-  height: 100%;
+    margin: 0;
+    font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    word-wrap: break-word;
+    text-align: center;
+    height: 100%;
 }
 h3 {
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 h4 {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 a {
-  text-decoration: none;
-  color: #08c;
+    text-decoration: none;
+    color: #08c;
 }
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 ul li p {
-  margin: 0;
+    margin: 0;
 }
 #menu {
-  margin: 0;
-  width: 100%;
-  background-color: #000000;
-  text-align: center;
+    margin: 0;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
 }
 #menu a {
-  color: #bbbbbb;
+    color: #bbbbbb;
 }
 #menu a:hover {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 #menu_home {
-  font-size: 2.4em;
-  padding-top: 20px;
-  height: 80px;
-  width: 100%;
+    font-size: 2.4em;
+    padding-top: 20px;
+    height: 80px;
+    width: 100%;
 }
 #menu_links {
-  height: 30px;
-  width: 100%;
-  text-align: center;
+    height: 30px;
+    width: 100%;
+    text-align: center;
 }
 #container {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
 }
 .article {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  text-align: left;
-  margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: left;
+    margin-top: 40px;
 }
 .article_head {
 }
 .article_title {
-  font-size: 32px;
+    font-size: 32px;
 }
 .article_title a {
     text-decoration: none;
@@ -77,53 +77,48 @@ ul li p {
     text-decoration: underline;
 }
 .article_date {
-  font-size: 16px;
+    font-size: 16px;
 }
 .article_main {
-  margin-top: 24px;
-  padding-bottom: 62px;
-  font-size: 14px;
+    margin-top: 24px;
+    padding-bottom: 62px;
+    font-size: 14px;
 }
 #disqus_thread {
-  margin-top: 8px;
-  padding-top: 8px;
+    margin-left: 20%;
+    width: 60%;
+}
+#disqus_thread iframe {
+    text-align: center;
 }
 footer {
-  text-align: center;
-  font-size: 18px;
-  height: 36px;
-  overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+    height: 36px;
+    overflow: hidden;
 }
 #page {
-  position: relative;
-  margin-bottom: 8px;
-  padding-top: 4px;
-  font-size: 18px;
-  height: 32px;
-  text-align: center;
+    margin-bottom: 8px;
+    padding-top: 4px;
+    font-size: 18px;
+    height: 32px;
+    margin-left: 20%;
+    text-align: left;
 }
 #page a {
-  color: black;
+    color: black;
 }
 #page a:hover {
-  text-decoration: underline;
-}
-#page #next {
-  position: absolute;
-  right: 5%;
-}
-#page #prev {
-  position: absolute;
-  left: 5%;
+    text-decoration: underline;
 }
 img {
-  border: 0;
-  width: 860px;
+    border: 0;
+    width: 860px;
 }
 pre {
-  border: 1px solid #aaaaaa;
-  border-radius: 2px;
-  padding: 4px;
-  font-family: Menlo, "Source Code Pro", Consolas, Courier;
-  font-size: 14px;
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+    padding: 4px;
+    font-family: Menlo, "Source Code Pro", Consolas, Courier;
+    font-size: 14px;
 }
