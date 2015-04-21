@@ -122,36 +122,6 @@ class CrispBlogGenerator
                 $html .= "</div></div>\n";
             }
 
-            // page
-            $np = $i + 1;
-            if ($pp >= 1 || $np<=$total_blog) {
-                $html .= "<nav id=\"page\">";
-                if ($pp >= 1) {
-                    $last_page = $blog->getBlogsByPage($pp);
-                    foreach ($last_page as $last_blog) {
-                        break;
-                    }
-                    $last_blog_title = $last_blog['title'];
-                    $last_blog_name = $last_blog['markdown'];
-                    if ($pp === 1) {
-                        $html .= "<a href=\"/{$last_blog_name}.html\" id=\"prev\">Prev - {$last_blog_title}</a>";
-                    }
-                    else{
-                        $html .= "<a href=\"/{$last_blog_name}.html\" id=\"prev\">Prev - {$last_blog_title}</a>";
-                    }
-                }
-                if ($np <= $total_blog) {
-                    $next_page = $blog->getBlogsByPage($np);
-                    foreach ($next_page as $next_blog) {
-                        break;
-                    }
-                    $next_blog_title = $next_blog['title'];
-                    $next_blog_name = $next_blog['markdown'];
-                    $html .= "<a href=\"/{$next_blog_name}.html\" id=\"next\">Next - {$next_blog_title}</a>";
-                }
-                $html .= "</nav>";
-            }
-
             // foot
             $html .= self::get_foot();
             $html .= "\n";
