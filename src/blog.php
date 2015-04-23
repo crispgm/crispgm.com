@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'engineering-culture-at-airbnb' => array(
+            'title'    => '[翻译]Airbnb的工程师文化',
+            'markdown' => 'engineering-culture-at-airbnb.md',
+            'date'     => '2015/04/23',
+            'tags'     => array('Airbnb'),
+        ),
         'period-tracker-app' => array(
             'title'    => 'Minimalism Period Tracker',
             'markdown' => 'period-tracker-app.md',
