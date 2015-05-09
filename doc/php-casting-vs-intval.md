@@ -8,6 +8,8 @@ Original Page:
 
 >May 13th, 2010
 
+>Translated by [Crisp](http://crispgm.com)
+
 ### 正文
 
 在PHP中，使用```(int)$var```方式进行类型转换比使用```intval($var)```函数方式快400%到650%。
