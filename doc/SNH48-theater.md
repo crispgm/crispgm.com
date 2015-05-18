@@ -14,17 +14,17 @@
 
 5月1日下午18点，我赶到了位于虹口区海伦路的SNH48星梦剧院。
 
-![SNH48 Theater](http://crispgm.com/images/snh48-theater.jpg)
+![SNH48 Theater](http://crispgm.com/image/snh48-theater.jpg)
 
 公演开始前，需要用微信上的二维码换取实体票，换取的时候采用抽取方式。
 
 此外，粉丝们一般会拿出护照前往盖章处盖章。这是我的护照：
 
-![SNH48 Passport](http://crispgm.com/images/snh48-passport.jpg)
+![SNH48 Passport](http://crispgm.com/image/snh48-passport.jpg)
 
 集章会有很多会员福利，具体可参考如下表格：
 
-![SNH48 Welfare](http://crispgm.com/images/snh48-welfare.jpg)
+![SNH48 Welfare](http://crispgm.com/image/snh48-welfare.jpg)
 
 从表格可以看到，作为“可以见面的偶像”，粉丝通过集章可以获得若干和偶像亲密接触的机会。
 当然获得机会的方法不止这一种，最简单的方式就是剧场公演结束后的击掌会。参与者可以和每位成员依次击掌。
@@ -33,7 +33,7 @@
 
 进入会场后，目测来说，宅男比较多，妹子们只有1/5不到，且其中很大一部分都是女仆娘，如图：
 
-![SNH48 Audience](http://crispgm.com/images/snh48-audience.jpg)
+![SNH48 Audience](http://crispgm.com/image/snh48-audience.jpg)
 
 ### 应援准备
 
@@ -45,7 +45,7 @@
 
 图中的围巾也是应援装备之一，专用于歌曲《飞机云》。
 
-![SNH48 Lightstick and Scarf](http://crispgm.com/images/snh48-lightstick.jpg)
+![SNH48 Lightstick and Scarf](http://crispgm.com/image/snh48-lightstick.jpg)
 
 
 ### 演出开始
@@ -53,7 +53,7 @@
 第一项是由一名成员朗读的剧场相关规定。其中就包括了禁止拍照、录像、录音的限制，在大型演唱会中几乎全场都在拍照录像无法控制。
 而在剧场中，观众四周有较多的工作人员进行“执法”。
 
-![SNH48 Team HII](http://crispgm.com/images/snh48-team-HII.jpg)
+![SNH48 Team HII](http://crispgm.com/image/snh48-team-HII.jpg)
 
 由于对Team HII队不够熟悉，因此本人本节主要讲Team SII的勇气重生公演。
 勇气重生公演对应的是AKB48本部Team K的~RESET~公演，RESET被“翻译”成“勇气重生”。
@@ -89,4 +89,4 @@ AKB48 Team K的特点是，成员比较有元气（日本中文，约等于活�
 
 SNH48 Team NII 赵粤
 
-![SNH48 Team NII 赵粤](http://crispgm.com/images/snh48-zhaoyue.jpg)
+![SNH48 Team NII 赵粤](http://crispgm.com/image/snh48-zhaoyue.jpg)
