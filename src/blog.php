@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'SNH48-Theater' => array(
+            'title'    => 'SNH48剧场公演游记',
+            'markdown' => 'SNH48-Theater.md',
+            'date'     => '2015/05/18',
+            'tags'     => array('SNH48'),
+        ),
         'engineering-culture-at-airbnb' => array(
             'title'    => '[翻译]Airbnb的工程师文化',
             'markdown' => 'engineering-culture-at-airbnb.md',
