@@ -113,7 +113,8 @@ footer {
 }
 img {
     border: 0;
-    width: 860px;
+    max-width: 640px;
+    max-height: 480px;
 }
 pre {
     border: 1px solid #aaaaaa;
