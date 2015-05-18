@@ -8,7 +8,7 @@ class Blog{
     protected $blogs = array(
         'SNH48-Theater' => array(
             'title'    => 'SNH48剧场公演游记',
-            'markdown' => 'SNH48-Theater.md',
+            'markdown' => 'SNH48-theater.md',
             'date'     => '2015/05/18',
             'tags'     => array('SNH48'),
         ),
