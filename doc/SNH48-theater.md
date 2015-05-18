@@ -84,3 +84,9 @@ AKB48 Team K的特点是，成员比较有元气（日本中文，约等于活�
 ### 公演视频
 
 [http://www.tudou.com/programs/view/9RfnLXQ8nVk](http://www.tudou.com/programs/view/9RfnLXQ8nVk)
+
+最后，送上福利。
+
+SNH48 Team NII 赵粤
+
+![SNH48 Team NII 赵粤](http://crispgm.com/images/snh48-zhaoyue.jpg)
