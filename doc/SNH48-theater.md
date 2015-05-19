@@ -1,6 +1,6 @@
 ### 前言
 
-作为多年的AKB48伪饭和新近的SNH48粉，本人在五一期间亲自前往了SNH48星梦剧院，
+作为多年的AKB48伪饭和新近的SNH48粉，我在五一期间同[小咩酱](http://yeyekooo.crispgm.com)亲自前往了SNH48星梦剧院，
 观看SNH48 Team HII[“青春派对”](http://www.snh48.com/show_7.html)
 和Team SII[“勇气重生”](http://www.snh48.com/show_8.html)剧场公演。
 
