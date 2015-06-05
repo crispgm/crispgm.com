@@ -187,11 +187,12 @@ class CrispBlogGenerator
         $blogs = $blog->getAllBlogs();
 
         $html = self::get_head();
-        $html = str_replace('{{title}}', "Archive - Crisp Blog", $html);
+        //$html = str_replace('{{title}}', "Archive - Crisp Blog", $html);
+        $html = str_replace('{{title}}', "Home - Crisp Blog", $html);
         $html .= "\n";
         $html .= "<div class=\"article\">\n";
         $html .= "<div class=\"article_head\">\n";
-        $html .= "<div class=\"article_title\">Archive</div>\n";
+        $html .= "<div class=\"article_title\"></div>\n";
         $html .= "<div class=\"article_date\"></div>\n";
         $html .= "</div>\n";
         $html .= "<div class=\"article_main\">\n";
@@ -206,12 +207,13 @@ class CrispBlogGenerator
         $html .= self::get_foot();
         $html .= "\n";
         
-        file_put_contents('../archive.html', $html);
+        //file_put_contents('../archive.html', $html);
+        file_put_contents('../index.html', $html);
     }
 
     public static function generate()
     {
-        self::gen_index();
+        //self::gen_index();
         self::gen_blogs();
         self::gen_pages();
         self::gen_archive();
