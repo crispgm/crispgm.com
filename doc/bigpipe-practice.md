@@ -6,7 +6,8 @@ Facebook提出了BigPipe的方案，讲页面功能分块，分成若干个pagel
 
 这样，前后端就可以都做到并行化，用户可以先看到部分页面内容，从而获得了更好的用户体验。目前，国外主要是Facebook应用了这项技术，而国内微博也通过BigPipe获得了不错的效果。
 
-![Facebook-BigPipe](http://crispgm.com/image/facebook-bigpipe.jpg)
+![Facebook-BigPipe](http://crispgm.com/image/fb-bigpipe.jpg)
+
 图：Facebook加载时的timing，可以看到waiting时间（也就是后端响应时间response time）明显低于content download耗时。
 
 ## 简单Demo
