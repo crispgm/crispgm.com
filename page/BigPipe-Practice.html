@@ -58,7 +58,7 @@
 <p>随着Web页面的功能不断堆砌（其实我是极简主义者，但PM或者说是国内的风气，总是喜欢不断加入各类功能），页面需要的数据越来越多，串行连接后端的耗时自然是不断增大。常见的优化手段就是后端并行化，而对于前端来说，后端并行化只是降低了response time，但用户最终看到页面的时间并没有减少。</p>
 <p>Facebook提出了BigPipe的方案，讲页面功能分块，分成若干个pagelet。pagelet的加载使用了http的chunked特性，采用类似Pipeline的方式进行前后端数据传输。浏览器端会首先获得一个框架层的HTML/css，以及基础js代码。同时，后端也可以进行并行化，每个pagelet完成后，通过flush输出到浏览器。浏览器端的js基于事件机制，收到数据后进行渲染。</p>
 <p>这样，前后端就可以都做到并行化，用户可以先看到部分页面内容，从而获得了更好的用户体验。目前，国外主要是Facebook应用了这项技术，而国内微博也通过BigPipe获得了不错的效果。</p>
-<p><img alt="Facebook-BigPipe" src="http://crispgm.com/image/fb-bigpipe.jpg" /></p>
+<p><img alt="Facebook-BigPipe" src="http://crispgm.com/image/fb-bigpipe.png" /></p>
 <p>图：Facebook加载时的timing，可以看到waiting时间（也就是后端响应时间response time）明显低于content download耗时。</p>
 <h2>简单Demo</h2>
 <p>TODO</p>
