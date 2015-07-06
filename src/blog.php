@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'BigPipe-Practice' => array(
+            'title'    => 'BigPipe实践(nginx+hhvm)',
+            'markdown' => 'bigpipe-practice.md',
+            'date'     => '2015/06/26',
+            'tags'     => array('BigPipe', 'nginx', 'hhvm', 'php'),
+        ),
         'SNH48-Theater' => array(
             'title'    => 'SNH48剧场公演游记',
             'markdown' => 'SNH48-theater.md',
