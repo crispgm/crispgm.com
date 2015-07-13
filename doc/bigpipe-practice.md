@@ -12,7 +12,25 @@ Facebook提出了BigPipe的方案，讲页面功能分块，分成若干个pagel
 
 ## 简单Demo
 
-TODO
+```php
+    echo 'hello';
+    flush();
+    ob_flush();
+    sleep(1);
+    echo 'world';
+```
+
+这是一个最简单的BigPipe demo，然而由于fastcgi_buffer的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用str_pad填充一些字符以达到buffer。ps：吐槽一下str_pad这个函数名，明明str系列函数都是不带下划线的，如strlen, strcpy等，但这个函数却有下划线。str系列函数表示：我们之间出现了叛徒！
+
+```php
+    echo str_pad('hello', 10000, ' ');
+    flush();
+    ob_flush();
+    sleep(1);
+    echo str_pad('world', 10000, ' ');
+```
+
+进行字符填充后，BigPipe效果显现了出来，hello之后过1秒后会才会出现world。由此可见，buffer这块是个问题，后面会单独具体介绍科学优雅的解决方法。
 
 ## 实践
 
@@ -78,9 +96,7 @@ TODO
 
 幸好，在升级的过程中，发现了一个刚好可以用http header，用于关闭buffer。
 
-```
-    Buffering can also be enabled or disabled by passing “yes” or “no” in the “X-Accel-Buffering” response header field. This capability can be disabled using the fastcgi_ignore_headers directive.
-```
+> Buffering can also be enabled or disabled by passing “yes” or “no” in the “X-Accel-Buffering” response header field. This capability can be disabled using the fastcgi_ignore_headers directive.
 
 因此，配置上完全不用关闭buffer，只需要在php代码中加header就好，顺利把buffer优雅关闭。
 
