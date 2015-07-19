@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'm3u8-video-format' => array(
+            'title'    => 'Apple iOS m3u8 媒体文件下载',
+            'markdown' => 'm3u8-video-format.md',
+            'date'     => '2015/07/19',
+            'tags'     => array('ts', 'm3u8', 'ffmpeg'),
+        ),
         'BigPipe-Practice' => array(
             'title'    => 'BigPipe实践(nginx+hhvm)',
             'markdown' => 'bigpipe-practice.md',
