@@ -59,24 +59,20 @@
 <p>对于好看的视频，有时候希望能够下载下来，具体方法请看本文介绍。</p>
 <h2>简介</h2>
 <p>m3u8是Apple iOS流媒体使用的一种格式，它本质上是个文本的播放列表，实际的媒体文件是MPEG2-TS或者AAC(Audio Only)。具体可以参考Wikipedia的英文介绍：<a href="https://en.wikipedia.org/wiki/M3U"><a href="https://en.wikipedia.org/wiki/M3U">https://en.wikipedia.org/wiki/M3U</a></a></p>
-<ul>
-<li>首先要拿到URL，方法是在chrome上用iPhone6的User-Agent打开，然后在chrome中找到，如下：</li>
-</ul>
+<h3>获取URL</h3>
+<p>首先要拿到URL，方法是在chrome上用iPhone6的User-Agent打开，然后在chrome中找到，如下：</p>
 <p><img alt="" src="http://crispgm.com/image/video-url.png" /></p>
 <blockquote>
 <p><a href="http://us.sinaimg.cn/000MLkkJjx06TSSGESJF050d010000oz0k01.m3u8?KID=unistore,video&amp;Expires=1437309945&amp;ssig=kh06r9cH7F">http://us.sinaimg.cn/000MLkkJjx06TSSGESJF050d010000oz0k01.m3u8?KID=unistore,video&amp;Expires=1437309945&amp;ssig=kh06r9cH7F</a></p>
 </blockquote>
-<ul>
-<li>紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆ts格式的文件。</li>
-</ul>
+<h3>获取ts文件</h3>
+<p>紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆ts格式的文件。</p>
 <p><img alt="" src="http://crispgm.com/image/m3u8-file-content.png" /></p>
-<ul>
-<li>把这些ts文件名跟<a href="http://us.sinaimg.cn/">http://us.sinaimg.cn/</a>拼在一起下载下来，就是被切成分片的视频源文件了。</li>
-</ul>
+<h3>下载源文件</h3>
+<p>把这些ts文件名跟<a href="http://us.sinaimg.cn/">http://us.sinaimg.cn/</a>拼在一起下载下来，就是被切成分片的视频源文件了。</p>
 <p><img alt="" src="http://crispgm.com/image/ts-file.png" /></p>
-<ul>
-<li>最后，就是把这一堆文件合并在一起</li>
-</ul>
+<h3>文件合并</h3>
+<p>最后，就是把这一堆文件合并在一起</p>
 <p>有两种方法，一种比较粗暴，就是强型把文件的内容合并到一个文件中。</p>
 <p>如：源文件是1.ts和2.ts</p>
 <p>那么就：</p>

@@ -8,21 +8,29 @@
 
 m3u8是Apple iOS流媒体使用的一种格式，它本质上是个文本的播放列表，实际的媒体文件是MPEG2-TS或者AAC(Audio Only)。具体可以参考Wikipedia的英文介绍：[https://en.wikipedia.org/wiki/M3U](https://en.wikipedia.org/wiki/M3U)
 
-* 首先要拿到URL，方法是在chrome上用iPhone6的User-Agent打开，然后在chrome中找到，如下：
+### 获取URL
+
+首先要拿到URL，方法是在chrome上用iPhone6的User-Agent打开，然后在chrome中找到，如下：
 
 ![](http://crispgm.com/image/video-url.png)
 
 > http://us.sinaimg.cn/000MLkkJjx06TSSGESJF050d010000oz0k01.m3u8?KID=unistore,video&Expires=1437309945&ssig=kh06r9cH7F
 
-* 紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆ts格式的文件。
+### 获取ts文件
+
+紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆ts格式的文件。
 
 ![](http://crispgm.com/image/m3u8-file-content.png)
 
-* 把这些ts文件名跟http://us.sinaimg.cn/拼在一起下载下来，就是被切成分片的视频源文件了。
+### 下载源文件
+
+把这些ts文件名跟http://us.sinaimg.cn/拼在一起下载下来，就是被切成分片的视频源文件了。
 
 ![](http://crispgm.com/image/ts-file.png)
 
-* 最后，就是把这一堆文件合并在一起
+### 文件合并
+
+最后，就是把这一堆文件合并在一起
 
 有两种方法，一种比较粗暴，就是强型把文件的内容合并到一个文件中。
 
