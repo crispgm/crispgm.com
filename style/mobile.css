@@ -54,7 +54,6 @@ ul li p {
 }
 #container {
   text-align: center;
-  margin-left: 4px;
   width: 100%;
 }
 .article {
@@ -78,6 +77,25 @@ ul li p {
 }
 .article_main {
   font-size: 1em;
+}
+#index_main {
+    font-size: 1em;
+    display: inline;
+}
+#index_left {
+    width: 100%;
+    padding-left: 4px;
+    border-right: 0;
+    border-bottom: 1px #aaaaaa solid;
+}
+#index_right {
+    width: 100%;
+    text-align: center;
+    padding-left: 4px;
+    padding-top: 4px;
+}
+#index_right img{
+    max-width: 96%;
 }
 #disqus_thread {
   margin-top: 8px;
