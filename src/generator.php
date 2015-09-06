@@ -1,5 +1,6 @@
 <?php
 require_once('blog.php');
+require_once('photo.php');
 
 class CrispBlogGenerator
 {
@@ -191,16 +192,20 @@ class CrispBlogGenerator
         $html = str_replace('{{title}}', "Home - Crisp Blog", $html);
         $html .= "\n";
         $html .= "<div class=\"article\">\n";
+        $html .= "<div id=\"index_main\">\n";
         $html .= "<div class=\"article_head\">\n";
         $html .= "<div class=\"article_title\"></div>\n";
         $html .= "<div class=\"article_date\"></div>\n";
         $html .= "</div>\n";
-        $html .= "<div class=\"article_main\">\n";
+        $html .= "<div id=\"index_left\">\n";
         foreach ($blogs as $blog_name => $blog_info) {
             $title = $blog_info['title'];
             $date = $blog_info['date'];
             $html .= "<div>$date - <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
         }
+        $html .= "</div>\n";
+        $photo = new Photo();
+        $html .= $photo->getIndex();
         $html .= "</div></div>\n";
 
         // foot
