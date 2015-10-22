@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'funny-terminal-tools' => array(
+            'title'    => '[推荐]有趣的终端Terminal工具',
+            'markdown' => 'funny-terminal-tools.md',
+            'date'     => '2015/10/22',
+            'tags'     => array('terminal'),
+        ),
         'downloading-m3u8-video' => array(
             'title'    => 'Apple iOS m3u8 媒体文件下载',
             'markdown' => 'downloading-m3u8-video.md',
