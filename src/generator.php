@@ -96,7 +96,7 @@ class CrispBlogGenerator
 
     private static function gen_index()
     {
-        $blogs_per_page = 1;
+        $blogs_per_page = 6;
         $blog = new Blog($blogs_per_page);
         $total_blog = $blog->getBlogNum();
 
@@ -188,37 +188,27 @@ class CrispBlogGenerator
         $blogs = $blog->getAllBlogs();
 
         $html = self::get_head();
-        //$html = str_replace('{{title}}', "Archive - Crisp Blog", $html);
-        $html = str_replace('{{title}}', "Home - Crisp Blog", $html);
+        $html = str_replace('{{title}}', "Archive - Crisp Blog", $html);
         $html .= "\n";
         $html .= "<div class=\"article\">\n";
-        $html .= "<div id=\"index_main\">\n";
         $html .= "<div class=\"article_head\">\n";
         $html .= "<div class=\"article_title\"></div>\n";
         $html .= "<div class=\"article_date\"></div>\n";
-        $html .= "</div>\n";
-        $html .= "<div id=\"index_left\">\n";
+        $html .= "<div class=\"article_main\">\n";
         foreach ($blogs as $blog_name => $blog_info) {
             $title = $blog_info['title'];
             $date = $blog_info['date'];
             $html .= "<div>$date - <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
         }
-        $html .= "</div>\n";
-        $photo = new Photo();
-        $html .= $photo->getIndex();
         $html .= "</div></div>\n";
-
-        // foot
         $html .= self::get_foot();
         $html .= "\n";
-        
-        //file_put_contents('../archive.html', $html);
-        file_put_contents('../index.html', $html);
+        file_put_contents('../archive.html', $html);
     }
 
     public static function generate()
     {
-        //self::gen_index();
+        self::gen_index();
         self::gen_blogs();
         self::gen_pages();
         self::gen_archive();

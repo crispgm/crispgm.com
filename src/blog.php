@@ -178,6 +178,14 @@ class Blog{
             'title'    => 'Page Not Found',
             'markdown' => '404.md',
         ),
+        'photography' => array(
+            'title'    => 'Photography',
+            'markdown' => 'photography.md',
+        ),
+        'things'      => array(
+            'title'    => 'Favorite Things',
+            'markdown' => 'favorite-things.md',
+        ),
     );
 
     protected $_parsedown = null;

@@ -30,27 +30,36 @@ ul li p {
     margin: 0;
 }
 #menu {
-    margin: 0;
-    width: 100%;
-    background-color: #000000;
-    text-align: center;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    /*background-color: #000000;*/
+    border-bottom: 1px solid #aaaaaa;
 }
 #menu a {
     color: #bbbbbb;
 }
 #menu a:hover {
-    color: #ffffff;
-    text-decoration: none;
+    text-decoration: underline;;
 }
 #menu_home {
-    font-size: 2.4em;
-    padding-top: 20px;
-    height: 80px;
+    font-size: 3.0em;
+    padding-top: 50px;
+    height: 100px;
     width: 100%;
 }
 #menu_links {
+    font-size: 1.0em;
     height: 30px;
     width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.menu_item {
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
 }
 #container {
@@ -60,7 +69,7 @@ ul li p {
 .article {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 60%;
     text-align: left;
     margin-top: 40px;
 }
@@ -90,6 +99,7 @@ ul li p {
     padding-bottom: 62px;
     font-size: 14px;
 }
+/*
 #index_left {
     width: 50%;
     padding-right: 12px;
@@ -104,6 +114,7 @@ ul li p {
     max-width: 75%;
     max-height: 75%;
 }
+*/
 #disqus_thread {
     margin-left: 20%;
     width: 60%;
