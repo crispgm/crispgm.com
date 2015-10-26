@@ -96,7 +96,7 @@ class CrispBlogGenerator
 
     private static function gen_index()
     {
-        $blogs_per_page = 6;
+        $blogs_per_page = 1;
         $blog = new Blog($blogs_per_page);
         $total_blog = $blog->getBlogNum();
 
@@ -120,6 +120,7 @@ class CrispBlogGenerator
                 $html .= "</div>\n";
                 $html .= "<div class=\"article_main\">\n";
                 $html .= $blog->getBlogHTML($blog_name);
+                $html .= "<p><a href=\"/archive.html\">More...</a></p>\n";
                 $html .= "</div></div>\n";
             }
 
