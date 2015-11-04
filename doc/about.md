@@ -8,12 +8,14 @@ Powered by Linode.
 All the articles are written in [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) format.
 Generated with power of PHP, Parsedown, less, jQuery, higlightjs and FontAwesome.
 
-* [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
-* Against Piracy Software
+[Subscribe Crisp Blog](/rss.xml).
 
 ## About Crisp
 
-I am David Zhang. Here is [my resume](/page/resume.html). And these tags are what I am interested in.
+I am David Zhang. Here is [my resume](/page/resume.html).
+Follow me on <a href="http://weibo.com/crispgm" target="_blank"><i title="Weibo" class="fa fa-weibo fa-lg"></i></a> <a href="http://instagram.com/crispgm" target="_blank"><i title="Instagram" class="fa fa-instagram fa-lg"></i></a> <a href="https://500px.com/crispgm" target="_blank"><i title="500px" class="fa fa-500px fa-lg"></i></a>.
+
+And these tags are what I am interested in:
 
 * Minimalism
 * Photography
@@ -25,3 +27,8 @@ I am David Zhang. Here is [my resume](/page/resume.html). And these tags are wha
 * Owl City
 * Documentary Films
 * Military Fans
+
+And there are what I advocate:
+
+* [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
+* Against Piracy Software
