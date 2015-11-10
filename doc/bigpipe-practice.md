@@ -6,7 +6,7 @@ Facebook提出了BigPipe的方案，讲页面功能分块，分成若干个pagel
 
 这样，前后端就可以都做到并行化，用户可以先看到部分页面内容，从而获得了更好的用户体验。目前，国外主要是Facebook应用了这项技术，而国内微博也通过BigPipe获得了不错的效果。
 
-![Facebook-BigPipe](http://crispgm.com/image/fb-bigpipe.png)
+![Facebook-BigPipe](/image/fb-bigpipe.png)
 
 图：Facebook加载时的timing，可以看到waiting时间（也就是后端响应时间response time）明显低于content download耗时。
 
@@ -36,11 +36,7 @@ Facebook提出了BigPipe的方案，讲页面功能分块，分成若干个pagel
 
 ### 整体设计
 
-BigPipe的整体方案是，
-
-TODO
-
-具体实现环节分为如下几部分：
+BigPipe的整体方案是需要具体实现环节分为如下几部分：
 
 1. BigPipe框架。包括前端和后端两部分，以及对于不支持BigPipe模式的流量器启用的降级模式。此外，为了便于SEO，对于搜索引擎Spider的抓取也要使用降级模式。
 2. Pagelet和DataProvider管理维护制度。这是一项管理上的措施，主要是为了管理Pagetlet、DataProvider以及其之间的依赖关系。
@@ -61,9 +57,9 @@ TODO
 
 框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对DataProvider透明地迁移成纯异步模式。
 
-因此，BigPipe并行框架采用异步-回调模式，通过状态机模拟异步过程。
+因此，BigPipe并行框架采用异步-回调模式，通过状态机模拟异步过程。状态机会以深度优先遍历DataProvider以及其依赖的DataProvider，并初始化成__INITIAL__状态。没有依赖的DataProvider会直接执行，进入__EXECUTING__状态。当一个有依赖的DataProvider的依赖已经全部处于__READY__状态时，则会同一般的DataProvider一样execute执行。execute函数中会有数据交互和业务逻辑处理，当处理完毕后需要主动调用ready函数将DataProvider自身置为__READY__。
 
-TODO
+Pagelet依赖的DataProvider都__READY__后，就会渲染页面。
 
 ### Buffer问题
 
@@ -79,9 +75,8 @@ TODO
 
 ```
     Syntax: fastcgi_buffering on | off;
-    Default:    
-    fastcgi_buffering on;
-    Context:    http, server, location
+    Default: fastcgi_buffering on;
+    Context: http, server, location
     This directive appeared in version 1.5.6.
 ```
 
@@ -106,4 +101,12 @@ TODO
 
 ### 效果评估
 
-TODO
+* TTFB时间减少56% (TTFB = time to first byte)
+* 白屏时间减少59%
+* 降低了局部刷新开发成本
+
+### 其它总结
+
+* 开发迁移时间超长，从立项到上线总共持续了半年，前端主要开发人员因为离职等原因换了三波
+* 底层本质上还无法并发，优化效果远远不够彻底
+* pagelet交叉请求比较多，效果没有那么好
