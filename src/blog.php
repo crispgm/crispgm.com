@@ -109,7 +109,7 @@ class Blog{
             'tags'     => array('Mac'),
         ),
         'shell-tips' => array(
-            'title'    => 'shell两个小问题解决方法',
+            'title'    => 'Shell两个小问题解决方法',
             'markdown' => 'shell-tips.md',
             'date'     => '2013/12/30',
             'tags'     => array('Shell'),
@@ -127,7 +127,7 @@ class Blog{
             'tags'     => array('Soccer', '广州恒大'),
         ),
         'mac-tips' => array(
-            'title'    => 'mac终端小技巧合集',
+            'title'    => 'Mac终端小技巧合集',
             'markdown' => 'mac-tips.md',
             'date'     => '2013/11/03',
             'tags'     => array('Mac', 'Terminal'),

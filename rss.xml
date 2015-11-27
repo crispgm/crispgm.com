@@ -10,7 +10,7 @@
 <link>http://crispgm.com</link>
 <description>Crisp 个人博客</description>
 <atom:link href="http://crispgm.com/rss.xml" rel="self" type="application/rss+xml"/><author>Crisp</author><language>zh-cn</language>
-<lastBuildDate>Fri, 27 Nov 2015 11:10:40 +0800</lastBuildDate>
+<lastBuildDate>Fri, 27 Nov 2015 11:24:45 +0800</lastBuildDate>
 <item>
 <title><![CDATA[创造者和他们的工具——我的利器]]></title>
 <link>http://crispgm.com/page/my-tools.html</link>
@@ -131,7 +131,7 @@
 <content:encoded><![CDATA[<p>Mac Mail在国内网络状况下，和gmail一起总是会有点问题。收件箱里选择删除一封gmail邮件，并用command+q关掉Mail。如果删除gmail失败的话就会报错，之后Mail就会处于一种卡死的状态，退不出来也进不去。只能选择：</p><pre><code>ps aux|grep Mailkill -9 xxxx</code></pre><p>这个事情遇多了，搞了个更简单粗暴的shell脚本</p><pre><code>#!/bin/bashPID=$(ps aux|grep $1|grep -v grep|tail -1|awk '{print $2}')kill -9 $PID</code></pre><p>直到后来，我试了下zsh的自动补全参数功能，输入kill -9之后再输入Mail就会自己智能获取PID，因此这个脚本瞬间没意义了。</p><p>又过了没多久，发现有pgrep这命令，于是没zsh一样轻取。</p><p>最后，我换成了Airmail.</p><p>THE END</p>]]></content:encoded>
 </item>
 <item>
-<title><![CDATA[shell两个小问题解决方法]]></title>
+<title><![CDATA[Shell两个小问题解决方法]]></title>
 <link>http://crispgm.com/page/shell-tips.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/shell-tips.html</guid>
 <pubDate>Mon, 30 Dec 2013 00:00:00 +0800</pubDate>
@@ -152,11 +152,11 @@
 <content:encoded><![CDATA[<p>随着终场哨声的响起，恒大有惊无险的夺冠了！</p><p>亚冠冠军。</p><p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p><p>想起大学时踢新生杯和院系杯时，就是这种心情。</p><p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>]]></content:encoded>
 </item>
 <item>
-<title><![CDATA[mac终端小技巧合集]]></title>
+<title><![CDATA[Mac终端小技巧合集]]></title>
 <link>http://crispgm.com/page/mac-tips.html</link>
 <guid isPermaLink="true">http://crispgm.com/page/mac-tips.html</guid>
 <pubDate>Sun, 03 Nov 2013 00:00:00 +0800</pubDate>
-<content:encoded><![CDATA[<h4>mac下ssh避免多次输入密码</h4><p>编辑文件</p><pre><code>sudo vim /etc/ssh_config</code></pre><p>加入</p><pre><code>Host *   ControlMaster auto  ControlPath ~/.ssh/master-%r@%h:%p  </code></pre><p>保存后，重新启动终端即可生效</p><h4>mac终端显示颜色</h4><p>修改~/.bash_profile，添加</p><pre><code>export CLICOLOR=1export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]></content:encoded>
+<content:encoded><![CDATA[<h4>Mac下ssh避免多次输入密码</h4><p>编辑文件</p><pre><code>sudo vim /etc/ssh_config</code></pre><p>加入</p><pre><code>Host *   ControlMaster auto  ControlPath ~/.ssh/master-%r@%h:%p  </code></pre><p>保存后，重新启动终端即可生效</p><h4>mac终端显示颜色</h4><p>修改~/.bash_profile，添加</p><pre><code>export CLICOLOR=1export LSCOLORS=gxfxaxdxcxegedabagacad</code></pre>]]></content:encoded>
 </item>
 </channel>
 </rss>
