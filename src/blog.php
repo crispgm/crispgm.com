@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'my-tools' => array(
+            'title'    => '创造者和他们的工具——我的利器',
+            'markdown' => 'my-tools.md',
+            'date'     => '2015/11/11',
+            'tags'     => array('app', 'tools'),
+        ),
         'funny-terminal-tools' => array(
             'title'    => '[推荐]有趣的终端Terminal工具',
             'markdown' => 'funny-terminal-tools.md',
