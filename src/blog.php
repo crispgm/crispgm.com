@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'cat-tongue-play' => array(
+            'title'    => '[推荐]猫舌怕烫烫——足控福利的冷餐美食剧',
+            'markdown' => 'cat-tongue-play.md',
+            'date'     => '2015/11/28',
+            'tags'     => array('play'),
+        ),
         'my-tools' => array(
             'title'    => '创造者和他们的工具——我的利器',
             'markdown' => 'my-tools.md',
