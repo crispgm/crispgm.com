@@ -21,7 +21,8 @@ h4 {
 }
 a {
     text-decoration: none;
-    color: #08c;
+    /* color: #08c; */
+    color: #333;
 }
 a:hover {
     text-decoration: underline;

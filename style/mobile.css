@@ -20,7 +20,7 @@ h4 {
 }
 a {
   text-decoration: none;
-  color: #08c;
+  color: #333;
 }
 a:hover {
   text-decoration: underline;
@@ -31,7 +31,7 @@ ul li p {
 #menu {
   width: 100%;
   height: 80px;
-  background-color: #000000;
+  border-bottom: 1px solid #aaaaaa;
 }
 #menu a {
   color: #bbbbbb;
@@ -51,6 +51,10 @@ ul li p {
 #menu_links {
   width: 100%;
   height: 30px;
+}
+.menu_item {
+  padding-left:2px;
+  text-align: center;
 }
 #container {
   text-align: center;
