@@ -6,7 +6,7 @@
 
 ### 剧集链接
 
-（共6回）[EP01](http://www.bilibili.com/video/av3238009/) [EP02](http://www.bilibili.com/video/av3271537/) [EP03]() [EP04]() [EP05]() [EP06]()
+（共6回）[http://v.qq.com/detail/w/wasgq6dzfy0h2ca.html](http://v.qq.com/detail/w/wasgq6dzfy0h2ca.html)
 
 ### 个人评价
 
