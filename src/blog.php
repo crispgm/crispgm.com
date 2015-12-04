@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'environment-pollution-in-a-photographer-view' => array(
+            'title'    => 'Environment Pollution in a Photographer\'s View',
+            'markdown' => 'environment-pollution-in-a-photographer-view.md',
+            'date'     => '2015/12/04',
+            'tags'     => array('环保', 'photograph'),
+        ),
         'cat-tongue-play' => array(
             'title'    => '[推荐]猫舌怕烫烫——足控福利的冷餐美食剧',
             'markdown' => 'cat-tongue-play.md',
