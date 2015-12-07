@@ -2,5 +2,5 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url(http://crispgm.com/style/opensans.woff) format('woff');
+    src: local('Open Sans'), local('OpenSans'), url(https://crispgm.com/style/opensans.woff) format('woff');
 }

@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'enable-https-with-letsencrypt' => array(
+            'title'    => 'Enable HTTPS with Let\'s Encrypt',
+            'markdown' => 'enable-https-with-letsencrypt.md',
+            'date'     => '2015/12/07',
+            'tags'     => array('https'),
+        ),
         'environment-pollution-in-a-photographer-view' => array(
             'title'    => 'Environment Pollution in a Photographer\'s View',
             'markdown' => 'environment-pollution-in-a-photographer-view.md',
