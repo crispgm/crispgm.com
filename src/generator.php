@@ -199,7 +199,9 @@ class CrispBlogGenerator
         foreach ($blogs as $blog_name => $blog_info) {
             $title = $blog_info['title'];
             $date = $blog_info['date'];
-            $html .= "<div>$date - <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
+            $html .= "<div class=\"archive_item\">\n";
+            $html .= "<div class=\"archive_date\">$date</div><div class=\"archive_title\"><a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
+            $html .= "</div>\n";
         }
         $html .= "<p><a href=\"/rss.xml\" target=\"_blank\">Subscribe Blog Updates</a></p>\n";
         $html .= "</div></div>\n";
