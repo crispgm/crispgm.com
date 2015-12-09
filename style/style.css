@@ -94,6 +94,12 @@ ul li p {
     padding-bottom: 62px;
     font-size: 14px;
 }
+.archive_main {
+    margin-top: 24px;
+    padding-left: 20%;
+    padding-bottom: 62px;
+    font-size: 14px;
+}
 #index_main {
     display: flex;
     margin-top: 24px;

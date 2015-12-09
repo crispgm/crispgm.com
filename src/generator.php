@@ -195,12 +195,13 @@ class CrispBlogGenerator
         $html .= "<div class=\"article_head\">\n";
         $html .= "<div class=\"article_title\"></div>\n";
         $html .= "<div class=\"article_date\"></div>\n";
-        $html .= "<div class=\"article_main\">\n";
+        $html .= "<div class=\"archive_main\">\n";
         foreach ($blogs as $blog_name => $blog_info) {
             $title = $blog_info['title'];
             $date = $blog_info['date'];
             $html .= "<div>$date - <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
         }
+        $html .= "<p><a href=\"\">Subscribe Blog Updates</a></p>\n";
         $html .= "</div></div>\n";
         $html .= self::get_foot();
         $html .= "\n";
