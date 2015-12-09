@@ -201,7 +201,7 @@ class CrispBlogGenerator
             $date = $blog_info['date'];
             $html .= "<div>$date - <a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
         }
-        $html .= "<p><a href=\"\">Subscribe Blog Updates</a></p>\n";
+        $html .= "<p><a href=\"/rss.xml\" target=\"_blank\">Subscribe Blog Updates</a></p>\n";
         $html .= "</div></div>\n";
         $html .= self::get_foot();
         $html .= "\n";

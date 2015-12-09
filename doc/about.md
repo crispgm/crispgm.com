@@ -9,8 +9,6 @@ Powered by [Linode](https://www.linode.com/). HTTPS Powered by [Let's Encrypt](h
 All the articles are written in [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) format.
 Generated with power of [Nginx](http://nginx.org/), [PHP](http://php.net/), [Parsedown](https://github.com/erusev/parsedown), [less](http://lesscss.org/), [jQuery](https://jquery.com/), [highlightjs](https://highlightjs.org/) and [FontAwesome](https://fortawesome.github.io/Font-Awesome/).
 
-[Subscribe Crisp Blog](/rss.xml).
-
 ## About Crisp
 
 I am David Zhang. Here is [my resume](/page/resume.html).
