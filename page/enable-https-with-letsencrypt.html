@@ -32,16 +32,45 @@
 
 <div class="article"><div class="article_head"><div class="article_title">Enable HTTPS with Let's Encrypt</div>
 <div class="article_date">2015/12/07</div>
-</div><div class="article_main"><h2>Why HTTPS?</h2>
+</div><div class="article_main"><p><a href="https://crispgm.com">crispgm.com</a> has enabled HTTPS as its default protocol, with the power of <a href="https://letsencrypt.org/">Let's Encrypt</a>.</p>
+<h2>Why HTTPS?</h2>
+<p>When properly configured, an HTTPS connection guarantees three things:</p>
+<ul>
+<li>
+<p><strong>Confidentiality.</strong> The visitor’s connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.</p>
+</li>
+<li>
+<p><strong>Authenticity.</strong> The visitor is talking to the “real” website, and not to an impersonator or through a “man-in-the-middle”.</p>
+</li>
+<li><strong>Integrity.</strong> The data sent between the visitor and the website has not been tampered with or modified.</li>
+</ul>
+<p>A plain HTTP connection can be easily monitored, modified, and impersonated.</p>
+<blockquote>
+<p>Quoted from <a href="https://https.cio.gov/faq/#what-information-does-https-protect?"><a href="https://https.cio.gov/faq/#what-information-does-https-protect">https://https.cio.gov/faq/#what-information-does-https-protect</a>?</a></p>
+</blockquote>
 <h2>About Let's Encrypt</h2>
 <blockquote>
 <p><a href="https://letsencrypt.org/">Let’s Encrypt</a> is a free, automated, and open certificate authority (CA), run for the public’s benefit. Let’s Encrypt is a service provided by the Internet Security Research Group (ISRG).</p>
 </blockquote>
 <p>Contribute to <a href="https://github.com/letsencrypt">letsencrypt</a> on GitHub.</p>
 <h2>About ACME</h2>
-<h2></h2>
+<p>TODO</p>
 <h3>Get Certificate</h3>
-<h3>Nginx Configuration</h3></div>
+<p>As the <code>letsencrypt-nginx</code> is not fully developed, I choose <code>certonly</code> to generate SSL certificate and configure nginx manually.</p>
+<pre><code>    ./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com</code></pre>
+<h3>Nginx Configuration</h3>
+<pre><code>    ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
+    ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
+
+    ssl_session_cache    shared:SSL:1m;
+    ssl_session_timeout  1440m;
+
+    ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SH    A384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM    -SHA384 DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES256-SHA256 EDH-RSA-DES-CBC3-SHA";
+    ssl_prefer_server_ciphers  on;</code></pre>
+<h3>Performance</h3>
+<p>Actually, <a href="https://crispgm.com">crispgm.com</a> is a full static site. Almost no difference on performance. :D</p>
+<h2>Conclusion</h2>
+<p>Safe journey on <a href="https://crispgm.com">crispgm.com</a> :)</p></div>
 </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
