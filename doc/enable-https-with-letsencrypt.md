@@ -24,6 +24,12 @@ Contribute to [letsencrypt](https://github.com/letsencrypt) on GitHub.
 
 TODO
 
+## Practice
+
+### Documentation
+
+[https://letsencrypt.readthedocs.org/](https://letsencrypt.readthedocs.org/)
+
 ### Get Certificate
 
 As the ```letsencrypt-nginx``` is not fully developed, I choose ```certonly``` to generate SSL certificate and configure nginx manually.
@@ -34,21 +40,27 @@ As the ```letsencrypt-nginx``` is not fully developed, I choose ```certonly``` t
 
 ### Nginx Configuration
 
+Configure nginx.conf
+
 ```
     ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
     ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
 
-    ssl_session_cache    shared:SSL:1m;
     ssl_session_timeout  1440m;
      
-    ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SH    A384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM    -SHA384 DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES256-SHA256 EDH-RSA-DES-CBC3-SHA";
-    ssl_prefer_server_ciphers  on;
 ```
+
+Others are as default.
+
+### Certificate Renewal
+
+Let’s Encrypt CA issues short lived certificates (90 days). Make sure you renew the certificates at least once in 3 months.
 
 ### Performance
 
 Actually, [crispgm.com](https://crispgm.com) is a full static site. Almost no difference on performance. :D
 
-## Conclusion
+## In The End
 
 Safe journey on [crispgm.com](https://crispgm.com) :)
+
