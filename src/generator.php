@@ -195,16 +195,18 @@ class CrispBlogGenerator
         $html .= "<div class=\"article_head\">\n";
         $html .= "<div class=\"article_title\"></div>\n";
         $html .= "<div class=\"article_date\"></div>\n";
+        $html .= "</div>\n";
         $html .= "<div class=\"archive_main\">\n";
         foreach ($blogs as $blog_name => $blog_info) {
             $title = $blog_info['title'];
             $date = $blog_info['date'];
             $html .= "<div class=\"archive_item\">\n";
-            $html .= "<div class=\"archive_date\">$date</div><div class=\"archive_title\"><a href=\"/page/{$blog_name}.html\">$title</a></div>\n";
+            $html .= "<span class=\"archive_date\">$date</span><span class=\"archive_title\"><a href=\"/page/{$blog_name}.html\">$title</a></span>\n";
             $html .= "</div>\n";
         }
-        $html .= "<p><a href=\"/rss.xml\" target=\"_blank\">Subscribe Blog Updates</a></p>\n";
-        $html .= "</div></div>\n";
+        $html .= "</div>\n";
+        $html .= "<div id=\"archive_subscribe\"><a href=\"/rss.xml\" target=\"_blank\">Subscribe Blog Updates</a></div>\n";
+        $html .= "</div>\n";
         $html .= self::get_foot();
         $html .= "\n";
         file_put_contents('../archive.html', $html);

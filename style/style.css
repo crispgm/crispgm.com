@@ -96,16 +96,29 @@ ul li p {
 }
 .archive_main {
     margin-top: 24px;
-    padding-bottom: 62px;
+    padding-bottom: 36px;
     font-size: 14px;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .archive_item {
+    width: 50%;
 }
-.archive_ts {
-    position: relative;
+.archive_date {
+    margin-right: 16px; 
+    width: 80px;
 }
 .archive_title {
-    position: relative;
+    width: 300px;
+}
+#archive_subscribe {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 48px;
 }
 #index_main {
     display: flex;
