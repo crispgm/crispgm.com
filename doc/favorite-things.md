@@ -8,23 +8,15 @@ This page is inspired by the Things page of [Kenneth Reitz](http://www.kennethre
 
 #### Paper Goods
 
-败家实验室
-
-Muji
-
-Pilot
-
-Lamy
+败家实验室, Muji, Pilot, Lamy
 
 #### Devices
 
-Kindle
-
-Bose Wave Music System
+iPhone 6, Kindle, Bose Wave Music System
 
 #### Photography
 
-SONY RX100 Mark III.
+OLYMPUS E-M5 Mark II, SONY RX100 Mark III
 
 #### Apps
 
