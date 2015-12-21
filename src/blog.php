@@ -194,6 +194,10 @@ class Blog{
             'title'    => 'About',
             'markdown' => 'about.md',
         ),
+        'bio' => array(
+            'title'    => 'Biography',
+            'markdown' => 'bio.md',
+        ),
         'resume' => array(
             'title'    => 'My Resume',
             'markdown' => 'resume.md',

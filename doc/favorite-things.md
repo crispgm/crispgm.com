@@ -1,5 +1,3 @@
-## Favorite Things
-
 This page is inspired by the Things page of [Kenneth Reitz](http://www.kennethreitz.org/things/).
 
 ### What I am interested in

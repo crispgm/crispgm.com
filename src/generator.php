@@ -1,6 +1,5 @@
 <?php
 require_once('blog.php');
-require_once('photo.php');
 
 class CrispBlogGenerator
 {
@@ -85,6 +84,9 @@ class CrispBlogGenerator
             $markdown = $blog->getPageHTML($page_name);
 
             $html .= '<div class="article">';
+            $html .= '<div class="article_head">';
+            $html .= "<div class=\"article_title\">$title</div>\n";
+            $html .= '</div>';
             $html .= "<div class=\"article_main\">$markdown</div>\n";
             $html .= '</div>';
 
@@ -193,7 +195,7 @@ class CrispBlogGenerator
         $html .= "\n";
         $html .= "<div class=\"article\">\n";
         $html .= "<div class=\"article_head\">\n";
-        $html .= "<div class=\"article_title\"></div>\n";
+        $html .= "<div class=\"article_title\">Blog Archive</div>\n";
         $html .= "<div class=\"article_date\"></div>\n";
         $html .= "</div>\n";
         $html .= "<div class=\"archive_main\">\n";
