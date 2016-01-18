@@ -32,7 +32,7 @@ Finally，必须说一句，[Linode](https://www.linode.com/)+[Shadowsocks](http
 
 ### 你平时获得工作灵感的方式有哪些？
 
-在本子上写写涂涂画画，上上[GitHub](https://github.com/)和各类技术网站。
+在本子上写写涂涂画画，浏览[GitHub](https://github.com/)和各类技术网站。
 
 ### 推荐一件生活利器给大家。
 
