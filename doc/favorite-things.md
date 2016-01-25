@@ -15,7 +15,7 @@ This page is inspired by the Things page of [Kenneth Reitz](http://www.kennethre
 
 ### Great Reading
 
-断舍离, 日本的八个审美意识
+How Google Works, 断舍离, 日本的八个审美意识
 
 ### Paper Goods
 
@@ -34,3 +34,4 @@ My photos are posted on [Tumblr](http://crispgm.tumblr.com) and [Instagram](http
 ### Apps
 
 See details in [我喜欢的应用](http://crispgm.com/page/my-favorite-app.html)。
+
