@@ -24,7 +24,7 @@ Contribute to [letsencrypt](https://github.com/letsencrypt) on GitHub.
 
 ### ACME Protocol
 
-[https://github.com/ietf-wg-acme/acme](https://github.com/ietf-wg-acme/acme)
+[https://github.com/ietf-wg-acme/acme](https://github.com/ietf-wg-acme/acme)  
 [https://github.com/letsencrypt/acme-spec](https://github.com/letsencrypt/acme-spec)
 
 ### Boulder
