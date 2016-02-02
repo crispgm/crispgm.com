@@ -15,7 +15,9 @@ This page is inspired by the Things page of [Kenneth Reitz](http://www.kennethre
 
 ### Great Reading
 
-How Google Works, 断舍离, 日本的八个审美意识
+* How Google Works
+* 断舍离
+* 日本的八个审美意识
 
 ### Paper Goods
 
@@ -23,11 +25,23 @@ How Google Works, 断舍离, 日本的八个审美意识
 
 ### Devices
 
-iPhone 6, Kindle, Bose Wave Music System
+* Mac Book Air
+* iPhone 6
+* Kindle
+* Bose Wave Music System
 
 ### Photography
 
-OLYMPUS E-M5 Mark II w/ DG15 & 1442EZ, SONY RX100 Mark III
+#### Cameras
+
+* OLYMPUS E-M5 Mark II
+* SONY RX100 Mark III
+
+#### Lenses
+
+* Panasonic Leica DG SUMMILUX 15mm/F1.7 ASPH
+* Olympus M.ZUIKO DIGITAL 45mm F1.8
+* Olympus M.ZUIKO DIGITAL ED 1442 F3.5-5.6 EZ(kit)
 
 My photos are posted on [Tumblr](http://crispgm.tumblr.com) and [Instagram](https://instagram.com/crispgm).
 
