@@ -207,7 +207,7 @@ class CrispBlogGenerator
             $html .= "</div>\n";
         }
         $html .= "</div>\n";
-        $html .= "<div id=\"archive_subscribe\"><a href=\"/rss.xml\" target=\"_blank\">Subscribe Blog Updates</a></div>\n";
+        $html .= "<div id=\"archive_subscribe\"><a href=\"/rss.xml\" target=\"_blank\"><i title=\"rss\" class=\"fa fa-rss\"></i> Subscribe Blog Updates</a></div>\n";
         $html .= "</div>\n";
         $html .= self::get_foot();
         $html .= "\n";
