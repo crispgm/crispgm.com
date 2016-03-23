@@ -1,8 +1,8 @@
-# Url Auto Redirector
+# URL Auto Redirector
 
 ## Introduction
 
-Url Auto Redirector is a Chrome extension, which allows to make redirection of url from preset url patterns.
+URL Auto Redirector is a Chrome extension, which allows to make redirection of url from preset url patterns.
 
 Contribute on [GitHub - crispgm/UrlAutoRedirector](https://github.com/crispgm/UrlAutoRedirector).
 
@@ -10,7 +10,7 @@ Contribute on [GitHub - crispgm/UrlAutoRedirector](https://github.com/crispgm/Ur
 
 Will be published to Chrome WebStore with a stable version.
 
-## Changelist
+## Changelog
 
 * 0.0.2
     * Add tab option support
