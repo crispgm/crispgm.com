@@ -211,7 +211,7 @@ class Blog{
             'markdown' => 'favorite-things.md',
         ),
         'url-auto-redirector' => array(
-            'title'    => 'Url Auto Redirector',
+            'title'    => 'URL Auto Redirector',
             'markdown' => 'url-auto-redirector.md',
         ),
     );
