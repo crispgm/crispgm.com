@@ -206,9 +206,13 @@ class Blog{
             'title'    => 'Page Not Found',
             'markdown' => '404.md',
         ),
-        'things'      => array(
+        'things' => array(
             'title'    => 'Favorite Things',
             'markdown' => 'favorite-things.md',
+        ),
+        'url-auto-redirector' => array(
+            'title'    => 'Url Auto Redirector',
+            'markdown' => 'url-auto-redirector.md',
         ),
     );
 
