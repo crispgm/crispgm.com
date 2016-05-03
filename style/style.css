@@ -18,9 +18,11 @@ h1 {
 }
 h2 {
     font-size: 1.8em;
+    color: #555;
 }
 h3 {
     font-size: 1.4em;
+    color: #555;
 }
 h4 {
     font-size: 1.2em;
@@ -51,7 +53,7 @@ ul li p {
     color: #bbbbbb;
 }
 #menu a:hover {
-    text-decoration: underline;;
+    text-decoration: underline;
 }
 #menu_home {
     font-size: 3.0em;
@@ -91,7 +93,7 @@ ul li p {
 }
 .article_title a {
     text-decoration: none;
-    color: black;
+    color: #555;
 }
 .article_title a:hover {
     text-decoration: underline;
