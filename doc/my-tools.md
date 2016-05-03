@@ -3,28 +3,32 @@
 
 ### 介绍一下你自己和所做的工作。
 
-我是Crisp，名字叫David Zhang，目前在做Web开发相关的工作。
+我是 Crisp，名字叫 David Zhang，目前在做 Web 开发相关的工作。
 
 ### 你都在使用哪些硬件？
 
-工作开发目前在[ThinkPad X230](http://shop.lenovo.com/us/en/laptops/thinkpad/x-series/x230/)上进行，因为是公司配的，外接[LG IPS224T](http://www.lg.com/us/commercial/lcd-computer-monitors/lg-IPS224T-PN)显示器和[Cherry MX 茶轴](http://cherrycorp.com/product/g80-3850-mx-brown-3-0-keyboard/)机械键盘。比起同系列的其它代产品（X220或X240之类），X230是比较好用的。但我更喜欢Mac，在家会用[MacBook Air](http://www.apple.com/macbook-air/)，数据会备份到[WD My Passport Ultra](http://www.wdc.com/cn/products/products.aspx?id=1000)。ps：明年3月公司电脑就可以升级成[MacBook Pro](http://www.apple.com/macbook-pro/)了。
+工作开发目前在 [MacBook Pro](http://www.apple.com/macbook-pro/) 上进行，外接 [LG IPS224T](http://www.lg.com/us/commercial/lcd-computer-monitors/lg-IPS224T-PN) 显示器和 [Cherry MX 茶轴](http://cherrycorp.com/product/g80-3850-mx-brown-3-0-keyboard/) 机械键盘。在家主要用 [MacBook Air](http://www.apple.com/macbook-air/)，并在纠结要不要买一台台式机玩游戏。
 
-日常来说手机用[iPhone 6](http://www.apple.com/shop/buy-iphone/iphone6)，阅读会选择[Kindle Paperwhite](http://www.amazon.com/Kindle-Paperwhite-Touch-light/dp/B007OZNZG0)，方便且便宜。不过对于技术/工具书会选择实体版的，不为收藏，只为便于翻找。工作时用[Sennhaiser HD202II](http://en-us.sennheiser.com/over-ear-headphones-hd-202)听音乐，家里放着一台[BOSE Wave Music System III](http://www.bose.cn/product.aspx?cid=632)，支持AUX IN连接电脑，偶尔也可以听收音机和CD。摄影用[Olympus E-M5 Mark II](http://olympus-imaging.cn/product/dslr/em5mk2/index.html)，套头 [M.ZUIKO DIGITAL ED 14-42mm F3.5-5.6 EZ](http://olympus-imaging.cn/product/dslr/mlens/14-42_35-56_ez/index.html)，人像 [M.ZUIKO DIGITAL 45mm F1.8](http://olympus-imaging.cn/product/dslr/mlens/45_18/index.html)，室内或人文 [松下Leica DG Summilux 15mm/F1.7 ASPH](http://consumer.panasonic.cn/product/cameras-camcorders/lumix-g-lens/fixed-focal/h-x015gk.html)。备机或摄像用[SONY 黑卡 RX100III](http://www.sonystyle.com.cn/products/cyber-shot/dsc_rx100m3.htm?ssid=sstp01354)。
+数据会备份到 [WD My Passport Ultra](http://www.wdc.com/cn/products/products.aspx?id=1000)，国外的云存储安全但速度不行，国内的反之。只好将不重要的数据备份在云端，重要的用起了物理备份。
+
+日常来说手机用 [iPhone 6](http://www.apple.com/shop/buy-iphone/iphone6)，阅读会选择 Kindle。最早是 [Kindle Paperwhite](http://www.amazon.com/Kindle-Paperwhite-Touch-light/dp/B007OZNZG0)，方便且便宜，之后第一时间升级到了 [Kindle Oasis](https://www.amazon.cn/dp/B010EJPW7C/ref=sr_1_1?ie=UTF8&qid=1462245425)，实体翻页按键实在对我很有吸引力。对于技术/工具书还是会选择实体版的，不为收藏，只为便于翻找。工作时用 [Sennhaiser HD202II](http://en-us.sennheiser.com/over-ear-headphones-hd-202) 听音乐，家里放着一台 [BOSE Wave Music System III](http://www.bose.cn/product.aspx?cid=632)，支持AUX IN连接电脑，偶尔也可以听收音机和CD。
+
+摄影用 [Olympus E-M5 Mark II](http://olympus-imaging.cn/product/dslr/em5mk2/index.html)，人像 [45mm F1.8](http://olympus-imaging.cn/product/dslr/mlens/45_18/index.html)，室内或人文 [DG15](http://consumer.panasonic.cn/product/cameras-camcorders/lumix-g-lens/fixed-focal/h-x015gk.html)，广角 [9-18mm](http://olympus-imaging.cn/product/dslr/mlens/9-18_40-56/index.html)。镜头都是简称，全称请看链接吧。
 
 除去电子设备，我有两只钢笔，分别是[LAMY Safari](http://www.lamy.com/eng/b2c/safari)和[Pilot 78G](http://www.amazon.cn/Pilot-%E7%99%BE%E4%B9%90-FP-78G-M-B-22K%E5%8C%85%E9%87%91%E7%AC%94%E5%B0%96%E9%92%A2%E7%AC%94-M%E5%92%80/dp/B003H06HN4)，前者出水猛、更亮骚，后者更朴实好用。
 
 
 ### 软件呢？
 
-开发最常用的是买了License的[Sublime Text 2](http://www.sublimetext.com/)和定制过[VIM](http://www.vim.org/)。浏览器用[Chrome](https://www.google.com/chrome/)。聊天主要还是QQ/微信，都是被圈子绑架的，Office之类也同理。其实我特别喜欢[Slack](https://slack.com/)的概念，但限于团队和网络的问题，只好搞了个[BearyChat](https://bearychat.com/)和少量熟人自娱自乐。
+开发最常用的是买了 License 的 [Sublime Text 2](http://www.sublimetext.com/) 和定制过 [VIM](http://www.vim.org/)。浏览器用 [Chrome](https://www.google.com/chrome/)。聊天主要还是 QQ/微信，都是被圈子绑架的，Office 之类也同理。其实我特别喜欢 [Slack](https://slack.com/) 的概念，但限于团队和网络的问题，只好搞了个 [BearyChat](https://bearychat.com/) 和少量熟人自娱自乐。
 
-生产力工具方面，会使用[OneNote](https://www.onenote.com/)作为笔记，[百度云](http://pan.baidu.com/)作文件共享，[Wunderlist](https://www.wunderlist.com/)作为个人GTD管理，工作内容用[败家实验室](https://item.taobao.com/item.htm?spm=2013.1.0.0.xh6pv4&id=45159521615)不洇墨笔记本GTD。
+生产力工具方面，会使用 [OneNote](https://www.onenote.com/) 作为笔记，[百度云](http://pan.baidu.com/)作文件共享，[Wunderlist](https://www.wunderlist.com/) 作为个人 GTD 管理，工作内容 GTD 用[败家实验室](https://item.taobao.com/item.htm?spm=2013.1.0.0.xh6pv4&id=45159521615)不洇墨笔记本。
 
-日常使用[Reeder](http://reederapp.com/)+[Pocket](https://getpocket.com/)看新闻，不喜欢专门的新闻app。听歌会用[foobar2000](https://www.foobar2000.org/)和[网易云音乐](http://music.163.com/)。除此之外，我喜欢用[WordBook](https://itunes.apple.com/us/app/wordbook-english-dictionary/id289694924?mt=8)英英词典作为词典，这样对英语提升比英汉会大一些。
+日常使用 [Reeder](http://reederapp.com/) + [Pocket](https://getpocket.com/) 看新闻，不喜欢专门的新闻app。听歌会用 [foobar2000](https://www.foobar2000.org/) 和[网易云音乐](http://music.163.com/)。除此之外，我喜欢用 [WordBook](https://itunes.apple.com/us/app/wordbook-english-dictionary/id289694924?mt=8) 英英词典。
 
-处理RAW图片会用[Adobe Lightroom](https://lightroom.adobe.com/)，而在手机上会混用[VSCOcam](https://vsco.co/vscocam)、[Snapseed](https://itunes.apple.com/us/app/snapseed/id439438619?mt=8)和[Enlight](http://www.enlightapp.com/)，并分享到[Instagram](https://www.instagram.com/)上。
+处理 RAW 图片会用 [Adobe Lightroom](https://lightroom.adobe.com/)，而在手机上会混用 [VSCOcam](https://vsco.co/vscocam)、[Snapseed](https://itunes.apple.com/us/app/snapseed/id439438619?mt=8) 和 [Enlight](http://www.enlightapp.com/)，并分享到 [Instagram](https://www.instagram.com/)。
 
-Finally，必须说一句，[Linode](https://www.linode.com/)+[Shadowsocks](https://shadowsocks.org)搭建一套翻墙系统很有必要，这是通往世界之门的钥匙。
+Finally，必须说一句，[Linode](https://www.linode.com/) + [Shadowsocks](https://shadowsocks.org) 搭建一套翻墙系统很有必要，这是通往世界之门的钥匙。
 
 ### 你最理想的工作环境是什么？
 
@@ -32,7 +36,7 @@ Finally，必须说一句，[Linode](https://www.linode.com/)+[Shadowsocks](http
 
 ### 你平时获得工作灵感的方式有哪些？
 
-在本子上写写涂涂画画，浏览[GitHub](https://github.com/)和各类技术网站。
+在本子上写写涂涂画画，浏览 [GitHub](https://github.com/) 和各类技术网站。
 
 ### 推荐一件生活利器给大家。
 
