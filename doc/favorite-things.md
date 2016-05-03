@@ -1,33 +1,21 @@
 This page is inspired by the Things page of [Kenneth Reitz](http://www.kennethreitz.org/things/).
 
-### What I am interested in
+## What I am interested in
 
 * Minimalism
-* Photography
-* iDevices & Kindle
 * Soccer & Rugby
-* Classical Music
-* IU
-* AKB48
-* Owl City
 * Documentary Films
-* Military Fans
-
-### Great Reading
-
-* How Google Works
-* 断舍离
-* 日本的八个审美意识
+* Fighter/Warship
 
 ### Paper Goods
 
 [败家实验室](https://thebai.taobao.com/), Muji, Pilot, Lamy
 
-### Devices
+### Lifestyle
 
 * Mac Book Air
-* iPhone 6
-* Kindle
+* iPhone
+* Kindle Oasis
 * Bose Wave Music System
 
 ### Photography
@@ -35,17 +23,27 @@ This page is inspired by the Things page of [Kenneth Reitz](http://www.kennethre
 #### Cameras
 
 * OLYMPUS E-M5 Mark II
-* SONY RX100 Mark III
 
 #### Lenses
 
 * Panasonic Leica DG SUMMILUX 15mm/F1.7 ASPH
 * Olympus M.ZUIKO DIGITAL 45mm F1.8
-* Olympus M.ZUIKO DIGITAL ED 1442 F3.5-5.6 EZ(kit)
+* Olympus M.ZUIKO DIGITAL 9-18mm F4-5.6
 
-My photos are posted on [Tumblr](http://crispgm.tumblr.com) and [Instagram](https://instagram.com/crispgm).
+My photos are posted on [VSCO](http://crispgm.vsco.com) and [Instagram](https://instagram.com/crispgm).
+
+### Great Reading
+
+* How Google Works
+* 断舍离
+
+### Musics
+
+* Classical Music
+* IU
+* AKB48/SNH48/BEJ48
+* Owl City
 
 ### Apps
 
-See details in [我喜欢的应用](http://crispgm.com/page/my-favorite-app.html)。
-
+See details in [我喜欢的应用](http://crispgm.com/page/my-favorite-app.html)
