@@ -108,16 +108,22 @@ ul li p {
 }
 .archive_main {
     margin-top: 24px;
+    padding-left: 36px;
     padding-bottom: 36px;
     font-size: 14px;
-    padding-left: 24px;
+    margin-left: 24px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
 .archive_item {
-    width: 50%;
+    width: 100%;
+    padding-right: 8px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
 }
 .archive_date {
     margin-right: 16px; 
@@ -193,3 +199,4 @@ pre {
     font-family: Menlo, "Source Code Pro", Consolas, Courier;
     font-size: 14px;
 }
+
