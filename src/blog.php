@@ -6,6 +6,12 @@ class Blog{
     protected $blog_num_per_page;
 
     protected $blogs = array(
+        'piracy-software-or-app' => array(
+            'title'    => '关于盗版软件/App',
+            'markdown' => 'piracy-software-or-app.md',
+            'date'     => '2016/05/10',
+            'tags'     => array('盗版'),
+        ),
         'enable-https-with-letsencrypt' => array(
             'title'    => 'Enable HTTPS with Let\'s Encrypt',
             'markdown' => 'enable-https-with-letsencrypt.md',
