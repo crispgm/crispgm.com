@@ -67,6 +67,9 @@ ul li p {
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .menu_item {
     height: 30px;
@@ -103,8 +106,27 @@ ul li p {
 }
 .article_main {
     margin-top: 24px;
-    padding-bottom: 62px;
     font-size: 14px;
+    margin-bottom: 20px;
+}
+.article_tag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 62px;
+    border-top: 1px solid #aaaaaa;
+}
+.tag_item {
+    padding: 2px;
+    margin-right: 8px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+.tag_item:hover {
+    background-color: #aaaaaa;
+    color: #ffffff;
 }
 .archive_main {
     margin-top: 24px;

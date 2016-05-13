@@ -58,6 +58,13 @@ class CrispBlogGenerator
             $html .= "<div class=\"article_date\">$date</div>\n";
             $html .= '</div>';
             $html .= "<div class=\"article_main\">$markdown</div>\n";
+            if (count($blog_info['tags'])) {
+                $html .= "<div class=\"article_tag\">";
+                foreach ($blog_info['tags'] as $tag) {
+                    $html .= "<div class=\"tag_item\">$tag</div>";
+                }
+                $html .= '</div>';
+            }
             $html .= '</div>';
             $html .= "\n";
             $html .= self::get_comment();
