@@ -1,3 +1,5 @@
-#### Introduction
+# About
 
-VISIT HERE [http://crispgm.com](http://crispgm.com)
+crispgm.com is my personal website and blog.
+
+Visit here: [https://crispgm.com](https://crispgm.com)
