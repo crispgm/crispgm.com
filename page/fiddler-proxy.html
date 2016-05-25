@@ -1,140 +1,196 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="Crisp, Crispgm, Crisp Blog, David Zhang, Crisp博客, yeyeko, 椰椰子"/>
-        <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
-        <title>Fiddler 网络调试工具 - Crisp Blog</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style/style.css" media="screen and (min-width: 801px)">
-        <link rel="stylesheet" href="/style/mobile.css" media="screen and (max-width: 800px)">
-        <link rel="stylesheet" href="/style/vs.css">
-        <link rel="stylesheet" href="/style/opensans.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <script src="/script/highlight.pack.js"></script>
-        <script src="/script/jquery-2.0.3.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-    </head>
-    <body>
-        <div id="menu">
-            <div id="menu_home">
-                <a href="/" style="color: #000000;">DAVID ZHANG</a>
-            </div>
-            <div id="menu_links">
-                <div class="menu_item"><a href="/archive.html">ARCHIVE</a></div>
-                <div class="menu_item"><a href="https://github.com/crispgm" target="_blank">GITHUB</a></div>
-                <div class="menu_item"><a href="/page/things.html">THINGS</a></div>
-                <div class="menu_item"><a href="/page/bio.html">BIO</a></div>
-                <div class="menu_item"><a href="/page/about.html">ABOUT</a></div>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Crisp, Crispgm, Crisp Blog, David Zhang, Crisp博客, yeyeko, 椰椰子"/>
+    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/vs.css">
+    <link rel="stylesheet" href="/css/opensans.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="/script/highlight.pack.js"></script>
+    <script src="/script/jquery-2.0.3.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+  
+  <body>
+    <div id="menu">
+    <div id="menu_home">
+        <a href="/" style="color: #000000;">DAVID ZHANG</a>
     </div>
+    <div id="menu_links">
+        <div class="menu_item"><a href="/archive.html">ARCHIVE</a></div>
+        <div class="menu_item"><a href="https://github.com/crispgm" target="_blank">GITHUB</a></div>
+        <div class="menu_item"><a href="/things">THINGS</a></div>
+        <div class="menu_item"><a href="/bio">BIO</a></div>
+        <div class="menu_item"><a href="/about">ABOUT</a></div>
+    </div>
+</div>
+
+  <div id="content">
+  
     <div id="container">
+  	<div class="article">
+  		<div class="article_head">
+  			<div class="article_title">Fiddler 网络调试工具</div>
+			<div class="article_date">2014/03/21</div>
+		</div>
+		<div class="article_main">
+		    <h2 id="fiddler">什么是Fiddler</h2>
 
-<div class="article"><div class="article_head"><div class="article_title">Fiddler 网络调试工具</div>
-<div class="article_date">2014/03/21</div>
-</div><div class="article_main"><h4>什么是Fiddler</h4>
-<p>Fiddler官方给Fiddler的描述语是Web Debugging Proxy，也就是web调试代理工具。</p>
+<p>Fiddler 官方给 Fiddler 的描述语是 Web Debugging Proxy，也就是 Web 调试代理工具。</p>
+
 <p>主要功能有：</p>
+
 <ul>
-<li>
-<p>截取HTTP/HTTPS请求</p>
-</li>
-<li>
-<p>修改Session</p>
-</li>
-<li>
-<p>网络调试</p>
-</li>
-<li>
-<p>安全测试</p>
-</li>
-<li>性能测试</li>
+  <li>
+    <p>截取 HTTP/HTTPS 请求</p>
+  </li>
+  <li>
+    <p>修改 Session</p>
+  </li>
+  <li>
+    <p>网络调试</p>
+  </li>
+  <li>
+    <p>安全测试</p>
+  </li>
+  <li>
+    <p>性能测试</p>
+  </li>
 </ul>
-<p>本文，主要讨论前三项功能的使用方法，包括Fiddler的基础配置和功能以及使用内置FiddlerScript脚本进行复杂功能调试。</p>
-<h4>准备和配置</h4>
-<p>Fiddler使用C#开发，支持Windows XP以上版本。对于Linux和Mac用户，有一个基于Mono的Alpha版本，经本人Mac实际测试，基本上算是不能用的状态。因此，不建议使用。</p>
-<p>下载地址：<a href="http://www.telerik.com/download/fiddler"><a href="http://www.telerik.com/download/fiddler">http://www.telerik.com/download/fiddler</a></a></p>
-<p>安装完毕后，为了使用后续功能，建议安装<a href="http://www.telerik.com/download/fiddler/fiddlerscript-editor">FiddlerScript Editor</a>插件，否则修改FiddlerScript会比较麻烦。</p>
-<p>准备完毕后，请打开Fiddler进入Tools->Fiddler Options，在Connections中勾选Allow remote computers to connect，并重新启动Fiddler。</p>
-<h4>网络请求抓取</h4>
+
+<p>本文，主要讨论前三项功能的使用方法，包括 Fiddler 的基础配置和功能以及使用内置 FiddlerScript 脚本进行复杂功能调试。</p>
+
+<h2 id="section">准备和配置</h2>
+
+<p>Fiddler 使用 C# 开发，支持 Windows XP 以上版本。对于 Linux 和 Mac 用户，有一个基于 Mono 的 Alpha 版本，经本人 Mac 实际测试，基本上算是不能用的状态。因此，不建议使用。</p>
+
+<p>下载地址：<a href="http://www.telerik.com/download/fiddler">http://www.telerik.com/download/fiddler</a></p>
+
+<p>安装完毕后，为了使用后续功能，建议安装 <a href="http://www.telerik.com/download/fiddler/fiddlerscript-editor">FiddlerScript Editor</a> 插件，否则修改 FiddlerScript 会比较麻烦。</p>
+
+<p>准备完毕后，请打开 Fiddler 进入 Tools-&gt;Fiddler Options，在 Connections 中勾选 Allow remote computers to connect，并重新启动 Fiddler。</p>
+
+<h2 id="section-1">网络请求抓取</h2>
+
 <p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。</p>
-<pre><code>iPhone  
-进入Settings -&gt; WLAN，单击你连接中的WIFI，在HTTP PROXY下选择Manual，然后Server填写Fiddler所在机器在此WIFI中的IP地址，Port是默认的8888。
 
-Android
-进入设置 -&gt; WIFI，长按你连接中的WIFI，点击修改网络网络，勾选高级选项，在HTTP代理中填写主机名和端口。
-
-PC本地  
-用ProxySwitchy一类的插件，代理到localhost:8888</code></pre>
-<!---
-![Fiddler Capturing](http://crispgm.github.io/image/fiddler/capturing.png)
---->
-<p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
-<!---
-![Fiddler Request](http://crispgm.github.io/image/fiddler/request.png)
---->
-<p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
-<!---
-![Fiddler Response](http://crispgm.github.io/image/fiddler/response.png)
---->
-<h4>Web Debugging</h4>
-<p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
 <ul>
-<li>
-<p>HOSTS，等同于操作系统的HOSTS文件。</p>
-</li>
-<li>
-<p>Filters，可以修改Request或Response的包体。</p>
-</li>
-<li>
-<p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p>
-</li>
-<li>FiddlerScript，以FiddlerScript(JScript.NET)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</li>
+  <li>iPhone
+    <ul>
+      <li>进入 Settings -&gt; WLAN，单击你连接中的 Wi-Fi，在 HTTP PROXY 下选择 Manual，然后 Server 填写 Fiddler 所在机器在此 Wi-Fi 中的 IP 地址，Port 是默认的 8888。</li>
+    </ul>
+  </li>
+  <li>Android
+    <ul>
+      <li>进入设置 -&gt; Wi-Fi，长按你连接中的 Wi-Fi，点击修改网络网络，勾选高级选项，在 HTTP 代理中填写主机名和端口。</li>
+    </ul>
+  </li>
+  <li>PC本地
+    <ul>
+      <li>用 ProxySwitchy 一类的插件，代理到 localhost:8888</li>
+    </ul>
+  </li>
 </ul>
-<h4>HOSTS</h4>
+
+<p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
+
+<p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
+
+<h2 id="web-debugging">Web Debugging</h2>
+
+<p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
+
+<ul>
+  <li>
+    <p>HOSTS，等同于操作系统的HOSTS文件。</p>
+  </li>
+  <li>
+    <p>Filters，可以修改Request或Response的包体。</p>
+  </li>
+  <li>
+    <p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p>
+  </li>
+  <li>
+    <p>FiddlerScript，以FiddlerScript(JScript.NET)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</p>
+  </li>
+</ul>
+
+<h2 id="hosts">HOSTS</h2>
+
 <p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p>
-<p>而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
-<!---
-![Fiddler Hosts](http://crispgm.github.io/image/fiddler/hosts.png)
---->
-<h4>Filters</h4>
-<p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter功能就可以选择性截取</p>
-<p>首先进入Filters标签，勾选Use Filters</p>
-<p>在Request Headers中，勾选Show only if URL contains，并在后面的输入框中填写希望截取的URL。同理，也可以勾选Hide if URL contains，隐藏特定的请求。</p>
-<p>除此之外，还可以直接修改Request或Response包体。</p>
-<!---
-![Fiddler Filters](http://crispgm.github.io/image/fiddler/filters.png)
---->
-<h4>AutoResponder</h4>
-<p>AutoReponder可以截获Request URL，并用其他URL进行Respond。利用AutoResponder，也可以实现将请求引导到指定机器的功能。</p>
-<p>将原URL截获后，甚至可以直接修改URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和Headers匹配等。</p>
-<p>此外，AutoResponder支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p>
-<!---
-![Fiddler AutoResponder](http://crispgm.github.io/image/fiddler/autoresponder.png)
---->
-<h4>FiddlerScript</h4>
-<p>FiddlerScript就是通过JScript.NET语言(可以约等于JS)，直接修改Request和Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。</p>
-<p>使用FidderScript建议安装第一节所说的插件，安装后就可以直接打开FiddlerScript标签，直接修改代码。</p>
-<p>在OnBeforeRequest函数中修改：</p>
-<blockquote>
-<p>添加Headers</p>
-</blockquote>
-<pre><code>oSession.oRequest["http_net_type"] = "1";</code></pre>
-<blockquote>
-<p>添加Cookies</p>
-</blockquote>
-<pre><code>// 增加预览机标识
-oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
-<blockquote>
-<p>匹配URL，防止添加的字段干扰到其他网页</p>
-</blockquote>
-<pre><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
+
+<p>而是直接从菜单进入Tools -&gt; HOSTS…，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
+
+<h2 id="filters">Filters</h2>
+
+<p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter 功能就可以选择性截取</p>
+
+<p>首先进入 Filters 标签，勾选 Use Filters。</p>
+
+<p>在Request Headers中，勾选 Show only if URL contains，并在后面的输入框中填写希望截取的 URL。同理，也可以勾选 Hide if URL contains，隐藏特定的请求。</p>
+
+<p>除此之外，还可以直接修改 Request 或 Response 包体。</p>
+
+<h2 id="autoresponder">AutoResponder</h2>
+
+<p>AutoReponder 可以截获 Request URL，并用其他 URL 进行 Respond。利用 AutoResponder，也可以实现将请求引导到指定机器的功能。</p>
+
+<p>将原 URL 截获后，甚至可以直接修改 URL。截图请求时也可以有很多方式，包括URL正则匹配、包体匹配和 Headers 匹配等。</p>
+
+<p>此外，AutoResponder 支持设置断点。可以在截获请求后，在断点处修改请求或者响应。</p>
+
+<h2 id="fiddlerscript">FiddlerScript</h2>
+
+<p>FiddlerScript 就是通过 JScript.NET 语言(可以约等于 JavaScript)，直接修改 Request 和 Response，能够实现上述各种功能。对于熟练的专业用户来说，会更加方便灵活。</p>
+
+<p>使用 FidderScript 建议安装第一节所说的插件，安装后就可以直接打开 FiddlerScript 标签，直接修改代码。</p>
+
+<p>在 <code class="highlighter-rouge">OnBeforeRequest</code> 函数中修改：</p>
+
+<h3 id="headers">添加 Headers</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
+</code></pre>
+</div>
+
+<h4 id="cookies">添加 Cookies</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 增加预览机标识
+oSession.oRequest.headers.Add("Cookie", "pub_env=1");
+</code></pre>
+</div>
+
+<h4 id="url">匹配 URL，防止添加的字段干扰到其他网页</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
     // TODO
-}</code></pre>
-<p>更多用法，请参考<a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p></div>
-<div class="article_tag"><div class="tag_item">fiddler</div><div class="tag_item">debugging</div></div></div>
-    <div id="disqus_thread"></div>
+}
+</code></pre>
+</div>
+
+<p>更多用法，请参考 <a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>
+
+
+		</div>
+		
+		<div class="article_tag">
+			
+			<div class="tag_item">
+			Fiddler
+			</div>
+			
+			<div class="tag_item">
+			Web Debugging
+			</div>
+			
+		</div>
+		
+		    <div id="disqus_thread"></div>
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     
@@ -150,9 +206,15 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");</code></pre>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
+	</div>
 </div>
+
+
+  </div>
+
+  
 <footer>
-Copyright &copy; <a href="/page/bio.html">David Zhang</a>, 2016.
+Copyright &copy; <a href="/bio">David Zhang</a>, 2016.
 </footer>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -166,3 +228,7 @@ ga('send', 'pageview');
 </body>
 </html>
 
+
+  </body>
+
+</html>

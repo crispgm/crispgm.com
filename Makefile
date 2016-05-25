@@ -1,2 +1,0 @@
-blog:
-	sh ./make.sh

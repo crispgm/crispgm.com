@@ -35,34 +35,51 @@
     <div id="container">
   	<div class="article">
   		<div class="article_head">
-  			<div class="article_title">恒大夺冠</div>
-			<div class="article_date">2013/11/09</div>
+  			<div class="article_title">Linux Shell Tips</div>
+			<div class="article_date">2013/12/30</div>
 		</div>
 		<div class="article_main">
-		    <p>随着终场哨声的响起，恒大有惊无险的夺冠了！</p>
+		    <p>最近，在工作种遇到了两个有点棘手的问题。前者是不小心打错命令建立了一个”–“两个减号开头的文件，想删除删不掉；后者是，减少机器后单机文件数过多，导致定时脚本里的tar执行失败了。</p>
 
-<p>亚冠冠军。</p>
+<h4 id="shell-">在 shell 中删除减号开头的文件</h4>
 
-<p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p>
+<p>解决方法：</p>
 
-<p>想起大学时踢新生杯和院系杯时，就是这种心情。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>rm -- "--xxxx"
+</code></pre>
+</div>
 
-<p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>
+<h4 id="argument-list-too-long">argument list too long</h4>
+
+<p>由于文件数增加，脚本出现错误 tar: argument list too long，也就是说 tar 参数太多了</p>
+
+<p>解决方法：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>find /path/to/crash_log/20131229 -name '*crash*' -print &gt; /tmp/20131229.list  
+tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
+rm /tmp/20131229.list
+</code></pre>
+</div>
+
 
 		</div>
 		
 		<div class="article_tag">
 			
 			<div class="tag_item">
-			Soccer
+			Linux
 			</div>
 			
 			<div class="tag_item">
-			广州恒大
+			Shell
 			</div>
 			
 			<div class="tag_item">
-			亚冠
+			Bash
+			</div>
+			
+			<div class="tag_item">
+			Tips
 			</div>
 			
 		</div>
