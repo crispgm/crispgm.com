@@ -15,7 +15,7 @@
 
 摄影用 [Olympus E-M5 Mark II](http://olympus-imaging.cn/product/dslr/em5mk2/index.html)，人像 [45mm F1.8](http://olympus-imaging.cn/product/dslr/mlens/45_18/index.html)，室内或人文 [DG15](http://consumer.panasonic.cn/product/cameras-camcorders/lumix-g-lens/fixed-focal/h-x015gk.html)，广角 [9-18mm](http://olympus-imaging.cn/product/dslr/mlens/9-18_40-56/index.html)。镜头都是简称，全称请看链接吧。
 
-除去电子设备，我有两只钢笔，分别是[LAMY Safari](http://www.lamy.com/eng/b2c/safari)和[Pilot 78G](http://www.amazon.cn/Pilot-%E7%99%BE%E4%B9%90-FP-78G-M-B-22K%E5%8C%85%E9%87%91%E7%AC%94%E5%B0%96%E9%92%A2%E7%AC%94-M%E5%92%80/dp/B003H06HN4)，前者出水猛、更亮骚，后者更朴实好用。
+除去电子设备，我有两只钢笔和一只铅笔。钢笔分别是[LAMY Safari](http://www.lamy.com/eng/b2c/safari)和[Pilot 78G](http://www.amazon.cn/Pilot-%E7%99%BE%E4%B9%90-FP-78G-M-B-22K%E5%8C%85%E9%87%91%E7%AC%94%E5%B0%96%E9%92%A2%E7%AC%94-M%E5%92%80/dp/B003H06HN4)，前者出水猛、更亮骚，后者更朴实好用。铅笔是[Zebra Tect 0.5](https://item.taobao.com/item.htm?id=522070211448)。
 
 
 ### 软件呢？
