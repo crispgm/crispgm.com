@@ -35,34 +35,36 @@
     <div id="container">
   	<div class="article">
   		<div class="article_head">
-  			<div class="article_title">恒大夺冠</div>
-			<div class="article_date">2013/11/09</div>
+  			<div class="article_title">Mac Book Air 合盖子或者休眠后没声音</div>
+			<div class="article_date">2014/03/08</div>
 		</div>
 		<div class="article_main">
-		    <p>随着终场哨声的响起，恒大有惊无险的夺冠了！</p>
+		    <p>在安装有 OSX 10.9 Mavericks 的 Mac 中，包括升级或者直接购买的 Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况<br />
+忍了很久后，今天终于找到<a href="http://www.v2ex.com/t/95465">解决方法</a></p>
 
-<p>亚冠冠军。</p>
+<p>解决方法：</p>
 
-<p>在最后10分钟，紧张的不敢坐着，跪在地上扶着桌子，准备最后时刻跳起来！</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo kextunload /System/Library/Extensions/AppleHDA.kext
+sudo kextload /System/Library/Extensions/AppleHDA.kext
+</code></pre>
+</div>
 
-<p>想起大学时踢新生杯和院系杯时，就是这种心情。</p>
-
-<p>紧张而煎熬，最后胜利时感觉全场都疯狂了。</p>
+<p>OSX 升级到 10.10 Yosemite，此问题没有再出现过，应该是苹果彻底修复了。</p>
 
 		</div>
 		
 		<div class="article_tag">
 			
 			<div class="tag_item">
-			Soccer
+			Mac Book Air
 			</div>
 			
 			<div class="tag_item">
-			广州恒大
+			Mac
 			</div>
 			
 			<div class="tag_item">
-			亚冠
+			OSX
 			</div>
 			
 		</div>
