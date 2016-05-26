@@ -5,9 +5,39 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 May 2016 17:57:24 +0800</pubDate>
-    <lastBuildDate>Thu, 26 May 2016 17:57:24 +0800</lastBuildDate>
+    <pubDate>Thu, 26 May 2016 18:14:11 +0800</pubDate>
+    <lastBuildDate>Thu, 26 May 2016 18:14:11 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>新的域名</title>
+        <description>&lt;p&gt;午饭过后，抱着休闲的想法逛了一下 &lt;a href=&quot;https://www.godaddy.com/&quot;&gt;Godaddy&lt;/a&gt; 和&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;万网&lt;/a&gt;，发现了一些挺有意思的新域名。于是顺手注册了两个。&lt;/p&gt;
+
+&lt;p&gt;以后，本站支持两个域名，均有 https 支持 (Powered by Let’s Encrypt)，请安全访问。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crispgm.com&quot;&gt;https://crispgm.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crisp.lol&quot;&gt;https://crisp.lol&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同时，椰椰子主页也有了自己的域名：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yeyeko.gift&quot;&gt;http://yeyeko.gift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ps：这的确是一个gift~&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 May 2016 18:06:22 +0800</pubDate>
+        <link>https://crispgm.com/page/new-domain-name.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/new-domain-name.html</guid>
+        
+        <category>域名</category>
+        
+        <category>Domain Names</category>
+        
+        
+      </item>
     
       <item>
         <title>关于盗版软件/App</title>
@@ -771,54 +801,6 @@ Overture算不上歌曲，主要的作用是调动气氛，粉丝们会在此时
         <category>AKB48</category>
         
         <category>偶像</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Minimalism Period Tracker</title>
-        <description>&lt;h2 id=&quot;app&quot;&gt;极简主义生理周期追踪 app&lt;/h2&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;背景&lt;/h3&gt;
-
-&lt;p&gt;为了当个相对体贴的男友，把&lt;a href=&quot;http://yeyeko.gift&quot;&gt;女朋友&lt;/a&gt;的生理周期追踪 app 装了起来，并且使用了各类国内外 app。包括美柚、大姨吗、Clue 和 Glow。&lt;/p&gt;
-
-&lt;p&gt;国产缺点比较明显：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;无关功能极多，比如：很 Low 的社区&lt;/li&gt;
-  &lt;li&gt;界面跟美图秀秀类似，粉色大行其道，毫无设计感&lt;/li&gt;
-  &lt;li&gt;大姨吗支持给男朋友用，功能特别少&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;国外的两款界面还是比较美观的，但也带有社区类，且没有“男朋友”模式。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;设计思路&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;极简主义风格设计，去除无用的功能&lt;/li&gt;
-  &lt;li&gt;更好的信息传递方式&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;技术实现&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;客户端计划只会支持 iOS，使用 Swift 实现&lt;/li&gt;
-  &lt;li&gt;服务端使用 golang 在 Linode 上搭建&lt;/li&gt;
-  &lt;li&gt;数据库采用 NoSQL 或 MySQL&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;计划&lt;/h3&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
-</description>
-        <pubDate>Fri, 27 Mar 2015 20:23:00 +0800</pubDate>
-        <link>https://crispgm.com/page/period-tracker-app.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/period-tracker-app.html</guid>
-        
-        <category>App</category>
-        
-        <category>iOS</category>
         
         
       </item>
