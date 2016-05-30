@@ -143,10 +143,10 @@ ul li p {
 .archive_item {
     width: 360px;
     margin-right: 16px;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
-    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
 }
 #archive_subscribe {
     width: 100%;
@@ -196,4 +196,33 @@ pre {
     font-family: Menlo, "Source Code Pro", Consolas, Courier;
     font-size: 14px;
 }
-
+#things-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+li.subtitle {
+    font-size: 16px;
+    list-style-type: none;
+    margin-left: -18px;
+}
+.things-box {
+    min-width: 240px;
+    padding: 12px;
+    border: 1px #aaaaaa solid;
+    border-radius: 6px;
+    margin: 10px;
+}
+.things-title {
+    font-size: 18px;
+}
+.things-box:hover {
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+.things-title {
+}
+.things-list {
+}
