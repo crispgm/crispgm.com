@@ -148,6 +148,25 @@ ul li p {
     -o-text-overflow: ellipsis;
     overflow: hidden;
 }
+#bio_main {
+    margin-top: 24px;
+    padding-bottom: 16px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+.bio_item {
+    text-align: left;
+    margin-right: 12px;
+}
+.bio-github-card {
+    margin-top: 16px;
+}
 #archive_subscribe {
     width: 100%;
     text-align: center;
