@@ -1,2 +1,1 @@
-# jekyll-crispgm
-Jekyll source of crispgm.com
+Source of crispgm.github.io
