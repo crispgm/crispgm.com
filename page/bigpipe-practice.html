@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Crisp, Crispgm, Crisp Blog, David Zhang, Crisp博客, yeyeko, 椰椰子"/>
-    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
-    <title>BigPipe 实践 (nginx + hhvm) - Crisp Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
-    <link rel="stylesheet" href="/css/vs.css">
-    <link rel="stylesheet" href="/css/opensans.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src="/script/highlight.pack.js"></script>
-    <script src="/script/jquery-2.0.3.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Crisp, Crispgm, Crisp Blog, David Zhang, Crisp博客, yeyeko, 椰椰子"/>
+  <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
+  <title>BigPipe 实践 (nginx + hhvm) - Crisp Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
+  <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+  <link rel="stylesheet" href="/css/vs.css">
+  <link rel="stylesheet" href="/css/opensans.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="/script/highlight.pack.js"></script>
+  <script src="/script/jquery-2.0.3.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
-  
+
   <body>
+
     <div id="menu">
-    <div id="menu_home">
-        <a href="/" style="color: #000000;">DAVID ZHANG</a>
-    </div>
-    <div id="menu_links">
-        <div class="menu_item"><a href="/archive.html">ARCHIVE</a></div>
-        <div class="menu_item"><a href="https://github.com/crispgm" target="_blank">GITHUB</a></div>
-        <div class="menu_item"><a href="/things.html">THINGS</a></div>
-        <div class="menu_item"><a href="/bio.html">BIO</a></div>
-        <div class="menu_item"><a href="/about.html">ABOUT</a></div>
-    </div>
+  <div id="menu_home">
+      <a href="/" style="color: #000000;">DAVID ZHANG</a>
+  </div>
+  <div id="menu_links">
+    <div class="menu_item"><a href="/archive.html">ARCHIVE</a></div>
+    <div class="menu_item"><a href="https://github.com/crispgm" target="_blank">GITHUB</a></div>
+    <div class="menu_item"><a href="/things.html">THINGS</a></div>
+    <div class="menu_item"><a href="/bio.html">BIO</a></div>
+    <div class="menu_item"><a href="/about.html">ABOUT</a></div>
+  </div>
 </div>
 
 
-  <div id="content">
-  
+    <div id="content">
+
     <div id="container">
-  	<div class="article">
-  		<div class="article_head">
-  			<div class="article_title">BigPipe 实践 (nginx + hhvm)</div>
-			<div class="article_date">2015/06/26</div>
-		</div>
-		<div class="article_main">
-		    <h2 id="section">背景</h2>
+  <div class="article">
+    <div class="article_head">
+      <div class="article_title">BigPipe 实践 (nginx + hhvm)</div>
+      <div class="article_date">2015/06/26</div>
+    </div>
+    <div class="article_main">
+      <h2 id="section">背景</h2>
 
 <p>随着 Web 页面的功能不断堆砌（其实我是极简主义者，但PM或者说是国内的风气，总是喜欢不断加入各类功能），页面需要的数据越来越多，串行连接后端的耗时自然是不断增大。常见的优化手段就是后端并行化，而对于前端来说，后端并行化只是降低了 response time，但用户最终看到页面的时间并没有减少。</p>
 
@@ -167,51 +169,51 @@
   <li>pagelet 交叉请求比较多，效果没有那么好</li>
 </ul>
 
-		</div>
-		
-		<div class="article_tag">
-			
-			<div class="tag_item">
-			BigPipe
-			</div>
-			
-			<div class="tag_item">
-			nginx
-			</div>
-			
-			<div class="tag_item">
-			hhvm
-			</div>
-			
-			<div class="tag_item">
-			php
-			</div>
-			
-		</div>
-		
-		    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    </div>
     
-    var disqus_shortname = 'crispgm'; // required: replace example with your forum shortname
+    <div class="article_tag">
+      
+      <div class="tag_item">
+      BigPipe
+      </div>
+      
+      <div class="tag_item">
+      nginx
+      </div>
+      
+      <div class="tag_item">
+      hhvm
+      </div>
+      
+      <div class="tag_item">
+      php
+      </div>
+      
+    </div>
     
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 
-	</div>
+var disqus_shortname = 'crispgm'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
 </div>
 
 
-  </div>
+    </div>
 
-  
+    
 <footer>
 Copyright &copy; <a href="/bio.html">David Zhang</a>, 2016.
 </footer>
@@ -224,8 +226,6 @@ Copyright &copy; <a href="/bio.html">David Zhang</a>, 2016.
 ga('create', 'UA-50708664-1', 'crispgm.com');
 ga('send', 'pageview');
 </script>
-</body>
-</html>
 
 
   </body>
