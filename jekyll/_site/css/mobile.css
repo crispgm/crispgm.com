@@ -1,0 +1,184 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2016
+ * Powered by {less}
+ */
+body {
+    margin: 0;
+    font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    word-wrap: break-word;
+    text-align: center;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.2em;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul li p {
+    margin: 0;
+}
+#menu {
+    width: 100%;
+    border-bottom: 1px solid #aaaaaa;
+}
+#menu a {
+    color: #bbbbbb;
+}
+#menu a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+#menu_home {
+    width: 100%;
+    text-align: center;
+    font-size: 2.75em;
+    margin: 0;
+    padding-top: 4px;
+}
+#menu_links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.menu_item {
+    margin-right: 4px;
+}
+#container {
+    text-align: center;
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.article {
+    width: 100%;
+    text-align: left;
+}
+.article_head {
+}
+.article_title {
+    font-size: 2em;
+}
+.article_title a {
+    text-decoration: none;
+    color: black;
+}
+.article_title a:hover {
+    text-decoration: underline;
+}
+.article_date {
+    font-size: 1em;
+}
+.article_main {
+    font-size: 1em;
+}
+.article_tag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 1px solid #aaaaaa;
+    padding-top: 4px;
+}
+.tag_item {
+    padding: 2px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+.tag_item:hover {
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+.archive_main {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.archive_item {
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+}
+.archive_date {
+    padding-right: 4px;
+}
+.archive_title {
+}
+#archive_subscribe {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+#index_main {
+    font-size: 1em;
+    display: inline;
+}
+#index_left {
+    width: 100%;
+    padding-left: 4px;
+    border-right: 0;
+    border-bottom: 1px #aaaaaa solid;
+}
+#index_right {
+    width: 100%;
+    text-align: center;
+    padding-left: 4px;
+    padding-top: 4px;
+}
+#index_right img{
+    max-width: 96%;
+}
+#disqus_thread {
+    margin-top: 8px;
+    padding-top: 8px;
+}
+footer {
+    font-size: 1em;
+    height: 36px;
+}
+#page {
+    margin-bottom: 8px;
+    font-size: 1em;
+    height: 32px;
+    text-align: center;
+}
+#page a {
+    color: black;
+}
+#page a:hover {
+    text-decoration: underline;
+}
+img {
+    border: 0;
+    max-width: 100%;
+}
+pre.highlight {
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+    font-family: Menlo, "Source Code Pro", Consolas, Courier;
+    font-size: 14px;
+}
+code.highlighter-rouge {
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid #aaaaaa;
+}

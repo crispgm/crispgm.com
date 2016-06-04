@@ -1,0 +1,31 @@
+---
+layout: default
+title: Archive
+---
+
+<div id="container">
+  <div class="article">
+    <div class="article_head">
+      <div id="archive_subscribe">
+        <a href="/feed.xml" target="_blank"><i title="rss" class="fa fa-rss"></i> Subscribe Blog Updates</a>
+      </div>
+    </div>
+    <div class="archive_main">
+    {% for post in site.posts %}
+      <div class="archive_item">
+        <span class="archive_date">{{post.date | date:"%Y/%m/%d"}}</span>
+        <span class="archive_title"><a href="{{post.permalink}}">{{post.title}}</a></span>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="article_tag">
+    {% for post in site.posts %}
+      {% for tag in post.tags %}
+        <div class="tag_item">
+        {{ tag }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+    </div>
+  </div>
+</div>

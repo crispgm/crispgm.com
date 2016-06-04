@@ -1,0 +1,28 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: DAVID ZHANG
+author: David Zhang
+email: crispgm@gmail.com
+description: "Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"
+keywords:
+    - Crisp
+    - Crispgm
+    - Crisp Blog
+    - David Zhang
+    - Crisp博客
+    - yeyeko
+    - 椰椰子
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://crispgm.com" # the base hostname & protocol for your site
+encoding: utf-8
+twitter_username: crispgm
+github_username:  crispgm
+
+# Build settings
+markdown: kramdown
