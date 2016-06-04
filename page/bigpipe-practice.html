@@ -10,7 +10,7 @@
   <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
   <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
   <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
-  <link rel="stylesheet" href="/css/vs.css">
+  <link rel="stylesheet" href="/css/zenburn.css">
   <link rel="stylesheet" href="/css/opensans.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="/script/highlight.pack.js"></script>
@@ -58,21 +58,21 @@
 
 <h2 id="demo">简单 Demo</h2>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>    echo 'hello';
-    flush();
-    ob_flush();
-    sleep(1);
-    echo 'world';
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>echo 'hello';
+flush();
+ob_flush();
+sleep(1);
+echo 'world';
 </code></pre>
 </div>
 
 <p>这是一个最简单的 BigPipe demo，然而由于 fastcgi_buffer 的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用 str_pad 填充一些字符以达到 buffer。ps：吐槽一下 str_pad 这个函数名，明明 str 系列函数都是不带下划线的，如 strlen, strcpy 等，但这个函数却有下划线。str 系列函数表示：我们之间出现了叛徒！</p>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>    echo str_pad('hello', 10000, ' ');
-    flush();
-    ob_flush();
-    sleep(1);
-    echo str_pad('world', 10000, ' ');
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>echo str_pad('hello', 10000, ' ');
+flush();
+ob_flush();
+sleep(1);
+echo str_pad('world', 10000, ' ');
 </code></pre>
 </div>
 
@@ -100,10 +100,11 @@
 
 <h3 id="section-4">异步并行框架</h3>
 
-<p>由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：
-<code class="highlighter-rouge">
-    t = max(t1, t2, t3...)
-</code></p>
+<p>由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>t = max(t1, t2, t3...)
+</code></pre>
+</div>
 
 <p>框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。</p>
 
@@ -125,17 +126,17 @@
 
 <p>然而，这样带来了一个问题。线上运行中的 Nginx 1.4.4版本过低，关闭 proxy_buffer 的指令 proxy_buffering off 原生就支持。而关闭 fastcgi_buffer 的 fastcgi_buffering 需要1.5.6版本。所以首先，我们把 Nginx 版本升级到了1.7.8，重编译后上线。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    Syntax: fastcgi_buffering on | off;
-    Default: fastcgi_buffering on;
-    Context: http, server, location
-    This directive appeared in version 1.5.6.
+<div class="highlighter-rouge"><pre class="highlight"><code>Syntax: fastcgi_buffering on | off;
+Default: fastcgi_buffering on;
+Context: http, server, location
+This directive appeared in version 1.5.6.
 </code></pre>
 </div>
 
 <p>详见 <a href="http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering">http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    # 旧版本的Nginx并不支持fastcgi_buffering
-    nginx: [emerg] unknown directive "fastcgi_buffering"
+<div class="highlighter-rouge"><pre class="highlight"><code># 旧版本的Nginx并不支持fastcgi_buffering
+nginx: [emerg] unknown directive "fastcgi_buffering"
 </code></pre>
 </div>
 
@@ -149,7 +150,7 @@
 
 <p>因此，配置上完全不用关闭 buffer，只需要在 php 代码中加 header 就好，顺利把 buffer 优雅关闭。</p>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>    header('X-Accel-Buffering: no');
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>header('X-Accel-Buffering: no');
 </code></pre>
 </div>
 
@@ -218,6 +219,7 @@ var disqus_shortname = 'crispgm'; // required: replace example with your forum s
 Copyright &copy; <a href="/bio.html">David Zhang</a>, 2016.
 </footer>
 <script>
+<!-- Google Analytics -->
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

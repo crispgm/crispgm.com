@@ -208,12 +208,24 @@ img {
     max-width: 640px;
     max-height: 480px;
 }
-pre {
+pre.highlight {
     border: 1px solid #aaaaaa;
-    border-radius: 2px;
-    padding: 4px;
+    border-radius: 4px;
     font-family: Menlo, "Source Code Pro", Consolas, Courier;
     font-size: 14px;
+    overflow: scroll;
+}
+code.hljs {
+    padding: 12px;
+}
+code.highlighter-rouge {
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 4px;
+}
+code.highlighter-rouge:hover {
+    color: white;
+    background-color: #aaaaaa;
 }
 #things-content {
     display: flex;

@@ -5,8 +5,8 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 03 Jun 2016 11:43:46 +0800</pubDate>
-    <lastBuildDate>Fri, 03 Jun 2016 11:43:46 +0800</lastBuildDate>
+    <pubDate>Sat, 04 Jun 2016 19:02:56 +0800</pubDate>
+    <lastBuildDate>Sat, 04 Jun 2016 19:02:56 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -557,21 +557,21 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 
 &lt;h2 id=&quot;demo&quot;&gt;简单 Demo&lt;/h2&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    echo &#39;hello&#39;;
-    flush();
-    ob_flush();
-    sleep(1);
-    echo &#39;world&#39;;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &#39;hello&#39;;
+flush();
+ob_flush();
+sleep(1);
+echo &#39;world&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;这是一个最简单的 BigPipe demo，然而由于 fastcgi_buffer 的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用 str_pad 填充一些字符以达到 buffer。ps：吐槽一下 str_pad 这个函数名，明明 str 系列函数都是不带下划线的，如 strlen, strcpy 等，但这个函数却有下划线。str 系列函数表示：我们之间出现了叛徒！&lt;/p&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    echo str_pad(&#39;hello&#39;, 10000, &#39; &#39;);
-    flush();
-    ob_flush();
-    sleep(1);
-    echo str_pad(&#39;world&#39;, 10000, &#39; &#39;);
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo str_pad(&#39;hello&#39;, 10000, &#39; &#39;);
+flush();
+ob_flush();
+sleep(1);
+echo str_pad(&#39;world&#39;, 10000, &#39; &#39;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -599,10 +599,11 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 
 &lt;h3 id=&quot;section-4&quot;&gt;异步并行框架&lt;/h3&gt;
 
-&lt;p&gt;由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-    t = max(t1, t2, t3...)
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;t = max(t1, t2, t3...)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。&lt;/p&gt;
 
@@ -624,17 +625,17 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 
 &lt;p&gt;然而，这样带来了一个问题。线上运行中的 Nginx 1.4.4版本过低，关闭 proxy_buffer 的指令 proxy_buffering off 原生就支持。而关闭 fastcgi_buffer 的 fastcgi_buffering 需要1.5.6版本。所以首先，我们把 Nginx 版本升级到了1.7.8，重编译后上线。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Syntax: fastcgi_buffering on | off;
-    Default: fastcgi_buffering on;
-    Context: http, server, location
-    This directive appeared in version 1.5.6.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Syntax: fastcgi_buffering on | off;
+Default: fastcgi_buffering on;
+Context: http, server, location
+This directive appeared in version 1.5.6.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;详见 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering&quot;&gt;http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 旧版本的Nginx并不支持fastcgi_buffering
-    nginx: [emerg] unknown directive &quot;fastcgi_buffering&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 旧版本的Nginx并不支持fastcgi_buffering
+nginx: [emerg] unknown directive &quot;fastcgi_buffering&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -648,7 +649,7 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 
 &lt;p&gt;因此，配置上完全不用关闭 buffer，只需要在 php 代码中加 header 就好，顺利把 buffer 优雅关闭。&lt;/p&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    header(&#39;X-Accel-Buffering: no&#39;);
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header(&#39;X-Accel-Buffering: no&#39;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
