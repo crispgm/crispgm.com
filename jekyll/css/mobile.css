@@ -98,10 +98,18 @@ ul li p {
     margin-bottom: 4px;
     border: 1px solid #aaaaaa;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .tag_item:hover {
     background-color: #aaaaaa;
     color: #ffffff;
+}
+.tag_item_name {
+    margin-right: 4px;
+}
+.tag_item_count {
 }
 .archive_main {
     font-size: 14px;

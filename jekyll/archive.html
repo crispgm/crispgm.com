@@ -19,13 +19,7 @@ title: Archive
     {% endfor %}
     </div>
     <div class="article_tag">
-    {% for post in site.posts %}
-      {% for tag in post.tags %}
-        <div class="tag_item">
-        {{ tag }}
-        </div>
-      {% endfor %}
-    {% endfor %}
+        {% tags_list %}
     </div>
   </div>
 </div>

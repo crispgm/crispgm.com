@@ -18,3 +18,5 @@ github_username:  crispgm
 
 # Build settings
 markdown: kramdown
+
+plugins_dir: _plugins
