@@ -6,7 +6,7 @@ permalink: /about.html
 
 Copyright &copy; [David Zhang](/bio.html), 2016. 
 
-All the blogs are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](http://creativecommons.org/licenses/by-nc-nd/4.0/) 
+All the blogs are licensed under a <i class="fa fa-creative-commons"></i> [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.](http://creativecommons.org/licenses/by-nc-nd/4.0/) 
 
 All the articles are written in [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) format.
 
