@@ -3,3 +3,4 @@ Thumb.db
 image/Thumb.db
 photo/Thumb.db
 *.swp
+jekyll/.sass-cache
