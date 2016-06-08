@@ -74,6 +74,7 @@ tags:
 这里列出一些我购买过的软件或 App 的列表，算是一个小小的推荐。
 
 * [Ulysses for Mac](https://itunes.apple.com/cn/app/ulysses/id623795237?mt=12) ¥283
+* [Dash 3](https://itunes.apple.com/cn/app/dash-3-api-docs-snippets./id449589707?mt=12) ¥163
 * [Noizio for Mac](https://itunes.apple.com/cn/app/noizio/id928871589?mt=12) ¥30
 * [Reeder 3 for iOS](https://itunes.apple.com/cn/app/reeder-3/id697846300?mt=8) ¥30
 * [Enlight](https://itunes.apple.com/cn/app/enlight/id930026670?mt=8) ¥25
