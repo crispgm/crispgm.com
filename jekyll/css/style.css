@@ -14,7 +14,7 @@ body {
     height: 100%;
 }
 h1 {
-    font-size: 2.2em;
+    font-size: 2.0em;
 }
 h2 {
     font-size: 1.8em;
@@ -92,7 +92,7 @@ ul li p {
     text-align: center;
 }
 .article_title {
-    font-size: 32px;
+    font-size: 2.6em;
 }
 .article_title a {
     text-decoration: none;
@@ -143,7 +143,7 @@ p {
 .archive_main {
     margin-top: 24px;
     padding-bottom: 16px;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
