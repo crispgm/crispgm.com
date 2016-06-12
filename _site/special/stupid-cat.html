@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="http://crispgm.com/script/jquery-2.0.3.min.js"></script>
+        <style>
+        body{
+            font-size: 60px;
+        }
+        input{
+            height: 40px;
+            width: 100px;
+            font-size: 36px;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            玩你妹的神经猫，告诉我，你想几步围住它！
+            填上步数，然后直接分享！
+        </div>
+        <div>
+            <input type="number" id="step" value="0">
+        </div>
+        <div>
+            Copyright &copy; Crisp.
+        </div>
+    </body>
+    <script>
+$(document).ready(function(){
+    document.title = "我用了0步围住神经猫，你能超过我吗？";
+});
+$("#step").change(function(){
+    n = $("#step").val();
+    document.title = "我用了"+n+"步围住神经猫，你能超过我吗？";
+});
+    </script>
+</html>
