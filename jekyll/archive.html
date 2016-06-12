@@ -19,7 +19,7 @@ title: Archive
     {% endfor %}
     </div>
     <div class="article_tag">
-        {% tags_list %}
+        {% tags_list :threshold => 1, :show_count => 1, :sort_by => count, :order_by => desc %}
     </div>
   </div>
 </div>
