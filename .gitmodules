@@ -1,0 +1,3 @@
+[submodule "jekyll/_plugins/jekyll-tags-list-plugin"]
+	path = jekyll/_plugins/jekyll-tags-list-plugin
+	url = https://github.com/crispgm/jekyll-tags-list-plugin.git
