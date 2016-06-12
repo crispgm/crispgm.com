@@ -244,13 +244,16 @@ code.highlighter-rouge:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     flex-basis: auto;
+}
+li {
+    margin-left: -10px;
 }
 li.subtitle {
     font-size: 16px;
     list-style-type: none;
-    margin-left: -18px;
+    margin-left: -30px;
 }
 .things-box {
     padding-top: 12px;
@@ -259,6 +262,8 @@ li.subtitle {
     border: 1px #aaaaaa solid;
     border-radius: 6px;
     margin: 10px;
+    width: 222px;
+    /*min-height: 200px;*/
 }
 .things-title {
     font-size: 18px;
