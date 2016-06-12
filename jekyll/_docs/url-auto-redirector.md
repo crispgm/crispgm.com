@@ -12,10 +12,17 @@ Contribute on [GitHub - crispgm/UrlAutoRedirector](https://github.com/crispgm/Ur
 
 ## Download
 
-Will be published to Chrome WebStore with a stable version.
+Will be published to Chrome WebStore with a stable version. Currently, I have difficulty in activating Google developer account in China.
+Thus, you have to try it in Chrome Developer Mode. :smile:
 
 ## Changelog
 
+* 0.0.5
+    * First release version
+* 0.0.4
+    * Add Twitter sharing button
+* 0.0.3
+    * Fully configuration page
 * 0.0.2
     * Add tab option support
 * 0.0.1
@@ -23,4 +30,4 @@ Will be published to Chrome WebStore with a stable version.
 
 ## User Manual
 
-TODO
+[https://github.com/crispgm/UrlAutoRedirector/wiki](https://github.com/crispgm/UrlAutoRedirector/wiki)
