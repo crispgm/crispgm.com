@@ -17,16 +17,13 @@ Thus, you have to try it in Chrome Developer Mode. :smile:
 
 ## Changelog
 
-* 0.0.5
-    * First release version
-* 0.0.4
-    * Add Twitter sharing button
-* 0.0.3
-    * Fully configuration page
-* 0.0.2
-    * Add tab option support
-* 0.0.1
-    * Demo for redirection
+|Version|Changes|
+|-------|-------|
+| 0.0.5 | First release version, fundamentally works |
+| 0.0.4 | Add Twitter sharing button |
+| 0.0.3 | Fully configuration page |
+| 0.0.2 | Add tab option support |
+| 0.0.1 | Demo for redirection |
 
 ## User Manual
 

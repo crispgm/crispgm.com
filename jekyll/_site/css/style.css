@@ -106,8 +106,11 @@ ul li p {
 }
 .article_main {
     margin-top: 24px;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
+}
+p {
+    line-height: 28px;
 }
 .article_tag {
     display: flex;
@@ -226,6 +229,8 @@ code.hljs {
     padding: 12px;
 }
 code.highlighter-rouge {
+    margin-left: 4px;
+    margin-right: 4px;
     border: 1px solid #aaaaaa;
     border-radius: 4px;
     padding: 4px;
