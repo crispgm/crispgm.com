@@ -17,8 +17,8 @@ tag:
 
 目前，只有一个已知问题：两个域名之间的同一个网页，是不同的 disqus 评论。
 
-同时，椰椰子主页也有了自己的域名：
+同时，椰椰子主页也有了自己的域名，以及 https 支持：
 
-* [http://yeyeko.gift](http://yeyeko.gift)
+* [https://yeyeko.gift](https://yeyeko.gift)
 
 ps：这的确是一个gift~
