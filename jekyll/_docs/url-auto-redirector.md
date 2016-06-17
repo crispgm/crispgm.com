@@ -17,8 +17,9 @@ Thus, you have to try it in Chrome Developer Mode. :smile:
 
 ## Changelog
 
-|Version|Changes|
+|Version|<center>Updates</center>|
 |-------|-------|
+| 0.0.6 | Prompt "Redirected by URL Auto Redictor" |
 | 0.0.5 | First release version, fundamentally works |
 | 0.0.4 | Add Twitter sharing button |
 | 0.0.3 | Fully configuration page |
