@@ -256,23 +256,13 @@ li.subtitle {
     margin-left: -30px;
 }
 .things-box {
-    padding-top: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border: 1px #aaaaaa solid;
-    border-radius: 6px;
     margin: 10px;
-    width: 222px;
-    /*min-height: 200px;*/
+    width: 240px;
 }
 .things-title {
     font-size: 18px;
-}
-.things-box:hover {
-    background-color: #aaaaaa;
-    color: #ffffff;
-}
-.things-title {
+    border-bottom: 1px solid #aaaaaa;
+    padding-bottom: 5px;
 }
 .things-list {
 }
