@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DAVID ZHANG</title>
-    <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
-    <link>https://crispgm.com/</link>
-    <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jun 2016 14:12:43 +0800</pubDate>
-    <lastBuildDate>Sun, 19 Jun 2016 14:12:43 +0800</lastBuildDate>
+    <title></title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 19 Jun 2016 14:11:07 +0800</pubDate>
+    <lastBuildDate>Sun, 19 Jun 2016 14:11:07 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -43,8 +43,8 @@
 &lt;p&gt;The Project is &lt;a href=&quot;https://github.com/crispgm/olympia&quot;&gt;crispgm/olympia&lt;/a&gt;, written in Ruby.&lt;/p&gt;
 </description>
         <pubDate>Thu, 26 May 2016 18:06:22 +0800</pubDate>
-        <link>https://crispgm.com/page/olympus-wifi-api.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/olympus-wifi-api.html</guid>
+        <link>/page/olympus-wifi-api.html</link>
+        <guid isPermaLink="true">/page/olympus-wifi-api.html</guid>
         
         <category>Olympus</category>
         
@@ -56,6 +56,8 @@
         
         <category>Photography</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -81,13 +83,15 @@
 &lt;p&gt;ps：这的确是一个gift~&lt;/p&gt;
 </description>
         <pubDate>Thu, 26 May 2016 18:06:22 +0800</pubDate>
-        <link>https://crispgm.com/page/new-domain-name.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/new-domain-name.html</guid>
+        <link>/page/new-domain-name.html</link>
+        <guid isPermaLink="true">/page/new-domain-name.html</guid>
         
         <category>域名</category>
         
         <category>Domain Names</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -181,8 +185,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 10 May 2016 00:23:00 +0800</pubDate>
-        <link>https://crispgm.com/page/piracy-software-or-app.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/piracy-software-or-app.html</guid>
+        <link>/page/piracy-software-or-app.html</link>
+        <guid isPermaLink="true">/page/piracy-software-or-app.html</guid>
         
         <category>Mac</category>
         
@@ -190,6 +194,8 @@
         
         <category>DNS</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -281,13 +287,15 @@ ssl_session_timeout  1440m;
 
 </description>
         <pubDate>Mon, 07 Dec 2015 23:35:00 +0800</pubDate>
-        <link>https://crispgm.com/page/enable-https-with-letsencrypt.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/enable-https-with-letsencrypt.html</guid>
+        <link>/page/enable-https-with-letsencrypt.html</link>
+        <guid isPermaLink="true">/page/enable-https-with-letsencrypt.html</guid>
         
         <category>https</category>
         
         <category>letsencrypt</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -310,13 +318,15 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 
 </description>
         <pubDate>Fri, 04 Dec 2015 15:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</guid>
+        <link>/page/environment-pollution-in-a-photographer-view.html</link>
+        <guid isPermaLink="true">/page/environment-pollution-in-a-photographer-view.html</guid>
         
         <category>Environmental Protection</category>
         
         <category>Photography</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -349,8 +359,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 &lt;p&gt;&lt;img src=&quot;/image/p2288151554.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 Nov 2015 18:30:00 +0800</pubDate>
-        <link>https://crispgm.com/page/cat-tongue-play.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/cat-tongue-play.html</guid>
+        <link>/page/cat-tongue-play.html</link>
+        <guid isPermaLink="true">/page/cat-tongue-play.html</guid>
         
         <category>猫舌</category>
         
@@ -358,6 +368,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         
         <category>美食</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -407,8 +419,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.cn/%E4%B8%AA%E6%8A%A4%E5%81%A5%E5%BA%B7/dp/B00HCYFCOQ&quot;&gt;Kleenex 湿厕纸&lt;/a&gt;。原因：擦得就是比普通纸干净。&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Nov 2015 22:11:00 +0800</pubDate>
-        <link>https://crispgm.com/page/my-tools.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/my-tools.html</guid>
+        <link>/page/my-tools.html</link>
+        <guid isPermaLink="true">/page/my-tools.html</guid>
         
         <category>Apps</category>
         
@@ -416,6 +428,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         
         <category>利器</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -454,13 +468,15 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Oct 2015 21:09:00 +0800</pubDate>
-        <link>https://crispgm.com/page/funny-terminal-tools.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/funny-terminal-tools.html</guid>
+        <link>/page/funny-terminal-tools.html</link>
+        <guid isPermaLink="true">/page/funny-terminal-tools.html</guid>
         
         <category>Terminal</category>
         
         <category>Tools</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -526,8 +542,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 
 </description>
         <pubDate>Sun, 19 Jul 2015 13:43:00 +0800</pubDate>
-        <link>https://crispgm.com/page/downloading-m3u8-video.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/downloading-m3u8-video.html</guid>
+        <link>/page/downloading-m3u8-video.html</link>
+        <guid isPermaLink="true">/page/downloading-m3u8-video.html</guid>
         
         <category>Apple</category>
         
@@ -539,6 +555,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         
         <category>ffmpeg</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     
@@ -671,8 +689,8 @@ nginx: [emerg] unknown directive &quot;fastcgi_buffering&quot;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 26 Jun 2015 16:23:00 +0800</pubDate>
-        <link>https://crispgm.com/page/bigpipe-practice.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/bigpipe-practice.html</guid>
+        <link>/page/bigpipe-practice.html</link>
+        <guid isPermaLink="true">/page/bigpipe-practice.html</guid>
         
         <category>BigPipe</category>
         
@@ -682,6 +700,8 @@ nginx: [emerg] unknown directive &quot;fastcgi_buffering&quot;
         
         <category>php</category>
         
+        
+        <category>jekyll</category>
         
       </item>
     

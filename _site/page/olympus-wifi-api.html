@@ -1,0 +1,30 @@
+<h1 id="background">Background</h1>
+
+<p>Since I started my interest on photography, I chose SONY RX100 Mark III initially and now I use a M4/3 interchangeable lens camera, the Olympus E-M5 Mark II.</p>
+
+<p>Cameras nowadays commonly support Wi-Fi sync with mobile apps. And so does Olympus, which provides an OI Share app to do that.</p>
+
+<p>And I found some blog articles about the Wi-Fi protocol or commands of Olympus camera. Most of them are not well maintained, because Olympus camera is a minority choice in Internet world.</p>
+
+<p>Fortunately, I found the <a href="https://github.com/stv0g/libqt-omd">stv0g/libqt-omd</a> project on GitHub. Though the wiki is down, I could read the source code to figure out the APIs by myself.</p>
+
+<h1 id="api-specification">API Specification</h1>
+
+<p>The API specification is maintained at <a href="https://github.com/crispgm/olympia/blob/master/api_specs.md">Olympus Wi-Fi API Specification</a>.</p>
+
+<p>Here is a useful gist: <a href="https://gist.github.com/mangelajo/6fa005ff3544fecdecfa">URLs from app olympus share app</a> and there is an official protocol document in comment.</p>
+
+<h1 id="olympia">Olympia</h1>
+
+<p>At last, I came up with an idea that make a web based client for computers built with the APIs, which is named Olympia. Thus, we can transfer and manage photos on our computer.</p>
+
+<p>Here is a list of features:</p>
+
+<ul>
+  <li>Web based UI</li>
+  <li>Sync photos easily</li>
+  <li>Manage photos both remotely and locally</li>
+  <li>Upload or backup to online cloud storage</li>
+</ul>
+
+<p>The Project is <a href="https://github.com/crispgm/olympia">crispgm/olympia</a>, written in Ruby.</p>

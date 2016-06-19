@@ -46,7 +46,6 @@ ul li p {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    /*background-color: #000000;*/
     border-bottom: 1px solid #aaaaaa;
 }
 #menu a {
@@ -56,9 +55,9 @@ ul li p {
     text-decoration: underline;
 }
 #menu_home {
-    font-size: 3.0em;
+    font-size: 56px;
     padding-top: 50px;
-    height: 100px;
+    padding-bottom: 40px;
     width: 100%;
 }
 #menu_links {

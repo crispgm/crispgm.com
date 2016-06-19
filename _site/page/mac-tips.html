@@ -1,0 +1,27 @@
+<h3 id="mac--ssh-">Mac 下 ssh 避免多次输入密码</h3>
+
+<p>编辑文件</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/ssh_config
+</code></pre>
+</div>
+
+<p>加入</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Host *   
+ControlMaster auto  
+ControlPath ~/.ssh/master-%r@%h:%p  
+</code></pre>
+</div>
+
+<p>保存后，重新启动终端即可生效</p>
+
+<h3 id="mac-">Mac 终端显示颜色</h3>
+
+<p>修改~/.bash_profile，添加</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad
+</code></pre>
+</div>
+
