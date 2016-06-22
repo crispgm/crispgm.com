@@ -1,0 +1,15 @@
+# coding: utf-8
+task default: %w[serve]
+
+task :init do
+  sh "git pull"
+  sh "bundle install"
+end
+
+task :serve do
+  sh "bundle exec jekyll serve"
+end
+
+task :build do
+  sh "bundle exec jekyll build --destination=../site"
+end

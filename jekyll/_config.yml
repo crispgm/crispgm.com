@@ -22,7 +22,7 @@ gems:
     - jekyll-tagslist
 
 exclude:
-    - Makefile
+    - Rakefile
     - Gemfile
     - Gemfile.lock
 
