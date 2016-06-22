@@ -20,3 +20,9 @@ plugins_dir: _plugins
 gems:
     - jemoji
     - jekyll-tagslist
+
+exclude:
+    - Makefile
+    - Gemfile
+    - Gemfile.lock
+
