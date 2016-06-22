@@ -19,3 +19,4 @@ collections:
 plugins_dir: _plugins
 gems:
     - jemoji
+    - jekyll-tagslist
