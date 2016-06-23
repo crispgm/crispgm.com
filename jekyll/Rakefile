@@ -2,7 +2,6 @@
 task default: %w[serve]
 
 task :init do
-  sh "git pull"
   sh "bundle install"
 end
 
