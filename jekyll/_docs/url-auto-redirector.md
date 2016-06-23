@@ -29,7 +29,7 @@ We build it in order to make browsing quicker and simpler.
 
 ## Installation
 
-UrlAutoRedirector will be published to Chrome WebStore with a stable version.
+URL Auto Redirector will be published to Chrome WebStore with a stable version.
 
 Currently, I have difficulty in activating Google developer account in China.
 
@@ -56,6 +56,6 @@ Contribute on [GitHub - crispgm/UrlAutoRedirector](https://github.com/crispgm/Ur
 
 ### Notice
 
-* If you think you've found a bug with UrlAutoRedirector, [open an issue](https://github.com/crispgm/UrlAutoRedirector/issues/new).
-* If you have useful rules in getting convenience by UrlAutoRedictor, comment in the [Collection of awesome rules](https://github.com/crispgm/UrlAutoRedirector/issues/17).
+* If you think you've found a bug with URL Auto Redirector, [open an issue](https://github.com/crispgm/UrlAutoRedirector/issues/new).
+* If you have useful rules in getting convenience by URL Auto Redictor, comment in the [Collection of awesome rules](https://github.com/crispgm/UrlAutoRedirector/issues/17).
 * PR(Pull Request) is welcomed.
