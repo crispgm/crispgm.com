@@ -7,19 +7,19 @@ permalink: /archive.html
 <div id="container">
   <div class="article">
     <div class="article_head">
-      <div id="archive_subscribe">
+      <div class="archive-subscribe">
         <a href="/feed.xml" target="_blank"><i title="rss" class="fa fa-rss"></i> Subscribe Blog Updates</a>
       </div>
     </div>
-    <div class="archive_main">
+    <div class="archive-main">
     {% for post in site.posts %}
-      <div class="archive_item">
-        <span class="archive_date">{{post.date | date:"%Y/%m/%d"}}</span>
-        <span class="archive_title"><a href="{{post.permalink}}">{{post.title}}</a></span>
+      <div class="archive-item">
+        <span class="archive-date">{{post.date | date:"%Y/%m/%d"}}</span>
+        <span class="archive-title"><a href="{{post.permalink}}">{{post.title}}</a></span>
       </div>
     {% endfor %}
     </div>
-    <div class="article_tag">
+    <div class="article-tag">
         {% tags_list :threshold => 1, :show_count => 1, :sort_by => count, :order_by => desc %}
     </div>
   </div>

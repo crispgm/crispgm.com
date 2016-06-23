@@ -1,7 +1,6 @@
 /*
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2016
- * Powered by {less}
  */
 body {
   margin: 0;
@@ -41,26 +40,24 @@ a:hover {
 ul li p {
   margin: 0;
 }
-#menu {
+/* Menu */
+.menu {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
   border-bottom: 1px solid #aaaaaa;
 }
-#menu a {
-  color: #bbbbbb;
-}
-#menu a:hover {
-  text-decoration: underline;
-}
-#menu_home {
+.menu-home {
   font-size: 56px;
   padding-top: 50px;
   padding-bottom: 40px;
   width: 100%;
 }
-#menu_links {
+.menu-home a {
+  text-decoration: none;
+}
+.menu-links {
   font-size: 0.8em;
   height: 30px;
   width: 100%;
@@ -70,16 +67,25 @@ ul li p {
   align-items: center;
   justify-content: center;
 }
-.menu_item {
+.menu-item {
   height: 30px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
 }
+.menu-item a {
+  color: #bbbbbb;
+}
+.menu-active a {
+  color: #bbbbbb;
+  text-decoration: underline; 
+}
+/* */
 #container {
   text-align: center;
   width: 100%;
 }
+/* Article */
 .article {
   margin-left: auto;
   margin-right: auto;
@@ -87,23 +93,23 @@ ul li p {
   text-align: left;
   margin-top: 40px;
 }
-.article_head {
+.article-head {
   text-align: center;
 }
-.article_title {
+.article-title {
   font-size: 2.6em;
 }
-.article_title a {
+.article-title a {
   text-decoration: none;
   color: #555;
 }
-.article_title a:hover {
+.article-title a:hover {
   text-decoration: underline;
 }
-.article_date {
+.article-date {
   font-size: 16px;
 }
-.article_main {
+.article-main {
   margin-top: 24px;
   font-size: 16px;
   margin-bottom: 20px;
@@ -111,7 +117,8 @@ ul li p {
 p {
   line-height: 28px;
 }
-.article_tag {
+/* Tags */
+.article-tag {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -120,7 +127,7 @@ p {
   padding-bottom: 62px;
   border-top: 1px solid #aaaaaa;
 }
-.tag_item {
+.tag-item {
   padding: 2px;
   margin-right: 8px;
   margin-bottom: 4px;
@@ -130,16 +137,17 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.tag_item:hover {
+.tag-item:hover {
   background-color: #aaaaaa;
   color: #ffffff;
 }
-.tag_item_name {
+.tag-item-name {
   margin-right: 8px;
 }
-.tag_item_count {
+.tag-item-count {
 }
-.archive_main {
+/* Archive */
+.archive-main {
   margin-top: 24px;
   padding-bottom: 16px;
   font-size: 16px;
@@ -150,7 +158,7 @@ p {
   align-content: space-between;
   width: 100%;
 }
-.archive_item {
+.archive-item {
   width: 49%;
   margin-right: 1%;
   white-space: nowrap;
@@ -158,7 +166,13 @@ p {
   -o-text-overflow: ellipsis;
   overflow: hidden;
 }
-#bio_main {
+.archive-subscribe {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+/* Bio */
+#bio-main {
   margin-top: 24px;
   padding-bottom: 16px;
   font-size: 16px;
@@ -170,47 +184,24 @@ p {
   width: 100%;
   text-align: center;
 }
-.bio_item {
+.bio-item {
   text-align: left;
   margin-right: 12px;
 }
 .bio-github-card {
   margin-top: 16px;
 }
-#archive_subscribe {
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-}
-#index_main {
-  display: flex;
-  margin-top: 24px;
-  padding-bottom: 62px;
-  font-size: 14px;
-}
+/* disqus */
 #disqus_thread {
 }
 #disqus_thread iframe {
   text-align: center;
 }
+/* footer */
 footer {
   text-align: center;
   font-size: 18px;
   overflow: hidden;
-}
-#page {
-  margin-bottom: 8px;
-  padding-top: 4px;
-  font-size: 18px;
-  height: 32px;
-  margin-left: 20%;
-  text-align: left;
-}
-#page a {
-  color: black;
-}
-#page a:hover {
-  text-decoration: underline;
 }
 img {
   border: 0;
