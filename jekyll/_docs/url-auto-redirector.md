@@ -11,7 +11,15 @@ By doing so, it gets you directly to your destination page.
 
 We build it in order to make browsing quicker and simpler.
 
-[Get URL Auto Redirector Releases](https://github.com/crispgm/UrlAutoRedirector/releases).
+## Installation
+
+[Get URL Auto Redirector Releases](https://github.com/crispgm/UrlAutoRedirector/releases). And load it in ```Developer Mode```.
+
+### Notice
+
+URL Auto Redirector will be published to Chrome WebStore with a stable version.
+Currently, I have difficulty in activating Google developer account in China.
+Thus, you have to try it in Chrome Developer Mode. :smile:
 
 ## Usage
 
@@ -26,14 +34,6 @@ We build it in order to make browsing quicker and simpler.
 ### Site Blocker
 
 ![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/site-blocker.png)
-
-## Installation
-
-URL Auto Redirector will be published to Chrome WebStore with a stable version.
-
-Currently, I have difficulty in activating Google developer account in China.
-
-Thus, you have to try it in Chrome Developer Mode. :smile:
 
 ## Changelog
 
