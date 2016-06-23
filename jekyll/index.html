@@ -7,17 +7,17 @@ title: Home
 {% assign content = post.content %}
 <div id="container">
   <div class="article">
-  <div class="article_head">
-    <div class="article_title"><a href="{{post.permalink}}">{{post.title}}</a></div>
-    <div class="article_date">{{post.date | date:"%Y/%m/%d"}}</div>
+  <div class="article-head">
+    <div class="article-title"><a href="{{post.permalink}}">{{post.title}}</a></div>
+    <div class="article-date">{{post.date | date:"%Y/%m/%d"}}</div>
   </div>
-  <div class="article_main">
+  <div class="article-main">
     {{ content }}
   </div>
   {% if post.tags.size > 0 %}
-    <div class="article_tag">
+    <div class="article-tag">
     {% for tag in post.tags %}
-    <div class="tag_item">
+    <div class="tag-item">
     {{ tag }}
     </div>
     {% endfor %}

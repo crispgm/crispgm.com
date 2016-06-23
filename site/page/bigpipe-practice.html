@@ -21,16 +21,26 @@
 
   <body>
 
-    <div id="menu">
-  <div id="menu_home">
-      <a href="/" style="color: #000000;">DAVID ZHANG</a>
+    <div class="menu">
+  <div class="menu-home">
+    <a href="/" style="color: #000000;">DAVID ZHANG</a>
   </div>
-  <div id="menu_links">
-    <div class="menu_item"><a href="/archive.html">ARCHIVE</a></div>
-    <div class="menu_item"><a href="https://github.com/crispgm" target="_blank">GITHUB</a></div>
-    <div class="menu_item"><a href="/things.html">THINGS</a></div>
-    <div class="menu_item"><a href="/bio.html">BIO</a></div>
-    <div class="menu_item"><a href="/about.html">ABOUT</a></div>
+  <div class="menu-links">
+    <div class="menu-item">
+      <a href="/archive.html">ARCHIVE</a>
+    </div>
+    <div class="menu-item">
+      <a href="https://github.com/crispgm" target="_blank">GITHUB</a>
+    </div>
+    <div class="menu-item">
+      <a href="/things.html">THINGS</a>
+    </div>
+    <div class="menu-item">
+      <a href="/bio.html">BIO</a>
+    </div>
+    <div class="menu-item">
+      <a href="/about.html">ABOUT</a>
+    </div>
   </div>
 </div>
 
@@ -39,11 +49,11 @@
 
     <div id="container">
   <div class="article">
-    <div class="article_head">
-      <div class="article_title">BigPipe 实践 (nginx + hhvm)</div>
-      <div class="article_date">2015/06/26</div>
+    <div class="article-head">
+      <div class="article-title">BigPipe 实践 (nginx + hhvm)</div>
+      <div class="article-date">2015/06/26</div>
     </div>
-    <div class="article_main">
+    <div class="article-main">
       <h2 id="section">背景</h2>
 
 <p>随着 Web 页面的功能不断堆砌（其实我是极简主义者，但PM或者说是国内的风气，总是喜欢不断加入各类功能），页面需要的数据越来越多，串行连接后端的耗时自然是不断增大。常见的优化手段就是后端并行化，而对于前端来说，后端并行化只是降低了 response time，但用户最终看到页面的时间并没有减少。</p>
@@ -172,21 +182,21 @@ nginx: [emerg] unknown directive "fastcgi_buffering"
 
     </div>
     
-    <div class="article_tag">
+    <div class="article-tag">
       
-      <div class="tag_item">
+      <div class="tag-item">
       BigPipe
       </div>
       
-      <div class="tag_item">
+      <div class="tag-item">
       nginx
       </div>
       
-      <div class="tag_item">
+      <div class="tag-item">
       hhvm
       </div>
       
-      <div class="tag_item">
+      <div class="tag-item">
       php
       </div>
       

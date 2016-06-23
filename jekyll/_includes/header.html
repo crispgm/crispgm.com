@@ -1,12 +1,22 @@
-<div id="menu">
-  <div id="menu_home">
-      <a href="/" style="color: #000000;">DAVID ZHANG</a>
+<div class="menu">
+  <div class="menu-home">
+    <a href="/" style="color: #000000;">DAVID ZHANG</a>
   </div>
-  <div id="menu_links">
-    <div class="menu_item"><a href="/archive.html">ARCHIVE</a></div>
-    <div class="menu_item"><a href="https://github.com/crispgm" target="_blank">GITHUB</a></div>
-    <div class="menu_item"><a href="/things.html">THINGS</a></div>
-    <div class="menu_item"><a href="/bio.html">BIO</a></div>
-    <div class="menu_item"><a href="/about.html">ABOUT</a></div>
+  <div class="menu-links">
+    <div class="menu-item{% if page.title == "Archive" %}{{" menu-active"}}{% endif %}">
+      <a href="/archive.html">ARCHIVE</a>
+    </div>
+    <div class="menu-item">
+      <a href="https://github.com/crispgm" target="_blank">GITHUB</a>
+    </div>
+    <div class="menu-item{% if page.title == "Things" %}{{" menu-active"}}{% endif %}">
+      <a href="/things.html">THINGS</a>
+    </div>
+    <div class="menu-item{% if page.title == "Bio" %}{{" menu-active"}}{% endif %}">
+      <a href="/bio.html">BIO</a>
+    </div>
+    <div class="menu-item{% if page.title == "About" %}{{" menu-active"}}{% endif %}">
+      <a href="/about.html">ABOUT</a>
+    </div>
   </div>
 </div>
