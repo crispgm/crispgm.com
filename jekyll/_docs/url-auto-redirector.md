@@ -6,13 +6,33 @@ permalink: /page/url-auto-redirector.html
 
 ## Introduction
 
-URL Auto Redirector is a Chrome extension, which allows to make redirection of url from preset url patterns.
+URL Auto Redirector is a Chrome Extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links.
+By doing so, it gets you directly to your destination page.
 
-Contribute on [GitHub - crispgm/UrlAutoRedirector](https://github.com/crispgm/UrlAutoRedirector).
+We build it in order to make browsing quicker and simpler.
 
-## Download
+[Get URL Auto Redirector Releases](https://github.com/crispgm/UrlAutoRedirector/releases).
 
-Will be published to Chrome WebStore with a stable version. Currently, I have difficulty in activating Google developer account in China.
+## Usage
+
+### Mid-Pages Skipping
+
+![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/midpage-skipping.png)
+
+### Mobile Adaption
+
+![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/mobile-adaption.png)
+
+### Site Blocker
+
+![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/site-blocker.png)
+
+## Installation
+
+UrlAutoRedirector will be published to Chrome WebStore with a stable version.
+
+Currently, I have difficulty in activating Google developer account in China.
+
 Thus, you have to try it in Chrome Developer Mode. :smile:
 
 ## Changelog
@@ -30,6 +50,12 @@ Thus, you have to try it in Chrome Developer Mode. :smile:
 | 0.0.2 | Add tab option support. |
 | 0.0.1 | Demo for redirection. |
 
-## User Manual
+## Contribution
 
-[https://github.com/crispgm/UrlAutoRedirector/wiki](https://github.com/crispgm/UrlAutoRedirector/wiki)
+Contribute on [GitHub - crispgm/UrlAutoRedirector](https://github.com/crispgm/UrlAutoRedirector).
+
+### Notice
+
+* If you think you've found a bug with UrlAutoRedirector, [open an issue](https://github.com/crispgm/UrlAutoRedirector/issues/new).
+* If you have useful rules in getting convenience by UrlAutoRedictor, comment in the [Collection of awesome rules](https://github.com/crispgm/UrlAutoRedirector/issues/17).
+* PR(Pull Request) is welcomed.
