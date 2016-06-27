@@ -25,7 +25,7 @@ Fortunately, I found the [stv0g/libqt-omd](https://github.com/stv0g/libqt-omd) p
 
 The API specification is maintained at [Olympus Wi-Fi API Specification](https://github.com/crispgm/olympia/blob/master/api_specs.md).
 
-Here is a useful gist: [URLs from app olympus share app](https://gist.github.com/mangelajo/6fa005ff3544fecdecfa) and there is an official protocol document in comment.
+Here is a useful gist [https://gist.github.com/mangelajo/6fa005ff3544fecdecfa](https://gist.github.com/mangelajo/6fa005ff3544fecdecfa) and there is an official protocol document in comment.
 
 # Olympia
 
