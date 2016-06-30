@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Olympus Camera Wi-Fi API
-date: 2016/05/26 18:06:22 +0800
+date: 2016/05/31 18:06:22 +0800
 permalink: /page/olympus-wifi-api.html
 tag:
 - Olympus
