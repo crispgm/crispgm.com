@@ -13,13 +13,9 @@ We build it in order to make browsing quicker and simpler.
 
 ## Installation
 
-[Get URL Auto Redirector Releases](https://github.com/crispgm/UrlAutoRedirector/releases). And load it in ```Developer Mode```.
+Download at [__Chrome WebStore__](https://chrome.google.com/webstore/detail/mckfcfnegaimgcgepikhdnajpkkhdnkn).
 
-### Notice
-
-URL Auto Redirector will be published to Chrome WebStore with a stable version.
-Currently, I have difficulty in activating Google developer account in China.
-Thus, you have to try it in Chrome Developer Mode. :smile:
+Alternative: Clone this project, then load ```src``` folder in ```developer mode```.
 
 ## Usage
 
@@ -39,7 +35,7 @@ Thus, you have to try it in Chrome Developer Mode. :smile:
 
 |Version|<center>Updates</center>|
 |-------|-------|
-| 1.0.0 | Auto-save options.<br>Increase z-index to make prompt message visible. | 
+| 1.0.0 | Auto-save options.<br>Increase z-index to make prompt message visible.<br>Available in Chrome WebStore | 
 | 0.0.9 | New icons.<br>Hints in Options.<br>Weibo Share. |
 | 0.0.8 | Import/Export rules file. |
 | 0.0.7 | Re designed UI of options page. |
