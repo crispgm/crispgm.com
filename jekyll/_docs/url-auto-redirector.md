@@ -29,8 +29,8 @@ Alternative: Clone this project, then load ```src``` folder in ```developer mode
 
 |Version|<center>Updates</center>|
 |-------|-------|
-| 1.1.0(Develop) |  Optimisation: sync options via _chrome.message_<br>Optimisation: single copy of _defaultRules_<br>Performance improvement. |
-| 1.0.0(Current Stable) | Auto-save options.<br>Increase z-index to make prompt message visible.<br>Available on Chrome WebStore. | 
+| 1.1.0 (Develop) |  Optimisation: sync options via _chrome.message_<br>Optimisation: single copy of _defaultRules_<br>Performance improvement. |
+| 1.0.0 (Current Stable) | Auto-save options.<br>Increase z-index to make prompt message visible.<br>Available on Chrome WebStore. | 
 | 0.0.9 | New icons.<br>Hints in Options.<br>Weibo Share. |
 | 0.0.8 | Import/Export rules file. |
 | 0.0.7 | Re designed UI of options page. |
