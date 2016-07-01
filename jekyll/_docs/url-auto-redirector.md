@@ -11,7 +11,9 @@ By doing so, it gets you directly to your destination page.
 
 We build it in order to make browsing quicker and simpler.
 
-## Installation
+[![](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/mckfcfnegaimgcgepikhdnajpkkhdnkn)
+
+## Get URL Auto Redirector
 
 Download at [__Chrome WebStore__](https://chrome.google.com/webstore/detail/mckfcfnegaimgcgepikhdnajpkkhdnkn).
 
@@ -19,23 +21,16 @@ Alternative: Clone this project, then load ```src``` folder in ```developer mode
 
 ## Usage
 
-### Mid-Pages Skipping
-
-![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/midpage-skipping.png)
-
-### Mobile Adaption
-
-![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/mobile-adaption.png)
-
-### Site Blocker
-
-![](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/site-blocker.png)
+* Mid-Pages Skipping \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/midpage-skipping.png)\]
+* Mobile Adaption \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/mobile-adaption.png)\]
+* Site Blocker \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/site-blocker.png)\]
 
 ## Changelog
 
 |Version|<center>Updates</center>|
 |-------|-------|
-| 1.0.0 | Auto-save options.<br>Increase z-index to make prompt message visible.<br>Available on Chrome WebStore. | 
+| 1.1.0(Develop) |  Optimisation: sync options via ```chrome.message```<br>Optimisation: single copy of ```defaultRules```<br>Performance improvement. |
+| 1.0.0(Current Stable) | Auto-save options.<br>Increase z-index to make prompt message visible.<br>Available on Chrome WebStore. | 
 | 0.0.9 | New icons.<br>Hints in Options.<br>Weibo Share. |
 | 0.0.8 | Import/Export rules file. |
 | 0.0.7 | Re designed UI of options page. |
