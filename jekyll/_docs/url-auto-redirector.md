@@ -11,7 +11,7 @@ By doing so, it gets you directly to your destination page.
 
 We build it in order to make browsing quicker and simpler.
 
-[![](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/mckfcfnegaimgcgepikhdnajpkkhdnkn)
+[![](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_496x150.png)](https://chrome.google.com/webstore/detail/mckfcfnegaimgcgepikhdnajpkkhdnkn)
 
 ## Get URL Auto Redirector
 
