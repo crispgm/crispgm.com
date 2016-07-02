@@ -21,9 +21,9 @@ Alternative: Clone this project, then load ```src``` folder in ```developer mode
 
 ## Usage
 
-* Mid-Pages Skipping \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/midpage-skipping.png)\]
-* Mobile Adaption \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/mobile-adaption.png)\]
-* Site Blocker \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector/master/promotion/site-blocker.png)\]
+* Mid-Pages Skipping \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector-branding/master/promotion/midpage-skipping.png)\]
+* Mobile Adaption \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector-branding/master/promotion/mobile-adaption.png)\]
+* Site Blocker \[[Screenshot](https://raw.githubusercontent.com/crispgm/UrlAutoRedirector-branding/master/promotion/site-blocker.png)\]
 
 ## Changelog
 
