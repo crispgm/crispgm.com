@@ -76,7 +76,7 @@
 
 <h3 id="section-1">正文</h3>
 
-<p>在PHP中，使用<code class="highlighter-rouge">(int)$var</code>方式进行类型转换比使用<code class="highlighter-rouge">intval($var)</code>函数方式快400%到650%。</p>
+<p>在 PHP 中，使用 <code class="highlighter-rouge">(int)$var</code> 方式进行类型转换比使用 <code class="highlighter-rouge">intval($var)</code> 函数方式快 400% 到 650%。</p>
 
 <h4 id="section-2">运行测试</h4>
 
@@ -366,9 +366,9 @@
 
 <p>这组测试每个项目进行了100000次循环。两个测试都在windows上运行。系统#1使用的是PHP 5.2.8，而系统#2使用PHP 5.2.9并且有更高的CPU、内存和硬盘速度。</p>
 
-<h4 id="intvalint">intval()和int的结果对比</h4>
+<h4 id="intval--int-">intval() 和 int 的结果对比</h4>
 
-<p>为了证明intval()和int得到同样的值，我进行了另一个测试：</p>
+<p>为了证明 intval() 和 int 得到同样的值，我进行了另一个测试：</p>
 
 <table>
   <thead>
@@ -529,9 +529,9 @@
   </tbody>
 </table>
 
-<h4 id="settypeintval-1">settype()和intval()速度对比[系统 #1]</h4>
+<h4 id="settype--intval--1">settype() 和 intval() 速度对比[系统 #1]</h4>
 
-<p>用于对比，我还进行了settype()和intval()速度测试。
+<p>用于对比，我还进行了 settype() 和 intval() 速度测试。
 两者的差别并不大，但我不确定这个测试是否合理，因为并不容易直接对这个函数进行测试。既然已经跑了这个测试，我认为值得把结果同前面的数据一起分享出来。</p>
 
 <table>
@@ -676,10 +676,10 @@
 
 <p>更新：</p>
 
-<p>我进行了一些关于0 + $var的测试，因为这也是一种获得数字的方式。
+<p>我进行了一些关于 <code class="highlighter-rouge">0 + $var</code> 的测试，因为这也是一种获得数字的方式。
 这种方法没那么”类型安全”，不过作为对比，我认为有必要一起列出来：</p>
 
-<h4 id="intval0--var">intval()和0 + $var对比结果</h4>
+<h4 id="intval--0--var-">intval() 和 0 + $var 对比结果</h4>
 
 <table>
   <thead>
@@ -986,9 +986,9 @@
 
 <h4 id="section-3">测试结论</h4>
 
-<p>使用(int)类型转换，便捷而且没有负面效果。
-事实上，它在速度快的同时，还和intval()函数有完全一样的结果。
-两者甚至还会有同样的warning信息。</p>
+<p>使用 (int) 类型转换，便捷而且没有负面效果。
+事实上，它在速度快的同时，还和 intval() 函数有完全一样的结果。
+两者甚至还会有同样的 warning 信息。</p>
 
 <h4 id="section-4">扩展阅读</h4>
 
@@ -999,7 +999,7 @@
 
 <h4 id="section-5">深层原因</h4>
 
-<p>对于作者的结论，网友Joseph Scott对OPCODE进行了分析，解释了其深层原因。</p>
+<p>对于作者的结论，网友 Joseph Scott 对 OPCODE 进行了分析，解释了其深层原因。</p>
 
 <h2 id="intval">intval()</h2>
 
@@ -1025,8 +1025,8 @@
 <h4 id="section-6">最终结论</h4>
 
 <ol>
-  <li>int比intval()快3-6倍。</li>
-  <li>SEND_VAR和DO_FCALL操作，是导致int比intval()快很多的原因。</li>
+  <li>int 比 intval() 快3-6倍。</li>
+  <li>SEND_VAR 和 DO_FCALL 操作，是导致 int 比 intval() 快很多的原因。</li>
 </ol>
 
 
