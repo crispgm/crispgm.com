@@ -5,9 +5,208 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Jun 2016 17:21:01 +0800</pubDate>
-    <lastBuildDate>Mon, 27 Jun 2016 17:21:01 +0800</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2016 01:14:24 +0800</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2016 01:14:24 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>『翻译』PHP 数组有多大？</title>
+        <description>&lt;p&gt;提示：很大！&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;声明&lt;/h1&gt;
+
+&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
+
+&lt;p&gt;原文：&lt;a href=&quot;https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html&quot;&gt;How big are PHP arrays (and values) really? (Hint: BIG!)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
+
+&lt;p&gt;This article is translated from a blog post of Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;),
+in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
+
+&lt;p&gt;Original Page:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html&quot;&gt;How big are PHP arrays (and values) really? (Hint: BIG!)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;By Nikita Popov, &lt;a href=&quot;https://nikic.github.io&quot;&gt;https://nikic.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;December 12th, 2014&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Translated by Crisp&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;正文&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;更新&lt;/strong&gt;(2016-06-14)：这篇文章主要关于 PHP 5 的内存使用。PHP 7 的内存占用，对于本文提到的情况，大约得到了3倍的优化。请阅读 &lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;hashtable implementation in PHP 7&lt;/a&gt; 获得更多信息。&lt;/p&gt;
+
+&lt;p&gt;在一开始，我想感谢&lt;a href=&quot;http://schlueters.de/blog/&quot;&gt;约翰尼斯 Johannes&lt;/a&gt; 和 &lt;a href=&quot;http://www.tyrael.hu/&quot;&gt;泰瑞尔 Tyrael&lt;/a&gt;，他们帮助我寻找到了更多的隐藏内存使用。&lt;/p&gt;
+
+&lt;p&gt;这篇博客，我将使用如下脚本作为样本研究 PHP 数组（及其值）的总体内存占用情况，这个脚本会创建 100000 个唯一的整型数组元素并计算其内存占用：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = range(1, 100000);
+echo memory_get_usage() - $startMemory, &#39; bytes&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;你估计它的内存占用会有多大呢？简单的说，一个整型数是 8 bytes（在一个 64 位 UNIX 机器上使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;long&lt;/code&gt; 类型），且有 100000 个整型数。
+所以显而易见，你需要 800000 bytes。这大概是 0.76 MB。&lt;/p&gt;
+
+&lt;p&gt;现在，我们尝试运行上面的测试代码，结果需要 14649024 bytes。是的，你没听错，是 13.97 MB —— 是估计值的 18 倍。&lt;/p&gt;
+
+&lt;p&gt;所以，额外多出的 18 倍来自于哪？&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;概述&lt;/h2&gt;
+
+&lt;p&gt;对于那些不想看完整个故事的人，这里给出了一个煎蛋的涉及到的不同组件的内存占用情况：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                             |  64 bit   | 32 bit
+---------------------------------------------------
+zval                         |  24 bytes | 16 bytes
++ cyclic GC info             |   8 bytes |  4 bytes
++ allocation header          |  16 bytes |  8 bytes
+===================================================
+zval (value) total           |  48 bytes | 28 bytes
+===================================================
+bucket                       |  72 bytes | 36 bytes
++ allocation header          |  16 bytes |  8 bytes
++ pointer                    |   8 bytes |  4 bytes
+===================================================
+bucket (array element) total |  96 bytes | 48 bytes
+===================================================
+total total                  | 144 bytes | 76 bytes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上面的数字根据你的操作系统、编译器和编译器参数的不同会有变化。比如：如果你使用 debug 模式编译 PHP 或者开启线程安全，你会得到不同的值。但我认为上述值的大小是你能看到的 64 位生产版本 Linux 下 PHP 5.3 的平均值。&lt;/p&gt;
+
+&lt;p&gt;如果你将它们用 144 bytes 乘以 100000 个元素，会得到 14400000 bytes，也就是 13.73 MB。这很接近实际值，剩下的大多是给未初始化的 buckets 的指针，我将会在后续提到它。&lt;/p&gt;
+
+&lt;p&gt;现在，如果你想对上述数值有更细节的分析，继续读 :)&lt;/p&gt;
+
+&lt;h2 id=&quot;zvaluevalue-&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value&lt;/code&gt; 联合体&lt;/h2&gt;
+
+&lt;p&gt;首先看一下 PHP 是如何存储数值的。众所周知 PHP 是一个弱类型语言，所以它需要在不通类型中快速切换。
+因此 PHP 使用联合体 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 实现数值存储，它定义在 zend.h 的 307行：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef union _zvalue_value {
+    long lval;                // For integers and booleans
+    double dval;              // For floats (doubles)
+    struct {                  // For strings
+        char *val;            //     consisting of the string itself
+        int len;              //     and its length
+    } str;
+    HashTable *ht;            // For arrays (hash tables)
+    zend_object_value obj;    // For objects
+} zvalue_value;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果你不懂 C 语言，那也不是一个问题因为这段代码很直接：联合体是一种可以将数值以不同类型存取的方式。
+比如说，如果你使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value-&amp;gt;lval&lt;/code&gt;，你将会获得以整型解析的值。如果你使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value-&amp;gt;ht&lt;/code&gt;，值会被解析成一个指向 Hashtable（哈希表）的指针（也就是 php 所谓的数组）。&lt;/p&gt;
+
+&lt;p&gt;但是，我们不需要过于关注这些。最重要的是，一个联合体的大小等于它最大的元素的大小。
+这个联合体中，最大的组成部分是 &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt; 结构（&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_object_value&lt;/code&gt; 结构同 &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt; 一样，这么为了简单只说后者）。
+&lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt;包含一个指针（8 bytes）和一个整型（4 bytes），总共 12 bytes。
+由于内存对齐的原因（12 bytes 不够 cool，因为它不是 64 bits / 8 bytes 的倍数），整个结构的总大小位 16 bytes，因此这是这个联合体的整体大小。&lt;/p&gt;
+
+&lt;p&gt;因此现在我们知道，由于 PHP 动态类型的原因，每个值不是需要 8 bytes，而是 16 bytes。
+乘以 100000 后得到 1600000 bytes，即 1.53 MB。
+但是，实际值是 13.97 MB，所以我们还是没有得到答案。&lt;/p&gt;
+
+&lt;h2 id=&quot;zval-&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构&lt;/h2&gt;
+
+&lt;p&gt;这很符合逻辑：联合体只是存值本身，而 PHP 显然还需要存储它的类型以及一些垃圾回收信息。
+你可能已经听说过，带有这些信息的结构体叫做 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt;。想获取更多信息，我推荐阅读&lt;a href=&quot;http://blog.golemon.com/2007/01/youre-being-lied-to.html&quot;&gt;萨拉·戈尔蒙（Sara Golemon）的一篇文章&lt;/a&gt;。无论如何，结构体定义如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct _zval_struct {
+    zvalue_value value;     // The value
+    zend_uint refcount__gc; // The number of references to this value (for GC)
+    zend_uchar type;        // The type
+    zend_uchar is_ref__gc;  // Whether this value is a reference (&amp;amp;)
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;一个结构体的大小由它的元素总和决定：&lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value&lt;/code&gt; 是 16 bytes，&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_uint&lt;/code&gt; 是 4 bytes，&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_uchars&lt;/code&gt; 每一个 1 bytes。
+总共 22 bytes。还是因为内存对齐，实际的大小是 24 bytes。&lt;/p&gt;
+
+&lt;p&gt;如果你存储 100000 个 24 bytes 的元素，总共需要 2400000 bytes，也就是 2.29 MB。
+差值在缩小，但真实值仍旧要有 6 倍大。&lt;/p&gt;
+
+&lt;h2 id=&quot;php-53&quot;&gt;垃圾周期回收器（对于 PHP 5.3）&lt;/h2&gt;
+
+&lt;p&gt;PHP 5.3 引入了一种新的&lt;a href=&quot;http://php.net/manual/en/features.gc.collecting-cycles.php&quot;&gt;解决循环引用的垃圾回收器&lt;/a&gt;。为了做这件事，PHP 还需要存更多的数据。
+我不想在这里介绍这个算法是如何运转的，你可以阅读上面的链接。
+对于我们的大小计算重要的内容是，PHP 会把每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 包入一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval_gc_info&lt;/code&gt; 结构。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _zval_gc_info {
+    zval z;
+    union {
+        gc_root_buffer       *buffered;
+        struct _zval_gc_info *next;
+    } u;
+} zval_gc_info;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;你可以看到，Zend 只是加入了一个包涵有两个指针的联合体。正如你记得的，一个联合体的大小等于它的最大元素的大小：
+两个元素都是指针，因此都是 8 bytes。所以这个联合体也是 8 bytes。&lt;/p&gt;
+
+&lt;p&gt;如果我们加到前面计算的 24 bytes 上就得到了 32 bytes，乘以 100000 结果是 3.05 MB。&lt;/p&gt;
+
+&lt;h2 id=&quot;zend-mm-allocator&quot;&gt;Zend MM allocator&lt;/h2&gt;
+
+&lt;p&gt;C 不像 PHP，它不会帮你管理内存。你需要自己关注内存的分配情况。
+PHP 使用了一个专门为这个需求进行过专门优化的自定义内存管理器：&lt;a href=&quot;http://php.net/manual/en/internals2.memory.php&quot;&gt;Zend Memory Manager&lt;/a&gt;。
+Zend MM 基于 &lt;a href=&quot;http://g.oswego.edu/dl/html/malloc.html&quot;&gt;Doug Lea’s malloc&lt;/a&gt; 并且增加了一些 PHP 特定的优化和功能（如内存限制，每个请求后内存清理等）&lt;/p&gt;
+
+&lt;p&gt;对于我们的计算最重要的是，这个“MM”在进行了每次分配后会给添加一个分配头。&lt;a href=&quot;http://lxr.php.net/xref/PHP_5_4/Zend/zend_alloc.c#336&quot;&gt;定义如下&lt;/a&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _zend_mm_block {
+    zend_mm_block_info info;
+#if ZEND_DEBUG
+    unsigned int magic;
+# ifdef ZTS
+    THREAD_T thread_id;
+# endif
+    zend_mm_debug_info debug;
+#elif ZEND_MM_HEAP_PROTECTION
+    zend_mm_debug_info debug;
+#endif
+} zend_mm_block;
+
+typedef struct _zend_mm_block_info {
+#if ZEND_MM_COOKIES
+    size_t _cookie;
+#endif
+    size_t _size; // size of the allocation
+    size_t _prev; // previous block (not sure what exactly this is)
+} zend_mm_block_info;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ON WORKING&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Jul 2016 23:45:00 +0800</pubDate>
+        <link>https://crispgm.com/page/php-casting-vs-intval.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/php-casting-vs-intval.html</guid>
+        
+        <category>PHP</category>
+        
+        <category>PHP5</category>
+        
+        <category>Internal</category>
+        
+        
+      </item>
     
       <item>
         <title>Olympus Camera Wi-Fi API</title>
@@ -42,7 +241,7 @@
 
 &lt;p&gt;The Project is &lt;a href=&quot;https://github.com/crispgm/olympia&quot;&gt;crispgm/olympia&lt;/a&gt;, written in Ruby.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 26 May 2016 18:06:22 +0800</pubDate>
+        <pubDate>Tue, 31 May 2016 18:06:22 +0800</pubDate>
         <link>https://crispgm.com/page/olympus-wifi-api.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/olympus-wifi-api.html</guid>
         
@@ -118,9 +317,17 @@
 &lt;p&gt;第一个是：&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;（我）曾经在微博上看到一位父亲发的内容：
-&amp;gt; 在我儿子帮助下把 iPad 越狱装了个PP助手，看着那么多不要钱的软件想着以前竟然花钱买软件简直是痛不欲生。
-我的感受：这儿子也够可怜的，从小就不知道偷盗为何物！&lt;/p&gt;
+  &lt;p&gt;（我）曾经在微博上看到一位父亲发的内容：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;“在我儿子帮助下把 iPad 越狱装了个PP助手，看着那么多不要钱的软件想着以前竟然花钱买软件简直是痛不欲生。”&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我的感受：这儿子也够可怜的，从小就不知道偷盗为何物！&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;第二个是：&lt;/p&gt;
@@ -147,7 +354,7 @@
 
     &lt;p&gt;日常使用的工具类软件，大多售价比较低廉，在200之内，对于任何一个需要的人我认为这不是负担。&lt;/p&gt;
 
-    &lt;p&gt;专业类商业软件非常贵，学生阶段可以免费使用学生版或者购买学生版（根据不同公司的政策不同）。职业阶段，往往公司会提供，如果不幸没有提供那就采用下面的其它方式。&lt;/p&gt;
+    &lt;p&gt;专业类商业软件非常贵，学生阶段可以免费使用学生版或者购买学生版（根据不同公司的政策不同）。职业阶段，往往公司会提供，如果不幸没有提供可以选择采用下面的其它方式。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;寻找替代品&lt;/p&gt;
@@ -538,149 +745,6 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         <category>m3u8</category>
         
         <category>ffmpeg</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>BigPipe 实践 (nginx + hhvm)</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;随着 Web 页面的功能不断堆砌（其实我是极简主义者，但PM或者说是国内的风气，总是喜欢不断加入各类功能），页面需要的数据越来越多，串行连接后端的耗时自然是不断增大。常见的优化手段就是后端并行化，而对于前端来说，后端并行化只是降低了 response time，但用户最终看到页面的时间并没有减少。&lt;/p&gt;
-
-&lt;p&gt;Facebook 提出了 BigPipe 的方案，讲页面功能分块，分成若干个 pagelet。pagelet 的加载使用了 http 的 chunked 特性，采用类似 Pipeline 的方式进行前后端数据传输。浏览器端会首先获得一个框架层的 HTML/css，以及基础 JavaScript 代码。同时，后端也可以进行并行化，每个 pagelet 完成后，通过 flush 输出到浏览器。浏览器端的 JavaScript 基于事件机制，收到数据后进行渲染。&lt;/p&gt;
-
-&lt;p&gt;这样，前后端就可以都做到并行化，用户可以先看到部分页面内容，从而获得了更好的用户体验。目前，国外主要是 Facebook 应用了这项技术，而国内微博也通过 BigPipe 获得了不错的效果。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/image/fb-bigpipe.png&quot; alt=&quot;Facebook-BigPipe&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;图：Facebook 加载时的 timing，可以看到 waiting 时间（也就是后端响应时间 response time）明显低于 content download 耗时。&lt;/p&gt;
-
-&lt;h2 id=&quot;demo&quot;&gt;简单 Demo&lt;/h2&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &#39;hello&#39;;
-flush();
-ob_flush();
-sleep(1);
-echo &#39;world&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这是一个最简单的 BigPipe demo，然而由于 fastcgi_buffer 的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用 str_pad 填充一些字符以达到 buffer。ps：吐槽一下 str_pad 这个函数名，明明 str 系列函数都是不带下划线的，如 strlen, strcpy 等，但这个函数却有下划线。str 系列函数表示：我们之间出现了叛徒！&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo str_pad(&#39;hello&#39;, 10000, &#39; &#39;);
-flush();
-ob_flush();
-sleep(1);
-echo str_pad(&#39;world&#39;, 10000, &#39; &#39;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;进行字符填充后，BigPipe 效果显现了出来，hello 之后过1秒后会才会出现 world。由此可见，buffer 这块是个问题，后面会单独具体介绍科学优雅的解决方法。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;实践&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;整体设计&lt;/h3&gt;
-
-&lt;p&gt;BigPipe 的整体方案是需要具体实现环节分为如下几部分：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;BigPipe 框架。包括前端和后端两部分，以及对于不支持 BigPipe 模式的流量器启用的降级模式。此外，为了便于 SEO，对于搜索引擎 Spider 的抓取也要使用降级模式。&lt;/li&gt;
-  &lt;li&gt;Pagelet 和 DataProvider 管理维护制度。这是一项管理上的措施，主要是为了管理 Pagetlet、DataProvider 以及其之间的依赖关系。&lt;/li&gt;
-  &lt;li&gt;BigPipe 调试工具。由于在 BigPipe 开发模式中，后端开发负责 DataProvider，前端人员负责 Pagelet，双方需要调试工具进行独立开发调试。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;潜在问题&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;页面交叉调用过多，导致 pipe 输出效果并不好&lt;/li&gt;
-  &lt;li&gt;前端的误调用会影响后端的响应时间&lt;/li&gt;
-  &lt;li&gt;后端性能优化需要前端配合&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;异步并行框架&lt;/h3&gt;
-
-&lt;p&gt;由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;t = max(t1, t2, t3...)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。&lt;/p&gt;
-
-&lt;p&gt;因此，BigPipe 并行框架采用异步-回调模式，通过状态机模拟异步过程。状态机会以深度优先遍历 DataProvider 以及其依赖的 DataProvider，并初始化成 &lt;strong&gt;INITIAL&lt;/strong&gt; 状态。没有依赖的 DataProvider 会直接执行，进入 &lt;strong&gt;EXECUTING&lt;/strong&gt; 状态。当一个有依赖的 DataProvider 的依赖已经全部处于 &lt;strong&gt;READY&lt;/strong&gt; 状态时，则会同一般的 DataProvider 一样 execute 执行。execute 函数中会有数据交互和业务逻辑处理，当处理完毕后需要主动调用 ready 函数将 DataProvider 自身置为 &lt;strong&gt;READY&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;Pagelet 依赖的 DataProvider 都 &lt;strong&gt;READY&lt;/strong&gt; 后，就会渲染页面。&lt;/p&gt;
-
-&lt;h3 id=&quot;buffer&quot;&gt;Buffer问题&lt;/h3&gt;
-
-&lt;p&gt;由于“各路” buffer 的存在，如果包比较小的话 BigPipe 的 chunked 输出很可能会被 buffer 住。针对这种情况，一般来说有两种方式。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;使用 strpad 这类函数进行填充，如：填充空格。永远将一次 flush 的数据填充到 buffer_size。&lt;/li&gt;
-  &lt;li&gt;调小 buffer，让数据更容易达到 buffer_size。&lt;/li&gt;
-  &lt;li&gt;关闭 buffer。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;对于 Nginx 来说，会有 proxy_buffer 和 fastcgi_buffer。第一种方式，不用调整 buffer，但这种方式很不优雅，而且增加了带宽，并不是很合理。至于调小 buffer，这看起来是一个很好的思路，然而对于 gzip 过的数据来说，最小的 buffer 可能也比较大。因此，我们选择了关闭 proxy_buffer 和 fastcgi_buffer。&lt;/p&gt;
-
-&lt;p&gt;然而，这样带来了一个问题。线上运行中的 Nginx 1.4.4版本过低，关闭 proxy_buffer 的指令 proxy_buffering off 原生就支持。而关闭 fastcgi_buffer 的 fastcgi_buffering 需要1.5.6版本。所以首先，我们把 Nginx 版本升级到了1.7.8，重编译后上线。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Syntax: fastcgi_buffering on | off;
-Default: fastcgi_buffering on;
-Context: http, server, location
-This directive appeared in version 1.5.6.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering&quot;&gt;http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 旧版本的Nginx并不支持fastcgi_buffering
-nginx: [emerg] unknown directive &quot;fastcgi_buffering&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;还有一个问题，就是我们并不想对所有请求都关闭 buffer。为了将影响面做得最小，我们只想关闭特定模块的 buffer。改 nginx.conf 固然可以实现，不过对于不支持嵌套 if 的 nginx.conf 来说这是个很不舒服的用法。&lt;/p&gt;
-
-&lt;p&gt;幸好，在升级的过程中，发现了一个刚好可以用 http header，用于关闭 buffer。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Buffering can also be enabled or disabled by passing “yes” or “no” in the “X-Accel-Buffering” response header field. This capability can be disabled using the fastcgi_ignore_headers directive.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;因此，配置上完全不用关闭 buffer，只需要在 php 代码中加 header 就好，顺利把 buffer 优雅关闭。&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header(&#39;X-Accel-Buffering: no&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;效果评估&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TTFB时间减少56% (TTFB = time to first byte)&lt;/li&gt;
-  &lt;li&gt;白屏时间减少59%&lt;/li&gt;
-  &lt;li&gt;降低了局部刷新开发成本&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-6&quot;&gt;其它总结&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;开发迁移时间超长，从立项到上线总共持续了半年，前端主要开发人员因为离职等原因换了三波&lt;/li&gt;
-  &lt;li&gt;底层本质上还无法并发，优化效果远远不够彻底&lt;/li&gt;
-  &lt;li&gt;pagelet 交叉请求比较多，效果没有那么好&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 26 Jun 2015 16:23:00 +0800</pubDate>
-        <link>https://crispgm.com/page/bigpipe-practice.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/bigpipe-practice.html</guid>
-        
-        <category>BigPipe</category>
-        
-        <category>nginx</category>
-        
-        <category>hhvm</category>
-        
-        <category>php</category>
         
         
       </item>

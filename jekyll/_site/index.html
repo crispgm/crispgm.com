@@ -52,63 +52,208 @@
 <div id="container">
   <div class="article">
   <div class="article-head">
-    <div class="article-title"><a href="/page/olympus-wifi-api.html">Olympus Camera Wi-Fi API</a></div>
-    <div class="article-date">2016/05/26</div>
+    <div class="article-title"><a href="/page/php-casting-vs-intval.html">『翻译』PHP 数组有多大？</a></div>
+    <div class="article-date">2016/07/05</div>
   </div>
   <div class="article-main">
-    <h1 id="background">Background</h1>
+    <p>提示：很大！</p>
 
-<p>Since I started my interest on photography, I chose SONY RX100 Mark III initially and now I use a M4/3 interchangeable lens camera, the Olympus E-M5 Mark II.</p>
+<h1 id="section">声明</h1>
 
-<p>Cameras nowadays commonly support Wi-Fi sync with mobile apps. And so does Olympus, which provides an OI Share app to do that.</p>
+<p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
 
-<p>And I found some blog articles about the Wi-Fi protocol or commands of Olympus camera. Most of them are not well maintained, because Olympus camera is a minority choice in Internet world.</p>
+<p>原文：<a href="https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html">How big are PHP arrays (and values) really? (Hint: BIG!)</a></p>
 
-<p>Fortunately, I found the <a href="https://github.com/stv0g/libqt-omd">stv0g/libqt-omd</a> project on GitHub. Though the wiki is down, I could read the source code to figure out the APIs by myself.</p>
+<h1 id="disclaimer">Disclaimer</h1>
 
-<h1 id="api-specification">API Specification</h1>
+<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic">@nikic</a>),
+in which I have done a small amount of adjustment based on the reading habit of Chinese.</p>
 
-<p>The API specification is maintained at <a href="https://github.com/crispgm/olympia/blob/master/api_specs.md">Olympus Wi-Fi API Specification</a>.</p>
+<p>Original Page:</p>
 
-<p>Here is a useful gist <a href="https://gist.github.com/mangelajo/6fa005ff3544fecdecfa">https://gist.github.com/mangelajo/6fa005ff3544fecdecfa</a> and there is an official protocol document in comment.</p>
+<blockquote>
+  <p><a href="https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html">How big are PHP arrays (and values) really? (Hint: BIG!)</a></p>
+</blockquote>
 
-<h1 id="olympia">Olympia</h1>
+<blockquote>
+  <p>By Nikita Popov, <a href="https://nikic.github.io">https://nikic.github.io</a></p>
+</blockquote>
 
-<p>At last, I came up with an idea that make a web based client for computers built with the APIs, which is named Olympia. Thus, we can transfer and manage photos on our computer.</p>
+<blockquote>
+  <p>December 12th, 2014</p>
+</blockquote>
 
-<p>Here is a list of features:</p>
+<blockquote>
+  <p>Translated by Crisp</p>
+</blockquote>
 
-<ul>
-  <li>Web based UI</li>
-  <li>Sync photos easily</li>
-  <li>Manage photos both remotely and locally</li>
-  <li>Upload or backup to online cloud storage</li>
-</ul>
+<h1 id="section-1">正文</h1>
 
-<p>The Project is <a href="https://github.com/crispgm/olympia">crispgm/olympia</a>, written in Ruby.</p>
+<p><strong>更新</strong>(2016-06-14)：这篇文章主要关于 PHP 5 的内存使用。PHP 7 的内存占用，对于本文提到的情况，大约得到了3倍的优化。请阅读 <a href="https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html">hashtable implementation in PHP 7</a> 获得更多信息。</p>
+
+<p>在一开始，我想感谢<a href="http://schlueters.de/blog/">约翰尼斯 Johannes</a> 和 <a href="http://www.tyrael.hu/">泰瑞尔 Tyrael</a>，他们帮助我寻找到了更多的隐藏内存使用。</p>
+
+<p>这篇博客，我将使用如下脚本作为样本研究 PHP 数组（及其值）的总体内存占用情况，这个脚本会创建 100000 个唯一的整型数组元素并计算其内存占用：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+$array = range(1, 100000);
+echo memory_get_usage() - $startMemory, ' bytes';
+</code></pre>
+</div>
+
+<p>你估计它的内存占用会有多大呢？简单的说，一个整型数是 8 bytes（在一个 64 位 UNIX 机器上使用 <code class="highlighter-rouge">long</code> 类型），且有 100000 个整型数。
+所以显而易见，你需要 800000 bytes。这大概是 0.76 MB。</p>
+
+<p>现在，我们尝试运行上面的测试代码，结果需要 14649024 bytes。是的，你没听错，是 13.97 MB —— 是估计值的 18 倍。</p>
+
+<p>所以，额外多出的 18 倍来自于哪？</p>
+
+<h2 id="section-2">概述</h2>
+
+<p>对于那些不想看完整个故事的人，这里给出了一个煎蛋的涉及到的不同组件的内存占用情况：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>                             |  64 bit   | 32 bit
+---------------------------------------------------
+zval                         |  24 bytes | 16 bytes
++ cyclic GC info             |   8 bytes |  4 bytes
++ allocation header          |  16 bytes |  8 bytes
+===================================================
+zval (value) total           |  48 bytes | 28 bytes
+===================================================
+bucket                       |  72 bytes | 36 bytes
++ allocation header          |  16 bytes |  8 bytes
++ pointer                    |   8 bytes |  4 bytes
+===================================================
+bucket (array element) total |  96 bytes | 48 bytes
+===================================================
+total total                  | 144 bytes | 76 bytes
+</code></pre>
+</div>
+
+<p>上面的数字根据你的操作系统、编译器和编译器参数的不同会有变化。比如：如果你使用 debug 模式编译 PHP 或者开启线程安全，你会得到不同的值。但我认为上述值的大小是你能看到的 64 位生产版本 Linux 下 PHP 5.3 的平均值。</p>
+
+<p>如果你将它们用 144 bytes 乘以 100000 个元素，会得到 14400000 bytes，也就是 13.73 MB。这很接近实际值，剩下的大多是给未初始化的 buckets 的指针，我将会在后续提到它。</p>
+
+<p>现在，如果你想对上述数值有更细节的分析，继续读 :)</p>
+
+<h2 id="zvaluevalue-"><code class="highlighter-rouge">zvalue_value</code> 联合体</h2>
+
+<p>首先看一下 PHP 是如何存储数值的。众所周知 PHP 是一个弱类型语言，所以它需要在不通类型中快速切换。
+因此 PHP 使用联合体 <code class="highlighter-rouge">union</code> 实现数值存储，它定义在 zend.h 的 307行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>typedef union _zvalue_value {
+    long lval;                // For integers and booleans
+    double dval;              // For floats (doubles)
+    struct {                  // For strings
+        char *val;            //     consisting of the string itself
+        int len;              //     and its length
+    } str;
+    HashTable *ht;            // For arrays (hash tables)
+    zend_object_value obj;    // For objects
+} zvalue_value;
+</code></pre>
+</div>
+
+<p>如果你不懂 C 语言，那也不是一个问题因为这段代码很直接：联合体是一种可以将数值以不同类型存取的方式。
+比如说，如果你使用 <code class="highlighter-rouge">zvalue_value-&gt;lval</code>，你将会获得以整型解析的值。如果你使用 <code class="highlighter-rouge">zvalue_value-&gt;ht</code>，值会被解析成一个指向 Hashtable（哈希表）的指针（也就是 php 所谓的数组）。</p>
+
+<p>但是，我们不需要过于关注这些。最重要的是，一个联合体的大小等于它最大的元素的大小。
+这个联合体中，最大的组成部分是 <code class="highlighter-rouge">string</code> 结构（<code class="highlighter-rouge">zend_object_value</code> 结构同 <code class="highlighter-rouge">string</code> 一样，这么为了简单只说后者）。
+<code class="highlighter-rouge">string</code>包含一个指针（8 bytes）和一个整型（4 bytes），总共 12 bytes。
+由于内存对齐的原因（12 bytes 不够 cool，因为它不是 64 bits / 8 bytes 的倍数），整个结构的总大小位 16 bytes，因此这是这个联合体的整体大小。</p>
+
+<p>因此现在我们知道，由于 PHP 动态类型的原因，每个值不是需要 8 bytes，而是 16 bytes。
+乘以 100000 后得到 1600000 bytes，即 1.53 MB。
+但是，实际值是 13.97 MB，所以我们还是没有得到答案。</p>
+
+<h2 id="zval-"><code class="highlighter-rouge">zval</code> 结构</h2>
+
+<p>这很符合逻辑：联合体只是存值本身，而 PHP 显然还需要存储它的类型以及一些垃圾回收信息。
+你可能已经听说过，带有这些信息的结构体叫做 <code class="highlighter-rouge">zval</code>。想获取更多信息，我推荐阅读<a href="http://blog.golemon.com/2007/01/youre-being-lied-to.html">萨拉·戈尔蒙（Sara Golemon）的一篇文章</a>。无论如何，结构体定义如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>struct _zval_struct {
+    zvalue_value value;     // The value
+    zend_uint refcount__gc; // The number of references to this value (for GC)
+    zend_uchar type;        // The type
+    zend_uchar is_ref__gc;  // Whether this value is a reference (&amp;)
+};
+</code></pre>
+</div>
+
+<p>一个结构体的大小由它的元素总和决定：<code class="highlighter-rouge">zvalue_value</code> 是 16 bytes，<code class="highlighter-rouge">zend_uint</code> 是 4 bytes，<code class="highlighter-rouge">zend_uchars</code> 每一个 1 bytes。
+总共 22 bytes。还是因为内存对齐，实际的大小是 24 bytes。</p>
+
+<p>如果你存储 100000 个 24 bytes 的元素，总共需要 2400000 bytes，也就是 2.29 MB。
+差值在缩小，但真实值仍旧要有 6 倍大。</p>
+
+<h2 id="php-53">垃圾周期回收器（对于 PHP 5.3）</h2>
+
+<p>PHP 5.3 引入了一种新的<a href="http://php.net/manual/en/features.gc.collecting-cycles.php">解决循环引用的垃圾回收器</a>。为了做这件事，PHP 还需要存更多的数据。
+我不想在这里介绍这个算法是如何运转的，你可以阅读上面的链接。
+对于我们的大小计算重要的内容是，PHP 会把每个 <code class="highlighter-rouge">zval</code> 包入一个 <code class="highlighter-rouge">zval_gc_info</code> 结构。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _zval_gc_info {
+    zval z;
+    union {
+        gc_root_buffer       *buffered;
+        struct _zval_gc_info *next;
+    } u;
+} zval_gc_info;
+</code></pre>
+</div>
+
+<p>你可以看到，Zend 只是加入了一个包涵有两个指针的联合体。正如你记得的，一个联合体的大小等于它的最大元素的大小：
+两个元素都是指针，因此都是 8 bytes。所以这个联合体也是 8 bytes。</p>
+
+<p>如果我们加到前面计算的 24 bytes 上就得到了 32 bytes，乘以 100000 结果是 3.05 MB。</p>
+
+<h2 id="zend-mm-allocator">Zend MM allocator</h2>
+
+<p>C 不像 PHP，它不会帮你管理内存。你需要自己关注内存的分配情况。
+PHP 使用了一个专门为这个需求进行过专门优化的自定义内存管理器：<a href="http://php.net/manual/en/internals2.memory.php">Zend Memory Manager</a>。
+Zend MM 基于 <a href="http://g.oswego.edu/dl/html/malloc.html">Doug Lea’s malloc</a> 并且增加了一些 PHP 特定的优化和功能（如内存限制，每个请求后内存清理等）</p>
+
+<p>对于我们的计算最重要的是，这个“MM”在进行了每次分配后会给添加一个分配头。<a href="http://lxr.php.net/xref/PHP_5_4/Zend/zend_alloc.c#336">定义如下</a>：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _zend_mm_block {
+    zend_mm_block_info info;
+#if ZEND_DEBUG
+    unsigned int magic;
+# ifdef ZTS
+    THREAD_T thread_id;
+# endif
+    zend_mm_debug_info debug;
+#elif ZEND_MM_HEAP_PROTECTION
+    zend_mm_debug_info debug;
+#endif
+} zend_mm_block;
+
+typedef struct _zend_mm_block_info {
+#if ZEND_MM_COOKIES
+    size_t _cookie;
+#endif
+    size_t _size; // size of the allocation
+    size_t _prev; // previous block (not sure what exactly this is)
+} zend_mm_block_info;
+</code></pre>
+</div>
+
+<p>ON WORKING</p>
 
   </div>
   
     <div class="article-tag">
     
     <div class="tag-item">
-    Olympus
+    PHP
     </div>
     
     <div class="tag-item">
-    Camera
+    PHP5
     </div>
     
     <div class="tag-item">
-    Wi-Fi
-    </div>
-    
-    <div class="tag-item">
-    API
-    </div>
-    
-    <div class="tag-item">
-    Photography
+    Internal
     </div>
     
     </div>
