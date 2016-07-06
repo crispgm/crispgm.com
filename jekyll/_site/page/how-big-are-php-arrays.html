@@ -64,26 +64,9 @@
 
 <h1 id="disclaimer">Disclaimer</h1>
 
-<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic">@nikic</a>),
-in which I have done a small amount of adjustment based on the reading habit of Chinese.</p>
+<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic">@nikic</a>), in which I have done a small amount of adjustment based on the reading habit of Chinese.</p>
 
-<p>Original Page:</p>
-
-<blockquote>
-  <p><a href="https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html">How big are PHP arrays (and values) really? (Hint: BIG!)</a></p>
-</blockquote>
-
-<blockquote>
-  <p>By Nikita Popov, <a href="https://nikic.github.io">https://nikic.github.io</a></p>
-</blockquote>
-
-<blockquote>
-  <p>December 12th, 2014</p>
-</blockquote>
-
-<blockquote>
-  <p>Translated by Crisp</p>
-</blockquote>
+<p>Original Page: <a href="https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html">How big are PHP arrays (and values) really? (Hint: BIG!)</a></p>
 
 <h1 id="section-1">正文</h1>
 
@@ -260,7 +243,7 @@ typedef struct _zend_mm_block_info {
 
 <p><em>神秘真正被解决了。</em></p>
 
-<h2 id="section-3">这体现了什么？</h2>
+<h2 id="section-3">这表明了什么？</h2>
 
 <p><strong>PHP 不是 C</strong>。这是它主要体现给我们的。你不能指望一个像 PHP 一样很动态的语言与 C 语言一样有同样高效的内存使用。你就是不能。</p>
 
@@ -293,6 +276,14 @@ echo memory_get_usage() - $startMemory, ' bytes';
       
       <div class="tag-item">
       Internal
+      </div>
+      
+      <div class="tag-item">
+      Array
+      </div>
+      
+      <div class="tag-item">
+      Hash
       </div>
       
     </div>
