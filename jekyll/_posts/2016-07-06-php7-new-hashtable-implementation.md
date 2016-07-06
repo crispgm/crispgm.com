@@ -112,13 +112,59 @@ struct _zval_struct {
 
 第二部分是 4 bytes 的 ```type_info```，包含有实际的类型（像 ```IS_STRING``` 或 ```IS_ARRAY```），并且有一些额外的提供这个类型信息的标识。比如，如果这个 ```zval``` 存储了一个对象，则类型的标识会说它是一个非常量、引用计数了的、可垃圾收集的、非复制类型。
 
-The last 4 bytes of the zval structure are normally unused (it’s really just explicit padding, which the compiler would introduce automatically otherwise). However in special contexts this space is used to store some extra information. E.g. AST nodes use it to store a line number, VM constants use it to store a cache slot index and hashtables use it to store the next element in the collision resolution chain - that last part will be important to us.
+最后 4 bytes 是 ```zval``` 结构通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的索引，Hash 表用它存储在冲突解决链表中的下一个元素 —— 最后这一部分对我们很重要。
 
-If you compare this to the previous zval implementation, one difference particularly stands out: The new zval structure no longer stores a refcount. The reason behind this, is that the zvals themselves are no longer individually allocated. Instead the zval is directly embedded into whatever is storing it (e.g. a hashtable bucket).
+如果你同之前的 ```zval``` 实现对比，一个最特别的不同是：新的 ```zval``` 结构不再存储引用计数 ```refcount```。这后面的原因是，```zval``` 不再被单独分配，而是被直接集成在任何存储它的地方（比如：Hash 表中的 ```bucket```）。
 
-While the zvals themselves no longer use refcounting, complex data types like strings, arrays, objects and resources still use them. Effectively the new zval design has pushed out the refcount (and information for the cycle-collector) from the zval to the array/object/etc. There are a number of advantages to this approach, some of them listed in the following:
+```zval``` 们本身不再使用引用计数，而复杂的数据类型如 ```string```, ```array```, ```object``` and ```resource``` 等还会使用引用计数。事实上，新的 ```zval``` 设计将引用计数从 ```zval``` 提到了 array/object 等上。这种方式会有很多好处，下面列出了部分好处：
+
+* ```zval``` 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头，并且通过避免不必要的分配和释放内存改善了缓存位置，提升了性能。
+* ```zval``` 存储简单的数值不需要存储引用计数和 GC 根缓冲。
+* 我们避免了双重的引用计数。例如：过去，对象会既使用 ```zval``` 的引用计数，又增加了一个额外的对象引用计数，被用于支持对象传值的语法。
+* 由于所有复杂的值现在集成了引用计数，它们可以独立共享 ```zval``` 的机制。尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非内部字符串类型的键值。
 
 ## 新的 Hash 表实现
+
+在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 ```bucket``` 的结构开始：
+
+```
+typedef struct _Bucket {
+    zend_ulong        h;
+    zend_string      *key;
+    zval              val;
+} Bucket;
+```
+
+一个 ```bucket``` 是一个 Hash 表中的入口。它包含了很多你可以预料到的：一个 Hash ```h```，一个字符串键值 ```key```，一个 ```zval``` 值 ```val```。整型的键值会被存储在 ```h```（键值和 Hash 在这里是一样的），键值将会被设为 ```NULL```。
+
+正如你看到的，```zval``` 直接被 ```bucket``` 所内置，所以它不需要单独的分配，我们不需要为分配付出代价。
+
+主 Hash 表的结构更加有趣：
+
+```
+typedef struct _HashTable {
+    uint32_t          nTableSize;
+    uint32_t          nTableMask;
+    uint32_t          nNumUsed;
+    uint32_t          nNumOfElements;
+    zend_long         nNextFreeElement;
+    Bucket           *arData;
+    uint32_t         *arHash;
+    dtor_func_t       pDestructor;
+    uint32_t          nInternalPointer;
+    union {
+        struct {
+            ZEND_ENDIAN_LOHI_3(
+                zend_uchar    flags,
+                zend_uchar    nApplyCount,
+                uint16_t      reserve)
+        } v;
+        uint32_t flags;
+    } u;
+} HashTable;
+```
+
+```bucket```（相当于数组元素）存储在 ```arData``` 数组中。这个以 2 的幂为大小进行分配，数组的大小存储在 ```nTableSize```（最小值为 8）。元素的实际数量是 ```nNumOfElements```。注意，这个数组直接包含有 ```bucket```。之前，我们使用一个指针数组去单独分配 ```bucket```，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。
 
 ## 元素的顺序
 
@@ -133,4 +179,5 @@ While the zvals themselves no longer use refcounting, complex data types like st
 ## 性能
 
 ## 结尾思考
+
 TODO
