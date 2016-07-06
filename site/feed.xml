@@ -5,8 +5,8 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Jul 2016 01:05:15 +0800</pubDate>
-    <lastBuildDate>Thu, 07 Jul 2016 01:05:15 +0800</lastBuildDate>
+    <pubDate>Thu, 07 Jul 2016 01:22:55 +0800</pubDate>
+    <lastBuildDate>Thu, 07 Jul 2016 01:22:55 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -852,33 +852,33 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         <title>『推荐』有趣的终端 Terminal 工具</title>
         <description>&lt;h2 id=&quot;doubanfm&quot;&gt;Douban.fm&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt; Node.js 编写的控制台版的豆瓣fm，Mac 上亲测可用，但不太稳定&lt;/p&gt;
+&lt;p&gt;Node.js 编写的控制台版的豆瓣fm，Mac 上亲测可用，但不太稳定&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt; &lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;https://github.com/turingou/douban.fm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;https://github.com/turingou/douban.fm&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;gotty&quot;&gt;Gotty&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt; Go 编写的终端“直播”工具，参见：GoTTY - 将你的 terminal 输出到网页上&lt;/p&gt;
+&lt;p&gt;Go 编写的终端“直播”工具，参见：GoTTY - 将你的 terminal 输出到网页上&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt; &lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;https://github.com/yudai/gotty&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;https://github.com/yudai/gotty&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;wego&quot;&gt;Wego&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt; Go 编写的天气预报工具&lt;/p&gt;
+&lt;p&gt;Go 编写的天气预报工具&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt; https://github.com/schachmat/wego&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/schachmat/wego&quot;&gt;https://github.com/schachmat/wego&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;qrcode-terminal&quot;&gt;Qrcode-terminal&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt; Node.js 编写的在终端显示二维码工具&lt;/p&gt;
+&lt;p&gt;Node.js 编写的在终端显示二维码工具&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt; https://github.com/gtanner/qrcode-terminal&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/gtanner/qrcode-terminal&quot;&gt;https://github.com/gtanner/qrcode-terminal&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
@@ -889,6 +889,10 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         <category>Terminal</category>
         
         <category>Tools</category>
+        
+        <category>Go</category>
+        
+        <category>Node.js</category>
         
         
       </item>

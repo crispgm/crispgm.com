@@ -37,18 +37,17 @@ tags:
 
 * 2015/02/25: 1. 用欧陆词典替代了 Bing 词典 2. 增加奇点 3. 修复文本小 bug
 
-* 2014/10/26: 合并“我喜欢的应用——iPhone篇”和“我喜欢的应用——Mac篇”为“我喜欢的应用”
+* 2014/10/26: 合并“我喜欢的应用 —— iPhone 篇”和“我喜欢的应用 —— Mac 篇”为“我喜欢的应用”
 
-* 2014/08/10: 我喜欢的应用——Mac篇
+* 2014/08/10: 我喜欢的应用 —— Mac 篇
 
-* 2014/05/29: 我喜欢的应用——iPhone篇
+* 2014/05/29: 我喜欢的应用 —— iPhone 篇
 
 ## 正文
 
 ### _Development_
 
-__Chrome__  
-_Windows, Mac, iPhone_
+__Chrome__
 
 速度快，自带同步，全平台支持，还可以不同类型终端之间访问书签和打开的页面。
 强大的插件支持，去优酷广告、JSON 格式化显示和 HTTP 代理都很需要。
@@ -67,9 +66,9 @@ _Why not Safari?_
 
 ps: 打死不用加壳双核类浏览器！
 
-[备选]Safari, Firefox
+[备选] Safari, Firefox
 
-__Sublime Text__  
+__Sublime Text__
 
 Sublime 不是真的免费软件，但免费就可以使用全功能，只是会不定期提示你购买。
 当时刚回国，卡里有几十澳元，因为很喜欢这个软件，也就付费了。
@@ -77,10 +76,10 @@ Sublime 不是真的免费软件，但免费就可以使用全功能，只是会
 Sublime 也支持"插件"(叫做 package )。比如写 Markdown 时可以用 MarkdownEditing 即时预览。
 近期，我打算对 Sublime 的高级用法进行下探索，以后会单独发文介绍的。
 
-_ps_: 
+_ps_:
 Sublime 有一个很吸引人的特性，就是多行编辑。不过，在我一次进行了一次选择了两万行再结尾加逗号的尝试后，发现这个功能在量大(其实两万真不能算量大)的时候完全没法用。
 
-__Dash__  
+__Dash__
 
 Mac 上的 API 文档查询工具，收录了各种编程语言、框架和工具之类的 API Documentation、User Manual 和 Cheat Sheet 什么的。从此查文档不用现场 Google 了。话说 Windows 上还没有发现此类软件，自己做个也许会很有前途。
 
@@ -104,7 +103,7 @@ Airmail 可以说是现在 Mac 最火的 email client，购入后(￥12)只是�
 
 __Gmail__
 
-Windows 上 outlook，Mac 上 Airmail，iPhone 上 Apple Mail，各有优势但也都没有特别满意。后来随着网络环境的改善，基本用 Gmail WebApp，这其实是体现 Gmail 体验优势的地方。
+Windows 上 Outlook，Mac 上 Airmail，iPhone 上 Apple Mail，各有优势但也都没有特别满意。后来随着网络环境的改善，基本用 Gmail WebApp，这其实是体现 Gmail 体验优势的地方。
 
 __Wunderlist__
 
@@ -127,7 +126,7 @@ Microsoft OneNote 作为 Office 的一部分，功能一上来就是"真复杂"�
 对于梳理资料而存在的话，完全可以取代 Evernote。
 并且 Nadella 上台后，也推出了 iOS 和 Mac 版本，唯一缺点就是同步速度略慢。
 
-[备选]曾经出现在列表中的 Evernote
+[备选] 曾经出现在列表中的 Evernote
 
 __百度云__
 
@@ -139,7 +138,7 @@ __百度云__
 __Dropbox__
 
 对于本人来说，算是百度云的冷备，墙外数据安全性明显保障性强。
-但又毕竟在墙内会比较卡，而且 Dropbox 容量只有2G，所以用于备份一些重要数据，但是完全不够用！
+但又毕竟在墙内会比较卡，而且 Dropbox 容量只有 2G，所以用于备份一些重要数据，但是完全不够用！
 
 __OneDrive__
 
@@ -156,7 +155,7 @@ __WordBook__
 
 售价¥12最好的词典 app（英英词典），响应快内容准，字体漂亮。
 
-[备选]必应词典, Google Translate
+[备选] 必应词典, Google Translate
 
 ### _Reading_
 
@@ -173,7 +172,7 @@ __Pocket__
 从阅读体验来说，其实 Reeder 更好些，但 Pocket 也逊色的不多。
 最近刚出了 Premium 版，就是太贵了点。可以离线存储文章，从此不用再担心出现死链了。
 
-_PS:_ 真的书籍就不在手机或平板上阅读了，有 Kindle 和实体书。
+PS: 真的书籍就不在手机或平板上阅读了，有 Kindle 和实体书。
 
 __Instapaper__
 
@@ -260,7 +259,7 @@ __Lightroom__
 
 ### _Music & Video_
 
-__Foobar 2000__ 
+__Foobar 2000__
 
 简单、音质好、支持插件、初始界面丑陋……
 Foobar 2000有很多自己的标签，并得到了一部分注重音质喜欢折腾的用户的青睐。
@@ -323,7 +322,7 @@ __Apple Weather__
 
 简单实用的天气 app，完全可以满足大多数日常需求。
 
-[备选]Yahoo Weather, Accu Weather, Weather Dial
+[备选] Yahoo Weather, Accu Weather, Weather Dial
 
 __Air Quality__
 
