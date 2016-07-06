@@ -5,8 +5,8 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jul 2016 23:49:20 +0800</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2016 23:49:20 +0800</lastBuildDate>
+    <pubDate>Thu, 07 Jul 2016 01:02:02 +0800</pubDate>
+    <lastBuildDate>Thu, 07 Jul 2016 01:02:02 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -114,13 +114,61 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;p&gt;第二部分是 4 bytes 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;type_info&lt;/code&gt;，包含有实际的类型（像 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_STRING&lt;/code&gt; 或 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_ARRAY&lt;/code&gt;），并且有一些额外的提供这个类型信息的标识。比如，如果这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 存储了一个对象，则类型的标识会说它是一个非常量、引用计数了的、可垃圾收集的、非复制类型。&lt;/p&gt;
 
-&lt;p&gt;The last 4 bytes of the zval structure are normally unused (it’s really just explicit padding, which the compiler would introduce automatically otherwise). However in special contexts this space is used to store some extra information. E.g. AST nodes use it to store a line number, VM constants use it to store a cache slot index and hashtables use it to store the next element in the collision resolution chain - that last part will be important to us.&lt;/p&gt;
+&lt;p&gt;最后 4 bytes 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的索引，Hash 表用它存储在冲突解决链表中的下一个元素 —— 最后这一部分对我们很重要。&lt;/p&gt;
 
-&lt;p&gt;If you compare this to the previous zval implementation, one difference particularly stands out: The new zval structure no longer stores a refcount. The reason behind this, is that the zvals themselves are no longer individually allocated. Instead the zval is directly embedded into whatever is storing it (e.g. a hashtable bucket).&lt;/p&gt;
+&lt;p&gt;如果你同之前的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 实现对比，一个最特别的不同是：新的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构不再存储引用计数 &lt;code class=&quot;highlighter-rouge&quot;&gt;refcount&lt;/code&gt;。这后面的原因是，&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 不再被单独分配，而是被直接集成在任何存储它的地方（比如：Hash 表中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;）。&lt;/p&gt;
 
-&lt;p&gt;While the zvals themselves no longer use refcounting, complex data types like strings, arrays, objects and resources still use them. Effectively the new zval design has pushed out the refcount (and information for the cycle-collector) from the zval to the array/object/etc. There are a number of advantages to this approach, some of them listed in the following:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 们本身不再使用引用计数，而复杂的数据类型如 &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;resource&lt;/code&gt; 等还会使用引用计数。事实上，新的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 设计将引用计数从 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 提到了 array/object 等上。这种方式会有很多好处，下面列出了部分好处：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头，并且通过避免不必要的分配和释放内存改善了缓存位置，提升了性能。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 存储简单的数值不需要存储引用计数和 GC 根缓冲。&lt;/li&gt;
+  &lt;li&gt;我们避免了双重的引用计数。例如：过去，对象会既使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的引用计数，又增加了一个额外的对象引用计数，被用于支持对象传值的语法。&lt;/li&gt;
+  &lt;li&gt;由于所有复杂的值现在集成了引用计数，它们可以独立共享 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的机制。尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非内部字符串类型的键值。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;hash--2&quot;&gt;新的 Hash 表实现&lt;/h2&gt;
+
+&lt;p&gt;在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 的结构开始：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _Bucket {
+    zend_ulong        h;
+    zend_string      *key;
+    zval              val;
+} Bucket;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 是一个 Hash 表中的入口。它包含了很多你可以预料到的：一个 Hash &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;，一个字符串键值 &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt;，一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 值 &lt;code class=&quot;highlighter-rouge&quot;&gt;val&lt;/code&gt;。整型的键值会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;（键值和 Hash 在这里是一样的），键值将会被设为 &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;正如你看到的，&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 直接被 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 所内置，所以它不需要单独的分配，我们不需要为分配付出代价。&lt;/p&gt;
+
+&lt;p&gt;主 Hash 表的结构更加有趣：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _HashTable {
+    uint32_t          nTableSize;
+    uint32_t          nTableMask;
+    uint32_t          nNumUsed;
+    uint32_t          nNumOfElements;
+    zend_long         nNextFreeElement;
+    Bucket           *arData;
+    uint32_t         *arHash;
+    dtor_func_t       pDestructor;
+    uint32_t          nInternalPointer;
+    union {
+        struct {
+            ZEND_ENDIAN_LOHI_3(
+                zend_uchar    flags,
+                zend_uchar    nApplyCount,
+                uint16_t      reserve)
+        } v;
+        uint32_t flags;
+    } u;
+} HashTable;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;（相当于数组元素）存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 数组中。这个以 2 的幂为大小进行分配，数组的大小存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt;（最小值为 8）。元素的实际数量是 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumOfElements&lt;/code&gt;。注意，这个数组直接包含有 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;。之前，我们使用一个指针数组去单独分配 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。&lt;/p&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;元素的顺序&lt;/h2&gt;
 
@@ -135,6 +183,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 &lt;h2 id=&quot;section-4&quot;&gt;性能&lt;/h2&gt;
 
 &lt;h2 id=&quot;section-5&quot;&gt;结尾思考&lt;/h2&gt;
+
 &lt;p&gt;TODO&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jul 2016 21:17:00 +0800</pubDate>
