@@ -11,7 +11,7 @@ tags:
 
 ## What is YouCompleteMe
 
-[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) 是一个vim插件，简称为 ycm，支持基于语义的代码补全和代码语法检查功能。
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) 是一个 vim 插件，简称为 ycm，支持基于语义的代码补全和代码语法检查功能。
 
 常用的补全插件如 ctags 和 AutoComplPop 等是基于文本的，类似于搜索时的 suggest 功能。不过，前者是事先扫描文本生成 tags 文件，后者是对当前打开的文件内容进行扫描。
 如果 tags 或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。
@@ -45,14 +45,14 @@ vim ~/.vimrc
 ```
 
 加入
-    
+
 ```
 Bundle 'Valloric/YouCompleteMe'
 ```
 
 保存重启 vim 后 _:BundleInstall_，就开始安装了。这个安装并没有包括编译，只是把 ycm 的 vim、python 以及 C++ 代码下载下来。
 
-然后进入 YouCompleteMe 的目录开始编译，_--clang-completer_ 是启用 C family languages 提示(为的就是这功能，果断要加上)
+然后进入 YouCompleteMe 的目录开始编译，```--clang-completer``` 是启用 C family languages 提示(为的就是这功能，果断要加上)
 
 ```
 cd ~/.vim/bundle/YouCompleteMe
@@ -75,9 +75,9 @@ let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/yc
 
 ![](/image/ycm-demo.png)
 
-Congrats to myself! 
+Congrats to myself!
 
-ycm 提示出了对象md的成员函数(f标识)和成员变量(m标识)等信息。
+ycm 提示出了对象 md 的成员函数(f 标识)和成员变量(m 标识)等信息。
 
 对于 Mac 来说，由于作者(据我观察)就使用 Mac，而且 Mac OSX 版本比较统一，因此按照作者的 Mac OSX Super-quick installation 步骤基本可以顺利安装。
 

@@ -10,11 +10,11 @@ tags:
 
 ### 原文信息
 
-Original Page: 
+Original Page:
 
 >[PHP: Casting vs. intval()](http://hakre.wordpress.com/2010/05/13/php-casting-vs-intval)
 
->By __Hakre__, [hakre.wordpress.com](http://hakre.wordpress.com)  
+>By __Hakre__, [hakre.wordpress.com](http://hakre.wordpress.com)
 
 >May 13th, 2010
 
@@ -28,7 +28,7 @@ Original Page:
 
 #### (int)$val vs. intval($val) 速度对比[系统 #1]
 
-\#   |输入                    |(INT)$val        |INTVAL($val)          |比率  
+\#   |输入                    |(INT)$val        |INTVAL($val)          |比率
 -----|------------------------|-----------------|----------------------|-----
 \#0  |42                      |: 0.068180       |/ 0.448819            |658%
 \#1  |-42                     |: 0.067972       |/ 0.448907            |660%
@@ -51,7 +51,7 @@ Original Page:
 
 #### (int)$val vs. intval($val) 速度对比[系统 #2]
 
-\#   |输入                    |(INT)$val        |INTVAL($val)          |比率  
+\#   |输入                    |(INT)$val        |INTVAL($val)          |比率
 -----|------------------------|-----------------|----------------------|-----
 \#0  |42                      |: 0.045576       |/ 0.194759            |427%
 \#1  |-42                     |: 0.042457       |/ 0.194273            |457%
@@ -72,7 +72,7 @@ Original Page:
 \#16 |array()                 |: 0.057587       |/ 0.210010            |364%
 \#17 |array('foo', 'bar')     |: 0.071908       |/ 0.224338            |311%
 
-这组测试每个项目进行了100000次循环。两个测试都在windows上运行。系统#1使用的是PHP 5.2.8，而系统#2使用PHP 5.2.9并且有更高的CPU、内存和硬盘速度。
+这组测试每个项目进行了 100000 次循环。两个测试都在 Windows 上运行。系统 #1 使用的是 PHP 5.2.8，而系统 #2 使用 PHP 5.2.9 并且有更高的 CPU、内存和硬盘速度。
 
 #### intval() 和 int 的结果对比
 
@@ -186,34 +186,34 @@ _*: 在上一个测试中，结果未通过_
 
 #### 扩展阅读
 
-* [PHP: Is there any particular difference between intval and (int)?](http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int)  
+* [PHP: Is there any particular difference between intval and (int)?](http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int)
 * [Fastest way to convert string to integer in PHP](http://stackoverflow.com/questions/239136/fastest-way-to-convert-string-to-integer-in-php)
 
 #### 深层原因
 
 对于作者的结论，网友 Joseph Scott 对 OPCODE 进行了分析，解释了其深层原因。
 
-intval()  
+intval()
 ---
 
-    0 ASSIGN  
-    1 SEND_VAR  
-    2 DO_FCALL  
-    3 ASSIGN  
-    4 RETURN  
+    0 ASSIGN
+    1 SEND_VAR
+    2 DO_FCALL
+    3 ASSIGN
+    4 RETURN
     5* ZEND_HANDLE_EXCEPTION
 
-int  
+int
 ---
 
-    0 ASSIGN  
-    1 CAST  
-    2 ASSIGN  
-    3 RETURN  
+    0 ASSIGN
+    1 CAST
+    2 ASSIGN
+    3 RETURN
     4* ZEND_HANDLE_EXCEPTION
 
 #### 最终结论
 
-1. int 比 intval() 快3-6倍。  
+1. int 比 intval() 快3-6倍。
 2. SEND\_VAR 和 DO\_FCALL 操作，是导致 int 比 intval() 快很多的原因。
 

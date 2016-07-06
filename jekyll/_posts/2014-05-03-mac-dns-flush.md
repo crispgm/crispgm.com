@@ -9,7 +9,7 @@ tags:
 - DNS
 ---
 
-不说废话，正确的清除DNS缓存方式为：
+不说废话，正确的清除 DNS 缓存方式为：
 
 ```
 dscacheutil -flushcache
