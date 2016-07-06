@@ -7,6 +7,8 @@ tags:
 - PHP
 - PHP5
 - Internal
+- Array
+- Hash
 ---
 
 提示：很大！
