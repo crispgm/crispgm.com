@@ -21,18 +21,9 @@ tags:
 
 # Disclaimer
 
-This article is translated from a blog post of Nikita Popov([@nikic](https://github.com/nikic)),
-in which I have done a small amount of adjustment based on the reading habit of Chinese.
+This article is translated from a blog post of Nikita Popov([@nikic](https://github.com/nikic)), in which I have done a small amount of adjustment based on the reading habit of Chinese.
 
-Original Page:
-
-> [How big are PHP arrays (and values) really? (Hint: BIG!)](https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html)
-
-> By Nikita Popov, [https://nikic.github.io](https://nikic.github.io)
-
-> December 12th, 2011
-
-> Translated by Crisp
+Original Page: [How big are PHP arrays (and values) really? (Hint: BIG!)](https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html)
 
 # 正文
 

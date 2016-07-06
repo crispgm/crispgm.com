@@ -22,15 +22,9 @@ tags:
 This article is translated from a blog post of Nikita Popov([@nikic](https://github.com/nikic)),
 in which I have done a small amount of adjustment based on the reading habit of Chinese.
 
-Original Page:
+Original Page: [PHP's new hashtable implementation](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)
 
-> [PHP's new hashtable implementation](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)
-
-> By Nikita Popov, [https://nikic.github.io](https://nikic.github.io)
-
-> December 22th, 2014
-
-> Translated by Crisp
+# 正文
 
 大约三年前，我写过一篇[分析 PHP 5 数组内存消耗的文章](/page/how-big-are-php-arrays.html)。作为即将推出的 PHP 7 的工作的一部分，Zend 引擎很大一部分已经被重写，针对于更小的数据结构和更少的分配。在这篇文章中，我将对新的 Hash 表实现做一个概述，并展示为什么它比之前的实现更有效。
 
