@@ -5,9 +5,83 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jul 2016 14:27:16 +0800</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2016 14:27:16 +0800</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2016 21:18:05 +0800</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2016 21:18:05 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>『翻译』PHP 7 新的 Hash 表实现</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;声明&lt;/h1&gt;
+
+&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
+
+&lt;p&gt;原文：&lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;PHP’s new hashtable implementation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
+
+&lt;p&gt;This article is translated from a blog post of Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;),
+in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
+
+&lt;p&gt;Original Page:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;PHP’s new hashtable implementation&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;By Nikita Popov, &lt;a href=&quot;https://nikic.github.io&quot;&gt;https://nikic.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;December 22th, 2014&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Translated by Crisp&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;大约三年前，我写过一篇&lt;a href=&quot;/page/how-big-are-php-arrays.html&quot;&gt;分析 PHP 5 数组内存消耗的文章&lt;/a&gt;。作为即将推出的 PHP 7 的工作的一部分，Zend 引擎很大一部分已经被重写，针对于更小的数据结构和更少的分配。在这篇文章中，我将对新的 Hash 表实现做一个概述，并展示为什么它比之前的实现更有效。&lt;/p&gt;
+
+&lt;p&gt;我使用一个脚本来测量内存使用情况，这个脚本会测试创建一个 100000 个不同整型数的数组所需要的内存：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = range(1, 100000);
+echo memory_get_usage() - $startMemory, &quot; bytes\n&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;下面的这张表展示了 PHP 5.6 和 PHP 7 在 32 位和 64 位系统中的内存占用对比：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        |   32 bit |    64 bit
+------------------------------
+PHP 5.6 | 7.37 MiB | 13.97 MiB
+------------------------------
+PHP 7.0 | 3.00 MiB |  4.00 MiB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;换句话说，PHP 7 中的数组在 32 位系统中节省了 2.5 倍的内存，在 64 位（LP64）系统中节省了 3.5 倍，这相当的客观。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash-&quot;&gt;Hash 表介绍&lt;/h2&gt;
+
+&lt;p&gt;TODO&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jul 2016 21:17:00 +0800</pubDate>
+        <link>https://crispgm.com/page/php7-new-hashtable-implementation.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/php7-new-hashtable-implementation.html</guid>
+        
+        <category>PHP</category>
+        
+        <category>PHP7</category>
+        
+        <category>Internal</category>
+        
+        <category>Array</category>
+        
+        <category>Hash</category>
+        
+        
+      </item>
     
       <item>
         <title>『翻译』PHP 数组有多大？</title>
@@ -35,7 +109,7 @@ in which I have done a small amount of adjustment based on the reading habit of 
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;December 12th, 2014&lt;/p&gt;
+  &lt;p&gt;December 12th, 2011&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
@@ -712,84 +786,6 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         <category>Terminal</category>
         
         <category>Tools</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Apple iOS m3u8 媒体文件下载</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;由于 Apple iOS 不支持 Adobe Flash 技术，所以在 iOS 上要使用 m3u8 进行多媒体和流媒体等的播放。如：微博视频。&lt;/p&gt;
-
-&lt;p&gt;对于好看的视频，有时候希望能够下载下来，具体方法请看本文介绍。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;简介&lt;/h2&gt;
-
-&lt;p&gt;m3u8 是 Apple iOS 流媒体使用的一种格式，它本质上是个文本的播放列表，实际的媒体文件是 MPEG2-TS 或者 AAC(Audio Only)。具体可以参考 Wikipedia 的英文介绍：&lt;a href=&quot;https://en.wikipedia.org/wiki/M3U&quot;&gt;https://en.wikipedia.org/wiki/M3U&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;url&quot;&gt;获取 URL&lt;/h3&gt;
-
-&lt;p&gt;首先要拿到 URL，方法是在 Chrome 上用 iPhone6 的 User-Agent 打开，然后在 Chrome 中找到，如下：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://crispgm.com/image/video-url.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;http://us.sinaimg.cn/000MLkkJjx06TSSGESJF050d010000oz0k01.m3u8?KID=unistore,video&amp;amp;Expires=1437309945&amp;amp;ssig=kh06r9cH7F&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;ts-&quot;&gt;获取 ts 文件&lt;/h3&gt;
-
-&lt;p&gt;紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆 ts 格式的文件。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://crispgm.com/image/m3u8-file-content.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;下载源文件&lt;/h3&gt;
-
-&lt;p&gt;把这些 ts 文件名跟 http://us.sinaimg.cn/ 拼在一起下载下来，就是被切成分片的视频源文件了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://crispgm.com/image/ts-file.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;文件合并&lt;/h3&gt;
-
-&lt;p&gt;最后，就是把这一堆文件合并在一起&lt;/p&gt;
-
-&lt;p&gt;有两种方法，一种比较粗暴，就是强型把文件的内容合并到一个文件中。&lt;/p&gt;
-
-&lt;p&gt;如：源文件是 1.ts 和 2.ts&lt;/p&gt;
-
-&lt;p&gt;那么就：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cat 2.ts &amp;gt;&amp;gt; 1.ts
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这样，视频完全可以看，只不过因为 meta 信息还是 1.ts 的，会导致视频进度条显示不正确。&lt;/p&gt;
-
-&lt;p&gt;如果想优雅的合并，就需要专门的合并工具，强大开源工具 ffmpeg 是可以的。安装方法就不多讲了，同学们可以自己编译一个。对于 Mac 用户来说，可以去 &lt;a href=&quot;http://ffmpegmac.net/&quot;&gt;ffmpegmac&lt;/a&gt;直接下载编译好的二进制版本。&lt;/p&gt;
-
-&lt;p&gt;安装好 ffmpeg 后，执行下面的命令就可以完成合并：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg -i &quot;concat:1.ts|2.ts&quot; -c copy output.ts
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;当然，ffmpeg 功能还很强大，比如保存成其它格式什么的。有兴趣可以深入探索下。&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 19 Jul 2015 13:43:00 +0800</pubDate>
-        <link>https://crispgm.com/page/downloading-m3u8-video.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/downloading-m3u8-video.html</guid>
-        
-        <category>Apple</category>
-        
-        <category>iOS</category>
-        
-        <category>ts</category>
-        
-        <category>m3u8</category>
-        
-        <category>ffmpeg</category>
         
         
       </item>
