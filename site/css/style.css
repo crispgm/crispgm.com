@@ -219,11 +219,10 @@ code.hljs {
   padding: 12px;
 }
 code.highlighter-rouge {
-  margin-left: 4px;
-  margin-right: 4px;
   border: 1px solid #aaaaaa;
   border-radius: 4px;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 code.highlighter-rouge:hover {
   color: white;
