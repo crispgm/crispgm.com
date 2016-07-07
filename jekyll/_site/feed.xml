@@ -5,8 +5,8 @@
     <description>Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Jul 2016 14:07:13 +0800</pubDate>
-    <lastBuildDate>Thu, 07 Jul 2016 14:07:13 +0800</lastBuildDate>
+    <pubDate>Thu, 07 Jul 2016 21:22:06 +0800</pubDate>
+    <lastBuildDate>Thu, 07 Jul 2016 21:22:06 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -54,9 +54,9 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hash_table&quot;&gt;Hash 表&lt;/a&gt;是一个普遍的数据结构。从根本上，它解决了计算机只可以直接使用连续整数下标表达数组的，而程序员常希望使用字符串或者其它更复杂的类型作为 key 的问题。&lt;/p&gt;
 
-&lt;p&gt;Hash 表背后的概念很简单：字符串类型的 key 通过一个 Hash 函数，返回一个整数。这个整数作为一个“正常”数组的索引。问题是在于两个不同的字符串可能会得到同样的 Hash 值，因为可能的字符串组合实际上是无限的，而 Hash 却受到了整型的限制。所以，这些 Hash 表需要实现某种冲突解决机制。&lt;/p&gt;
+&lt;p&gt;Hash 表背后的概念很简单：字符串类型的 key 通过一个 Hash 函数，返回一个整数。这个整数作为一个“正常”数组的下标。问题是在于两个不同的字符串可能会得到同样的 Hash 值，因为可能的字符串组合实际上是无限的，而 Hash 却受到了整型的限制。所以，这些 Hash 表需要实现某种冲突解决机制。&lt;/p&gt;
 
-&lt;p&gt;业界有两种主要的冲突解决方法：开地址法，如果发生冲突，元素会被存储在另外一个索引中；链地址法，所以有同样 Hash 值的元素将会被存在一个链表中。PHP 使用了后者。&lt;/p&gt;
+&lt;p&gt;业界有两种主要的冲突解决方法：开地址法，如果发生冲突，元素会被存储在另外一个下标中；链地址法，所以有同样 Hash 值的元素将会被存在一个链表中。PHP 使用了后者。&lt;/p&gt;
 
 &lt;p&gt;通常来说，Hash 表不会有明确的顺序：元素存储在数组底层的顺序依赖于 Hash 函数，并且相当的随机。但这个行为和 PHP 数组的语义不一致：如果你遍历一个 PHP 数组，你将会得到按插入顺序排列的元素。这意味着，PHP 的 Hash 表实现不得不加入额外的机制来记录数组元素的顺序。&lt;/p&gt;
 
@@ -114,7 +114,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;p&gt;第二部分是 4 bytes 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;type_info&lt;/code&gt;，包含有实际的类型（像 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_STRING&lt;/code&gt; 或 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_ARRAY&lt;/code&gt;），并且有一些额外的提供这个类型信息的标识。比如，如果这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 存储了一个对象，则类型的标识会说它是一个非常量、引用计数了的、可垃圾收集的、非复制类型。&lt;/p&gt;
 
-&lt;p&gt;最后 4 bytes 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的索引，Hash 表用它存储在冲突解决链表中的下一个元素 —— 最后这一部分对我们很重要。&lt;/p&gt;
+&lt;p&gt;最后 4 bytes 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的下标，Hash 表用它存储在冲突解决链表中的下一个元素 —— 最后这一部分对我们很重要。&lt;/p&gt;
 
 &lt;p&gt;如果你同之前的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 实现对比，一个最特别的不同是：新的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构不再存储引用计数 &lt;code class=&quot;highlighter-rouge&quot;&gt;refcount&lt;/code&gt;。这后面的原因是，&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 不再被单独分配，而是被直接集成在任何存储它的地方（比如：Hash 表中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;）。&lt;/p&gt;
 
@@ -172,19 +172,182 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;h2 id=&quot;section-2&quot;&gt;元素的顺序&lt;/h2&gt;
 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 数组按照插入的顺序存储元素。所以第一个元素会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[0]&lt;/code&gt;，第二个会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[1]&lt;/code&gt; ，等等。这完全不依赖用过的 key，只跟插入顺序有关。&lt;/p&gt;
+
+&lt;p&gt;所以如果你有 5 个 Hash 表元素，从 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[0]&lt;/code&gt; 到 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[4]&lt;/code&gt; 将会被占用，下一个空闲的槽式 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[5]&lt;/code&gt;。我们将这个数存在 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumUsed&lt;/code&gt;。你可能会疑惑：为什么要分开存储？这和 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumOfElements&lt;/code&gt; 有区别吗？&lt;/p&gt;
+
+&lt;p&gt;提出这问题是因为只看了执行插入操作时的情况。如果从 Hash 表删除一个元素时，我们显然不希望通过移动 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 中被删除的元素后面的全部元素来使数组保持连续。作为替代，我们只是在 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 中标注 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_UNDEF&lt;/code&gt; 类型。&lt;/p&gt;
+
+&lt;p&gt;用下面的代码作为例子：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$array = [
+    &#39;foo&#39; =&amp;gt; 0,
+    &#39;bar&#39; =&amp;gt; 1,
+    0     =&amp;gt; 2,
+    &#39;xyz&#39; =&amp;gt; 3,
+    2     =&amp;gt; 4
+];
+unset($array[0]);
+unset($array[&#39;xyz&#39;]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这会形成如下的 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 结构：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nTableSize     = 8
+nNumOfElements = 3
+nNumUsed       = 5
+
+[0]: key=&quot;foo&quot;, val=int(0)
+[1]: key=&quot;bar&quot;, val=int(1)
+[2]: val=UNDEF
+[3]: val=UNDEF
+[4]: h=2, val=int(4)
+[5]: NOT INITIALIZED
+[6]: NOT INITIALIZED
+[7]: NOT INITIALIZED
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如你所见，前五个 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 元素被使用了，但下标 2（key 为 0） 和 3（key 为 ‘xyz’） 被替换成了 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_UNDEF&lt;/code&gt;，因为它们被 unset 了。这些元素现在还会浪费内存。然而，一旦 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumUsed&lt;/code&gt; 达到 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt;，PHP会通过丢弃任何 &lt;code class=&quot;highlighter-rouge&quot;&gt;UNDEF&lt;/code&gt; 的记录，自动压缩 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 数组。只有当所有 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;` 真的有值才会被重分配到两倍大。&lt;/p&gt;
+
+&lt;p&gt;新的维护数组顺序的方式对于 PHP 5.x 的双向链表有很多优点。一个明显的优点是我们对于每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 节省两个指针，相当于 8/16 bytes。并且，这意味着数组迭代粗略如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;uint32_t i;
+for (i = 0; i &amp;lt; ht-&amp;gt;nNumUsed; ++i) {
+    Bucket *b = &amp;amp;ht-&amp;gt;arData[i];
+    if (Z_ISUNDEF(b-&amp;gt;val)) continue;
+
+    // do stuff with bucket
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这相当于一个内存线性扫描，比起链表遍历（需要进行向前向后的相对随机的内存寻址）更能有效缓存。&lt;/p&gt;
+
+&lt;p&gt;当前实现的一个问题是 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 从不收缩（除非明确告诉它这样做）。所以如果你创建一个几百万个元素的数组并在后来删除，数组还是会占用大量的内存。我们可能应该让 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 的大小减半，如果使用降低到一定的程度。&lt;/p&gt;
+
 &lt;h2 id=&quot;hash--3&quot;&gt;Hash 表查找&lt;/h2&gt;
 
-&lt;h2 id=&quot;hash--4&quot;&gt;打包后的 Hash 表&lt;/h2&gt;
+&lt;p&gt;到现在，我们只是讨论了 PHP 数组如何表示顺序。实际 Hash 表的查找使用了第二个包含有 &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32_t&lt;/code&gt; 值的 &lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组。&lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组合 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 有相同的大小（&lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt;），两者实际上都是一块内存分配的。&lt;/p&gt;
+
+&lt;p&gt;返回的 Hash 值是由 Hash 函数（对于字符串使用 DJBX33A 算法）返回的 32 位或 64 位无符号整型，它们太大了不能直接用作 Hash 数组的下标。我们需要手心用取余操作将它们转换成表大小。我们使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;hash &amp;amp; (ht-&amp;gt;nTableSize - 1)&lt;/code&gt; 而不是 &lt;code class=&quot;highlighter-rouge&quot;&gt;hash % ht-&amp;gt;nTableSize&lt;/code&gt;，在数组大小是 2 的幂的情况下，它们结果一致但不需要“昂贵”的整数除法操作。&lt;code class=&quot;highlighter-rouge&quot;&gt;ht-&amp;gt;nTableSize - 1&lt;/code&gt; 的值会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;ht-&amp;gt;nTableMask&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;接着，我们在 Hash 数组中寻找下标 &lt;code class=&quot;highlighter-rouge&quot;&gt;idx = ht-&amp;gt;arHash[hash &amp;amp; ht-&amp;gt;nTableMask]&lt;/code&gt;。这个下标相当于冲突解决链表的头，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;ht-&amp;gt;arData[idx]&lt;/code&gt; 是我们第一个检查的纪录。如果 key 和我们要查找的匹配，事情就完成了。&lt;/p&gt;
+
+&lt;p&gt;否则，我们必须继续查找冲突解决链表的下一个。这个元素的下标会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket-&amp;gt;val.u2.next&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 通常不被用到而是在特定场上下文下才有意义的 4 bytes。我们继续遍历链表指导找到正确的 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;，或者遇到 &lt;code class=&quot;highlighter-rouge&quot;&gt;INVALID_IDX&lt;/code&gt;，也就是并不存在查找的 key 对应的元素。&lt;/p&gt;
+
+&lt;p&gt;查找机制如下代码中所示：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zend_ulong h = zend_string_hash_val(key);
+uint32_t idx = ht-&amp;gt;arHash[h &amp;amp; ht-&amp;gt;nTableMask];
+while (idx != INVALID_IDX) {
+    Bucket *b = &amp;amp;ht-&amp;gt;arData[idx];
+    if (b-&amp;gt;h == h &amp;amp;&amp;amp; zend_string_equals(b-&amp;gt;key, key)) {
+        return b;
+    }
+    idx = Z_NEXT(b-&amp;gt;val); // b-&amp;gt;val.u2.next
+}
+return NULL;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;让我们考虑下对于过去的实现做了怎样的优化：在 PHP 5.x 中，冲突解决链表是一个双向链表。使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32_t&lt;/code&gt; 下标比指针更好，因为矩阵在 64 位系统只需要一半的内存。并且，4 bytes 刚好可以将 &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; 节点的链接内置在没有用到的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 槽中，所以我们本质上是没有付出任何代价使用的。&lt;/p&gt;
+
+&lt;p&gt;我们现在还用了单向链表，没有 &lt;code class=&quot;highlighter-rouge&quot;&gt;prev&lt;/code&gt; 节点。&lt;code class=&quot;highlighter-rouge&quot;&gt;prev&lt;/code&gt; 节点对于删除元素很有用，因为当你尽兴删除时，不得不调整 &lt;code class=&quot;highlighter-rouge&quot;&gt;prev&lt;/code&gt; 节点的 &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; 节点。然而，如果按照 key 来删除，你已经在遍历冲突解决链表时知道了前一个元素。&lt;/p&gt;
+
+&lt;p&gt;在一些上下文删除的情况下（比如：删除迭代器当前所在的元素）可能会需要遍历冲突链表，以寻找前一个元素。但这不是一个很常见的场景，我们在别的情况下比起减少一次遍历更想节省内存。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash--4&quot;&gt;打包 Hash 表&lt;/h2&gt;
+
+&lt;p&gt;PHP 对于任何数组都使用 Hash 表。然而，对于一些很常见的连续、整数下标的数组（比如：实数组），整个 Hash 系统并没有什么用。这是 PHP 7 要引入一个“打包 Hash 表”概念的原因。&lt;/p&gt;
+
+&lt;p&gt;在打包 Hash 表中，&lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组是 &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt; 并且直接通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 查找。如果你查找下标为 5 的元素，元素就在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[5]&lt;/code&gt; 或者根本不存在，并没有必要遍历冲突解决链表。&lt;/p&gt;
+
+&lt;p&gt;注意：即使是整数下标的 PHP 数组也需要维护顺序。数组 [0 =&amp;gt; 1, 1 =&amp;gt; 2] 和 [1 =&amp;gt; 2, 0 =&amp;gt; 1] 并不相同。打包 Hash 表的优化只对按照升序下标排序的数组有用。数组中可以有间隔（下标不连续），但必须是升序的。所以如果元素按照了错误的顺序插入（比如：倒序），打包 Hash 表优化将不会被使用。&lt;/p&gt;
+
+&lt;p&gt;除此之外还要注意，打包 Hash 表仍然会存储很多无用信息。例如，我们可以基于内存地址来确定一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 的下标，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket-&amp;gt;h&lt;/code&gt; 是冗余的。&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket-&amp;gt;key&lt;/code&gt; 的值将会一直是 &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt;，所以这也浪费了内存。&lt;/p&gt;
+
+&lt;p&gt;我们留着这些无用的值，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 有一样的结构，与是否使用打包无关。这意味着，迭代可以使用相同的代码。然而，我们可能会在未来切换到“完全打包”的结构，如果可能的话那时将会使用纯粹 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt;。&lt;/p&gt;
 
 &lt;h2 id=&quot;hash--5&quot;&gt;空 Hash 表&lt;/h2&gt;
 
+&lt;p&gt;空 Hash 表在 PHP 5.x 和 PHP 7 中都会被特殊处理。如果你创建了空数组 &lt;code class=&quot;highlighter-rouge&quot;&gt;array []&lt;/code&gt;，很有可能你不会实际上插入元素。&lt;code class=&quot;highlighter-rouge&quot;&gt;arData/arHash&lt;/code&gt; 数组只会在你插入第一个元素时分配内存。&lt;/p&gt;
+
+&lt;p&gt;为了避免在很多地方对这种特殊情况做校验，一个小技巧被应用在此：当 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt; 被设为暗示的大小或者默认值 8，&lt;code class=&quot;highlighter-rouge&quot;&gt;nTableMask&lt;/code&gt;（实际上是 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize - 1&lt;/code&gt;）会被设为 0。这意味着，&lt;code class=&quot;highlighter-rouge&quot;&gt;hash &amp;amp; ht-&amp;gt;nTableMask&lt;/code&gt; 也会得到 0 的结果。&lt;/p&gt;
+
+&lt;p&gt;所以在这个情况中，&lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组只有一个包涵了 &lt;code class=&quot;highlighter-rouge&quot;&gt;INVALID_IDX&lt;/code&gt; 值、下标为 0的元素（这个特殊数组被称为 &lt;code class=&quot;highlighter-rouge&quot;&gt;uninitialized_bucket&lt;/code&gt;，并且被静态分配了内存）。当进行查找时，我们一直会找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;INVALID_IDX&lt;/code&gt; 值，意味着 key（实际上你只想静态分配创建一个空表）没有被找到。&lt;/p&gt;
+
 &lt;h2 id=&quot;section-3&quot;&gt;内存使用&lt;/h2&gt;
+
+&lt;p&gt;这应该可以覆盖 PHP 7 Hash 表实现最重要的方面。首先，我们总结下为什么新的实现省内存。我在这里只会用 64 位系统的数据，并且只看单个元素的大小，会忽略主 Hash 表的结构（这是渐进不重要的）。&lt;/p&gt;
+
+&lt;p&gt;在 PHP 5.x 每个元素需要巨大的 144 bytes。在 PHP 7 中，降低到了 36 bytes，或者打包情况下 32 bytes。下面这些是两者区别：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 不独立分配，所以我们节省了 16 bytes。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 不独立分配，所以我们又节省了 16 bytes。&lt;/li&gt;
+  &lt;li&gt;每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的值节省 16 bytes。&lt;/li&gt;
+  &lt;li&gt;保证顺序不再需要 16 bytes 的双向队列，而是绝对的顺序。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;冲突链表现在是单向的，节省了 8 bytes。此外，它现在是一个有索引的链表，并且下标被内置在 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 中，所以我们实际上又节省了 8 bytes。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;As the zval is embedded into the bucket, we no longer need to store a pointer to it. Due to details of the previous implementation we actually save two pointers, so that’s another 16 bytes.&lt;/li&gt;
+  &lt;li&gt;The length of the key is no longer stored in the bucket, which is another 8 bytes. However, if the key is actually a string and not an integer, the length still has to be stored in the zend_string structure. The exact memory impact in this case is hard to quantify, because zend_string structures are shared, whereas previously hashtables had to copy the string if it wasn’t interned.&lt;/li&gt;
+  &lt;li&gt;The array containing the collision list heads is now index based, so saves 4 bytes per element. For packed arrays it is not necessary at all, in which case we save another 4 bytes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However it should be clearly said that this summary is making things look better than they really are in several respects. First of all, the new hashtable implementation uses a lot more embedded (as opposed to separately allocated) structures. How can this negatively affect things?&lt;/p&gt;
+
+&lt;p&gt;If you look at the actually measured numbers at the start of this article, you’ll find that on 64bit PHP 7 an array with 100000 elements took 4.00 MiB of memory. In this case we’re dealing with a packed array, so we would actually expect 32 * 100000 = 3.05 MiB memory utilization. The reason behind this is that we allocate everything in powers of two. The nTableSize will be 2^17 = 131072 in this case, so we’ll allocate 32 * 131072 bytes of memory (which is 4.00 MiB).&lt;/p&gt;
+
+&lt;p&gt;Of course the previous hashtable implementation also used power of two allocations. However it only allocated an array with bucket pointers in this way (where each pointer is 8 bytes). Everything else was allocated on demand. So in PHP 7 we loose 32 * 31072 (0.95 MiB) in unused memory, while in PHP 5.x we only waste 8 * 31072 (0.24 MiB).&lt;/p&gt;
+
+&lt;p&gt;Another thing to consider is what happens if not all values stored in the array are distinct. For simplicity lets assume that all values in the array are identical. So lets replace the range in the starting example with an array_fill:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = array_fill(0, 100000, 42);
+echo memory_get_usage() - $startMemory, &quot; bytes\n&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这个脚本的结果如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        |   32 bit |    64 bit
+------------------------------
+PHP 5.6 | 4.70 MiB |  9.39 MiB
+------------------------------
+PHP 7.0 | 3.00 MiB |  4.00 MiB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see the memory usage on PHP 7 stays the same as in the range case. There is no reason why it would change, as all zvals are separate. On PHP 5.x on the other hand the memory usage is now significantly lower, because only one zval is used for all values. So while we’re still a good bit better off on PHP 7, the difference is smaller now.&lt;/p&gt;
+
+&lt;p&gt;Things become even more complicated once we consider string keys (which may or not be shared or interned) and complex values. The point being that arrays in PHP 7 will take significantly less memory than in PHP 5.x, but the numbers from the introduction are likely too optimistic in many cases.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-4&quot;&gt;性能&lt;/h2&gt;
 
+&lt;p&gt;I’ve already talked a lot about memory usage, so lets move to the next point, namely performance. In the end, the goal of the phpng project wasn’t to improve memory usage, but to improve performance. The memory utilization improvement is only a means to an end, in that less memory results in better CPU cache utilization, resulting in better performance.&lt;/p&gt;
+
+&lt;p&gt;However there are of course a number of other reasons why the new implementation is faster: First of all we need less allocations. Depending on whether or not values are shared we save two allocations per element. Allocations being rather expensive operations this is quite significant.&lt;/p&gt;
+
+&lt;p&gt;Array iteration in particular is now more cache-friendly, because it’s now a linear memory traversal, instead of a random-access linked list traversal.&lt;/p&gt;
+
+&lt;p&gt;There’s probably a lot more to be said on the topic of performance, but the main interest in this article was memory usage, so I won’t go into further detail here.&lt;/p&gt;
+
 &lt;h2 id=&quot;section-5&quot;&gt;结尾思考&lt;/h2&gt;
 
-&lt;p&gt;TODO&lt;/p&gt;
+&lt;p&gt;PHP 7 undoubtedly has made a big step forward as far as the hashtable implementation is concerned. A lot of useless overhead is gone now.&lt;/p&gt;
+
+&lt;p&gt;So the question is: where we can go from here? One idea I already mentioned is to use “fully packed” hashes for the case of increasing integer keys. This would mean using a plain zval array, which is the best we can do without starting to specialize uniformly typed arrays.&lt;/p&gt;
+
+&lt;p&gt;There’s probably some other directions one could go as well. For example switching from collision-chaining to open addressing (e.g. using Robin Hood probing), could be better both in terms of memory usage (no collision resolution list) and performance (better cache efficiency, depending on the details of the probing algorithm). However open-addressing is relatively hard to combine with the ordering requirement, so this may not be possible to do in a reasonable way.&lt;/p&gt;
+
+&lt;p&gt;Another idea is to combine the h and key fields in the bucket structure. Integer keys only use h and string keys already store the hash in key as well. However this would likely have an adverse impact on performance, because fetching the hash will require an additional memory indirection.&lt;/p&gt;
+
+&lt;p&gt;One last thing that I wish to mention is that PHP 7 improved not only the internal representation of hashtables, but also the API used to work them. I’ve regularly had to look up how even simple operations like zend_hash_find had to be used, especially regarding how many levels of indirection are required (hint: three). In PHP 7 you just write zend_hash_find(ht, key) and get back a zval*. Generally I find that writing extensions for PHP 7 has become quite a bit more pleasant.&lt;/p&gt;
+
+&lt;p&gt;Hopefully I was able to provide you some insight into the internals of PHP 7 hashtables. Maybe I’ll write a followup article focusing on zvals. I’ve already touched on some of the difference in this post, but there’s a lot more to be said on the topic.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jul 2016 21:17:00 +0800</pubDate>
         <link>https://crispgm.com/page/php7-new-hashtable-implementation.html</link>
