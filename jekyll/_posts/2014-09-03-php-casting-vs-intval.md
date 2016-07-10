@@ -10,15 +10,11 @@ tags:
 
 ### 原文信息
 
-Original Page:
+Original Post: [PHP: Casting vs. intval()](http://hakre.wordpress.com/2010/05/13/php-casting-vs-intval)
 
->[PHP: Casting vs. intval()](http://hakre.wordpress.com/2010/05/13/php-casting-vs-intval)
+By __Hakre__, [hakre.wordpress.com](http://hakre.wordpress.com), May 13th, 2010
 
->By __Hakre__, [hakre.wordpress.com](http://hakre.wordpress.com)
-
->May 13th, 2010
-
->Translated by [Crisp](http://crispgm.com)
+Translated by [Crisp](http://crispgm.com)
 
 ### 正文
 
