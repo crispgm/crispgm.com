@@ -22,7 +22,7 @@ tags:
 This article is translated from a blog post of Nikita Popov([@nikic](https://github.com/nikic)),
 in which I have done a small amount of adjustment based on the reading habit of Chinese.
 
-Original Page: [PHP's new hashtable implementation](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)
+Original Post: [PHP's new hashtable implementation](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)
 
 # 正文
 
