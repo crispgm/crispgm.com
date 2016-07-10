@@ -8,7 +8,7 @@ tags:
 - Hacks
 ---
 
-### 原文信息
+# 原文信息
 
 Original Post: [PHP: Casting vs. intval()](http://hakre.wordpress.com/2010/05/13/php-casting-vs-intval)
 
@@ -16,13 +16,13 @@ By __Hakre__, [hakre.wordpress.com](http://hakre.wordpress.com), May 13th, 2010
 
 Translated by [Crisp](http://crispgm.com)
 
-### 正文
+# 正文
 
 在 PHP 中，使用 ```(int)$var``` 方式进行类型转换比使用 ```intval($var)``` 函数方式快 400% 到 650%。
 
-#### 运行测试
+## 运行测试
 
-#### (int)$val vs. intval($val) 速度对比[系统 #1]
+### (int)$val vs. intval($val) 速度对比[系统 #1]
 
 \#   |输入                    |(INT)$val        |INTVAL($val)          |比率
 -----|------------------------|-----------------|----------------------|-----
@@ -45,7 +45,7 @@ Translated by [Crisp](http://crispgm.com)
 \#16 |array()                 |: 0.092310       |/ 0.472185            |511%
 \#17 |array('foo', 'bar')     |: 0.112644       |/ 0.494482            |438%
 
-#### (int)$val vs. intval($val) 速度对比[系统 #2]
+### (int)$val vs. intval($val) 速度对比[系统 #2]
 
 \#   |输入                    |(INT)$val        |INTVAL($val)          |比率
 -----|------------------------|-----------------|----------------------|-----
@@ -70,9 +70,9 @@ Translated by [Crisp](http://crispgm.com)
 
 这组测试每个项目进行了 100000 次循环。两个测试都在 Windows 上运行。系统 #1 使用的是 PHP 5.2.8，而系统 #2 使用 PHP 5.2.9 并且有更高的 CPU、内存和硬盘速度。
 
-#### intval() 和 int 的结果对比
+### intval() 和 int 的结果对比
 
-为了证明 intval() 和 int 得到同样的值，我进行了另一个测试：
+为了证明 ```intval()``` 和 ```int``` 得到同样的值，我进行了另一个测试：
 
 \#   |输入                    |期待结果     |INTVAL($val) |(INT)$val    |结果
 -----|------------------------|-------------|-------------|-------------|------
@@ -95,9 +95,9 @@ Translated by [Crisp](http://crispgm.com)
 \#16 |array()                 |: 0          |/ 0          |/ 0          |通过
 \#17 |array('foo', 'bar')     |: 1          |/ 1          |/ 1          |通过
 
-#### settype() 和 intval() 速度对比[系统 #1]
+### settype() 和 intval() 速度对比[系统 #1]
 
-用于对比，我还进行了 settype() 和 intval() 速度测试。
+用于对比，我还进行了 ```settype()``` 和 ```intval()``` 速度测试。
 两者的差别并不大，但我不确定这个测试是否合理，因为并不容易直接对这个函数进行测试。既然已经跑了这个测试，我认为值得把结果同前面的数据一起分享出来。
 
 \#   |输入                    |SETTYPE($val)    |INTVAL($val)          |比率
@@ -126,7 +126,7 @@ Translated by [Crisp](http://crispgm.com)
 我进行了一些关于 ```0 + $var``` 的测试，因为这也是一种获得数字的方式。
 这种方法没那么"类型安全"，不过作为对比，我认为有必要一起列出来：
 
-#### intval() 和 0 + $var 对比结果
+### intval() 和 0 + $var 对比结果
 
 \#   |输入                    |期待结果     |INTVAL($val) |0+$VAR       |结果
 -----|------------------------|-------------|-------------|-------------|------
@@ -149,7 +149,7 @@ Translated by [Crisp](http://crispgm.com)
 \#16 |array()                 |: 0          |/ 0          |/ 报错       |跳过
 \#17 |array('foo', 'bar')     |: 1          |/ 1          |/ 报错       |跳过
 
-#### (int)$val和0 + $var速度测试[系统 #1]
+### (int)$val和0 + $var速度测试[系统 #1]
 
 \#   |输入                    |(INT)$val        |0+$val                |比率
 -----|------------------------|-----------------|----------------------|-----
@@ -174,42 +174,43 @@ Translated by [Crisp](http://crispgm.com)
 
 _*: 在上一个测试中，结果未通过_
 
-#### 测试结论
+## 测试结论
 
 使用 (int) 类型转换，便捷而且没有负面效果。
 事实上，它在速度快的同时，还和 intval() 函数有完全一样的结果。
 两者甚至还会有同样的 warning 信息。
 
-#### 扩展阅读
+## 扩展阅读
 
 * [PHP: Is there any particular difference between intval and (int)?](http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int)
 * [Fastest way to convert string to integer in PHP](http://stackoverflow.com/questions/239136/fastest-way-to-convert-string-to-integer-in-php)
 
-#### 深层原因
+## 深层原因
 
 对于作者的结论，网友 Joseph Scott 对 OPCODE 进行了分析，解释了其深层原因。
 
-intval()
----
+### intval()
 
-    0 ASSIGN
-    1 SEND_VAR
-    2 DO_FCALL
-    3 ASSIGN
-    4 RETURN
-    5* ZEND_HANDLE_EXCEPTION
+```
+0 ASSIGN
+1 SEND_VAR
+2 DO_FCALL
+3 ASSIGN
+4 RETURN
+5* ZEND_HANDLE_EXCEPTION
+```
 
-int
----
+### int
 
-    0 ASSIGN
-    1 CAST
-    2 ASSIGN
-    3 RETURN
-    4* ZEND_HANDLE_EXCEPTION
+```
+0 ASSIGN
+1 CAST
+2 ASSIGN
+3 RETURN
+4* ZEND_HANDLE_EXCEPTION
+```
 
-#### 最终结论
+## 最终结论
 
-1. int 比 intval() 快3-6倍。
-2. SEND\_VAR 和 DO\_FCALL 操作，是导致 int 比 intval() 快很多的原因。
-
+1. ```int``` 比 ```intval()``` 快3-6倍。
+2. ```SEND_VAR``` 和 ```DO_FCALL``` 操作，是导致 ```int``` 比 ```intval()``` 快很多的原因。
