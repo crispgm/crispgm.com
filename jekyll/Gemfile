@@ -2,4 +2,4 @@ source "https://ruby.taobao.org"
 
 gem "jekyll"
 gem "jemoji"
-gem "jekyll-tagslist", "1.1.0"
+gem "jekyll-tagslist", "1.1.1"
