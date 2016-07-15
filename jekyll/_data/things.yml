@@ -1,0 +1,69 @@
+- category: Interests
+  items:
+  - name: Minimalism
+
+  - name: Coffee
+
+  - name: Crafted Beer
+
+  - name: Soccer & Rugby
+
+  - name: Fighter/Warship
+
+  - name: Document Films
+
+- category: Devices
+  items:
+  - name: Mac Book Air
+
+  - name: Mac Book Pro
+
+  - name: iPhone SE
+
+  - name: Kindle Oasis
+
+  - name: Bose Wave Music System
+
+- category: Paper Goods
+  items:
+  - name: 败家实验室
+    link: https://thebai.taobao.com/
+
+  - name: Pilot
+
+  - name: Muji
+
+- category: Great Reading
+  items:
+  - name: How Google Works
+
+  - name: The PayPal Wars
+
+  - name: 断舍离
+
+  - name: 三体
+
+  - name: 你一定爱读的极简欧洲史
+
+- category: Photography
+  items:
+  - name: OLYMPUS E-M5 Mark II
+
+  - name: VSCO
+    link: http://crispgm.vsco.com/
+
+  - name: Instagram
+    link: https://www.instagram.com/crispgm/
+
+- category: Musics
+  items:
+    - name: Classical Music
+    - name: Owl City
+    - name: AKB48
+    - name: SNH48/BEJ48
+    - name: IU
+
+- category: Apps
+  items:
+    - name: 我的利器
+      link: /page/my-tools.html
