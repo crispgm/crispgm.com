@@ -7,104 +7,22 @@ permalink: /things.html
 <p>This page is inspired by the Things page of <a href="http://www.kennethreitz.org/things/">Kenneth Reitz</a>.</p>
 
 <div id="things-content">
+  {% for thing in site.data.things %}
   <div class="things-box">
     <div class="things-title">
-      Interests
+      {{ thing.category }}
     </div>
     <div class="things-list">
       <ul>
-        <li>Minimalism</li>
-        <li>Coffee</li>
-        <li>Crafted Beer</li>
-        <li>Soccer &amp; Rugby</li>
-        <li>Fighter/Warship</li>
-        <li>Document Films</li>
+        {% for item in thing.items %}
+          {% if item.link != nil %}
+          <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+          {% else %}
+          <li>{{ item.name }}</li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </div>
-  <div class="things-box">
-    <div class="things-title">
-      Devices
-    </div>
-    <div class="things-list">
-      <ul>
-        <li>Mac Book Air</li>
-        <li>Mac Book Pro</li>
-        <li>iPhone SE</li>
-        <li>Kindle Oasis</li>
-        <li>Bose Wave Music System</li>
-      </ul>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Paper Goods
-    </div>
-    <div class="things-list">
-      <ul>
-        <li><a href="https://thebai.taobao.com/">败家实验室</a></li>
-        <li>Muji</li>
-        <li>Pilot</li>
-        <li>Lamy</li>
-      </ul>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Great Reading
-    </div>
-    <div class="things-list">
-      <ul>
-        <li>How Google Works</li>
-        <li>断舍离</li>
-        <li>三体</li>
-      </ul>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Photography
-    </div>
-    <div class="things-list">
-      <ul>
-        <li class="subtitle">Camera</li>
-        <li>OLYMPUS E-M5 Mark II</li>
-      </ul>
-      <!-- <ul>
-        <li class="subtitle">Lenses</li>
-        <li>Panasonic Leica DG SUMMILUX 15mm/F1.7 ASPH</li>
-        <li>Olympus M.ZUIKO DIGITAL 45mm F1.8</li>
-        <li>Olympus M.ZUIKO DIGITAL 9-18mm F4-5.6</li>
-      </ul> -->
-      <ul>
-        <li class="subtitle">Socials</li>
-        <li><a href="http://crispgm.vsco.com">VSCO</a></li>
-        <li><a href="https://instagram.com/crispgm">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Musics
-    </div>
-    <div class="things-list">
-      <ul>
-        <li>Classical Music</li>
-        <li>AKB48</li>
-        <li>SNH48/BEJ48</li>
-        <li>Owl City</li>
-        <li>IU</li>
-      </ul>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Apps &amp; Tools
-    </div>
-    <div class="things-list">
-      <p>
-      <a href="/page/my-tools.html">My liqi/tools</a>.
-      </p>
-    </div>
-  </div>
+  {% endfor %}
 </div>
