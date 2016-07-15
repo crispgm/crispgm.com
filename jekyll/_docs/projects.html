@@ -1,79 +1,49 @@
 ---
 layout: page
-title: Projects
+title: My Projects
 permalink: /projects.html
 ---
 
-<div id="things-content">
+<div class="things-content">
+  {% for project in site.data.projects.my_projects %}
   <div class="things-box">
     <div class="things-title">
-      URL Auto Redirector
+      {{ project.name }}
     </div>
     <div class="things-list">
       <p>
-        <a href="https://github.com/UrlAutoRedirector/UrlAutoRedirector">GitHub</a>
-        <a href="https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn">Chrome WebStore</a>
-        <a href="https://urlautoredirector.github.io/">Homepage</a>
-      </P>
+        {% for link in project.links %}
+        <a href="{{ link.href }}">{{ link.text }}</a>
+        {% endfor %}
+      </p>
       <p>
-        URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links.
-        By doing so, it gets you directly to your destination page.
+        {{ project.description }}
       </p>
     </div>
   </div>
+  {% endfor %}
+</div>
+
+<div class="article-title text-center">Contributed Projects</div>
+
+<div class="things-content">
+  {% for project in site.data.projects.contributed_projects %}
   <div class="things-box">
     <div class="things-title">
-      jekyll-tagslist
+      {{ project.name }}
     </div>
     <div class="things-list">
       <p>
-        <a href="https://github.com/crispgm/jekyll-tags-list-plugin">GitHub</a>
-        <a href="https://rubygems.org/gems/jekyll-tagslist">RubyGems</a>
-      </P>
+        {% for link in project.links %}
+        <a href="{{ link.href }}">{{ link.text }}</a>
+        {% endfor %}
+      </p>
       <p>
-        A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
+        {{ project.description }}
       </p>
     </div>
   </div>
-  <div class="things-box">
-    <div class="things-title">
-      Olympia*
-    </div>
-    <div class="things-list">
-      <p>
-        <a href="https://github.com/crispgm/olympia">GitHub</a>
-      </p>
-      <p>
-        Olympia hacks on Wi-Fi of Olympus cameras, which is hoped to offer a smart management of photos between camera and computer with a good experience.
-      </p>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Heelbot*
-    </div>
-    <div class="things-list">
-      <p>
-        <a href="https://github.com/crispgm/heelbot">GitHub</a>
-      </p>
-      <p>
-        A Ruby framework to build, run and manage awesome bots. We believe that every duplicated work can be done automatically and Heelbot will boost your development of bots.
-      </p>
-    </div>
-  </div>
-  <div class="things-box">
-    <div class="things-title">
-      Markdown Table Formatter
-    </div>
-    <div class="things-list">
-      <p>
-        <a href="https://github.com/crispgm/markdown-table-formatter">GitHub</a>
-      </p>
-      <p>
-        Format tables in GitHub Flavored Markdown.
-      </p>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 <p>*: Still in developing.</p>
