@@ -252,7 +252,7 @@ code.highlighter-rouge:hover {
   color: white;
   background-color: #aaaaaa;
 }
-#things-content {
+.things-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -279,4 +279,7 @@ li.subtitle {
   padding-bottom: 5px;
 }
 .things-list {
+}
+.text-center {
+  text-align: center;
 }
