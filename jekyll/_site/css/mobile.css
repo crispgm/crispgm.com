@@ -3,6 +3,9 @@
  * Copyright(c) David Zhang, 2016
  * Powered by {less}
  */
+html {
+  width: 100%;
+}
 body {
   margin: 0;
   font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier, sans-serif;
@@ -11,6 +14,7 @@ body {
   color: #333;
   word-wrap: break-word;
   text-align: center;
+  width: 100%;
 }
 h3 {
   font-size: 1.4em;
@@ -61,12 +65,11 @@ ul li p {
 #container {
   text-align: center;
   width: 100%;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 .article {
-  width: 100%;
+  width: 98%;
   text-align: left;
+  padding: 1%;
 }
 .article-head {
 }
@@ -163,4 +166,38 @@ code.highlighter-rouge {
   padding: 4px;
   border-radius: 2px;
   border: 1px solid #aaaaaa;
+}
+.things-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-basis: auto;
+  width: 100%;
+}
+li {
+  margin-left: -10px;
+}
+li.subtitle {
+  font-size: 16px;
+  list-style-type: none;
+  margin-left: -30px;
+}
+.things-box {
+  padding: 4px;
+  width: 100%;
+}
+.things-title {
+  font-size: 18px;
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 5px;
+}
+.things-list {
+}
+.things-link {
+  margin-top: 8px;
+}
+.text-center {
+  text-align: center;
 }
