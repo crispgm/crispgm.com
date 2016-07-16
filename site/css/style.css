@@ -195,26 +195,6 @@ p {
   text-align: center;
   font-size: 20px;
 }
-/* Bio */
-#bio-main {
-  margin-top: 24px;
-  padding-bottom: 16px;
-  font-size: 16px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 100%;
-  text-align: center;
-}
-.bio-item {
-  text-align: left;
-  margin-right: 12px;
-}
-.bio-github-card {
-  margin-top: 16px;
-}
 /* disqus */
 #disqus_thread {
 }
@@ -232,6 +212,7 @@ img {
   max-width: 640px;
   max-height: 480px;
 }
+/* codes */
 pre.highlight {
   border: 1px solid #aaaaaa;
   border-radius: 4px;
@@ -242,6 +223,7 @@ pre.highlight {
 code.hljs {
   padding: 12px;
 }
+/* inline codes */
 code.highlighter-rouge {
   border: 1px solid #aaaaaa;
   border-radius: 4px;
@@ -252,6 +234,7 @@ code.highlighter-rouge:hover {
   color: white;
   background-color: #aaaaaa;
 }
+/* things & project */
 .things-content {
   display: flex;
   flex-direction: row;

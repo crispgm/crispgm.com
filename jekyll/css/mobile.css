@@ -75,6 +75,7 @@ ul li p {
 }
 .article-title {
   font-size: 2em;
+  text-align: center;
 }
 .article-title a {
   text-decoration: none;
@@ -156,17 +157,20 @@ img {
   border: 0;
   max-width: 100%;
 }
+/* codes */
 pre.highlight {
   border: 1px solid #aaaaaa;
   border-radius: 2px;
   font-family: Menlo, "Source Code Pro", Consolas, Courier;
   font-size: 14px;
 }
+/* inline codes */
 code.highlighter-rouge {
   padding: 4px;
   border-radius: 2px;
   border: 1px solid #aaaaaa;
 }
+/* things & project */
 .things-content {
   display: flex;
   flex-direction: row;
@@ -192,6 +196,7 @@ li.subtitle {
   font-size: 18px;
   border-bottom: 1px solid #aaaaaa;
   padding-bottom: 5px;
+  text-align: center;
 }
 .things-list {
 }
