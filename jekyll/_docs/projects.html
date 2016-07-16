@@ -11,11 +11,11 @@ permalink: /projects.html
       {{ project.name }}
     </div>
     <div class="things-list">
-      <p>
+      <div class="things-link">
         {% for link in project.links %}
         <a href="{{ link.href }}">{{ link.text }}</a>
         {% endfor %}
-      </p>
+      </div>
       <p>
         {{ project.description }}
       </p>
@@ -33,11 +33,11 @@ permalink: /projects.html
       {{ project.name }}
     </div>
     <div class="things-list">
-      <p>
+      <div class="things-link">
         {% for link in project.links %}
         <a href="{{ link.href }}">{{ link.text }}</a>
         {% endfor %}
-      </p>
+      </div>
       <p>
         {{ project.description }}
       </p>
