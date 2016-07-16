@@ -280,6 +280,9 @@ li.subtitle {
 }
 .things-list {
 }
+.things-link {
+  margin-top: 8px;
+}
 .text-center {
   text-align: center;
 }
