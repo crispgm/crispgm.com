@@ -11,7 +11,6 @@ keywords:
   - Crisp 博客
 url: "https://crispgm.com"
 encoding: utf-8
-abc: aaa
 
 # Build settings
 markdown: kramdown
