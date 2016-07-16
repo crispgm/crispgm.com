@@ -3,11 +3,8 @@ title: DAVID ZHANG
 author: David Zhang
 email: crispgm@gmail.com
 description: "Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://crispgm.com" # the base hostname & protocol for your site
+url: "https://crispgm.com"
 encoding: utf-8
-twitter_username: crispgm
-github_username:  crispgm
 
 # Build settings
 markdown: kramdown
@@ -18,11 +15,10 @@ collections:
 
 plugins_dir: _plugins
 gems:
-    - jemoji
-    - jekyll-tagslist
+  - jemoji
+  - jekyll-tagslist
 
 exclude:
-    - Rakefile
-    - Gemfile
-    - Gemfile.lock
-
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
