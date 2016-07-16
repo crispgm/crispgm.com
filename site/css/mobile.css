@@ -29,11 +29,8 @@ h4 {
   font-size: 1.15em;
 }
 a {
-  text-decoration: none;
-  color: #333;
-}
-a:hover {
   text-decoration: underline;
+  color: #333;
 }
 ul li p {
   margin: 0;
@@ -45,9 +42,6 @@ ul li p {
 }
 .menu a {
   color: #bbbbbb;
-}
-.menu a:hover {
-  color: #ffffff;
   text-decoration: none;
 }
 .menu-home {
@@ -90,9 +84,6 @@ ul li p {
 .article-title a {
   text-decoration: none;
   color: black;
-}
-.article-title a:hover {
-  text-decoration: underline;
 }
 .article-date {
   text-align: center;
@@ -157,6 +148,12 @@ ul li p {
   font-size: 1.2em;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+.archive-main a{
+  text-decoration: none;
+}
+.archive-subscribe a{
+  text-decoration: none;
 }
 /* disqus */
 #disqus_thread {
