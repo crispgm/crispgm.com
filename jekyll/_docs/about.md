@@ -4,7 +4,7 @@ title: About
 permalink: /about.html
 ---
 
-Copyright &copy; [David Zhang](/bio.html), 2016.
+Copyright &copy; David Zhang, 2016.
 
 All the blogs are licensed under a [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/) license.
 
