@@ -10,5 +10,6 @@ task :serve do
 end
 
 task :build do
+  sh "rm -rf ./_site"
   sh "bundle exec jekyll build --destination=../site"
 end
