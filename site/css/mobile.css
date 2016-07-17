@@ -127,6 +127,7 @@ ul li p {
   font-size: 0.8em;
   display: flex;
   flex-direction: column;
+  text-align: left;
   width: 100%;
   margin: 0;
   padding: 0;
