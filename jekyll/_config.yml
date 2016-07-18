@@ -16,8 +16,6 @@ collections:
 plugins_dir: _plugins
 gems:
   - jemoji
-  - jekyll-mentions
-  - jekyll-seo-tag
   - jekyll-tagslist
 
 exclude:

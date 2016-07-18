@@ -15,13 +15,13 @@ tags:
 
 # 声明
 
-本文翻译自 PHP 开发组成员 Nikita Popov(@nikic) 的博客，文章根据中文习惯做了一定的调整。
+本文翻译自 PHP 开发组成员 Nikita Popov([@nikic](https://github.com/nikic)) 的博客，文章根据中文习惯做了一定的调整。
 
 原文：[How big are PHP arrays (and values) really? (Hint: BIG!)](https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html)
 
 # Disclaimer
 
-This article is translated from a blog post of Nikita Popov(@nikic), in which I have done a small amount of adjustment based on the reading habit of Chinese.
+This article is translated from a blog post of Nikita Popov([@nikic](https://github.com/nikic)), in which I have done a small amount of adjustment based on the reading habit of Chinese.
 
 Original Page: [How big are PHP arrays (and values) really? (Hint: BIG!)](https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html)
 
@@ -29,7 +29,7 @@ Original Page: [How big are PHP arrays (and values) really? (Hint: BIG!)](https:
 
 __更新__(2016-06-14)：这篇文章主要关于 PHP 5 的内存使用。PHP 7 的内存占用，对于本文提到的情况，大约得到了3倍的优化。请阅读 [hashtable implementation in PHP 7](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html) 获得更多信息。
 
-在一开始，我想感谢[约翰尼斯 Johannes](http://schlueters.de/blog/) 和[泰瑞尔 Tyrael](http://www.tyrael.hu/)，他们帮助我寻找到了更多的隐藏内存使用。
+在一开始，我想感谢[约翰尼斯 Johannes](http://schlueters.de/blog/) 和 [泰瑞尔 Tyrael](http://www.tyrael.hu/)，他们帮助我寻找到了更多的隐藏内存使用。
 
 这篇博客，我将使用如下脚本作为样本研究 PHP 数组（及其值）的总体内存占用情况，这个脚本会创建 100000 个唯一的整型数组元素并计算其内存占用：
 
