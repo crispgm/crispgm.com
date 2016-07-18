@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客"/>
-    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
-    <title>Blogs - Crisp Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
-    <link rel="stylesheet" href="/css/zenburn.css">
-    <link rel="stylesheet" href="/css/opensans.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <script src="/script/highlight.pack.js"></script>
-    <script src="/script/jquery-2.0.3.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Begin Jekyll SEO tag v2.0.0 -->
+<title>Blogs - Crisp Blog</title>
+<meta property="og:title" content="Blogs">
+<meta name="description" content="              2016/07/06      『翻译』PHP 7 新 Hash 表实现                2016/07/05      『翻译』PHP 数组有多大？                2016/05/31      Olympus Camera Wi-Fi API                2016/05/26      新的域名                2016/05/10      关于盗版软件/App                2015/12/07      Enable HTTPS with Let's Encrypt                2015/12/04      Environment Pollution in a Photographer's View                2015/11/28      『推荐』猫舌怕烫烫——足控福利的冷餐美食剧                2015/11/11      创造者和他们的工具——我的利器                2015/10/22      『推荐』有趣的终端 Terminal 工具                2015/07/19      Apple iOS m3u8 媒体文件下载                2015/06/26      BigPipe 实践 (nginx + hhvm)                2015/05/18      SNH48 剧场公演游记                2015/03/27      Minimalism Period Tracker                2014/10/26      我喜欢的应用                2014/09/20      Mac 截图修改保存路径                2014/09/12      MySQL 更新多条记录的不同值                2014/09/03      『翻译』PHP 强制转换 vs. intval                2014/08/17      『转』看月亮和看星星                2014/05/03      Mac OSX 10.9 Mavericks 清除 DNS 缓存                2014/04/20      YouCompleteMe Installation Guide on Mac                2014/03/21      Fiddler 网络调试工具                2014/03/08      Mac Book Air 合盖子或者休眠后没声音                2014/01/10      Mac Mail 无法退出                2013/12/30      Linux Shell Tips                2013/11/25      Land of Hope and Glory                2013/11/09      恒大夺冠                2013/11/03      Mac Terminal Tips                2013/11/01      自制 Chrome 调用贴吧 Service 插件正式发布                2013/07/20      awk 日志统计脚本              Mac8OSX5PHP3Tools2Terminal2Tips2Hash2Internal2iOS2Apps2Array2DNS2Photography2猫舌1Shell1Bash1Mail1Gmail1Airmail1Mac Book Air1Great Britain1Fiddler1Web Debugging1vim1YouCompleteMe1Land of Hope and Glory1转载1短文1Pomp and Circumstance1Hacks1MySQL1  ">
+<meta property="og:description" content="              2016/07/06      『翻译』PHP 7 新 Hash 表实现                2016/07/05      『翻译』PHP 数组有多大？                2016/05/31      Olympus Camera Wi-Fi API                2016/05/26      新的域名                2016/05/10      关于盗版软件/App                2015/12/07      Enable HTTPS with Let's Encrypt                2015/12/04      Environment Pollution in a Photographer's View                2015/11/28      『推荐』猫舌怕烫烫——足控福利的冷餐美食剧                2015/11/11      创造者和他们的工具——我的利器                2015/10/22      『推荐』有趣的终端 Terminal 工具                2015/07/19      Apple iOS m3u8 媒体文件下载                2015/06/26      BigPipe 实践 (nginx + hhvm)                2015/05/18      SNH48 剧场公演游记                2015/03/27      Minimalism Period Tracker                2014/10/26      我喜欢的应用                2014/09/20      Mac 截图修改保存路径                2014/09/12      MySQL 更新多条记录的不同值                2014/09/03      『翻译』PHP 强制转换 vs. intval                2014/08/17      『转』看月亮和看星星                2014/05/03      Mac OSX 10.9 Mavericks 清除 DNS 缓存                2014/04/20      YouCompleteMe Installation Guide on Mac                2014/03/21      Fiddler 网络调试工具                2014/03/08      Mac Book Air 合盖子或者休眠后没声音                2014/01/10      Mac Mail 无法退出                2013/12/30      Linux Shell Tips                2013/11/25      Land of Hope and Glory                2013/11/09      恒大夺冠                2013/11/03      Mac Terminal Tips                2013/11/01      自制 Chrome 调用贴吧 Service 插件正式发布                2013/07/20      awk 日志统计脚本              Mac8OSX5PHP3Tools2Terminal2Tips2Hash2Internal2iOS2Apps2Array2DNS2Photography2猫舌1Shell1Bash1Mail1Gmail1Airmail1Mac Book Air1Great Britain1Fiddler1Web Debugging1vim1YouCompleteMe1Land of Hope and Glory1转载1短文1Pomp and Circumstance1Hacks1MySQL1  ">
+<link rel="canonical" href="https://crispgm.com/blogs.html">
+<meta property="og:url" content="https://crispgm.com/blogs.html">
+<meta property="og:site_name" content="Crisp Blog">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-07-19T00:44:17+08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@crispgm">
+<meta name="twitter:creator" content="@David Zhang">
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Blogs",
+    "datePublished": "2016-07-19T00:44:17+08:00",
+    "description": "              2016/07/06      『翻译』PHP 7 新 Hash 表实现                2016/07/05      『翻译』PHP 数组有多大？                2016/05/31      Olympus Camera Wi-Fi API                2016/05/26      新的域名                2016/05/10      关于盗版软件/App                2015/12/07      Enable HTTPS with Let&#39;s Encrypt                2015/12/04      Environment Pollution in a Photographer&#39;s View                2015/11/28      『推荐』猫舌怕烫烫——足控福利的冷餐美食剧                2015/11/11      创造者和他们的工具——我的利器                2015/10/22      『推荐』有趣的终端 Terminal 工具                2015/07/19      Apple iOS m3u8 媒体文件下载                2015/06/26      BigPipe 实践 (nginx + hhvm)                2015/05/18      SNH48 剧场公演游记                2015/03/27      Minimalism Period Tracker                2014/10/26      我喜欢的应用                2014/09/20      Mac 截图修改保存路径                2014/09/12      MySQL 更新多条记录的不同值                2014/09/03      『翻译』PHP 强制转换 vs. intval                2014/08/17      『转』看月亮和看星星                2014/05/03      Mac OSX 10.9 Mavericks 清除 DNS 缓存                2014/04/20      YouCompleteMe Installation Guide on Mac                2014/03/21      Fiddler 网络调试工具                2014/03/08      Mac Book Air 合盖子或者休眠后没声音                2014/01/10      Mac Mail 无法退出                2013/12/30      Linux Shell Tips                2013/11/25      Land of Hope and Glory                2013/11/09      恒大夺冠                2013/11/03      Mac Terminal Tips                2013/11/01      自制 Chrome 调用贴吧 Service 插件正式发布                2013/07/20      awk 日志统计脚本              Mac8OSX5PHP3Tools2Terminal2Tips2Hash2Internal2iOS2Apps2Array2DNS2Photography2猫舌1Shell1Bash1Mail1Gmail1Airmail1Mac Book Air1Great Britain1Fiddler1Web Debugging1vim1YouCompleteMe1Land of Hope and Glory1转载1短文1Pomp and Circumstance1Hacks1MySQL1  ",
+    "url": "https://crispgm.com/blogs.html"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+<link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
+<link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+<link rel="stylesheet" href="/css/zenburn.css">
+<link rel="stylesheet" href="/css/opensans.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<script src="/script/highlight.pack.js"></script>
+<script src="/script/jquery-2.0.3.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
   <body>
     <div class="menu">
       <div class="menu-home">
@@ -201,37 +223,130 @@
   
   </div>
   <div class="article-tag">
-    <div class="tag-item"><div class="tag-item-name">Mac</div><div class="tag-item-count">8</div></div>
-<div class="tag-item"><div class="tag-item-name">OSX</div><div class="tag-item-count">5</div></div>
-<div class="tag-item"><div class="tag-item-name">PHP</div><div class="tag-item-count">3</div></div>
-<div class="tag-item"><div class="tag-item-name">Tools</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Terminal</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Tips</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Hash</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Internal</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">iOS</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Apps</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Array</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">DNS</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">Photography</div><div class="tag-item-count">2</div></div>
-<div class="tag-item"><div class="tag-item-name">猫舌</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Shell</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Bash</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Mail</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Gmail</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Airmail</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Mac Book Air</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Great Britain</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Fiddler</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Web Debugging</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">vim</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">YouCompleteMe</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Land of Hope and Glory</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">转载</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">短文</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Pomp and Circumstance</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">Hacks</div><div class="tag-item-count">1</div></div>
-<div class="tag-item"><div class="tag-item-name">MySQL</div><div class="tag-item-count">1</div></div>
+    <div class="tag-item">
+<div class="tag-item-name">Mac</div>
+<div class="tag-item-count">8</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">OSX</div>
+<div class="tag-item-count">5</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">PHP</div>
+<div class="tag-item-count">3</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Tools</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Terminal</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Tips</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Hash</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Internal</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">iOS</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Apps</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Array</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">DNS</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Photography</div>
+<div class="tag-item-count">2</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">猫舌</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Shell</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Bash</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Mail</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Gmail</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Airmail</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Mac Book Air</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Great Britain</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Fiddler</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Web Debugging</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">vim</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">YouCompleteMe</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Land of Hope and Glory</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">转载</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">短文</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Pomp and Circumstance</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">Hacks</div>
+<div class="tag-item-count">1</div>
+</div>
+<div class="tag-item">
+<div class="tag-item-name">MySQL</div>
+<div class="tag-item-count">1</div>
+</div>
 
   </div>
 </div>
@@ -241,7 +356,7 @@
       </div>
     </div>
     <footer>
-      <div>Copyright &copy; David Zhang, 2016.</div>
+      <div>Copyright © David Zhang, 2016.</div>
     </footer>
     <script>
     <!-- Google Analytics -->
