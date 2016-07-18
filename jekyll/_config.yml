@@ -23,6 +23,7 @@ plugins_dir: _plugins
 gems:
   - jemoji
   - jekyll-tagslist
+  - jekyll-mentions
 
 exclude:
   - Rakefile
