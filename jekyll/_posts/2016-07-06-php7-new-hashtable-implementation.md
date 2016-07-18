@@ -13,13 +13,13 @@ tags:
 
 # 声明
 
-本文翻译自 PHP 开发组成员 Nikita Popov([@nikic](https://github.com/nikic)) 的博客，文章根据中文习惯做了一定的调整。
+本文翻译自 PHP 开发组成员 Nikita Popov(@nikic) 的博客，文章根据中文习惯做了一定的调整。
 
 原文：[PHP's new hashtable implementation](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)
 
 # Disclaimer
 
-This article is translated from a blog post of Nikita Popov([@nikic](https://github.com/nikic)),
+This article is translated from a blog post of Nikita Popov(@nikic),
 in which I have done a small amount of adjustment based on the reading habit of Chinese.
 
 Original Post: [PHP's new hashtable implementation](https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)

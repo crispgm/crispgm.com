@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客"/>
-    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
+    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客">
+    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式">
     <title>Enable HTTPS with Let's Encrypt - Crisp Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
@@ -83,7 +84,7 @@
 
 <h3 id="acme-protocol">ACME Protocol</h3>
 
-<p><a href="https://github.com/ietf-wg-acme/acme">https://github.com/ietf-wg-acme/acme</a><br />
+<p><a href="https://github.com/ietf-wg-acme/acme">https://github.com/ietf-wg-acme/acme</a><br>
 <a href="https://github.com/letsencrypt/acme-spec">https://github.com/letsencrypt/acme-spec</a></p>
 
 <h3 id="boulder">Boulder</h3>
@@ -102,7 +103,8 @@
 
 <p>As the <code class="highlighter-rouge">letsencrypt-nginx</code> is not fully developed, I choose <code class="highlighter-rouge">certonly</code> to generate SSL certificate and configure nginx manually.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
+<div class="highlighter-rouge">
+<pre class="highlight"><code>./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
 </code></pre>
 </div>
 
@@ -110,7 +112,8 @@
 
 <p>Configure nginx.conf</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
 ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
 
 ssl_session_timeout  1440m;     
@@ -159,13 +162,14 @@ ssl_session_timeout  1440m;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
       </div>
     </div>
     <footer>
-      <div>Copyright &copy; David Zhang, 2016.</div>
+      <div>Copyright © David Zhang, 2016.</div>
     </footer>
     <script>
     <!-- Google Analytics -->
