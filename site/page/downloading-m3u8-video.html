@@ -1,43 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Begin Jekyll SEO tag v2.0.0 -->
-<title>Apple iOS m3u8 媒体文件下载 - Crisp Blog</title>
-<meta property="og:title" content="Apple iOS m3u8 媒体文件下载">
-<meta name="description" content="背景">
-<meta property="og:description" content="背景">
-<link rel="canonical" href="https://crispgm.com/page/downloading-m3u8-video.html">
-<meta property="og:url" content="https://crispgm.com/page/downloading-m3u8-video.html">
-<meta property="og:site_name" content="Crisp Blog">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2015-07-19T13:43:00+08:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@crispgm">
-<meta name="twitter:creator" content="@David Zhang">
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Apple iOS m3u8 媒体文件下载",
-    "datePublished": "2015-07-19T13:43:00+08:00",
-    "description": "背景",
-    "url": "https://crispgm.com/page/downloading-m3u8-video.html"
-  }
-</script>
-<!-- End Jekyll SEO tag -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-<link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-<link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
-<link rel="stylesheet" href="/css/zenburn.css">
-<link rel="stylesheet" href="/css/opensans.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<script src="/script/highlight.pack.js"></script>
-<script src="/script/jquery-2.0.3.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
+    <title>Apple iOS m3u8 媒体文件下载 - Crisp Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/zenburn.css">
+    <link rel="stylesheet" href="/css/opensans.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/script/highlight.pack.js"></script>
+    <script src="/script/jquery-2.0.3.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
   <body>
     <div class="menu">
       <div class="menu-home">
@@ -83,7 +61,7 @@
 
 <p>首先要拿到 URL，方法是在 Chrome 上用 iPhone6 的 User-Agent 打开，然后在 Chrome 中找到，如下：</p>
 
-<p><img src="http://crispgm.com/image/video-url.png" alt=""></p>
+<p><img src="http://crispgm.com/image/video-url.png" alt="" /></p>
 
 <blockquote>
   <p>http://us.sinaimg.cn/000MLkkJjx06TSSGESJF050d010000oz0k01.m3u8?KID=unistore,video&amp;Expires=1437309945&amp;ssig=kh06r9cH7F</p>
@@ -93,13 +71,13 @@
 
 <p>紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆 ts 格式的文件。</p>
 
-<p><img src="http://crispgm.com/image/m3u8-file-content.png" alt=""></p>
+<p><img src="http://crispgm.com/image/m3u8-file-content.png" alt="" /></p>
 
 <h3 id="section-2">下载源文件</h3>
 
 <p>把这些 ts 文件名跟 http://us.sinaimg.cn/ 拼在一起下载下来，就是被切成分片的视频源文件了。</p>
 
-<p><img src="http://crispgm.com/image/ts-file.png" alt=""></p>
+<p><img src="http://crispgm.com/image/ts-file.png" alt="" /></p>
 
 <h3 id="section-3">文件合并</h3>
 
@@ -111,8 +89,7 @@
 
 <p>那么就：</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>cat 2.ts &gt;&gt; 1.ts
+<div class="highlighter-rouge"><pre class="highlight"><code>cat 2.ts &gt;&gt; 1.ts
 </code></pre>
 </div>
 
@@ -122,8 +99,7 @@
 
 <p>安装好 ffmpeg 后，执行下面的命令就可以完成合并：</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
+<div class="highlighter-rouge"><pre class="highlight"><code>ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
 </code></pre>
 </div>
 
@@ -169,14 +145,13 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
       </div>
     </div>
     <footer>
-      <div>Copyright © David Zhang, 2016.</div>
+      <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
     <script>
     <!-- Google Analytics -->

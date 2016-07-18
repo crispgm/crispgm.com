@@ -5,21 +5,21 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jul 2016 00:44:17 +0800</pubDate>
-    <lastBuildDate>Tue, 19 Jul 2016 00:44:17 +0800</lastBuildDate>
+    <pubDate>Tue, 19 Jul 2016 00:52:05 +0800</pubDate>
+    <lastBuildDate>Tue, 19 Jul 2016 00:52:05 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>『翻译』PHP 7 新 Hash 表实现</title>
         <description>&lt;h1 id=&quot;section&quot;&gt;声明&lt;/h1&gt;
 
-&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(@nikic) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
+&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
 
 &lt;p&gt;原文：&lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;PHP’s new hashtable implementation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
 
-&lt;p&gt;This article is translated from a blog post of Nikita Popov(@nikic),
+&lt;p&gt;This article is translated from a blog post of Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;),
 in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
 
 &lt;p&gt;Original Post: &lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;PHP’s new hashtable implementation&lt;/a&gt;&lt;/p&gt;
@@ -370,13 +370,13 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;h1 id=&quot;section&quot;&gt;声明&lt;/h1&gt;
 
-&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(@nikic) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
+&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
 
 &lt;p&gt;原文：&lt;a href=&quot;https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html&quot;&gt;How big are PHP arrays (and values) really? (Hint: BIG!)&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
 
-&lt;p&gt;This article is translated from a blog post of Nikita Popov(@nikic), in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
+&lt;p&gt;This article is translated from a blog post of Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;), in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
 
 &lt;p&gt;Original Page: &lt;a href=&quot;https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html&quot;&gt;How big are PHP arrays (and values) really? (Hint: BIG!)&lt;/a&gt;&lt;/p&gt;
 
@@ -384,7 +384,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;p&gt;&lt;strong&gt;更新&lt;/strong&gt;(2016-06-14)：这篇文章主要关于 PHP 5 的内存使用。PHP 7 的内存占用，对于本文提到的情况，大约得到了3倍的优化。请阅读 &lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;hashtable implementation in PHP 7&lt;/a&gt; 获得更多信息。&lt;/p&gt;
 
-&lt;p&gt;在一开始，我想感谢&lt;a href=&quot;http://schlueters.de/blog/&quot;&gt;约翰尼斯 Johannes&lt;/a&gt; 和&lt;a href=&quot;http://www.tyrael.hu/&quot;&gt;泰瑞尔 Tyrael&lt;/a&gt;，他们帮助我寻找到了更多的隐藏内存使用。&lt;/p&gt;
+&lt;p&gt;在一开始，我想感谢&lt;a href=&quot;http://schlueters.de/blog/&quot;&gt;约翰尼斯 Johannes&lt;/a&gt; 和 &lt;a href=&quot;http://www.tyrael.hu/&quot;&gt;泰瑞尔 Tyrael&lt;/a&gt;，他们帮助我寻找到了更多的隐藏内存使用。&lt;/p&gt;
 
 &lt;p&gt;这篇博客，我将使用如下脚本作为样本研究 PHP 数组（及其值）的总体内存占用情况，这个脚本会创建 100000 个唯一的整型数组元素并计算其内存占用：&lt;/p&gt;
 
