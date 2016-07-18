@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客"/>
-    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
+    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客">
+    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式">
     <title>『翻译』PHP 数组有多大？ - Crisp Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
@@ -51,13 +52,13 @@
 
 <h1 id="section">声明</h1>
 
-<p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
+<p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic" class="user-mention">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
 
 <p>原文：<a href="https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html">How big are PHP arrays (and values) really? (Hint: BIG!)</a></p>
 
 <h1 id="disclaimer">Disclaimer</h1>
 
-<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic">@nikic</a>), in which I have done a small amount of adjustment based on the reading habit of Chinese.</p>
+<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic" class="user-mention">@nikic</a>), in which I have done a small amount of adjustment based on the reading habit of Chinese.</p>
 
 <p>Original Page: <a href="https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html">How big are PHP arrays (and values) really? (Hint: BIG!)</a></p>
 
@@ -65,11 +66,12 @@
 
 <p><strong>更新</strong>(2016-06-14)：这篇文章主要关于 PHP 5 的内存使用。PHP 7 的内存占用，对于本文提到的情况，大约得到了3倍的优化。请阅读 <a href="https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html">hashtable implementation in PHP 7</a> 获得更多信息。</p>
 
-<p>在一开始，我想感谢<a href="http://schlueters.de/blog/">约翰尼斯 Johannes</a> 和 <a href="http://www.tyrael.hu/">泰瑞尔 Tyrael</a>，他们帮助我寻找到了更多的隐藏内存使用。</p>
+<p>在一开始，我想感谢<a href="http://schlueters.de/blog/">约翰尼斯 Johannes</a> 和<a href="http://www.tyrael.hu/">泰瑞尔 Tyrael</a>，他们帮助我寻找到了更多的隐藏内存使用。</p>
 
 <p>这篇博客，我将使用如下脚本作为样本研究 PHP 数组（及其值）的总体内存占用情况，这个脚本会创建 100000 个唯一的整型数组元素并计算其内存占用：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = range(1, 100000);
 echo memory_get_usage() - $startMemory, ' bytes';
 </code></pre>
@@ -85,7 +87,8 @@ echo memory_get_usage() - $startMemory, ' bytes';
 
 <p>对于那些不想看完整个故事的人，这里给出了一个简单的涉及到的不同组件的内存占用情况：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>                             |  64 bit   | 32 bit
+<div class="highlighter-rouge">
+<pre class="highlight"><code>                             |  64 bit   | 32 bit
 ---------------------------------------------------
 zval                         |  24 bytes | 16 bytes
 + cyclic GC info             |   8 bytes |  4 bytes
@@ -113,7 +116,8 @@ total total                  | 144 bytes | 76 bytes
 
 <p>首先看一下 PHP 是如何存储数值的。众所周知 PHP 是一个弱类型语言，所以它需要在不同类型中快速切换。因此 PHP 使用 <code class="highlighter-rouge">union</code>（<a href="http://en.wikipedia.org/wiki/Union_%28computer_science%29">联合</a>） 实现数值存储，定义在 zend.h 的 307行：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef union _zvalue_value {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef union _zvalue_value {
     long lval;                // For integers and booleans
     double dval;              // For floats (doubles)
     struct {                  // For strings
@@ -136,7 +140,8 @@ total total                  | 144 bytes | 76 bytes
 
 <p>这很符合逻辑：<code class="highlighter-rouge">union</code> 只是存值本身，而 PHP 显然还需要存储它的类型以及一些垃圾回收信息。你可能已经听说过，带有这些信息的结构体叫做 <code class="highlighter-rouge">zval</code>。想获取更多信息，我推荐阅读<a href="http://blog.golemon.com/2007/01/youre-being-lied-to.html">萨拉·戈尔蒙（Sara Golemon）的一篇文章</a>。无论如何，<a href="http://lxr.php.net/xref/PHP_5_4/Zend/zend.h#318">结构体定义</a>如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>struct _zval_struct {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>struct _zval_struct {
     zvalue_value value;     // The value
     zend_uint refcount__gc; // The number of references to this value (for GC)
     zend_uchar type;        // The type
@@ -153,7 +158,8 @@ total total                  | 144 bytes | 76 bytes
 
 <p>PHP 5.3 引入了一种新的<a href="http://php.net/manual/en/features.gc.collecting-cycles.php">解决循环引用的垃圾回收器</a>，PHP 还需要存更多的数据来做这件事。我不想在这里介绍这个算法是如何运转的，你可以阅读上面的链接。对于我们的内存大小计算来说最重要的内容是，PHP 会把每个 <code class="highlighter-rouge">zval</code> 包入一个 <code class="highlighter-rouge">zval_gc_info</code> 结构。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _zval_gc_info {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef struct _zval_gc_info {
     zval z;
     union {
         gc_root_buffer       *buffered;
@@ -173,7 +179,8 @@ total total                  | 144 bytes | 76 bytes
 
 <p>对于我们的计算最重要的是，这个“MM”在进行了每次分配后添加一个分配头。<a href="http://lxr.php.net/xref/PHP_5_4/Zend/zend_alloc.c#336">定义如下</a>：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _zend_mm_block {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef struct _zend_mm_block {
     zend_mm_block_info info;
 #if ZEND_DEBUG
     unsigned int magic;
@@ -206,7 +213,8 @@ typedef struct _zend_mm_block_info {
 
 <p>迄今为止，我们只考虑了单独的值。但 PHP 的数组结构占用了很多空间：“数组”实际上在这里是个错误的命名。PHP 数组其实是 HashTable（哈希表）和 Dictionary（词典）。所以，哈希表是如何工作的？简单的说，每当 Hash 生成一个 key，Hash 会用一个偏移量将指向到真实的 C 数组。因为 Hash 会冲突，有相同 Hash 值的所有元素会被储存到一个链表中。当存取元素时，PHP 首先计算一个元素的 Hash 值，寻找正确的 <code class="highlighter-rouge">Bucket</code> 然后遍历链表，逐个元素对比实际的 key。<code class="highlighter-rouge">Bucket</code> 的定义如下（<a href="http://lxr.php.net/opengrok/xref/PHP_5_4/Zend/zend_hash.h#54">见 zend_hash.h#54</a>）：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct bucket {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef struct bucket {
     ulong h;                  // The hash (or for int keys the key)
     uint nKeyLength;          // The length of the key (for string keys)
     void *pData;              // The actual data
@@ -244,7 +252,8 @@ typedef struct _zend_mm_block_info {
 
 <p>看一下修改后的脚本：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = new SplFixedArray(100000);
 for ($i = 0; $i &lt; 100000; ++$i) {
     $array[$i] = $i;
@@ -294,13 +303,14 @@ echo memory_get_usage() - $startMemory, ' bytes';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
       </div>
     </div>
     <footer>
-      <div>Copyright &copy; David Zhang, 2016.</div>
+      <div>Copyright © David Zhang, 2016.</div>
     </footer>
     <script>
     <!-- Google Analytics -->

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客"/>
-    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"/>
+    <meta name="keywords" content="David Zhang, crisp, crispgm, Crisp Blog, Crisp 博客">
+    <meta name="description" content="Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式">
     <title>『翻译』PHP 7 新 Hash 表实现 - Crisp Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
@@ -49,13 +50,13 @@
           <div class="article-main">
             <h1 id="section">声明</h1>
 
-<p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
+<p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic" class="user-mention">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
 
 <p>原文：<a href="https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html">PHP’s new hashtable implementation</a></p>
 
 <h1 id="disclaimer">Disclaimer</h1>
 
-<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic">@nikic</a>),
+<p>This article is translated from a blog post of Nikita Popov(<a href="https://github.com/nikic" class="user-mention">@nikic</a>),
 in which I have done a small amount of adjustment based on the reading habit of Chinese.</p>
 
 <p>Original Post: <a href="https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html">PHP’s new hashtable implementation</a></p>
@@ -66,7 +67,8 @@ in which I have done a small amount of adjustment based on the reading habit of 
 
 <p>我使用一个脚本来测量内存使用情况，这个脚本会测试创建一个 100000 个不同整型数的数组所需要的内存：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = range(1, 100000);
 echo memory_get_usage() - $startMemory, " bytes\n";
 </code></pre>
@@ -74,7 +76,8 @@ echo memory_get_usage() - $startMemory, " bytes\n";
 
 <p>下面的这张表展示了 PHP 5.6 和 PHP 7 在 32 位和 64 位系统中的内存占用对比：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>        |   32 bit |    64 bit
+<div class="highlighter-rouge">
+<pre class="highlight"><code>        |   32 bit |    64 bit
 ------------------------------
 PHP 5.6 | 7.37 MiB | 13.97 MiB
 ------------------------------
@@ -100,19 +103,21 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>我在这里只会简短的概述一下旧的 Hash 表实现，想获得更全面的解释可以阅读 PHP 内核书的 <a href="http://www.phpinternalsbook.com/hashtables/basic_structure.html">Hash 表章节</a>。下图所示是一个 PHP 5 Hash 表的高级视图：</p>
 
-<p><img src="https://nikic.github.io/images/basic_hashtable.svg" alt="" /></p>
+<p><img src="https://nikic.github.io/images/basic_hashtable.svg" alt=""></p>
 
 <p>“冲突处理”链表中的元素是 <code class="highlighter-rouge">bucket</code>。每个 <code class="highlighter-rouge">bucket</code> 会被单独分配。图片隐藏了 <code class="highlighter-rouge">bucket</code> 中实际存储的值（只显示了 key）。值被存储在独立分配的 <code class="highlighter-rouge">zval</code> 结构中，结构有 16 bytes（32 位）或 24 bytes（64 位）。</p>
 
 <p>另一件事就是图片没有体现出冲突处理链表实际是一个双向链表（这样可以便于删除操作）。在冲突处理链表旁边，还有另一个双向链表用于存储数组元素的顺序。对于一个有以<code class="highlighter-rouge">"a", "b", "c"</code> 3 个 key 为顺序的数组，顺序链表如下：</p>
 
-<p><img src="https://nikic.github.io/images/ordered_hashtable.svg" alt="" /></p>
+<p><img src="https://nikic.github.io/images/ordered_hashtable.svg" alt=""></p>
 
 <p>所以，为什么旧的 Hash 表结构无论是内存消耗还是性能上都如此的低效？这有很多主要的原因：</p>
 
 <ul>
-  <li><code class="highlighter-rouge">bucket</code> 需要独立分配内存。内存分配慢而且需要额外增加 8 / 16 bytes，独立分配内存也意味着 <code class="highlighter-rouge">bucket</code> 在内存中会更分散，降低缓存效果。</li>
-  <li><code class="highlighter-rouge">zval</code> 也需要独立分配内存。同样的，内存分配慢而且会导致更多内存分配。除此之外，这还需要在每个 <code class="highlighter-rouge">bucket</code> 中存储一个指向 <code class="highlighter-rouge">zval</code> 的指针。因为旧的实现过度通用，它实际需要不止一个，而是两个指针。</li>
+  <li>
+<code class="highlighter-rouge">bucket</code> 需要独立分配内存。内存分配慢而且需要额外增加 8 / 16 bytes，独立分配内存也意味着 <code class="highlighter-rouge">bucket</code> 在内存中会更分散，降低缓存效果。</li>
+  <li>
+<code class="highlighter-rouge">zval</code> 也需要独立分配内存。同样的，内存分配慢而且会导致更多内存分配。除此之外，这还需要在每个 <code class="highlighter-rouge">bucket</code> 中存储一个指向 <code class="highlighter-rouge">zval</code> 的指针。因为旧的实现过度通用，它实际需要不止一个，而是两个指针。</li>
   <li>双向链表需要为每个 <code class="highlighter-rouge">bucket</code> 存储 4 个指针，这单独就占用了 16 / 32 bytes… 除此之外，遍历链表是一件对缓存很不友好的操作。</li>
 </ul>
 
@@ -122,7 +127,8 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>在进入实际的 Hash 表之前，我想先简单的看一下新的 <code class="highlighter-rouge">zval</code> 结构并且突出它和旧版的区别。<code class="highlighter-rouge">zval</code> 结构定义如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>struct _zval_struct {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>struct _zval_struct {
     zend_value value;
     union {
         struct {
@@ -157,8 +163,10 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 <p><code class="highlighter-rouge">zval</code> 本身不再使用引用计数，而复杂的数据类型如 <code class="highlighter-rouge">string</code>, <code class="highlighter-rouge">array</code>, <code class="highlighter-rouge">object</code> 和 <code class="highlighter-rouge">resource</code> 等还会使用引用计数。事实上，新的 <code class="highlighter-rouge">zval</code> 设计将引用计数从 <code class="highlighter-rouge">zval</code> 提到了 <code class="highlighter-rouge">array</code> 和 <code class="highlighter-rouge">object</code> 等结构上。这种方式会有很多好处，下面列出了部分好处：</p>
 
 <ul>
-  <li><code class="highlighter-rouge">zval</code> 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头的额外消耗，并且通过避免不必要的分配和释放内存改善了缓存访问，提升了性能。</li>
-  <li><code class="highlighter-rouge">zval</code> 存储简单的数值不需要存储引用计数和 GC 根缓冲。</li>
+  <li>
+<code class="highlighter-rouge">zval</code> 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头的额外消耗，并且通过避免不必要的分配和释放内存改善了缓存访问，提升了性能。</li>
+  <li>
+<code class="highlighter-rouge">zval</code> 存储简单的数值不需要存储引用计数和 GC 根缓冲。</li>
   <li>我们避免了双重的引用计数。例如：过去，对象会既使用 <code class="highlighter-rouge">zval</code> 的引用计数，又增加了一个额外的对象引用计数，被用于支持对象传值的语法。</li>
   <li>由于所有复杂的值现在集成了引用计数，它们可以独立共享 <code class="highlighter-rouge">zval</code> 的机制，尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非留存（译者注：此处 interned 没有找到好的翻译，<a href="https://en.wikipedia.org/wiki/String_interning">string interning</a> 是指一种为每个不同的不可变字符串值只存储一个拷贝的方法）的字符串类型的键值。</li>
 </ul>
@@ -167,7 +175,8 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 <code class="highlighter-rouge">bucket</code> 的结构开始：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _Bucket {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef struct _Bucket {
     zend_ulong        h;
     zend_string      *key;
     zval              val;
@@ -181,7 +190,8 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>主 Hash 表的结构更加有趣：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _HashTable {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef struct _HashTable {
     uint32_t          nTableSize;
     uint32_t          nTableMask;
     uint32_t          nNumUsed;
@@ -216,7 +226,8 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>用下面的代码作为例子：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$array = [
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$array = [
     'foo' =&gt; 0,
     'bar' =&gt; 1,
     0     =&gt; 2,
@@ -230,7 +241,8 @@ unset($array['xyz']);
 
 <p>这会形成如下的 <code class="highlighter-rouge">arData</code> 结构：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>nTableSize     = 8
+<div class="highlighter-rouge">
+<pre class="highlight"><code>nTableSize     = 8
 nNumOfElements = 3
 nNumUsed       = 5
 
@@ -249,7 +261,8 @@ nNumUsed       = 5
 
 <p>新的维护数组顺序的方式对于 PHP 5.x 的双向链表有很多优点。一个明显的优点是我们对于每个 <code class="highlighter-rouge">bucket</code> 节省两个指针，相当于 8/16 bytes。并且，这意味着数组迭代粗略如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>uint32_t i;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>uint32_t i;
 for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
     Bucket *b = &amp;ht-&gt;arData[i];
     if (Z_ISUNDEF(b-&gt;val)) continue;
@@ -275,7 +288,8 @@ for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
 
 <p>查找机制如下代码中所示：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>zend_ulong h = zend_string_hash_val(key);
+<div class="highlighter-rouge">
+<pre class="highlight"><code>zend_ulong h = zend_string_hash_val(key);
 uint32_t idx = ht-&gt;arHash[h &amp; ht-&gt;nTableMask];
 while (idx != INVALID_IDX) {
     Bucket *b = &amp;ht-&gt;arData[idx];
@@ -321,8 +335,10 @@ return NULL;
 <p>在 PHP 5.x 每个元素需要巨大的 144 bytes。在 PHP 7 中，降低到了 36 bytes，或者打包情况下 32 bytes。下面这些是两者区别：</p>
 
 <ul>
-  <li><code class="highlighter-rouge">zval</code> 不独立分配，所以我们节省了 16 bytes。</li>
-  <li><code class="highlighter-rouge">bucket</code> 不独立分配，所以我们又节省了 16 bytes。</li>
+  <li>
+<code class="highlighter-rouge">zval</code> 不独立分配，所以我们节省了 16 bytes。</li>
+  <li>
+<code class="highlighter-rouge">bucket</code> 不独立分配，所以我们又节省了 16 bytes。</li>
   <li>每个 <code class="highlighter-rouge">zval</code> 的值节省 16 bytes。</li>
   <li>保证顺序不再需要 16 bytes 的双向队列，而是绝对的顺序。</li>
   <li>冲突链表现在是单向的，节省了 8 bytes。此外，它现在是一个有下标的链表，并且下标被内置在 <code class="highlighter-rouge">zval</code> 中，所以我们实际上又节省了 8 bytes。</li>
@@ -339,7 +355,8 @@ return NULL;
 
 <p>另一件需要考虑的事情是，如果不是所有存储的值都不相同的情况下会发生什么。为了简单，我们假设所有的值是完全相同的。所以让我们把开头的脚本 <code class="highlighter-rouge">range</code> 函数替换成 <code class="highlighter-rouge">array_fill</code>。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = array_fill(0, 100000, 42);
 echo memory_get_usage() - $startMemory, " bytes\n";
 </code></pre>
@@ -347,7 +364,8 @@ echo memory_get_usage() - $startMemory, " bytes\n";
 
 <p>这个脚本的结果如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>        |   32 bit |    64 bit
+<div class="highlighter-rouge">
+<pre class="highlight"><code>        |   32 bit |    64 bit
 ------------------------------
 PHP 5.6 | 4.70 MiB |  9.39 MiB
 ------------------------------
@@ -422,13 +440,14 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
       </div>
     </div>
     <footer>
-      <div>Copyright &copy; David Zhang, 2016.</div>
+      <div>Copyright © David Zhang, 2016.</div>
     </footer>
     <script>
     <!-- Google Analytics -->
