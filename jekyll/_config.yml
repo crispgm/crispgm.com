@@ -1,18 +1,12 @@
 # Site settings
-title: DAVID ZHANG
+title: Crisp Blog
 author: David Zhang
-email: crispgm@gmail.com
-description: "Focus on apps, programming, electronic devices, photography and lifestyles. 主要专注于App应用,程序开发,电子设备,摄影和生活方式"
-keywords:
-  - David Zhang
-  - crisp
-  - crispgm
-  - Crisp Blog
-  - Crisp 博客
+description: "A minimalist programmer, photographer and lifes lover."
 url: "https://crispgm.com"
-encoding: utf-8
+twitter:
+  username: crispgm
 
-# Build settings
+encoding: utf-8
 markdown: kramdown
 
 collections:
@@ -22,8 +16,9 @@ collections:
 plugins_dir: _plugins
 gems:
   - jemoji
-  - jekyll-tagslist
   - jekyll-mentions
+  - jekyll-seo-tag
+  - jekyll-tagslist
 
 exclude:
   - Rakefile
