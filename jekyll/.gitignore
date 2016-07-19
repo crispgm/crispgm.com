@@ -5,3 +5,5 @@ photo/Thumb.db
 *.swp
 jekyll/.sass-cache
 Gemfile.lock
+jekyll/_site
+_site
