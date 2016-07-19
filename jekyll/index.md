@@ -2,11 +2,9 @@
 layout: page
 title: Home
 ---
-I am David Zhang, a.k.a Crisp or Crispgm on the Internet. I work as a software engineer of web architectures, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs.
+I am David Zhang, a.k.a Crisp or Crispgm on the Internet. I work as a software engineer of web architectures, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is one of [my simple résumé](/resume.html).
 
 In leisure times, photography, coffee and idols are things I greatly appreciate.
-
-Here is one of [my simple résumé](/resume.html) and a [GitHub Résumé](http://resume.github.io/?crispgm).
 
 Follow me on:
 
