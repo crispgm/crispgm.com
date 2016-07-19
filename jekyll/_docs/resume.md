@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resume
+title: Résumé
 permalink: /resume.html
 ---
 
@@ -21,7 +21,7 @@ __Technological Stacks__
 
 * PHP
 * C/C++
+* Ruby
 * Nginx
 * MySQL
-* shell/awk
-* vim
+* Shell/awk
