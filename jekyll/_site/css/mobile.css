@@ -1,0 +1,220 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2016
+ * Powered by {less}
+ */
+html {
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  word-wrap: break-word;
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.4em
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.15em;
+}
+a {
+  text-decoration: underline;
+  color: #333;
+}
+ul li p {
+  margin: 0;
+}
+/* Menu */
+.menu {
+  width: 100%;
+  border-bottom: 1px solid #aaaaaa;
+}
+.menu a {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+.menu-home {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 28px;
+  text-align: center;
+  font-size: 2.75em;
+  margin: 0;
+}
+.menu-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+}
+.menu-item {
+}
+/* Article */
+#container {
+  text-align: center;
+  width: 100%;
+}
+.article {
+  width: 98%;
+  text-align: left;
+  padding: 1%;
+}
+.article-head {
+}
+.article-title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 1.25em;
+  text-align: center;
+}
+.article-title a {
+  text-decoration: none;
+  color: black;
+}
+.article-date {
+  text-align: center;
+  font-size: 0.8em;
+}
+.article-main {
+  font-size: 1em;
+  padding-top: 8px;
+}
+/* Tags */
+.article-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  border-top: 1px solid #aaaaaa;
+  padding-top: 4px;
+}
+.tag-item {
+  font-size: 0.8em;
+  padding: 2px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tag-item:hover {
+  background-color: #aaaaaa;
+  color: #ffffff;
+}
+.tag-item-name {
+  margin-right: 4px;
+}
+.tag-tem-count {
+}
+/* Archive */
+.archive-main {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.archive-item {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow:hidden;
+}
+.archive-date {
+  padding-right: 4px;
+}
+.archive-title {
+}
+.archive-subscribe {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.archive-main a{
+  text-decoration: none;
+}
+.archive-subscribe a{
+  text-decoration: none;
+}
+/* disqus */
+#disqus_thread {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+footer {
+  font-size: 1em;
+  height: 36px;
+}
+img {
+  border: 0;
+  max-width: 100%;
+}
+/* codes */
+pre.highlight {
+  border: 1px solid #aaaaaa;
+  border-radius: 2px;
+  font-family: Menlo, "Source Code Pro", Consolas, Courier;
+  font-size: 14px;
+}
+/* inline codes */
+code.highlighter-rouge {
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid #aaaaaa;
+}
+/* things & project */
+.things-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-basis: auto;
+  width: 100%;
+}
+li {
+  margin-left: -10px;
+}
+li.subtitle {
+  font-size: 16px;
+  list-style-type: none;
+  margin-left: -30px;
+}
+.things-box {
+  padding: 4px;
+  width: 100%;
+}
+.things-title {
+  font-size: 18px;
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.things-list {
+}
+.things-link {
+  margin-top: 8px;
+}
+.text-center {
+  text-align: center;
+}

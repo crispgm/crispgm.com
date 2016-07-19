@@ -1,0 +1,274 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2016
+ */
+html {
+  width: 100%
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  word-wrap: break-word;
+  text-align: center;
+  height: 100%;
+}
+h1 {
+  font-size: 2.0em;
+}
+h2 {
+  font-size: 1.8em;
+  color: #555;
+}
+h3 {
+  font-size: 1.4em;
+  color: #555;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1.0em;
+}
+a {
+  text-decoration: none;
+  /* color: #08c; */
+  color: #333;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul li p {
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #f5f5f5;
+  height: 36px;
+}
+td {
+  padding: 4px;
+}
+tr {
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+/* Menu */
+.menu {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border-bottom: 1px solid #aaaaaa;
+}
+.menu-home {
+  font-size: 56px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+.menu-home a {
+  text-decoration: none;
+}
+.menu-links {
+  font-size: 0.8em;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-item {
+  height: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+.menu-item a {
+  color: #bbbbbb;
+}
+.menu-active a {
+  color: #bbbbbb;
+  text-decoration: underline;
+}
+/* */
+#container {
+  text-align: center;
+  width: 100%;
+}
+/* Article */
+.article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: left;
+  margin-top: 40px;
+}
+.article-head {
+  text-align: center;
+}
+.article-title {
+  font-size: 2.6em;
+}
+.article-title a {
+  text-decoration: none;
+  color: #555;
+}
+.article-title a:hover {
+  text-decoration: underline;
+}
+.article-date {
+  font-size: 16px;
+}
+.article-main {
+  margin-top: 24px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.article-main a{
+  text-decoration: underline;
+}
+p {
+  line-height: 28px;
+}
+/* Tags */
+.article-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 18px;
+  border-top: 1px solid #aaaaaa;
+}
+.tag-item {
+  padding: 2px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tag-item:hover {
+  background-color: #aaaaaa;
+  color: #ffffff;
+}
+.tag-item-name {
+  margin-right: 8px;
+}
+.tag-item-count {
+}
+/* Archive */
+.archive-main {
+  margin-top: 24px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+.archive-main a {
+  text-decoration: none;
+}
+.archive-main a:hover {
+  text-decoration: underline;
+}
+.archive-item {
+  width: 49%;
+  margin-right: 1%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* disqus */
+#disqus_thread {
+}
+#disqus_thread iframe {
+  text-align: center;
+}
+/* footer */
+footer {
+  text-align: center;
+  font-size: 18px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 12px;
+}
+img {
+  border: 0;
+  max-width: 640px;
+  max-height: 480px;
+}
+/* codes */
+pre.highlight {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  font-family: Menlo, "Source Code Pro", Consolas, Courier;
+  font-size: 14px;
+  overflow: scroll;
+}
+code.hljs {
+  padding: 12px;
+}
+/* inline codes */
+code.highlighter-rouge {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+code.highlighter-rouge:hover {
+  color: white;
+  background-color: #aaaaaa;
+}
+/* things & project */
+.things-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-basis: auto;
+}
+li {
+  margin-left: -10px;
+}
+li.subtitle {
+  font-size: 16px;
+  list-style-type: none;
+  margin-left: -30px;
+}
+.things-box {
+  margin: 1%;
+  /*width: 240px;*/
+  width: 31%;
+}
+.things-title {
+  font-size: 18px;
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 5px;
+}
+.things-list {
+}
+.things-link {
+  margin-top: 8px;
+}
+.text-center {
+  text-align: center;
+}
