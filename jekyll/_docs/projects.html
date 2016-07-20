@@ -1,11 +1,10 @@
 ---
 layout: page
-title: My Projects
+title: Projects
 permalink: /projects.html
 ---
-
 <div class="things-content">
-  {% for project in site.data.projects.my_projects %}
+  {% for project in site.data.projects %}
   <div class="things-box">
     <div class="things-title">
       {{ project.name }}
@@ -24,27 +23,4 @@ permalink: /projects.html
   {% endfor %}
 </div>
 
-<div class="article-title text-center">Contributed Projects</div>
-
-<div class="things-content">
-  {% for project in site.data.projects.contributed_projects %}
-  <div class="things-box">
-    <div class="things-title">
-      {{ project.name }}
-    </div>
-    <div class="things-list">
-      <div class="things-link">
-        {% for link in project.links %}
-        <a href="{{ link.href }}">{{ link.text }}</a>
-        {% endfor %}
-      </div>
-      <p>
-        {{ project.description }}
-      </p>
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-<p>*: Still in developing.</p>
 <p>For more information about my projects, visit on my <a href="https://github.com/crispgm">Github</a>.</p>
