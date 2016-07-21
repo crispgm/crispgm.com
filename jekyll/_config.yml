@@ -3,9 +3,6 @@ title: DAVID ZHANG
 author: David Zhang
 description: "A minimalist programmer, photographer and lifes lover."
 url: "https://crispgm.com"
-twitter:
-  username: crispgm
-
 encoding: utf-8
 markdown: kramdown
 
@@ -17,6 +14,12 @@ plugins_dir: _plugins
 gems:
   - jemoji
   - jekyll-tagslist
+  - jekyll-disqus
+
+twitter:
+  username: crispgm
+disqus:
+  username: crispgm
 
 exclude:
   - Rakefile
