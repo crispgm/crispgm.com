@@ -5,6 +5,7 @@ description: "A minimalist programmer, photographer and lifes lover."
 url: "https://crispgm.com"
 twitter:
   username: crispgm
+disqus: crispgm
 
 encoding: utf-8
 markdown: kramdown
@@ -17,6 +18,7 @@ plugins_dir: _plugins
 gems:
   - jemoji
   - jekyll-tagslist
+  - jekyll-disqus
 
 exclude:
   - Rakefile
