@@ -15,11 +15,14 @@ gems:
   - jemoji
   - jekyll-tagslist
   - jekyll-disqus
+  - jekyll-google-analytics
 
 twitter:
   username: crispgm
 disqus:
   username: crispgm
+ga:
+  tracking_id: UA-50708664-1
 
 exclude:
   - Rakefile
