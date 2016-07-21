@@ -14,3 +14,9 @@ task :build do
   sh "bundle exec jekyll build --destination=../site"
   sh "rm -rf ./_site"
 end
+
+task :deploy do
+  sh "git add ../site"
+  sh "git commit -m \"Deployed at #{Time.now}\""
+  sh "git push"
+end
