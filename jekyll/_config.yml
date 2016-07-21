@@ -5,7 +5,8 @@ description: "A minimalist programmer, photographer and lifes lover."
 url: "https://crispgm.com"
 twitter:
   username: crispgm
-disqus: crispgm
+disqus:
+  username: crispgm
 
 encoding: utf-8
 markdown: kramdown
