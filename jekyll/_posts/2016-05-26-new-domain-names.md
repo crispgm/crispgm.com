@@ -15,7 +15,7 @@ tag:
 * [https://crispgm.com](https://crispgm.com)
 * [https://crisp.lol](https://crisp.lol)
 
-目前，只有一个已知问题：两个域名之间的同一个网页，是不同的 disqus 评论。
+目前，只有一个已知问题：两个域名之间的同一个网页，是不同的 disqus 评论（注：已[解决](/page/same-disqus-thread-in-multiple-pages.html)）。
 
 同时，椰椰子主页也有了自己的域名，以及 https 支持：
 
