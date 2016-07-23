@@ -3,9 +3,9 @@ layout: page
 title: Home
 permalink: /index.html
 ---
-I am David Zhang, a.k.a Crisp or Crispgm on the internet. I work as a software engineer of web architectures, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is one of [my simple résumé](/resume.html).
+I am David Zhang, a.k.a __Crisp__ or __Crispgm__ on the internet. I work as a software engineer of web architectures, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is one of [my simple résumé](/resume.html), and a well-designed résumé is working in process.
 
-In leisure times, photography, coffee and idols are things I greatly appreciate.
+In leisure times, photography and coffee are things I greatly appreciate. I am interested in improving productivity with great tools chain and systematic methodology. And I go to the theater cheering for my idols with _glo-sticks_ every week.
 
 Follow me on:
 
@@ -15,8 +15,8 @@ Follow me on:
 * [VSCO](http://vsco.co/crispgm/){:target="_blank"}
 * [Instagram](https://instagram.com/crispgm){:target="_blank"}
 
-And there are what I advocate:
+There are what I advocate:
 
 * [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
-* [Against Piracy Software in China](/page/piracy-software-or-app.html)
+* [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
