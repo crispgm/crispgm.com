@@ -261,6 +261,7 @@ li.subtitle {
 }
 .things-title {
   font-size: 18px;
+  font-weight: bold;
   border-bottom: 1px solid #aaaaaa;
   padding-bottom: 5px;
 }
