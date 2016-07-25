@@ -17,7 +17,7 @@
   links:
     - text: GitHub
       href: https://github.com/crispgm/olympia
-- name: Jekyll
+- name: Jekyll*
   description: Jekyll is a blog-aware, static site generator in Ruby.
   links:
     - text: GitHub
@@ -26,7 +26,7 @@
       href: https://jekyllrb.com/
     - text: Contributes
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
-- name: awesome-cn-cafe
+- name: awesome-cn-cafe*
   description: A curated list of awesome café places in China.
   links:
     - text: GitHub
