@@ -3,7 +3,7 @@ layout: page
 title: Home
 permalink: /index.html
 ---
-I am David Zhang, a.k.a __Crisp__ or __Crispgm__ on the internet. I work as a software engineer of web architectures, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is [my résumé](/resume.html) for those interested.
+I am David Zhang, a.k.a __Crisp__ or __Crispgm__ on the internet. I work as a software engineer of web architectures, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is [my résumé](/resume.html){:target="_blank"} for those interested.
 
 In leisure times, photography and coffee are things I greatly appreciate. I am interested in improving productivity with great tools chain and systematic methodology. And I go to the theater cheering for my idols with _glo-sticks_ every week.
 
