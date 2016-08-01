@@ -2,13 +2,18 @@
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2016
  */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 html {
   width: 100%
 }
 body {
   margin: 0;
   font-family: "Open Sans", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, Courier, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: #333;
   word-wrap: break-word;
@@ -16,21 +21,21 @@ body {
   height: 100%;
 }
 h1 {
-  font-size: 2.0em;
+  font-size: 1.8rem;
 }
 h2 {
-  font-size: 1.8em;
+  font-size: 1.6rem;
   color: #555;
 }
 h3 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   color: #555;
 }
 h4 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 h5 {
-  font-size: 1.0em;
+  font-size: 1.0rem;
 }
 a {
   text-decoration: none;
@@ -48,50 +53,53 @@ table {
   width: 100%;
 }
 th {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: .25rem;
   background-color: #f5f5f5;
-  height: 36px;
 }
 td {
-  padding: 4px;
+  padding: .25rem;
 }
 tr {
 }
 tr:hover {
   background-color: #f5f5f5;
 }
+/* content */
+#content {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+@media (max-width: 40rem) {
+  #content {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
 /* Menu */
 .menu {
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: .05rem solid #aaaaaa;
 }
 .menu-home {
-  font-size: 56px;
-  padding-top: 50px;
-  padding-bottom: 40px;
-  width: 100%;
+  font-size: 3.2rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3.2rem;
 }
 .menu-home a {
   text-decoration: none;
 }
 .menu-links {
-  font-size: 0.8em;
-  height: 30px;
-  width: 100%;
+  font-size: 0.8rem;
+  height: 2rem;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .menu-item {
-  height: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  height: 2rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   text-align: center;
 }
 .menu-item a {
@@ -101,24 +109,16 @@ tr:hover {
   color: #bbbbbb;
   text-decoration: underline;
 }
-/* */
-#container {
-  text-align: center;
-  width: 100%;
-}
 /* Article */
 .article {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 2.4rem;
 }
 .article-head {
   text-align: center;
 }
 .article-title {
-  font-size: 2.6em;
+  font-size: 2.2rem;
 }
 .article-title a {
   text-decoration: none;
@@ -128,34 +128,34 @@ tr:hover {
   text-decoration: underline;
 }
 .article-date {
-  font-size: 16px;
+  font-size: 1.0rem;
+  color: #bbbbbb;
 }
 .article-main {
-  margin-top: 24px;
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 1.0rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 .article-main a{
   text-decoration: underline;
 }
 p {
-  line-height: 28px;
+  line-height: 1.6rem;
 }
 /* Tags */
 .article-tag {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-  padding-top: 18px;
-  border-top: 1px solid #aaaaaa;
+  padding-top: 1.4rem;
+  border-top: .05rem solid #aaaaaa;
 }
 .tag-item {
-  padding: 2px;
-  margin-right: 8px;
-  margin-bottom: 4px;
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
+  padding: .2rem;
+  margin-right: .25rem;
+  margin-bottom: .25rem;
+  border: .05rem solid #bbbbbb;
+  border-radius: .2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -165,17 +165,14 @@ p {
   color: #ffffff;
 }
 .tag-item-name {
-  margin-right: 8px;
+  margin-right: .5rem;
 }
 .tag-item-count {
+  font-size: .75rem;
 }
 /* Archive */
 .archive-main {
-  margin-top: 24px;
-  padding-bottom: 16px;
-  font-size: 16px;
-  text-align: left;
-  width: 100%;
+  margin-bottom: 1rem;
 }
 .archive-main a {
   text-decoration: none;
@@ -184,25 +181,25 @@ p {
   text-decoration: underline;
 }
 .archive-item {
-  margin-right: 1%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  overflow: hidden;
-  margin-top: 8px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: space-between;
+  margin-top: .5rem;
+  overflow: auto; /* clearfix */
 }
-.archive-title {
-  width: 75%;
+.archive-year {
+  margin-top: 2rem;
 }
 .archive-date {
-  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #bbbbbb;
-  width: 25%;
+}
+@media (min-width: 40rem) {
+  .archive-date {
+    float: right;
+    margin-left: 1rem;
+  }
+  .archive-item {
+    margin-top: 0;
+  }
 }
 /* disqus */
 #disqus_thread {
@@ -213,10 +210,10 @@ p {
 /* footer */
 footer {
   text-align: center;
-  font-size: 18px;
+  font-size: 1rem;
   overflow: hidden;
-  margin-top: 50px;
-  margin-bottom: 12px;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
 }
 img {
   border: 0;
@@ -225,21 +222,20 @@ img {
 }
 /* codes */
 pre.highlight {
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
+  border: .05rem solid #aaaaaa;
+  border-radius: .2rem;
   font-family: Menlo, "Source Code Pro", Consolas, Courier;
-  font-size: 14px;
   overflow: scroll;
 }
 code.hljs {
-  padding: 12px;
+  padding: .8rem;
 }
 /* inline codes */
 code.highlighter-rouge {
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  border: .05rem solid #aaaaaa;
+  border-radius: .2rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
 }
 code.highlighter-rouge:hover {
   color: white;
@@ -247,36 +243,20 @@ code.highlighter-rouge:hover {
 }
 /* things & project */
 .things-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-basis: auto;
-}
-li {
-  margin-left: -10px;
-}
-li.subtitle {
-  font-size: 16px;
-  list-style-type: none;
-  margin-left: -30px;
+  display: block;
 }
 .things-box {
-  margin: 1%;
-  /*width: 240px;*/
-  width: 31%;
+  width: 100%;
 }
 .things-title {
-  font-size: 18px;
-  font-weight: bold;
-  border-bottom: 1px solid #aaaaaa;
-  padding-bottom: 5px;
+  font-size: 1.2rem;
+  border-bottom: .05rem solid #aaaaaa;
+  padding-bottom: .2rem;
 }
 .things-list {
 }
 .things-link {
-  margin-top: 8px;
+  margin-top: .4rem;
 }
 .text-center {
   text-align: center;
