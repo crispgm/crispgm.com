@@ -7,8 +7,7 @@
     <title>Land of Hope and Glory | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Land of Hope and Glory</div>
-            <div class="article-date">2013/11/25</div>
-          </div>
-          <div class="article-main">
-            <p>这首歌本来没歌词，名叫《威风堂堂》进行曲(Pomp and Circumstance March No.1 in D major，威风堂堂D大调第一进行曲)，英国著名作曲家埃尔加作曲。后来加上了歌词后，变成了著名爱国歌曲，甚至英格兰橄榄球队的“国歌”就是它。不过一般来说在前面一堆是不会唱的，只有副歌(Chorus)部分才会唱。</p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Land of Hope and Glory</div>
+    <div class="article-date">2013/11/25</div>
+  </div>
+  <div class="article-main">
+    <p>这首歌本来没歌词，名叫《威风堂堂》进行曲(Pomp and Circumstance March No.1 in D major，威风堂堂D大调第一进行曲)，英国著名作曲家埃尔加作曲。后来加上了歌词后，变成了著名爱国歌曲，甚至英格兰橄榄球队的“国歌”就是它。不过一般来说在前面一堆是不会唱的，只有副歌(Chorus)部分才会唱。</p>
 
 <blockquote>
   <p>Land of hope and glory,<br />
@@ -97,46 +95,44 @@ make thee mightier yet.</p>
 指挥：Jiří Bělohlávek</p>
 
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Classical Music
-            </div>
-            
-            <div class="tag-item">
-            Pomp and Circumstance
-            </div>
-            
-            <div class="tag-item">
-            Land of Hope and Glory
-            </div>
-            
-            <div class="tag-item">
-            Great Britain
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/land-of-hope-and-glory.html';
-              this.page.identifier = '/page/land-of-hope-and-glory.html';
-              this.page.title = 'Land of Hope and Glory';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Classical Music
     </div>
+    
+    <div class="tag-item">
+    Pomp and Circumstance
+    </div>
+    
+    <div class="tag-item">
+    Land of Hope and Glory
+    </div>
+    
+    <div class="tag-item">
+    Great Britain
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/land-of-hope-and-glory.html';
+      this.page.identifier = '/page/land-of-hope-and-glory.html';
+      this.page.title = 'Land of Hope and Glory';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -152,5 +148,6 @@ make thee mightier yet.</p>
 
 </script>
 
+    </div>
   </body>
 </html>

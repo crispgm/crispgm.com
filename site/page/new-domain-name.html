@@ -7,8 +7,7 @@
     <title>新的域名 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">新的域名</div>
-            <div class="article-date">2016/05/26</div>
-          </div>
-          <div class="article-main">
-            <p>午饭过后，抱着休闲的想法逛了一下 <a href="https://www.godaddy.com/">Godaddy</a> 和<a href="https://wanwang.aliyun.com/">万网</a>，发现了一些挺有意思的新域名。于是顺手注册了两个。</p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">新的域名</div>
+    <div class="article-date">2016/05/26</div>
+  </div>
+  <div class="article-main">
+    <p>午饭过后，抱着休闲的想法逛了一下 <a href="https://www.godaddy.com/">Godaddy</a> 和<a href="https://wanwang.aliyun.com/">万网</a>，发现了一些挺有意思的新域名。于是顺手注册了两个。</p>
 
 <p>以后，本站支持两个域名，均有 https 支持 (Powered by Let’s Encrypt)，请安全访问。</p>
 
@@ -63,38 +61,36 @@
 
 <p>ps：这的确是一个gift~</p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            域名
-            </div>
-            
-            <div class="tag-item">
-            Domain Names
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/new-domain-name.html';
-              this.page.identifier = '/page/new-domain-name.html';
-              this.page.title = '新的域名';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    域名
     </div>
+    
+    <div class="tag-item">
+    Domain Names
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/new-domain-name.html';
+      this.page.identifier = '/page/new-domain-name.html';
+      this.page.title = '新的域名';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -110,5 +106,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

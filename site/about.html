@@ -7,8 +7,7 @@
     <title>About | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,15 +35,13 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">About</div>
-          </div>
-          <div class="article-main">
-            <p>Copyright © David Zhang, 2016.</p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">About</div>
+  </div>
+  <div class="article-main">
+    <p>Copyright © David Zhang, 2016.</p>
 
 <p><a href="/feed.xml" target="_blank">Subscribe Blog Updates</a>.</p>
 
@@ -53,10 +51,8 @@
 
 <p>Hosted by <a href="https://www.linode.com/?r=b94042abe57498d29cfde051fdf66d94b88d9d6b">Linode</a> and HTTPS Powered by Let’s Encrypt/certbot.</p>
 
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -72,5 +68,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>
