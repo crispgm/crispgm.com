@@ -174,11 +174,6 @@ p {
   margin-top: 24px;
   padding-bottom: 16px;
   font-size: 16px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: space-between;
   text-align: left;
   width: 100%;
 }
@@ -189,12 +184,25 @@ p {
   text-decoration: underline;
 }
 .archive-item {
-  width: 49%;
   margin-right: 1%;
   white-space: nowrap;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   overflow: hidden;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+.archive-title {
+  width: 75%;
+}
+.archive-date {
+  text-align: right;
+  color: #bbbbbb;
+  width: 25%;
 }
 /* disqus */
 #disqus_thread {
