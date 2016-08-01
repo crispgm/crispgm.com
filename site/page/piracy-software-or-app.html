@@ -7,8 +7,7 @@
     <title>关于盗版软件/App | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">关于盗版软件/App</div>
-            <div class="article-date">2016/05/10</div>
-          </div>
-          <div class="article-main">
-            <h2 id="section">背景</h2>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">关于盗版软件/App</div>
+    <div class="article-date">2016/05/10</div>
+  </div>
+  <div class="article-main">
+    <h2 id="section">背景</h2>
 
 <p>今天，2016年5月10日，我从 Apple Mac AppStore 购买了人生中最贵的软件产品——<a href="http://ulyssesapp.com">Ulysses</a>。这是一款重视写作过程，让使用者专注于协作的 Mac App。适用人群是作家、博主、记者和学术人员等。当然，程序员也包含在内，特别是它还支持 Markdown 格式。</p>
 
@@ -139,42 +137,40 @@
   <li><a href="https://itunes.apple.com/cn/app/manico/id724472954?mt=12">Manico</a> ¥25</li>
 </ul>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Mac
-            </div>
-            
-            <div class="tag-item">
-            OSX
-            </div>
-            
-            <div class="tag-item">
-            DNS
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/piracy-software-or-app.html';
-              this.page.identifier = '/page/piracy-software-or-app.html';
-              this.page.title = '关于盗版软件/App';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Mac
     </div>
+    
+    <div class="tag-item">
+    OSX
+    </div>
+    
+    <div class="tag-item">
+    DNS
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/piracy-software-or-app.html';
+      this.page.identifier = '/page/piracy-software-or-app.html';
+      this.page.title = '关于盗版软件/App';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -190,5 +186,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

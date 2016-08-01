@@ -7,8 +7,7 @@
     <title>创造者和他们的工具——我的利器 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">创造者和他们的工具——我的利器</div>
-            <div class="article-date">2015/11/11</div>
-          </div>
-          <div class="article-main">
-            <p>一不小心看到<a href="http://liqi.io/">利器</a>这个分享“工作时所使用的工具，以及使用工具的方式和原则”的网站。
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">创造者和他们的工具——我的利器</div>
+    <div class="article-date">2015/11/11</div>
+  </div>
+  <div class="article-main">
+    <p>一不小心看到<a href="http://liqi.io/">利器</a>这个分享“工作时所使用的工具，以及使用工具的方式和原则”的网站。
 由于自我感觉算不上“优秀的创造者”，顾按照利器的格式写一篇在自己博客上和大家分享。</p>
 
 <h3 id="section">介绍一下你自己和所做的工作。</h3>
@@ -91,42 +89,40 @@
   <p>本文参与了「利器社群计划」，发现更多创造者和他们的工具：<a href="http://liqi.io/community/">http://liqi.io/community/</a></p>
 </blockquote>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Apps
-            </div>
-            
-            <div class="tag-item">
-            Tools
-            </div>
-            
-            <div class="tag-item">
-            利器
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/my-tools.html';
-              this.page.identifier = '/page/my-tools.html';
-              this.page.title = '创造者和他们的工具——我的利器';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Apps
     </div>
+    
+    <div class="tag-item">
+    Tools
+    </div>
+    
+    <div class="tag-item">
+    利器
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/my-tools.html';
+      this.page.identifier = '/page/my-tools.html';
+      this.page.title = '创造者和他们的工具——我的利器';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -142,5 +138,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

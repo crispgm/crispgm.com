@@ -7,8 +7,7 @@
     <title>『翻译』PHP 7 新 Hash 表实现 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">『翻译』PHP 7 新 Hash 表实现</div>
-            <div class="article-date">2016/07/06</div>
-          </div>
-          <div class="article-main">
-            <h1 id="section">声明</h1>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">『翻译』PHP 7 新 Hash 表实现</div>
+    <div class="article-date">2016/07/06</div>
+  </div>
+  <div class="article-main">
+    <h1 id="section">声明</h1>
 
 <p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
 
@@ -380,50 +378,48 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>希望我能够给你们一些 PHP 7 Hash 表内核的洞见。可能我还会写一篇关于 <code class="highlighter-rouge">zval</code> 的后续文章，我已经在本文中触及到了它的一些不同，但对于这个话题还可以说更多的东西。</p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            PHP
-            </div>
-            
-            <div class="tag-item">
-            PHP7
-            </div>
-            
-            <div class="tag-item">
-            Internal
-            </div>
-            
-            <div class="tag-item">
-            Array
-            </div>
-            
-            <div class="tag-item">
-            Hash
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/php7-new-hashtable-implementation.html';
-              this.page.identifier = '/page/php7-new-hashtable-implementation.html';
-              this.page.title = '『翻译』PHP 7 新 Hash 表实现';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    PHP
     </div>
+    
+    <div class="tag-item">
+    PHP7
+    </div>
+    
+    <div class="tag-item">
+    Internal
+    </div>
+    
+    <div class="tag-item">
+    Array
+    </div>
+    
+    <div class="tag-item">
+    Hash
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/php7-new-hashtable-implementation.html';
+      this.page.identifier = '/page/php7-new-hashtable-implementation.html';
+      this.page.title = '『翻译』PHP 7 新 Hash 表实现';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -439,5 +435,6 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 </script>
 
+    </div>
   </body>
 </html>

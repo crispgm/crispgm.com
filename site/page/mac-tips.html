@@ -7,8 +7,7 @@
     <title>Mac Terminal Tips | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Mac Terminal Tips</div>
-            <div class="article-date">2013/11/03</div>
-          </div>
-          <div class="article-main">
-            <h3 id="mac--ssh-">Mac 下 ssh 避免多次输入密码</h3>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Mac Terminal Tips</div>
+    <div class="article-date">2013/11/03</div>
+  </div>
+  <div class="article-main">
+    <h3 id="mac--ssh-">Mac 下 ssh 避免多次输入密码</h3>
 
 <p>编辑文件</p>
 
@@ -72,42 +70,40 @@ export LSCOLORS=gxfxaxdxcxegedabagacad
 </div>
 
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Mac
-            </div>
-            
-            <div class="tag-item">
-            Terminal
-            </div>
-            
-            <div class="tag-item">
-            Tips
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/mac-tips.html';
-              this.page.identifier = '/page/mac-tips.html';
-              this.page.title = 'Mac Terminal Tips';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Mac
     </div>
+    
+    <div class="tag-item">
+    Terminal
+    </div>
+    
+    <div class="tag-item">
+    Tips
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/mac-tips.html';
+      this.page.identifier = '/page/mac-tips.html';
+      this.page.title = 'Mac Terminal Tips';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -123,5 +119,6 @@ export LSCOLORS=gxfxaxdxcxegedabagacad
 
 </script>
 
+    </div>
   </body>
 </html>
