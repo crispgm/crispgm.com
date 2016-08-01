@@ -7,8 +7,7 @@
     <title>『转』看月亮和看星星 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">『转』看月亮和看星星</div>
-            <div class="article-date">2014/08/17</div>
-          </div>
-          <div class="article-main">
-            <p>Copyright © 芒果派，<a href="http://atomatopie.tumblr.com/post/94999424136">http://atomatopie.tumblr.com/post/94999424136</a></p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">『转』看月亮和看星星</div>
+    <div class="article-date">2014/08/17</div>
+  </div>
+  <div class="article-main">
+    <p>Copyright © 芒果派，<a href="http://atomatopie.tumblr.com/post/94999424136">http://atomatopie.tumblr.com/post/94999424136</a></p>
 
 <p>回想和小琳琳在一起的时候，我们在无意间做了很多都是是彼此的第一次的事情。</p>
 
@@ -86,38 +84,36 @@
 
 <p>甜言蜜语听得我又惊又喜，一冲动就bia叽一下在小琳琳脸上亲了一口。</p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            转载
-            </div>
-            
-            <div class="tag-item">
-            短文
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/moon-and-stars.html';
-              this.page.identifier = '/page/moon-and-stars.html';
-              this.page.title = '『转』看月亮和看星星';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    转载
     </div>
+    
+    <div class="tag-item">
+    短文
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/moon-and-stars.html';
+      this.page.identifier = '/page/moon-and-stars.html';
+      this.page.title = '『转』看月亮和看星星';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -133,5 +129,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

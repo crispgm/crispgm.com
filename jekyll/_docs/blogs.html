@@ -4,16 +4,20 @@ title: Blogs
 permalink: /blogs.html
 ---
 
-<div id="container">
-  <div class="archive-main">
+<div class="archive-main">
   {% for post in site.posts %}
+    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if currentyear != year %}
+      <h3 class="archive-year">{{ currentyear }}</h3>
+      {% capture year %}{{ currentyear }}{% endcapture %}
+    {% endif %}
     <div class="archive-item">
-      <span class="archive-date">{{post.date | date:"%Y/%m/%d"}}</span>
-      <span class="archive-title"><a href="{{post.permalink}}">{{post.title}}</a></span>
+      <div class="archive-date">{{post.date | date:"%B %d, %Y"}}</div>
+      <div class="archive-title"><a href="{{post.permalink}}">{{post.title}}</a></div>
     </div>
   {% endfor %}
-  </div>
-  <div class="article-tag">
-    {% tags_list :threshold => 1, :show_count => 1, :sort_by => count, :order_by => desc, :limit => 30 %}
-  </div>
+</div>
+
+<div class="article-tag">
+  {% tags_list :threshold => 1, :show_count => 1, :sort_by => count, :order_by => desc, :limit => 30 %}
 </div>

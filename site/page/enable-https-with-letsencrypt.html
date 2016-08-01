@@ -7,8 +7,7 @@
     <title>Enable HTTPS with Let's Encrypt | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Enable HTTPS with Let's Encrypt</div>
-            <div class="article-date">2015/12/07</div>
-          </div>
-          <div class="article-main">
-            <p><a href="https://crispgm.com">crispgm.com</a> has enabled HTTPS as its default protocol, with the power of <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Enable HTTPS with Let's Encrypt</div>
+    <div class="article-date">2015/12/07</div>
+  </div>
+  <div class="article-main">
+    <p><a href="https://crispgm.com">crispgm.com</a> has enabled HTTPS as its default protocol, with the power of <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
 
 <h2 id="why-https">Why HTTPS?</h2>
 
@@ -129,38 +127,36 @@ ssl_session_timeout  1440m;
 <p>Safe journey on <a href="https://crispgm.com">crispgm.com</a> :)</p>
 
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            https
-            </div>
-            
-            <div class="tag-item">
-            letsencrypt
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/enable-https-with-letsencrypt.html';
-              this.page.identifier = '/page/enable-https-with-letsencrypt.html';
-              this.page.title = 'Enable HTTPS with Let's Encrypt';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    https
     </div>
+    
+    <div class="tag-item">
+    letsencrypt
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/enable-https-with-letsencrypt.html';
+      this.page.identifier = '/page/enable-https-with-letsencrypt.html';
+      this.page.title = 'Enable HTTPS with Let's Encrypt';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -176,5 +172,6 @@ ssl_session_timeout  1440m;
 
 </script>
 
+    </div>
   </body>
 </html>

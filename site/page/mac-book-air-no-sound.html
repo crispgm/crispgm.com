@@ -7,8 +7,7 @@
     <title>Mac Book Air 合盖子或者休眠后没声音 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Mac Book Air 合盖子或者休眠后没声音</div>
-            <div class="article-date">2014/03/08</div>
-          </div>
-          <div class="article-main">
-            <p>在安装有 OSX 10.9 Mavericks 的 Mac 中，包括升级或者直接购买的 Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况。</p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Mac Book Air 合盖子或者休眠后没声音</div>
+    <div class="article-date">2014/03/08</div>
+  </div>
+  <div class="article-main">
+    <p>在安装有 OSX 10.9 Mavericks 的 Mac 中，包括升级或者直接购买的 Mac，在合上盖子或者休眠重开后，经常会遇到没有声音的情况。</p>
 
 <p>忍了很久后，今天终于找到<a href="http://www.v2ex.com/t/95465">解决方法</a>：</p>
 
@@ -55,42 +53,40 @@ sudo kextload /System/Library/Extensions/AppleHDA.kext
 
 <p>OSX 升级到 10.10 Yosemite 后，此问题没有再出现过，应该是苹果彻底修复了。</p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Mac Book Air
-            </div>
-            
-            <div class="tag-item">
-            Mac
-            </div>
-            
-            <div class="tag-item">
-            OSX
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/mac-book-air-no-sound.html';
-              this.page.identifier = '/page/mac-book-air-no-sound.html';
-              this.page.title = 'Mac Book Air 合盖子或者休眠后没声音';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Mac Book Air
     </div>
+    
+    <div class="tag-item">
+    Mac
+    </div>
+    
+    <div class="tag-item">
+    OSX
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/mac-book-air-no-sound.html';
+      this.page.identifier = '/page/mac-book-air-no-sound.html';
+      this.page.title = 'Mac Book Air 合盖子或者休眠后没声音';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -106,5 +102,6 @@ sudo kextload /System/Library/Extensions/AppleHDA.kext
 
 </script>
 
+    </div>
   </body>
 </html>

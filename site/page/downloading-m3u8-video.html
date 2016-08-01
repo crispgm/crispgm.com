@@ -7,8 +7,7 @@
     <title>Apple iOS m3u8 媒体文件下载 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Apple iOS m3u8 媒体文件下载</div>
-            <div class="article-date">2015/07/19</div>
-          </div>
-          <div class="article-main">
-            <h2 id="section">背景</h2>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Apple iOS m3u8 媒体文件下载</div>
+    <div class="article-date">2015/07/19</div>
+  </div>
+  <div class="article-main">
+    <h2 id="section">背景</h2>
 
 <p>由于 Apple iOS 不支持 Adobe Flash 技术，所以在 iOS 上要使用 m3u8 进行多媒体和流媒体等的播放。如：微博视频。</p>
 
@@ -103,50 +101,48 @@
 <p>当然，ffmpeg 功能还很强大，比如保存成其它格式什么的。有兴趣可以深入探索下。</p>
 
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Apple
-            </div>
-            
-            <div class="tag-item">
-            iOS
-            </div>
-            
-            <div class="tag-item">
-            ts
-            </div>
-            
-            <div class="tag-item">
-            m3u8
-            </div>
-            
-            <div class="tag-item">
-            ffmpeg
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/downloading-m3u8-video.html';
-              this.page.identifier = '/page/downloading-m3u8-video.html';
-              this.page.title = 'Apple iOS m3u8 媒体文件下载';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Apple
     </div>
+    
+    <div class="tag-item">
+    iOS
+    </div>
+    
+    <div class="tag-item">
+    ts
+    </div>
+    
+    <div class="tag-item">
+    m3u8
+    </div>
+    
+    <div class="tag-item">
+    ffmpeg
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/downloading-m3u8-video.html';
+      this.page.identifier = '/page/downloading-m3u8-video.html';
+      this.page.title = 'Apple iOS m3u8 媒体文件下载';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -162,5 +158,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>
