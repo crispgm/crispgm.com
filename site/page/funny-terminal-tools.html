@@ -7,8 +7,7 @@
     <title>『推荐』有趣的终端 Terminal 工具 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">『推荐』有趣的终端 Terminal 工具</div>
-            <div class="article-date">2015/10/22</div>
-          </div>
-          <div class="article-main">
-            <h2 id="doubanfm">Douban.fm</h2>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">『推荐』有趣的终端 Terminal 工具</div>
+    <div class="article-date">2015/10/22</div>
+  </div>
+  <div class="article-main">
+    <h2 id="doubanfm">Douban.fm</h2>
 
 <p>Node.js 编写的控制台版的豆瓣fm，Mac 上亲测可用，但不太稳定</p>
 
@@ -76,46 +74,44 @@
 
 <p><img src="https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67" alt="" /></p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Terminal
-            </div>
-            
-            <div class="tag-item">
-            Tools
-            </div>
-            
-            <div class="tag-item">
-            Go
-            </div>
-            
-            <div class="tag-item">
-            Node.js
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/funny-terminal-tools.html';
-              this.page.identifier = '/page/funny-terminal-tools.html';
-              this.page.title = '『推荐』有趣的终端 Terminal 工具';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Terminal
     </div>
+    
+    <div class="tag-item">
+    Tools
+    </div>
+    
+    <div class="tag-item">
+    Go
+    </div>
+    
+    <div class="tag-item">
+    Node.js
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/funny-terminal-tools.html';
+      this.page.identifier = '/page/funny-terminal-tools.html';
+      this.page.title = '『推荐』有趣的终端 Terminal 工具';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -131,5 +127,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

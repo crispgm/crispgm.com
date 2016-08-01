@@ -7,8 +7,7 @@
     <title>Bio | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,15 +35,13 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Bio</div>
-          </div>
-          <div class="article-main">
-            <p>I am David Zhang, a.k.a Crisp or Crispgm on the Internet. I works as a software engineer of web architectures.</p>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Bio</div>
+  </div>
+  <div class="article-main">
+    <p>I am David Zhang, a.k.a Crisp or Crispgm on the Internet. I works as a software engineer of web architectures.</p>
 
 <p>Here is one of <a href="/resume.html">my simple résumé</a> and a <a href="http://resume.github.io/?crispgm">GitHub Résumé</a>.</p>
 
@@ -65,10 +63,8 @@
   <li>Against Cyberbullying</li>
 </ul>
 
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -84,5 +80,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

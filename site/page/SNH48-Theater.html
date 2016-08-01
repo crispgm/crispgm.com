@@ -7,8 +7,7 @@
     <title>SNH48 剧场公演游记 | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">SNH48 剧场公演游记</div>
-            <div class="article-date">2015/05/18</div>
-          </div>
-          <div class="article-main">
-            <h3 id="section">前言</h3>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">SNH48 剧场公演游记</div>
+    <div class="article-date">2015/05/18</div>
+  </div>
+  <div class="article-main">
+    <h3 id="section">前言</h3>
 
 <p>作为多年的 AKB48 伪饭和新近的 SNH48 粉，我在五一期间同<a href="https://yeyeko.gift">小咩酱</a>亲自前往了 SNH48 星梦剧院，观看 SNH48 Team HII <a href="http://www.snh48.com/show_7.html">“青春派对”</a>和 Team SII <a href="http://www.snh48.com/show_8.html">“勇气重生”</a>剧场公演。</p>
 
@@ -172,42 +170,40 @@
 
 <p><img src="/image/snh48-zhaoyue.jpg" alt="SNH48 Team NII 赵粤" /></p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            SNH48
-            </div>
-            
-            <div class="tag-item">
-            AKB48
-            </div>
-            
-            <div class="tag-item">
-            偶像
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/snh48-theater.html';
-              this.page.identifier = '/page/snh48-theater.html';
-              this.page.title = 'SNH48 剧场公演游记';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    SNH48
     </div>
+    
+    <div class="tag-item">
+    AKB48
+    </div>
+    
+    <div class="tag-item">
+    偶像
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/snh48-theater.html';
+      this.page.identifier = '/page/snh48-theater.html';
+      this.page.title = 'SNH48 剧场公演游记';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -223,5 +219,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>

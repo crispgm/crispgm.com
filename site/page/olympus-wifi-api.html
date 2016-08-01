@@ -7,8 +7,7 @@
     <title>Olympus Camera Wi-Fi API | DAVID ZHANG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" media="screen and (min-width: 801px)">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
@@ -17,7 +16,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <div class="menu">
+    <div id="content">
+    <header class="menu">
       <div class="menu-home">
         <a href="/" style="color: #000000;">DAVID ZHANG</a>
       </div>
@@ -35,16 +35,14 @@
           <a href="/about.html">ABOUT</a>
         </div>
       </div>
-    </div>
-    <div id="content">
-      <div id="container">
-        <div class="article">
-          <div class="article-head">
-            <div class="article-title">Olympus Camera Wi-Fi API</div>
-            <div class="article-date">2016/05/31</div>
-          </div>
-          <div class="article-main">
-            <h1 id="background">Background</h1>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">Olympus Camera Wi-Fi API</div>
+    <div class="article-date">2016/05/31</div>
+  </div>
+  <div class="article-main">
+    <h1 id="background">Background</h1>
 
 <p>Since I started my interest on photography, I chose SONY RX100 Mark III initially and now I use a M4/3 interchangeable lens camera, the Olympus E-M5 Mark II.</p>
 
@@ -75,50 +73,48 @@
 
 <p>The Project is <a href="https://github.com/crispgm/olympia">crispgm/olympia</a>, written in Ruby.</p>
 
-          </div>
-          
-          <div class="article-tag">
-            
-            <div class="tag-item">
-            Olympus
-            </div>
-            
-            <div class="tag-item">
-            Camera
-            </div>
-            
-            <div class="tag-item">
-            Wi-Fi
-            </div>
-            
-            <div class="tag-item">
-            API
-            </div>
-            
-            <div class="tag-item">
-            Photography
-            </div>
-            
-          </div>
-          
-          <div id="disqus_thread"></div>
-          <script>
-          var disqus_config = function () {
-              this.page.url = 'https://crispgm.com/page/olympus-wifi-api.html';
-              this.page.identifier = '/page/olympus-wifi-api.html';
-              this.page.title = 'Olympus Camera Wi-Fi API';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-              s.src = '//crispgm.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div>
-      </div>
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Olympus
     </div>
+    
+    <div class="tag-item">
+    Camera
+    </div>
+    
+    <div class="tag-item">
+    Wi-Fi
+    </div>
+    
+    <div class="tag-item">
+    API
+    </div>
+    
+    <div class="tag-item">
+    Photography
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/olympus-wifi-api.html';
+      this.page.identifier = '/page/olympus-wifi-api.html';
+      this.page.title = 'Olympus Camera Wi-Fi API';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
     <footer>
       <div>Copyright &copy; David Zhang, 2016.</div>
     </footer>
@@ -134,5 +130,6 @@
 
 </script>
 
+    </div>
   </body>
 </html>
