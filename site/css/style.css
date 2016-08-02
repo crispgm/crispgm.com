@@ -241,8 +241,8 @@ img {
 pre.highlight {
   border: .05rem solid #aaaaaa;
   border-radius: .2rem;
-  font-family: Menlo, "Source Code Pro", Consolas, Courier;
-  overflow: scroll;
+  font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
+  /*overflow: scroll;*/
 }
 code.hljs {
   padding: .8rem;
