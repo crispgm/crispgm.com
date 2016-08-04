@@ -3,9 +3,7 @@
  * Copyright(c) David Zhang, 2016
  */
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
   width: 100%;
@@ -42,6 +40,11 @@ h4 {
 }
 h5 {
   font-size: 1.0rem;
+}
+blockquote {
+  border-left: 1px solid #aaaaaa;
+  margin-left: 12px;
+  padding-left: 8px;
 }
 a {
   text-decoration: none;
