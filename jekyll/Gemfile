@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "jemoji"
-gem "jekyll-tagslist"
-gem "jekyll-disqus"
-gem "jekyll-google-analytics"
+
+group :jekyll_plugins do
+  gem "jemoji"
+  gem "jekyll-tagslist"
+  gem "jekyll-disqus"
+  gem "jekyll-google-analytics"
+end
