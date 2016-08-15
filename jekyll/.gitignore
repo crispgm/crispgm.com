@@ -1,10 +1,8 @@
-# ignore Thumb.db
 Thumb.db
 image/Thumb.db
 photo/Thumb.db
 *.swp
-jekyll/.sass-cache
+.sass-cache
 Gemfile.lock
-jekyll/_site
 _site
 .jekyll-metadata
