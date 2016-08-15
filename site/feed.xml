@@ -5,9 +5,9 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Aug 2016 00:06:36 +0800</pubDate>
-    <lastBuildDate>Fri, 05 Aug 2016 00:06:36 +0800</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Mon, 15 Aug 2016 11:31:55 +0800</pubDate>
+    <lastBuildDate>Mon, 15 Aug 2016 11:31:55 +0800</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>不同页面载入相同 Disqus 主题</title>
@@ -97,9 +97,9 @@
 &lt;p&gt;于是，我修改了 Jekyll 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout/post.html&lt;/code&gt; 模板中的 Disqus 片段。&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var disqus_config = function () {
-  this.page.url = &#39;{{ site.url }}{{ page.permalink }}&#39;;
-  this.page.identifier = &#39;{{ page.permalink }}&#39;;
-  this.page.title = &#39;{{ page.title }}&#39;;
+  this.page.url = '{{ site.url }}{{ page.permalink }}';
+  this.page.identifier = '{{ page.permalink }}';
+  this.page.title = '{{ page.title }}';
 };
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -289,14 +289,14 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 &lt;p&gt;用下面的代码作为例子：&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$array = [
-    &#39;foo&#39; =&amp;gt; 0,
-    &#39;bar&#39; =&amp;gt; 1,
+    'foo' =&amp;gt; 0,
+    'bar' =&amp;gt; 1,
     0     =&amp;gt; 2,
-    &#39;xyz&#39; =&amp;gt; 3,
+    'xyz' =&amp;gt; 3,
     2     =&amp;gt; 4
 ];
 unset($array[0]);
-unset($array[&#39;xyz&#39;]);
+unset($array['xyz']);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -498,7 +498,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
 $array = range(1, 100000);
-echo memory_get_usage() - $startMemory, &#39; bytes&#39;;
+echo memory_get_usage() - $startMemory, ' bytes';
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -637,7 +637,7 @@ typedef struct _zend_mm_block_info {
     ulong h;                  // The hash (or for int keys the key)
     uint nKeyLength;          // The length of the key (for string keys)
     void *pData;              // The actual data
-    void *pDataPtr;           // ??? What&#39;s this ???
+    void *pDataPtr;           // ??? What's this ???
     struct bucket *pListNext; // PHP arrays are ordered. This gives the next element in that order
     struct bucket *pListLast; // and this gives the previous element
     struct bucket *pNext;     // The next element in this (doubly) linked list
@@ -676,7 +676,7 @@ $array = new SplFixedArray(100000);
 for ($i = 0; $i &amp;lt; 100000; ++$i) {
     $array[$i] = $i;
 }
-echo memory_get_usage() - $startMemory, &#39; bytes&#39;;
+echo memory_get_usage() - $startMemory, ' bytes';
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -886,7 +886,7 @@ echo memory_get_usage() - $startMemory, &#39; bytes&#39;;
       </item>
     
       <item>
-        <title>Enable HTTPS with Let&#39;s Encrypt</title>
+        <title>Enable HTTPS with Let's Encrypt</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; has enabled HTTPS as its default protocol, with the power of &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;why-https&quot;&gt;Why HTTPS?&lt;/h2&gt;
@@ -984,7 +984,7 @@ ssl_session_timeout  1440m;
       </item>
     
       <item>
-        <title>Environment Pollution in a Photographer&#39;s View</title>
+        <title>Environment Pollution in a Photographer's View</title>
         <description>&lt;p&gt;On November 14th, it was a haze day with an AQI over 200 and I went to Beijing University of Chemical Technology.
 I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Lightroom and VSCOcam, it looks pretty good now by enhancing the orange and yellow color, removing the arrow on the ground and cropping into a square one.&lt;/p&gt;
 
