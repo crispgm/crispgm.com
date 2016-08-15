@@ -3,14 +3,13 @@
   - name: Minimalism
   - name: Coffee
   - name: Crafted Beer
-  - name: Soccer & Rugby
-  - name: Fighter/Warship
+  - name: Soccer/Rugby
+  - name: Fighter/Warship/Submarine
   - name: Document Films
 
 - category: Devices
   items:
-  - name: Mac Book Air
-  - name: Mac Book Pro
+  - name: Mac Book Air/Mac Book Pro
   - name: iPhone SE
   - name: Kindle Oasis
   - name: Bose Wave Music System
@@ -24,11 +23,11 @@
 
 - category: Great Reading
   items:
+  - name: The Shortest History of Europe/你一定爱读的极简欧洲史
+  - name: The Three-Body Problem/三体
+  - name: 新・片づけ術「断捨離」/断舍离
   - name: How Google Works
   - name: The PayPal Wars
-  - name: 断舍离
-  - name: 三体
-  - name: 你一定爱读的极简欧洲史
 
 - category: Photography
   items:
@@ -40,12 +39,14 @@
 
 - category: Musics
   items:
-    - name: AKB48/SNH48/BEJ48
+    - name: AKB48/乃木坂46
+    - name: <del>SNH48</del>
+    - name: BEJ48
     - name: Classical Music
     - name: Owl City
     - name: IU
 
 - category: Apps
   items:
-    - name: 我的利器
+    - name: My Liqi/我的利器
       link: /page/my-tools.html
