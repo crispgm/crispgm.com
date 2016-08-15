@@ -6,7 +6,7 @@ task :init do
 end
 
 task :serve do
-  sh "bundle exec jekyll serve --incremental"
+  sh "bundle exec jekyll serve"
 end
 
 task :build do
