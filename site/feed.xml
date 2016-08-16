@@ -5,13 +5,13 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Aug 2016 17:54:16 +0800</pubDate>
-    <lastBuildDate>Tue, 16 Aug 2016 17:54:16 +0800</lastBuildDate>
+    <pubDate>Tue, 16 Aug 2016 19:33:35 +0800</pubDate>
+    <lastBuildDate>Tue, 16 Aug 2016 19:33:35 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>开源项目中使用 git-rebase 合并提交</title>
-        <description>&lt;p&gt;最近，在 GitHub 上贡献代码时，常常是在本地提交了(&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;)很多次后才发现 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commit。&lt;/p&gt;
+        <description>&lt;p&gt;最近，在 GitHub 上贡献代码时，常常是在本地提交 &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt; 很多次后才发起 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commits。&lt;/p&gt;
 
 &lt;p&gt;当维护者完成 Code Review 之后，往往就会提出类似这样的要求：&lt;/p&gt;
 
