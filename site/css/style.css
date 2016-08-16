@@ -9,7 +9,7 @@ html {
   width: 100%;
   font-size: 16px;
 }
-@media (max-width: 40rem) {
+@media (max-width: 48rem) {
   html {
     font-size: 12px;
   }
@@ -76,9 +76,9 @@ tr:hover {
 /* content */
 #content {
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: 48rem;
 }
-@media (max-width: 40rem) {
+@media (max-width: 48rem) {
   #content {
     padding-left: .5rem;
     padding-right: .5rem;
@@ -111,7 +111,7 @@ tr:hover {
   padding-right: 1.6rem;
   text-align: center;
 }
-@media (max-width: 40rem) {
+@media (max-width: 48rem) {
   .menu-home {
     font-size: 2.2rem;
     padding-top: 3.25rem;
@@ -212,7 +212,7 @@ p {
   margin-bottom: 0;
   color: #bbbbbb;
 }
-@media (min-width: 40rem) {
+@media (min-width: 48rem) {
   .archive-date {
     float: right;
     margin-left: 1rem;

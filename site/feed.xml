@@ -5,9 +5,137 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Aug 2016 15:40:41 +0800</pubDate>
-    <lastBuildDate>Tue, 16 Aug 2016 15:40:41 +0800</lastBuildDate>
+    <pubDate>Tue, 16 Aug 2016 17:52:15 +0800</pubDate>
+    <lastBuildDate>Tue, 16 Aug 2016 17:52:15 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>开源项目中使用 git-rebase 合并提交</title>
+        <description>&lt;p&gt;最近，在 GitHub 上贡献代码时，常常是在本地提交了(&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;)很多次后才发现 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commit。&lt;/p&gt;
+
+&lt;p&gt;当维护者完成 Code Review 之后，往往就会提出类似这样的要求：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;LGTM after a quick rebase!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Can you squash the git commits, otherwise LGTM.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这是维护者要求提交者使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase&lt;/code&gt; 将自己的所有提交合并成一条。&lt;/p&gt;
+
+&lt;h1 id=&quot;git-rebase&quot;&gt;什么是 git-rebase&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git-scm.com/docs/git-rebase&quot;&gt;git-rebase&lt;/a&gt; 的定义是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git-rebase - Reapply commits on top of another base tip&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;rebase 的官方中文翻译是“衍合”，意思是在另一个起点上重新应用提交。深入的具体用法可以参考 &lt;a href=&quot;https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E8%A1%8D%E5%90%88&quot;&gt;Git 官方文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;对于当前的应用场景，rebase 的意义是把提交合成一个，这样对于你提交的一个功能，只会有一个提交记录，便于维护者管理。&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;如何操作？&lt;/h1&gt;
+
+&lt;h2 id=&quot;editor&quot;&gt;设置Editor&lt;/h2&gt;
+
+&lt;p&gt;首先，要确定是 Terminal 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;EDITOR&lt;/code&gt;。我选择设定为 vim。&lt;/p&gt;
+
+&lt;p&gt;修改 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;（非 zsh 用户可以用 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt;），加入：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export EDITOR='vim'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;rebase&quot;&gt;执行 rebase&lt;/h2&gt;
+
+&lt;p&gt;先数一数你提交过的数量，比如之前提交了5次：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rebase -i HEAD~5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Git 会调起 vim，提示让你处理 commits：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pick f3e7c2e Add RIO medal count bot
+pick 316f48a Add weekly template
+pick 23c5c47 Move require to third party libs within implementations
+pick 64cad0b Test coverage 100% for test/command
+pick 030f64a Graceful require
+
+# Rebase 2dfc82e..030f64a onto 2dfc82e (5 command(s))
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like &quot;squash&quot;, but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;处理提交&lt;/h2&gt;
+
+&lt;p&gt;按 &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; 进行编辑模式，常用的操作有&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;p: 选取
+r: 变更提交信息
+s: 将提交信息合并到上一个提交中
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;最老的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条合并。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pick f3e7c2e Add RIO medal count bot
+s 316f48a Add weekly template
+s 23c5c47 Move require to third party libs within implementations
+s 64cad0b Test coverage 100% for test/command
+s 030f64a Graceful require
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wq&lt;/code&gt; 保存后，会进入合并信息页面，再次保存后完成 rebase。&lt;/p&gt;
+
+&lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
+
+&lt;p&gt;进行完 rebase 后，直接执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin your-branch-name&lt;/code&gt; 会失败，这时千万不要 &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt; 会触发 merge。&lt;/p&gt;
+
+&lt;p&gt;直接使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;-f&lt;/code&gt; 参数进行强制 push：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push -f origin your-branch-name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;完成 push 后，GitHub 的 PR 中，几条提交就会被合并到了同一条中。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Aug 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/git-rebase.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/git-rebase.html</guid>
+        
+        <category>git</category>
+        
+        <category>GitHub</category>
+        
+        <category>OpenSource</category>
+        
+        
+      </item>
     
       <item>
         <title>不同页面载入相同 Disqus 主题</title>
@@ -1049,68 +1177,6 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         <category>足控</category>
         
         <category>美食</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>创造者和他们的工具——我的利器</title>
-        <description>&lt;p&gt;一不小心看到&lt;a href=&quot;http://liqi.io/&quot;&gt;利器&lt;/a&gt;这个分享“工作时所使用的工具，以及使用工具的方式和原则”的网站。
-由于自我感觉算不上“优秀的创造者”，顾按照利器的格式写一篇在自己博客上和大家分享。&lt;/p&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;介绍一下你自己和所做的工作。&lt;/h3&gt;
-
-&lt;p&gt;我是 Crisp，名字叫 David Zhang。目前在工作中主要从事 Web 后端开发相关的技术和架构工作，在私下里是个全栈工程师。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;你都在使用哪些硬件？&lt;/h3&gt;
-
-&lt;p&gt;工作开发目前在 &lt;a href=&quot;http://www.apple.com/macbook-pro/&quot;&gt;MacBook Pro&lt;/a&gt; 上进行，外接 &lt;a href=&quot;http://www.lg.com/us/commercial/lcd-computer-monitors/lg-IPS224T-PN&quot;&gt;LG IPS224T&lt;/a&gt; 显示器和 &lt;a href=&quot;http://cherrycorp.com/product/g80-3850-mx-brown-3-0-keyboard/&quot;&gt;Cherry MX 茶轴&lt;/a&gt; 机械键盘。在家主要用 &lt;a href=&quot;http://www.apple.com/macbook-air/&quot;&gt;MacBook Air&lt;/a&gt;，并在纠结要不要买一台台式机玩游戏。&lt;/p&gt;
-
-&lt;p&gt;数据会备份到 &lt;a href=&quot;http://www.wdc.com/cn/products/products.aspx?id=1000&quot;&gt;WD My Passport Ultra&lt;/a&gt;，国外的云存储安全但速度不行，国内的反之。只好将不重要的数据备份在云端，重要的用起了物理备份。&lt;/p&gt;
-
-&lt;p&gt;日常来说手机用 &lt;a href=&quot;http://www.apple.com/iphone-se&quot;&gt;iPhone SE&lt;/a&gt;，从 iPhone 6 转过来，实在喜欢手能轻松握住（我手不小）且揣兜里不会折弯的小手机。阅读会选择 Kindle，最早是 &lt;a href=&quot;http://www.amazon.com/Kindle-Paperwhite-Touch-light/dp/B007OZNZG0&quot;&gt;Kindle Paperwhite&lt;/a&gt;，方便且便宜，之后第一时间升级到了 &lt;a href=&quot;https://www.amazon.cn/dp/B010EJPW7C/ref=sr_1_1?ie=UTF8&amp;amp;qid=1462245425&quot;&gt;Kindle Oasis&lt;/a&gt;，实体翻页按键实在对我很有吸引力。对于技术/工具书还是会选择实体版的，不为收藏，只为便于翻找。工作时用 &lt;a href=&quot;http://en-us.sennheiser.com/over-ear-headphones-hd-202&quot;&gt;Sennhaiser HD202II&lt;/a&gt; 听音乐，家里放着一台 &lt;a href=&quot;http://www.bose.cn/product.aspx?cid=632&quot;&gt;BOSE Wave Music System III&lt;/a&gt;，支持AUX IN连接电脑，偶尔也可以听收音机和CD。&lt;/p&gt;
-
-&lt;p&gt;摄影用 &lt;a href=&quot;http://olympus-imaging.cn/product/dslr/em5mk2/index.html&quot;&gt;Olympus E-M5 Mark II&lt;/a&gt;，人像 &lt;a href=&quot;http://olympus-imaging.cn/product/dslr/mlens/45_18/index.html&quot;&gt;45mm F1.8&lt;/a&gt;，室内或人文 &lt;a href=&quot;http://consumer.panasonic.cn/product/cameras-camcorders/lumix-g-lens/fixed-focal/h-x015gk.html&quot;&gt;DG15&lt;/a&gt;，广角 &lt;a href=&quot;http://olympus-imaging.cn/product/dslr/mlens/9-18_40-56/index.html&quot;&gt;9-18mm&lt;/a&gt;。镜头都是简称，全称请看链接吧。&lt;/p&gt;
-
-&lt;p&gt;除去电子设备，我有两只钢笔和一只铅笔。钢笔分别是 &lt;a href=&quot;http://www.lamy.com/eng/b2c/safari&quot;&gt;LAMY Safari&lt;/a&gt; 和 &lt;a href=&quot;http://www.amazon.cn/Pilot-%E7%99%BE%E4%B9%90-FP-78G-M-B-22K%E5%8C%85%E9%87%91%E7%AC%94%E5%B0%96%E9%92%A2%E7%AC%94-M%E5%92%80/dp/B003H06HN4&quot;&gt;Pilot 78G&lt;/a&gt;，前者出水猛、更亮骚，后者更朴实好用。铅笔是 &lt;a href=&quot;https://item.taobao.com/item.htm?id=522070211448&quot;&gt;Zebra Tect 0.5&lt;/a&gt;。此外，还有一些 Muji 的圆珠笔和小本子。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;软件呢？&lt;/h3&gt;
-
-&lt;p&gt;开发最常用的是买了 License 的 &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text 2&lt;/a&gt; 和定制过 &lt;a href=&quot;http://www.vim.org/&quot;&gt;VIM&lt;/a&gt;。浏览器用 &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;Chrome&lt;/a&gt;。聊天主要还是 QQ/微信，都是被圈子绑架的，Office 之类也同理。其实我特别喜欢 &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; 的概念，但限于团队和网络的问题，只好搞了个 &lt;a href=&quot;https://bearychat.com/&quot;&gt;BearyChat&lt;/a&gt; 和少量熟人自娱自乐。&lt;/p&gt;
-
-&lt;p&gt;生产力工具方面，会使用 Apple Notes, &lt;a href=&quot;https://www.onenote.com/&quot;&gt;OneNote&lt;/a&gt; 作为笔记，&lt;a href=&quot;http://ulyssesapp.com/&quot;&gt;Ulysses&lt;/a&gt; 写 Markdown，&lt;a href=&quot;http://pan.baidu.com/&quot;&gt;百度云&lt;/a&gt;作文件共享，&lt;a href=&quot;https://www.wunderlist.com/&quot;&gt;Wunderlist&lt;/a&gt; 作为个人 GTD 管理，工作内容 GTD 用&lt;a href=&quot;https://item.taobao.com/item.htm?spm=2013.1.0.0.xh6pv4&amp;amp;id=45159521615&quot;&gt;败家实验室&lt;/a&gt;不洇墨笔记本。&lt;/p&gt;
-
-&lt;p&gt;日常使用 &lt;a href=&quot;http://reederapp.com/&quot;&gt;Reeder&lt;/a&gt; + &lt;a href=&quot;https://getpocket.com/&quot;&gt;Pocket&lt;/a&gt; 看新闻，不喜欢专门的新闻app。听歌会用 &lt;a href=&quot;https://www.foobar2000.org/&quot;&gt;foobar2000&lt;/a&gt; 和&lt;a href=&quot;http://music.163.com/&quot;&gt;网易云音乐&lt;/a&gt;。除此之外，我喜欢用 &lt;a href=&quot;https://itunes.apple.com/us/app/wordbook-english-dictionary/id289694924?mt=8&quot;&gt;WordBook&lt;/a&gt; 英英词典。&lt;/p&gt;
-
-&lt;p&gt;处理 RAW 图片会用 &lt;a href=&quot;https://lightroom.adobe.com/&quot;&gt;Adobe Lightroom&lt;/a&gt;，而在手机上会混用 &lt;a href=&quot;https://vsco.co/vscocam&quot;&gt;VSCOcam&lt;/a&gt;、&lt;a href=&quot;https://itunes.apple.com/us/app/snapseed/id439438619?mt=8&quot;&gt;Snapseed&lt;/a&gt; 和 &lt;a href=&quot;http://www.enlightapp.com/&quot;&gt;Enlight&lt;/a&gt;，并分享到 &lt;a href=&quot;https://www.instagram.com/&quot;&gt;Instagram&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;Finally，必须说一句，&lt;a href=&quot;https://www.linode.com/&quot;&gt;Linode&lt;/a&gt; + &lt;a href=&quot;https://shadowsocks.org&quot;&gt;Shadowsocks&lt;/a&gt; 搭建一套翻墙系统很有必要，这是通往世界之门的钥匙。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;你最理想的工作环境是什么？&lt;/h3&gt;
-
-&lt;p&gt;优雅干净凉快（空调要冷！）的房间，敞亮但有一定的隐私空间。有干净漂亮的休息区，特别是舒服的沙发。窗子外可以看到自然景色，走不多远能找到有情调的咖啡店。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;你平时获得工作灵感的方式有哪些？&lt;/h3&gt;
-
-&lt;p&gt;在本子上写写涂涂画画，浏览 &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; 和 &lt;a href=&quot;https://dribbble.com/&quot;&gt;Dribbble&lt;/a&gt;。当然，最有灵感的时候其实是坐地铁。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;推荐一件生活利器给大家。&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.cn/%E4%B8%AA%E6%8A%A4%E5%81%A5%E5%BA%B7/dp/B00HCYFCOQ&quot;&gt;Kleenex 湿厕纸&lt;/a&gt;。原因：擦得就是比普通纸干净。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;本文参与了「利器社群计划」，发现更多创造者和他们的工具：&lt;a href=&quot;http://liqi.io/community/&quot;&gt;http://liqi.io/community/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Wed, 11 Nov 2015 22:11:00 +0800</pubDate>
-        <link>https://crispgm.com/page/my-tools.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/my-tools.html</guid>
-        
-        <category>Apps</category>
-        
-        <category>Tools</category>
-        
-        <category>利器</category>
         
         
       </item>
