@@ -102,7 +102,7 @@ s 030f64a Graceful require
 
 ## Push
 
-进行完 rebase 后，直接执行 ```git push origin your-branch-name``` 会失败，这时千万不要 ```git pull``` 会触发 merge。
+进行完 rebase 后，直接执行 ```git push origin your-branch-name``` 会失败，这时千万不要按照提示进行 ```git pull```，否则会触发 merge。
 
 直接使用 ```-f``` 参数进行强制 push：
 
