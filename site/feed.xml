@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Aug 2016 17:52:15 +0800</pubDate>
-    <lastBuildDate>Tue, 16 Aug 2016 17:52:15 +0800</lastBuildDate>
+    <pubDate>Tue, 16 Aug 2016 17:54:16 +0800</pubDate>
+    <lastBuildDate>Tue, 16 Aug 2016 17:54:16 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -114,7 +114,7 @@ s 030f64a Graceful require
 
 &lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
 
-&lt;p&gt;进行完 rebase 后，直接执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin your-branch-name&lt;/code&gt; 会失败，这时千万不要 &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt; 会触发 merge。&lt;/p&gt;
+&lt;p&gt;进行完 rebase 后，直接执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin your-branch-name&lt;/code&gt; 会失败，这时千万不要按照提示进行 &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt;，否则会触发 merge。&lt;/p&gt;
 
 &lt;p&gt;直接使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;-f&lt;/code&gt; 参数进行强制 push：&lt;/p&gt;
 
