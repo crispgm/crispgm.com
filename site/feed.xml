@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Aug 2016 19:33:35 +0800</pubDate>
-    <lastBuildDate>Tue, 16 Aug 2016 19:33:35 +0800</lastBuildDate>
+    <pubDate>Tue, 16 Aug 2016 19:36:42 +0800</pubDate>
+    <lastBuildDate>Tue, 16 Aug 2016 19:36:42 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -88,7 +88,7 @@ pick 030f64a Graceful require
 
 &lt;h2 id=&quot;section-1&quot;&gt;处理提交&lt;/h2&gt;
 
-&lt;p&gt;按 &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; 进行编辑模式，常用的操作有&lt;/p&gt;
+&lt;p&gt;按 &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; 进入编辑模式，常用的操作有&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;p: 选取
 r: 变更提交信息
@@ -96,7 +96,7 @@ s: 将提交信息合并到上一个提交中
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;最老的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条合并。&lt;/p&gt;
+&lt;p&gt;最早的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条则可以进行合并。&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pick f3e7c2e Add RIO medal count bot
 s 316f48a Add weekly template
@@ -107,7 +107,7 @@ s 030f64a Graceful require
 &lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改文件。&lt;/p&gt;
+  &lt;p&gt;注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改信息文件。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wq&lt;/code&gt; 保存后，会进入合并信息页面，再次保存后完成 rebase。&lt;/p&gt;

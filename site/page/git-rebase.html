@@ -119,7 +119,7 @@ pick 030f64a Graceful require
 
 <h2 id="section-1">处理提交</h2>
 
-<p>按 <code class="highlighter-rouge">i</code> 进行编辑模式，常用的操作有</p>
+<p>按 <code class="highlighter-rouge">i</code> 进入编辑模式，常用的操作有</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>p: 选取
 r: 变更提交信息
@@ -127,7 +127,7 @@ s: 将提交信息合并到上一个提交中
 </code></pre>
 </div>
 
-<p>最老的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条合并。</p>
+<p>最早的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条则可以进行合并。</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>pick f3e7c2e Add RIO medal count bot
 s 316f48a Add weekly template
@@ -138,7 +138,7 @@ s 030f64a Graceful require
 </div>
 
 <blockquote>
-  <p>注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改文件。</p>
+  <p>注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改信息文件。</p>
 </blockquote>
 
 <p><code class="highlighter-rouge">wq</code> 保存后，会进入合并信息页面，再次保存后完成 rebase。</p>
