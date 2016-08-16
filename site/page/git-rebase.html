@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
+    <title>开源项目中使用 git-rebase 合并提交 | DAVID ZHANG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/zenburn.css">
+    <link rel="stylesheet" href="/css/opensans.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <script src="/script/highlight.pack.js"></script>
+    <script src="/script/jquery-3.1.0.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div id="content">
+    <header class="menu">
+      <div class="menu-home">
+        <a href="/" style="color: #000000;">DAVID ZHANG</a>
+      </div>
+      <div class="menu-links">
+        <div class="menu-item">
+          <a href="/blogs.html">BLOGS</a>
+        </div>
+        <div class="menu-item">
+          <a href="/projects.html">PROJECTS</a>
+        </div>
+        <div class="menu-item">
+          <a href="/things.html">THINGS</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about.html">ABOUT</a>
+        </div>
+      </div>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">开源项目中使用 git-rebase 合并提交</div>
+    <div class="article-date">August 16, 2016</div>
+  </div>
+  <div class="article-main">
+    <p>最近，在 GitHub 上贡献代码时，常常是在本地提交了(<code class="highlighter-rouge">git commit</code>)很多次后才发现 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commit。</p>
+
+<p>当维护者完成 Code Review 之后，往往就会提出类似这样的要求：</p>
+
+<blockquote>
+  <p>LGTM after a quick rebase!</p>
+</blockquote>
+
+<blockquote>
+  <p>Can you squash the git commits, otherwise LGTM.</p>
+</blockquote>
+
+<p>这是维护者要求提交者使用 <code class="highlighter-rouge">git rebase</code> 将自己的所有提交合并成一条。</p>
+
+<h1 id="git-rebase">什么是 git-rebase</h1>
+
+<p><a href="https://git-scm.com/docs/git-rebase">git-rebase</a> 的定义是：</p>
+
+<blockquote>
+  <p>git-rebase - Reapply commits on top of another base tip</p>
+</blockquote>
+
+<p>rebase 的官方中文翻译是“衍合”，意思是在另一个起点上重新应用提交。深入的具体用法可以参考 <a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E8%A1%8D%E5%90%88">Git 官方文档</a>。</p>
+
+<p>对于当前的应用场景，rebase 的意义是把提交合成一个，这样对于你提交的一个功能，只会有一个提交记录，便于维护者管理。</p>
+
+<h1 id="section">如何操作？</h1>
+
+<h2 id="editor">设置Editor</h2>
+
+<p>首先，要确定是 Terminal 的 <code class="highlighter-rouge">EDITOR</code>。我选择设定为 vim。</p>
+
+<p>修改 <code class="highlighter-rouge">~/.zshrc</code>（非 zsh 用户可以用 <code class="highlighter-rouge">~/.bashrc</code>），加入：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export EDITOR='vim'
+</code></pre>
+</div>
+
+<h2 id="rebase">执行 rebase</h2>
+
+<p>先数一数你提交过的数量，比如之前提交了5次：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git rebase -i HEAD~5
+</code></pre>
+</div>
+
+<p>Git 会调起 vim，提示让你处理 commits：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pick f3e7c2e Add RIO medal count bot
+pick 316f48a Add weekly template
+pick 23c5c47 Move require to third party libs within implementations
+pick 64cad0b Test coverage 100% for test/command
+pick 030f64a Graceful require
+
+# Rebase 2dfc82e..030f64a onto 2dfc82e (5 command(s))
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out 
+</code></pre>
+</div>
+
+<h2 id="section-1">处理提交</h2>
+
+<p>按 <code class="highlighter-rouge">i</code> 进行编辑模式，常用的操作有</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p: 选取
+r: 变更提交信息
+s: 将提交信息合并到上一个提交中
+</code></pre>
+</div>
+
+<p>最老的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条合并。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pick f3e7c2e Add RIO medal count bot
+s 316f48a Add weekly template
+s 23c5c47 Move require to third party libs within implementations
+s 64cad0b Test coverage 100% for test/command
+s 030f64a Graceful require
+</code></pre>
+</div>
+
+<blockquote>
+  <p>注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改文件。</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">wq</code> 保存后，会进入合并信息页面，再次保存后完成 rebase。</p>
+
+<h2 id="push">Push</h2>
+
+<p>进行完 rebase 后，直接执行 <code class="highlighter-rouge">git push origin your-branch-name</code> 会失败，这时千万不要 <code class="highlighter-rouge">git pull</code> 会触发 merge。</p>
+
+<p>直接使用 <code class="highlighter-rouge">-f</code> 参数进行强制 push：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git push -f origin your-branch-name
+</code></pre>
+</div>
+
+<p>完成 push 后，GitHub 的 PR 中，几条提交就会被合并到了同一条中。</p>
+
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    git
+    </div>
+    
+    <div class="tag-item">
+    GitHub
+    </div>
+    
+    <div class="tag-item">
+    OpenSource
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/git-rebase.html';
+      this.page.identifier = '/page/git-rebase.html';
+      this.page.title = '开源项目中使用 git-rebase 合并提交';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+    <footer>
+      <div>Copyright &copy; David Zhang, 2016.</div>
+    </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50708664-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+  </body>
+</html>
