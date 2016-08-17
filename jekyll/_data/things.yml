@@ -13,13 +13,15 @@
   - name: iPhone SE
   - name: Kindle Oasis
   - name: Bose Wave Music System
+  - name: OLYMPUS E-M5 Mark II
 
 - category: Paper Goods
   items:
-  - name: 败家实验室
+  - name: Pilot 78GM
+  - name: Muji Ballpoint Pen
+  - name: Midori Brass Ruler
+  - name: 败家实验室, the best online shop for paper goods
     link: https://thebai.taobao.com/
-  - name: Pilot
-  - name: Muji
 
 - category: Great Reading
   items:
@@ -28,14 +30,6 @@
   - name: 新・片づけ術「断捨離」/断舍离
   - name: How Google Works
   - name: The PayPal Wars
-
-- category: Photography
-  items:
-  - name: OLYMPUS E-M5 Mark II
-  - name: VSCO
-    link: http://crispgm.vsco.com/
-  - name: Instagram
-    link: https://www.instagram.com/crispgm/
 
 - category: Musics
   items:
@@ -46,7 +40,7 @@
     - name: Owl City
     - name: IU
 
-- category: Apps
+- category: Tools
   items:
-    - name: My Liqi/我的利器
-      link: /page/my-tools.html
+  - name: My Liqi/我的利器
+    link: /page/my-tools.html
