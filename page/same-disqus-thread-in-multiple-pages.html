@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
+    <title>不同页面载入相同 Disqus 主题 | DAVID ZHANG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/zenburn.css">
+    <link rel="stylesheet" href="/css/opensans.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <script src="/script/highlight.pack.js"></script>
+    <script src="/script/jquery-3.1.0.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div id="content">
+    <header class="menu">
+      <div class="menu-home">
+        <a href="/" style="color: #000000;">DAVID ZHANG</a>
+      </div>
+      <div class="menu-links">
+        <div class="menu-item">
+          <a href="/blogs.html">BLOGS</a>
+        </div>
+        <div class="menu-item">
+          <a href="/projects.html">PROJECTS</a>
+        </div>
+        <div class="menu-item">
+          <a href="/things.html">THINGS</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about.html">ABOUT</a>
+        </div>
+      </div>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">不同页面载入相同 Disqus 主题</div>
+    <div class="article-date">July 24, 2016</div>
+  </div>
+  <div class="article-main">
+    <p>我的博客采用了开源界内普遍采用的 Disqus 提供对博客的评论支持。它用起来很简单，只需要注册一个帐户获得一个 <code class="highlighter-rouge">Shortname</code> 然后在 HTML 底部加入一段代码就可以了，Disqus 会自动抓取你的 URL 信息作为 key，在页面滑动到代码所在的区域时自动载入评论。</p>
+
+<p>博客从最初到现在经历了好多个阶段：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>生成器</th>
+      <th>域名</th>
+      <th>托管</th>
+      <th>HTTPS</th>
+      <th>评论服务</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>第一代</td>
+      <td>PHP</td>
+      <td>新浪二级域名</td>
+      <td>Sina App Engine</td>
+      <td>不支持</td>
+      <td>无</td>
+    </tr>
+    <tr>
+      <td>第二代</td>
+      <td>PHP 自写</td>
+      <td>GitHub 二级域名</td>
+      <td>GitHub Pages</td>
+      <td>不支持</td>
+      <td>Disqus</td>
+    </tr>
+    <tr>
+      <td>第三代</td>
+      <td>PHP 自写</td>
+      <td>单个一级域名</td>
+      <td>Linode VPS</td>
+      <td>不支持</td>
+      <td>Disqus</td>
+    </tr>
+    <tr>
+      <td>第四代</td>
+      <td>PHP 自写</td>
+      <td>单个一级域名</td>
+      <td>Linode VPS</td>
+      <td>支持</td>
+      <td>Disqus</td>
+    </tr>
+    <tr>
+      <td>第五代</td>
+      <td>Jekyll</td>
+      <td>多个一级域名</td>
+      <td>Linode VPS</td>
+      <td>支持</td>
+      <td>Disqus</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>其中第三、四、五代都造成了新的页面无法载入老的评论，但 Disqus 作为一个通用的第三方评论服务，提供了多种数据迁移方式帮助我轻松解决了这类问题。</p>
+
+<h3 id="url-">URL 变更</h3>
+
+<p>Disqus 对 URL 的识别也是区分协议、域名和 Path。因此，这些元素任意一个发生了变更，都会导致“新页面”没有了原有页面上的评论。</p>
+
+<p>Disqus 提供了三种 URL 映射来解决这类问题。分别是：</p>
+
+<ul>
+  <li>Domain Migration Tool：域名迁移工具</li>
+  <li>Upload a URL map：上传 URL 映射表</li>
+  <li>Redirect Crawler (Advanced)：重定向抓取</li>
+</ul>
+
+<p>第二代到第三代最明确，就是有了自己的域名，URL 出现了变更，故加载不到原有的评论。因此，果断采用域名迁移工具，从原来的 http://crispgm.github.io 迁移到 http://crispgm.com 上。</p>
+
+<p>第四代主要启用了 HTTPS，采用了 HTTPS 后的页面就会被视为与 HTTP 协议的页面完全不同的页面。由于域名迁移工具不支持更改协议，这就得用 URL 映射表方式。需要在本地创建一个 .csv 格式的 URL 映射表，然后上传后即可。同时由于一些页面 URL 的起初英文不太合理，所以后来优化后进行了一次变更，也采用这种方式。</p>
+
+<h3 id="section">多域名支持</h3>
+
+<p>第五代时，由于<a href="/page/new-domain-name.html">多域名</a>的启用，访问不同域名下的同一个网页，其评论是分开的，各自是一个副本。</p>
+
+<p>Disqus 官方自带的网页可视化工具已经不能支持，需要进行<a href="https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables">程序级别的参数配置</a>，需在载入代码进行配置参数。</p>
+
+<p>于是，我修改了 Jekyll 的 <code class="highlighter-rouge">_layout/post.html</code> 模板中的 Disqus 片段。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var disqus_config = function () {
+  this.page.url = '{{ site.url }}{{ page.permalink }}';
+  this.page.identifier = '{{ page.permalink }}';
+  this.page.title = '{{ page.title }}';
+};
+</code></pre>
+</div>
+
+<p>现在，问题终于彻底得到了解决。</p>
+
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Disqus
+    </div>
+    
+    <div class="tag-item">
+    Tips
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/same-disqus-thread-in-multiple-pages.html';
+      this.page.identifier = '/page/same-disqus-thread-in-multiple-pages.html';
+      this.page.title = '不同页面载入相同 Disqus 主题';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+    <footer>
+      <div>Copyright &copy; David Zhang, 2016.</div>
+    </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50708664-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+  </body>
+</html>

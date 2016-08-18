@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DAVID ZHANG</title>
+    <description>A minimalist programmer, photographer and lifes lover.</description>
+    <link>https://crispgm.com/</link>
+    <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 19 Aug 2016 01:05:17 +0800</pubDate>
+    <lastBuildDate>Fri, 19 Aug 2016 01:05:17 +0800</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>深入 Jekyll</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;介绍&lt;/h1&gt;
+
+&lt;p&gt;Jekyll 是一个为博客设计的静态网站生成器，也可以用于个人、项目或组织的网站构建。可以认为，Jekyll 是一个基于文件的内容管理系统（CMS）。它使用 Ruby 编写，通过 Markdown 和 Liquid 模板生成内容。&lt;/p&gt;
+
+&lt;p&gt;有了 Jekyll 这类静态博客生成工具，我们不再需要使用动态语言开发和运行后端程序（如：Wordpress 和 Drupal 等），而只是需要一个静态 HTTP Server。甚至，在有了 GitHub Pages 后，连服务器资源都可以省去。当然，静态网站的好处不止是节省资源，还有安全、速度、扩展性等考虑。具体可以阅读文章：&lt;a href=&quot;https://www.netlify.com/blog/2016/05/18/9-reasons-your-site-should-be-static&quot;&gt;https://www.netlify.com/blog/2016/05/18/9-reasons-your-site-should-be-static&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;美国总统奥巴马连任时的竞选 &lt;a href=&quot;http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/&quot;&gt;Campaign&lt;/a&gt; 网站就使用 Jekyll 开发。ps：不过，希拉里的技术团队又退回到了动态网站。&lt;/p&gt;
+
+&lt;p&gt;GitHub Pages 的背后就运行着 Jekyll，而 Jekyll 本身也是由 GitHub co-founder、前 CEO Tom Preston-Werner(@mojombo) 创立，目前由 Parker Moore(@parkr) 维护，他本人也于&lt;a href=&quot;https://byparker.com/blog/2016/joining-github/&quot;&gt;2016年初加入了 GitHub&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;在 GitHub 的支持下，Jekyll 社区一直保持着极为活跃的状态，Jekyll 的 GitHub Repo 每天都处于更新的状态。近期，刚刚发布了 3.2.0 版本，开始支持基于 RubyGems 的主题。&lt;/p&gt;
+
+&lt;p&gt;但 3.2.0 版和作为修补的 3.2.1 版本生态还不是很完善，原有的主题大多还没有完成 Gem 化改造。官方目前没有主题分享的网站，第三方主题资源分享网站也基本都没有升级，所以反而难以用新的方式选择主题。&lt;/p&gt;
+
+&lt;p&gt;此外，主题 Gem 化带来的好处主要是主题分发的便捷性，但如果需要动手改动主题中的 css 或者 &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 文件，就比较麻烦。&lt;/p&gt;
+
+&lt;p&gt;所以在短期内，我还是比较推荐使用上一个稳定的版本——3.1.6 版的模式。当然，即使程序是 3.2.1 版本也可以按旧的方式来使用，因为 Jekyll 是向下兼容的。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;快速入门&lt;/h1&gt;
+
+&lt;p&gt;对于 Jekyll 本身和 GitHub Pages，由于市面上此类教程很多，本文就不重复造轮子了。可以阅读：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html&quot;&gt;搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门&lt;/a&gt;, by ruanyifeng&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/home/&quot;&gt;Jekyll 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;jekyll&quot;&gt;深入 Jekyll&lt;/h1&gt;
+
+&lt;p&gt;Jekyll 和一般的 Ruby 程序一样，设计思想上易用性强入门简单。但 Jekyll 其实还可以有很多超频的能力。&lt;/p&gt;
+
+&lt;p&gt;我们可以使用 Jekyll Data Files 实现读取 Key-Value 数据库的功能，可以创建和传播自己的主题样式，并且可以结合 Liquid 模板系统创建多种类型的插件。&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-data-files&quot;&gt;Jekyll Data Files&lt;/h2&gt;
+
+&lt;p&gt;Jekyll 虽然无法像动态网站程序一样读取数据库，但它提供了一种读取静态数据的方式，就是 Jekyll Data Files。&lt;/p&gt;
+
+&lt;p&gt;我们可以在 Jekyll Data Files 中使用 YAML, JSON 或 CSV 格式的文件，实现类似动态配置的效果。这些数据会被解析成变量 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.data.your_data&lt;/code&gt; 在 Liquid 模板中使用。&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-themes&quot;&gt;Jekyll Themes&lt;/h2&gt;
+
+&lt;p&gt;Jekyll 主题在支持 RubyGems 前，需要通过复制来实现。很简单粗暴，就是把已经做好的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 和相关静态文件一起复制到自己的目录中。&lt;/p&gt;
+
+&lt;p&gt;Jekyll 原生支持 sass，并且也可以通过插件形式使用 Less 等其它的 CSS 预处理器。&lt;/p&gt;
+
+&lt;p&gt;官方目前没有主题分享的网站，第三方主题资源分享网站还算比较丰富，甚至已经有了不少付费的主题。不过，这些网站都还没有迁移成 RubyGems。&lt;/p&gt;
+
+&lt;p&gt;3.2.0 版发布后，Jekyll 支持了 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new-theme&lt;/code&gt; 指令，可以方便的创建自己的主题，并且发布到 RubyGems。有兴趣自制主题的 geeks，可以贡献出自己的主题。&lt;/p&gt;
+
+&lt;h2 id=&quot;liquid-templates&quot;&gt;Liquid Templates&lt;/h2&gt;
+
+&lt;p&gt;Jekyll 的底层模板层渲染基于开源 Ruby 库 &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; 实现。这是一个 &lt;a href=&quot;https://www.shopify.com/&quot;&gt;Shopify&lt;/a&gt; 公司开源出来的模版系统，用于 Shopify 的店铺主题系统。&lt;/p&gt;
+
+&lt;p&gt;Liquid 提供 Objects(对象)，Tags(标签)和 Filters(过滤器) 三种类型的模板标记。&lt;/p&gt;
+
+&lt;h4 id=&quot;objects&quot;&gt;Objects&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Objects&lt;/strong&gt; 就是传统意义上的模板变量，用双大括号包围。Jekyll 就是将文件中解析的各种内容，通过 Liquid Objects 注入给展示层。&lt;/p&gt;
+
+&lt;p&gt;如下，表示页面的标题：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;page.title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;tags&quot;&gt;Tags&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Tags&lt;/strong&gt; 主要用于提供逻辑功能和控制流，Liquid 自带的 Tags 大多都是控制流和变量相关的，如：if/foreach/assign/capture 之类的。但 Tags 实际上可以用作增加新的标签，作为逻辑功能函数的感觉。&lt;/p&gt;
+
+&lt;p&gt;Jekyll 就有一种扩展是通过扩展 Liquid Tags 来实现。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;user.name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;filters&quot;&gt;Filters&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Filters&lt;/strong&gt; 写法和效果都可以类比于 Shell 中的 Pipe 模式。输出的变量，通过管道符传递进行链式处理。Jekyll 官方扩展了一批 Liquid Filters 配合 Liquid Objects，便于实现博客系统。如：博客的排序、日期的格式化等。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;/my/fancy/url&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.html&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;注：以上例子均取自 &lt;a href=&quot;https://shopify.github.io/liquid/basics/introduction/&quot;&gt;Liquid 官方文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-plugins&quot;&gt;Jekyll Plugins&lt;/h2&gt;
+
+&lt;p&gt;Jekyll 支持多种扩展方式，分别是 Generators, Converters, Commands, Tags, Filters 和 Hooks。其中一些是 Jekyll 自身的扩展机制，而 Tags/Filters 则实质上是对 Liquid Tags/Filters 进行扩展。&lt;/p&gt;
+
+&lt;p&gt;扩展可以通过 Gem 或本地文件分发使用，这块的生态比较杂，主要还是通过 Jekyll 主页 &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;Jekyll Plugins 文档&lt;/a&gt;的专门区域分享插件。对于插件开发者来说，完成开发后可以发 PR 修改 Jekyll Plugins 页面把你的插件分享出来，一般都会被准许 merge（&lt;del&gt;想骗贡献的速来&lt;/del&gt;）。&lt;/p&gt;
+
+&lt;h1 id=&quot;jekyll-&quot;&gt;Jekyll 社区&lt;/h1&gt;
+
+&lt;p&gt;由于受到 GitHub 官方的支持，Jekyll 在静态博客生成器中应该说是最热门的。这或许也是 Jekyll 的社区非常繁荣的原因。它迭代很快，维护者对 Issues 和 PRs 的处理也很快。&lt;/p&gt;
+
+&lt;p&gt;在工程方面，Jekyll 的自动化测试覆盖率非常高，既有基于 Cucumber 实现的 Bahavior Driven Test，也有一般的 Unit Test，通过常见的 Travis-CI 完成持续集成回归。还集成有 Code Climate 代码规范检测（通过 Rubocop 实现），代码测试覆盖率检测。目前，Jekyll 正在积极接入 AppVeyor，也就是 Windows 领域的 Travis-CI。很快即将实现多端（类 Unix 系统，如Linux/Mac 和 Windows 系统）、多平台（原生 Ruby 和 JRuby）自动化回归。&lt;/p&gt;
+
+&lt;p&gt;Jekyll 不仅测试做到了自动化，还做到了整体工作流的自动化。Jekyll 启用了 @jekyllbot 辅助项目维护团队：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Merge PR：通过在 PR 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;@jekyllbot: merge +site&lt;/code&gt; 控制合并，并且在合并后机器人会自动根据后缀内容（+site 代表这个 PR 是对网站文档进行的修改）将变更分类加入到 changelog 中。&lt;/li&gt;
+  &lt;li&gt;版本发布：会在 GitHub 打 tag 并发布 release，release 内容会从更新列表中拉取；自动更新并 push gemspec 文件到 RubyGems；获取这个版本内的所有变更贡献者，加入到版本发布新闻的感谢列表中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-2&quot;&gt;启发&lt;/h1&gt;
+
+&lt;p&gt;受到了 Jekyll 的启发，我也进行了很多关于工作流自动化方面的思考。主要做了几件小事：&lt;/p&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;博客自动化部署&lt;/h4&gt;
+
+&lt;p&gt;由于种种原因，我的博客并没有部署在 GitHub Pages 上，而是独立的主机。因此，在 push 到 GitHub 之后还需要部署到主机中。我们可以在主机上起一个代码更新部署进程，在 push 后通过 GitHub WebHooks 回调主机上的更新接口，实现自动化部署。这样，只要一 push 代码就会触发主机上的更新。&lt;/p&gt;
+
+&lt;p&gt;为了让 push 本身更容易，又通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; 将 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 和 push 也自动化，完成 build 之后自动提交如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m &quot;Deployed at 2016-08-18 14:50:26 +0800&quot;
+
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;日报/周报邮件模板&lt;/h4&gt;
+
+&lt;p&gt;日常工作中，需要每天或每周发送各类日报和周报。发送的内容一般会维护在某个表格或文档中，但邮件的收件人和抄送都是固定的一类人，标题则是标题+时间的格式，正文会有开头问好和结尾签名。这恰好是模板类需求，可以用 Liquid 实现。&lt;/p&gt;
+
+&lt;p&gt;对于邮件人和抄送人，建立一些 Group，并且通过 Liquid Tags 返回这些人的邮件地址。如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;to: '{% group_members tech_core members %}'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;对于标题，则使用 Liquid Objects 传入时间等变量，并使用 Liquid Filters 将时间转换为合适的样式。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title: '项目日报 {{ created_time | date: &quot;%Y%m%d&quot; }}' 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 18 Aug 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/dive-into-jekyll.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/dive-into-jekyll.html</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>Ruby</category>
+        
+        <category>GitHub</category>
+        
+        <category>Blog</category>
+        
+        <category>Markdown</category>
+        
+        <category>Liquid</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>开源项目中使用 git-rebase 合并提交</title>
+        <description>&lt;p&gt;最近，在 GitHub 上贡献代码时，常常是在本地提交 &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt; 很多次后才发起 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commits。&lt;/p&gt;
+
+&lt;p&gt;当维护者完成 Code Review 之后，往往就会提出类似这样的要求：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;LGTM after a quick rebase!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Can you squash the git commits, otherwise LGTM.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这是维护者要求提交者使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase&lt;/code&gt; 将自己的所有提交合并成一条。&lt;/p&gt;
+
+&lt;h1 id=&quot;git-rebase&quot;&gt;什么是 git-rebase&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git-scm.com/docs/git-rebase&quot;&gt;git-rebase&lt;/a&gt; 的定义是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git-rebase - Reapply commits on top of another base tip&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;rebase 的官方中文翻译是“衍合”，意思是在另一个起点上重新应用提交。深入的具体用法可以参考 &lt;a href=&quot;https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E8%A1%8D%E5%90%88&quot;&gt;Git 官方文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;对于当前的应用场景，rebase 的意义是把提交合成一个，这样对于你提交的一个功能，只会有一个提交记录，便于维护者管理。&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;如何操作？&lt;/h1&gt;
+
+&lt;h2 id=&quot;editor&quot;&gt;设置Editor&lt;/h2&gt;
+
+&lt;p&gt;首先，要确定是 Terminal 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;EDITOR&lt;/code&gt;。我选择设定为 vim。&lt;/p&gt;
+
+&lt;p&gt;修改 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;（非 zsh 用户可以用 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt;），加入：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export EDITOR='vim'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;rebase&quot;&gt;执行 rebase&lt;/h2&gt;
+
+&lt;p&gt;先数一数你提交过的数量，比如之前提交了5次：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rebase -i HEAD~5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Git 会调起 vim，提示让你处理 commits：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pick f3e7c2e Add RIO medal count bot
+pick 316f48a Add weekly template
+pick 23c5c47 Move require to third party libs within implementations
+pick 64cad0b Test coverage 100% for test/command
+pick 030f64a Graceful require
+
+# Rebase 2dfc82e..030f64a onto 2dfc82e (5 command(s))
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like &quot;squash&quot;, but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;处理提交&lt;/h2&gt;
+
+&lt;p&gt;按 &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; 进入编辑模式，常用的操作有&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;p: 选取
+r: 变更提交信息
+s: 将提交信息合并到上一个提交中
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;最早的一条提交是必须保留的，可以选取或者变更提交信息，但不能选择合并。对于后面几条则可以进行合并。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pick f3e7c2e Add RIO medal count bot
+s 316f48a Add weekly template
+s 23c5c47 Move require to third party libs within implementations
+s 64cad0b Test coverage 100% for test/command
+s 030f64a Graceful require
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注：用 r 修改提交信息时，不需要在这个里面改，直接保存退出 vim 会弹出专门的修改信息文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wq&lt;/code&gt; 保存后，会进入合并信息页面，再次保存后完成 rebase。&lt;/p&gt;
+
+&lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
+
+&lt;p&gt;进行完 rebase 后，直接执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin your-branch-name&lt;/code&gt; 会失败，这时千万不要按照提示进行 &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt;，否则会触发 merge。&lt;/p&gt;
+
+&lt;p&gt;直接使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;-f&lt;/code&gt; 参数进行强制 push：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push -f origin your-branch-name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;完成 push 后，GitHub 的 PR 中，几条提交就会被合并到了同一条中。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Aug 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/git-rebase.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/git-rebase.html</guid>
+        
+        <category>git</category>
+        
+        <category>GitHub</category>
+        
+        <category>OpenSource</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>不同页面载入相同 Disqus 主题</title>
+        <description>&lt;p&gt;我的博客采用了开源界内普遍采用的 Disqus 提供对博客的评论支持。它用起来很简单，只需要注册一个帐户获得一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Shortname&lt;/code&gt; 然后在 HTML 底部加入一段代码就可以了，Disqus 会自动抓取你的 URL 信息作为 key，在页面滑动到代码所在的区域时自动载入评论。&lt;/p&gt;
+
+&lt;p&gt;博客从最初到现在经历了好多个阶段：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;生成器&lt;/th&gt;
+      &lt;th&gt;域名&lt;/th&gt;
+      &lt;th&gt;托管&lt;/th&gt;
+      &lt;th&gt;HTTPS&lt;/th&gt;
+      &lt;th&gt;评论服务&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;第一代&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;新浪二级域名&lt;/td&gt;
+      &lt;td&gt;Sina App Engine&lt;/td&gt;
+      &lt;td&gt;不支持&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;第二代&lt;/td&gt;
+      &lt;td&gt;PHP 自写&lt;/td&gt;
+      &lt;td&gt;GitHub 二级域名&lt;/td&gt;
+      &lt;td&gt;GitHub Pages&lt;/td&gt;
+      &lt;td&gt;不支持&lt;/td&gt;
+      &lt;td&gt;Disqus&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;第三代&lt;/td&gt;
+      &lt;td&gt;PHP 自写&lt;/td&gt;
+      &lt;td&gt;单个一级域名&lt;/td&gt;
+      &lt;td&gt;Linode VPS&lt;/td&gt;
+      &lt;td&gt;不支持&lt;/td&gt;
+      &lt;td&gt;Disqus&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;第四代&lt;/td&gt;
+      &lt;td&gt;PHP 自写&lt;/td&gt;
+      &lt;td&gt;单个一级域名&lt;/td&gt;
+      &lt;td&gt;Linode VPS&lt;/td&gt;
+      &lt;td&gt;支持&lt;/td&gt;
+      &lt;td&gt;Disqus&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;第五代&lt;/td&gt;
+      &lt;td&gt;Jekyll&lt;/td&gt;
+      &lt;td&gt;多个一级域名&lt;/td&gt;
+      &lt;td&gt;Linode VPS&lt;/td&gt;
+      &lt;td&gt;支持&lt;/td&gt;
+      &lt;td&gt;Disqus&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;其中第三、四、五代都造成了新的页面无法载入老的评论，但 Disqus 作为一个通用的第三方评论服务，提供了多种数据迁移方式帮助我轻松解决了这类问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;url-&quot;&gt;URL 变更&lt;/h3&gt;
+
+&lt;p&gt;Disqus 对 URL 的识别也是区分协议、域名和 Path。因此，这些元素任意一个发生了变更，都会导致“新页面”没有了原有页面上的评论。&lt;/p&gt;
+
+&lt;p&gt;Disqus 提供了三种 URL 映射来解决这类问题。分别是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Domain Migration Tool：域名迁移工具&lt;/li&gt;
+  &lt;li&gt;Upload a URL map：上传 URL 映射表&lt;/li&gt;
+  &lt;li&gt;Redirect Crawler (Advanced)：重定向抓取&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第二代到第三代最明确，就是有了自己的域名，URL 出现了变更，故加载不到原有的评论。因此，果断采用域名迁移工具，从原来的 http://crispgm.github.io 迁移到 http://crispgm.com 上。&lt;/p&gt;
+
+&lt;p&gt;第四代主要启用了 HTTPS，采用了 HTTPS 后的页面就会被视为与 HTTP 协议的页面完全不同的页面。由于域名迁移工具不支持更改协议，这就得用 URL 映射表方式。需要在本地创建一个 .csv 格式的 URL 映射表，然后上传后即可。同时由于一些页面 URL 的起初英文不太合理，所以后来优化后进行了一次变更，也采用这种方式。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;多域名支持&lt;/h3&gt;
+
+&lt;p&gt;第五代时，由于&lt;a href=&quot;/page/new-domain-name.html&quot;&gt;多域名&lt;/a&gt;的启用，访问不同域名下的同一个网页，其评论是分开的，各自是一个副本。&lt;/p&gt;
+
+&lt;p&gt;Disqus 官方自带的网页可视化工具已经不能支持，需要进行&lt;a href=&quot;https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables&quot;&gt;程序级别的参数配置&lt;/a&gt;，需在载入代码进行配置参数。&lt;/p&gt;
+
+&lt;p&gt;于是，我修改了 Jekyll 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout/post.html&lt;/code&gt; 模板中的 Disqus 片段。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var disqus_config = function () {
+  this.page.url = '{{ site.url }}{{ page.permalink }}';
+  this.page.identifier = '{{ page.permalink }}';
+  this.page.title = '{{ page.title }}';
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;现在，问题终于彻底得到了解决。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Jul 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/same-disqus-thread-in-multiple-pages.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/same-disqus-thread-in-multiple-pages.html</guid>
+        
+        <category>Disqus</category>
+        
+        <category>Tips</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>『翻译』PHP 7 新 Hash 表实现</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;声明&lt;/h1&gt;
+
+&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
+
+&lt;p&gt;原文：&lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;PHP’s new hashtable implementation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
+
+&lt;p&gt;This article is translated from a blog post of Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;),
+in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
+
+&lt;p&gt;Original Post: &lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;PHP’s new hashtable implementation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;正文&lt;/h1&gt;
+
+&lt;p&gt;大约三年前，我写过一篇&lt;a href=&quot;/page/how-big-are-php-arrays.html&quot;&gt;分析 PHP 5 数组内存消耗的文章&lt;/a&gt;。作为即将推出的 PHP 7 的工作的一部分，Zend 引擎很大一部分已经被重写，这些工作针对于更小的数据结构和更少的内存分配。在这篇文章中，我将对新的 Hash 表实现做一个概述，并展示为什么它比之前的实现更有效。&lt;/p&gt;
+
+&lt;p&gt;我使用一个脚本来测量内存使用情况，这个脚本会测试创建一个 100000 个不同整型数的数组所需要的内存：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = range(1, 100000);
+echo memory_get_usage() - $startMemory, &quot; bytes\n&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;下面的这张表展示了 PHP 5.6 和 PHP 7 在 32 位和 64 位系统中的内存占用对比：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        |   32 bit |    64 bit
+------------------------------
+PHP 5.6 | 7.37 MiB | 13.97 MiB
+------------------------------
+PHP 7.0 | 3.00 MiB |  4.00 MiB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;换句话说，PHP 7 中的数组在 32 位系统中节省了 2.5 倍的内存，在 64 位（LP64）系统中节省了 3.5 倍，这相当的可观。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash-&quot;&gt;Hash 表介绍&lt;/h2&gt;
+
+&lt;p&gt;本质上，PHP 的数组其实是有序词典。也就是说，它们代表了一个由 key/value 对组成的有序列表，其中 key/value 映射由 Hash 表实现。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hash_table&quot;&gt;Hash 表&lt;/a&gt;是一个普遍的数据结构。从根本上，它解决了计算机只可以直接使用连续整数下标表达数组，而程序员常希望使用字符串或者其它更复杂的类型作为 key 的问题。&lt;/p&gt;
+
+&lt;p&gt;Hash 表背后的概念很简单：字符串类型的 key 通过一个 Hash 函数，返回一个整数，这个整数作为一个“正常”数组的下标。问题是在于两个不同的字符串可能会得到同样的 Hash 值，因为字符串组合的可能性实际上是无限的，而 Hash 却受到了整型的限制。所以，这些 Hash 表需要实现某种冲突处理机制。&lt;/p&gt;
+
+&lt;p&gt;业界有两种主要的冲突处理方法：开地址法，如果发生冲突，元素会被存储在另外一个下标中；链地址法，所以有同样 Hash 值的元素将会被存在一个链表中。PHP 使用了后者。&lt;/p&gt;
+
+&lt;p&gt;通常来说，Hash 表不会有明确的顺序：元素存储在数组底层的顺序依赖于 Hash 函数，并且相当的随机。但这个行为和 PHP 数组的语义不一致：如果你遍历一个 PHP 数组，你将会得到按插入顺序排列的元素。这意味着，PHP 的 Hash 表实现不得不加入额外的机制来记录数组元素的顺序。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash--1&quot;&gt;旧的 Hash 表实现&lt;/h2&gt;
+
+&lt;p&gt;我在这里只会简短的概述一下旧的 Hash 表实现，想获得更全面的解释可以阅读 PHP 内核书的 &lt;a href=&quot;http://www.phpinternalsbook.com/hashtables/basic_structure.html&quot;&gt;Hash 表章节&lt;/a&gt;。下图所示是一个 PHP 5 Hash 表的高级视图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nikic.github.io/images/basic_hashtable.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“冲突处理”链表中的元素是 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;。每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 会被单独分配。图片隐藏了 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 中实际存储的值（只显示了 key）。值被存储在独立分配的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构中，结构有 16 bytes（32 位）或 24 bytes（64 位）。&lt;/p&gt;
+
+&lt;p&gt;另一件事就是图片没有体现出冲突处理链表实际是一个双向链表（这样可以便于删除操作）。在冲突处理链表旁边，还有另一个双向链表用于存储数组元素的顺序。对于一个有以&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&lt;/code&gt; 3 个 key 为顺序的数组，顺序链表如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nikic.github.io/images/ordered_hashtable.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;所以，为什么旧的 Hash 表结构无论是内存消耗还是性能上都如此的低效？这有很多主要的原因：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 需要独立分配内存。内存分配慢而且需要额外增加 8 / 16 bytes，独立分配内存也意味着 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 在内存中会更分散，降低缓存效果。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 也需要独立分配内存。同样的，内存分配慢而且会导致更多内存分配。除此之外，这还需要在每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 中存储一个指向 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的指针。因为旧的实现过度通用，它实际需要不止一个，而是两个指针。&lt;/li&gt;
+  &lt;li&gt;双向链表需要为每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 存储 4 个指针，这单独就占用了 16 / 32 bytes… 除此之外，遍历链表是一件对缓存很不友好的操作。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;新的 Hash 表实现设法解决（或至少是改善）这些问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;zval-&quot;&gt;新的 zval 实现&lt;/h2&gt;
+
+&lt;p&gt;在进入实际的 Hash 表之前，我想先简单的看一下新的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构并且突出它和旧版的区别。&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构定义如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct _zval_struct {
+    zend_value value;
+    union {
+        struct {
+            ZEND_ENDIAN_LOHI_4(
+                zend_uchar type,
+                zend_uchar type_flags,
+                zend_uchar const_flags,
+                zend_uchar reserved)
+        } v;
+        uint32_t type_info;
+    } u1;
+    union {
+        uint32_t var_flags;
+        uint32_t next;       /* hash collision chain */
+        uint32_t cache_slot; /* literal cache slot */
+        uint32_t lineno;     /* line number (for ast nodes) */
+    } u2;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;你可以安全的忽略在定义中的宏 &lt;code class=&quot;highlighter-rouge&quot;&gt;ZEND_ENDIAN_LOHI_4&lt;/code&gt;，它只用于在不同字节顺序的机器下保证可预计的内存布局。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构有三部分：第一个成员是值。&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_value&lt;/code&gt; 联合体占用 8 bytes 用于存储不同类型的值，包括整型、字符串、数组等。具体存储什么依赖于 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的类型。&lt;/p&gt;
+
+&lt;p&gt;第二部分是 4 bytes 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;type_info&lt;/code&gt;，包含有实际的类型（像 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_STRING&lt;/code&gt; 或 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_ARRAY&lt;/code&gt;），并且有一些额外的提供这个类型信息的标识。比如，如果这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 存储了一个对象，则类型的标识会表明它是一个非常量、引用计数了的、可垃圾收集的、非复制类型。&lt;/p&gt;
+
+&lt;p&gt;最后 4 bytes 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构中通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的下标，Hash 表用它存储在冲突处理链表中的下一个元素 —— 最后这一部分对我们很重要。&lt;/p&gt;
+
+&lt;p&gt;如果你同之前的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 实现对比，一个最特别的不同是：新的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 结构不再有引用计数 &lt;code class=&quot;highlighter-rouge&quot;&gt;refcount&lt;/code&gt;。这后面的原因是，&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 不再被单独分配，而是被直接集成在任何存储它的地方（比如：Hash 表中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;）。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 本身不再使用引用计数，而复杂的数据类型如 &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;resource&lt;/code&gt; 等还会使用引用计数。事实上，新的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 设计将引用计数从 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 提到了 &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt; 等结构上。这种方式会有很多好处，下面列出了部分好处：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头的额外消耗，并且通过避免不必要的分配和释放内存改善了缓存访问，提升了性能。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 存储简单的数值不需要存储引用计数和 GC 根缓冲。&lt;/li&gt;
+  &lt;li&gt;我们避免了双重的引用计数。例如：过去，对象会既使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的引用计数，又增加了一个额外的对象引用计数，被用于支持对象传值的语法。&lt;/li&gt;
+  &lt;li&gt;由于所有复杂的值现在集成了引用计数，它们可以独立共享 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的机制，尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非留存（译者注：此处 interned 没有找到好的翻译，&lt;a href=&quot;https://en.wikipedia.org/wiki/String_interning&quot;&gt;string interning&lt;/a&gt; 是指一种为每个不同的不可变字符串值只存储一个拷贝的方法）的字符串类型的键值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hash--2&quot;&gt;新的 Hash 表实现&lt;/h2&gt;
+
+&lt;p&gt;在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 的结构开始：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _Bucket {
+    zend_ulong        h;
+    zend_string      *key;
+    zval              val;
+} Bucket;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 是一个 Hash 表中的入口。它包含了很多你可以预料到的：一个 Hash 值 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;，一个字符串键值 &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt;，一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 值 &lt;code class=&quot;highlighter-rouge&quot;&gt;val&lt;/code&gt;。整型的键值会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;（键值和 Hash 在这里是一样的），&lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; 将会被设为 &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;正如你看到的，&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 直接被 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 所内置，所以它不需要单独的分配，我们不需要为分配付出代价。&lt;/p&gt;
+
+&lt;p&gt;主 Hash 表的结构更加有趣：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _HashTable {
+    uint32_t          nTableSize;
+    uint32_t          nTableMask;
+    uint32_t          nNumUsed;
+    uint32_t          nNumOfElements;
+    zend_long         nNextFreeElement;
+    Bucket           *arData;
+    uint32_t         *arHash;
+    dtor_func_t       pDestructor;
+    uint32_t          nInternalPointer;
+    union {
+        struct {
+            ZEND_ENDIAN_LOHI_3(
+                zend_uchar    flags,
+                zend_uchar    nApplyCount,
+                uint16_t      reserve)
+        } v;
+        uint32_t flags;
+    } u;
+} HashTable;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;（相当于数组元素）存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 数组中，以 2 的幂为大小进行分配，数组的大小存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt;（最小值为 8）。元素的实际数量是 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumOfElements&lt;/code&gt;。注意，这个数组直接包含有 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;。之前，我们使用一个指针数组去单独分配 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;元素的顺序&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 数组按照插入的顺序存储元素。所以第一个元素会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[0]&lt;/code&gt;，第二个会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[1]&lt;/code&gt; ，等等。这完全不依赖用过的 key，只跟插入顺序有关。&lt;/p&gt;
+
+&lt;p&gt;所以如果你有 5 个 Hash 表元素，从 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[0]&lt;/code&gt; 到 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[4]&lt;/code&gt; 将会被占用，下一个空闲的槽式 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[5]&lt;/code&gt;。我们将这个数存在 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumUsed&lt;/code&gt;。你可能会疑惑：为什么要分开存储？这和 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumOfElements&lt;/code&gt; 有区别吗？&lt;/p&gt;
+
+&lt;p&gt;提出这问题是因为只看了执行插入操作时的情况。如果从 Hash 表删除一个元素时，我们显然不希望通过移动 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 中被删除的元素后面的全部元素来使数组保持连续。作为替代，我们只是在 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 中标注 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_UNDEF&lt;/code&gt; 类型。&lt;/p&gt;
+
+&lt;p&gt;用下面的代码作为例子：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$array = [
+    'foo' =&amp;gt; 0,
+    'bar' =&amp;gt; 1,
+    0     =&amp;gt; 2,
+    'xyz' =&amp;gt; 3,
+    2     =&amp;gt; 4
+];
+unset($array[0]);
+unset($array['xyz']);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这会形成如下的 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 结构：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nTableSize     = 8
+nNumOfElements = 3
+nNumUsed       = 5
+
+[0]: key=&quot;foo&quot;, val=int(0)
+[1]: key=&quot;bar&quot;, val=int(1)
+[2]: val=UNDEF
+[3]: val=UNDEF
+[4]: h=2, val=int(4)
+[5]: NOT INITIALIZED
+[6]: NOT INITIALIZED
+[7]: NOT INITIALIZED
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如你所见，前五个 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 元素被使用了，但下标 2（key 为 0） 和 3（key 为 ‘xyz’） 被替换成了 &lt;code class=&quot;highlighter-rouge&quot;&gt;IS_UNDEF&lt;/code&gt;，因为它们被 unset 了。这些元素现在还会浪费内存。然而，一旦 &lt;code class=&quot;highlighter-rouge&quot;&gt;nNumUsed&lt;/code&gt; 达到 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt;，PHP会通过丢弃任何 &lt;code class=&quot;highlighter-rouge&quot;&gt;UNDEF&lt;/code&gt; 的记录，自动压缩 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 数组。只有当所有 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 真的有值才会被重分配到两倍大。&lt;/p&gt;
+
+&lt;p&gt;新的维护数组顺序的方式对于 PHP 5.x 的双向链表有很多优点。一个明显的优点是我们对于每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 节省两个指针，相当于 8/16 bytes。并且，这意味着数组迭代粗略如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;uint32_t i;
+for (i = 0; i &amp;lt; ht-&amp;gt;nNumUsed; ++i) {
+    Bucket *b = &amp;amp;ht-&amp;gt;arData[i];
+    if (Z_ISUNDEF(b-&amp;gt;val)) continue;
+
+    // do stuff with bucket
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这相当于一个内存线性扫描，比起链表遍历（需要进行向前向后的相对随机的内存寻址）更能有效缓存。&lt;/p&gt;
+
+&lt;p&gt;当前实现的一个问题是 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 从不收缩（除非明确告诉它这样做）。所以如果你创建一个几百万个元素的数组并在后来删除，数组还是会占用大量的内存。我们可能应该让 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 的大小减半，如果使用降低到一定的程度。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash--3&quot;&gt;Hash 表查找&lt;/h2&gt;
+
+&lt;p&gt;到现在，我们只是讨论了 PHP 数组如何表示顺序。实际 Hash 表的查找使用了第二个包含有 &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32_t&lt;/code&gt; 值的 &lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组。&lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组合 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 有相同的大小（&lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt;），两者实际上都被分配在同一内存分片上。&lt;/p&gt;
+
+&lt;p&gt;返回的 Hash 值是由 Hash 函数（对于字符串使用 DJBX33A 算法）返回的 32 位或 64 位无符号整型，它们太大了不能直接用作 Hash 数组的下标。我们需要首先用取余操作将它们转换成表的大小。我们使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;hash &amp;amp; (ht-&amp;gt;nTableSize - 1)&lt;/code&gt; 而不是 &lt;code class=&quot;highlighter-rouge&quot;&gt;hash % ht-&amp;gt;nTableSize&lt;/code&gt;，在数组大小是 2 的幂的情况下，它们结果一致但不需要“昂贵”的整数除法操作。&lt;code class=&quot;highlighter-rouge&quot;&gt;ht-&amp;gt;nTableSize - 1&lt;/code&gt; 的值会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;ht-&amp;gt;nTableMask&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;接着，我们在 Hash 数组中寻找下标 &lt;code class=&quot;highlighter-rouge&quot;&gt;idx = ht-&amp;gt;arHash[hash &amp;amp; ht-&amp;gt;nTableMask]&lt;/code&gt;。这个下标相当于冲突处理链表的头部，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;ht-&amp;gt;arData[idx]&lt;/code&gt; 是我们第一个检查的纪录。如果 key 和我们要查找的匹配，事情就完成了。&lt;/p&gt;
+
+&lt;p&gt;否则，我们必须继续查找冲突处理链表的下一个。这个元素的下标会被存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket-&amp;gt;val.u2.next&lt;/code&gt;，这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 通常不被用到而是在特定上下文下才有意义的 4 bytes。我们继续遍历链表直到找到正确的 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt;，或者遇到 &lt;code class=&quot;highlighter-rouge&quot;&gt;INVALID_IDX&lt;/code&gt;，也就是并不存在查找的 key 对应的元素。&lt;/p&gt;
+
+&lt;p&gt;查找机制如下代码中所示：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zend_ulong h = zend_string_hash_val(key);
+uint32_t idx = ht-&amp;gt;arHash[h &amp;amp; ht-&amp;gt;nTableMask];
+while (idx != INVALID_IDX) {
+    Bucket *b = &amp;amp;ht-&amp;gt;arData[idx];
+    if (b-&amp;gt;h == h &amp;amp;&amp;amp; zend_string_equals(b-&amp;gt;key, key)) {
+        return b;
+    }
+    idx = Z_NEXT(b-&amp;gt;val); // b-&amp;gt;val.u2.next
+}
+return NULL;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;让我们考虑下对于过去的实现做了怎样的优化：在 PHP 5.x 中，冲突处理链表是一个双向链表。使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32_t&lt;/code&gt; 下标比指针更好，因为在 64 位系统只需要一半的内存。并且，4 bytes 刚好可以将 &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; 节点的链接内置在没有用到的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 槽中，所以我们本质上是没有付出任何代价使用的。&lt;/p&gt;
+
+&lt;p&gt;我们现在还用了单向链表，没有 &lt;code class=&quot;highlighter-rouge&quot;&gt;prev&lt;/code&gt; 节点。&lt;code class=&quot;highlighter-rouge&quot;&gt;prev&lt;/code&gt; 节点对于删除元素很有用，因为当你进行删除时，不得不调整 &lt;code class=&quot;highlighter-rouge&quot;&gt;prev&lt;/code&gt; 节点的 &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; 节点。然而，如果按照 key 来删除，你已经在遍历冲突处理链表时知道了前一个元素。&lt;/p&gt;
+
+&lt;p&gt;在一些上下文情况下的删除（比如：删除迭代器当前所在的元素）可能会需要遍历冲突链表，以寻找前一个元素。但这不是一个很常见的场景，对于这种情况我们比起减少一次遍历更倾向于节省内存。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash--4&quot;&gt;打包 Hash 表&lt;/h2&gt;
+
+&lt;p&gt;PHP 对于任何数组都使用 Hash 表。然而，对于一些很常见的连续、整数下标的数组（比如：实数组），整个 Hash 系统并没有什么用。这是 PHP 7 要引入一个“打包 Hash 表”概念的原因。&lt;/p&gt;
+
+&lt;p&gt;在打包 Hash 表中，&lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组是 &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt; 并且直接通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData&lt;/code&gt; 查找。如果你查找下标为 5 的元素，元素就在 &lt;code class=&quot;highlighter-rouge&quot;&gt;arData[5]&lt;/code&gt; 或者根本不存在，并没有必要遍历冲突处理链表。&lt;/p&gt;
+
+&lt;p&gt;注意：即使是整数下标的 PHP 数组也需要维护顺序。数组 [0 =&amp;gt; 1, 1 =&amp;gt; 2] 和 [1 =&amp;gt; 2, 0 =&amp;gt; 1] 并不相同。打包 Hash 表的优化只对按照升序下标排序的数组有用。数组中可以有间隔（下标不连续），但必须是升序的。所以如果元素按照了错误的顺序插入（比如：倒序），打包 Hash 表优化将不会被使用。&lt;/p&gt;
+
+&lt;p&gt;除此之外还要注意，打包 Hash 表仍然会存储很多无用信息。例如，我们可以基于内存地址来确定一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 的下标，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket-&amp;gt;h&lt;/code&gt; 是冗余的。&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket-&amp;gt;key&lt;/code&gt; 的值将会一直是 &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt;，所以这也浪费了内存。&lt;/p&gt;
+
+&lt;p&gt;我们留着这些无用的值，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 有一样的结构，与是否使用打包无关。这意味着，迭代可以使用相同的代码。然而，我们可能会在未来切换到“完全打包”的结构，如果可以那时将会使用纯粹的 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 数组。&lt;/p&gt;
+
+&lt;h2 id=&quot;hash--5&quot;&gt;空 Hash 表&lt;/h2&gt;
+
+&lt;p&gt;空 Hash 表在 PHP 5.x 和 PHP 7 中都会被特殊处理。如果你创建了空数组 &lt;code class=&quot;highlighter-rouge&quot;&gt;array []&lt;/code&gt;，很有可能你不会实际上插入任何元素。&lt;code class=&quot;highlighter-rouge&quot;&gt;arData/arHash&lt;/code&gt; 数组只会在你插入第一个元素时分配内存。&lt;/p&gt;
+
+&lt;p&gt;为了避免在很多地方对这种特殊情况做校验，在此应用了一个小技巧：当 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt; 被设为暗示的大小或者默认值 8 时，&lt;code class=&quot;highlighter-rouge&quot;&gt;nTableMask&lt;/code&gt;（实际上是 &lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize - 1&lt;/code&gt;）会被设为 0。这意味着，&lt;code class=&quot;highlighter-rouge&quot;&gt;hash &amp;amp; ht-&amp;gt;nTableMask&lt;/code&gt; 也会得到 0 的结果。&lt;/p&gt;
+
+&lt;p&gt;所以在这个情况中，&lt;code class=&quot;highlighter-rouge&quot;&gt;arHash&lt;/code&gt; 数组只有一个带有 &lt;code class=&quot;highlighter-rouge&quot;&gt;INVALID_IDX&lt;/code&gt; 值、下标为 0 的元素（这个特殊数组被称为 &lt;code class=&quot;highlighter-rouge&quot;&gt;uninitialized_bucket&lt;/code&gt;，并且被静态分配了内存）。当进行查找时，我们会一直找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;INVALID_IDX&lt;/code&gt; 值，意味着 key（实际上你只想静态分配创建一个空表）没有被找到。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;内存使用&lt;/h2&gt;
+
+&lt;p&gt;内存使用应该涉及了 PHP 7 Hash 表实现最重要的方面。首先，我们总结下为什么新的实现省内存。我在这里只会用 64 位系统的数据，并且只看单个元素的大小，会忽略主 &lt;code class=&quot;highlighter-rouge&quot;&gt;HashTable&lt;/code&gt; 结构（这是渐进不重要的）。&lt;/p&gt;
+
+&lt;p&gt;在 PHP 5.x 每个元素需要巨大的 144 bytes。在 PHP 7 中，降低到了 36 bytes，或者打包情况下 32 bytes。下面这些是两者区别：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 不独立分配，所以我们节省了 16 bytes。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 不独立分配，所以我们又节省了 16 bytes。&lt;/li&gt;
+  &lt;li&gt;每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的值节省 16 bytes。&lt;/li&gt;
+  &lt;li&gt;保证顺序不再需要 16 bytes 的双向队列，而是绝对的顺序。&lt;/li&gt;
+  &lt;li&gt;冲突链表现在是单向的，节省了 8 bytes。此外，它现在是一个有下标的链表，并且下标被内置在 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 中，所以我们实际上又节省了 8 bytes。&lt;/li&gt;
+  &lt;li&gt;由于 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 被内置在 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 中，我们不再需要为它存一个指针。由于之前实现的细节，我们实际上节省了两个指针，所以又省了 16 bytes。&lt;/li&gt;
+  &lt;li&gt;key 的长度不再存储在 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 中，这有 8 bytes。然而，如果 key 是字符串而不是整型的话，key 的长度还是会被存到 &lt;code class=&quot;highlighter-rouge&quot;&gt;zend_string&lt;/code&gt; 中。这种情况下确切的内存影响很难去量化，因为 &lt;code class=&quot;highlighter-rouge&quot;&gt;zend_string&lt;/code&gt; 是共享的，鉴于之前如果字符串没被留存，Hash 表就不得不复制字符串。&lt;/li&gt;
+  &lt;li&gt;数组包含的冲突链表现在是基于下标的，所以每个元素节省 4 bytes。对于打包数组，这完全没有必要，我们还可以再省 4 bytes。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;然而，需要明确的是这个总结让事情看起来比它们多方面的实际影响看着更好。首先，新的 Hash 表实现使用了很多内置（与分配相对应的）结构。这对事情有什么负面影响呢？&lt;/p&gt;
+
+&lt;p&gt;如果你确实注意看了本文开始时的测量后的数据，你会发现 64 位 PHP 7 中的一个 100000 个元素的数组占用 4 MB 内存。在这个事例中，我们用了打包数组来做，所以我们实际上预计会占用 32 * 100000 = 3.05 MB 内存。这后面的原因是，我们给任何东西都分配 2 的幂大小的内存。在这里，&lt;code class=&quot;highlighter-rouge&quot;&gt;nTableSize&lt;/code&gt; 的大小是 2^17 = 131072，所以我们需要分配 32 * 131072 bytes 内存（也就是 4 MB）。&lt;/p&gt;
+
+&lt;p&gt;当然，之前的 Hash 表实现也会按照 2 的幂值来分配内存。然而，它只对有 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 指针的数组按这种方式分配（这里每个指针是 8 bytes），其它任何东西都按需分配。所以，在 PHP 7 中我们在浪费了 32 * 31072 (0.95 MB) 无用内存，而在 PHP 5.x 中我们只浪费 8 * 31072 (0.24 MB)。&lt;/p&gt;
+
+&lt;p&gt;另一件需要考虑的事情是，如果不是所有存储的值都不相同的情况下会发生什么。为了简单，我们假设所有的值是完全相同的。所以让我们把开头的脚本 &lt;code class=&quot;highlighter-rouge&quot;&gt;range&lt;/code&gt; 函数替换成 &lt;code class=&quot;highlighter-rouge&quot;&gt;array_fill&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = array_fill(0, 100000, 42);
+echo memory_get_usage() - $startMemory, &quot; bytes\n&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这个脚本的结果如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        |   32 bit |    64 bit
+------------------------------
+PHP 5.6 | 4.70 MiB |  9.39 MiB
+------------------------------
+PHP 7.0 | 3.00 MiB |  4.00 MiB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;你可以从内存使用中看到，PHP 7 保持了同样的内存占用。这没有理由发生变化，因为每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 都是分开的。在 PHP 5.x 中内存消耗现在明显降低了，因为只需要一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 来存储所有值。所以，虽然 PHP 7 还有一些优势，但差距变小了。&lt;/p&gt;
+
+&lt;p&gt;事情会变得更加复杂，如果我们考虑字符串作 key（这可能是共享的或者是留存的）和复杂的 value。这种情况下 PHP 7 会显著比 PHP 5.x 节省内存，但介绍里的数字在很多情况下可能过于乐观。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;性能&lt;/h2&gt;
+
+&lt;p&gt;我们已经谈论了很多关于内存占用的问题，现在我们进入下一个环节，叫做性能。最终，phpng 项目的目标并不是改善内存占用，而是提升性能。内存占用优化只是达成目标的一个方法，因为减少内存占用可以得到更好的 CPU 缓存利用，以达到更好的性能。&lt;/p&gt;
+
+&lt;p&gt;然而，这当然有一些其他的让新实现更快的原因：首先，我们减少了内存分配。我们对于每个元素减少了两次分配，依赖于值是否是共享的。内存分配是一个消耗很大的操作，所以这个效果相当有意义的。&lt;/p&gt;
+
+&lt;p&gt;数组迭代现在特别的对缓存友好，由于现在是线性内存遍历，而不是随机存取的链表遍历。&lt;/p&gt;
+
+&lt;p&gt;也许还需要在性能主题多说一些，但本文的主要兴趣在内存使用上，所以我就不在这扩展细节了。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;结尾思考&lt;/h2&gt;
+
+&lt;p&gt;PHP 7 的 Hash 表实现毫无疑问迈进一大步，很多无用的内存不再使用了。&lt;/p&gt;
+
+&lt;p&gt;所以问题是：我们何去何从？一个想法是，我前面也提到的，在升序整数 key 的情况下使用完全打包的 Hash。这意味着使用纯 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 数组，这是我们可以不开始特殊处理一致类型的数组之前的最好的方法。&lt;/p&gt;
+
+&lt;p&gt;我们也有一些其它的方向。比如，从链地址法改为开地址法（比如：使用 Robin Hood 查找法），可以既在内存使用上（没有冲突处理链表）又在性能上（更好的缓存效率，依赖于查找算法的细节）获得优化。然而，开地址法相对难以和排序需求结合，所以这可能在实际情况下并不可行。&lt;/p&gt;
+
+&lt;p&gt;另一个想法是把 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; 字段整合在 &lt;code class=&quot;highlighter-rouge&quot;&gt;bucket&lt;/code&gt; 结构中。整数 key 只使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;，字符串 key 也会在 key 中保存 hash 值。然而，这么做可能对性能造成不利影响，因为提取 hash 值也需要额外的内存开销。&lt;/p&gt;
+
+&lt;p&gt;我需要说的最后一件事是，PHP 7 不止是优化了 Hash 表的内部实现，还改进了相关的 API。我通常甚至要查看一些简单的操作如 &lt;code class=&quot;highlighter-rouge&quot;&gt;zend_hash_find&lt;/code&gt; 怎么用，尤其是需要考虑到需要多少层间接的调用（提示：3 层）。在 PHP 7中，你只需要写 &lt;code class=&quot;highlighter-rouge&quot;&gt;zend_hash_find(ht, key)&lt;/code&gt; 然后得到 &lt;code class=&quot;highlighter-rouge&quot;&gt;*zval&lt;/code&gt;。总的来说，为 PHP 7 写扩展变得更有意思了。&lt;/p&gt;
+
+&lt;p&gt;希望我能够给你们一些 PHP 7 Hash 表内核的洞见。可能我还会写一篇关于 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的后续文章，我已经在本文中触及到了它的一些不同，但对于这个话题还可以说更多的东西。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jul 2016 21:17:00 +0800</pubDate>
+        <link>https://crispgm.com/page/php7-new-hashtable-implementation.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/php7-new-hashtable-implementation.html</guid>
+        
+        <category>PHP</category>
+        
+        <category>PHP7</category>
+        
+        <category>Internal</category>
+        
+        <category>Array</category>
+        
+        <category>Hash</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>『翻译』PHP 数组有多大？</title>
+        <description>&lt;p&gt;提示：很大！&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;声明&lt;/h1&gt;
+
+&lt;p&gt;本文翻译自 PHP 开发组成员 Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;) 的博客，文章根据中文习惯做了一定的调整。&lt;/p&gt;
+
+&lt;p&gt;原文：&lt;a href=&quot;https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html&quot;&gt;How big are PHP arrays (and values) really? (Hint: BIG!)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
+
+&lt;p&gt;This article is translated from a blog post of Nikita Popov(&lt;a href=&quot;https://github.com/nikic&quot;&gt;@nikic&lt;/a&gt;), in which I have done a small amount of adjustment based on the reading habit of Chinese.&lt;/p&gt;
+
+&lt;p&gt;Original Page: &lt;a href=&quot;https://nikic.github.io/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html&quot;&gt;How big are PHP arrays (and values) really? (Hint: BIG!)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;正文&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;更新&lt;/strong&gt;(2016-06-14)：这篇文章主要关于 PHP 5 的内存使用。PHP 7 的内存占用，对于本文提到的情况，大约得到了3倍的优化。请阅读 &lt;a href=&quot;https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html&quot;&gt;hashtable implementation in PHP 7&lt;/a&gt; 获得更多信息。&lt;/p&gt;
+
+&lt;p&gt;在一开始，我想感谢&lt;a href=&quot;http://schlueters.de/blog/&quot;&gt;约翰尼斯 Johannes&lt;/a&gt; 和 &lt;a href=&quot;http://www.tyrael.hu/&quot;&gt;泰瑞尔 Tyrael&lt;/a&gt;，他们帮助我寻找到了更多的隐藏内存使用。&lt;/p&gt;
+
+&lt;p&gt;这篇博客，我将使用如下脚本作为样本研究 PHP 数组（及其值）的总体内存占用情况，这个脚本会创建 100000 个唯一的整型数组元素并计算其内存占用：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = range(1, 100000);
+echo memory_get_usage() - $startMemory, ' bytes';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;你估计它的内存占用会有多大呢？简单的说，一个整型数是 8 bytes（在一个 64 位 UNIX 机器上使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;long&lt;/code&gt; 类型），且有 100000 个整型数。所以显而易见，你需要 800000 bytes。这大概是 0.76 MB。&lt;/p&gt;
+
+&lt;p&gt;现在，我们尝试运行上面的测试代码，结果需要 14649024 bytes。是的，你没听错，是 13.97 MB —— 是估计值的 18 倍。&lt;/p&gt;
+
+&lt;p&gt;所以，额外多出的 18 倍来自于哪？&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;概述&lt;/h2&gt;
+
+&lt;p&gt;对于那些不想看完整个故事的人，这里给出了一个简单的涉及到的不同组件的内存占用情况：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                             |  64 bit   | 32 bit
+---------------------------------------------------
+zval                         |  24 bytes | 16 bytes
++ cyclic GC info             |   8 bytes |  4 bytes
++ allocation header          |  16 bytes |  8 bytes
+===================================================
+zval (value) total           |  48 bytes | 28 bytes
+===================================================
+bucket                       |  72 bytes | 36 bytes
++ allocation header          |  16 bytes |  8 bytes
++ pointer                    |   8 bytes |  4 bytes
+===================================================
+bucket (array element) total |  96 bytes | 48 bytes
+===================================================
+total total                  | 144 bytes | 76 bytes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上面的数字根据你的操作系统、编译器以及编译器参数的不同会有所不同。比如：如果你使用 debug 模式编译 PHP 或者开启线程安全，你将会得到不同的数值。但我认为上述值的大小代表了生产版本 64 位 Linux 下 PHP 5.3 的一般情况。&lt;/p&gt;
+
+&lt;p&gt;如果你用 144 bytes 乘以 100000 个元素，会得到 14400000 bytes，也就是 13.73 MB。这很接近实际值，剩下的大多是给未初始化的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 的指针，我将会在后续提到它。&lt;/p&gt;
+
+&lt;p&gt;现在，如果你想获得对上述数值更细节的分析，请继续阅读 :)&lt;/p&gt;
+
+&lt;h2 id=&quot;zvaluevalue-union&quot;&gt;zvalue_value union&lt;/h2&gt;
+
+&lt;p&gt;首先看一下 PHP 是如何存储数值的。众所周知 PHP 是一个弱类型语言，所以它需要在不同类型中快速切换。因此 PHP 使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt;（&lt;a href=&quot;http://en.wikipedia.org/wiki/Union_%28computer_science%29&quot;&gt;联合&lt;/a&gt;） 实现数值存储，定义在 zend.h 的 307行：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef union _zvalue_value {
+    long lval;                // For integers and booleans
+    double dval;              // For floats (doubles)
+    struct {                  // For strings
+        char *val;            //     consisting of the string itself
+        int len;              //     and its length
+    } str;
+    HashTable *ht;            // For arrays (hash tables)
+    zend_object_value obj;    // For objects
+} zvalue_value;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果你不懂 C 语言，那也不是一个问题，因为这段代码很直接：&lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 是一种可以将数值以不同类型存取的方式。比如说，如果你使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value-&amp;gt;lval&lt;/code&gt;，你将会获得以整型解析的值。如果你使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value-&amp;gt;ht&lt;/code&gt;，值会被解析成一个指向 Hashtable（哈希表）的指针（也就是 php 所谓的数组）。&lt;/p&gt;
+
+&lt;p&gt;但是，我们不需要过于关注这些。最重要的是，一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 的大小等于它最大的元素的大小。这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 中，最大的组成部分是 &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt; 结构（&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_object_value&lt;/code&gt; 结构的大小同 &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt; 一样，为了简单只说后者）。&lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt; 包含一个指针（8 bytes）和一个整型（4 bytes），总共 12 bytes。由于内存对齐的原因（12 bytes 不够 cool，因为它不是 64 bits / 8 bytes 的倍数），整个结构的总大小位 16 bytes，因此这是这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 的整体大小。&lt;/p&gt;
+
+&lt;p&gt;因此现在我们知道，由于 PHP 动态类型的原因，每个值不是需要 8 bytes，而是 16 bytes。乘以 100000 后得到 1600000 bytes，即 1.53 MB。但是，实际值是 13.97 MB，所以我们还是没有得到答案。&lt;/p&gt;
+
+&lt;h2 id=&quot;zval-&quot;&gt;zval 结构&lt;/h2&gt;
+
+&lt;p&gt;这很符合逻辑：&lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 只是存值本身，而 PHP 显然还需要存储它的类型以及一些垃圾回收信息。你可能已经听说过，带有这些信息的结构体叫做 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt;。想获取更多信息，我推荐阅读&lt;a href=&quot;http://blog.golemon.com/2007/01/youre-being-lied-to.html&quot;&gt;萨拉·戈尔蒙（Sara Golemon）的一篇文章&lt;/a&gt;。无论如何，&lt;a href=&quot;http://lxr.php.net/xref/PHP_5_4/Zend/zend.h#318&quot;&gt;结构体定义&lt;/a&gt;如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct _zval_struct {
+    zvalue_value value;     // The value
+    zend_uint refcount__gc; // The number of references to this value (for GC)
+    zend_uchar type;        // The type
+    zend_uchar is_ref__gc;  // Whether this value is a reference (&amp;amp;)
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;一个结构体的大小由它的元素总和决定：&lt;code class=&quot;highlighter-rouge&quot;&gt;zvalue_value&lt;/code&gt; 是 16 bytes，&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_uint&lt;/code&gt; 是 4 bytes，&lt;code class=&quot;highlighter-rouge&quot;&gt;zend_uchars&lt;/code&gt; 每个 1 byte。总共 22 bytes。还是因为内存对齐，实际的大小是 24 bytes。&lt;/p&gt;
+
+&lt;p&gt;如果你存储 100000 个 24 bytes 的元素，总共需要 2400000 bytes，也就是 2.29 MB。差值在缩小，但真实值仍旧有 6 倍大。&lt;/p&gt;
+
+&lt;h2 id=&quot;php-53&quot;&gt;垃圾周期回收器（对于 PHP 5.3）&lt;/h2&gt;
+
+&lt;p&gt;PHP 5.3 引入了一种新的&lt;a href=&quot;http://php.net/manual/en/features.gc.collecting-cycles.php&quot;&gt;解决循环引用的垃圾回收器&lt;/a&gt;，PHP 还需要存更多的数据来做这件事。我不想在这里介绍这个算法是如何运转的，你可以阅读上面的链接。对于我们的内存大小计算来说最重要的内容是，PHP 会把每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 包入一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval_gc_info&lt;/code&gt; 结构。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _zval_gc_info {
+    zval z;
+    union {
+        gc_root_buffer       *buffered;
+        struct _zval_gc_info *next;
+    } u;
+} zval_gc_info;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;你可以看到，Zend 只是加入了一个包涵有两个指针的 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt;。正如你记得的，一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 的大小等于它的最大元素的大小：两个元素都是指针，因此都是 8 bytes。所以这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;union&lt;/code&gt; 也是 8 bytes。&lt;/p&gt;
+
+&lt;p&gt;如果我们加到前面计算的 24 bytes 上就得到了 32 bytes，乘以 100000 结果是 3.05 MB。&lt;/p&gt;
+
+&lt;h2 id=&quot;zend-mm-allocator&quot;&gt;Zend MM allocator&lt;/h2&gt;
+
+&lt;p&gt;C 不像 PHP，它不会帮你管理内存，你需要自己关注内存的分配情况。PHP 使用了一个专门为这个需求进行过专门优化的自定义内存管理器：&lt;a href=&quot;http://php.net/manual/en/internals2.memory.php&quot;&gt;Zend Memory Manager&lt;/a&gt;（简称 Zend MM）。Zend MM 基于 &lt;a href=&quot;http://g.oswego.edu/dl/html/malloc.html&quot;&gt;Doug Lea’s malloc&lt;/a&gt; 并且增加了一些 PHP 特定的优化和功能（如内存限制，请求后的内存清理等）。&lt;/p&gt;
+
+&lt;p&gt;对于我们的计算最重要的是，这个“MM”在进行了每次分配后添加一个分配头。&lt;a href=&quot;http://lxr.php.net/xref/PHP_5_4/Zend/zend_alloc.c#336&quot;&gt;定义如下&lt;/a&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct _zend_mm_block {
+    zend_mm_block_info info;
+#if ZEND_DEBUG
+    unsigned int magic;
+# ifdef ZTS
+    THREAD_T thread_id;
+# endif
+    zend_mm_debug_info debug;
+#elif ZEND_MM_HEAP_PROTECTION
+    zend_mm_debug_info debug;
+#endif
+} zend_mm_block;
+
+typedef struct _zend_mm_block_info {
+#if ZEND_MM_COOKIES
+    size_t _cookie;
+#endif
+    size_t _size; // size of the allocation
+    size_t _prev; // previous block (not sure what exactly this is)
+} zend_mm_block_info;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;可以看出，结构的定义中混入了很多与编译参数相关的定义。这些编译参数每被设定一个，分配头将会更大。当你的编译 PHP 时，启用堆保护、多线程、debug 和 MM cookies 时，将会达到最大值。&lt;/p&gt;
+
+&lt;p&gt;对于这个例子，我们假设这些编译参数都被关闭了。所剩下的只有两个 &lt;code class=&quot;highlighter-rouge&quot;&gt;size_t&lt;/code&gt; 类型的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_size&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;_prev&lt;/code&gt;。一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;size_t&lt;/code&gt; 是 8 bytes（64 位情况下），所以每次内存分配所增加的内存分配头总共有 16 bytes。&lt;/p&gt;
+
+&lt;p&gt;现在所我们又要再次调整 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 的大小。实际上，由于有分配头，它不是 32 bytes，而是 48 bytes。乘以 100000 个元素后是 4.58 MB。真实的大小是 13.97 MB，我们已经大约达到了三分之一。&lt;/p&gt;
+
+&lt;h2 id=&quot;buckets&quot;&gt;Buckets&lt;/h2&gt;
+
+&lt;p&gt;迄今为止，我们只考虑了单独的值。但 PHP 的数组结构占用了很多空间：“数组”实际上在这里是个错误的命名。PHP 数组其实是 HashTable（哈希表）和 Dictionary（词典）。所以，哈希表是如何工作的？简单的说，每当 Hash 生成一个 key，Hash 会用一个偏移量将指向到真实的 C 数组。因为 Hash 会冲突，有相同 Hash 值的所有元素会被储存到一个链表中。当存取元素时，PHP 首先计算一个元素的 Hash 值，寻找正确的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 然后遍历链表，逐个元素对比实际的 key。&lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 的定义如下（&lt;a href=&quot;http://lxr.php.net/opengrok/xref/PHP_5_4/Zend/zend_hash.h#54&quot;&gt;见 zend_hash.h#54&lt;/a&gt;）：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct bucket {
+    ulong h;                  // The hash (or for int keys the key)
+    uint nKeyLength;          // The length of the key (for string keys)
+    void *pData;              // The actual data
+    void *pDataPtr;           // ??? What's this ???
+    struct bucket *pListNext; // PHP arrays are ordered. This gives the next element in that order
+    struct bucket *pListLast; // and this gives the previous element
+    struct bucket *pNext;     // The next element in this (doubly) linked list
+    struct bucket *pLast;     // The previous element in this (doubly) linked list
+    const char *arKey;        // The key (for string keys)
+} Bucket;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如你所见，PHP 需要存储一大堆数据来实现抽象的数组数据结构（PHP 数组同时是数组、词典和链表，这自然需要很多信息）。每个单独元素的大小分别是 &lt;code class=&quot;highlighter-rouge&quot;&gt;unsigned long&lt;/code&gt; 8 bytes，&lt;code class=&quot;highlighter-rouge&quot;&gt;unsigned int&lt;/code&gt; 4 bytes 以及 7 个 8 bytes 的指针。这总共是 68 bytes， 内存对齐后需要 72 bytes。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 同 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt; 一样需要分配内存头，所以我们需要 16 bytes 给内存头，因此总共 88 bytes。同时，我们需要存储指向 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 中“真实” C 数组的指针(&lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket **arBuckets;&lt;/code&gt;)。跟在上文中提到的一样，每个元素需要额外增加 8 bytes。所以总共每个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 需要 96 bytes 的存储空间。&lt;/p&gt;
+
+&lt;p&gt;所以如果我们需要给每个值一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt;，那需要 96 bytes 给 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 和 48 bytes 给 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt;，总共 144 bytes。对于 100000 个元素，就是 14400000 bytes，也就是 13.73 MB。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;神秘被解决了。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mb&quot;&gt;等等，还有 0.24 MB！&lt;/h2&gt;
+
+&lt;p&gt;那剩下的 0.24 MB 是由于存在没有初始化的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt;：真实的 C 数组大小理想状态下应该是接近需要存储的数组元素数量的。这样的话 Hash 冲突较少（除非你希望浪费更多内存）。但显然 PHP 不会在每次增加数组元素时都重新分配整个数组 —— 这会非常非常非常慢。每当 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 满了，PHP 会将 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 扩大一倍。因此，数组的大小永远是 2 的幂。&lt;/p&gt;
+
+&lt;p&gt;在我们的例子中是 2^17 = 131072。由于我们只用了 100000 个元素，所以会有 31072 剩余。这些 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 不会被分配（所以我们不需要使用完整的 96 bytes），但 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 指针（&lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 数组内部存储的）的内存还是需要分配。所以我们需要使用 8 bytes（一个指针）* 31072 个元素。这是 248576 bytes 或 0.23 MB，这与失踪的内存是符合的。（当然，还有一小部分字节失踪了，但我并不想在这全部 cover 到。那些是类似于 HashTable 的结构体本身、变量等。）&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;神秘真正被解决了。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;这表明了什么？&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;PHP 不是 C&lt;/strong&gt;。这是它主要体现给我们的。你不能指望一个像 PHP 一样很动态的语言与 C 语言一样有同样高效的内存使用。你就是不能。&lt;/p&gt;
+
+&lt;p&gt;但如果你想节省内存，可以考虑使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;SplFixedArray&lt;/code&gt; 存储大型的、静态的数组。&lt;/p&gt;
+
+&lt;p&gt;看一下修改后的脚本：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$startMemory = memory_get_usage();
+$array = new SplFixedArray(100000);
+for ($i = 0; $i &amp;lt; 100000; ++$i) {
+    $array[$i] = $i;
+}
+echo memory_get_usage() - $startMemory, ' bytes';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;它做了相同的事情，但如果你运行它，会发现它“只”会消耗 5600640 bytes。也就是每个元素 56 bytes，远比每个元素 144 bytes 的普通数组少。这是因为一个固定数组不需要 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bucket&lt;/code&gt; 结构：所以它每个元素只需要一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;zval&lt;/code&gt;（48 bytes）和一个指针（8 bytes），也就是我们观察到的 56 bytes。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Jul 2016 23:45:00 +0800</pubDate>
+        <link>https://crispgm.com/page/how-big-are-php-arrays.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/how-big-are-php-arrays.html</guid>
+        
+        <category>PHP</category>
+        
+        <category>PHP5</category>
+        
+        <category>Internal</category>
+        
+        <category>Array</category>
+        
+        <category>Hash</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Olympus Camera Wi-Fi API</title>
+        <description>&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
+
+&lt;p&gt;Since I started my interest on photography, I chose SONY RX100 Mark III initially and now I use a M4/3 interchangeable lens camera, the Olympus E-M5 Mark II.&lt;/p&gt;
+
+&lt;p&gt;Cameras nowadays commonly support Wi-Fi sync with mobile apps. And so does Olympus, which provides an OI Share app to do that.&lt;/p&gt;
+
+&lt;p&gt;And I found some blog articles about the Wi-Fi protocol or commands of Olympus camera. Most of them are not well maintained, because Olympus camera is a minority choice in Internet world.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, I found the &lt;a href=&quot;https://github.com/stv0g/libqt-omd&quot;&gt;stv0g/libqt-omd&lt;/a&gt; project on GitHub. Though the wiki is down, I could read the source code to figure out the APIs by myself.&lt;/p&gt;
+
+&lt;h1 id=&quot;api-specification&quot;&gt;API Specification&lt;/h1&gt;
+
+&lt;p&gt;The API specification is maintained at &lt;a href=&quot;https://github.com/crispgm/olympia/blob/master/api_specs.md&quot;&gt;Olympus Wi-Fi API Specification&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is a useful gist &lt;a href=&quot;https://gist.github.com/mangelajo/6fa005ff3544fecdecfa&quot;&gt;https://gist.github.com/mangelajo/6fa005ff3544fecdecfa&lt;/a&gt; and there is an official protocol document in comment.&lt;/p&gt;
+
+&lt;h1 id=&quot;olympia&quot;&gt;Olympia&lt;/h1&gt;
+
+&lt;p&gt;At last, I came up with an idea that make a web based client for computers built with the APIs, which is named Olympia. Thus, we can transfer and manage photos on our computer.&lt;/p&gt;
+
+&lt;p&gt;Here is a list of features:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Web based UI&lt;/li&gt;
+  &lt;li&gt;Sync photos easily&lt;/li&gt;
+  &lt;li&gt;Manage photos both remotely and locally&lt;/li&gt;
+  &lt;li&gt;Upload or backup to online cloud storage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Project is &lt;a href=&quot;https://github.com/crispgm/olympia&quot;&gt;crispgm/olympia&lt;/a&gt;, written in Ruby.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 31 May 2016 18:06:22 +0800</pubDate>
+        <link>https://crispgm.com/page/olympus-wifi-api.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/olympus-wifi-api.html</guid>
+        
+        <category>Olympus</category>
+        
+        <category>Camera</category>
+        
+        <category>Wi-Fi</category>
+        
+        <category>API</category>
+        
+        <category>Photography</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>新的域名</title>
+        <description>&lt;p&gt;午饭过后，抱着休闲的想法逛了一下 &lt;a href=&quot;https://www.godaddy.com/&quot;&gt;Godaddy&lt;/a&gt; 和&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;万网&lt;/a&gt;，发现了一些挺有意思的新域名。于是顺手注册了两个。&lt;/p&gt;
+
+&lt;p&gt;以后，本站支持两个域名，均有 https 支持 (Powered by Let’s Encrypt)，请安全访问。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crispgm.com&quot;&gt;https://crispgm.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crisp.lol&quot;&gt;https://crisp.lol&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目前，只有一个已知问题：两个域名之间的同一个网页，是不同的 disqus 评论（注：&lt;a href=&quot;/page/same-disqus-thread-in-multiple-pages.html&quot;&gt;已解决&lt;/a&gt;）。&lt;/p&gt;
+
+&lt;p&gt;同时，椰椰子主页也有了自己的域名，以及 https 支持：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yeyeko.gift&quot;&gt;https://yeyeko.gift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ps：这的确是一个gift~&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 May 2016 18:06:22 +0800</pubDate>
+        <link>https://crispgm.com/page/new-domain-name.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/new-domain-name.html</guid>
+        
+        <category>域名</category>
+        
+        <category>Domain Names</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>关于盗版软件/App</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;今天，2016年5月10日，我从 Apple Mac AppStore 购买了人生中最贵的软件产品——&lt;a href=&quot;http://ulyssesapp.com&quot;&gt;Ulysses&lt;/a&gt;。这是一款重视写作过程，让使用者专注于协作的 Mac App。适用人群是作家、博主、记者和学术人员等。当然，程序员也包含在内，特别是它还支持 Markdown 格式。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ulysses is used and loved by authors, bloggers, journalists and academics from all over the world. (from Ulysses official website)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在这里，我就不更多介绍 Ulysses 本身了，网上有很多关于它的评测。&lt;/p&gt;
+
+&lt;p&gt;这款 App 我提前下载了 Trial Version 试用了几天，并为它所折服。于是鼠标轻轻一点，购入了人生中最贵的软件产品（¥283）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/ulysses-order.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;知识产权和盗版&lt;/h2&gt;
+
+&lt;p&gt;知识产权长久以来在中国都是一个很不被重视的东西，以至于人民群众把使用盗版当作理所应当，把复制粘贴别人的文章当作“帮忙传播”。&lt;/p&gt;
+
+&lt;p&gt;去年开始我迷上了豆瓣，关注了一些文艺有趣的人，带来了大量各类有意思有知识短文。但与此同时，除了感受到了文艺人的矫情法，还有就是盗用和抄袭的盛行。如 &lt;a href=&quot;https://www.douban.com/note/551300680/&quot;&gt;Meiya 抄袭事件&lt;/a&gt;。再比如，某破解游戏论坛的网友因为论坛涉及盗版侵权而举报全球最大的在线正版游戏平台 Steam。&lt;/p&gt;
+
+&lt;p&gt;池建强老师在《MacTalk 人生元编程》中讲述了两个关于盗版的故事让我印象很深刻。&lt;/p&gt;
+
+&lt;p&gt;第一个是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;（我）曾经在微博上看到一位父亲发的内容：&lt;/p&gt;
+
+  &lt;p&gt;“在我儿子帮助下把 iPad 越狱装了个PP助手，看着那么多不要钱的软件想着以前竟然花钱买软件简直是痛不欲生。”&lt;/p&gt;
+
+  &lt;p&gt;我的感受：这儿子也够可怜的，从小就不知道偷盗为何物！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第二个是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;以前有朋友看着我用 Pixelmator 处理图片，问我从哪下载的，我说从 App Store 啊，付费软件。他说啊，你们 Mac 什么都要钱，你看 Windows 上 PhotoShop 都是免费的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;或许，买正版软件或 app 会被视为一种情怀，我也或许会有这种心理。但事实上，购买正版软件就像买正牌实体货品一样，是理所应当的，而不是我花了钱亏了。&lt;/p&gt;
+
+&lt;p&gt;使用盗版虽然很可能可以获得正版的体验，但从根本上我认为这是不对的，从某种意义上讲就是偷东西。只不过，使用盗版很容易还不会付出代价。&lt;/p&gt;
+
+&lt;p&gt;并且，在情感上，我也发自内心愿意通过金钱表达自己对作者创造出这么美好的事物的敬佩。我认为这是一种对他们充满感激的积极人生态度。&lt;/p&gt;
+
+&lt;p&gt;最后，我有个观点跟池建强老师的关于盗版和付费的第三点完全一致。作为一个程序员，你都不支持正版，不支持程序员，那还怎么指望别人呢？&lt;/p&gt;
+
+&lt;p&gt;按这个观点，盗版就是程序员的敌人，反对盗版从程序员做起。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;如何避免盗版&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;正版并没有那么贵&lt;/p&gt;
+
+    &lt;p&gt;日常使用的工具类软件，大多售价比较低廉，在200之内，对于任何一个需要的人我认为这不是负担。&lt;/p&gt;
+
+    &lt;p&gt;专业类商业软件非常贵，学生阶段可以免费使用学生版或者购买学生版（根据不同公司的政策不同）。职业阶段，往往公司会提供，如果不幸没有提供可以选择采用下面的其它方式。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;寻找替代品&lt;/p&gt;
+
+    &lt;p&gt;如果不是学生而且需要使用的软件价格过高，可以寻找替代品，包括更便宜的、免费的和开源的。&lt;/p&gt;
+
+    &lt;p&gt;比如说想用 Photoshop 修图，那我们在 Mac 上可以选择池建强老师推荐的 Pixelmator。&lt;/p&gt;
+
+    &lt;p&gt;对于程序开发相关的，往往会有很多开源的选择，甚至开源的要好于商业软件。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;影响身边的人&lt;/p&gt;
+
+    &lt;p&gt;影响自己身边的人，从身边的人开始。慢慢告诉他们正确的观念和接触正版的方式是什么，让更多的人也加入进来。有一个小窍门就是，不断安利一些不太贵但特别有用的 App 让他们“入坑”。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;app-&quot;&gt;我购买过的软件/App 列表&lt;/h2&gt;
+
+&lt;p&gt;这里列出一些我购买过的软件或 App 的列表，算是一个小小的推荐。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/ulysses/id623795237?mt=12&quot;&gt;Ulysses for Mac&lt;/a&gt; ¥283&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/dash-3-api-docs-snippets./id449589707?mt=12&quot;&gt;Dash 3&lt;/a&gt; ¥163&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/noizio/id928871589?mt=12&quot;&gt;Noizio for Mac&lt;/a&gt; ¥30&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/reeder-3/id697846300?mt=8&quot;&gt;Reeder 3 for iOS&lt;/a&gt; ¥30&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/enlight/id930026670?mt=8&quot;&gt;Enlight&lt;/a&gt; ¥25&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/wordbook-english-dictionary/id289694924?mt=8&quot;&gt;WordBook&lt;/a&gt; ¥12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/workflow-powerful-automation/id915249334?mt=8&quot;&gt;Workflow&lt;/a&gt; ¥18&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/manico/id724472954?mt=12&quot;&gt;Manico&lt;/a&gt; ¥25&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 10 May 2016 00:23:00 +0800</pubDate>
+        <link>https://crispgm.com/page/piracy-software-or-app.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/piracy-software-or-app.html</guid>
+        
+        <category>Mac</category>
+        
+        <category>OSX</category>
+        
+        <category>DNS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Enable HTTPS with Let's Encrypt</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; has enabled HTTPS as its default protocol, with the power of &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-https&quot;&gt;Why HTTPS?&lt;/h2&gt;
+
+&lt;p&gt;When properly configured, an HTTPS connection guarantees three things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Confidentiality.&lt;/strong&gt; The visitor’s connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Authenticity.&lt;/strong&gt; The visitor is talking to the “real” website, and not to an impersonator or through a “man-in-the-middle”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Integrity.&lt;/strong&gt; The data sent between the visitor and the website has not been tampered with or modified.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A plain HTTP connection can be easily monitored, modified, and impersonated.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Quoted from &lt;a href=&quot;https://https.cio.gov/faq/#what-information-does-https-protect?&quot;&gt;https://https.cio.gov/faq/#what-information-does-https-protect?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;about-lets-encrypt&quot;&gt;About Let’s Encrypt&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; is a free, automated, and open certificate authority (CA), run for the public’s benefit. Let’s Encrypt is a service provided by the Internet Security Research Group (ISRG).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Contribute to &lt;a href=&quot;https://github.com/letsencrypt&quot;&gt;letsencrypt&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-acme&quot;&gt;About ACME&lt;/h2&gt;
+
+&lt;h3 id=&quot;acme-protocol&quot;&gt;ACME Protocol&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ietf-wg-acme/acme&quot;&gt;https://github.com/ietf-wg-acme/acme&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/letsencrypt/acme-spec&quot;&gt;https://github.com/letsencrypt/acme-spec&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;boulder&quot;&gt;Boulder&lt;/h3&gt;
+
+&lt;p&gt;Boulder is an ACME-based CA, written in Go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/letsencrypt/boulder&quot;&gt;https://github.com/letsencrypt/boulder&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;practice&quot;&gt;Practice&lt;/h2&gt;
+
+&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://letsencrypt.readthedocs.org/&quot;&gt;https://letsencrypt.readthedocs.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;get-certificate&quot;&gt;Get Certificate&lt;/h3&gt;
+
+&lt;p&gt;As the &lt;code class=&quot;highlighter-rouge&quot;&gt;letsencrypt-nginx&lt;/code&gt; is not fully developed, I choose &lt;code class=&quot;highlighter-rouge&quot;&gt;certonly&lt;/code&gt; to generate SSL certificate and configure nginx manually.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;nginx-configuration&quot;&gt;Nginx Configuration&lt;/h3&gt;
+
+&lt;p&gt;Configure nginx.conf&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
+ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
+
+ssl_session_timeout  1440m;     
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Others are as default.&lt;/p&gt;
+
+&lt;h3 id=&quot;certificate-renewal&quot;&gt;Certificate Renewal&lt;/h3&gt;
+
+&lt;p&gt;Let’s Encrypt CA issues short lived certificates (90 days). Make sure you renew the certificates at least once in 3 months.&lt;/p&gt;
+
+&lt;h3 id=&quot;performance&quot;&gt;Performance&lt;/h3&gt;
+
+&lt;p&gt;Actually, &lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; is a full static site. Almost no difference on performance. :D&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-end&quot;&gt;In The End&lt;/h2&gt;
+
+&lt;p&gt;Safe journey on &lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; :)&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 07 Dec 2015 23:35:00 +0800</pubDate>
+        <link>https://crispgm.com/page/enable-https-with-letsencrypt.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/enable-https-with-letsencrypt.html</guid>
+        
+        <category>https</category>
+        
+        <category>letsencrypt</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Environment Pollution in a Photographer's View</title>
+        <description>&lt;p&gt;On November 14th, it was a haze day with an AQI over 200 and I went to Beijing University of Chemical Technology.
+I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Lightroom and VSCOcam, it looks pretty good now by enhancing the orange and yellow color, removing the arrow on the ground and cropping into a square one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/photo/beijing-autumn.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As soon as my surprise fade out, I was feeling sad that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We can use technology stuffs like RAW, Lightroom and VSCOcam to make the leaves become either green or yellow, and even remove the arrow by the “Spot Removal” tool. However, it is impossible to make a blue sky and breathe the fresh air when taking photos in such a haze day. That’s why environment pollution is a serious problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That’s a photographer’s view of environment pollution.&lt;/p&gt;
+
+&lt;p&gt;And here I ask for the beautiful environment and fresh air.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Dec 2015 15:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</guid>
+        
+        <category>Environmental Protection</category>
+        
+        <category>Photography</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
