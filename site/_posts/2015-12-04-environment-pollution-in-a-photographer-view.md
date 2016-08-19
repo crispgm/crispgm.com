@@ -6,6 +6,7 @@ permalink: /page/environment-pollution-in-a-photographer-view.html
 tags:
 - Environmental Protection
 - Photography
+- Beijing
 ---
 
 On November 14th, it was a haze day with an AQI over 200 and I went to Beijing University of Chemical Technology.
@@ -20,4 +21,3 @@ As soon as my surprise fade out, I was feeling sad that:
 That's a photographer's view of environment pollution.
 
 And here I ask for the beautiful environment and fresh air.
-

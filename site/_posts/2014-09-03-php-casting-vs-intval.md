@@ -6,6 +6,9 @@ permalink: /page/php-casting-vs-intval.html
 tags:
 - PHP
 - Hacks
+- int
+- intval
+- Benchmark
 ---
 
 # 原文信息

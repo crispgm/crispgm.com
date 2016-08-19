@@ -5,6 +5,7 @@ date: 2014/09/12 22:23:00 +0800
 permalink: /page/mysql-update-multirows.html
 tags:
 - MySQL
+- SQL
 ---
 
 MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：

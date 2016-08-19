@@ -6,6 +6,7 @@ permalink: /page/enable-https-with-letsencrypt.html
 tags:
 - https
 - letsencrypt
+- nginx
 ---
 
 [crispgm.com](https://crispgm.com) has enabled HTTPS as its default protocol, with the power of [Let's Encrypt](https://letsencrypt.org/).
