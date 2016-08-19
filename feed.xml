@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Aug 2016 01:39:33 +0800</pubDate>
-    <lastBuildDate>Fri, 19 Aug 2016 01:39:33 +0800</lastBuildDate>
+    <pubDate>Fri, 19 Aug 2016 14:54:18 +0800</pubDate>
+    <lastBuildDate>Fri, 19 Aug 2016 14:54:18 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -1033,6 +1033,8 @@ echo memory_get_usage() - $startMemory, ' bytes';
         
         <category>Photography</category>
         
+        <category>Ruby</category>
+        
         
       </item>
     
@@ -1163,11 +1165,11 @@ echo memory_get_usage() - $startMemory, ' bytes';
         <link>https://crispgm.com/page/piracy-software-or-app.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/piracy-software-or-app.html</guid>
         
-        <category>Mac</category>
+        <category>Ulysses</category>
         
-        <category>OSX</category>
+        <category>Anti Piracy Software</category>
         
-        <category>DNS</category>
+        <category>Piracy Software</category>
         
         
       </item>
@@ -1267,6 +1269,8 @@ ssl_session_timeout  1440m;
         
         <category>letsencrypt</category>
         
+        <category>nginx</category>
+        
         
       </item>
     
@@ -1286,7 +1290,6 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
 &lt;p&gt;That’s a photographer’s view of environment pollution.&lt;/p&gt;
 
 &lt;p&gt;And here I ask for the beautiful environment and fresh air.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 04 Dec 2015 15:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</link>
@@ -1295,6 +1298,8 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         <category>Environmental Protection</category>
         
         <category>Photography</category>
+        
+        <category>Beijing</category>
         
         
       </item>
