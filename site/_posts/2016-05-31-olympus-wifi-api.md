@@ -9,6 +9,7 @@ tag:
 - Wi-Fi
 - API
 - Photography
+- Ruby
 ---
 
 # Background

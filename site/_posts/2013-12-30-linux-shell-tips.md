@@ -16,15 +16,22 @@ tags:
 
 解决方法：
 
-	rm -- "--xxxx"
+```
+rm -- "--xxxx"
+```
 
 #### argument list too long
 
-由于文件数增加，脚本出现错误 tar: argument list too long，也就是说 tar 参数太多了
+由于文件数增加，脚本出现错误：
+
+> tar: argument list too long
+
+也就是说 tar 参数太多了。
 
 解决方法：
 
-	find /path/to/crash_log/20131229 -name '*crash*' -print > /tmp/20131229.list  
-	tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
-	rm /tmp/20131229.list
-
+```
+find /path/to/crash_log/20131229 -name '*crash*' -print > /tmp/20131229.list  
+tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
+rm /tmp/20131229.list
+```
