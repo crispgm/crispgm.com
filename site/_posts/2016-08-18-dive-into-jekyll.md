@@ -107,6 +107,24 @@ Jekyll 支持多种扩展方式，分别是 Generators, Converters, Commands, Ta
 
 扩展可以通过 Gem 或本地文件分发使用，这块的生态比较杂，主要还是通过 Jekyll 主页 [Jekyll Plugins 文档](https://jekyllrb.com/docs/plugins/)的专门区域分享插件。对于插件开发者来说，完成开发后可以发 PR 修改 Jekyll Plugins 页面把你的插件分享出来，一般都会被准许 merge（~~想骗贡献的速来~~）。
 
+我自己也写了一个 Jekyll Plugin，名叫 jekyll-taglist。这是一个 `Liquid Tags` 扩展，其作用是收集并输出文章的标签 `page.tags` 和其计数，支持对标签的条件选择、过滤和排序。输出后，我们可以通过 CSS 实现一些展示效果。
+
+{% raw %}
+```
+# 设定条件：
+# - 阈值为1
+# - 显示计数
+# - 使用计数进行降序排序
+# - 限制为30个
+
+{% tags_list :threshold => 1, :show_count => 1, :sort_by => count, :order_by => desc, :limit => 30 %}
+```
+{% endraw %}
+
+输出后的效果在我的网站[博客页底部](https://crispgm.com/blogs.html)。
+
+有兴趣可以到 <https://github.com/crispgm/jekyll-tags-list-plugin> 详细了解。
+
 # Jekyll 社区
 
 由于受到 GitHub 官方的支持，Jekyll 在静态博客生成器中应该说是最热门的。这或许也是 Jekyll 的社区非常繁荣的原因。它迭代很快，维护者对 Issues 和 PRs 的处理也很快。
