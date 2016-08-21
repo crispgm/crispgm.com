@@ -51,15 +51,15 @@ projects:
     contribution: >
       As a contributor, I have submitted 5 PRs and been accepted by Jekyll team.
       And I am maintainer of 3 Jekyll plugins and a Jekyll theme.
-  - name: awesome-cn-café
-    description: A curated list of awesome café places in China.
-    contribution: Contributor.
   - name: URL Auto Redirector
-    description: > 
+    description: >
       URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links.
       By doing so, it gets you directly to your destination page.
     contribution: Creator and maintainer.
+  - name: awesome-cn-café
+    description: A curated list of awesome café places in China.
+    contribution: Contributor.
   - name: Olympia
     description: >
       Olympia hacks on Wi-Fi of Olympus cameras, which is hoped to offer a smart management of photos between camera and computer with a good experience.
-    contribution: Creator and maintainer. Olympia is the best web client of Olympus cameras, written in Ruby.
+    contribution: Creator and maintainer.
