@@ -135,6 +135,22 @@
 
 <p>扩展可以通过 Gem 或本地文件分发使用，这块的生态比较杂，主要还是通过 Jekyll 主页 <a href="https://jekyllrb.com/docs/plugins/">Jekyll Plugins 文档</a>的专门区域分享插件。对于插件开发者来说，完成开发后可以发 PR 修改 Jekyll Plugins 页面把你的插件分享出来，一般都会被准许 merge（<del>想骗贡献的速来</del>）。</p>
 
+<p>我自己也写了一个 Jekyll Plugin，名叫 jekyll-taglist。这是一个 <code class="highlighter-rouge">Liquid Tags</code> 扩展，其作用是收集并输出文章的标签 <code class="highlighter-rouge">page.tags</code> 和其计数，支持对标签的条件选择、过滤和排序。输出后，我们可以通过 CSS 实现一些展示效果。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># 设定条件：
+# - 阈值为1
+# - 显示计数
+# - 使用计数进行降序排序
+# - 限制为30个
+
+{% tags_list :threshold =&gt; 1, :show_count =&gt; 1, :sort_by =&gt; count, :order_by =&gt; desc, :limit =&gt; 30 %}
+</code></pre>
+</div>
+
+<p>输出后的效果在我的网站<a href="https://crispgm.com/blogs.html">博客页底部</a>。</p>
+
+<p>有兴趣可以到 <a href="https://github.com/crispgm/jekyll-tags-list-plugin">https://github.com/crispgm/jekyll-tags-list-plugin</a> 详细了解。</p>
+
 <h1 id="jekyll-">Jekyll 社区</h1>
 
 <p>由于受到 GitHub 官方的支持，Jekyll 在静态博客生成器中应该说是最热门的。这或许也是 Jekyll 的社区非常繁荣的原因。它迭代很快，维护者对 Issues 和 PRs 的处理也很快。</p>

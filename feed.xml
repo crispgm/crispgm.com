@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Aug 2016 14:54:18 +0800</pubDate>
-    <lastBuildDate>Fri, 19 Aug 2016 14:54:18 +0800</lastBuildDate>
+    <pubDate>Sun, 21 Aug 2016 15:01:49 +0800</pubDate>
+    <lastBuildDate>Sun, 21 Aug 2016 15:01:49 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -103,6 +103,22 @@
 &lt;p&gt;Jekyll 支持多种扩展方式，分别是 Generators, Converters, Commands, Tags, Filters 和 Hooks。其中一些是 Jekyll 自身的扩展机制，而 Tags/Filters 则实质上是对 Liquid Tags/Filters 进行扩展。&lt;/p&gt;
 
 &lt;p&gt;扩展可以通过 Gem 或本地文件分发使用，这块的生态比较杂，主要还是通过 Jekyll 主页 &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;Jekyll Plugins 文档&lt;/a&gt;的专门区域分享插件。对于插件开发者来说，完成开发后可以发 PR 修改 Jekyll Plugins 页面把你的插件分享出来，一般都会被准许 merge（&lt;del&gt;想骗贡献的速来&lt;/del&gt;）。&lt;/p&gt;
+
+&lt;p&gt;我自己也写了一个 Jekyll Plugin，名叫 jekyll-taglist。这是一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Liquid Tags&lt;/code&gt; 扩展，其作用是收集并输出文章的标签 &lt;code class=&quot;highlighter-rouge&quot;&gt;page.tags&lt;/code&gt; 和其计数，支持对标签的条件选择、过滤和排序。输出后，我们可以通过 CSS 实现一些展示效果。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 设定条件：
+# - 阈值为1
+# - 显示计数
+# - 使用计数进行降序排序
+# - 限制为30个
+
+{% tags_list :threshold =&amp;gt; 1, :show_count =&amp;gt; 1, :sort_by =&amp;gt; count, :order_by =&amp;gt; desc, :limit =&amp;gt; 30 %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;输出后的效果在我的网站&lt;a href=&quot;https://crispgm.com/blogs.html&quot;&gt;博客页底部&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;有兴趣可以到 &lt;a href=&quot;https://github.com/crispgm/jekyll-tags-list-plugin&quot;&gt;https://github.com/crispgm/jekyll-tags-list-plugin&lt;/a&gt; 详细了解。&lt;/p&gt;
 
 &lt;h1 id=&quot;jekyll-&quot;&gt;Jekyll 社区&lt;/h1&gt;
 
