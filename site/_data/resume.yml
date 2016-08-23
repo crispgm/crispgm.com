@@ -49,8 +49,9 @@ projects:
   - name: Jekyll
     description: Jekyll is a blog-aware, static site generator in Ruby.
     contribution: >
-      As a contributor, I have submitted 5 PRs and been accepted by Jekyll team.
+      As a contributor, I have submitted a good few PRs and been accepted by Jekyll team.
       And I am maintainer of 3 Jekyll plugins and a Jekyll theme.
+      This résumé itself is made by Jekyll.
   - name: URL Auto Redirector
     description: >
       URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links.
