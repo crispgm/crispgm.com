@@ -17,7 +17,6 @@ end
 
 desc "Build jekyll and push to resume-page branch"
 task :resume do
-  sh "cp data/resume.yml resume/_data"
   # Clone to gh-pages
   unless File.exist?("./resume-page")
     sh "git clone -b resume-page https://github.com/crispgm/crispgm.com.git resume-page"
@@ -31,6 +30,7 @@ task :resume do
   Dir.chdir('resume') do
     sh "git stash"
     sh "git pull origin master"
+    sh "cp ../data/resume.yml _data"
     sh "jekyll build --destination=../resume-page"
   end
   # Push
