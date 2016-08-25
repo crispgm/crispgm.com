@@ -1,0 +1,71 @@
+title: Résumé | DAVID ZHANG
+name: DAVID ZHANG
+contact:
+  - icon: fa-envelope
+    text: crispgm@gmail.com
+  - icon: fa-phone-square
+    text: (+86)15652998660
+  - icon: fa-globe
+    text: crispgm.com
+  - icon: fa-github
+    text: crispgm
+education:
+  - university: Queensland University of Technology
+    duration: Jul 2011 - Dec 2012
+    location: Brisbane, QLD, Australia
+    major: Master of Information Technology - Software Architecture.
+  - university: Southeast University
+    duration: Aug 2007 - Jun 2011
+    location: Nanjing, Jiangsu Province, China
+    major: Bachelor of Computer Science & Technology.
+skills:
+  - title: LAMP Stacks
+    items: PHP/hhvm, Ruby, Nginx, MySQL, Memcache, Redis
+  - title: Web Architectures
+    items: Micro-service Architecture, Distributing Web Architecture
+  - title: Computer Systems
+    items: UNIX/Linux, Shell, awk, git
+  - title: Frontend
+    items: JavaScript, HTML, CSS/SASS/LESS
+  - title: Methodology
+    items: Agile, Design Patterns
+work_exp:
+  - title: Software Architect
+    duration: Apr 2016 - Now
+    company: Baidu Inc.
+    description: >
+      Worked as software architect for Medical Services Division.
+      I am responsible for the tech of the division, implementing micro-service architecture and leading the development model.
+  - title: Software Engineer
+    duration: Apr 2013 - Mar 2016
+    company: Baidu Inc.
+    description: >
+      Worked as software engineer and later senior software engineer for Tieba Division(tieba.baidu.com), which is one of the largest online forums in China.
+      I was responsible for implementing products with continued growth of visits (10b PVs) at first.
+      And then, I took over the technology for enterprise business, including both backend and testing team.
+      I am highly experienced in building and optimizing large scale LAMP application and specialised in continuous delivery.
+  - title: Developer Intern
+    duration: Dec 2011 - Mar 2012
+    company: Taikang Life Insurance Company Ltd.
+    description: >
+      Worked as software developer to build internal software systems for Shenzhen branch of Taikang.
+      I contributed largely to build the Attendent System for Training Department.
+projects:
+  - name: Jekyll
+    description: Jekyll is a blog-aware, static site generator in Ruby.
+    contribution: >
+      As a contributor, I have submitted a good few PRs and been accepted by Jekyll team.
+      And I am maintainer of 3 Jekyll plugins and a Jekyll theme.
+      This résumé itself is made by Jekyll.
+  - name: URL Auto Redirector
+    description: >
+      URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links.
+      By doing so, it gets you directly to your destination page.
+    contribution: Creator and maintainer.
+  - name: awesome-cn-café
+    description: A curated list of awesome café places in China.
+    contribution: Contributor.
+  - name: Olympia
+    description: >
+      Olympia hacks on Wi-Fi of Olympus cameras, which is hoped to offer a smart management of photos between camera and computer with a good experience.
+    contribution: Creator and maintainer.

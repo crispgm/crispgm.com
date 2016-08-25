@@ -1,0 +1,3 @@
+[submodule "resume/resume"]
+	path = resume/resume
+	url = https://github.com/crispgm/resume.git
