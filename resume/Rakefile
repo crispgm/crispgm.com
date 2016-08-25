@@ -1,0 +1,42 @@
+# coding: utf-8
+task default: %w[serve]
+
+desc "Init"
+task :init do
+  sh "git submodule update --init --recursive"
+  sh "cp data/resume.yml resume/_data"
+end
+
+desc "Serve simply"
+task :serve do
+  sh "cp data/resume.yml resume/_data"
+  Dir.chdir('resume') do
+    sh "jekyll serve"
+  end
+end
+
+desc "Build jekyll and push to resume-page branch"
+task :resume do
+  sh "cp data/resume.yml resume/_data"
+  # Clone to gh-pages
+  unless File.exist?("./resume-page")
+    sh "git clone -b resume-page https://github.com/crispgm/crispgm.com.git resume-page"
+  end
+  # Checkout and pull
+  Dir.chdir('resume-page') do
+    sh "git checkout resume-page"
+    sh "git pull origin resume-page"
+  end
+  # Build site with Jekyll
+  Dir.chdir('resume') do
+    sh "git stash"
+    sh "git pull origin master"
+    sh "jekyll build --destination=../resume-page"
+  end
+  # Push
+  Dir.chdir('resume-page') do
+    sh "git add ."
+    sh "git commit --allow-empty -m \"Deployed at #{Time.now}\""
+    sh "git push origin resume-page"
+  end
+end
