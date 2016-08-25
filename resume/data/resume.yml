@@ -1,4 +1,4 @@
-title: Résumé | DAVID ZHANG
+title: Resume | DAVID ZHANG
 name: DAVID ZHANG
 contact:
   - icon: fa-envelope
@@ -62,7 +62,7 @@ projects:
       URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links.
       By doing so, it gets you directly to your destination page.
     contribution: Creator and maintainer.
-  - name: awesome-cn-café
+  - name: awesome-cn-cafe
     description: A curated list of awesome café places in China.
     contribution: Contributor.
   - name: Olympia
