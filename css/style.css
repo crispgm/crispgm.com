@@ -167,15 +167,16 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 1.4rem;
+  padding-top: 1.0rem;
   border-top: .05rem solid #aaaaaa;
+}
+.tag-item:before {
+  content: "#";
 }
 .tag-item {
   padding: .2rem;
   margin-right: .25rem;
   margin-bottom: .25rem;
-  border: .05rem solid #bbbbbb;
-  border-radius: .2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
