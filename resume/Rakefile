@@ -4,12 +4,12 @@ task default: %w[serve]
 desc "Init"
 task :init do
   sh "git submodule update --init --recursive"
-  sh "cp data/resume.yml resume/_data"
 end
 
 desc "Serve simply"
 task :serve do
   sh "cp data/resume.yml resume/_data"
+  sh "cp _config.yml resume"
   Dir.chdir('resume') do
     sh "jekyll serve"
   end
@@ -31,6 +31,7 @@ task :resume do
     sh "git stash"
     sh "git pull origin master"
     sh "cp ../data/resume.yml _data"
+    sh "cp ../_config.yml ."
     sh "jekyll build --destination=../resume-page"
   end
   # Push
