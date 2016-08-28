@@ -22,4 +22,5 @@ All the articles are written in GitHub Flavored Markdown format.
 * Syntax Highlighter: [highlight.js](https://highlightjs.org/){:target="_blank"}
 * Iconic Font: [Font Awesome](http://fontawesome.io/){:target="_blank"}
 * Hosting: [Linode](https://www.linode.com/?r=b94042abe57498d29cfde051fdf66d94b88d9d6b){:target="_blank"}
+* Comment Service: [DISQUS](https://disqus.com/){:target="_blank"} (Though DISQUS is banned in most places of China, I won't either migrate to other comment system or remove it. Because I like DISQUS, and there isn't many comments and I am a person with anti-social tendency. You may get access to the comments if possible. Otherwise, contact me with Twitter/Weibo)
 * HTTPS Support: [Let's Encrypt/certbot](https://letsencrypt.org/){:target="_blank"}
