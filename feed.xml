@@ -5,9 +5,48 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 21:26:01 +0800</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 21:26:01 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 22:31:00 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 22:31:00 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Ruby 相见恨晚</title>
+        <description>&lt;p&gt;大学时因为好奇的原因在图书馆借阅过几次 Ruby 和 Ruby on Rails 的书籍，大概是道行不够的原因，完全体会不到它的优点。&lt;/p&gt;
+
+&lt;p&gt;两个月前，因为 Jekyll 接触到了 Ruby，并且成为了 Jekyll 的忠实贡献者。之后，不仅所有的个人做的网站都变成了 “Powered by Jekyll”，还学会了 Jekyll 整个 Project 极致的自动化工具链。现在，这个网站本身就是自动化工具链的受益者，它使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;rake&lt;/code&gt; 来自动完成各项操作，并且通过 GitHub Webhooks 自动触发更新部署。&lt;/p&gt;
+
+&lt;p&gt;此外，我还发起了 Heelbot 这个项目，来建设自己的自动化工具链和 Workflow。它本身也高度自动化，包括测试部分，我学会并应用了 Behavior Driven Development，以后有时间会专门写文章讲述。总之就是，改过代码后，不需要手动操作任何东西，只需要跑一次测试脚本。哪里需要改、哪里忘记改一下子就可以知道。&lt;/p&gt;
+
+&lt;p&gt;然后，我买了 Matz 的两本书：《松本行弘的程序世界》和《代码的未来》，了解 Ruby 的设计背景和哲学。&lt;/p&gt;
+
+&lt;p&gt;对 Ruby 最大的感受就是整体体验很舒服，其次就是生态非常完善。内在的体验就是，Ruby 的程序员很有自己的思想，尤其是在“如何做软件”这个主题上。因此，与这个主题相关的领域，在 Ruby 上的发展都非常完善，即使 Ruby 整体的人气和我原来常用的 PHP 有一定差距。Ruby 本身灵活动态的语法和自身的一些特性，也让开发的便捷成为了可能。&lt;/p&gt;
+
+&lt;p&gt;但国内很多 PHP 程序员却不那么关注这块。就我对狼厂 PHP 程序员们的了解，他们往往心中想着“高并发”、“性能”、“分布式”等“高大上”的主题，本质上对“世界上最好的语言”并无多大好感，只是造化弄人不得不写罢了。他们最希望的是什么时候能够改用性能更好的底层的语言——老牌的 C/C++ 或者 Golang，甚至说在脚本语言中也希望能用上更优雅飘逸的 Python 什么的。&lt;/p&gt;
+
+&lt;p&gt;我承认，我起初也是这样的人，也对 PHP 没什么兴趣。但不用多长时间，每个任何语言的使用者可以发现几个事实（或许不会承认）：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不是所有程序都需要自身执行效率很高，有些只是希望开发效率高&lt;/li&gt;
+  &lt;li&gt;用 C/C++ 或 Golang 或某些框架写出了表现“很牛”程序，那是人家自身的优势，和程序员本人关系不大&lt;/li&gt;
+  &lt;li&gt;不管用什么语言，都需要一些软素质，其中很重要的一块就是“代码可维护性”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;作为 Web 产品研发工程师，我觉得在产品迭代中，工程师最应该关注的是开发效率和代码可维护性。性能需要时刻考虑，但这只是工程师追求的一小块。但事实是，性能被过多考虑了，而在协同环境中会提供更大收益的代码可维护性却被忽略了。我们一言不合就放弃文档、自动化测试、Code Review 等环节。&lt;/p&gt;
+
+&lt;p&gt;代码可维护性是衡量一个程序员 craftmanship 的重要指标，这也是 Rubyist 哲学中很重视的一块。因此，他们发明或实现了很多理念上领先的东西提高可维护性。比如：Ruby on Rails，它当然比 Sinatra/&lt;a href=&quot;https://github.com/laruence/yaf&quot;&gt;yaf&lt;/a&gt; 这样的框架重、复杂、不易入门，但却能得到真正的极致的开发效率。&lt;/p&gt;
+
+&lt;p&gt;因此，更加精英化的外国初创企业很流行使用 Ruby on Rails 作为后端解决方案。比如：Twitter, Airbnb, GitHub, Shopify 等。&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Aug 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/regret-not-meet-ruby-before.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/regret-not-meet-ruby-before.html</guid>
+        
+        <category>Ruby</category>
+        
+        
+      </item>
     
       <item>
         <title>深入 Jekyll</title>
@@ -1286,36 +1325,6 @@ ssl_session_timeout  1440m;
         <category>letsencrypt</category>
         
         <category>nginx</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Environment Pollution in a Photographer's View</title>
-        <description>&lt;p&gt;On November 14th, it was a haze day with an AQI over 200 and I went to Beijing University of Chemical Technology.
-I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Lightroom and VSCOcam, it looks pretty good now by enhancing the orange and yellow color, removing the arrow on the ground and cropping into a square one.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/photo/beijing-autumn.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As soon as my surprise fade out, I was feeling sad that:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We can use technology stuffs like RAW, Lightroom and VSCOcam to make the leaves become either green or yellow, and even remove the arrow by the “Spot Removal” tool. However, it is impossible to make a blue sky and breathe the fresh air when taking photos in such a haze day. That’s why environment pollution is a serious problem.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That’s a photographer’s view of environment pollution.&lt;/p&gt;
-
-&lt;p&gt;And here I ask for the beautiful environment and fresh air.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 04 Dec 2015 15:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/environment-pollution-in-a-photographer-view.html</guid>
-        
-        <category>Environmental Protection</category>
-        
-        <category>Photography</category>
-        
-        <category>Beijing</category>
         
         
       </item>
