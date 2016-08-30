@@ -2,4 +2,4 @@ User-agent: 360Spider
 Disallow: /
 
 User-agent: *
-Disallow: /resume.html
+Disallow: /resume/
