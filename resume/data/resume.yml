@@ -65,6 +65,9 @@ projects:
   - name: awesome-cn-café
     description: A curated list of awesome café places in China.
     contribution: Contributor.
+  - name: "jekyll-crisp-resume"
+    description: "A minimalist's résumé template powered by Jekyll. This résumé itself uses it, after all. :)"
+    contribution: Creator.
   - name: Olympia
     description: >
       Olympia hacks on Wi-Fi of Olympus cameras, which is hoped to offer a smart management of photos between camera and computer with a good experience.
