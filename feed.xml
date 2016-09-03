@@ -5,9 +5,64 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Sep 2016 15:04:40 +0800</pubDate>
-    <lastBuildDate>Sat, 03 Sep 2016 15:04:40 +0800</lastBuildDate>
+    <pubDate>Sat, 03 Sep 2016 17:14:58 +0800</pubDate>
+    <lastBuildDate>Sat, 03 Sep 2016 17:14:58 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>名言警句摘录</title>
+        <description>&lt;p&gt;记录一些，在阅读时，获得的一些有用或是有趣的句子或段落。&lt;/p&gt;
+
+&lt;p&gt;注：排序是以我阅读的时间生序为准，会不时更新。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“电梯演讲”是风险投资行业的行话，意思是“给你30秒的时间，看你能不能用你的商业构想打动我”。&lt;/p&gt;
+
+  &lt;p&gt;— How Google Works&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这样的格局比较适合传统的产品经理，他们通常对“网络图”以及“甘特图”驾轻就熟，在看过一场令人眼花缭乱的PPT（幻灯片）演示后，他们看着投射出的高于投资收益率的财务回报率，对管理团队认可的“正式计划”的具体实施方案大加评论。他们的任务，就是按照制订好的计划行事、带领大家克服一切困难、用所谓的“发散思维”思考问题、对首席执行官的朝令夕改阿谀逢迎、想方设法地让自己的团队迎合高层的决定。&lt;/p&gt;
+
+  &lt;p&gt;— How Google Works&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当然，我们也有搞砸的时候。萨拉尔·卡曼加曾对我们一位年轻的市场专员印象深刻，想把他调到助理产品经理项目里。不巧的是，这个项目只接收有计算机科学学位的人，因此这位市场专员并不符合条件。萨拉尔据理力争，说这位年轻人是自学成才的程序员，还拥有“与工程师密切合作及与物流相关的经验”，但包括乔纳森在内的几位说了算的高管仍然坚持己见，他们不愿意把光圈调大，否决了这位年轻人的调职的请求。这位名叫凯文·希斯特罗姆的市场专员最终选择离开谷歌，与他人共同成立了一家名叫 Instagram 的公司，之后又以10亿美元的价格卖给了脸谱网。凯文，好样的！&lt;/p&gt;
+
+  &lt;p&gt;— How Google Works&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如果会议上所有人一致点头，这并不意味着大家意见一致，而只是说明你下面坐着一群“摇头娃娃”。&lt;/p&gt;
+
+  &lt;p&gt;— How Google Works&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;驱使这样的实业家推动世界进步的，通常不是名利，而是强烈的使命感和充满个人英雄主义的梦想和野望，以及在极少数人身上可贵地伴随终生的好奇心。&lt;/p&gt;
+
+  &lt;p&gt;— 罗永浩&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Less is more.&lt;/p&gt;
+
+  &lt;p&gt;— Ludwig Mies van der Rohe&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我们有最好的人工智能，有最好的计算机硬件，有最好的精密机械。这个团队可以完成任何事情。这也是典型的以色列风格——有一支由高素质的专业人才组成的小型精英团队，他们一同为了一个共同的目标夜以继日地工作。梅蒂诺(Medinol)是这支相同的主旋律的一段变奏曲，在梅蒂诺，一个人要处理包括他自己在内的公司的所有事务：生物、医学、工程、计算机科学以及精密机械。在美国的大企业里，让一个程序员理解血管生物学或者让一个医生理解材料工程，几乎是不可能的事情。所以，最后的决议需要协商拟定通过，这是一个繁琐而不精确的过程。但是在梅蒂诺，这是综合的，就像Orbotech是一个完全跨学科的公司一样。时间被节省下来，效率则提升至原来的三倍。&lt;/p&gt;
+
+  &lt;p&gt;— 我的应许之地&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sat, 03 Sep 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/collection-of-aphorisms.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/collection-of-aphorisms.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Ruby 相见恨晚</title>
@@ -1231,106 +1286,6 @@ echo memory_get_usage() - $startMemory, ' bytes';
         <category>Anti Piracy Software</category>
         
         <category>Piracy Software</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Enable HTTPS with Let's Encrypt</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; has enabled HTTPS as its default protocol, with the power of &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-https&quot;&gt;Why HTTPS?&lt;/h2&gt;
-
-&lt;p&gt;When properly configured, an HTTPS connection guarantees three things:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Confidentiality.&lt;/strong&gt; The visitor’s connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Authenticity.&lt;/strong&gt; The visitor is talking to the “real” website, and not to an impersonator or through a “man-in-the-middle”.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Integrity.&lt;/strong&gt; The data sent between the visitor and the website has not been tampered with or modified.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A plain HTTP connection can be easily monitored, modified, and impersonated.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Quoted from &lt;a href=&quot;https://https.cio.gov/faq/#what-information-does-https-protect?&quot;&gt;https://https.cio.gov/faq/#what-information-does-https-protect?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;about-lets-encrypt&quot;&gt;About Let’s Encrypt&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; is a free, automated, and open certificate authority (CA), run for the public’s benefit. Let’s Encrypt is a service provided by the Internet Security Research Group (ISRG).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Contribute to &lt;a href=&quot;https://github.com/letsencrypt&quot;&gt;letsencrypt&lt;/a&gt; on GitHub.&lt;/p&gt;
-
-&lt;h2 id=&quot;about-acme&quot;&gt;About ACME&lt;/h2&gt;
-
-&lt;h3 id=&quot;acme-protocol&quot;&gt;ACME Protocol&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ietf-wg-acme/acme&quot;&gt;https://github.com/ietf-wg-acme/acme&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/letsencrypt/acme-spec&quot;&gt;https://github.com/letsencrypt/acme-spec&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;boulder&quot;&gt;Boulder&lt;/h3&gt;
-
-&lt;p&gt;Boulder is an ACME-based CA, written in Go.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/letsencrypt/boulder&quot;&gt;https://github.com/letsencrypt/boulder&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;practice&quot;&gt;Practice&lt;/h2&gt;
-
-&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://letsencrypt.readthedocs.org/&quot;&gt;https://letsencrypt.readthedocs.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;get-certificate&quot;&gt;Get Certificate&lt;/h3&gt;
-
-&lt;p&gt;As the &lt;code class=&quot;highlighter-rouge&quot;&gt;letsencrypt-nginx&lt;/code&gt; is not fully developed, I choose &lt;code class=&quot;highlighter-rouge&quot;&gt;certonly&lt;/code&gt; to generate SSL certificate and configure nginx manually.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;nginx-configuration&quot;&gt;Nginx Configuration&lt;/h3&gt;
-
-&lt;p&gt;Configure nginx.conf&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
-ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
-
-ssl_session_timeout  1440m;     
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Others are as default.&lt;/p&gt;
-
-&lt;h3 id=&quot;certificate-renewal&quot;&gt;Certificate Renewal&lt;/h3&gt;
-
-&lt;p&gt;Let’s Encrypt CA issues short lived certificates (90 days). Make sure you renew the certificates at least once in 3 months.&lt;/p&gt;
-
-&lt;h3 id=&quot;performance&quot;&gt;Performance&lt;/h3&gt;
-
-&lt;p&gt;Actually, &lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; is a full static site. Almost no difference on performance. :D&lt;/p&gt;
-
-&lt;h2 id=&quot;in-the-end&quot;&gt;In The End&lt;/h2&gt;
-
-&lt;p&gt;Safe journey on &lt;a href=&quot;https://crispgm.com&quot;&gt;crispgm.com&lt;/a&gt; :)&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 07 Dec 2015 23:35:00 +0800</pubDate>
-        <link>https://crispgm.com/page/enable-https-with-letsencrypt.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/enable-https-with-letsencrypt.html</guid>
-        
-        <category>https</category>
-        
-        <category>letsencrypt</category>
-        
-        <category>nginx</category>
         
         
       </item>
