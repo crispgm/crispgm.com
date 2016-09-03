@@ -1,11 +1,12 @@
 - category: Interests
   items:
   - name: Minimalism
+  - name: Photography
   - name: Coffee
   - name: Crafted Beer
   - name: Soccer/Rugby
   - name: Fighter/Warship/Submarine
-  - name: Document Films
+  - name: Document Film
 
 - category: Devices
   items:
@@ -20,16 +21,16 @@
   - name: Pilot 78GM
   - name: Muji Ballpoint Pen
   - name: Midori Brass Ruler
-  - name: 败家实验室, the best online shop for paper goods
+  - name: 败家实验室
     link: https://thebai.taobao.com/
 
-- category: Great Reading
+- category: Books
   items:
-  - name: The Shortest History of Europe/你一定爱读的极简欧洲史
-  - name: The Three-Body Problem/三体
-  - name: 新・片づけ術「断捨離」/断舍离
-  - name: How Google Works
-  - name: The PayPal Wars
+  - name: The Shortest History of Europe | 你一定爱读的极简欧洲史
+  - name: The Three-Body Problem | 三体
+  - name: 新・片づけ術「断捨離」| 断舍离
+  - name: How Google Works | 重新定义公司:谷歌是如何运营的
+  - name: The PayPal Wars | 支付战争
 
 - category: Musics
   items:

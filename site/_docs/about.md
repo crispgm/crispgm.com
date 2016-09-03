@@ -4,7 +4,7 @@ title: About
 permalink: /about.html
 ---
 
-## About
+### About
 
 Copyright &copy; David Zhang, 2016.
 
@@ -14,7 +14,7 @@ All the articles are written in GitHub Flavored Markdown format.
 
 [Subscribe Blog Updates](/feed.xml){:target="_blank"}.
 
-## Credit
+### Credit
 
 * Site Generator: [Jekyll](https://jekyllrb.com){:target="_blank"}
 * Site Theme: [jekyll-crisp-minimalism-theme](https://github.com/crispgm/jekyll-crisp-minimalism-theme){:target="_blank"}
