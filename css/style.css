@@ -272,7 +272,7 @@ code.highlighter-rouge:hover {
 }
 .things-title {
   font-size: 1.2rem;
-  border-bottom: .05rem solid #aaaaaa;
+  /*border-bottom: .05rem solid #aaaaaa;*/
   padding-bottom: .2rem;
 }
 .things-list {
