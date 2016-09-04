@@ -1,0 +1,10 @@
+{
+    "server":"106.187.44.46",
+    "server_port":2968,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"AcoMplexPswbU44m12f5b66aA",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
