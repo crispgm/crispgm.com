@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BigPipe 实践 (nginx + hhvm)
+title: 贴吧 BigPipe 实践 (nginx + hhvm)
 date: 2015/06/26 16:23:00 +0800
 permalink: /page/bigpipe-practice.html
 tags:
@@ -14,7 +14,7 @@ tags:
 
 随着 Web 页面的功能不断堆砌（其实我是极简主义者，但PM或者说是国内的风气，总是喜欢不断加入各类功能），页面需要的数据越来越多，串行连接后端的耗时自然是不断增大。常见的优化手段就是后端并行化，而对于前端来说，后端并行化只是降低了 response time，但用户最终看到页面的时间并没有减少。
 
-Facebook 提出了 BigPipe 的方案，讲页面功能分块，分成若干个 pagelet。pagelet 的加载使用了 http 的 chunked 特性，采用类似 Pipeline 的方式进行前后端数据传输。浏览器端会首先获得一个框架层的 HTML/css，以及基础 JavaScript 代码。同时，后端也可以进行并行化，每个 pagelet 完成后，通过 flush 输出到浏览器。浏览器端的 JavaScript 基于事件机制，收到数据后进行渲染。
+Facebook 提出了 BigPipe 的方案，将页面功能分块，分成若干个 pagelet。pagelet 的加载使用了 http 的 chunked 特性，采用类似 Pipeline 的方式进行前后端数据传输。浏览器端会首先获得一个框架层的 HTML/css，以及基础 JavaScript 代码。同时，后端也可以进行并行化，每个 pagelet 完成后，通过 flush 输出到浏览器。浏览器端的 JavaScript 基于事件机制，收到数据后进行渲染。
 
 这样，前后端就可以都做到并行化，用户可以先看到部分页面内容，从而获得了更好的用户体验。目前，国外主要是 Facebook 应用了这项技术，而国内微博也通过 BigPipe 获得了不错的效果。
 
@@ -50,13 +50,13 @@ echo str_pad('world', 10000, ' ');
 
 BigPipe 的整体方案是需要具体实现环节分为如下几部分：
 
-1. BigPipe 框架。包括前端和后端两部分，以及对于不支持 BigPipe 模式的流量器启用的降级模式。此外，为了便于 SEO，对于搜索引擎 Spider 的抓取也要使用降级模式。
+1. BigPipe 框架。包括前端和后端两部分，以及对于不支持 BigPipe 模式的流量启用的降级模式。此外，为了便于 SEO，对于搜索引擎 Spider 的抓取也要使用降级模式。
 2. Pagelet 和 DataProvider 管理维护制度。这是一项管理上的措施，主要是为了管理 Pagetlet、DataProvider 以及其之间的依赖关系。
 3. BigPipe 调试工具。由于在 BigPipe 开发模式中，后端开发负责 DataProvider，前端人员负责 Pagelet，双方需要调试工具进行独立开发调试。
 
 ### 潜在问题
 
-1. 页面交叉调用过多，导致 pipe 输出效果并不好
+1. 页面交叉调用过多，导致分段输出效果并不好
 2. 前端的误调用会影响后端的响应时间
 3. 后端性能优化需要前端配合
 
@@ -78,7 +78,7 @@ Pagelet 依赖的 DataProvider 都 __READY__ 后，就会渲染页面。
 
 由于“各路” buffer 的存在，如果包比较小的话 BigPipe 的 chunked 输出很可能会被 buffer 住。针对这种情况，一般来说有两种方式。
 
-1. 使用 strpad 这类函数进行填充，如：填充空格。永远将一次 flush 的数据填充到 buffer_size。
+1. 使用 str_pad 这类函数进行填充，如：填充空格。永远将一次 flush 的数据填充到 buffer_size。
 2. 调小 buffer，让数据更容易达到 buffer_size。
 3. 关闭 buffer。
 
