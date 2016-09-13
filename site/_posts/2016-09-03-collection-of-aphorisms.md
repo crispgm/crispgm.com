@@ -2,6 +2,9 @@
 layout: post
 title: 名言警句摘录
 permalink: /page/collection-of-aphorisms.html
+tags:
+- 名言警句
+- 摘录
 ---
 
 记录一些，在阅读时，获得的一些有用或是有趣的句子或段落。
