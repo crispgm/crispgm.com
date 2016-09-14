@@ -16,7 +16,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-family: "Avenir", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -86,7 +86,7 @@ tr:hover {
 }
 /* Menu */
 .menu {
-  border-bottom: .05rem solid #aaaaaa;
+  border-bottom: .1rem solid #aaaaaa;
 }
 .menu-home {
   font-size: 3.2rem;
@@ -94,13 +94,14 @@ tr:hover {
   padding-bottom: 3.2rem;
 }
 .menu-home a {
+  color: #333;
   text-decoration: none;
 }
 .menu-links {
   font-size: 0.875rem;
   height: 2rem;
   text-align: center;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,6 +111,19 @@ tr:hover {
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   text-align: center;
+}
+.menu-item a {
+  color: #bbbbbb;
+}
+.menu-item a:hover {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+}
+.menu-active a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
 }
 @media (max-width: 48rem) {
   .menu-home {
@@ -122,17 +136,10 @@ tr:hover {
     padding-right: .5rem;
   }
 }
-.menu-item a {
-  color: #bbbbbb;
-}
-.menu-active a {
-  color: #bbbbbb;
-  text-decoration: underline;
-}
 /* Article */
 .article {
   text-align: left;
-  margin-top: 2.4rem;
+  margin-top: 2.0rem;
 }
 .article-head {
   text-align: center;
@@ -167,8 +174,9 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 1.0rem;
-  border-top: .05rem solid #aaaaaa;
+  padding-top: 1rem;
+  border-top: .1rem solid #aaaaaa;
+  margin-bottom: 2rem;
 }
 .tag-item:before {
   content: "#";
