@@ -1,12 +1,3 @@
-- name: URL Auto Redirector
-  description: URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
-  links:
-    - text: GitHub
-      href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
-    - text: Homepage
-      href: https://urlautoredirector.github.io/
-    - text: Chrome WebStore
-      href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
 - name: Jekyll*
   description: Jekyll is a blog-aware, static site generator in Ruby.
   links:
@@ -16,13 +7,6 @@
       href: https://jekyllrb.com/
     - text: Contributes
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
-- name: jekyll-tagslist
-  description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
-  links:
-    - text: GitHub
-      href: https://github.com/crispgm/jekyll-tags-list-plugin
-    - text: RubyGems
-      href: https://rubygems.org/gems/jekyll-tagslist
 - name: awesome-cn-cafe*
   description: A curated list of awesome café places in China.
   links:
@@ -30,8 +14,24 @@
       href: https://github.com/ElaWorkshop/awesome-cn-cafe
     - text: Contributes
       href: https://github.com/ElaWorkshop/awesome-cn-cafe/commits?author=crispgm
-- name: Olympia (WIP)
-  description: Olympia hacks on Wi-Fi of Olympus cameras, which is hoped to offer a smart management of photos between camera and computer with a good experience.
+- name: URL Auto Redirector
+  description: URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
   links:
     - text: GitHub
-      href: https://github.com/crispgm/olympia
+      href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
+    - text: Homepage
+      href: https://urlautoredirector.github.io/
+    - text: Chrome WebStore
+      href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
+- name: Crisp Minimalist's Résumé Template
+  description: A minimalist's résumé template powered by Jekyll.
+  links:
+    - text: GitHub
+    - href: https://github.com/crispgm/resume
+- name: jekyll-tagslist
+  description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/jekyll-tags-list-plugin
+    - text: RubyGems
+      href: https://rubygems.org/gems/jekyll-tagslist
