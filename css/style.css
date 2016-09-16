@@ -73,6 +73,11 @@ tr {
 tr:hover {
   background-color: #f5f5f5;
 }
+sup {
+  vertical-align: auto;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+}
 /* content */
 #content {
   margin: 0 auto;
