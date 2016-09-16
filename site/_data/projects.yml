@@ -1,5 +1,6 @@
-- name: Jekyll*
+- name: Jekyll
   description: Jekyll is a blog-aware, static site generator in Ruby.
+  contributed: true
   links:
     - text: GitHub
       href: https://github.com/jekyll/jekyll
@@ -7,8 +8,9 @@
       href: https://jekyllrb.com/
     - text: Contributes
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
-- name: awesome-cn-cafe*
+- name: awesome-cn-cafe
   description: A curated list of awesome café places in China.
+  contributed: true
   links:
     - text: GitHub
       href: https://github.com/ElaWorkshop/awesome-cn-cafe
