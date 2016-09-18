@@ -42,16 +42,16 @@
     <div class="article-date">September 18, 2016</div>
   </div>
   <div class="article-main">
-    <p>Docker 近期后端最火的技术，但在公司生产环境中并没机会使用。由于我的 VPS 主机有容器化的需求，借此机会部署并稍微体验了一下 Docker，谈谈事情的经过和自己的感受。</p>
+    <p>Docker 是后端近期最火的技术，但在公司生产环境中并没机会使用。由于我的 VPS 主机有容器化的需求，借此机会部署并稍微体验了一下 Docker，谈谈事情的经过和自己的感受。</p>
 
 <h2 id="section">背景</h2>
 
-<p>一直以来，我使用 Linode VPS 作为个人主机，上面部署着网站。后来，由于国内网络环境的持续恶化，不得不搭建了 VPN 和 Shadowsocks。又由于个人网站样式和博客内容更新的频繁，将网站做成了通过 GitHub Webhook 自动化部署更新。</p>
+<p>一直以来，我使用 Linode VPS 作为个人主机，上面部署着网站。后来，随着国内网络环境的持续恶化，不得不搭建了 VPN 和 Shadowsocks。又由于个人网站样式和博客内容更新的频繁，将网站做成了通过 GitHub Webhook 自动化部署更新。</p>
 
 <p>目前，VPS 上面搭了若干个服务：</p>
 
 <ul>
-  <li>个人网站（Jekyll 生成静态页面，certbot 生成 HTTPS 证书<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>，nginx 提供服务）</li>
+  <li>个人网站（Jekyll 生成静态页面，Certbot 生成 HTTPS 证书<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>，nginx 提供服务）</li>
   <li>基于 PPTP 的 VPN（由于 iOS 10 移除了 PPTP 的支持<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>，故改为 L2TP）</li>
   <li>Shadowsocks Server</li>
   <li>网站同步更新程序</li>
@@ -59,17 +59,17 @@
 
 <p>但是，在运维和安全角度都一直存在着问题。</p>
 
-<p>首先，VPS 的搭建是非自动化的，只能手动搭建，十分的麻烦。今年 7 月，VPS 曾经被黑客攻击，导致整个系统需要重做。手动搭建一次，需要几十分钟。尤其是 VPN 的搭建步骤十分多且复杂。</p>
+<p>首先，VPS 的搭建是非自动化的，只能手动搭建，十分的麻烦。今年 7 月，VPS 曾经被黑客攻击，导致整个系统需要重做。手动搭建一次，需要几十分钟。尤其是 VPN 的搭建步骤十分多且复杂，造成失误出错的可能性也较高。</p>
 
 <p>其次，由于历史原因上面的很多程序都是 root 账户运行，有较大的安全风险。之前就曾经发现网站部署程序存在 Shell 注入问题，幸好及时发现修复了。</p>
 
-<p>最后，就是不同的程序有时会出现互相干扰的情况。如：VPN 使用的 iptables 有时会影响 Nginx 的对外端口；安装测试新程序时，会在系统产生中产生很多垃圾。</p>
+<p>最后，就是不同的程序有时会出现互相干扰的情况。如：VPN 使用的 iptables 可能会影响 Nginx 的对外端口。安装和测试新程序时，也会在系统产生中产生很多垃圾。</p>
 
 <p>因此，我的需求是：</p>
 
 <ul>
-  <li>相对快捷的自动化搭建方式，可快速构建和恢复</li>
-  <li>不同程序在“沙盒”中运行，并做到资源隔离</li>
+  <li>相对快捷的自动化构建方式，可快速搭建和恢复</li>
+  <li>不同程序在受限的“沙盒”中运行，并做到资源隔离</li>
 </ul>
 
 <h2 id="why-docker">Why Docker</h2>
@@ -82,7 +82,7 @@
 
 <p>这样，从需求上讲，我需要自动化的运维能力和沙盒运行等需求都得到了完美的满足。</p>
 
-<p>从技术趋势上讲，Docker 是目前容器界、云计算界甚至是业界最火的一项后端技术，也希望以此机会尝尝鲜。</p>
+<p>从技术趋势上讲，Docker 是目前容器界、云计算界甚至是业界最火的一项技术，也希望以此机会尝尝鲜。</p>
 
 <p>由于现在的 Linode 东京机房机器非常稳定，且和北京的 ping 非常低。所以，我不会轻易放弃这个 Linode，希望能在 Linode 上搭建 Docker。还好，Linode 早在 2014 年就已经支持了 Docker<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup>。</p>
 
@@ -94,7 +94,7 @@
 </code></pre>
 </div>
 
-<p>PS：起初，我使用的是比较新的 Ubuntu 16.04 LTS 镜像，在此强烈不推荐。这个版本和 systemd 之间有某种问题。本想着轻松无脑地安装完毕，结果就这么在 <code class="highlighter-rouge">docker-engine</code> 处卡住了。找了好久，才在 StackOverflow 找到<a href="http://stackoverflow.com/questions/37227349/unable-to-start-docker-service-in-ubuntu-16-04/37640824#37640824">解决方法</a>。</p>
+<p>PS：起初，我使用的是比较新的 Ubuntu 16.04 LTS 镜像，在此强烈不推荐。这个版本和 systemd 之间有某种问题。本想着轻松无脑地安装完毕，结果就在 docker-engine 处卡住了。找了好久，才在 StackOverflow 找到<a href="http://stackoverflow.com/questions/37227349/unable-to-start-docker-service-in-ubuntu-16-04/37640824#37640824" target="_blank">解决方法</a>。</p>
 
 <h2 id="section-1">制作镜像</h2>
 
@@ -126,7 +126,7 @@ CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 
 <p>Dockerfile 很容易懂，主要是一些声明以及安装的一些过程，稍微阅读一下<a href="https://docs.docker.com/engine/reference/builder/">指令文档</a>即可。</p>
 
-<p>镜像基于 ubuntu:trusty，这个版本跟 Linode 上的系统版本并没有什么必然联系。Shadowsocks 在 pip 上，因此安装步骤异常简单。最后，把配置文件 <code class="highlighter-rouge">COPY</code> 进去，再 <code class="highlighter-rouge">EXPOSE</code> 端口。<code class="highlighter-rouge">CMD</code> 是 Container 启动后执行的命令。</p>
+<p>镜像基于 <code class="highlighter-rouge">ubuntu:trusty</code>，这个版本跟 Linode 上的系统版本并没有什么必然联系。Shadowsocks 在 pip 上，因此安装步骤异常简单。最后，把配置文件 <code class="highlighter-rouge">COPY</code> 进去，再 <code class="highlighter-rouge">EXPOSE</code> 端口。<code class="highlighter-rouge">CMD</code> 是 Container 启动后执行的命令。</p>
 
 <h2 id="container">启动 Container</h2>
 
@@ -149,14 +149,22 @@ CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 </code></pre>
 </div>
 
-<p>Docker 在运行时必须有前台程序，不能单独就运行一个守护进程。而常见的 Server 程序大多都是以守护进程运行的，因此，采用了一个小技巧：</p>
+<p>Docker 在运行时必须有前台程序，不能单独就运行一个守护进程。当然，我们可以使用 Shadowsocks 的非守护模式运行。但常见的 Server 程序大多都是以守护进程运行的，因此，采用了一个小技巧：</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start \
     &amp;&amp; tail -f /var/log/shadowsocks.log
 </code></pre>
 </div>
 
-<p><em>这样，“容器化”改造顺利完成。附上相关 <a href="https://github.com/crispgm/docker">Dockerfiles</a>.</em></p>
+<p>这样，前台就会因为 <code class="highlighter-rouge">tail</code> 命令的存在而保持运行。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ docker ps
+CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      PORTS                  NAMES
+81f57c6c0710 crisp/shadowsocks "/bin/sh -c '/usr/loc" 22 hours ago Up 22 hours 0.0.0.0:2967-&gt;2968/tcp ssserver
+</code></pre>
+</div>
+
+<p>到此，“容器化”改造顺利完成。附上相关 <a href="https://github.com/crispgm/docker">Dockerfiles</a>.</p>
 
 <h1 id="section-2">结论</h1>
 
