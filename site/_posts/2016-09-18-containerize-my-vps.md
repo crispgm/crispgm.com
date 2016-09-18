@@ -114,7 +114,7 @@ CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start \
     && tail -f /var/log/shadowsocks.log
 ```
 
-这样，“容器化”改造顺利完成。
+_这样，“容器化”改造顺利完成。附上相关 [Dockerfiles](https://github.com/crispgm/docker)._
 
 # 结论
 
