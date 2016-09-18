@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
+    <title>我是如何把自己的 VPS 容器化的 | DAVID ZHANG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/zenburn.css">
+    <link rel="stylesheet" href="/css/opensans.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <script src="/script/highlight.pack.js"></script>
+    <!-- <script src="/script/jquery-3.1.0.min.js"></script> -->
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div id="content">
+    <header class="menu">
+      <div class="menu-home">
+        <a href="/">DAVID ZHANG</a>
+      </div>
+      <div class="menu-links">
+        <div class="menu-item">
+          <a href="/blog.html">Blog</a>
+        </div>
+        <div class="menu-item">
+          <a href="/project.html">Project</a>
+        </div>
+        <div class="menu-item">
+          <a href="/things.html">Things</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">我是如何把自己的 VPS 容器化的</div>
+    <div class="article-date">September 18, 2016</div>
+  </div>
+  <div class="article-main">
+    <p>Docker 近期后端最火的技术，但在公司生产环境中并没机会使用。由于我的 VPS 主机有容器化的需求，借此机会部署并稍微体验了一下 Docker，谈谈事情的经过和自己的感受。</p>
+
+<h2 id="section">背景</h2>
+
+<p>一直以来，我使用 Linode VPS 作为个人主机，上面部署着网站。后来，由于国内网络环境的持续恶化，不得不搭建了 VPN 和 Shadowsocks。又由于个人网站样式和博客内容更新的频繁，将网站做成了通过 GitHub Webhook 自动化部署更新。</p>
+
+<p>目前，VPS 上面搭了若干个服务：</p>
+
+<ul>
+  <li>个人网站（Jekyll 生成静态页面，certbot 生成 HTTPS 证书<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>，nginx 提供服务）</li>
+  <li>基于 PPTP 的 VPN（由于 iOS 10 移除了 PPTP 的支持<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>，故改为 L2TP）</li>
+  <li>Shadowsocks Server</li>
+  <li>网站同步更新程序</li>
+</ul>
+
+<p>但是，在运维和安全角度都一直存在着问题。</p>
+
+<p>首先，VPS 的搭建是非自动化的，只能手动搭建，十分的麻烦。今年 7 月，VPS 曾经被黑客攻击，导致整个系统需要重做。手动搭建一次，需要几十分钟。尤其是 VPN 的搭建步骤十分多且复杂。</p>
+
+<p>其次，由于历史原因上面的很多程序都是 root 账户运行，有较大的安全风险。之前就曾经发现网站部署程序存在 Shell 注入问题，幸好及时发现修复了。</p>
+
+<p>最后，就是不同的程序有时会出现互相干扰的情况。如：VPN 使用的 iptables 有时会影响 Nginx 的对外端口；安装测试新程序时，会在系统产生中产生很多垃圾。</p>
+
+<p>因此，我的需求是：</p>
+
+<ul>
+  <li>相对快捷的自动化搭建方式，可快速构建和恢复</li>
+  <li>不同程序在“沙盒”中运行，并做到资源隔离</li>
+</ul>
+
+<h2 id="why-docker">Why Docker</h2>
+
+<p>Docker 主要作用是容器化，它可以将一些服务“打包”成一个镜像（Image），然后在 Container 中运行。对于 Container 的描述是这样的：</p>
+
+<blockquote>
+  <p>Container 技术是直接将一个应用程序所需的相关程序代码、函式库、环境配置文件都打包起来建立沙盒执行环境<sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup>。</p>
+</blockquote>
+
+<p>这样，从需求上讲，我需要自动化的运维能力和沙盒运行等需求都得到了完美的满足。</p>
+
+<p>从技术趋势上讲，Docker 是目前容器界、云计算界甚至是业界最火的一项后端技术，也希望以此机会尝尝鲜。</p>
+
+<p>由于现在的 Linode 东京机房机器非常稳定，且和北京的 ping 非常低。所以，我不会轻易放弃这个 Linode，希望能在 Linode 上搭建 Docker。还好，Linode 早在 2014 年就已经支持了 Docker<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup>。</p>
+
+<h2 id="docker">安装 Docker</h2>
+
+<p>我的 Linux 镜像是 Ubuntu 14.04 LTS，安装方法非常简单<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>，只需要执行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>curl -sSL https://get.docker.com/ | sh
+</code></pre>
+</div>
+
+<p>PS：起初，我使用的是比较新的 Ubuntu 16.04 LTS 镜像，在此强烈不推荐。这个版本和 systemd 之间有某种问题。本想着轻松无脑地安装完毕，结果就这么在 <code class="highlighter-rouge">docker-engine</code> 处卡住了。找了好久，才在 StackOverflow 找到<a href="http://stackoverflow.com/questions/37227349/unable-to-start-docker-service-in-ubuntu-16-04/37640824#37640824">解决方法</a>。</p>
+
+<h2 id="section-1">制作镜像</h2>
+
+<p>根据功能来说，需要起三个 Container 分别包含服务：</p>
+
+<ul>
+  <li>Nginx, HTTPS 证书和更新部署程序</li>
+  <li>Shadowsocks 服务</li>
+  <li>L2TP VPN 服务</li>
+</ul>
+
+<p>需要为每个服务制作一个镜像。其实，这些常见服务网络上都有制作好的镜像，这也是 Docker 软件分发优势的一个体现。为了让事情不那么快餐，我决定自制一个。为了简单，这里只详细说下 Shadowsocks 部分。其中，L2TP VPN 的镜像极为复杂，因此采用了 GitHub 上找的 <a href="https://github.com/hwdsl2/docker-ipsec-vpn-server">hwdsl2/docker-ipsec-vpn-server</a>。</p>
+
+<p>镜像是通过 <code class="highlighter-rouge">Dockerfile</code> 实现，是一种类似 Shell 的描述文件：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FROM ubuntu:trusty
+MAINTAINER David Zhang &lt;crispgm@gmail.com&gt;
+RUN apt-get update \
+    &amp;&amp; apt-get install -y python-pip \
+    &amp;&amp; pip install shadowsocks
+
+COPY etc/shadowsocks.json /etc/shadowsocks.json
+
+EXPOSE 2968
+
+CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
+</code></pre>
+</div>
+
+<p>Dockerfile 很容易懂，主要是一些声明以及安装的一些过程，稍微阅读一下<a href="https://docs.docker.com/engine/reference/builder/">指令文档</a>即可。</p>
+
+<p>镜像基于 ubuntu:trusty，这个版本跟 Linode 上的系统版本并没有什么必然联系。Shadowsocks 在 pip 上，因此安装步骤异常简单。最后，把配置文件 <code class="highlighter-rouge">COPY</code> 进去，再 <code class="highlighter-rouge">EXPOSE</code> 端口。<code class="highlighter-rouge">CMD</code> 是 Container 启动后执行的命令。</p>
+
+<h2 id="container">启动 Container</h2>
+
+<p>完成编写后，就可以进行 Build：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker build -t crisp/shadowsocks .
+</code></pre>
+</div>
+
+<p>然后使用守护模式运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run --name ssserver -d -p 2968:2968 crisp/shadowsocks
+</code></pre>
+</div>
+
+<p>执行 Docker 的 <code class="highlighter-rouge">ps</code> 指令后，发现 Container 起来就挂掉了：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ docker ps
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+</code></pre>
+</div>
+
+<p>Docker 在运行时必须有前台程序，不能单独就运行一个守护进程。而常见的 Server 程序大多都是以守护进程运行的，因此，采用了一个小技巧：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start \
+    &amp;&amp; tail -f /var/log/shadowsocks.log
+</code></pre>
+</div>
+
+<p>这样，“容器化”改造顺利完成。</p>
+
+<h1 id="section-2">结论</h1>
+
+<p>比起更加底层的服务器虚拟化技术，Docker 是以应用程序为中心的虚拟化技术，它提供了标准可交付的软件。通过 Docker，我们可以快速构建出资源隔离的、安全的、不同的软件服务。</p>
+
+<p>此外，它在持续集成和持续交付上也有着很大潜力，未来会持续跟进探索。</p>
+
+<hr />
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Enable HTTPS with Let’s Encrypt. <a href="https://crispgm.com/page/enable-https-with-letsencrypt.html">https://crispgm.com/page/enable-https-with-letsencrypt.html</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Prepare for removal of PPTP VPN before you upgrade to iOS 10 and macOS Sierra. <a href="https://support.apple.com/en-us/HT206844">https://support.apple.com/en-us/HT206844</a>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Container技术和服务器虚拟化是一样的技术吗？<a href="http://dockone.io/question/5">http://dockone.io/question/5</a>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Docker on Linode. <a href="https://blog.linode.com/2014/01/03/docker-on-linode/">https://blog.linode.com/2014/01/03/docker-on-linode/</a>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Docker Quick Reference. <a href="https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet">https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet</a>. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    Docker
+    </div>
+    
+    <div class="tag-item">
+    Linode
+    </div>
+    
+    <div class="tag-item">
+    VPS
+    </div>
+    
+    <div class="tag-item">
+    DevOps
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/containerize-my-vps.html';
+      this.page.identifier = '/page/containerize-my-vps.html';
+      this.page.title = '我是如何把自己的 VPS 容器化的';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+    <footer>
+      <div>Copyright &copy; David Zhang, 2016.</div>
+    </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50708664-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+  </body>
+</html>
