@@ -22,9 +22,7 @@ tags:
 
 ## What
 
-> Knowledge management (KM) is the process of capturing, developing, sharing, and effectively using organizational knowledge. It refers to a multi-disciplinary approach to achieving organizational objectives by making the best use of knowledge.
->
-> From: <https://en.wikipedia.org/wiki/Knowledge_management>
+> Knowledge management (KM) is the process of capturing, developing, sharing, and effectively using organizational knowledge. It refers to a multi-disciplinary approach to achieving organizational objectives by making the best use of knowledge.[^1]
 
 根据维基百科的解释：
 
@@ -68,7 +66,7 @@ tags:
 
 ## 整理
 
-随着移动时代的发展，信息的碎片化程度越来越高，我们整理的难度更加加大了，还是一个[碎片化学习](http://blog.sina.com.cn/s/blog_4bff4c090102w8ny.html){:target="_blank"}的过程。我们需要抽象出一条知识的本质，进行整理分类。而整理也是分步骤的，分为粗略整理、精细整理和归档。
+随着移动时代的发展，信息的碎片化程度越来越高，我们整理的难度更加加大了，还是一个碎片化学习[^2]的过程。我们需要抽象出一条知识的本质，进行整理分类。而整理也是分步骤的，分为粗略整理、精细整理和归档。
 
 粗略整理是对刚获得的内容，进行初步分类，并且可能会“稍后阅读”。在经过阅读甚至是精读后，需要进行精细整理，进行准确的分类。而对于一些不再需求或者需求频率极低的知识，则要进行归档，统一归档到不活跃的区域中。
 
@@ -80,7 +78,7 @@ tags:
 
 分享并不只是一个“提倡”的事情，而是需要做的。我们获得的知识，很多都是源自于分享，没有别人的分享内容就不可能有自己的知识库。因此，对于非隐私和商业敏感信息以外的东西，我们应该尽可能分享出去。同时，知识分享的过程也是自己学习交流的一个机会，并且还是难得的构建自己个人品牌的机会。
 
-分享的方式有很多，对于程序员来说主要是：社区、问答(StackOverflow)、文档/wiki/博客等。对于分享的内容，需要选择合适的版权声明。对于个人博客上撰写文章，我推荐使用 [Creative Commons](https://creativecommons.org/) 系列的协议。
+分享的方式有很多，对于程序员来说主要是：社区、问答(StackOverflow)、文档/wiki/博客等。对于分享的内容，需要选择合适的版权声明。对于个人博客上撰写文章，我推荐使用 Creative Commons[^3] 系列的协议。
 
 ## 利用
 
@@ -90,13 +88,32 @@ tags:
 
 对于我本人来说，我的知识源主要有：
 
-* 搜索引擎 Google
+* 朋友圈/微博/口头交流
+* 书籍
 * RSS/Pocket
-* 技术网站
-* 朋友圈/微博
-* 口头交流
+* Google
+* Podcasting
+* 技术资讯（自媒体）网站
 
-首先，朋友圈/微博和口头交流并不一定是高效的知识，但属于生活的一部分，因此能贡献最好了。对于口头交流，会使用身边最方便的工具记录。这种记录本身可以很碎片，我选择的是 Apple Notes。
+## 朋友圈/微博/口头交流
+
+首先，朋友圈/微博和口头交流并不一定是高效的知识，但属于生活的一部分，因此能贡献最好了。对于口头交流，会使用身边最方便的工具记录，这种记录本身可以很碎片。这里推荐下无印良品的再生纸小本子，环保有格调。如果没有笔和纸，则会使用 Apple Notes。
+
+## RSS/Pocket
+
+在资讯网站领域，RSS 在国内可以说已经大势已去，但从控制信息源的角度来说，RSS 堪称完美。IT 牛人们大多喜欢自建博客并提供 RSS，很多资讯网站也支持 RSS，只需要一个 Reeder[^4] App，就可以获得足够多的高质量知识。
+
+即使是精选过，对于大部分 RSS 上的文章，可能也只是扫一下标题。有兴趣看看的，可以直接在 Reeder 上阅读，也可以保存到 Pocket 上稍后精读。对于真正比较好的内容，需要摘录到 OneNote 上。
+
+## Google
+
+技术相关的资料，一些解决问题的方法或者小教程，主要来自 Google，实际可能源自 StackOverflow 或者别人的博客。对于好的教程，可以先收藏到浏览器收藏夹，如果有很强的保存必要，可以直接用 OneNote 摘录下来。一些小的、杂的问题解决方法、命令实用技巧等，应该按照类别合并起来存到 OneNote 中，较为有意义的可以发布到个人博客。
+
+同时，在搜到需要的内容的同时，我们也应该顺带看一看这些网站是否值得长期关注。需要的话，也一同加进收藏夹或通过 RSS 订阅。
+
+## Podcasting
+
+Podcasting 在国内比较罕见，但国外的 Podcasting 非常流行，关于技术的话题也很多，一般都会邀请一些技术牛人特别是各类工具或框架的作者。回家的路上或者晚上在家的时候，听听 Podcasting 节目还是很有收获的。我们可以通过它，从第一人称口中，得到他们对一些技术事物的看法，或许能够获得一些启发。
 
 ### 降维
 
@@ -107,3 +124,10 @@ tags:
 ### 脑图
 
 ### 存档
+
+<hr>
+
+[^1]: <https://en.wikipedia.org/wiki/Knowledge_management>
+[^2]: 移动互联时代的碎片化学习及应对之策——从零存整取到“互联网+”课堂, <http://www.cnki.com.cn/Article/CJFDTotal-YCJY201604002.htm>
+[^3]: Creative Commons, <https://creativecommons.org/>
+[^4]: <http://reederapp.com/>
