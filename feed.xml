@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Sep 2016 23:55:03 +0800</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 23:55:03 +0800</lastBuildDate>
+    <pubDate>Tue, 20 Sep 2016 19:19:15 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2016 19:19:15 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -32,7 +32,7 @@
 
 &lt;p&gt;其次，由于历史原因上面的很多程序都是 root 账户运行，有较大的安全风险。之前就曾经发现网站部署程序存在 Shell 注入问题，幸好及时发现修复了。&lt;/p&gt;
 
-&lt;p&gt;最后，就是不同的程序有时会出现互相干扰的情况。如：VPN 使用的 iptables 可能会影响 Nginx 的对外端口。安装和测试新程序时，也会在系统产生中产生很多垃圾。&lt;/p&gt;
+&lt;p&gt;最后，就是不同的程序有时会出现互相干扰的情况。如：VPN 使用的 iptables 可能会影响 Nginx 的对外端口。安装和测试新程序时，也会在系统中产生很多垃圾。&lt;/p&gt;
 
 &lt;p&gt;因此，我的需求是：&lt;/p&gt;
 
