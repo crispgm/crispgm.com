@@ -20,6 +20,7 @@ body {
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: #333;
+  background-color: #fbfbfb;
   word-wrap: break-word;
   text-align: center;
   height: 100%;
