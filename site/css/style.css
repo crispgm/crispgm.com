@@ -49,8 +49,8 @@ blockquote {
 }
 a {
   text-decoration: none;
-  /* color: #08c; */
-  color: #333;
+  color: #06c; 
+  /*color: #333;*/
 }
 a:hover {
   text-decoration: underline;
@@ -153,13 +153,6 @@ sup {
 .article-title {
   font-size: 2.2rem;
 }
-.article-title a {
-  text-decoration: none;
-  color: #555;
-}
-.article-title a:hover {
-  text-decoration: underline;
-}
 .article-date {
   font-size: 1.0rem;
   color: #bbbbbb;
@@ -170,7 +163,7 @@ sup {
   margin-bottom: 1.2rem;
 }
 .article-main a{
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 p {
   line-height: 1.6rem;
@@ -259,7 +252,7 @@ pre.highlight {
   border: .05rem solid #aaaaaa;
   border-radius: .2rem;
   font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
-  /*overflow: scroll;*/
+  font-size: .85em;
 }
 code.hljs {
   padding: .8rem;
@@ -285,16 +278,12 @@ code.highlighter-rouge:hover {
 }
 .things-title {
   font-size: 1.2rem;
-  /*border-bottom: .05rem solid #aaaaaa;*/
   padding-bottom: .2rem;
 }
 .things-list {
 }
 .things-link {
   margin-top: .4rem;
-}
-.things-link a {
-  color: #bbbbbb;
 }
 .text-center {
   text-align: center;
