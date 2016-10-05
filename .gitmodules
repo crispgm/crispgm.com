@@ -1,3 +1,6 @@
 [submodule "resume/resume"]
 	path = resume/resume
 	url = https://github.com/crispgm/resume.git
+[submodule "wiki/wiki"]
+	path = wiki/wiki
+	url = https://github.com/crispgm/wiki.git

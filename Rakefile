@@ -44,6 +44,17 @@ task :resume do
   end
 end
 
+desc "Serve wiki"
+task :wiki do
+  Dir.chdir("wiki") do
+    sh "cp data/wiki.yml wiki/_data"
+    sh "cp _config.yml index.html wiki"
+    Dir.chdir("wiki") do
+      sh "jekyll serve"
+    end
+  end
+end
+
 desc "Build jekyll and push to gh-pages branch"
 task :build do
   # Clone to gh-pages
@@ -70,8 +81,17 @@ task :build do
       sh "git stash"
     end
   end
-  # Build others
-    # TODO
+  # Build wiki
+  Dir.chdir("wiki") do
+    Dir.chdir("wiki") do
+      sh "git stash"
+      sh "git pull origin master"
+      sh "cp ../data/wiki.yml _data"
+      sh "cp ../_config.yml ."
+      sh "jekyll build --destination=../../gh-pages/wiki/"
+      sh "git stash"
+    end
+  end
   # Push
   Dir.chdir("gh-pages") do
     sh "git add ."
