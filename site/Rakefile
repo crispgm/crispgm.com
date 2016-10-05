@@ -17,22 +17,22 @@ task :draft do
 end
 
 desc "Build jekyll and push to gh-pages branch"
-task :site do
+task :build do
   # Clone to gh-pages
-  unless File.exist?("./gh-pages")
-    sh "git clone -b gh-pages https://github.com/crispgm/crispgm.com.git gh-pages"
+  unless File.exist?("../gh-pages")
+    sh "git clone -b gh-pages https://github.com/crispgm/crispgm.com.git ../gh-pages"
   end
   # Checkout and pull
-  Dir.chdir('gh-pages') do
+  Dir.chdir('../gh-pages') do
     sh "git checkout gh-pages"
     sh "git pull origin gh-pages"
   end
   # Build site with Jekyll
-  sh "bundle exec jekyll build --destination=gh-pages"
+  sh "bundle exec jekyll build --destination=../gh-pages"
   # Push
-  Dir.chdir('gh-pages') do
+  Dir.chdir('../gh-pages') do
     sh "git add ."
-    sh "git commit --allow-empty -m \"Deployed at #{Time.now}\""
+    sh "git commit --allow-empty -m \"Site: Deployed at #{Time.now}\""
     sh "git push origin gh-pages"
   end
 end

@@ -15,16 +15,16 @@ task :serve do
   end
 end
 
-desc "Build jekyll and push to resume-page branch"
-task :resume do
+desc "Build jekyll and push to gh-pages branch"
+task :build do
   # Clone to gh-pages
-  unless File.exist?("./resume-page")
-    sh "git clone -b resume-page https://github.com/crispgm/crispgm.com.git resume-page"
+  unless File.exist?("../gh-pages")
+    sh "git clone -b gh-pages https://github.com/crispgm/crispgm.com.git ../gh-pages"
   end
   # Checkout and pull
-  Dir.chdir('resume-page') do
-    sh "git checkout resume-page"
-    sh "git pull origin resume-page"
+  Dir.chdir('../gh-pages') do
+    sh "git checkout gh-pages"
+    sh "git pull origin gh-pages"
   end
   # Build site with Jekyll
   Dir.chdir('resume') do
@@ -32,12 +32,12 @@ task :resume do
     sh "git pull origin master"
     sh "cp ../data/resume.yml _data"
     sh "cp ../_config.yml ."
-    sh "jekyll build --destination=../resume-page"
+    sh "jekyll build --destination=../../gh-pages/resume/"
   end
   # Push
-  Dir.chdir('resume-page') do
+  Dir.chdir('../gh-pages') do
     sh "git add ."
-    sh "git commit --allow-empty -m \"Deployed at #{Time.now}\""
-    sh "git push origin resume-page"
+    sh "git commit --allow-empty -m \"Resume: Deployed at #{Time.now}\""
+    sh "git push origin gh-pages"
   end
 end
