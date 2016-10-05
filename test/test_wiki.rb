@@ -1,9 +1,9 @@
 require "helper"
 
-class TestResume < Minitest::Test
-  context "open crispgm.com/resume/" do
+class TestSite < Minitest::Test
+  context "open crispgm.com/wiki/" do
     setup do
-      @resp = open("https://crispgm.com/resume/")
+      @resp = open("https://crispgm.com/wiki/")
     end
 
     should "status equal to 200" do
