@@ -1,0 +1,290 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2016
+ */
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  font-size: 16px;
+}
+@media (max-width: 48rem) {
+  html {
+    font-size: 12px;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Avenir", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  background-color: #fbfbfb;
+  word-wrap: break-word;
+  text-align: center;
+  height: 100%;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.6rem;
+  color: #555;
+}
+h3 {
+  font-size: 1.4rem;
+  color: #555;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1.0rem;
+}
+blockquote {
+  border-left: 1px solid #aaaaaa;
+  margin-left: 12px;
+  padding-left: 8px;
+}
+a {
+  text-decoration: none;
+  color: #06c; 
+  /*color: #333;*/
+}
+a:hover {
+  text-decoration: underline;
+}
+ul li p {
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  padding: .25rem;
+  background-color: #f5f5f5;
+}
+td {
+  padding: .25rem;
+}
+tr {
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+sup {
+  vertical-align: auto;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+}
+/* content */
+#content {
+  margin: 0 auto;
+  max-width: 48rem;
+}
+@media (max-width: 48rem) {
+  #content {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+/* Menu */
+.menu {
+  border-bottom: .1rem solid #aaaaaa;
+}
+.menu-home {
+  font-size: 3.2rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3.2rem;
+}
+.menu-home a {
+  color: #333;
+  text-decoration: none;
+}
+.menu-links {
+  font-size: 0.875rem;
+  height: 2rem;
+  text-align: center;
+  padding-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-item {
+  height: 2rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  text-align: center;
+}
+.menu-item a {
+  color: #bbbbbb;
+}
+.menu-item a:hover {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+}
+.menu-active a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+}
+@media (max-width: 48rem) {
+  .menu-home {
+    font-size: 2.2rem;
+    padding-top: 3.25rem;
+    padding-bottom: 3.2rem;
+  }
+  .menu-item {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+/* Article */
+.article {
+  text-align: left;
+  margin-top: 2.0rem;
+}
+.article-head {
+  text-align: center;
+}
+.article-title {
+  font-size: 2.2rem;
+}
+.article-date {
+  font-size: 1.0rem;
+  color: #bbbbbb;
+}
+.article-main {
+  font-size: 1.0rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.article-main a{
+  /*text-decoration: underline;*/
+}
+p {
+  line-height: 1.6rem;
+}
+/* Tags */
+.article-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: .1rem solid #aaaaaa;
+  margin-bottom: 2rem;
+}
+.tag-item:before {
+  content: "#";
+}
+.tag-item {
+  padding: .2rem;
+  margin-right: .25rem;
+  margin-bottom: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tag-item:hover {
+  font-weight: bold;
+}
+.tag-item-name {
+  margin-right: .5rem;
+}
+.tag-item-count {
+  font-size: .75rem;
+}
+/* Archive */
+.archive-main {
+  margin-bottom: 1rem;
+}
+.archive-main a {
+  text-decoration: none;
+}
+.archive-main a:hover {
+  text-decoration: underline;
+}
+.archive-item {
+  margin-top: .5rem;
+  overflow: auto; /* clearfix */
+}
+.archive-year {
+  margin-top: 2rem;
+}
+.archive-date {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #bbbbbb;
+}
+@media (min-width: 48rem) {
+  .archive-date {
+    float: right;
+    margin-left: 1rem;
+  }
+  .archive-item {
+    margin-top: 0;
+  }
+}
+/* disqus */
+#disqus_thread {
+}
+#disqus_thread iframe {
+  text-align: center;
+}
+/* footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+img {
+  border: 0;
+  max-width: 640px;
+  max-height: 480px;
+}
+/* codes */
+pre.highlight {
+  border: .05rem solid #aaaaaa;
+  border-radius: .2rem;
+  font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
+  font-size: .85em;
+}
+code.hljs {
+  padding: .8rem;
+}
+/* inline codes */
+code.highlighter-rouge {
+  border: .05rem solid #aaaaaa;
+  border-radius: .2rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+code.highlighter-rouge:hover {
+  color: white;
+  background-color: #aaaaaa;
+}
+/* things & project */
+.things-content {
+  display: block;
+}
+.things-box {
+  width: 100%;
+  margin-bottom: 2.8rem;
+}
+.things-title {
+  font-size: 1.2rem;
+  padding-bottom: .2rem;
+}
+.things-list {
+}
+.things-link {
+  margin-top: .4rem;
+}
+.text-center {
+  text-align: center;
+}
