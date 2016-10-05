@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.9.0)
+    shoulda-context (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest (= 5.9.0)
+  shoulda-context
+
+BUNDLED WITH
+   1.12.5
