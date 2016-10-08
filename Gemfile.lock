@@ -9,9 +9,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest (= 5.9.0)
-  rake (= 11.2.2)
-  shoulda-context (= 1.2.1)
+  minitest
+  rake
+  shoulda-context
 
 BUNDLED WITH
    1.12.5
