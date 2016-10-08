@@ -65,6 +65,11 @@ a:hover {
   border: none;
   text-align: center;
   letter-spacing: .2rem;
+  cursor: hand;
+}
+.dropdown-button a {
+  color: #fbfbfb;
+  text-decoration: none;
 }
 .dropdown {
   position: relative;
@@ -84,9 +89,6 @@ a:hover {
   text-decoration: none;
   display: block;
   padding: .5rem;
-}
-.dropdown-content a:hover {
-  color: #06c;
 }
 .dropdown-show {
   display:block;
