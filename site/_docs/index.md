@@ -7,7 +7,7 @@ Hi, I am David Zhang, a.k.a __Crisp__ or __Crispgm__ on the internet. I work as 
 
 Check out my latest blog post, "[{{ site.posts.first.title }}]({{ site.posts.first.url }})". [Subcribe blog updates](feed.xml){:target="_blank"}.
 
-In leisure times, photography and coffee are things I greatly appreciate. I am interested in improving productivity with great tools chain and systematic methodology. And I go to the theater cheering for my idols with _glo-sticks_ every week.
+In leisure times, photography, reading and coffee are things I greatly appreciate. I am also interested in improving productivity with great tools chain and systematic methodology. And I go to the theater cheering for my idols with _glo-sticks_ every week.
 
 Follow me:
 
