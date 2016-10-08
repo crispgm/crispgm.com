@@ -68,7 +68,7 @@ task :build do
   end
   # Build site
   Dir.chdir("site") do
-    sh "bundle exec jekyll build --destination=../gh-pages"
+    sh "bundle exec jekyll build --destination=../gh-pages/"
   end
   # Build resume
   Dir.chdir("resume") do
