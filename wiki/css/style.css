@@ -25,7 +25,6 @@ body {
   text-align: center;
   height: 100%;
 }
-/* footer */
 footer {
   text-align: center;
   font-size: 1rem;
@@ -54,15 +53,43 @@ a:hover {
   }
 }
 .menu {
-  display: flex;
-  margin-top: 1rem;
+  padding-top: 2rem;
+}
+.dropdown-button {
+  color: #fbfbfb;
+  background-color: #333;
+  width: 8rem;
   font-size: 1.25rem;
+  padding: .5rem;
+  border-radius: .2rem;
+  border: none;
+  text-align: center;
+  letter-spacing: .2rem;
 }
-.menu-item {
-  padding-right: 1rem;
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
-.menu-active {
-  text-decoration: underline;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: #fbfbfb;
+  background-color: #333;
+  width: 8rem;
+}
+.dropdown-content a {
+  font-size: 1rem;
+  color: #fbfbfb;
+  text-decoration: none;
+  display: block;
+  padding: .5rem;
+}
+.dropdown-content a:hover {
+  color: #06c;
+}
+.dropdown-show {
+  display:block;
 }
 .section {
   text-align: left;

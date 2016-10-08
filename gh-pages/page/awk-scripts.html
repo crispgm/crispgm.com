@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
+    <title>awk 日志统计脚本 | DAVID ZHANG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/zenburn.css">
+    <link rel="stylesheet" href="/css/opensans.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <script src="/script/highlight.pack.js"></script>
+    <!-- <script src="/script/jquery-3.1.0.min.js"></script> -->
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div id="content">
+    <header class="menu">
+      <div class="menu-home">
+        <a href="/">DAVID ZHANG</a>
+      </div>
+      <div class="menu-links">
+        <div class="menu-item">
+          <a href="/blog.html">Blog</a>
+        </div>
+        <div class="menu-item">
+          <a href="/project.html">Project</a>
+        </div>
+        <div class="menu-item">
+          <a href="/things.html">Things</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </header>
+<div class="article">
+  <div class="article-head">
+    <div class="article-title">awk 日志统计脚本</div>
+    <div class="article-date">July 20, 2013</div>
+  </div>
+  <div class="article-main">
+    <p>使用 awk 统计日志中各项平均耗时</p>
+
+<h3 id="section">基础扫描版</h3>
+
+<p>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>less ui.log | 
+awk 'BEGIN{FS="Timer\\["}{print $2}' | 
+awk 'BEGIN{FS="\\]"}{print $1}' | 
+awk '{for(i=1;i&lt;=NF;i++){if($i!~/tbapi/){print $i}}}' | 
+awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | 
+sort -n
+</code></pre>
+</div>
+
+<h3 id="section-1">定时刷新版</h3>
+
+<p>每 2s 自动 tail 500 条，原理同上</p>
+
+<p>（ps：符号转义好恶心啊）</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set +o history
+watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i&lt;=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  
+</code></pre>
+</div>
+
+  </div>
+  
+  <div class="article-tag">
+    
+    <div class="tag-item">
+    awk
+    </div>
+    
+    <div class="tag-item">
+    shell
+    </div>
+    
+  </div>
+  
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/awk-scripts.html';
+      this.page.identifier = '/page/awk-scripts.html';
+      this.page.title = 'awk 日志统计脚本';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+      s.src = '//crispgm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+    <footer>
+      <div>Copyright &copy; David Zhang, 2016.</div>
+    </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50708664-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+  </body>
+</html>
