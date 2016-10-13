@@ -12,7 +12,7 @@ collections:
 
 plugins_dir: _plugins
 gems:
-  - jemoji
+  # - jemoji
   - jekyll-tagslist
   - jekyll-disqus
   - jekyll-google-analytics

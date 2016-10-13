@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "jekyll"
 
 group :jekyll_plugins do
-  gem "jemoji"
+  #gem "jemoji"
   gem "jekyll-compose"
   gem "jekyll-tagslist"
   gem "jekyll-disqus"
