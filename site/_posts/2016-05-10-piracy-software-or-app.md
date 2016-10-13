@@ -75,10 +75,10 @@ tags:
 
 这里列出一些我购买过的软件或 App 的列表，算是一个小小的推荐。
 
-* ¥283 [Ulysses for Mac](https://itunes.apple.com/cn/app/ulysses/id623795237?mt=12)
-* ¥163 [Dash 3](https://itunes.apple.com/cn/app/dash-3-api-docs-snippets./id449589707?mt=12)
-* ¥30 [Reeder 3 for iOS](https://itunes.apple.com/cn/app/reeder-3/id697846300?mt=8)
-* ¥25 [Enlight](https://itunes.apple.com/cn/app/enlight/id930026670?mt=8)
+* ¥283 [Ulysses for Mac](https://ulyssesapp.com/)
+* ¥163 [Dash 3](https://kapeli.com/dash)
+* ¥30 [Reeder 3 for iOS](http://reederapp.com/ios/)
+* ¥25 [Enlight](https://www.enlightapp.com/)
 * ¥12 [WordBook](https://itunes.apple.com/cn/app/wordbook-english-dictionary/id289694924?mt=8)
 * ¥18 [Workflow](https://itunes.apple.com/cn/app/workflow-powerful-automation/id915249334?mt=8)
 * ¥25 [Manico](https://itunes.apple.com/cn/app/manico/id724472954?mt=12)
