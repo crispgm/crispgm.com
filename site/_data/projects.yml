@@ -25,6 +25,15 @@
       href: https://urlautoredirector.github.io/
     - text: Chrome WebStore
       href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
+- name: GSM Sources Manager
+  description: GSM is a simple sources manager for RubyGems.
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/gsm
+    - text: Homepage
+      href: https://crispgm.github.io/gsm/
+    - text: RubyGems
+      href: https://rubygems.org/gems/gsm-sources-manager
 - name: Crisp Minimalist's Résumé Template
   description: A minimalist's résumé template powered by Jekyll.
   links:
