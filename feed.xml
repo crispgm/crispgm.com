@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Oct 2016 17:46:18 +0800</pubDate>
-    <lastBuildDate>Wed, 19 Oct 2016 17:46:18 +0800</lastBuildDate>
+    <pubDate>Thu, 20 Oct 2016 13:48:52 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Oct 2016 13:48:52 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -241,12 +241,16 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
   &lt;p&gt;我们有最好的人工智能，有最好的计算机硬件，有最好的精密机械。这个团队可以完成任何事情。这也是典型的以色列风格——有一支由高素质的专业人才组成的小型精英团队，他们一同为了一个共同的目标夜以继日地工作。梅蒂诺(Medinol)是这支相同的主旋律的一段变奏曲，在梅蒂诺，一个人要处理包括他自己在内的公司的所有事务：生物、医学、工程、计算机科学以及精密机械。在美国的大企业里，让一个程序员理解血管生物学或者让一个医生理解材料工程，几乎是不可能的事情。所以，最后的决议需要协商拟定通过，这是一个繁琐而不精确的过程。但是在梅蒂诺，这是综合的，就像Orbotech是一个完全跨学科的公司一样。时间被节省下来，效率则提升至原来的三倍。&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;计算机内部的风扇有悖于禅意，它们的噪音让人无法集中精神。&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;section-1&quot;&gt;来源&lt;/h2&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;《重新定义公司:谷歌是如何运营的》(How Google Works) &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;《重新定义公司:谷歌是如何运营的》(How Google Works)，埃里克·施密特、乔纳森·罗森博格 (Eric Schmidt &amp;amp; Jonathan Rosenberg)。 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;罗永浩 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -255,7 +259,10 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
       &lt;p&gt;Ludwig Mies van der Rohe &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;我的应许之地 &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;《我的应许之地》(My Promised Land: The Triumph and Tragedy of Israel)，阿里·沙维特 (Ari Shavit)。 &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;《史蒂夫·乔布斯传》（Steve Jobs），沃尔特·艾萨克森 (Walter Isaacson)。 &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
