@@ -1,15 +1,17 @@
   <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="{{ site.keywords | join: ', ' }}"/>
     <meta name="description" content="{{ site.description }}"/>
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="{{ site.url }}{{ page.permalink }}">
+    <link rel="alternate" href="{{ site.alt_url }}">
+    <link rel="alternate" href="{{ site.url }}/feed.xml" type="application/rss+xml" title="RSS">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/zenburn.css">
     <link rel="stylesheet" href="/css/opensans.css">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
-    <script src="/script/highlight.pack.js"></script>
     <!-- <script src="/script/jquery-3.1.0.min.js"></script> -->
+    <script src="/script/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
