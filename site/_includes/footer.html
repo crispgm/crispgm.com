@@ -1,4 +1,8 @@
     <footer>
       <div>Copyright &copy; {{site.author}}, {{site.time | date: "%Y"}}.</div>
     </footer>
+    {% if page.disable_syntax_highlight != true %}
+    <script src="/script/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    {% endif %}
     {% ga %}
