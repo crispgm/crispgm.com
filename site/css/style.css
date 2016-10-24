@@ -288,3 +288,32 @@ code.highlighter-rouge:hover {
 .text-center {
   text-align: center;
 }
+#credit {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.credit-item {
+  width: 16rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.credit-item a {
+  color: #333;
+}
+.credit-item a:hover {
+  text-decoration: none;
+}
+.credit-item a:hover .credit-name{
+  color: #06c;
+}
+.credit-reason {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.credit-name {
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
