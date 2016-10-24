@@ -17,7 +17,7 @@ All the articles are written in GitHub Flavored Markdown format.
 
 ## Credit
 
-<div id="credit">
+<div id="credit-list">
   {% for item in site.data.credit %}
   <div class="credit-item">
     <a href="{{ item.link }}" target="_blank">
