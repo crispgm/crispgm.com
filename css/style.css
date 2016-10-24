@@ -288,7 +288,7 @@ code.highlighter-rouge:hover {
 .text-center {
   text-align: center;
 }
-#credit {
+#credit-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -308,7 +308,7 @@ code.highlighter-rouge:hover {
   color: #06c;
 }
 .credit-reason {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-style: italic;
 }
 .credit-name {
@@ -316,4 +316,28 @@ code.highlighter-rouge:hover {
   padding-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
+}
+@media (max-width: 48rem) {
+  #credit-list {
+    display: block;
+  }
+  .credit-item {
+    width: 100%;
+  }
+  .credit-item a{
+    display: flex;
+  }
+  .credit-reason {
+    width: 9.6rem;
+    display: inline-block;
+    border-right: .1rem solid #333;
+    text-align: right;
+    padding-top: .25rem;
+    padding-right: 1rem;
+  }
+  .credit-name {
+    padding-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
