@@ -323,21 +323,16 @@ code.highlighter-rouge:hover {
   }
   .credit-item {
     width: 100%;
+    text-align: left;
   }
   .credit-item a{
-    display: flex;
   }
   .credit-reason {
     width: 9.6rem;
     display: inline-block;
-    border-right: .1rem solid #333;
-    text-align: right;
     padding-top: .25rem;
-    padding-right: 1rem;
   }
   .credit-name {
-    padding-left: 1rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 }
