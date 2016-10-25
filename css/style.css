@@ -25,6 +25,10 @@ body {
   text-align: center;
   height: 100%;
 }
+body ::selection {
+  background-color: #333;
+  color: #fbfbfb;
+}
 h1 {
   font-size: 1.8rem;
 }

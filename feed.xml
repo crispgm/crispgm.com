@@ -5,9 +5,9 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Oct 2016 13:21:06 +0800</pubDate>
-    <lastBuildDate>Mon, 24 Oct 2016 13:21:06 +0800</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <pubDate>Tue, 25 Oct 2016 14:48:51 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Oct 2016 14:48:51 +0800</lastBuildDate>
+    <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>我是如何把自己的 VPS 容器化的</title>
