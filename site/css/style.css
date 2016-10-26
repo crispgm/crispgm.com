@@ -25,6 +25,10 @@ body {
   text-align: center;
   height: 100%;
 }
+body ::selection {
+  background-color: #333;
+  color: #fbfbfb;
+}
 h1 {
   font-size: 1.8rem;
 }
@@ -259,14 +263,9 @@ code.hljs {
 }
 /* inline codes */
 code.highlighter-rouge {
-  border: .05rem solid #aaaaaa;
+  background-color: #ddd;
   border-radius: .2rem;
-  padding-left: .2rem;
-  padding-right: .2rem;
-}
-code.highlighter-rouge:hover {
-  color: white;
-  background-color: #aaaaaa;
+  padding: .1rem .3rem .1rem .3rem;
 }
 /* things & project */
 .things-content {
@@ -287,4 +286,52 @@ code.highlighter-rouge:hover {
 }
 .text-center {
   text-align: center;
+}
+#credit-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.credit-item {
+  width: 16rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.credit-item a {
+  color: #333;
+}
+.credit-item a:hover {
+  text-decoration: none;
+}
+.credit-item a:hover .credit-name{
+  color: #06c;
+}
+.credit-reason {
+  font-size: 1rem;
+  font-style: italic;
+}
+.credit-name {
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+@media (max-width: 48rem) {
+  #credit-list {
+    display: block;
+  }
+  .credit-item {
+    width: 100%;
+    text-align: left;
+  }
+  .credit-item a{
+  }
+  .credit-reason {
+    width: 9.6rem;
+    display: inline-block;
+    padding-top: .25rem;
+  }
+  .credit-name {
+    padding: 0;
+  }
 }
