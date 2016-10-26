@@ -263,14 +263,9 @@ code.hljs {
 }
 /* inline codes */
 code.highlighter-rouge {
-  border: .05rem solid #aaaaaa;
+  background-color: #ddd;
   border-radius: .2rem;
-  padding-left: .2rem;
-  padding-right: .2rem;
-}
-code.highlighter-rouge:hover {
-  color: white;
-  background-color: #aaaaaa;
+  padding: .1rem .3rem .1rem .3rem;
 }
 /* things & project */
 .things-content {
