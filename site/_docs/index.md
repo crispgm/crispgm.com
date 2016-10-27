@@ -24,3 +24,5 @@ There are what I advocate:
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
+
+New: a [Wiki](/wiki/) is in beta version now.
