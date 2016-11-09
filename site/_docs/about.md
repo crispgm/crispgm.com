@@ -9,11 +9,16 @@ disable_syntax_highlight: true
 
 Copyright &copy; David Zhang, 2016.
 
-All the blogs are licensed under a [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/) license.
+[Subscribe Blog Updates](/feed.xml){:target="_blank"}.
 
 All the articles are written in GitHub Flavored Markdown format.
 
-[Subscribe Blog Updates](/feed.xml){:target="_blank"}.
+The site source is [on GitHub](https://github.com/crispgm/crispgm.com). The site theme is [working in progress](https://github.com/crispgm/jekyll-crisp-minimalism-theme) but not available yet.
+
+## License
+
+* All the blogs are licensed under a [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/) license.
+* Site source is licensed under MIT License.
 
 ## Credit
 
