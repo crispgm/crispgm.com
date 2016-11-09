@@ -4,3 +4,4 @@ baseurl: "/wiki"
 exclude:
   - README.md
   - LICENSE
+  - /screenshots
