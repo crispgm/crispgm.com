@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/wiki/css/style.css">
+    <link rel="stylesheet" href="/wiki/css/custom.css">
   </head>
   <body>
     <div class="container">
@@ -66,6 +67,22 @@
           </div>
         </div>
         
+      </div>
+      <div id="disqus_thread"></div>
+        <script>
+        var disqus_config = function () {
+            this.page.url = 'https://crispgm.com/wiki/';
+            this.page.identifier = '/wiki/';
+            this.page.title = 'Crisp Wiki';
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+            s.src = '//crispgm.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
     </div>
     <footer>
