@@ -38,7 +38,7 @@
   description: A minimalist's résumé template powered by Jekyll.
   links:
     - text: GitHub
-    - href: https://github.com/crispgm/resume
+      href: https://github.com/crispgm/resume
 - name: jekyll-tagslist
   description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
   links:
