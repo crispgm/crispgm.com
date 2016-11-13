@@ -4,6 +4,7 @@ title:  48 个你需要知道的 Jekyll 使用技巧
 permalink: /page/48-tips-for-jekyll-you-should-know.html
 tags:
 - jekyll
+- tips
 ---
 ## 简介
 
@@ -48,6 +49,12 @@ $ jekyll build
 $ jekyll b
 ```
 
+通过 `--destination` 指定目标路径：
+
+```
+$ jekyll build --destination=/path/to/site
+```
+
 #### 使用 `jekyll new-theme` 创建主题
 
 ## 配置
@@ -55,6 +62,24 @@ $ jekyll b
 #### Frontmatter 默认值
 
 ## Liquid 模板
+
+#### 什么是 Liquid?
+
+Liquid 是一个开源模版语言，由电商公司 Shopify 实现，用 Ruby 编写。Shopify 自己使用 Liquid 来构建自己电商网站模板生态。
+
+详细文档请参考 <https://shopify.github.io/liquid/>。
+
+#### 变量
+
+#### if
+
+#### for .. in
+
+#### assign
+
+#### capture
+
+#### Filters
 
 ## 插件
 

@@ -48,6 +48,7 @@ desc "Serve wiki"
 task :wiki do
   Dir.chdir("wiki") do
     sh "cp data/wiki.yml wiki/_data"
+    sh "cp css/custom.css wiki/css"
     sh "cp _config.yml index.html wiki"
     Dir.chdir("wiki") do
       sh "jekyll serve"
@@ -87,6 +88,7 @@ task :build do
       sh "git stash"
       sh "git pull origin master"
       sh "cp ../data/wiki.yml _data"
+      sh "cp ../css/custom.css css"
       sh "cp ../_config.yml ../index.html ."
       sh "jekyll build --destination=../../gh-pages/wiki/"
       sh "git stash"
