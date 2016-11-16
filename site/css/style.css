@@ -9,7 +9,7 @@ html {
   width: 100%;
   font-size: 16px;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   html {
     font-size: 12px;
   }
@@ -23,7 +23,6 @@ body {
   background-color: #fbfbfb;
   word-wrap: break-word;
   text-align: center;
-  height: 100%;
 }
 body ::selection {
   background-color: #333;
@@ -53,8 +52,7 @@ blockquote {
 }
 a {
   text-decoration: none;
-  color: #06c; 
-  /*color: #333;*/
+  color: #06c;
 }
 a:hover {
   text-decoration: underline;
@@ -86,9 +84,9 @@ sup {
 /* content */
 #content {
   margin: 0 auto;
-  max-width: 48rem;
+  max-width: 42rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   #content {
     padding-left: .5rem;
     padding-right: .5rem;
@@ -135,7 +133,7 @@ sup {
   font-weight: 500;
   text-decoration: none;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   .menu-home {
     font-size: 2.2rem;
     padding-top: 3.25rem;
@@ -223,7 +221,7 @@ p {
   margin-bottom: 0;
   color: #bbbbbb;
 }
-@media (min-width: 48rem) {
+@media (min-width: 42rem) {
   .archive-date {
     float: right;
     margin-left: 1rem;
@@ -293,7 +291,7 @@ code.highlighter-rouge {
   flex-wrap: wrap;
 }
 .credit-item {
-  width: 16rem;
+  width: 14rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -312,11 +310,10 @@ code.highlighter-rouge {
 }
 .credit-name {
   font-size: 1.4rem;
-  padding-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   #credit-list {
     display: block;
   }
@@ -327,7 +324,6 @@ code.highlighter-rouge {
   .credit-item a{
   }
   .credit-reason {
-    width: 9.6rem;
     display: inline-block;
     padding-top: .25rem;
   }
