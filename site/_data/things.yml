@@ -4,15 +4,14 @@
   - name: Photography
   - name: Coffee
     link: /page/awesome-coffee-shops-in-beijing.html
-  - name: Crafted Beer
   - name: ASMR Sounds
   - name: Soccer/Rugby
   - name: Fighter/Warship/Submarine
-  - name: Document Film
+  - name: Documentary Film
 
 - category: Devices
   items:
-  - name: Mac Book Air/Mac Book Pro
+  - name: MacBook Air/MacBook Pro
   - name: iPhone SE
   - name: Kindle Oasis
   - name: Bose Wave Music System
