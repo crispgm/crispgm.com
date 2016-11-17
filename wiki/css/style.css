@@ -9,7 +9,7 @@ html {
   width: 100%;
   font-size: 16px;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   html {
     font-size: 12px;
   }
@@ -29,24 +29,24 @@ footer {
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   margin-bottom: 1.2rem;
 }
 a {
   text-decoration: none;
-  color: #06c; 
+  color: #06c;
 }
 a:hover {
   text-decoration: underline;
 }
 .container {
-  max-width: 48rem;
+  max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   .container {
     padding-left: .4rem;
     padding-right: .4rem;
@@ -97,19 +97,30 @@ a:hover {
   text-align: left;
   margin-top: 2rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 42rem) {
   .section {
     padding-left: .4rem;
   }
 }
 .section-wrap {
-  border-bottom: .1rem solid #ddd;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 .1rem .4rem 0 #ddd;
+  padding: 1rem;
 }
 .section-item {
-  margin-top: 1rem;
+  display: flex;
+  line-height: 1.25;
+}
+.section-item:first-of-type {
   margin-bottom: 1rem;
 }
-.item-q:before {
+.section-title {
+}
+.section-content {
+  padding-right: .5rem;
+}
+.title-q:before {
   content: "Q";
   display: inline-block;
   width: 1rem;
@@ -117,7 +128,7 @@ a:hover {
   margin-right: .5rem;
   border-right: .1rem solid #aaa;
 }
-.item-a:before {
+.title-a:before {
   content: "A";
   display: inline-block;
   width: 1rem;
