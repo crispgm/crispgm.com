@@ -25,12 +25,20 @@ layout: null
       </header>
       <div class="section">
         {% for item in site.data.wiki %}
-        <div class="section-wrap">
-          <div class="section-item item-q">
-            {{ item.q }}
+        <div class="section-wrap" id="{{ item.id }}">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              {{ item.q }}
+            </div>
           </div>
-          <div class="section-item item-a">
-            {{ item.a }}
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              {{ item.a }}
+            </div>
           </div>
         </div>
         {% endfor %}
