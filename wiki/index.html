@@ -14,8 +14,10 @@
           <div class="dropdown-button">
             <a href="javascript:toggleDropdown()">Crisp Wiki</a>
           </div>
-          <div id="dropdown-menu" class="dropdown-content">
+          <div class="dropdown-button">
             <a href="https://crispgm.com/">Home</a>
+          </div>
+          <div class="dropdown-button">
             <a href="https://crispgm.com/about.html">About</a>
           </div>
         </div>
@@ -133,11 +135,18 @@
     </footer>
     <script>
     function toggleDropdown() {
-        document.getElementById("dropdown-menu").classList.toggle("dropdown-show");
+        var dropdowns = document.getElementsByClassName("dropdown-button");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (!openDropdown.classList.contains('dropdown-show')) {
+            openDropdown.classList.toggle('dropdown-show');
+          }
+        }
     }
     window.onclick = function(event) {
       if (!event.target.matches('.dropdown-button')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var dropdowns = document.getElementsByClassName("dropdown-button");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
           var openDropdown = dropdowns[i];
