@@ -5,9 +5,287 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Nov 2016 13:40:23 +0800</pubDate>
-    <lastBuildDate>Thu, 17 Nov 2016 13:40:23 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 22:45:28 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 22:45:28 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>48 个你需要知道的 Jekyll 使用技巧</title>
+        <description>&lt;p&gt;很久以前，本人的个人博客是 PHP 写的简单页面，实时转换 Markdown。后来，为了简单，用 PHP 写了一个静态博客转换器。虽用起来还比较舒服，但通用性太差了。于是转向 GitHub Pages 官方支持的 Jekyll，没想到只花了20分钟就完成了迁移，开发体验颇好。深入使用和参与了许久后，决定写一篇 Jekyll 相关的 Tips 的文章，仅供大家参考。&lt;/p&gt;
+
+&lt;p&gt;目前还没完全写完，先发出来。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;简介&lt;/h2&gt;
+
+&lt;h4 id=&quot;jekyll&quot;&gt;什么是 Jekyll&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 是一个简单的，博客感知的，静态网站生成器。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;安装&lt;/h4&gt;
+
+&lt;p&gt;首先，你得有 Ruby。对于 Mac 用户，可以使用 Homebrew 安装。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install ruby
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;然后：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;gem-&quot;&gt;Gem 安装不上或者很慢怎么办？&lt;/h4&gt;
+
+&lt;p&gt;RubyGems 是一个优秀的包管理系统，但再优秀也扛不住墙和距离，所以一般情况下，中国大陆的用户需要更换 RubyGems 的源。&lt;/p&gt;
+
+&lt;p&gt;建议更换成 Ruby-China 的源，参考 &lt;a href=&quot;https://gems.ruby-china.org/&quot;&gt;https://gems.ruby-china.org/&lt;/a&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;同时，也广告一下本人的作品：&lt;a href=&quot;https://crispgm.github.io/gsm/&quot;&gt;Gem Sources Manager&lt;/a&gt;，专门用于切换源。&lt;/p&gt;
+
+&lt;h4 id=&quot;mac-osx-el-capitan-&quot;&gt;Mac OSX El Capitan 安装失败&lt;/h4&gt;
+
+&lt;p&gt;从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/bin&lt;/code&gt; 等文件夹无法写入。因此需要更换安装路径。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gem install -n /usr/local/bin jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011&quot;&gt;https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;bundler&quot;&gt;Bundler&lt;/h4&gt;
+
+&lt;p&gt;Jekyll 3.3.0 之后开始采用 Bundler 方式运行。安装时，需要同时安装 Bundler：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;所以所有命令可能也需要使用 Bundler：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;命令&lt;/h2&gt;
+
+&lt;h4 id=&quot;jekyll-new-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; 创建新站点&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new my-jekyll-site
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;也可以：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir my-jekyll-site
+$ cd my-jekyll-site
+$ jekyll new .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;jekyll-serve-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 在本地运行站点&lt;/h4&gt;
+
+&lt;p&gt;以下三种使用方式是等价的：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve
+$ jekyll server
+$ jekyll s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt; 进行访问。&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll-build-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 生成站点&lt;/h4&gt;
+
+&lt;p&gt;以下两种使用方式是等价的：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build
+$ jekyll b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;--destination&lt;/code&gt; 指定目标路径：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build --destination=/path/to/site
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;jekyll-new-theme-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new-theme&lt;/code&gt; 创建主题&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new-theme my-theme
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;配置&lt;/h2&gt;
+
+&lt;h4 id=&quot;front-matter-&quot;&gt;Front Matter 默认值&lt;/h4&gt;
+
+&lt;h2 id=&quot;liquid-&quot;&gt;Liquid 模板&lt;/h2&gt;
+
+&lt;h4 id=&quot;liquid&quot;&gt;什么是 Liquid?&lt;/h4&gt;
+
+&lt;p&gt;Liquid 是一个开源模版语言，由电商公司 Shopify 实现，用 Ruby 编写。Shopify 自己使用 Liquid 来构建自己电商网站模板生态。&lt;/p&gt;
+
+&lt;p&gt;详细文档请参考 &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;https://shopify.github.io/liquid/&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;变量&lt;/h4&gt;
+
+&lt;h4 id=&quot;if&quot;&gt;if&lt;/h4&gt;
+
+&lt;h4 id=&quot;for--in&quot;&gt;for .. in&lt;/h4&gt;
+
+&lt;h4 id=&quot;assign&quot;&gt;assign&lt;/h4&gt;
+
+&lt;h4 id=&quot;capture&quot;&gt;capture&lt;/h4&gt;
+
+&lt;h4 id=&quot;filters&quot;&gt;Filters&lt;/h4&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;插件&lt;/h2&gt;
+
+&lt;h4 id=&quot;jekyll-watch&quot;&gt;Jekyll Watch&lt;/h4&gt;
+
+&lt;p&gt;Jekyll “必备”的插件，因为这是 Jekyll 程序的依赖，只是因为程序结构设计被剥离成了插件。它在本地预览时，提供文件变更的自动更新，让我们每次刷新都能自动看到最新的内容。&lt;/p&gt;
+
+&lt;p&gt;Jekyll Watch 是自动开启的：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve --watch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;jekyll-compose&quot;&gt;Jekyll Compose&lt;/h4&gt;
+
+&lt;p&gt;安装了 &lt;a href=&quot;https://github.com/jekyll/jekyll-compose&quot;&gt;Jekyll Compose&lt;/a&gt; 后，Jekyll 会额外提供一些命令，便于发布管理博文。&lt;/p&gt;
+
+&lt;p&gt;创建草稿：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll draft
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;创建新博客：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll post
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;创建新博客：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll page
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;发布草稿：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll publish
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;撤销发布：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll unpublish
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;jekyll-admin&quot;&gt;Jekyll Admin&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-admin&quot;&gt;Jekyll Admin&lt;/a&gt; 是一个 CMS 风格的图形化后台管理插件，可以在本地给用户提供服务。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/jekyll/jekyll-admin/raw/master/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll-seo-tag&quot;&gt;Jekyll SEO Tag&lt;/h4&gt;
+
+&lt;h4 id=&quot;jemoji&quot;&gt;Jemoji&lt;/h4&gt;
+
+&lt;p&gt;你可以通过 &lt;a href=&quot;https://github.com/jekyll/jemoji&quot;&gt;Jemoji&lt;/a&gt; 在 Jekyll 生成的网站中，加入自己 Emoji 表情。&lt;/p&gt;
+
+&lt;p&gt;Emoji 语法采用 GitHub 的语法风格。&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll-mentions&quot;&gt;Jekyll Mentions&lt;/h4&gt;
+
+&lt;h4 id=&quot;jekyll-sitemap&quot;&gt;Jekyll Sitemap&lt;/h4&gt;
+
+&lt;h4 id=&quot;jekyll-feed&quot;&gt;Jekyll Feed&lt;/h4&gt;
+
+&lt;p&gt;你可以通过 &lt;a href=&quot;https://github.com/jekyll/jekyll-feed&quot;&gt;Jekyll Feed&lt;/a&gt; 在 Jekyll 生成的网站中，生成 RSS 源。&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll-import&quot;&gt;Jekyll Import&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-import&quot;&gt;Jekyll Import&lt;/a&gt; 支持从一些国外的主流站点导入博文，如 Blogger, WordPress 和 Tumblr 等，同样也支持 RSS 和 CSV 等数据格式导入。&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll-archives&quot;&gt;Jekyll Archives&lt;/h4&gt;
+
+&lt;h4 id=&quot;jekyll-redirect-from&quot;&gt;Jekyll Redirect From&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-redirect-from&quot;&gt;Jekyll Redirect From&lt;/a&gt; 提供页面跳转功能，比较简单，也可以自行通过 JavaScript 实现。&lt;/p&gt;
+
+&lt;h2 id=&quot;github-pages&quot;&gt;GitHub Pages&lt;/h2&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;创建个人主页&lt;/h4&gt;
+
+&lt;p&gt;创建一个名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username.github.io&lt;/code&gt; 的 Repo，&lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username&lt;/code&gt; 是你的用户名。&lt;/p&gt;
+
+&lt;p&gt;只需在 Repo 中设置 GitHub Pages 的 Source，就可以开启 GitHub Pages，支持 &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;/docs&lt;/code&gt; 文件夹三种 Source。&lt;/p&gt;
+
+&lt;h4 id=&quot;github-pages-&quot;&gt;在 GitHub Pages 只可以使用部分插件&lt;/h4&gt;
+
+&lt;p&gt;由于安全性等原因的考虑，在 GitHub Pages 平台上只能使用白名单中的 7 个 Jekyll 插件。它们分别是：Jekyll Sitemap, Jekyll SEO Tag, github-metadata, Jekyll Feed, Jekyll Redirect From, Jemoji 和 Jekyll Mentions。&lt;/p&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/&quot;&gt;https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;github-pages--jekyll--kramdown&quot;&gt;GitHub Pages 上的 Jekyll 只支持 kramdown&lt;/h4&gt;
+
+&lt;p&gt;从 2016 年 5 月 1 日起，GitHub Pages 只支持 kramdown 作为 Markdown 引擎。&lt;/p&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&quot;&gt;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;nojekyll--jekyll-&quot;&gt;在根目录下创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 文件可以跳过 Jekyll 解析&lt;/h4&gt;
+
+&lt;p&gt;GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 跳过解析。详见 &lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;https://github.com/blog/572-bypassing-jekyll-on-github-pages&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
+
+&lt;p&gt;在 Source 的根路径下，创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt; 写入域名，然后把 DNS 解析到 GitHub Pages 的 IP：&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.153&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.154&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;你也可以为账号下任意项目创建独立的项目页面&lt;/h4&gt;
+
+&lt;p&gt;任何一个项目的 Repo，都可以开启这个项目的 GitHub Pages。开启方式同个人主页。&lt;/p&gt;
+
+&lt;p&gt;如项目：&lt;a href=&quot;https://github.com/crispgm/gsm&quot;&gt;crispgm/gsm&lt;/a&gt;，设置完成后，就可以通过 &lt;a href=&quot;https://crispgm.github.io/gsm/&quot;&gt;https://crispgm.github.io/gsm/&lt;/a&gt; 进行访问。&lt;/p&gt;
+
+&lt;h4 id=&quot;sitegithub--repo-&quot;&gt;你可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.github&lt;/code&gt; 获得 Repo 的信息&lt;/h4&gt;
+
+&lt;p&gt;由上面所说的 &lt;a href=&quot;https://github.com/jekyll/github-metadata&quot;&gt;github-metadata&lt;/a&gt; 提供服务，通过 GitHub API 获取 Repo 的信息。当然，在本地环境下，也可以通过手动安装 github-metadata 来使用。&lt;/p&gt;
+
+&lt;h4 id=&quot;repo--github-pages&quot;&gt;私有 Repo 也可以开启 GitHub Pages&lt;/h4&gt;
+
+&lt;p&gt;GitHub 的付费用户建立的私有项目 Private Repo，也可以开启 GitHub Pages。&lt;/p&gt;
+
+&lt;h4 id=&quot;github-pages--gh-pages-&quot;&gt;GitHub Pages 无法在使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; 分支作为源的情况下关闭&lt;/h4&gt;
+
+&lt;p&gt;有些奇怪的设定，真想关闭直接删除掉，在 Source 选择 None 就好。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;最后&lt;/h2&gt;
+
+&lt;h4 id=&quot;jekyll-&quot;&gt;本博客也是用 Jekyll 生成的&lt;/h4&gt;
+
+&lt;p&gt;Happy Jekylling!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Nov 2016 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/48-tips-for-jekyll-you-should-know.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/48-tips-for-jekyll-you-should-know.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>tips</category>
+        
+        
+      </item>
     
       <item>
         <title>我是如何把自己的 VPS 容器化的</title>
@@ -1312,58 +1590,6 @@ echo memory_get_usage() - $startMemory, ' bytes';
         <category>Array</category>
         
         <category>Hash</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Olympus Camera Wi-Fi API</title>
-        <description>&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
-
-&lt;p&gt;Since I started my interest on photography, I chose SONY RX100 Mark III initially and now I use a M4/3 interchangeable lens camera, the Olympus E-M5 Mark II.&lt;/p&gt;
-
-&lt;p&gt;Cameras nowadays commonly support Wi-Fi sync with mobile apps. And so does Olympus, which provides an OI Share app to do that.&lt;/p&gt;
-
-&lt;p&gt;And I found some blog articles about the Wi-Fi protocol or commands of Olympus camera. Most of them are not well maintained, because Olympus camera is a minority choice in Internet world.&lt;/p&gt;
-
-&lt;p&gt;Fortunately, I found the &lt;a href=&quot;https://github.com/stv0g/libqt-omd&quot;&gt;stv0g/libqt-omd&lt;/a&gt; project on GitHub. Though the wiki is down, I could read the source code to figure out the APIs by myself.&lt;/p&gt;
-
-&lt;h1 id=&quot;api-specification&quot;&gt;API Specification&lt;/h1&gt;
-
-&lt;p&gt;The API specification is maintained at &lt;a href=&quot;https://github.com/crispgm/olympia/blob/master/api_specs.md&quot;&gt;Olympus Wi-Fi API Specification&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here is a useful gist &lt;a href=&quot;https://gist.github.com/mangelajo/6fa005ff3544fecdecfa&quot;&gt;https://gist.github.com/mangelajo/6fa005ff3544fecdecfa&lt;/a&gt; and there is an official protocol document in comment.&lt;/p&gt;
-
-&lt;h1 id=&quot;olympia&quot;&gt;Olympia&lt;/h1&gt;
-
-&lt;p&gt;At last, I came up with an idea that make a web based client for computers built with the APIs, which is named Olympia. Thus, we can transfer and manage photos on our computer.&lt;/p&gt;
-
-&lt;p&gt;Here is a list of features:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Web based UI&lt;/li&gt;
-  &lt;li&gt;Sync photos easily&lt;/li&gt;
-  &lt;li&gt;Manage photos both remotely and locally&lt;/li&gt;
-  &lt;li&gt;Upload or backup to online cloud storage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Project is &lt;a href=&quot;https://github.com/crispgm/olympia&quot;&gt;crispgm/olympia&lt;/a&gt;, written in Ruby.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 31 May 2016 18:06:22 +0800</pubDate>
-        <link>https://crispgm.com/page/olympus-wifi-api.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/olympus-wifi-api.html</guid>
-        
-        <category>Olympus</category>
-        
-        <category>Camera</category>
-        
-        <category>Wi-Fi</category>
-        
-        <category>API</category>
-        
-        <category>Photography</category>
-        
-        <category>Ruby</category>
         
         
       </item>
