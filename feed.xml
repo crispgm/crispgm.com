@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 22:45:28 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 22:45:28 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 23:00:57 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 23:00:57 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -229,6 +229,8 @@ $ jekyll b
 &lt;p&gt;创建一个名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username.github.io&lt;/code&gt; 的 Repo，&lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username&lt;/code&gt; 是你的用户名。&lt;/p&gt;
 
 &lt;p&gt;只需在 Repo 中设置 GitHub Pages 的 Source，就可以开启 GitHub Pages，支持 &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;/docs&lt;/code&gt; 文件夹三种 Source。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/github-pages-source.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;github-pages-&quot;&gt;在 GitHub Pages 只可以使用部分插件&lt;/h4&gt;
 
