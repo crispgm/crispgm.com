@@ -225,6 +225,8 @@ Emoji 语法采用 GitHub 的语法风格。
 
 只需在 Repo 中设置 GitHub Pages 的 Source，就可以开启 GitHub Pages，支持 `master`, `gh-pages`, `master` 中 `/docs` 文件夹三种 Source。
 
+![](/image/github-pages-source.jpg)
+
 #### 在 GitHub Pages 只可以使用部分插件
 
 由于安全性等原因的考虑，在 GitHub Pages 平台上只能使用白名单中的 7 个 Jekyll 插件。它们分别是：Jekyll Sitemap, Jekyll SEO Tag, github-metadata, Jekyll Feed, Jekyll Redirect From, Jemoji 和 Jekyll Mentions。
