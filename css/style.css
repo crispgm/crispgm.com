@@ -122,15 +122,14 @@ sup {
 }
 .menu-item a {
   color: #bbbbbb;
+  font-weight: bold;
 }
 .menu-item a:hover {
   color: #000;
-  font-weight: 500;
   text-decoration: none;
 }
 .menu-active a {
   color: #000;
-  font-weight: 500;
   text-decoration: none;
 }
 @media (max-width: 42rem) {
