@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title:  我是如何把自己的 VPS 容器化的
 permalink: /page/containerize-my-vps.html
 tags:

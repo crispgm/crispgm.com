@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: 贴吧 BigPipe 实践 (nginx + hhvm)
 date: 2015/06/26 16:23:00 +0800
 permalink: /page/bigpipe-practice.html

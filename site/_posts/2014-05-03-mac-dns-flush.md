@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: Mac OSX 10.9 Mavericks 清除 DNS 缓存
 date: 2014/05/03 16:23:00 +0800
 permalink: /page/mac-dns-flush.html

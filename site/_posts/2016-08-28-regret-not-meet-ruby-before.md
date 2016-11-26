@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: "Ruby 相见恨晚"
 permalink: /page/regret-not-meet-ruby-before.html
 tags:

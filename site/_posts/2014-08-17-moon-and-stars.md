@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: 『转』看月亮和看星星
 date: 2014/08/17 23:13:00 +0800
 permalink: /page/moon-and-stars.html

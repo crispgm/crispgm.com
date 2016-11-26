@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: 『推荐』猫舌怕烫烫——足控福利的冷餐美食剧
 date: 2015/11/28 18:30:00 +0800
 permalink: /page/cat-tongue-play.html

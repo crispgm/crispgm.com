@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: Mac Book Air 合盖子或者休眠后没声音
 date: 2014/03/08 09:55:00 +0800
 permalink: /page/mac-book-air-no-sound.html

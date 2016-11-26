@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: 深入 Jekyll
 permalink: /page/dive-into-jekyll.html
 tags:

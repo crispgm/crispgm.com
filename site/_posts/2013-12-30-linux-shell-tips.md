@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: Linux Shell Tips
 date: 2013/12/30 15:12:00 +0800
 permalink: /page/linux-shell-tips.html

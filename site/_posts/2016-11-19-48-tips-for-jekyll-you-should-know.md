@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title:  48 个你需要知道的 Jekyll 使用技巧
 permalink: /page/48-tips-for-jekyll-you-should-know.html
 tags:

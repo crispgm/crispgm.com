@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: 『推荐』有趣的终端 Terminal 工具
 date: 2015/10/22 21:09:00 +0800
 permalink: /page/funny-terminal-tools.html

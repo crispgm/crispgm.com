@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: 开源项目中使用 git-rebase 合并提交
 permalink: /page/git-rebase.html
 tags:

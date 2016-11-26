@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: 新的域名
 date: 2016/05/26 18:06:22 +0800
 permalink: /page/new-domain-name.html
