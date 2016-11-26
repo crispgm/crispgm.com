@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: awk 日志统计脚本
 date: 2013/07/20 18:30:00 +0800
 permalink: /page/awk-scripts.html

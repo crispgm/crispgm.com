@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: Fiddler 网络调试工具
 date: 2014/03/21 12:10:00 +0800
 permalink: /page/fiddler-proxy.html

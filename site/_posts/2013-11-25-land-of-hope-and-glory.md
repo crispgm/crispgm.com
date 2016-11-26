@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: Land of Hope and Glory
 date: 2013/11/25 19:48:00 +0800
 permalink: /page/land-of-hope-and-glory.html

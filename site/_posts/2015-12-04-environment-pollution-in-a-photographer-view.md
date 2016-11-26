@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: Environment Pollution in a Photographer's View
 date: 2015/12/04 15:00:00 +0800 
 permalink: /page/environment-pollution-in-a-photographer-view.html

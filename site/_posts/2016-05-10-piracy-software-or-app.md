@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: 关于盗版软件/App
 date: 2016/05/10 00:23:00 +0800
 permalink: /page/piracy-software-or-app.html

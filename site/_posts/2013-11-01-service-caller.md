@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: 自制 Chrome 调用贴吧 Service 插件正式发布
 date: 2013/11/01 11:30:00 +0800
 permalink: /page/service-caller.html

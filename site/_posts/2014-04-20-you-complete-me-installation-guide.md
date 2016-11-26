@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: YouCompleteMe Installation Guide on Mac
 date: 2014/04/20 22:10:00 +0800
 permalink: /page/you-complete-me-installation-guide.html

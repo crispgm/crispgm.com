@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: Mac Mail 无法退出
 date: 2014/01/10 18:30:00 +0800
 permalink: /page/mac-mail-cannot-quit.html

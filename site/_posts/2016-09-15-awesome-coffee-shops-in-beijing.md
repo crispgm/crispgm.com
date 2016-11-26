@@ -1,5 +1,6 @@
 ---
 layout: post
+type: lifestyle
 title: Awesome Coffee Shops in Beijing
 permalink: /page/awesome-coffee-shops-in-beijing.html
 tags:

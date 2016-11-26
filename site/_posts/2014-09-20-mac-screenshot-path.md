@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: Mac 截图修改保存路径
 date: 2014/09/20 11:23:00 +0800
 permalink: /page/mac-screenshot-path.html

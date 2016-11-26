@@ -1,5 +1,6 @@
 ---
 layout: post
+type: programming
 title: 不同页面载入相同 Disqus 主题
 permalink: /page/same-disqus-thread-in-multiple-pages.html
 tags:
