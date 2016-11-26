@@ -5,7 +5,7 @@ permalink: /about.html
 disable_syntax_highlight: true
 ---
 
-## About
+### About
 
 Copyright &copy; David Zhang, 2016.
 
@@ -15,12 +15,12 @@ All the articles are written in GitHub Flavored Markdown format.
 
 The site source is [on GitHub](https://github.com/crispgm/crispgm.com). The site theme is [working in progress](https://github.com/crispgm/jekyll-crisp-minimalism-theme) but not available yet.
 
-## License
+### License
 
 * All the blogs are licensed under a [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/) license.
 * Site source is licensed under MIT License.
 
-## Credit
+### Credit
 
 <div id="credit-list">
   {% for item in site.data.credit %}
