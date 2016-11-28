@@ -6,6 +6,7 @@ url: "https://crispgm.com"
 alt_url: "https://crisp.lol"
 encoding: utf-8
 markdown: kramdown
+assets: /assets
 
 collections:
   docs:

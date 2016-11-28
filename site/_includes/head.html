@@ -7,9 +7,12 @@
     <link rel="alternate" href="{{ site.alt_url }}">
     <link rel="alternate" href="{{ site.url }}/feed.xml" type="application/rss+xml" title="RSS">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/zenburn.css">
-    <link rel="stylesheet" href="/css/opensans.css">
-    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
-    <!-- <script src="/script/jquery-3.1.0.min.js"></script> -->
+    <link rel="stylesheet" href="{{ site.assets }}/css/style.css">
+    <link rel="stylesheet" href="{{ site.assets }}/css/opensans.css">
+    {% if page.font_awesome == true %}
+    <link rel="stylesheet" href="{{ site.assets }}/css/font-awesome.min.css">
+    {% endif %}
+    {% if page.disable_syntax_highlight != true %}
+    <link rel="stylesheet" href="{{ site.assets }}/css/zenburn.css">
+    {% endif %}
   </head>
