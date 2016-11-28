@@ -58,6 +58,8 @@ tags:
 
     日常使用的工具类软件，大多售价比较低廉，在200之内，对于任何一个需要的人我认为这不是负担。
 
+    至于游戏，PC 玩家的首选当属 Steam 平台，上面的游戏物美价廉，而且在“黑色星期五”等有大幅度的打折。如：文明5及其 DLC 合集仅需37元。
+
     专业类商业软件非常贵，学生阶段可以免费使用学生版或者购买学生版（根据不同公司的政策不同）。职业阶段，往往公司会提供，如果不幸没有提供可以选择采用下面的其它方式。
 
 2. 寻找替代品
@@ -74,13 +76,14 @@ tags:
 
 ## 我购买过的软件/App 列表
 
-这里列出一些我购买过的软件或 App 的列表，算是一个小小的推荐。
+这里列出一些我购买过的软件或 App 的列表，算是一个小小的推荐。这里我列出的都是官网，而不是直达下载 AppStore 的链接。通过官网的风格和设计，我们可以更好的感受和体会开发者。
 
 * ¥283 [Ulysses for Mac](https://ulyssesapp.com/)
 * ¥163 [Dash 3](https://kapeli.com/dash)
 * ¥30 [Reeder 3 for iOS](http://reederapp.com/ios/)
 * ¥25 [Enlight](https://www.enlightapp.com/)
-* ¥12 [WordBook](https://itunes.apple.com/cn/app/wordbook-english-dictionary/id289694924?mt=8)
-* ¥18 [Workflow](https://itunes.apple.com/cn/app/workflow-powerful-automation/id915249334?mt=8)
-* ¥25 [Manico](https://itunes.apple.com/cn/app/manico/id724472954?mt=12)
-* ¥30 [Noizio for Mac](https://itunes.apple.com/cn/app/noizio/id928871589?mt=12)
+* ¥12 [WordBook](https://www.trancreative.com/iPhone/WordBook/)
+* ¥18 [Workflow](https://workflow.is/)
+* ¥25 [Manico](https://manico.im/)
+* ¥30 [Noizio for Mac](http://noiz.io/)
+* ¥68 [Tweetbot 4](http://tapbots.com/tweetbot/)
