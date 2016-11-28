@@ -80,6 +80,7 @@ task :build do
       sh "cp ../_config.yml ."
       sh "jekyll build --destination=../../gh-pages/resume/"
       sh "git stash"
+      sh "git clean -f"
     end
   end
   # Build wiki
@@ -92,6 +93,7 @@ task :build do
       sh "cp ../_config.yml ../index.html ."
       sh "jekyll build --destination=../../gh-pages/wiki/"
       sh "git stash"
+      sh "git clean -f"
     end
   end
   # Push
