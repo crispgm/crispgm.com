@@ -245,8 +245,12 @@ footer {
 }
 img {
   border: 0;
-  max-width: 640px;
-  max-height: 480px;
+  max-width: 42rem;
+}
+@media (max-width: 42rem) {
+  img {
+    max-width: 100%;
+  }
 }
 /* codes */
 pre.highlight {
