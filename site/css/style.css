@@ -264,7 +264,8 @@ code.hljs {
 }
 /* inline codes */
 code.highlighter-rouge {
-  background-color: #ddd;
+  /*background-color: #ddd;*/
+  border: .1rem solid #ddd;
   border-radius: .2rem;
   padding: .1rem .3rem .1rem .3rem;
 }
