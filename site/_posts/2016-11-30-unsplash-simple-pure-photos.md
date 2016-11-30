@@ -26,3 +26,7 @@ tags:
 同时，也推荐一下 [Unsplash Instant](https://chrome.google.com/webstore/detail/unsplash-instant/pejkokffkapolfffcgbmdmhdelanoaih?hl=en)。Unsplash 官方出品的 Chrome 扩展，每次打开一个 Tab，都会显示一张图片。
 
 感谢 [Crew](https://crew.co/) 要我们拥有这么美好的体验！Crew 也是一个很美的公司，有兴趣的可以自行看看它们的招聘页面和团队博客，体会一下别人家的公司是什么样。
+
+![](https://crew.co/hiring/assets/img/photo-6.jpg)
+
+![](https://crew.co/hiring/assets/img/photo-4.jpg)
