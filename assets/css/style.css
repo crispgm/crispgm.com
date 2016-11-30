@@ -259,14 +259,14 @@ pre.highlight {
   border: .05rem solid #aaaaaa;
   border-radius: .2rem;
   font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
-  font-size: .85em;
+  font-size: .85rem;
 }
 code.hljs {
   padding: .8rem;
 }
 /* inline codes */
 code.highlighter-rouge {
-  /*background-color: #ddd;*/
+  font-size: .85rem;
   border: .1rem solid #ddd;
   border-radius: .2rem;
   padding: .1rem .3rem .1rem .3rem;

@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Nov 2016 23:33:29 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Nov 2016 23:33:29 +0800</lastBuildDate>
+    <pubDate>Thu, 01 Dec 2016 01:11:36 +0800</pubDate>
+    <lastBuildDate>Thu, 01 Dec 2016 01:11:36 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -161,9 +161,245 @@ $ jekyll b
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;配置&lt;/h2&gt;
+&lt;h2 id=&quot;section-3&quot;&gt;基础&lt;/h2&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;目录结构&lt;/h4&gt;
+
+&lt;p&gt;一个基本的 Jekyll 站点目录结构：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── _config.yml
+├── _data
+|   └── members.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.md
+|   └── on-simplicity-in-technology.md
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+|   ├── _base.scss
+|   └── _layout.scss
+├── _site
+├── .jekyll-metadata
+└── index.html # 也可以是 index.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;_config.yml
+    &lt;ul&gt;
+      &lt;li&gt;Jekyll 站点的总配置文件，有很多选项也可以通过命令行方式指定。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;_drafts
+    &lt;ul&gt;
+      &lt;li&gt;未发布的草稿，文件名不需要带有日期。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;_includes
+    &lt;ul&gt;
+      &lt;li&gt;代码片段，可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt; 进行引用。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;_layouts
+    &lt;ul&gt;
+      &lt;li&gt;布局。布局文件可以被继承，&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; 用于表示被继承者的内容。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;_posts
+    &lt;ul&gt;
+      &lt;li&gt;文件，命名需要以日期开头：如 &lt;code class=&quot;highlighter-rouge&quot;&gt;2016-12-01-my-article.md&lt;/code&gt;。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;_sass
+    &lt;ul&gt;
+      &lt;li&gt;sass 文件，可以通过插件完成编译。也可以选择引入原生 CSS，或者 Less 等。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;_site
+    &lt;ul&gt;
+      &lt;li&gt;目标文件，建议加入到 &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; 中。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;index.html/index.md
+    &lt;ul&gt;
+      &lt;li&gt;首页&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;configyml&quot;&gt;_config.yml&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 是整个站点的整体配置，以下是所有配置项和默认值：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:  _plugins
+layouts_dir:  _layouts
+data_dir:     _data
+includes_dir: _includes
+collections:
+  posts:
+    output:   true
+
+# Handling Reading
+safe:         false
+include:      [&quot;.htaccess&quot;]
+exclude:      [&quot;node_modules&quot;, &quot;vendor/bundle/&quot;, &quot;vendor/cache/&quot;, &quot;vendor/gems/&quot;, &quot;vendor/ruby/&quot;]
+keep_files:   [&quot;.git&quot;, &quot;.svn&quot;]
+encoding:     &quot;utf-8&quot;
+markdown_ext: &quot;markdown,mkdown,mkdn,mkd,md&quot;
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+gems:      []
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: &quot;\n\n&quot;
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: &quot;&quot; # does not include hostname
+show_dir_listing: false
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+quiet:    false
+verbose:  false
+defaults: []
+
+liquid:
+  error_mode: warn
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;front-matter&quot;&gt;Front Matter&lt;/h4&gt;
+
+&lt;p&gt;Jekyll 整个站点的配置是站点根目录下的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 文件，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 等目录下的文件中也可以有自己的变量。文件头部的 &lt;code class=&quot;highlighter-rouge&quot;&gt;yaml&lt;/code&gt; 配置被称作 Front Matter。&lt;/p&gt;
 
 &lt;h4 id=&quot;front-matter-&quot;&gt;Front Matter 默认值&lt;/h4&gt;
+
+&lt;p&gt;可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;defaults&lt;/code&gt; 设置一个路径下 Front Matter 默认值。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults:
+  - scope:
+      path: &quot;&quot;
+      type: weekly
+    values:
+      layout: weekly
+      title: 技术周刊
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;忽略文件&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exclude&lt;/code&gt; 用于忽略文件或文件夹，其中 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 和以&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;开头的文件或文件夹都会被自动忽略。后续版本，&lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; 等文件夹也被隐式忽略了（参考 _config.yml 章节）。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;分页&lt;/h4&gt;
+
+&lt;p&gt;Jekyll 没有内置分页功能，而是提供了一个分页插件 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt;。&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 仅在特定的默认条件下生效，如果你对网站结构有自己的一套，&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 可能是无法满足需求的。&lt;/p&gt;
+
+&lt;p&gt;限制如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;分页功能必须在 HTML 格式文件中调用，如：&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;必须使用默认的链接格式 &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果想继续使用，请详细阅读 &lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot;&gt;http://jekyllrb.com/docs/pagination/&lt;/a&gt;。这是一个复杂的问题！&lt;/p&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;文章摘要&lt;/h4&gt;
+
+&lt;p&gt;Jekyll 提供了文章摘要摘取功能，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;post.excerpt&lt;/code&gt; 就可以获得摘要内容。&lt;/p&gt;
+
+&lt;p&gt;我们也可以设置摘取摘要的分隔符：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;excerpt_separator: &amp;lt;!--more--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;评论&lt;/h4&gt;
+
+&lt;p&gt;由于是静态站点，我们没发内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：&lt;a href=&quot;https://disqus.com/&quot;&gt;disqus&lt;/a&gt;，国内推荐：&lt;a href=&quot;http://duoshuo.com/&quot;&gt;duoshuo&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;page&quot;&gt;Page&lt;/h4&gt;
+
+&lt;p&gt;可以认为，不在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_post&lt;/code&gt; 目录下的页面都是 Page 而不是 Post，其它方面区别不大。&lt;/p&gt;
+
+&lt;h4 id=&quot;collection&quot;&gt;Collection&lt;/h4&gt;
+
+&lt;p&gt;并不是每个页面都是独立“页面”和以日期为顺序的“博文”，因此 Jekyll 引入了 Collection。Collection 可以根据路径定义一类具有相同属性的页面集合。Collection 也可以通过 Front Matter 设定默认值。&lt;/p&gt;
+
+&lt;h4 id=&quot;data&quot;&gt;Data&lt;/h4&gt;
+
+&lt;p&gt;Data 相当于动态页面中的数据库，Jekyll Data 支持 &lt;code class=&quot;highlighter-rouge&quot;&gt;yaml&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt; 三种格式，可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.data&lt;/code&gt; 直接访问。&lt;/p&gt;
+
+&lt;p&gt;例如：&lt;/p&gt;
+
+&lt;p&gt;团队成员有 Fa, Li, Zhang 三人，于是我们在默认路径 &lt;code class=&quot;highlighter-rouge&quot;&gt;_data&lt;/code&gt; 创建一个数据文件 &lt;code class=&quot;highlighter-rouge&quot;&gt;member.yml&lt;/code&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Fa&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Li&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Zhang&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在页面中显示团队成员列表：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.data.member&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;member.name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;liquid-&quot;&gt;Liquid 模板&lt;/h2&gt;
 
@@ -173,19 +409,119 @@ $ jekyll b
 
 &lt;p&gt;详细文档请参考 &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;https://shopify.github.io/liquid/&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-4&quot;&gt;变量&lt;/h4&gt;
+&lt;p&gt;Jekyll 实用 Liquid 作为模版引擎，构建页面。&lt;/p&gt;
 
-&lt;h4 id=&quot;if&quot;&gt;if&lt;/h4&gt;
+&lt;h4 id=&quot;section-9&quot;&gt;变量&lt;/h4&gt;
 
-&lt;h4 id=&quot;for--in&quot;&gt;for .. in&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;title&amp;gt;
+{{ page.title }}
+&amp;lt;/title&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4 id=&quot;assign&quot;&gt;assign&lt;/h4&gt;
+&lt;p&gt;其中，Jekyll 预设了 &lt;code class=&quot;highlighter-rouge&quot;&gt;site&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;content&lt;/code&gt; 四个全局变量。&lt;/p&gt;
 
-&lt;h4 id=&quot;capture&quot;&gt;capture&lt;/h4&gt;
+&lt;h4 id=&quot;section-10&quot;&gt;逻辑判断&lt;/h4&gt;
 
-&lt;h4 id=&quot;filters&quot;&gt;Filters&lt;/h4&gt;
+&lt;p&gt;Liquid 的逻辑判断跟 Ruby 完全一致。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-5&quot;&gt;插件&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;if/else if/else&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;if/elsif/else&lt;/code&gt;。同时，Liquid 也可以使用 Ruby 特有的 &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;switch/case&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;case/when&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;为了简单，只以 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; 为例：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;page.disable_syntax_highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;link&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ site.assets }}/css/zenburn.css&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section-11&quot;&gt;遍历&lt;/h4&gt;
+
+&lt;p&gt;在 Liquid 中可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;in&lt;/code&gt; 语法遍历数组，并且支持一般语言循环中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;continue&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;除此之外，还可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;offset&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;limit&lt;/code&gt; 控制遍历范围，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;reversed&lt;/code&gt; 进行倒序。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.posts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ post.permalink }}&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post.title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;https://shopify.github.io/liquid/tags/iteration/&quot;&gt;https://shopify.github.io/liquid/tags/iteration/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-12&quot;&gt;赋值&lt;/h4&gt;
+
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assign&lt;/code&gt; 进行赋值：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;my_variable&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;capture&lt;/code&gt; 进行捕捉赋值：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;capture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;my_variable&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;am&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;being&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;captured.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endcapture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;liquid-filters&quot;&gt;Liquid Filters&lt;/h4&gt;
+
+&lt;p&gt;Liquid Filters 是一种针对 Liquid 中变量的过滤器，语法是：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;filter:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;param&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cgi_escape/url_escape/xml_escape
+    &lt;ul&gt;
+      &lt;li&gt;对变量进行相应的 escape&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;markdownify/scssify/sassify/jsonify
+    &lt;ul&gt;
+      &lt;li&gt;对变量内容的格式转换&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;where/where_exp/group_by/sort
+    &lt;ul&gt;
+      &lt;li&gt;对变量数据的查询排序等操作&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;http://jekyllrb.com/docs/templates/#filters&quot;&gt;http://jekyllrb.com/docs/templates/#filters&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-13&quot;&gt;插件&lt;/h2&gt;
+
+&lt;h4 id=&quot;section-14&quot;&gt;插件简介&lt;/h4&gt;
+
+&lt;p&gt;Jekyll 支持使用插件进行扩展，插件的类型分为：Generators、Converters、Commands、Hooks、Liquid Tag、Liquid Filter 等。&lt;/p&gt;
+
+&lt;p&gt;如果希望开发插件，请参考 &lt;a href=&quot;http://jekyllrb.com/docs/plugins/&quot;&gt;http://jekyllrb.com/docs/plugins/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-15&quot;&gt;使用插件&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;基于 Gem 的方式&lt;/p&gt;
+
+    &lt;p&gt;对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;gems&lt;/code&gt; 字段加入相应插件名称即可。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;基于本地文件&lt;/p&gt;
+
+    &lt;p&gt;对于没有发布的插件，可以在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_plugins&lt;/code&gt; 文件夹中直接引入 &lt;code class=&quot;highlighter-rouge&quot;&gt;*.rb&lt;/code&gt; Ruby 源文件。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;section-16&quot;&gt;常用插件&lt;/h2&gt;
 
 &lt;h4 id=&quot;jekyll-watch&quot;&gt;Jekyll Watch&lt;/h4&gt;
 
@@ -239,6 +575,8 @@ $ jekyll b
 
 &lt;h4 id=&quot;jekyll-seo-tag&quot;&gt;Jekyll SEO Tag&lt;/h4&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-seo-tag&quot;&gt;Jekyll SEO Tag&lt;/a&gt; 帮你生成一大堆 Meta 标签。&lt;/p&gt;
+
 &lt;h4 id=&quot;jemoji&quot;&gt;Jemoji&lt;/h4&gt;
 
 &lt;p&gt;你可以通过 &lt;a href=&quot;https://github.com/jekyll/jemoji&quot;&gt;Jemoji&lt;/a&gt; 在 Jekyll 生成的网站中，加入自己 Emoji 表情。&lt;/p&gt;
@@ -247,7 +585,7 @@ $ jekyll b
 
 &lt;h4 id=&quot;jekyll-mentions&quot;&gt;Jekyll Mentions&lt;/h4&gt;
 
-&lt;h4 id=&quot;jekyll-sitemap&quot;&gt;Jekyll Sitemap&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-mentions&quot;&gt;Jekyll Mentions&lt;/a&gt; 允许你在文章中直接“@” GitHub 或其它网站用户。&lt;/p&gt;
 
 &lt;h4 id=&quot;jekyll-feed&quot;&gt;Jekyll Feed&lt;/h4&gt;
 
@@ -259,13 +597,15 @@ $ jekyll b
 
 &lt;h4 id=&quot;jekyll-archives&quot;&gt;Jekyll Archives&lt;/h4&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;Jekyll Archives&lt;/a&gt; 用于生成带标签和分类的『存档』页面。&lt;/p&gt;
+
 &lt;h4 id=&quot;jekyll-redirect-from&quot;&gt;Jekyll Redirect From&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-redirect-from&quot;&gt;Jekyll Redirect From&lt;/a&gt; 提供页面跳转功能，比较简单，也可以自行通过 JavaScript 实现。&lt;/p&gt;
 
 &lt;h2 id=&quot;github-pages&quot;&gt;GitHub Pages&lt;/h2&gt;
 
-&lt;h4 id=&quot;section-6&quot;&gt;创建个人主页&lt;/h4&gt;
+&lt;h4 id=&quot;section-17&quot;&gt;创建个人主页&lt;/h4&gt;
 
 &lt;p&gt;创建一个名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username.github.io&lt;/code&gt; 的 Repo，&lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username&lt;/code&gt; 是你的用户名。&lt;/p&gt;
 
@@ -289,13 +629,13 @@ $ jekyll b
 
 &lt;p&gt;GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 跳过解析。详见 &lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;https://github.com/blog/572-bypassing-jekyll-on-github-pages&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-7&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
+&lt;h4 id=&quot;section-18&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
 
 &lt;p&gt;在 Source 的根路径下，创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt; 写入域名，然后把 DNS 解析到 GitHub Pages 的 IP：&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.153&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.154&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;section-8&quot;&gt;你也可以为账号下任意项目创建独立的项目页面&lt;/h4&gt;
+&lt;h4 id=&quot;section-19&quot;&gt;你也可以为账号下任意项目创建独立的项目页面&lt;/h4&gt;
 
 &lt;p&gt;任何一个项目的 Repo，都可以开启这个项目的 GitHub Pages。开启方式同个人主页。&lt;/p&gt;
 
@@ -313,7 +653,7 @@ $ jekyll b
 
 &lt;p&gt;有些奇怪的设定，真想关闭直接删除掉，在 Source 选择 None 就好。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-9&quot;&gt;最后&lt;/h2&gt;
+&lt;h2 id=&quot;section-20&quot;&gt;最后&lt;/h2&gt;
 
 &lt;h4 id=&quot;jekyll-&quot;&gt;本博客也是用 Jekyll 生成的&lt;/h4&gt;
 
