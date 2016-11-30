@@ -116,9 +116,217 @@ $ jekyll build --destination=/path/to/site
 $ jekyll new-theme my-theme
 ```
 
-## 配置
+## 基础
+
+#### 目录结构
+
+一个基本的 Jekyll 站点目录结构：
+
+```
+.
+├── _config.yml
+├── _data
+|   └── members.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.md
+|   └── on-simplicity-in-technology.md
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+|   ├── _base.scss
+|   └── _layout.scss
+├── _site
+├── .jekyll-metadata
+└── index.html # 也可以是 index.md
+```
+* _config.yml
+    * Jekyll 站点的总配置文件，有很多选项也可以通过命令行方式指定。
+* _drafts
+    * 未发布的草稿，文件名不需要带有日期。
+* _includes
+    * 代码片段，可以通过 `include` 进行引用。
+* _layouts
+    * 布局。布局文件可以被继承，`{% raw %}{{ content }}{% endraw %}` 用于表示被继承者的内容。
+* _posts
+    * 文件，命名需要以日期开头：如 `2016-12-01-my-article.md`。
+* _sass
+    * sass 文件，可以通过插件完成编译。也可以选择引入原生 CSS，或者 Less 等。
+* _site
+    * 目标文件，建议加入到 `.gitignore` 中。
+* index.html/index.md
+    * 首页
+
+#### _config.yml
+
+`_config.yml` 是整个站点的整体配置，以下是所有配置项和默认值：
+
+```
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:  _plugins
+layouts_dir:  _layouts
+data_dir:     _data
+includes_dir: _includes
+collections:
+  posts:
+    output:   true
+
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      ["node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+gems:      []
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+quiet:    false
+verbose:  false
+defaults: []
+
+liquid:
+  error_mode: warn
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+```
+
+#### Front Matter
+
+Jekyll 整个站点的配置是站点根目录下的 `_config.yml` 文件，而 `_layout`, `_posts` 等目录下的文件中也可以有自己的变量。文件头部的 `yaml` 配置被称作 Front Matter。
 
 #### Front Matter 默认值
+
+可以使用 `defaults` 设置一个路径下 Front Matter 默认值。
+
+```
+defaults:
+  - scope:
+      path: ""
+      type: weekly
+    values:
+      layout: weekly
+      title: 技术周刊
+```
+
+#### 忽略文件
+
+`exclude` 用于忽略文件或文件夹，其中 `_config.yml` 和以`.`开头的文件或文件夹都会被自动忽略。后续版本，`node_modules` 等文件夹也被隐式忽略了（参考 _config.yml 章节）。
+
+```
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+```
+
+#### 分页
+
+Jekyll 没有内置分页功能，而是提供了一个分页插件 `jekyll-paginate`。`jekyll-paginate` 仅在特定的默认条件下生效，如果你对网站结构有自己的一套，`jekyll-paginate` 可能是无法满足需求的。
+
+限制如下：
+
+* 分页功能必须在 HTML 格式文件中调用，如：`index.html`
+* 必须使用默认的链接格式 `permalink`
+
+如果想继续使用，请详细阅读 <http://jekyllrb.com/docs/pagination/>。这是一个复杂的问题！
+
+#### 文章摘要
+
+Jekyll 提供了文章摘要摘取功能，通过 `post.excerpt` 就可以获得摘要内容。
+
+我们也可以设置摘取摘要的分隔符：
+
+```
+excerpt_separator: <!--more-->
+```
+
+#### 评论
+
+由于是静态站点，我们没发内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：[disqus](https://disqus.com/)，国内推荐：[duoshuo](http://duoshuo.com/)。
+
+#### Page
+
+可以认为，不在 `_post` 目录下的页面都是 Page 而不是 Post，其它方面区别不大。
+
+#### Collection
+
+并不是每个页面都是独立“页面”和以日期为顺序的“博文”，因此 Jekyll 引入了 Collection。Collection 可以根据路径定义一类具有相同属性的页面集合。Collection 也可以通过 Front Matter 设定默认值。
+
+#### Data
+
+Data 相当于动态页面中的数据库，Jekyll Data 支持 `yaml`, `json`, `CSV` 三种格式，可以通过 `site.data` 直接访问。
+
+例如：
+
+团队成员有 Fa, Li, Zhang 三人，于是我们在默认路径 `_data` 创建一个数据文件 `member.yml`：
+
+```yaml
+- name: Fa
+- name: Li
+- name: Zhang
+```
+
+在页面中显示团队成员列表：
+
+```
+{% raw %}{% for member in site.data.member %}
+<ul>
+  <li>{{ member.name }}</li>
+</ul>
+{% endfor %}{% endraw %}
+```
 
 ## Liquid 模板
 
@@ -128,19 +336,101 @@ Liquid 是一个开源模版语言，由电商公司 Shopify 实现，用 Ruby �
 
 详细文档请参考 <https://shopify.github.io/liquid/>。
 
+Jekyll 实用 Liquid 作为模版引擎，构建页面。
+
 #### 变量
 
-#### if
+```
+{% raw %}<title>
+{{ page.title }}
+</title>{% endraw %}
+```
 
-#### for .. in
+其中，Jekyll 预设了 `site`, `layout`, `page`, `content` 四个全局变量。
 
-#### assign
+#### 逻辑判断
 
-#### capture
+Liquid 的逻辑判断跟 Ruby 完全一致。
 
-#### Filters
+* 常见语言中的 `if/else if/else` 在 Liquid 中的对应是 `if/elsif/else`。同时，Liquid 也可以使用 Ruby 特有的 `unless`。
+* 常见语言中的 `switch/case` 在 Liquid 中的对应是 `case/when`。
+
+为了简单，只以 `if` 为例：
+
+```
+{% raw %}{% if page.disable_syntax_highlight != true %}
+<link rel="stylesheet" href="{{ site.assets }}/css/zenburn.css">
+{% endif %}{% endraw %}
+```
+
+#### 遍历
+
+在 Liquid 中可以通过 `for` `in` 语法遍历数组，并且支持一般语言循环中的 `continue` 和 `break`。
+
+除此之外，还可以使用 `offset` 和 `limit` 控制遍历范围，通过 `reversed` 进行倒序。
+
+```
+{% raw %}{% for post in site.posts reversed %}
+<a href="{{ post.permalink }}">{{ post.title }}</a>
+{% endfor %}{% endraw %}
+```
+
+详见 <https://shopify.github.io/liquid/tags/iteration/>
+
+#### 赋值
+
+使用 `assign` 进行赋值：
+
+```
+{% raw %}{% assign my_variable = false %}{% endraw %}
+```
+
+使用 `capture` 进行捕捉赋值：
+
+```
+{% raw %}{% capture my_variable %}
+I am being captured.
+{% endcapture %}{% endraw %}
+```
+
+#### Liquid Filters
+
+Liquid Filters 是一种针对 Liquid 中变量的过滤器，语法是：
+
+```
+{% raw %}{{ var | filter: "param" }}{% endraw %}
+```
+
+除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：
+
+* cgi_escape/url_escape/xml_escape
+    * 对变量进行相应的 escape
+* markdownify/scssify/sassify/jsonify
+    * 对变量内容的格式转换
+* where/where_exp/group_by/sort
+    * 对变量数据的查询排序等操作
+
+详见 <http://jekyllrb.com/docs/templates/#filters>
 
 ## 插件
+
+#### 插件简介
+
+Jekyll 支持使用插件进行扩展，插件的类型分为：Generators、Converters、Commands、Hooks、Liquid Tag、Liquid Filter 等。
+
+如果希望开发插件，请参考 <http://jekyllrb.com/docs/plugins/>
+
+#### 使用插件
+
+1. 基于 Gem 的方式
+
+    对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 `_config.yml` 中 `gems` 字段加入相应插件名称即可。
+
+2. 基于本地文件
+
+    对于没有发布的插件，可以在 `_plugins` 文件夹中直接引入 `*.rb` Ruby 源文件。
+
+## 常用插件
 
 #### Jekyll Watch
 
@@ -194,6 +484,8 @@ $ jekyll unpublish
 
 #### Jekyll SEO Tag
 
+[Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) 帮你生成一大堆 Meta 标签。
+
 #### Jemoji
 
 你可以通过 [Jemoji](https://github.com/jekyll/jemoji) 在 Jekyll 生成的网站中，加入自己 Emoji 表情。
@@ -202,7 +494,7 @@ Emoji 语法采用 GitHub 的语法风格。
 
 #### Jekyll Mentions
 
-#### Jekyll Sitemap
+[Jekyll Mentions](https://github.com/jekyll/jekyll-mentions) 允许你在文章中直接“@” GitHub 或其它网站用户。
 
 #### Jekyll Feed
 
@@ -213,6 +505,8 @@ Emoji 语法采用 GitHub 的语法风格。
 [Jekyll Import](https://github.com/jekyll/jekyll-import) 支持从一些国外的主流站点导入博文，如 Blogger, WordPress 和 Tumblr 等，同样也支持 RSS 和 CSV 等数据格式导入。
 
 #### Jekyll Archives
+
+[Jekyll Archives](https://github.com/jekyll/jekyll-archives) 用于生成带标签和分类的『存档』页面。
 
 #### Jekyll Redirect From
 
