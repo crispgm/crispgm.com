@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Dec 2016 01:11:36 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Dec 2016 01:11:36 +0800</lastBuildDate>
+    <pubDate>Thu, 01 Dec 2016 01:12:43 +0800</pubDate>
+    <lastBuildDate>Thu, 01 Dec 2016 01:12:43 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -53,8 +53,6 @@
       <item>
         <title>48 个你需要知道的 Jekyll 使用技巧</title>
         <description>&lt;p&gt;很久以前，本人的个人博客是 PHP 写的简单页面，实时转换 Markdown。后来，为了简单，用 PHP 写了一个静态博客转换器。虽用起来还比较舒服，但通用性太差了。于是转向 GitHub Pages 官方支持的 Jekyll，没想到只花了20分钟就完成了迁移，开发体验颇好。深入使用和参与了许久后，决定写一篇 Jekyll 相关的 Tips 的文章，仅供大家参考。&lt;/p&gt;
-
-&lt;p&gt;目前还没完全写完，先发出来。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;简介&lt;/h2&gt;
 
