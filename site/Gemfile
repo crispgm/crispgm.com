@@ -6,6 +6,6 @@ group :jekyll_plugins do
   #gem "jemoji"
   gem "jekyll-compose"
   gem "jekyll-tagslist"
-  gem "jekyll-disqus"
+  # gem "jekyll-disqus"
   gem "jekyll-google-analytics"
 end
