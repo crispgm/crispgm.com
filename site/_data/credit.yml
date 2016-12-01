@@ -10,12 +10,9 @@
 - name: Certbot
   reason: HTTPS Certificate
   link: https://certbot.eff.org/
-- name: Disqus
-  reason: Comment service
-  link: https://disqus.com/
 - name: highlight.js
   reason: Syntax Highlighter
   link: https://highlightjs.org/
-# - name: FontAwesome
-#   reason: Iconic Font
-#   link: http://fontawesome.io/
+- name: Unsplash
+  reason: Random Photo
+  link: https://unsplash.com/
