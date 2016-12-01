@@ -57,8 +57,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
-ul li p {
+ul p {
   margin: 0;
+}
+li {
+  margin: 0;
+  line-height: 1.5;
 }
 table {
   border-collapse: collapse;
