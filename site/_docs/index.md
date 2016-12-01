@@ -6,17 +6,14 @@ disable_syntax_highlight: true
 ---
 Hi, I am David Zhang, a.k.a __Crisp__ or __Crispgm__ on the internet. I work as a software engineer of web development, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is an [unofficial résumé](https://crispgm.com/resume/){:target="_blank"} for those interested.
 
-Check out my latest blog post, "[{{ site.posts.first.title }}]({{ site.posts.first.url }})". [Subcribe blog updates](feed.xml){:target="_blank"}.
-
 In leisure times, photography, reading and coffee are things I greatly appreciate. I am also interested in improving productivity with great tools chain and systematic methodology. And I go to the theater cheering for my idols with _glo-sticks_ every week.
 
 Follow me:
 
 * [GitHub](https://github.com/crispgm){:target="_blank"}
 * [Twitter](https://twitter.com/crispgm){:target="_blank"}
-* [Weibo](http://weibo.com/crispgm){:target="_blank"}
-* [VSCO](http://vsco.co/crispgm/){:target="_blank"}
 * [Instagram](https://instagram.com/crispgm){:target="_blank"}
+* [Weibo](http://weibo.com/crispgm){:target="_blank"}
 
 There are what I advocate:
 
@@ -25,4 +22,9 @@ There are what I advocate:
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
 
-New: a [Wiki](/wiki/) is in beta version now.
+Site updates:
+
+* Check out my latest blog post, "[{{ site.posts.first.title }}]({{ site.posts.first.url }})".
+* [Subcribe blog updates](feed.xml){:target="_blank"}.
+* [Wiki](/wiki/) is in beta version now.
+* Emoji domain is available for my Instagram: [📷🌌.ws](http://📷🌌.ws )
