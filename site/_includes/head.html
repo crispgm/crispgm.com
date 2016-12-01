@@ -12,7 +12,10 @@
     {% if page.font_awesome == true %}
     <link rel="stylesheet" href="{{ site.assets }}/css/font-awesome.min.css">
     {% endif %}
-    {% if page.disable_syntax_highlight != true %}
+    {% if page.syntax_highlight != false %}
     <link rel="stylesheet" href="{{ site.assets }}/css/zenburn.css">
+    {% endif %}
+    {% if page.jquery == true %}
+    <script src="{{ site.assets }}/scripts/jquery-3.1.0.min.js"></script>
     {% endif %}
   </head>

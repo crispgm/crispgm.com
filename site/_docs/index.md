@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Home
 permalink: /index.html
-disable_syntax_highlight: true
 ---
 Hi, I am David Zhang, a.k.a __Crisp__ or __Crispgm__ on the internet. I work as a software engineer of web development, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level and have sense of basic UI designs. Here is an [unofficial résumé](https://crispgm.com/resume/){:target="_blank"} for those interested.
 

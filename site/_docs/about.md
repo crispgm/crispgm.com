@@ -1,8 +1,6 @@
 ---
-layout: page
 title: About
 permalink: /about.html
-disable_syntax_highlight: true
 ---
 
 ### About

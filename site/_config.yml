@@ -12,6 +12,14 @@ collections:
   docs:
     output: true
 
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: page
+      syntax_highlight: false
+
 plugins_dir: _plugins
 gems:
   # - jemoji
