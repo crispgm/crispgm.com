@@ -60,10 +60,10 @@
 <h3 id="section-2">整体流程</h3>
 
 <ol>
-  <li>在 Issues 中开启收集贴</li>
-  <li>从 Issues 中导入周刊（处理格式、生成 yaml 和 markdown）</li>
+  <li>在 issues 中开启收集贴</li>
+  <li>从 issues 中导入周刊（处理格式、生成 yaml 和 markdown）</li>
   <li>人工编译确认和自动化检测</li>
-  <li>发布然后关闭 Issue 并感谢投稿人</li>
+  <li>发布然后关闭 issue 并感谢投稿人</li>
 </ol>
 
 <h3 id="section-3">准备工作</h3>
@@ -86,7 +86,7 @@
 
 <h3 id="section-4">文章收集</h3>
 
-<p>建立一个专门收集周刊内容的 Repo - <a href="https://github.com/msbu-tech/weekly">msbu-tech/weekly</a>。里面没有代码，只有 <code class="highlighter-rouge">README</code> 来说明投稿的步骤流程，而 Issues 则是收集贴。</p>
+<p>建立一个专门 Repo 收集周刊内容 <a href="https://github.com/msbu-tech/weekly">msbu-tech/weekly</a>。里面没有代码，只有 <code class="highlighter-rouge">README</code> 来说明投稿的步骤流程，而 issues 则是收集贴。</p>
 
 <p>开始收集一周的周刊时，先用创建一个收集贴。</p>
 
@@ -94,7 +94,7 @@
 </code></pre>
 </div>
 
-<p>也就是调用 Octokit.rb 发 Issue 接口：</p>
+<p>也就是调用 <code class="highlighter-rouge">Octokit.rb</code> 发 issue 接口：</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>client.create_issue(repo_name, issue_name, "MSBU Weekly #{weekly_date} is now in collecting. Post your entry following the instruction of &lt;https://github.com/msbu-tech/weekly#投稿&gt;.")
 </code></pre>
@@ -120,7 +120,7 @@
 </code></pre>
 </div>
 
-<p>这里面的工作主要是是遍历 Issue，识别 <code class="highlighter-rouge">/post</code> 投稿标识，然后获取标签、链接、介绍或评语、标签，而回贴人的 ID 就视为推荐人。</p>
+<p>这里面的工作主要是是遍历 issue，识别 <code class="highlighter-rouge">/post</code> 投稿标识，然后获取标签、链接、介绍或评语、标签，而回贴人的 ID 就视为推荐人。</p>
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">issue_comment</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span>
   <span class="n">body</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="ss">:body</span><span class="p">]</span>
@@ -175,7 +175,7 @@
 
 <p>文件都已经生成好，只需要 <code class="highlighter-rouge">git push</code> 到 GitHub，就能生效了。</p>
 
-<p>我们还需要做的是告诉大家周刊发布的好消息，对投稿人表示感谢，然后关闭掉 Issue。</p>
+<p>我们还需要做的是告诉大家周刊发布的好消息，对投稿人表示感谢，然后关闭掉 issue。</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ rake publish
 </code></pre>
