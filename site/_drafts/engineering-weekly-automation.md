@@ -27,7 +27,7 @@ tags:
 1. 在 issues 中开启收集贴
 2. 从 issues 中导入周刊（处理格式、生成 yaml 和 markdown）
 3. 人工编译确认和自动化检测
-4. 发布然后关闭 issue 并感谢投稿人
+4. 发布然后关闭 `issue` 并感谢投稿人
 
 ### 准备工作
 
@@ -49,7 +49,7 @@ client = Octokit::Client.new(:access_token => access_token)
 
 ### 文章收集
 
-建立一个专门 Repo 收集周刊内容 [msbu-tech/weekly](https://github.com/msbu-tech/weekly)。里面没有代码，只有 `README` 来说明投稿的步骤流程，而 issues 则是收集贴。
+建立一个专门收集周刊内容的 Repo - [msbu-tech/weekly](https://github.com/msbu-tech/weekly)。里面没有代码，只有 `README` 来说明投稿的步骤流程，而 Issues 则是收集贴。
 
 开始收集一周的周刊时，先用创建一个收集贴。
 
