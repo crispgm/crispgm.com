@@ -22,3 +22,4 @@ Site news:
 * Checkout my latest blog post, "[{{ site.posts.first.title }}]({{ site.posts.first.url }})".
 * Simple Q/A based [Wiki](/wiki/) is in beta.
 * Emoji domain is available for my Instagram: [📷🌌.ws](http://📷🌌.ws )
+* _Last updated on {{ site.time | date: "%Y-%m-%d" }}._
