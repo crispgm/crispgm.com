@@ -342,3 +342,18 @@ code.highlighter-rouge {
     padding: 0;
   }
 }
+#contact {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#contact a {
+  color: #333;
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
+#contact:hover a {
+  color: #aaa;
+}
+#contact:hover a:hover {
+  color: #333;
+}
