@@ -40,4 +40,4 @@ Here is a list of features:
 * Manage photos both remotely and locally
 * Upload or backup to online cloud storage
 
-The Project is [crispgm/olympia](https://github.com/crispgm/olympia), written in Ruby.
+The project is [crispgm/olympia](https://github.com/crispgm/olympia), written in Ruby.
