@@ -1,6 +1,6 @@
 ---
 layout: post
-type: translation
+type: programming
 title: 『翻译』PHP 7 新 Hash 表实现
 date: 2016/07/06 21:17:00 +0800
 permalink: /page/php7-new-hashtable-implementation.html

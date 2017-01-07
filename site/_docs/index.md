@@ -24,14 +24,6 @@ Site news:
   {% endfor %}
 {% endcapture %}
 
-{% capture translation_posts %}
-  {% for post in site.posts %}
-    {% if post.type == "translation" %}
-      _[{{ post.title }}]({{ post.url }})_|
-    {% endif %}
-  {% endfor %}
-{% endcapture %}
-
 {% capture lifestyle_posts %}
   {% for post in site.posts %}
     {% if post.type == "lifestyle" %}
@@ -42,7 +34,6 @@ Site news:
 
 * Checkout my latest blog posts, 
     * {{ programming_posts | split: "|" | first }} of programming,
-    * {{ translation_posts | split: "|" | first }} of translation,
     * {{ lifestyle_posts | split: "|" | first }} of lifestyle.
 * Simple Q/A based [Wiki](/wiki/) is in beta.
 * Emoji domain is available for my Instagram: [📷 🌌 .ws](http://📷🌌.ws )

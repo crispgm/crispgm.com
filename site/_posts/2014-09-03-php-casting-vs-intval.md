@@ -1,6 +1,6 @@
 ---
 layout: post
-type: translation
+type: programming
 title: 『翻译』PHP 强制转换 vs. intval
 date: 2014/09/03 16:23:00 +0800
 permalink: /page/php-casting-vs-intval.html

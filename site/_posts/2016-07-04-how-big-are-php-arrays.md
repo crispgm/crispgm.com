@@ -1,6 +1,6 @@
 ---
 layout: post
-type: translation
+type: programming
 title: 『翻译』PHP 数组有多大？
 date: 2016/07/05 23:45:00 +0800
 permalink: /page/how-big-are-php-arrays.html
