@@ -40,10 +40,10 @@ Site news:
   {% endfor %}
 {% endcapture %}
 
-* Checkout my latest blog post, 
+* Checkout my latest blog posts, 
     * {{ programming_posts | split: "|" | first }} of programming,
     * {{ translation_posts | split: "|" | first }} of translation,
     * {{ lifestyle_posts | split: "|" | first }} of lifestyle.
 * Simple Q/A based [Wiki](/wiki/) is in beta.
-* Emoji domain is available for my Instagram: [📷🌌.ws](http://📷🌌.ws )
+* Emoji domain is available for my Instagram: [📷 🌌 .ws](http://📷🌌.ws )
 * _Last updated on {{ site.time | date: "%Y-%m-%d" }}._
