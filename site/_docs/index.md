@@ -19,7 +19,7 @@ Site news:
 {% capture programming_posts %}
   {% for post in site.posts %}
     {% if post.type == "programming" %}
-      _[{{ post.title }}]({{ post.url }})_|
+      [{{ post.title }}]({{ post.url }})|
     {% endif %}
   {% endfor %}
 {% endcapture %}
@@ -27,7 +27,7 @@ Site news:
 {% capture lifestyle_posts %}
   {% for post in site.posts %}
     {% if post.type == "lifestyle" %}
-      _[{{ post.title }}]({{ post.url }})_|
+      [{{ post.title }}]({{ post.url }})|
     {% endif %}
   {% endfor %}
 {% endcapture %}
