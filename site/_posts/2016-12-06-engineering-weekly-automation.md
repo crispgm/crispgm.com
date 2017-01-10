@@ -28,6 +28,7 @@ tags:
 2. 从 issues 中导入周刊（处理格式、生成 yaml 和 markdown）
 3. 人工编译确认和自动化检测
 4. 发布然后关闭 issue 并感谢投稿人
+5. 完成 Wunderlist 中的任务
 
 ### 准备工作
 
@@ -59,7 +60,7 @@ $ rake open[2016-12-06]
 
 也就是调用 `Octokit.rb` 发 issue 接口：
 
-```
+```ruby
 client.create_issue(repo_name, issue_name, "MSBU Weekly #{weekly_date} is now in collecting. Post your entry following the instruction of <https://github.com/msbu-tech/weekly#投稿>.")
 ```
 
@@ -128,7 +129,7 @@ end
 
 同时，推荐一个好用的 Gem —— [colorize](https://github.com/fazibear/colorize)。`colorize` “打开”了 `String`，需要报错的时候，只需要在输出的字符串后面调用 `.red` 方法，就可以在控制台用红色显示，很醒目。
 
-```
+```ruby
 puts "[ERROR] Import articles error!".red
 ```
 
@@ -144,7 +145,7 @@ puts "[ERROR] Import articles error!".red
 $ rake publish
 ```
 
-```
+```ruby
 comment = <<-EOL
   Congratulations!
   MSBU Weekly #{weekly_date} is published on <https://msbu-tech.github.io/weekly/#{weekly_date}-weekly.html>!
@@ -156,6 +157,31 @@ client.close_issue(repo_name, number)
 ```
 
 ![](/image/msbu-bot-say-thanks-and-close.jpg)
+
+### 完成 Wunderlist
+
+这里需要再引入一个非官方的 Wunderlist API：
+
+```ruby
+gem "wunderlist-api"
+```
+
+```ruby
+wl = Wunderlist::API.new({
+  access_token: ENV["WLIST_ACCESS_TOKEN"],
+  client_id: ENV["WLIST_CLIENT_ID"]
+})
+
+tasks = wl.tasks(["工作清单"])
+tasks.each do |t|
+  if t.title.eql?("MSBU Tech Weekly") && weekly_date.eql?(t.due_date)
+    t.completed = true
+    t.save
+    show_info("Completing wunderlist task...")
+    break
+  end
+end
+```
 
 ## 写在最后
 
