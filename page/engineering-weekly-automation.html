@@ -66,6 +66,7 @@
   <li>从 issues 中导入周刊（处理格式、生成 yaml 和 markdown）</li>
   <li>人工编译确认和自动化检测</li>
   <li>发布然后关闭 issue 并感谢投稿人</li>
+  <li>完成 Wunderlist 中的任务</li>
 </ol>
 
 <h3 id="section-3">准备工作</h3>
@@ -98,7 +99,7 @@
 
 <p>也就是调用 <code class="highlighter-rouge">Octokit.rb</code> 发 issue 接口：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>client.create_issue(repo_name, issue_name, "MSBU Weekly #{weekly_date} is now in collecting. Post your entry following the instruction of &lt;https://github.com/msbu-tech/weekly#投稿&gt;.")
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">client</span><span class="p">.</span><span class="nf">create_issue</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">issue_name</span><span class="p">,</span> <span class="s2">"MSBU Weekly </span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="s2"> is now in collecting. Post your entry following the instruction of &lt;https://github.com/msbu-tech/weekly#投稿&gt;."</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -167,7 +168,7 @@
 
 <p>同时，推荐一个好用的 Gem —— <a href="https://github.com/fazibear/colorize">colorize</a>。<code class="highlighter-rouge">colorize</code> “打开”了 <code class="highlighter-rouge">String</code>，需要报错的时候，只需要在输出的字符串后面调用 <code class="highlighter-rouge">.red</code> 方法，就可以在控制台用红色显示，很醒目。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>puts "[ERROR] Import articles error!".red
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"[ERROR] Import articles error!"</span><span class="p">.</span><span class="nf">red</span>
 </code></pre>
 </div>
 
@@ -183,18 +184,43 @@
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>comment = &lt;&lt;-EOL
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">comment</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOL</span><span class="sh">
   Congratulations!
-  MSBU Weekly #{weekly_date} is published on &lt;https://msbu-tech.github.io/weekly/#{weekly_date}-weekly.html&gt;!
-  Thanks #{contributors_list.join ', '} for your great contribution!
-  EOL
+  MSBU Weekly </span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="sh"> is published on &lt;https://msbu-tech.github.io/weekly/</span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="sh">-weekly.html&gt;!
+  Thanks </span><span class="si">#{</span><span class="n">contributors_list</span><span class="p">.</span><span class="nf">join</span> <span class="s1">', '</span><span class="si">}</span><span class="sh"> for your great contribution!
+</span><span class="no">  EOL</span>
 
-client.add_comment(repo_name, number, comment)
-client.close_issue(repo_name, number)
+<span class="n">client</span><span class="p">.</span><span class="nf">add_comment</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">comment</span><span class="p">)</span>
+<span class="n">client</span><span class="p">.</span><span class="nf">close_issue</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
 </code></pre>
 </div>
 
 <p><img src="/image/msbu-bot-say-thanks-and-close.jpg" alt="" /></p>
+
+<h3 id="wunderlist">完成 Wunderlist</h3>
+
+<p>这里需要再引入一个非官方的 Wunderlist API：</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"wunderlist-api"</span>
+</code></pre>
+</div>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">wl</span> <span class="o">=</span> <span class="no">Wunderlist</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">({</span>
+  <span class="ss">access_token: </span><span class="no">ENV</span><span class="p">[</span><span class="s2">"WLIST_ACCESS_TOKEN"</span><span class="p">],</span>
+  <span class="ss">client_id: </span><span class="no">ENV</span><span class="p">[</span><span class="s2">"WLIST_CLIENT_ID"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">tasks</span> <span class="o">=</span> <span class="n">wl</span><span class="p">.</span><span class="nf">tasks</span><span class="p">([</span><span class="s2">"工作清单"</span><span class="p">])</span>
+<span class="n">tasks</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+  <span class="k">if</span> <span class="n">t</span><span class="p">.</span><span class="nf">title</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="s2">"MSBU Tech Weekly"</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">weekly_date</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="nf">due_date</span><span class="p">)</span>
+    <span class="n">t</span><span class="p">.</span><span class="nf">completed</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="n">t</span><span class="p">.</span><span class="nf">save</span>
+    <span class="n">show_info</span><span class="p">(</span><span class="s2">"Completing wunderlist task..."</span><span class="p">)</span>
+    <span class="k">break</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
 
 <h2 id="section-8">写在最后</h2>
 
