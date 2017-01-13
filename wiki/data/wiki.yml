@@ -1,3 +1,6 @@
+- id:
+  q: Mac OSX 10.9 Mavericks 清除 DNS 缓存
+  a: dscacheutil -flushcache<br>sudo killall -HUP mDNSResponder
 - id: chimera
   q: Chimera 是什么？
   a: |
