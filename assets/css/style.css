@@ -291,7 +291,17 @@ code.highlighter-rouge {
 .things-list {
 }
 .things-link {
-  margin-top: .4rem;
+  font-size: 1.4rem;
+  float: right;
+}
+.things-box:hover a {
+  color: #aaa;
+}
+.things-link a {
+  color: #fbfbfb;
+}
+.things-link a:hover {
+  color: #333;
 }
 .text-center {
   text-align: center;
