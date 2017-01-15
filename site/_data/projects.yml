@@ -2,47 +2,47 @@
   description: Jekyll is a blog-aware, static site generator in Ruby.
   contributed: true
   links:
-    - text: GitHub
-      href: https://github.com/jekyll/jekyll
-    - text: Homepage
+    - text: fa-globe
       href: https://jekyllrb.com/
-    - text: Contributes
+    - text: fa-history
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
+    - text: fa-github
+      href: https://github.com/jekyll/jekyll
 - name: awesome-cn-cafe
   description: A curated list of awesome café places in China.
   contributed: true
   links:
-    - text: GitHub
-      href: https://github.com/ElaWorkshop/awesome-cn-cafe
-    - text: Contributes
+    - text: fa-history
       href: https://github.com/ElaWorkshop/awesome-cn-cafe/commits?author=crispgm
+    - text: fa-github
+      href: https://github.com/ElaWorkshop/awesome-cn-cafe
 - name: URL Auto Redirector
   description: URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
   links:
-    - text: GitHub
-      href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
-    - text: Homepage
+    - text: fa-globe
       href: https://urlautoredirector.github.io/
-    - text: Chrome WebStore
+    - text: fa-chrome
       href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
+    - text: fa-github
+      href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
 - name: GSM Sources Manager
   description: GSM is a simple sources manager for RubyGems.
   links:
-    - text: GitHub
-      href: https://github.com/crispgm/gsm
-    - text: Homepage
+    - text: fa-globe
       href: https://crispgm.github.io/gsm/
-    - text: RubyGems
+    - text: fa-diamond
       href: https://rubygems.org/gems/gsm-sources-manager
-- name: Crisp Minimalist's Résumé Template
+    - text: fa-github
+      href: https://github.com/crispgm/gsm
+- name: Résumé Template
   description: A minimalist's résumé template powered by Jekyll.
   links:
-    - text: GitHub
+    - text: fa-github
       href: https://github.com/crispgm/resume
 - name: jekyll-tagslist
   description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
   links:
-    - text: GitHub
-      href: https://github.com/crispgm/jekyll-tags-list-plugin
-    - text: RubyGems
+    - text: fa-diamond
       href: https://rubygems.org/gems/jekyll-tagslist
+    - text: fa-github
+      href: https://github.com/crispgm/jekyll-tags-list-plugin

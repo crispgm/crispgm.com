@@ -5,6 +5,11 @@ permalink: /project.html
 <div class="things-content">
   {% for project in site.data.projects %}
   <div class="things-box">
+    <div class="things-link">
+      {% for link in project.links %}
+      <a href="{{ link.href }}"><i class="fa {{ link.text }}"></i></a>
+      {% endfor %}
+    </div>
     <div class="things-title">
       {{ project.name }}
       {% if project.contributed == true %}
@@ -12,11 +17,6 @@ permalink: /project.html
       {% endif %}
     </div>
     <div class="things-list">
-      <div class="things-link">
-        {% for link in project.links %}
-        <a href="{{ link.href }}">{{ link.text }}</a>
-        {% endfor %}
-      </div>
       <div>
         {{ project.description }}
       </div>
