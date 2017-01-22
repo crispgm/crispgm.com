@@ -119,6 +119,29 @@ sudo killall -HUP mDNSResponder
           </div>
         </div>
         
+        <div class="section-wrap" id="mac-screenshot-path">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              Mac 截图修改保存路径
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              macOS 截图会默认保存在桌面上，我们可以通过下面的方法，设置默认的截图保存位置：
+<pre><code># /path/to/screenshot 是要设置的路径
+
+defaults write com.apple.screencapture location /path/to/screenshot
+killall SystemUIServer
+</pre></code>
+
+            </div>
+          </div>
+        </div>
+        
         <div class="section-wrap" id="linux-pronunciation">
           <div class="section-item">
             <div class="section-title title-q">
@@ -269,6 +292,38 @@ ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
 </code></pre>
 保存后，重新启动终端即可生效。
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-wrap" id="awk-scripts">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              awk 日志统计脚本
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              使用 awk 统计日志中各项平均耗时
+<h4>基础扫描版</h4>
+<div>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</div>
+<pre><code>less ui.log | 
+awk 'BEGIN{FS="Timer\\["}{print $2}' | 
+awk 'BEGIN{FS="\\]"}{print $1}' | 
+awk '{for(i=1;i<=NF;i++){if($i!~/tbapi/){print $i}}}' | 
+awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | 
+sort -n
+</pre></code>
+<h4>定时刷新版</h4>
+<div>每 2s 自动 tail 500 条，原理同上（ps：符号转义好恶心啊）</div>
+<pre><code>set +o history
+watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  
+</pre></code>
             </div>
           </div>
         </div>
