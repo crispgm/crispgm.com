@@ -94,6 +94,7 @@ a:hover {
 .section-item {
   display: flex;
   line-height: 1.25;
+  overflow: auto;
 }
 .section-item:first-of-type {
   margin-bottom: 1rem;
