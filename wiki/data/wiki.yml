@@ -20,6 +20,15 @@
 - id: borussia-dortmund
   q: 德甲劲旅多特蒙德队名中 Borussia Dortmund 中的 Borussia 是什么意思？
   a: 普鲁士（Prussia）的拉丁文写法。
+- id: mac-screenshot-path
+  q: Mac 截图修改保存路径
+  a: |
+    macOS 截图会默认保存在桌面上，我们可以通过下面的方法，设置默认的截图保存位置：
+    <pre><code># /path/to/screenshot 是要设置的路径
+    
+    defaults write com.apple.screencapture location /path/to/screenshot
+    killall SystemUIServer
+    </pre></code>
 - id: linux-pronunciation
   q: Linux 的正确读音是什么？
   a: 详情请参考 <a href="http://www.paul.sladen.org/pronunciation/torvalds-says-linux.mp3">Linux Torvalds 本人的读音</a>。
@@ -77,3 +86,21 @@
     ControlPath ~/.ssh/master-%r@%h:%p
     </code></pre>
     保存后，重新启动终端即可生效。
+- id: awk-scripts
+  q: awk 日志统计脚本
+  a: |
+    使用 awk 统计日志中各项平均耗时
+    <h4>基础扫描版</h4>
+    <div>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</div>
+    <pre><code>less ui.log | 
+    awk 'BEGIN{FS="Timer\\["}{print $2}' | 
+    awk 'BEGIN{FS="\\]"}{print $1}' | 
+    awk '{for(i=1;i<=NF;i++){if($i!~/tbapi/){print $i}}}' | 
+    awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | 
+    sort -n
+    </pre></code>
+    <h4>定时刷新版</h4>
+    <div>每 2s 自动 tail 500 条，原理同上（ps：符号转义好恶心啊）</div>
+    <pre><code>set +o history
+    watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  
+    </pre></code>
