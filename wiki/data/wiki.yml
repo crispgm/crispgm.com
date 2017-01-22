@@ -34,6 +34,7 @@
 - id: linux-delete-file-start-with-dash
   q: 在 shell 中删除减号开头的文件
   a: |
+    如下：
     <pre><code>rm -- "--xxxx"
     </code></pre>
 - id: mac-kill-mail
@@ -58,3 +59,21 @@
     sudo kextload /System/Library/Extensions/AppleHDA.kext
     </code></pre>
     OSX 升级到 10.10 Yosemite 后，此问题没有再出现过，应该是苹果彻底修复了。
+- id: mac-terminal-color
+  q: Mac 终端显示颜色
+  a: |
+    修改 <code>~/.bash_profile</code>，添加：
+    <pre><code>export CLICOLOR=1
+    export LSCOLORS=gxfxaxdxcxegedabagacad
+    </code></pre>
+- id: mac-ssh-auto-login
+  q: Mac 下 ssh 避免多次输入密码
+  a: |
+    编辑文件：
+    <pre><code>sudo vim /etc/ssh_config</code></pre>
+    加入：
+    <pre><code>Host *   
+    ControlMaster auto  
+    ControlPath ~/.ssh/master-%r@%h:%p
+    </code></pre>
+    保存后，重新启动终端即可生效。
