@@ -170,7 +170,8 @@ rm /tmp/20131229.list
             <div class="section-title title-a">
             </div>
             <div class="section-content">
-              <pre><code>rm -- "--xxxx"
+              如下：
+<pre><code>rm -- "--xxxx"
 </code></pre>
 
             </div>
@@ -222,6 +223,52 @@ kill -9 $PID
 sudo kextload /System/Library/Extensions/AppleHDA.kext
 </code></pre>
 OSX 升级到 10.10 Yosemite 后，此问题没有再出现过，应该是苹果彻底修复了。
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-wrap" id="mac-terminal-color">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              Mac 终端显示颜色
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              修改 <code>~/.bash_profile</code>，添加：
+<pre><code>export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-wrap" id="mac-ssh-auto-login">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              Mac 下 ssh 避免多次输入密码
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              编辑文件：
+<pre><code>sudo vim /etc/ssh_config</code></pre>
+加入：
+<pre><code>Host *   
+ControlMaster auto  
+ControlPath ~/.ssh/master-%r@%h:%p
+</code></pre>
+保存后，重新启动终端即可生效。
             </div>
           </div>
         </div>
