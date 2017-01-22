@@ -11,4 +11,6 @@ code {
   padding-right: .5rem;
   border: .05rem solid #aaaaaa;
   border-radius: .2rem;
+  max-width: 100%;
+  overflow: hidden;
 }
