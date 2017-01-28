@@ -1,10 +1,3 @@
-- id: mac-flush-dns
-  q: Mac OSX 10.9 Mavericks 清除 DNS 缓存
-  a: |
-    如下：
-    <pre><code>dscacheutil -flushcache
-    sudo killall -HUP mDNSResponder
-    </code></pre>
 - id: chimera
   q: Chimera 是什么？
   a: |
@@ -32,6 +25,13 @@
 - id: linux-pronunciation
   q: Linux 的正确读音是什么？
   a: 详情请参考 <a href="http://www.paul.sladen.org/pronunciation/torvalds-says-linux.mp3">Linux Torvalds 本人的读音</a>。
+- id: mac-flush-dns
+  q: Mac OSX 10.9 Mavericks 清除 DNS 缓存
+  a: |
+    如下：
+    <pre><code>dscacheutil -flushcache
+    sudo killall -HUP mDNSResponder
+    </code></pre>
 - id: tar-argument-list-too-long
   q: "tar: argument list too long 错误"
   a: |
