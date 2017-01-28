@@ -27,6 +27,27 @@
       </header>
       <div class="section">
         
+        <div class="section-wrap" id="mac-flush-dns">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              Mac OSX 10.9 Mavericks 清除 DNS 缓存
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              如下：
+<pre><code>dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
+</code></pre>
+
+            </div>
+          </div>
+        </div>
+        
         <div class="section-wrap" id="chimera">
           <div class="section-item">
             <div class="section-title title-q">
@@ -134,27 +155,6 @@ killall SystemUIServer
             </div>
             <div class="section-content">
               详情请参考 <a href="http://www.paul.sladen.org/pronunciation/torvalds-says-linux.mp3">Linux Torvalds 本人的读音</a>。
-            </div>
-          </div>
-        </div>
-        
-        <div class="section-wrap" id="mac-flush-dns">
-          <div class="section-item">
-            <div class="section-title title-q">
-            </div>
-            <div class="section-content">
-              Mac OSX 10.9 Mavericks 清除 DNS 缓存
-            </div>
-          </div>
-          <div class="section-item">
-            <div class="section-title title-a">
-            </div>
-            <div class="section-content">
-              如下：
-<pre><code>dscacheutil -flushcache
-sudo killall -HUP mDNSResponder
-</code></pre>
-
             </div>
           </div>
         </div>
