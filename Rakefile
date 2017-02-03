@@ -103,3 +103,16 @@ task :build do
     sh "git push origin gh-pages"
   end
 end
+
+desc "Update resume version"
+task :uresume do
+  Dir.chdir("resume") do
+    Dir.chdir("resume") do
+      sh "git pull origin master"
+    end
+
+    sh "git add resume/"
+    sh "git commit --allow-empty -m \"Bump crispgm/resume at #{Time.now} [ci skip]\""
+    sh "git push"
+  end
+end
