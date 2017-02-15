@@ -39,5 +39,6 @@ I advocate:
     * {{ lifestyle_posts | split: "|" | first }} of lifestyle.
 * Simple Q/A based [Wiki](/wiki/) is in beta.
 * Emoji domain is available for my Instagram: [📷 🌌 .ws](http://📷🌌.ws )
+* [Rugby News Board](http://rugbynews.space/)
 
 ![](https://img.shields.io/badge/Last built on-{{ site.time | date: "%b %d, %Y" }}-green.svg)
