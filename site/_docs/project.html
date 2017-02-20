@@ -2,6 +2,8 @@
 title: Project
 permalink: /project.html
 ---
+<h3>Project</h3>
+
 <div class="things-content">
   {% for project in site.data.projects %}
   <div class="things-box">
@@ -13,7 +15,7 @@ permalink: /project.html
     <div class="things-title">
       {{ project.name }}
       {% if project.contributed == true %}
-        <sup id="fnref:asterix"><a href="#fn:asterix" class="footnote">*</a></sup>
+        <sup id="fnref:asterix"><a href="#fn:asterix" class="footnote">Contributed</a></sup>
       {% endif %}
     </div>
     <div class="things-list">
