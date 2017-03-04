@@ -13,12 +13,13 @@
     color: #333;
     padding-left: .4rem;
     padding-right: .4rem;
-    &:hover {
-      a {
-        color: #aaa;
-        &:hover {
-          color: #333;
-        }
+  }
+
+  &:hover {
+    a {
+      color: #aaa;
+      &:hover {
+        color: #333;
       }
     }
   }
