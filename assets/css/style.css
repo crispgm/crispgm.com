@@ -235,6 +235,9 @@ img {
         float: right;
         margin-left: 1rem; } }
 
+.archive-date a {
+  color: #bbbbbb; }
+
 /* disqus */
 #disqus_thread iframe {
   text-align: center; }
