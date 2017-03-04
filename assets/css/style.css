@@ -313,10 +313,10 @@ code.highlighter-rouge {
     color: #333;
     padding-left: .4rem;
     padding-right: .4rem; }
-    #contact a:hover a {
-      color: #aaa; }
-      #contact a:hover a:hover {
-        color: #333; }
+  #contact:hover a {
+    color: #aaa; }
+    #contact:hover a:hover {
+      color: #333; }
 
 /*
  * Theme of Crisp Blog
