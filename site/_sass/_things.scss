@@ -6,35 +6,58 @@
  */
 
 /* things & project */
-.things-content {
-  display: block;
-
-  .things-box {
+.things {
+  .things-item {
+    display: flex;
     width: 100%;
-    margin-bottom: 2.0rem;
-    &:hover {
-      a {
-        color: #aaa;
-      }
+    margin-bottom: 1.0rem;
+    padding-bottom: 1.0rem;
+    border-bottom: .1rem solid #bbbbbb;
+
+    .things-title {
+      font-size: 1.1rem;
+      color: #555;
     }
-
     .things-link {
-      font-size: 1rem;
-      float: right;
+      font-size: .8rem;
+      padding-top: .2rem;
+    }
+    .things-list {
+    }
+  }
+}
 
-      a {
-        color: #fbfbfb;
-        &:hover {
-          color: #333;
+@media (max-width: $breakpoint) {
+  .things {
+    .things-item {
+      display: block;
+      .things-link {
+        display: flex;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        a {
+          padding-right: .2rem;
         }
       }
     }
+  }
+}
+
+#project {
+  .things-item {
     .things-title {
-      font-size: 1rem;
-      font-weight: bold;
-      color: #555;
+      min-width: 12.4rem;
     }
-    .things-list {
+    .things-link {
+      min-width: 8rem;
+    }
+  }
+}
+
+#favorite {
+  .things-item {
+    .things-title {
+      min-width: 8rem;
     }
   }
 }
