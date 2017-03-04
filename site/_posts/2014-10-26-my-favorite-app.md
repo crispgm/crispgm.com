@@ -1,6 +1,6 @@
 ---
 layout: post
-type: lifestyle
+type: legacy
 title: 我喜欢的应用
 date: 2014/10/26 15:23:00 +0800
 permalink: /page/my-favorite-app.html
