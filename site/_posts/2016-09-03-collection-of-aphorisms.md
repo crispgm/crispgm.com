@@ -1,6 +1,6 @@
 ---
 layout: post
-type: lifestyle
+type: legacy
 title: 名言警句摘录
 permalink: /page/collection-of-aphorisms.html
 tags:
