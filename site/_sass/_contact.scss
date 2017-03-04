@@ -1,0 +1,25 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ *
+ * Style for contact info
+ */
+
+#contact {
+  text-align: center;
+  font-size: 1.8rem;
+
+  a {
+    color: #333;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    &:hover {
+      a {
+        color: #aaa;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+}

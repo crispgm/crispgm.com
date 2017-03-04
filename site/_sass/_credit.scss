@@ -1,0 +1,56 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ *
+ * Style for credit list
+ */
+
+#credit-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .credit-item {
+    width: 14rem;
+    text-align: center;
+    margin-top: 1rem;
+
+    a {
+      color: #333;
+      &:hover {
+        text-decoration: none;
+        .credit-name {
+          color: #06c;
+        }
+      }
+    }
+
+    .credit-reason {
+      font-size: 1rem;
+      font-style: italic;
+    }
+    .credit-name {
+      font-size: 1.4rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+@media (max-width: $breakpoint) {
+  #credit-list {
+    display: block;
+    .credit-item {
+      width: 100%;
+      text-align: left;
+
+      a {}
+      .credit-reason {
+        display: inline-block;
+        padding-top: .25rem;
+      }
+      .credit-name {
+        padding: 0;
+      }
+    }
+  }
+}
