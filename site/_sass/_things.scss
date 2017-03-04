@@ -1,0 +1,40 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ *
+ * Style for things & project list
+ */
+
+/* things & project */
+.things-content {
+  display: block;
+
+  .things-box {
+    width: 100%;
+    margin-bottom: 2.0rem;
+    &:hover {
+      a {
+        color: #aaa;
+      }
+    }
+
+    .things-link {
+      font-size: 1rem;
+      float: right;
+
+      a {
+        color: #fbfbfb;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+    .things-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #555;
+    }
+    .things-list {
+    }
+  }
+}
