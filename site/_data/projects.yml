@@ -2,52 +2,54 @@
   description: Jekyll is a blog-aware, static site generator in Ruby.
   contributed: true
   links:
-    - text: fa-globe
+    - text: Homepage
       href: https://jekyllrb.com/
-    - text: fa-history
+    - text: Commits
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
-    - text: fa-github
+    - text: GitHub
       href: https://github.com/jekyll/jekyll
 - name: awesome-cn-cafe
   description: A curated list of awesome café places in China.
   contributed: true
   links:
-    - text: fa-history
+    - text: Commits
       href: https://github.com/ElaWorkshop/awesome-cn-cafe/commits?author=crispgm
-    - text: fa-github
+    - text: GitHub
       href: https://github.com/ElaWorkshop/awesome-cn-cafe
 - name: URL Auto Redirector
   description: URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
   links:
-    - text: fa-globe
-      href: https://urlautoredirector.github.io/
-    - text: fa-chrome
+    - text: Chrome WebStore
       href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
-    - text: fa-github
+    - text: Homepage
+      href: https://urlautoredirector.github.io/
+    - text: GitHub
       href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
 - name: crisp-resume
   description: A minimalist's résumé template powered by Jekyll.
   links:
-    - text: fa-github
+    - text: GitHub
       href: https://github.com/crispgm/resume
+    - text: Demo
+      href: https://crispgm.github.io/resume/resume.html
 - name: Rugby News Board
   description: Yet another rugby news feed in Chinese.
   links:
-    - text: fa-globe
+    - text: Homepage
       href: http://rugbynews.space/
 - name: GSM Sources Manager
   description: GSM is a simple sources manager for RubyGems.
   links:
-    - text: fa-globe
+    - text: Homepage
       href: https://crispgm.github.io/gsm/
-    - text: fa-diamond
+    - text: RubyGems
       href: https://rubygems.org/gems/gsm-sources-manager
-    - text: fa-github
+    - text: GitHub
       href: https://github.com/crispgm/gsm
 - name: jekyll-tagslist
   description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
   links:
-    - text: fa-diamond
+    - text: RubyGems
       href: https://rubygems.org/gems/jekyll-tagslist
-    - text: fa-github
+    - text: GitHub
       href: https://github.com/crispgm/jekyll-tags-list-plugin

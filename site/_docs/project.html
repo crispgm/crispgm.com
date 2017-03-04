@@ -4,19 +4,21 @@ permalink: /project.html
 ---
 <h3>Project</h3>
 
-<div class="things-content">
+<div id="project" class="things">
   {% for project in site.data.projects %}
-  <div class="things-box">
-    <div class="things-link">
-      {% for link in project.links %}
-      <a href="{{ link.href }}"><i class="fa {{ link.text }}"></i></a>
-      {% endfor %}
-    </div>
+  <div class="things-item">
     <div class="things-title">
       {{ project.name }}
       {% if project.contributed == true %}
-        <sup id="fnref:asterix"><a href="#fn:asterix" class="footnote">Contributed</a></sup>
+        <sup id="fnref:asterix"><a href="#fn:asterix" class="footnote">*</a></sup>
       {% endif %}
+    </div>
+    <div class="things-link">
+      {% for link in project.links %}
+      <div>
+        <a href="{{ link.href }}">{{ link.text }}</a>
+      </div>
+      {% endfor %}
     </div>
     <div class="things-list">
       <div>
@@ -26,10 +28,10 @@ permalink: /project.html
   </div>
   {% endfor %}
 </div>
-<hr>
+
 <p>
   <li id="fn:asterix">
-    Projects that I have contributed. <a href="#fnref:asterix" class="reversefootnote">&#8617;</a>
+    Projects with asterix "*" is contributed. <a href="#fnref:asterix" class="reversefootnote">&#8617;</a>
   </li>
   <li>
     For more information about my projects, visit on my <a href="https://github.com/crispgm">GitHub</a>.
