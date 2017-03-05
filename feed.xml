@@ -5,10 +5,11 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Mar 2017 02:46:11 +0800</pubDate>
-    <lastBuildDate>Sun, 05 Mar 2017 02:46:11 +0800</lastBuildDate>
+    <pubDate>Sun, 05 Mar 2017 11:19:21 +0800</pubDate>
+    <lastBuildDate>Sun, 05 Mar 2017 11:19:21 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
+      
       <item>
         <title>摄影的意义</title>
         <description>&lt;h2 id=&quot;section&quot;&gt;最初的入门&lt;/h2&gt;
@@ -115,7 +116,9 @@
         
         
       </item>
+      
     
+      
       <item>
         <title>技术周刊自动化</title>
         <description>&lt;h2 id=&quot;section&quot;&gt;背景&lt;/h2&gt;
@@ -315,7 +318,9 @@
         
         
       </item>
+      
     
+      
       <item>
         <title>Unsplash, 简单纯粹的图片分享</title>
         <description>&lt;p&gt;最近，微博上关注的开发者推荐了一个由&lt;a href=&quot;http://sspai.com/&quot;&gt;少数派&lt;/a&gt;制作的小而美的壁纸 App - &lt;a href=&quot;http://sspai.com/33525&quot;&gt;Cuto&lt;/a&gt;。这 PR 文里面提到：&lt;/p&gt;
@@ -356,7 +361,9 @@
         
         
       </item>
+      
     
+      
       <item>
         <title>48 个你需要知道的 Jekyll 使用技巧</title>
         <description>&lt;p&gt;很久以前，本人的个人博客是 PHP 写的简单页面，实时转换 Markdown。后来，为了简单，用 PHP 写了一个静态博客转换器。虽用起来还比较舒服，但通用性太差了。于是转向 GitHub Pages 官方支持的 Jekyll，没想到只花了20分钟就完成了迁移，开发体验颇好。深入使用和参与了许久后，决定写一篇 Jekyll 相关的 Tips 的文章，仅供大家参考。&lt;/p&gt;
@@ -974,7 +981,9 @@ kramdown:
         
         
       </item>
+      
     
+      
       <item>
         <title>我是如何把自己的 VPS 容器化的</title>
         <description>&lt;p&gt;Docker 是后端近期最火的技术，但在公司生产环境中并没机会使用。由于我的 VPS 主机有容器化的需求，借此机会部署并稍微体验了一下 Docker，谈谈事情的经过和自己的感受。&lt;/p&gt;
@@ -1143,7 +1152,9 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
         
         
       </item>
+      
     
+      
       <item>
         <title>Awesome Coffee Shops in Beijing</title>
         <description>&lt;p&gt;Coffee is one of &lt;a href=&quot;/things.html&quot;&gt;my favorite things&lt;/a&gt; and an important source of daily energy, which help me keep focus on work and be productive. I usually drink two cups of coffee provided by the company I serve every work day. And at the weekends, we need awesome coffee shops in Beijing city.&lt;/p&gt;
@@ -1170,80 +1181,11 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
         
         
       </item>
+      
     
-      <item>
-        <title>名言警句摘录</title>
-        <description>&lt;p&gt;记录一些，在阅读时，获得的一些有用或是有趣的句子或段落。&lt;/p&gt;
-
-&lt;p&gt;注：排序是以我阅读的时间升序为准，会不时更新。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;摘录&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“电梯演讲”是风险投资行业的行话，意思是“给你30秒的时间，看你能不能用你的商业构想打动我”。&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;这样的格局比较适合传统的产品经理，他们通常对“网络图”以及“甘特图”驾轻就熟，在看过一场令人眼花缭乱的PPT（幻灯片）演示后，他们看着投射出的高于投资收益率的财务回报率，对管理团队认可的“正式计划”的具体实施方案大加评论。他们的任务，就是按照制订好的计划行事、带领大家克服一切困难、用所谓的“发散思维”思考问题、对首席执行官的朝令夕改阿谀逢迎、想方设法地让自己的团队迎合高层的决定。&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;当然，我们也有搞砸的时候。萨拉尔·卡曼加曾对我们一位年轻的市场专员印象深刻，想把他调到助理产品经理项目里。不巧的是，这个项目只接收有计算机科学学位的人，因此这位市场专员并不符合条件。萨拉尔据理力争，说这位年轻人是自学成才的程序员，还拥有“与工程师密切合作及与物流相关的经验”，但包括乔纳森在内的几位说了算的高管仍然坚持己见，他们不愿意把光圈调大，否决了这位年轻人的调职的请求。这位名叫凯文·希斯特罗姆的市场专员最终选择离开谷歌，与他人共同成立了一家名叫 Instagram 的公司，之后又以10亿美元的价格卖给了脸谱网。凯文，好样的！&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;如果会议上所有人一致点头，这并不意味着大家意见一致，而只是说明你下面坐着一群“摇头娃娃”。&lt;sup id=&quot;fnref:1:3&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;驱使这样的实业家推动世界进步的，通常不是名利，而是强烈的使命感和充满个人英雄主义的梦想和野望，以及在极少数人身上可贵地伴随终生的好奇心。&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Less is more.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;我们有最好的人工智能，有最好的计算机硬件，有最好的精密机械。这个团队可以完成任何事情。这也是典型的以色列风格——有一支由高素质的专业人才组成的小型精英团队，他们一同为了一个共同的目标夜以继日地工作。梅蒂诺(Medinol)是这支相同的主旋律的一段变奏曲，在梅蒂诺，一个人要处理包括他自己在内的公司的所有事务：生物、医学、工程、计算机科学以及精密机械。在美国的大企业里，让一个程序员理解血管生物学或者让一个医生理解材料工程，几乎是不可能的事情。所以，最后的决议需要协商拟定通过，这是一个繁琐而不精确的过程。但是在梅蒂诺，这是综合的，就像Orbotech是一个完全跨学科的公司一样。时间被节省下来，效率则提升至原来的三倍。&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;计算机内部的风扇有悖于禅意，它们的噪音让人无法集中精神。&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;来源&lt;/h2&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;《重新定义公司:谷歌是如何运营的》(How Google Works)，埃里克·施密特、乔纳森·罗森博格 (Eric Schmidt &amp;amp; Jonathan Rosenberg)。 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;罗永浩 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Ludwig Mies van der Rohe &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;《我的应许之地》(My Promised Land: The Triumph and Tragedy of Israel)，阿里·沙维特 (Ari Shavit)。 &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;《史蒂夫·乔布斯传》（Steve Jobs），沃尔特·艾萨克森 (Walter Isaacson)。 &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 03 Sep 2016 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/collection-of-aphorisms.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/collection-of-aphorisms.html</guid>
-        
-        <category>名言警句</category>
-        
-        <category>摘录</category>
-        
-        
-      </item>
+      
     
+      
       <item>
         <title>Ruby 相见恨晚</title>
         <description>&lt;p&gt;大学时因为好奇的原因在图书馆借阅过几次 Ruby 和 Ruby on Rails 的书籍，大概是道行不够的原因，完全体会不到它的优点。&lt;/p&gt;
@@ -1288,7 +1230,9 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
         
         
       </item>
+      
     
+      
       <item>
         <title>深入 Jekyll</title>
         <description>&lt;h1 id=&quot;section&quot;&gt;介绍&lt;/h1&gt;
@@ -1463,7 +1407,9 @@ git push origin master
         
         
       </item>
+      
     
+      
       <item>
         <title>开源项目中使用 git-rebase 合并提交</title>
         <description>&lt;p&gt;最近，在 GitHub 上贡献代码时，常常是在本地提交 &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt; 很多次后才发起 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commits。&lt;/p&gt;
@@ -1591,6 +1537,7 @@ s 030f64a Graceful require
         
         
       </item>
+      
     
   </channel>
 </rss>
