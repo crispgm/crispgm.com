@@ -1,8 +1,7 @@
 ---
 layout: post
-type: lifestyle
+type: legacy
 title: 恒大夺冠
-date: 2013/11/09 14:01:00 +0800
 permalink: /page/guangzhou-fc.html
 tags:
 - Soccer
