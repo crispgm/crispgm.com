@@ -1,6 +1,6 @@
 ---
 layout: post
-type: programming
+type: legacy
 title: Minimalism Period Tracker
 date: 2015/03/27 20:23:00 +0800
 permalink: /page/period-tracker-app.html

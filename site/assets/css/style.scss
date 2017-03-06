@@ -1,0 +1,22 @@
+---
+---
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ */
+
+$breakpoint: 42rem;
+$bg-color: #fbfbfb;
+$border-color: #aaaaaa;
+$link-color: #06c;
+
+.text-center {
+  text-align: center;
+}
+
+@import "main";
+@import "article";
+@import "code-highlight";
+@import "credit";
+@import "contact";
+@import "things";
