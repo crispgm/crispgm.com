@@ -80,13 +80,8 @@ a:hover {
   text-align: left;
   margin-top: 2rem;
 }
-@media (max-width: 42rem) {
-  .section {
-    padding-left: .4rem;
-  }
-}
 .section-wrap {
-  margin-top: 1rem;
+  margin-top: .6rem;
   background-color: #ffffff;
   box-shadow: 0 .1rem .4rem 0 #ddd;
   padding: 1rem;
