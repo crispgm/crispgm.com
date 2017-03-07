@@ -91,6 +91,9 @@ a:hover {
   box-shadow: 0 .1rem .4rem 0 #ddd;
   padding: 1rem;
 }
+.section-wrap:hover {
+  box-shadow: 0 .1rem .4rem .1rem #ddd;
+}
 .section-item {
   display: flex;
   line-height: 1.25;
