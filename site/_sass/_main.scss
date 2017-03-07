@@ -175,9 +175,12 @@ sup {
       padding-top: 3.25rem;
       padding-bottom: 3.2rem;
     }
-    .menu-item {
-      padding-left: .5rem;
-      padding-right: .5rem;
+    .menu-links {
+      display: flex;
+      .menu-item {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
     }
   }
 }
