@@ -37,7 +37,6 @@ I advocate:
 * Checkout my latest blog posts, 
     * {{ programming_posts | split: "|" | first }} of programming;
     * {{ lifestyle_posts | split: "|" | first }} of lifestyle.
-* Simple Q/A based [Wiki](/wiki/) is in beta.
 * Emoji domain is available for my Instagram: [📷 🌌 .ws](http://📷🌌.ws )
 * [Rugby News Board](http://rugbynews.space/)
 
