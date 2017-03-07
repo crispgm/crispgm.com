@@ -30,9 +30,9 @@ skills:
     items: JavaScript, HTML, CSS/Sass/Less
   - title: Methodology
     items: Agile, Design Patterns
-work_exp:
+experience:
   - title: Senior Software Engineer
-    duration: Apr 2016 - Feb 2016
+    duration: Apr 2016 - Feb 2017
     company: Baidu Inc.
     description: >
       Worked as software architect for Medical Services Division.
