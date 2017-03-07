@@ -5,7 +5,7 @@ permalink: /about.html
 
 ### About
 
-Copyright &copy; David Zhang, 2016.
+Copyright &copy; David Zhang, {{ site.time | date: "%Y" }}.
 
 [Subscribe Blog Updates](/feed.xml){:target="_blank"}.
 
