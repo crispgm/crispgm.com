@@ -112,7 +112,20 @@ task :uresume do
     end
 
     sh "git add resume/"
-    sh "git commit --allow-empty -m \"Bump crispgm/resume at #{Time.now} [ci skip]\""
+    sh "git commit --allow-empty -m \"Bump crispgm/resume at #{Time.now.to_i} [ci skip]\""
+    sh "git push"
+  end
+end
+
+desc "Update wiki version"
+task :uwiki do
+  Dir.chdir("wiki") do
+    Dir.chdir("wiki") do
+      sh "git pull origin master"
+    end
+
+    sh "git add wiki/"
+    sh "git commit --allow-empty -m \"Bump crispgm/wiki at #{Time.now.to_i} [ci skip]\""
     sh "git push"
   end
 end
