@@ -251,7 +251,7 @@ img {
  * Style for code higlight
  */
 pre.highlight {
-  border: 0.05rem solid #aaaaaa;
+  border: .05rem solid #2d2d2d;
   border-radius: .2rem;
   font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
   font-size: .85rem; }
