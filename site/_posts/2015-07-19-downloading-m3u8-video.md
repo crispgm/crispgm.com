@@ -1,6 +1,6 @@
 ---
 layout: post
-type: programming
+type: legacy
 title: Apple iOS m3u8 媒体文件下载
 date: 2015/07/19 13:43:00 +0800
 permalink: /page/downloading-m3u8-video.html
