@@ -20,14 +20,13 @@ defaults:
       layout: page
       syntax_highlight: false
 
-gems:
-  - jekyll-tagslist
-  - jekyll-google-analytics
-
-twitter:
-  username: crispgm
-disqus:
-  username: crispgm
+contact:
+  email: crispgm@gmail.com
+  github: crispgm
+  linkedin: wanlong-zhang
+  instagram: crispgm
+  twitter: crispgm
+  weibo: crispgm
 ga:
   tracking_id: UA-50708664-1
 
