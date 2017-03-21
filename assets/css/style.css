@@ -129,7 +129,6 @@ sup {
     justify-content: center; }
     .menu .menu-links .menu-item {
       height: 2rem;
-      padding-left: 1.6rem;
       padding-right: 1.6rem;
       text-align: center; }
       .menu .menu-links .menu-item a {
@@ -149,7 +148,6 @@ sup {
     .menu .menu-links {
       display: flex; }
       .menu .menu-links .menu-item {
-        padding-left: .5rem;
         padding-right: .5rem; } }
 
 /* footer */
