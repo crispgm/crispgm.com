@@ -5,10 +5,13 @@
  * Style for code higlight
  */
 
+pre,
+code {
+  font-family: "Fira Mono", Menlo, Monaco, Consolas, Courier;
+}
 pre.highlight {
   border: .05rem solid #2d2d2d;
   border-radius: .2rem;
-  font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
   font-size: .85rem;
 }
 code.hljs {
