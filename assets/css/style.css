@@ -23,7 +23,7 @@ html {
     font-size: 12px; } }
 body {
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -288,12 +288,12 @@ code.highlighter-rouge {
         #credit-list .credit-item a:hover .credit-name {
           color: #06c; }
     #credit-list .credit-item .credit-reason {
-      font-size: 1rem;
-      font-style: italic; }
+      font-size: 1rem; }
     #credit-list .credit-item .credit-name {
-      font-size: 1.4rem;
+      font-size: 1rem;
       padding-top: 1rem;
-      padding-bottom: 2rem; }
+      padding-bottom: 1rem;
+      font-weight: bold; }
 
 @media (max-width: 42rem) {
   #credit-list {
