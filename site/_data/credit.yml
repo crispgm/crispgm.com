@@ -22,6 +22,9 @@
 - name:   Tomorrow Night Eighties
   reason: Syntax Highlighter Theme
   link:   https://highlightjs.org/
+- name:   Fira Mono
+  reason: Code Font
+  link:   https://fonts.google.com/specimen/Fira+Mono
 - name:   Unsplash
   reason: Random Photo
   link:   https://unsplash.com/
