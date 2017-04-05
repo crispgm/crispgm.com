@@ -11,7 +11,7 @@ Copyright &copy; David Zhang, {{ site.time | date: "%Y" }}.
 
 All the articles are written in GitHub Flavored Markdown format.
 
-The site source is [on GitHub](https://github.com/crispgm/crispgm.com). The site theme is [working in progress](https://github.com/crispgm/jekyll-crisp-minimalism-theme) but not available yet.
+The site source is [on GitHub](https://github.com/crispgm/crispgm.com). The site theme is [working in progress](https://github.com/crispgm/jekyll-crisp-theme) but not available yet.
 
 ### License
 
