@@ -78,7 +78,7 @@ ul p {
   margin: 0; }
 
 li {
-  margin: 0;
+  margin-left: -1rem;
   line-height: 1.5; }
 
 table {
@@ -131,13 +131,8 @@ sup {
       height: 2rem;
       padding-right: 1.6rem;
       text-align: center; }
-      .menu .menu-links .menu-item a {
-        color: #bbbbbb;
-        font-weight: bold; }
-        .menu .menu-links .menu-item a:hover {
-          color: #000;
-          text-decoration: none; }
     .menu .menu-links .menu-active a {
+      font-weight: bold;
       color: #000;
       text-decoration: none; }
   @media (max-width: 42rem) {
