@@ -79,7 +79,7 @@ ul {
   }
 }
 li {
-  margin: 0;
+  margin-left: -1rem;
   line-height: 1.5;
 }
 
@@ -150,18 +150,11 @@ sup {
       height: 2rem;
       padding-right: 1.6rem;
       text-align: center;
-      a {
-        color: #bbbbbb;
-        font-weight: bold;
-        &:hover {
-          color: #000;
-          text-decoration: none;
-        }
-      }
     }
 
     .menu-active {
       a {
+        font-weight: bold;
         color: #000;
         text-decoration: none;
       }
