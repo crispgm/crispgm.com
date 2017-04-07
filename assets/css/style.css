@@ -182,6 +182,7 @@ img {
 .article {
   text-align: left;
   margin-top: 2.0rem;
+  margin-bottom: 3.0rem;
   /* Tags */ }
   .article .article-head {
     text-align: center;
