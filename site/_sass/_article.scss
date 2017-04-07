@@ -11,8 +11,8 @@
 
   .article-head {
     text-align: center;
-    margin-top: 3.2rem;
-    margin-bottom: 3.2rem;
+    margin-top: 4.2rem;
+    margin-bottom: 4.2rem;
 
     .article-title {
       font-size: 2rem;
@@ -33,7 +33,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 1rem;
-    border-top: .1rem solid $border-color;
     margin-bottom: 2rem;
 
     .tag-item {

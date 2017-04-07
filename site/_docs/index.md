@@ -9,7 +9,7 @@ Hi, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}), 
 
 In leisure times, photography, reading and coffee are things I greatly appreciate. I am also interested in improving productivity with great tools chain and systematic methodology. And I go to the theater cheering for my idols with _glo-sticks_ every weekends.
 
-I advocate:
+### Advocation
 
 * [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
