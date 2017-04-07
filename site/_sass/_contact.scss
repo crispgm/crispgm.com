@@ -6,8 +6,9 @@
  */
 
 #contact {
-  text-align: center;
-  font-size: 1.8rem;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 3rem;
 
   a {
     color: #333;
@@ -22,5 +23,11 @@
         color: #333;
       }
     }
+  }
+
+  #copyright {}
+
+  #links {
+    float: right;
   }
 }
