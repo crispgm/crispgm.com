@@ -178,25 +178,10 @@ hr {
 
     .menu-active {
       a {
-        font-weight: bold;
         color: #555;
         text-decoration: none;
       }
     }
-  }
-
-  @media (max-width: $breakpoint) {
-    // .menu-home {
-    //   font-size: 2.2rem;
-    //   padding-top: 3.25rem;
-    //   padding-bottom: 3.2rem;
-    // }
-    // .menu-links {
-    //   display: flex;
-    //   .menu-item {
-    //     padding-right: .5rem;
-    //   }
-    // }
   }
 }
 
