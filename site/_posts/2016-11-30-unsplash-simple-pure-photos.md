@@ -27,6 +27,4 @@ tags:
 
 感谢 [Crew](https://crew.co/) 让我们拥有这么美好的体验！Crew 也是一个很美的公司，有兴趣的可以自行看看它们的招聘页面和团队博客，体会一下别人家的公司是什么样。
 
-![](https://crew.co/hiring/assets/img/photo-6.jpg)
-
-![](https://crew.co/hiring/assets/img/photo-4.jpg)
+![](https://crew.co/app/uploads/2017/02/3can7mahta-crew-1024x794.jpg)

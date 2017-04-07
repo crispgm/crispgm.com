@@ -5,7 +5,7 @@ permalink: /about.html
 
 ### About
 
-Copyright &copy; David Zhang, {{ site.time | date: "%Y" }}.
+David Zhang &copy; {{ site.time | date: "%Y" }}
 
 All the articles are written in GitHub Flavored Markdown format.
 
