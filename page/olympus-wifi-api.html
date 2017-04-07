@@ -21,15 +21,9 @@
     
   </head>
   <body>
-    <div id="content">
-    <header class="menu">
-      <div class="menu-home">
-        <a href="/">DAVID ZHANG</a>
-      </div>
+    <div class="content" id="header">
+          <header class="content-wrapper menu">
       <div class="menu-links">
-        <div class="menu-item">
-          <a href="/">Home</a>
-        </div>
         <div class="menu-item">
           <a href="/blog.html">Blog</a>
         </div>
@@ -43,9 +37,15 @@
           <a href="/about.html">About</a>
         </div>
       </div>
+      <div class="menu-home">
+        <a href="/">DAVID ZHANG</a>
+      </div>
     </header>
 
-<div class="article">
+    </div>
+    <div class="content" id="main-content">
+      <div class="content-wrapper">
+        <div class="article">
   <div class="article-head">
     <div class="article-title">Olympus Camera Wi-Fi API</div>
     <div class="article-date">May 31, 2016</div>
@@ -84,6 +84,7 @@
 
   </div>
   
+  <hr>
   <div class="article-tag">
     
     <div class="tag-item">
@@ -114,15 +115,23 @@
   
 </div>
 
-    <footer>
-      <div id="contact">
-        <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
-        <a href="/feed.xml"><i class="fa fa-rss"></i></a>
-        <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
-        <a href="https://instagram.com/crispgm"><i class="fa fa-instagram"></i></a>
-        <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
-        <a href="http://weibo.com/crispgm"><i class="fa fa-weibo"></i></a>
+      </div>
+    </div>
+        <footer>
+      <div class="content-wrapper" id="contact">
+        <div id="links">
+          <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
+          <a href="/feed.xml"><i class="fa fa-rss"></i></a>
+          <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
+          <a href="https://instagram.com/crispgm"><i class="fa fa-instagram"></i></a>
+          <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
+          <a href="http://weibo.com/crispgm"><i class="fa fa-weibo"></i></a>
+        </div>
+
+        <div id="copyright">
+          David Zhang &copy; 2017
+        </div>
       </div>
     </footer>
     
@@ -138,6 +147,5 @@
       ga('create', 'UA-50708664-1', 'auto');
       ga('send', 'pageview');
     </script>
-    </div>
   </body>
 </html>
