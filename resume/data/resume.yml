@@ -77,3 +77,8 @@ projects:
   - name: "jekyll-crisp-resume"
     description: "A minimalist resume template for Jekyll. This resume itself uses it, after all. :)"
     contribution: Creator.
+languages:
+  - name: English
+    proficiency: Work proficiency
+  - name: Mandarin Chinese
+    proficiency: Native
