@@ -362,6 +362,8 @@ code.highlighter-rouge {
   .things .things-item .things-link {
     font-size: .8rem;
     padding-top: .2rem; }
+.things ul {
+  margin: 0; }
 
 @media (max-width: 42rem) {
   .things .things-item {
