@@ -3,10 +3,9 @@
   - name: Minimalism
   - name: Photography
   - name: Coffee
-    link: /page/awesome-coffee-shops-in-beijing.html
   - name: ASMR Sounds
-  - name: Soccer/Rugby
-  - name: Fighter/Warship/Submarine
+  - name: Soccer, Rugby, Cricket
+  - name: Fighter, Warship, Submarine
   - name: Documentary Film
 
 - category: Devices
@@ -15,6 +14,9 @@
   - name: iPhone SE
   - name: Kindle Oasis
   - name: Bose Wave Music System
+  - name: Logitech G102
+  - name: Filco FKBN87M/EB2
+  - name: DELL P2213
   - name: Fujifilm X-Pro2
   - name: OLYMPUS E-M5 Mark II
 
@@ -25,14 +27,6 @@
   - name: Midori Brass Ruler
   - name: 败家实验室
     link: https://thebai.taobao.com/
-
-- category: Books
-  items:
-  - name: The Shortest History of Europe | 你一定爱读的极简欧洲史
-  - name: The Three-Body Problem | 三体
-  - name: 新・片づけ術「断捨離」| 断舍离
-  - name: How Google Works | 重新定义公司:谷歌是如何运营的
-  - name: The PayPal Wars | 支付战争
 
 - category: Musics
   items:

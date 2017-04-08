@@ -25,6 +25,9 @@
     .things-list {
     }
   }
+  ul {
+    margin: 0;
+  }
 }
 
 @media (max-width: $breakpoint) {
