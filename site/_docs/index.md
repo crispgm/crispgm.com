@@ -5,7 +5,7 @@ layout: index
 font_awesome: false
 ---
 
-![](https://www.gravatar.com/avatar/8e03bbcbbde521f0c67cb9030642cbf7?s=200)
+[![](https://www.gravatar.com/avatar/8e03bbcbbde521f0c67cb9030642cbf7?s=200)](/bio.html)
 
 I am [David Zhang](/bio.html), a fullstack web developer.
 
