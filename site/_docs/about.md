@@ -2,7 +2,6 @@
 title: About
 permalink: /about.html
 ---
-
 ### About
 
 David Zhang &copy; {{ site.time | date: "%Y" }}
@@ -10,6 +9,8 @@ David Zhang &copy; {{ site.time | date: "%Y" }}
 All the articles are written in GitHub Flavored Markdown format.
 
 The site source is [on GitHub](https://github.com/crispgm/crispgm.com). The site theme is [working in progress](https://github.com/crispgm/jekyll-crisp-theme) but not available yet.
+
+![](https://img.shields.io/badge/Last built on-{{ site.time | date: "%b %d, %Y" }}-green.svg)
 
 ### License
 
