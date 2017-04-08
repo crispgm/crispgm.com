@@ -72,10 +72,6 @@
     }
   }
 
-  .archive-year {
-    margin-top: 2rem;
-  }
-
   .archive-item {
     margin-top: .5rem;
     overflow: auto; /* clearfix */
@@ -99,7 +95,8 @@
     }
   }
 }
-.archive-date {
+.archive-old {
+  color: #bbbbbb;
   a {
     color: #bbbbbb;
   }
