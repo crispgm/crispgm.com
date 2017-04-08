@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Apr 2017 21:49:30 +0800</pubDate>
-    <lastBuildDate>Sat, 08 Apr 2017 21:49:30 +0800</lastBuildDate>
+    <pubDate>Sat, 08 Apr 2017 22:40:36 +0800</pubDate>
+    <lastBuildDate>Sat, 08 Apr 2017 22:40:36 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       
@@ -736,8 +736,8 @@ kramdown:
 &lt;p&gt;Liquid 的逻辑判断跟 Ruby 完全一致。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;if/else if/else&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;if/elsif/else&lt;/code&gt;。同时，Liquid 也可以使用 Ruby 特有的 &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;switch/case&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;case/when&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;else if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;elsif&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt;。同时，Liquid 也可以使用 Ruby 特有的 &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;switch&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;为了简单，只以 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; 为例：&lt;/p&gt;
@@ -789,17 +789,17 @@ kramdown:
 &lt;p&gt;除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;cgi_escape/url_escape/xml_escape
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cgi_escape&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;url_escape&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;xml_escape&lt;/code&gt;
     &lt;ul&gt;
       &lt;li&gt;对变量进行相应的 escape&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;markdownify/scssify/sassify/jsonify
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;markdownify&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;scssify&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sassify&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;jsonify&lt;/code&gt;
     &lt;ul&gt;
       &lt;li&gt;对变量内容的格式转换&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;where/where_exp/group_by/sort
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;where&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;where_exp&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;group_by&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sort&lt;/code&gt;
     &lt;ul&gt;
       &lt;li&gt;对变量数据的查询排序等操作&lt;/li&gt;
     &lt;/ul&gt;
@@ -937,7 +937,9 @@ kramdown:
 
 &lt;h4 id=&quot;nojekyll--jekyll-&quot;&gt;在根目录下创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 文件可以跳过 Jekyll 解析&lt;/h4&gt;
 
-&lt;p&gt;GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 跳过解析。详见 &lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;https://github.com/blog/572-bypassing-jekyll-on-github-pages&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 跳过解析。&lt;/p&gt;
+
+&lt;p&gt;详见 &lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;https://github.com/blog/572-bypassing-jekyll-on-github-pages&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h4 id=&quot;section-18&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
 

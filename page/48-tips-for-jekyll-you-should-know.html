@@ -425,8 +425,8 @@ kramdown:
 <p>Liquid 的逻辑判断跟 Ruby 完全一致。</p>
 
 <ul>
-  <li>常见语言中的 <code class="highlighter-rouge">if/else if/else</code> 在 Liquid 中的对应是 <code class="highlighter-rouge">if/elsif/else</code>。同时，Liquid 也可以使用 Ruby 特有的 <code class="highlighter-rouge">unless</code>。</li>
-  <li>常见语言中的 <code class="highlighter-rouge">switch/case</code> 在 Liquid 中的对应是 <code class="highlighter-rouge">case/when</code>。</li>
+  <li>常见语言中的 <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">else if</code>, <code class="highlighter-rouge">else</code> 在 Liquid 中的对应是 <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">elsif</code>, <code class="highlighter-rouge">else</code>。同时，Liquid 也可以使用 Ruby 特有的 <code class="highlighter-rouge">unless</code>。</li>
+  <li>常见语言中的 <code class="highlighter-rouge">switch</code>, <code class="highlighter-rouge">case</code> 在 Liquid 中的对应是 <code class="highlighter-rouge">case</code>, <code class="highlighter-rouge">when</code>。</li>
 </ul>
 
 <p>为了简单，只以 <code class="highlighter-rouge">if</code> 为例：</p>
@@ -478,17 +478,17 @@ kramdown:
 <p>除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：</p>
 
 <ul>
-  <li>cgi_escape/url_escape/xml_escape
+  <li><code class="highlighter-rouge">cgi_escape</code> <code class="highlighter-rouge">url_escape</code> <code class="highlighter-rouge">xml_escape</code>
     <ul>
       <li>对变量进行相应的 escape</li>
     </ul>
   </li>
-  <li>markdownify/scssify/sassify/jsonify
+  <li><code class="highlighter-rouge">markdownify</code> <code class="highlighter-rouge">scssify</code> <code class="highlighter-rouge">sassify</code> <code class="highlighter-rouge">jsonify</code>
     <ul>
       <li>对变量内容的格式转换</li>
     </ul>
   </li>
-  <li>where/where_exp/group_by/sort
+  <li><code class="highlighter-rouge">where</code> <code class="highlighter-rouge">where_exp</code> <code class="highlighter-rouge">group_by</code> <code class="highlighter-rouge">sort</code>
     <ul>
       <li>对变量数据的查询排序等操作</li>
     </ul>
@@ -626,7 +626,9 @@ kramdown:
 
 <h4 id="nojekyll--jekyll-">在根目录下创建 <code class="highlighter-rouge">.nojekyll</code> 文件可以跳过 Jekyll 解析</h4>
 
-<p>GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 <code class="highlighter-rouge">.nojekyll</code> 跳过解析。详见 <a href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">https://github.com/blog/572-bypassing-jekyll-on-github-pages</a>。</p>
+<p>GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 <code class="highlighter-rouge">.nojekyll</code> 跳过解析。</p>
+
+<p>详见 <a href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">https://github.com/blog/572-bypassing-jekyll-on-github-pages</a>。</p>
 
 <h4 id="section-18">你可以使用自己的域名</h4>
 
