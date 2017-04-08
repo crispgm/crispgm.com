@@ -350,8 +350,8 @@ Jekyll 实用 Liquid 作为模版引擎，构建页面。
 
 Liquid 的逻辑判断跟 Ruby 完全一致。
 
-* 常见语言中的 `if/else if/else` 在 Liquid 中的对应是 `if/elsif/else`。同时，Liquid 也可以使用 Ruby 特有的 `unless`。
-* 常见语言中的 `switch/case` 在 Liquid 中的对应是 `case/when`。
+* 常见语言中的 `if`, `else if`, `else` 在 Liquid 中的对应是 `if`, `elsif`, `else`。同时，Liquid 也可以使用 Ruby 特有的 `unless`。
+* 常见语言中的 `switch`, `case` 在 Liquid 中的对应是 `case`, `when`。
 
 为了简单，只以 `if` 为例：
 
@@ -401,11 +401,11 @@ Liquid Filters 是一种针对 Liquid 中变量的过滤器，语法是：
 
 除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：
 
-* cgi_escape/url_escape/xml_escape
+* `cgi_escape` `url_escape` `xml_escape`
     * 对变量进行相应的 escape
-* markdownify/scssify/sassify/jsonify
+* `markdownify` `scssify` `sassify` `jsonify`
     * 对变量内容的格式转换
-* where/where_exp/group_by/sort
+* `where` `where_exp` `group_by` `sort`
     * 对变量数据的查询排序等操作
 
 详见 <http://jekyllrb.com/docs/templates/#filters>
@@ -534,7 +534,9 @@ Emoji 语法采用 GitHub 的语法风格。
 
 #### 在根目录下创建 `.nojekyll` 文件可以跳过 Jekyll 解析
 
-GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 `.nojekyll` 跳过解析。详见 <https://github.com/blog/572-bypassing-jekyll-on-github-pages>。
+GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 `.nojekyll` 跳过解析。
+
+详见 <https://github.com/blog/572-bypassing-jekyll-on-github-pages>。
 
 #### 你可以使用自己的域名
 
