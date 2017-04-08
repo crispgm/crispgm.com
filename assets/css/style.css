@@ -172,6 +172,15 @@ img {
 @media (max-width: 42rem) {
   img {
     max-width: 100%; } }
+.index {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  font-size: 1.2rem;
+  line-height: 200%; }
+  .index img {
+    margin-bottom: 3rem;
+    border: 0; }
+
 /*
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2017
