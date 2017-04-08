@@ -234,8 +234,6 @@ img {
     text-decoration: none; }
     .archive-main a:hover {
       text-decoration: underline; }
-  .archive-main .archive-year {
-    margin-top: 2rem; }
   .archive-main .archive-item {
     margin-top: .5rem;
     overflow: auto;
@@ -251,8 +249,10 @@ img {
         float: right;
         margin-left: 1rem; } }
 
-.archive-date a {
+.archive-old {
   color: #bbbbbb; }
+  .archive-old a {
+    color: #bbbbbb; }
 
 /* disqus */
 #disqus_thread iframe {
