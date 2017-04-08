@@ -15,4 +15,3 @@ In leisure times, photography, reading and coffee are things I greatly appreciat
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
-
