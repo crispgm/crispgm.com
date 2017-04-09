@@ -1,11 +1,12 @@
+.index-wrapper {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .index {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  font-size: 1.2rem;
+  margin: auto;
+  font-size: 1.4rem;
   line-height: 200%;
-
-  img {
-    margin-bottom: 3rem;
-    border: 0;
-  }
 }
