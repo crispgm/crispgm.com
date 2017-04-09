@@ -4,7 +4,7 @@ permalink: /blog.html
 ---
 
 <div class="archive-main">
-  <h3 id="blog-lifestyle">Programming</h3>
+  <h3 id="programming">Programming</h3>
   {% for post in site.posts %}
     {% if post.type == "programming" %}
     <div class="archive-item">
@@ -13,7 +13,7 @@ permalink: /blog.html
     </div>
     {% endif %}
   {% endfor %}
-  <h3 id="blog-translation">Translation</h3>
+  <h3 id="translation">Translation</h3>
   {% for post in site.posts %}
     {% if post.type == "translation" %}
     <div class="archive-item">
@@ -22,7 +22,7 @@ permalink: /blog.html
     </div>
     {% endif %}
   {% endfor %}
-  <h3 id="blog-lifestyle">Lifestyle</h3>
+  <h3 id="lifestyle">Lifestyle</h3>
   {% for post in site.posts %}
     {% if post.type == "lifestyle" %}
     <div class="archive-item">

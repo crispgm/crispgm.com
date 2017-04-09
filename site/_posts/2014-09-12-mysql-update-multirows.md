@@ -1,6 +1,6 @@
 ---
 layout: post
-type: programming
+type: legacy
 title: MySQL 更新多条记录的不同值
 date: 2014/09/12 22:23:00 +0800
 permalink: /page/mysql-update-multirows.html
