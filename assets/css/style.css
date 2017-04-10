@@ -180,12 +180,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .index-wrapper .index {
+    font-size: 1.4rem;
+    line-height: 200%; }
 
-.index {
-  margin: auto;
-  font-size: 1.4rem;
-  line-height: 200%; }
-
+@media (max-width: 42rem) {
+  .index-wrapper .index {
+    font-size: 1.2rem; } }
 /*
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2017
