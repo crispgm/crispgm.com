@@ -13,15 +13,6 @@ permalink: /blog.html
     </div>
     {% endif %}
   {% endfor %}
-  <h3 id="translation">Translation</h3>
-  {% for post in site.posts %}
-    {% if post.type == "translation" %}
-    <div class="archive-item">
-      <div class="archive-date">{{post.date | date:"%B %d, %Y" }}</div>
-      <div class="archive-title"><a href="{{ post.permalink }}">{{ post.title }}</a></div>
-    </div>
-    {% endif %}
-  {% endfor %}
   <h3 id="lifestyle">Lifestyle</h3>
   {% for post in site.posts %}
     {% if post.type == "lifestyle" %}
@@ -32,6 +23,7 @@ permalink: /blog.html
     {% endif %}
   {% endfor %}
   <p class="archive-old">
+    <a href="/translation_posts.html">Translations</a> |
     <a href="/legacy_posts.html">Legacy Posts</a> |
     <a href="http://crispgm.iteye.com/" target="_blank">Oldschool Blog</a>
   </p>
