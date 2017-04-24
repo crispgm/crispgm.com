@@ -1,5 +1,5 @@
 ---
-title: Bio
+title: Home
 permalink: /index.html
 font_awesome: true
 ---
