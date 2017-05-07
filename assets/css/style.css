@@ -17,9 +17,9 @@
 html {
   width: 100%;
   height: 100%;
-  font-size: 16px; }
+  font-size: 18px; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   html {
     font-size: 12px; } }
 body {
@@ -125,9 +125,9 @@ hr {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: 42rem; }
+  max-width: 36rem; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .content-wrapper {
     padding-left: .5rem;
     padding-right: .5rem; } }
@@ -159,21 +159,6 @@ hr {
       color: #555;
       text-decoration: none; }
 
-/* footer */
-footer {
-  text-align: center;
-  font-size: 1rem;
-  overflow: hidden;
-  margin-top: 3.5rem;
-  margin-bottom: 1.2rem; }
-
-img {
-  border: 0;
-  max-width: 42rem; }
-
-@media (max-width: 42rem) {
-  img {
-    max-width: 100%; } }
 .index-wrapper {
   margin: 0 auto;
   height: 100%;
@@ -184,7 +169,7 @@ img {
     font-size: 1.4rem;
     line-height: 200%; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .index-wrapper .index {
     font-size: 1.2rem; } }
 /*
@@ -247,7 +232,7 @@ img {
       margin-top: 0;
       margin-bottom: 0;
       color: #bbbbbb; }
-  @media (min-width: 42rem) {
+  @media (min-width: 36rem) {
     .archive-main .archive-item {
       margin-top: 0; }
       .archive-main .archive-item .archive-date {
@@ -263,6 +248,21 @@ img {
 #disqus_thread iframe {
   text-align: center; }
 
+/* footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem; }
+
+img {
+  border: 0;
+  max-width: 36rem; }
+
+@media (max-width: 36rem) {
+  img {
+    max-width: 100%; } }
 /*
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2017
@@ -300,7 +300,7 @@ code.highlighter-rouge {
   justify-content: space-between;
   flex-wrap: wrap; }
   #credit-list .credit-item {
-    width: 14rem;
+    width: 12rem;
     text-align: center;
     margin-top: 1rem; }
     #credit-list .credit-item a {
@@ -317,7 +317,7 @@ code.highlighter-rouge {
       padding-bottom: 1rem;
       font-weight: bold; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   #credit-list {
     display: block; }
     #credit-list .credit-item {
@@ -371,7 +371,7 @@ code.highlighter-rouge {
 .things ul {
   margin: 0; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .things .things-item {
     display: block; }
     .things .things-item .things-link {
