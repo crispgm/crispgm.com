@@ -1,0 +1,17 @@
+/* footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+img {
+  border: 0;
+  max-width: $breakpoint;
+}
+@media (max-width: $breakpoint) {
+  img {
+    max-width: 100%;
+  }
+}
