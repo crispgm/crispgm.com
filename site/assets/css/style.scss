@@ -5,7 +5,7 @@
  * Copyright(c) David Zhang, 2017
  */
 
-$breakpoint: 42rem;
+$breakpoint: 36rem;
 $bg-color: #fbfbfb;
 $border-color: #aaa;
 $link-color: #06c;
@@ -15,8 +15,11 @@ $link-color: #06c;
 }
 
 @import "main";
+@import "menu";
 @import "index";
 @import "article";
+@import "footer";
+
 @import "code-highlight";
 @import "credit";
 @import "contact";
