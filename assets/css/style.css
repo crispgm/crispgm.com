@@ -143,6 +143,8 @@ hr {
     .menu .menu-home a {
       color: #555;
       text-decoration: none; }
+  .menu .menu-bars {
+    display: none; }
   .menu .menu-links {
     float: right;
     height: 2rem;
@@ -158,6 +160,34 @@ hr {
     .menu .menu-links .menu-active a {
       color: #555;
       text-decoration: none; }
+  @media (max-width: 36rem) {
+    .menu .menu-bars {
+      display: block;
+      float: right;
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 1.2rem; }
+      .menu .menu-bars a {
+        color: #555;
+        text-decoration: none; }
+    .menu .menu-links {
+      display: none; }
+    .menu .menu-dropdown {
+      display: block;
+      position: absolute;
+      right: .4rem;
+      top: 3rem;
+      border-radius: 8px;
+      padding-top: .4rem; }
+      .menu .menu-dropdown .menu-item {
+        background-color: #efefef;
+        text-align: left;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        font-size: 1.2rem;
+        padding-left: .6rem;
+        padding-right: .6rem;
+        padding-bottom: .4rem; } }
 
 .index-wrapper {
   margin: 0 auto;
