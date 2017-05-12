@@ -166,8 +166,17 @@ hr {
   align-items: center;
   justify-content: center; }
   .index-wrapper .index {
-    font-size: 1.4rem;
     line-height: 200%; }
+    .index-wrapper .index #name {
+      font-size: 2.4rem;
+      margin-bottom: .6rem; }
+    .index-wrapper .index #links {
+      font-size: 1rem; }
+      .index-wrapper .index #links a {
+        color: #aaa;
+        padding-right: .8rem; }
+        .index-wrapper .index #links a:last-child {
+          padding-right: 0; }
 
 @media (max-width: 36rem) {
   .index-wrapper .index {
