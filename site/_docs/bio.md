@@ -1,6 +1,6 @@
 ---
-title: Home
-permalink: /index.html
+title: Bio
+permalink: /bio.html
 font_awesome: true
 ---
 ### Bio
