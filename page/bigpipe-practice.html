@@ -233,14 +233,17 @@ nginx: [emerg] unknown directive "fastcgi_buffering"
         isToggle = false;
       }, false);
 
-      document.body.addEventListener("click", function(){
+      document.body.addEventListener("click", function(evt){
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
         }
       });
 
-      document.body.addEventListener("touchend", function(){
-        if (isToggle) {
+      document.body.addEventListener("touchend", function(evt){
+        if (!evt.target.parent)
+          return;
+
+        if (isToggle && evt.target.parent.classList.contains("menu-item")) {
           menuElement.classList.remove("menu-dropdown");
         }
       });
