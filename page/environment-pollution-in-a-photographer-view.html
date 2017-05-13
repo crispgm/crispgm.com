@@ -122,6 +122,12 @@ I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Li
         }
       });
 
+      document.body.addEventListener("touchend", function(){
+        if (isToggle) {
+          menuElement.classList.remove("menu-dropdown");
+        }
+      });
+
       function toggleMenu() {
         menuElement = document.querySelector(".menu-links");
         if (isToggle) {

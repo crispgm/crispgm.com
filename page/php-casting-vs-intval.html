@@ -1080,6 +1080,12 @@
         }
       });
 
+      document.body.addEventListener("touchend", function(){
+        if (isToggle) {
+          menuElement.classList.remove("menu-dropdown");
+        }
+      });
+
       function toggleMenu() {
         menuElement = document.querySelector(".menu-links");
         if (isToggle) {

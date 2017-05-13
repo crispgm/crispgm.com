@@ -59,7 +59,7 @@
 
 <p>The site source is <a href="https://github.com/crispgm/crispgm.com">on GitHub</a>. The site theme is <a href="https://github.com/crispgm/jekyll-crisp-theme">working in progress</a> but not available yet.</p>
 
-<p><img src="https://img.shields.io/badge/Last built on-May 13, 2017-green.svg" alt="" /></p>
+<p><img src="https://img.shields.io/badge/Last built on-May 14, 2017-green.svg" alt="" /></p>
 
 <h3 id="license">License</h3>
 
@@ -212,6 +212,12 @@
       }, false);
 
       document.body.addEventListener("click", function(){
+        if (isToggle) {
+          menuElement.classList.remove("menu-dropdown");
+        }
+      });
+
+      document.body.addEventListener("touchend", function(){
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
         }

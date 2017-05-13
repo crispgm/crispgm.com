@@ -192,6 +192,12 @@ C/C++/Objective-C (基于 clang)，Python(基于 <a href="https://github.com/dav
         }
       });
 
+      document.body.addEventListener("touchend", function(){
+        if (isToggle) {
+          menuElement.classList.remove("menu-dropdown");
+        }
+      });
+
       function toggleMenu() {
         menuElement = document.querySelector(".menu-links");
         if (isToggle) {

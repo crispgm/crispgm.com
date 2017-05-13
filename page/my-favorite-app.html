@@ -462,6 +462,12 @@ Foobar 2000有很多自己的标签，并得到了一部分注重音质喜欢折
         }
       });
 
+      document.body.addEventListener("touchend", function(){
+        if (isToggle) {
+          menuElement.classList.remove("menu-dropdown");
+        }
+      });
+
       function toggleMenu() {
         menuElement = document.querySelector(".menu-links");
         if (isToggle) {
