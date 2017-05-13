@@ -166,7 +166,8 @@ hr {
       float: right;
       height: 2rem;
       line-height: 2rem;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      padding-right: .8rem; }
       .menu .menu-bars a {
         color: #555;
         text-decoration: none; }
@@ -175,18 +176,18 @@ hr {
     .menu .menu-dropdown {
       display: block;
       position: absolute;
-      right: .4rem;
-      top: 3rem;
+      right: 1.3rem;
+      top: 2.4rem;
       border-radius: 8px;
       padding-top: .4rem; }
       .menu .menu-dropdown .menu-item {
         background-color: #efefef;
         text-align: left;
-        height: 1.8rem;
-        line-height: 1.8rem;
-        font-size: 1.2rem;
-        padding-left: .6rem;
-        padding-right: .6rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        font-size: 1.6rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
         padding-bottom: .4rem; } }
 
 .index-wrapper {
