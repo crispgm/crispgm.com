@@ -76,7 +76,7 @@ task :build do
     Dir.chdir("resume") do
       sh "git stash"
       sh "git pull origin master"
-      sh "cp ../data/resume.yml _data"
+      sh "cp ../data/resume*.yml _data"
       sh "cp ../_config.yml ."
       sh "jekyll build --destination=../../gh-pages/resume/"
       sh "git stash"
