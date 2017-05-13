@@ -36,7 +36,7 @@ end
 desc "Serve resume"
 task :resume do
   Dir.chdir("resume") do
-    sh "cp data/resume.yml resume/_data"
+    sh "cp data/resume*.yml resume/_data"
     sh "cp _config.yml resume"
     Dir.chdir("resume") do
       sh "jekyll serve"
