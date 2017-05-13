@@ -456,10 +456,6 @@ Foobar 2000有很多自己的标签，并得到了一部分注重音质喜欢折
         isToggle = false;
       }, false);
 
-      document.querySelector(".menu-bars").addEventListener("click", function(event){
-        event.stopPropagation();
-      });
-
       document.body.addEventListener("click", function(){
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");

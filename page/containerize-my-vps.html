@@ -259,10 +259,6 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
         isToggle = false;
       }, false);
 
-      document.querySelector(".menu-bars").addEventListener("click", function(event){
-        event.stopPropagation();
-      });
-
       document.body.addEventListener("click", function(){
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
