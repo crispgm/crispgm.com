@@ -37,9 +37,7 @@
         </div>
       </div>
       <div class="menu-bars">
-        <a href="javascript:toggleMenu()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <i id="dropdown-button" class="fa fa-bars"></i>
       </div>
       <div class="menu-home">
         <a href="/">DAVID ZHANG</a>
@@ -161,25 +159,25 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         isToggle = false;
+
+        document.body.addEventListener("click", function(evt){
+          if (isToggle && evt.target.id != 'dropdown-button') {
+            toggleMenu();
+          }
+        });
+
+        var dropdown = document.querySelector("#dropdown-button");
+        dropdown.addEventListener("click", function(evt) {
+          toggleMenu();
+        });
+
+        document.body.addEventListener("touchstart", function(evt){
+          evt.stopPropagation();
+        });
       }, false);
 
-      document.body.addEventListener("click", function(evt){
-        if (isToggle) {
-          menuElement.classList.remove("menu-dropdown");
-        }
-      });
-
-      document.body.addEventListener("touchend", function(evt){
-        if (!evt.target.parent)
-          return;
-
-        if (isToggle && evt.target.parent.classList.contains("menu-item")) {
-          menuElement.classList.remove("menu-dropdown");
-        }
-      });
-
       function toggleMenu() {
-        menuElement = document.querySelector(".menu-links");
+        var menuElement = document.querySelector(".menu-links");
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
         }
