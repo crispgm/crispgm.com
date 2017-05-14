@@ -2,10 +2,13 @@
 layout: post
 title: Test for Styles
 permalink: /page/test-for-styles.html
+type: programming
 tags:
 - Test
 - Styles
 ---
+
+This is not an actual post. It is a test post for styles, which contains all available markdown syntax to prove the effect of UI styles.
 
 # H1 - heading 1
 
@@ -27,6 +30,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
+<hr>
+
 ```ruby
 def hello_world
   puts "hello, world"
@@ -34,6 +39,8 @@ end
 ```
 
 And, I need some `inline code` here.
+
+<hr>
 
 > Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
