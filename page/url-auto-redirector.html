@@ -95,11 +95,16 @@ location.href = "https://urlautoredirector.github.io"
 
       function toggleMenu() {
         var menuElement = document.querySelector(".menu-links");
+        var dropdownElement = document.querySelector("#dropdown-button");
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
+          dropdownElement.classList.remove("fa-close");
+          dropdownElement.classList.add("fa-bars");
         }
         else {
           menuElement.classList.add("menu-dropdown");
+          dropdownElement.classList.remove("fa-bars");
+          dropdownElement.classList.add("fa-close");
         }
         isToggle = !isToggle;
       }
