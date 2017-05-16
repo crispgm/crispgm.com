@@ -1,3 +1,9 @@
+- id: git-branch-name
+  q: Git 中如何获得当前目录所在的分支名？
+  a: |
+    Git 原生命令支持：
+    <pre><code>git rev-parse --abbrev-ref HEAD
+    </pre></code>
 - id: chimera
   q: Chimera 是什么？
   a: |
