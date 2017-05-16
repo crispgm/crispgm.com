@@ -10,6 +10,12 @@
 - name:   Certbot
   reason: HTTPS Certificate
   link:   https://certbot.eff.org/
+- name:   Disqus
+  reason: Comment Service
+  link:   https://disqus.com/
+- name:   Unsplash
+  reason: Random Photo
+  link:   https://unsplash.com/
 - name:   Noto Sans
   reason: Text Font
   link:   https://www.google.com/get/noto/
@@ -20,11 +26,8 @@
   reason: Syntax Highlighter
   link:   https://highlightjs.org/
 - name:   Tomorrow Night Eighties
-  reason: Syntax Highlighter Theme
+  reason: Syntax Theme
   link:   https://github.com/chriskempson/tomorrow-theme
 - name:   Fira Mono
   reason: Code Font
   link:   https://fonts.google.com/specimen/Fira+Mono
-- name:   Unsplash
-  reason: Random Photo
-  link:   https://unsplash.com/
