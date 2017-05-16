@@ -231,6 +231,8 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
     
   </div>
   
+  <div id="disqus_thread"></div>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
       </div>
@@ -301,5 +303,21 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
       ga('create', 'UA-50708664-1', 'auto');
       ga('send', 'pageview');
     </script>
+    
+    <script>
+    var disqus_config = function () {
+      this.page.url = 'https://crispgm.com/page/containerize-my-vps.html';
+      this.page.identifier = '/page/containerize-my-vps.html';
+      this.page.title = '我是如何把自己的 VPS 容器化的';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://crispgm.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    
   </body>
 </html>

@@ -337,7 +337,6 @@ code.highlighter-rouge {
  */
 #credit-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap; }
   #credit-list .credit-item {
     width: 12rem;
