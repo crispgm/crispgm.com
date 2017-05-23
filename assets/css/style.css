@@ -236,6 +236,9 @@ hr {
     font-size: 1.0rem;
     margin-top: 1.2rem;
     margin-bottom: 1.2rem; }
+    .article .article-main p {
+      margin-top: 2rem;
+      line-height: 1.8rem; }
   .article .article-tag {
     display: flex;
     flex-direction: row;
@@ -316,18 +319,18 @@ code {
 pre.highlight {
   border: 1px solid #2d2d2d;
   border-radius: .2rem;
-  font-size: 1rem; }
+  font-size: .9rem; }
 
 code.hljs {
   padding: .8rem; }
 
 /* inline codes */
 code.highlighter-rouge {
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: bold;
   border: 1px solid #aaa;
   border-radius: .2rem;
-  padding: .2rem .3rem .2rem .3rem; }
+  padding: .1rem .3rem .1rem .3rem; }
 
 /*
  * Theme of Crisp Blog
