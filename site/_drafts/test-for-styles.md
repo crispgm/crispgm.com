@@ -38,7 +38,7 @@ def hello_world
 end
 ```
 
-And, I need some `inline code` here.
+And, I need some `inline code` here, which should be `long` enough. It is because that `inline code` in different `lines` can `overflow` on each other.
 
 <hr>
 
