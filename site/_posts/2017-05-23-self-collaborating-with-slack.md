@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 我在 Slack 和自己聊天（协作）
+title: 我在 Slack 和自己聊天
 permalink: /page/self-collaborating-with-slack.html
 type: programming
 tags:
