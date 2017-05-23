@@ -5,16 +5,14 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 May 2017 18:35:43 +0800</pubDate>
-    <lastBuildDate>Tue, 23 May 2017 18:35:43 +0800</lastBuildDate>
+    <pubDate>Tue, 23 May 2017 22:10:50 +0800</pubDate>
+    <lastBuildDate>Tue, 23 May 2017 22:10:50 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       
       <item>
         <title>我在 Slack 和自己聊天</title>
         <description>&lt;p&gt;&lt;img src=&quot;/image/slack-logo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;slack&quot;&gt;Slack&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; 是一款为团队协作设计的即时通信软件，维基百科的定义是：&lt;/p&gt;
 
@@ -68,19 +66,21 @@
 
 &lt;h2 id=&quot;section-3&quot;&gt;稍后阅读&lt;/h2&gt;
 
-&lt;p&gt;于是，我创建了 &lt;code class=&quot;highlighter-rouge&quot;&gt;#articles&lt;/code&gt; 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。&lt;/p&gt;
+&lt;p&gt;我是稍后阅读类 App 的重度用户，Pocket 世界阅读量排名进入 Top 1%，最近也经常用 Instapaper。我也维持着一套 Reeder 订阅 RSS，然后泛读和稍后阅读的阅读 flow。&lt;/p&gt;
 
-&lt;p&gt;我也用稍后阅读类 App，比如 Pocket 或者 Instapaper。但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。这时候，我就会通过 Slack 发送到 &lt;code class=&quot;highlighter-rouge&quot;&gt;#articles&lt;/code&gt; 里。至少，这比微信的文件同步助手手感更丝滑。&lt;/p&gt;
+&lt;p&gt;但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。于是，我创建了 &lt;code class=&quot;highlighter-rouge&quot;&gt;#articles&lt;/code&gt; 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。至少，这比微信的文件同步助手手感更丝滑。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/slack-share-article.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-4&quot;&gt;看图 &amp;amp; 获得灵感&lt;/h2&gt;
 
+&lt;p&gt;开发的过程是快乐的，但也时常伴随着挫折和焦急。我们需要一些方式娱乐和舒缓自己，重新获得力量和灵感。&lt;/p&gt;
+
 &lt;h3 id=&quot;section-5&quot;&gt;图片分享&lt;/h3&gt;
 
-&lt;p&gt;开发间歇的娱乐活动有很多，我觉得发照片比较适合 Slack，怡情养眼且不耗时，还能获得灵感。&lt;/p&gt;
+&lt;p&gt;开发间歇的娱乐活动有很多，比如游戏和音乐。而我觉得看照片比较适合 Slack，怡情养眼且不耗时，还会时不时收获灵感。&lt;/p&gt;
 
-&lt;p&gt;接收图片的频道有三个：&lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;接收图片的频道有三个: &lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt; 的确是美女但不开车，&lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt; 是正规摄影小作品，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt; 接收 Apps 的随机图片。&lt;/p&gt;
 
@@ -90,11 +90,11 @@
 
 &lt;h3 id=&quot;section-6&quot;&gt;随机图片&lt;/h3&gt;
 
-&lt;p&gt;还剩下为数不多的 Apps 集成额度就贡献给了 &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt;，我选择加入了 Dribbble 和 Unsplash。&lt;/p&gt;
+&lt;p&gt;休闲过后还需要来点灵感，于是剩下不多的 Apps 集成额度就贡献给了 &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt;，我选择加入了 Dribbble 和 Unsplash。&lt;/p&gt;
 
 &lt;p&gt;通过 Dribbble，可以随机获取一张设计稿或者是通过关键词搜索一张。虽然我不是设计师，但好的设计让人愉悦，也能激发灵感。&lt;/p&gt;
 
-&lt;p&gt;Unsplash 我在&lt;a href=&quot;/page/unsplash-simple-pure-photos.html&quot;&gt;之前的文章&lt;/a&gt;进行过介绍，在 Slack 中可以使用随机获取一张照片，这是一种调节开发节奏的好方法。&lt;/p&gt;
+&lt;p&gt;Unsplash 我在&lt;a href=&quot;/page/unsplash-simple-pure-photos.html&quot;&gt;之前的文章&lt;/a&gt;进行过介绍，在 Slack 中可以使用斜杠指令随机获取一张照片，这是一种调节开发节奏的好方法。&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/unsplash random
 &lt;/code&gt;&lt;/pre&gt;
