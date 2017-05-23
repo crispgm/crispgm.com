@@ -10,8 +10,6 @@ tags:
 
 ![](/image/slack-logo.jpg)
 
-# Slack
-
 [Slack](https://slack.com/) 是一款为团队协作设计的即时通信软件，维基百科的定义是：
 
 > Slack is a cloud-based set of team collaboration tools and services.
@@ -62,19 +60,21 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 ## 稍后阅读
 
-于是，我创建了 `#articles` 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。
+我是稍后阅读类 App 的重度用户，Pocket 世界阅读量排名进入 Top 1%，最近也经常用 Instapaper。我也维持着一套 Reeder 订阅 RSS，然后泛读和稍后阅读的阅读 flow。
 
-我也用稍后阅读类 App，比如 Pocket 或者 Instapaper。但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。这时候，我就会通过 Slack 发送到 `#articles` 里。至少，这比微信的文件同步助手手感更丝滑。
+但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。于是，我创建了 `#articles` 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。至少，这比微信的文件同步助手手感更丝滑。
 
 ![](/image/slack-share-article.jpg)
 
 ## 看图 & 获得灵感
 
+开发的过程是快乐的，但也时常伴随着挫折和焦急。我们需要一些方式娱乐和舒缓自己，重新获得力量和灵感。
+
 ### 图片分享
 
-开发间歇的娱乐活动有很多，我觉得发照片比较适合 Slack，怡情养眼且不耗时，还能获得灵感。
+开发间歇的娱乐活动有很多，比如游戏和音乐。而我觉得看照片比较适合 Slack，怡情养眼且不耗时，还会时不时收获灵感。
 
-接收图片的频道有三个：`#girls`，`#photography`，`#random`。
+接收图片的频道有三个: `#girls`, `#photography`, `#random`.
 
 `#girls` 的确是美女但不开车，`#photography` 是正规摄影小作品，而 `#random` 接收 Apps 的随机图片。
 
@@ -84,11 +84,11 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 ### 随机图片
 
-还剩下为数不多的 Apps 集成额度就贡献给了 `#random`，我选择加入了 Dribbble 和 Unsplash。
+休闲过后还需要来点灵感，于是剩下不多的 Apps 集成额度就贡献给了 `#random`，我选择加入了 Dribbble 和 Unsplash。
 
 通过 Dribbble，可以随机获取一张设计稿或者是通过关键词搜索一张。虽然我不是设计师，但好的设计让人愉悦，也能激发灵感。
 
-Unsplash 我在[之前的文章](/page/unsplash-simple-pure-photos.html)进行过介绍，在 Slack 中可以使用随机获取一张照片，这是一种调节开发节奏的好方法。
+Unsplash 我在[之前的文章](/page/unsplash-simple-pure-photos.html)进行过介绍，在 Slack 中可以使用斜杠指令随机获取一张照片，这是一种调节开发节奏的好方法。
 
 ```
 /unsplash random
