@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 May 2017 22:10:50 +0800</pubDate>
-    <lastBuildDate>Tue, 23 May 2017 22:10:50 +0800</lastBuildDate>
+    <pubDate>Wed, 24 May 2017 12:24:14 +0800</pubDate>
+    <lastBuildDate>Wed, 24 May 2017 12:24:14 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       
@@ -50,6 +50,8 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;img src=&quot;/image/slack-travis-msg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;不过，这里有个限制，免费用户只能添加10个应用。还好我用的云服务不足10个。真需要付费的时候，那也未尝不可，花钱买时间没什么不对的。&lt;/p&gt;
 
 &lt;h3 id=&quot;chatops&quot;&gt;ChatOps&lt;/h3&gt;
@@ -58,9 +60,9 @@
 
 &lt;p&gt;我会把运维相关的内容发送到 &lt;code class=&quot;highlighter-rouge&quot;&gt;#ops&lt;/code&gt; 频道。对于 Heroku 这样成熟、开发体验友好的平台，其实没有什么需要运维的。通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku-cli&lt;/code&gt; 几乎可以干任何事情，因为 &lt;code class=&quot;highlighter-rouge&quot;&gt;#ops&lt;/code&gt; 频道只会接到代码更新部署的事件。而 Linode 那边的确需要运维，对于部署我已经通过 GitHub WebHooks 和部署脚本实现了自动化，所以这里只会接收到 NewRelic 的监控报警。&lt;/p&gt;
 
-&lt;p&gt;不过这个地方有个尴尬😅之处，NewRelic 监控的是部署 VPN 的主机，如果报警后会发送到 Slack，但 Slack 又是通过这个 VPN 访问的，因此……&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&quot;/image/slack-ops-msg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不过这个地方有个尴尬😅之处，NewRelic 监控的是部署 VPN 的主机，如果报警后会发送到 Slack，但 Slack 又是通过这个 VPN 访问的，因此……&lt;/p&gt;
 
 &lt;p&gt;当然，我还远没有用到 ChatOps 的精髓，有空还会继续探索试一些更实用的工具，真正地 Chat 起来。&lt;/p&gt;
 
@@ -76,25 +78,31 @@
 
 &lt;p&gt;开发的过程是快乐的，但也时常伴随着挫折和焦急。我们需要一些方式娱乐和舒缓自己，重新获得力量和灵感。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-5&quot;&gt;图片分享&lt;/h3&gt;
-
 &lt;p&gt;开发间歇的娱乐活动有很多，比如游戏和音乐。而我觉得看照片比较适合 Slack，怡情养眼且不耗时，还会时不时收获灵感。&lt;/p&gt;
 
-&lt;p&gt;接收图片的频道有三个: &lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;接收图片的频道有三个: &lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;#design&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt; 的确是美女但不开车，&lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt; 是正规摄影小作品，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt; 接收 Apps 的随机图片。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt; 的确是美女但不开车，&lt;code class=&quot;highlighter-rouge&quot;&gt;#photography&lt;/code&gt; 是正规摄影小作品，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;#design&lt;/code&gt; 接收设计类的图片。&lt;/p&gt;
 
-&lt;p&gt;为了增加分享图片的仪式感，我引入了一个 &lt;a href=&quot;https://workflow.is/&quot;&gt;Workflow&lt;/a&gt;：Post Image To Slack，通过 Action Extension 触发分享操作。&lt;/p&gt;
+&lt;p&gt;为了增加分享图片的仪式感，我引入了 &lt;a href=&quot;https://workflow.is/&quot;&gt;Workflow&lt;/a&gt;：Post Image To Slack，通过 Action Extension 触发分享操作。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/slack-post-image-workflow.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-6&quot;&gt;随机图片&lt;/h3&gt;
+&lt;p&gt;此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack &lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt;。&lt;/p&gt;
 
-&lt;p&gt;休闲过后还需要来点灵感，于是剩下不多的 Apps 集成额度就贡献给了 &lt;code class=&quot;highlighter-rouge&quot;&gt;#random&lt;/code&gt;，我选择加入了 Dribbble 和 Unsplash。&lt;/p&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;随机图片&lt;/h3&gt;
+
+&lt;p&gt;休闲过后还需要来点灵感，随机是个好方法，于是剩下不多的 Apps 集成额度就用在了这里，我选择加入了 Dribbble 和 Unsplash。&lt;/p&gt;
 
 &lt;p&gt;通过 Dribbble，可以随机获取一张设计稿或者是通过关键词搜索一张。虽然我不是设计师，但好的设计让人愉悦，也能激发灵感。&lt;/p&gt;
 
-&lt;p&gt;Unsplash 我在&lt;a href=&quot;/page/unsplash-simple-pure-photos.html&quot;&gt;之前的文章&lt;/a&gt;进行过介绍，在 Slack 中可以使用斜杠指令随机获取一张照片，这是一种调节开发节奏的好方法。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/dribbble london
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/slack-dribbble-london.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unsplash 我在&lt;a href=&quot;/page/unsplash-simple-pure-photos.html&quot;&gt;之前的文章&lt;/a&gt;进行过介绍，在 Slack 中可以随机获取一张高质量摄影作品，这是一种调节开发节奏的好方法。&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/unsplash random
 &lt;/code&gt;&lt;/pre&gt;
@@ -102,7 +110,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;section-7&quot;&gt;最后&lt;/h1&gt;
+&lt;h1 id=&quot;section-6&quot;&gt;最后&lt;/h1&gt;
 
 &lt;p&gt;如果一个工具，既可以让人提高生产力，又能让人愉悦，那我们就赶快拿起&lt;del&gt;电话订购&lt;/del&gt;电脑使用吧！&lt;/p&gt;
 </description>
