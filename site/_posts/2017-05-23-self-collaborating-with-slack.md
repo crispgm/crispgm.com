@@ -44,6 +44,8 @@ notifications:
   slack: token-of-your-slack
 ```
 
+![](/image/slack-travis-msg.jpg)
+
 不过，这里有个限制，免费用户只能添加10个应用。还好我用的云服务不足10个。真需要付费的时候，那也未尝不可，花钱买时间没什么不对的。
 
 ### ChatOps
@@ -52,9 +54,9 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 我会把运维相关的内容发送到 `#ops` 频道。对于 Heroku 这样成熟、开发体验友好的平台，其实没有什么需要运维的。通过 `heroku-cli` 几乎可以干任何事情，因为 `#ops` 频道只会接到代码更新部署的事件。而 Linode 那边的确需要运维，对于部署我已经通过 GitHub WebHooks 和部署脚本实现了自动化，所以这里只会接收到 NewRelic 的监控报警。
 
-不过这个地方有个尴尬😅之处，NewRelic 监控的是部署 VPN 的主机，如果报警后会发送到 Slack，但 Slack 又是通过这个 VPN 访问的，因此……
-
 ![](/image/slack-ops-msg.jpg)
+
+不过这个地方有个尴尬😅之处，NewRelic 监控的是部署 VPN 的主机，如果报警后会发送到 Slack，但 Slack 又是通过这个 VPN 访问的，因此……
 
 当然，我还远没有用到 ChatOps 的精髓，有空还会继续探索试一些更实用的工具，真正地 Chat 起来。
 
@@ -70,25 +72,31 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 开发的过程是快乐的，但也时常伴随着挫折和焦急。我们需要一些方式娱乐和舒缓自己，重新获得力量和灵感。
 
-### 图片分享
-
 开发间歇的娱乐活动有很多，比如游戏和音乐。而我觉得看照片比较适合 Slack，怡情养眼且不耗时，还会时不时收获灵感。
 
-接收图片的频道有三个: `#girls`, `#photography`, `#random`.
+接收图片的频道有三个: `#girls` `#photography` `#design`
 
-`#girls` 的确是美女但不开车，`#photography` 是正规摄影小作品，而 `#random` 接收 Apps 的随机图片。
+`#girls` 的确是美女但不开车，`#photography` 是正规摄影小作品，而 `#design` 接收设计类的图片。
 
-为了增加分享图片的仪式感，我引入了一个 [Workflow](https://workflow.is/)：Post Image To Slack，通过 Action Extension 触发分享操作。
+为了增加分享图片的仪式感，我引入了 [Workflow](https://workflow.is/)：Post Image To Slack，通过 Action Extension 触发分享操作。
 
 ![](/image/slack-post-image-workflow.jpg)
 
+此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack `#girls`。
+
 ### 随机图片
 
-休闲过后还需要来点灵感，于是剩下不多的 Apps 集成额度就贡献给了 `#random`，我选择加入了 Dribbble 和 Unsplash。
+休闲过后还需要来点灵感，随机是个好方法，于是剩下不多的 Apps 集成额度就用在了这里，我选择加入了 Dribbble 和 Unsplash。
 
 通过 Dribbble，可以随机获取一张设计稿或者是通过关键词搜索一张。虽然我不是设计师，但好的设计让人愉悦，也能激发灵感。
 
-Unsplash 我在[之前的文章](/page/unsplash-simple-pure-photos.html)进行过介绍，在 Slack 中可以使用斜杠指令随机获取一张照片，这是一种调节开发节奏的好方法。
+```
+/dribbble london
+```
+
+![](/image/slack-dribbble-london.jpg)
+
+Unsplash 我在[之前的文章](/page/unsplash-simple-pure-photos.html)进行过介绍，在 Slack 中可以随机获取一张高质量摄影作品，这是一种调节开发节奏的好方法。
 
 ```
 /unsplash random
