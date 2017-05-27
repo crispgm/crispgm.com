@@ -1,3 +1,10 @@
+- id: mysql-client-default-character-set
+  q: MySQL Client 使用UTF8编码登录
+  a: |
+    修改 <code>my.cnf</code>：
+    <pre><code>[client]
+    default-character-set=utf8
+    </pre></code>
 - id: git-branch-name
   q: Git 中如何获得当前目录所在的分支名？
   a: |
