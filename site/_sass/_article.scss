@@ -32,6 +32,13 @@
       margin-top: 2rem;
       line-height: 1.8rem;
     }
+
+    li {
+      p {
+        margin: 0;
+        line-height: 1rem;
+      }
+    }
   }
   /* Tags */
   .article-tag {
