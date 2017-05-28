@@ -239,6 +239,9 @@ hr {
     .article .article-main p {
       margin-top: 2rem;
       line-height: 1.8rem; }
+    .article .article-main li p {
+      margin: 0;
+      line-height: 1rem; }
   .article .article-tag {
     display: flex;
     flex-direction: row;
