@@ -55,26 +55,11 @@ a:hover {
 .menu {
   padding-top: 2rem;
   padding-left: 1rem;
-}
-.dropdown {
-  display: flex;
+  font-size: 1.4rem;
   text-align: center;
 }
-.dropdown-button {
-  display: none;
-  color: #06c;
-  font-size: 1.25rem;
+.menu a {
   margin-right: 1rem;
-}
-.dropdown-button a {
-  color: #06c;
-  text-decoration: none;
-}
-.dropdown-button:first-child {
-  display: block;
-}
-.dropdown-show {
-  display: block;
 }
 .section {
   text-align: left;
