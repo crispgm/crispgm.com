@@ -67,9 +67,7 @@
     {% if page.layout == 'post' %}
     <script>
     var disqus_config = function () {
-      this.page.url = '{{ site.url }}{{ page.permalink }}';
       this.page.identifier = '{{ page.permalink }}';
-      this.page.title = '{{ page.title }}';
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE
