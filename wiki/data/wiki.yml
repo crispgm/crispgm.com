@@ -1,3 +1,8 @@
+- id: what-is-inversion-of-control
+  q: 什么是控制反转 IoC?
+  a: |
+    Library 提供一堆的函数，你能自由地安排函数调用的顺序；Framework 具有扩展性，它让你提供回调函数，你没法控制函数调用的顺序，这就是所谓的 Inversion of Control
+    （转自<a href="https://wanqu.co/a/4255/2016-11-17-inversionofcontrol.html">湾区日报</a>）
 - id: mysql-client-default-character-set
   q: MySQL Client 使用UTF8编码登录
   a: |
