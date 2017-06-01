@@ -40,39 +40,33 @@ body ::selection {
 h1 {
   font-size: 1.6rem;
   color: #555;
-  font-weight: bold;
   margin-top: 2.8rem;
-  text-align: center; }
+  text-align: left; }
 
 h2 {
   font-size: 1.4rem;
   color: #555;
-  font-weight: bold;
   margin-top: 2.8rem;
-  text-align: center; }
+  text-align: left; }
 
 h3 {
   font-size: 1.2rem;
   color: #555;
-  font-weight: bold;
-  text-align: left;
   margin-top: 2.8rem;
-  margin-bottom: 1rem; }
+  text-align: left; }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: #555;
-  text-align: left;
   margin-top: 2rem;
-  margin-bottom: .6rem; }
+  text-align: left; }
 
 h5 {
-  font-size: 1.0rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  color: #aaa;
+  color: #555;
   text-align: left;
-  margin-top: 2rem;
-  margin-bottom: .6rem; }
+  margin-top: 2rem; }
 
 blockquote {
   border-left: 0.2rem solid #aaa;
@@ -229,14 +223,15 @@ hr {
   margin-bottom: 3.0rem;
   /* Tags */ }
   .article .article-head {
-    text-align: center;
+    text-align: left;
     margin-top: 4.2rem;
     margin-bottom: 4.2rem; }
     .article .article-head .article-title {
       font-size: 2rem; }
     .article .article-head .article-date {
       font-size: 1.0rem;
-      color: #bbbbbb; }
+      color: #bbbbbb;
+      margin-top: 1rem; }
   .article .article-main {
     font-size: 1.0rem;
     margin-top: 1.2rem;
