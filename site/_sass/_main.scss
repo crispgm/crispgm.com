@@ -39,39 +39,33 @@ body ::selection {
 h1 {
   font-size: 1.6rem;
   color: #555;
-  font-weight: bold;
   margin-top: 2.8rem;
-  text-align: center;
+  text-align: left;
 }
 h2 {
   font-size: 1.4rem;
   color: #555;
-  font-weight: bold;
   margin-top: 2.8rem;
-  text-align: center;
+  text-align: left;
 }
 h3 {
   font-size: 1.2rem;
   color: #555;
-  font-weight: bold;
-  text-align: left;
   margin-top: 2.8rem;
-  margin-bottom: 1rem;
+  text-align: left;
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
+  color: #555;
+  margin-top: 2rem;
+  text-align: left;
+}
+h5 {
+  font-size: 0.9rem;
+  font-weight: bold;
   color: #555;
   text-align: left;
   margin-top: 2rem;
-  margin-bottom: .6rem;
-}
-h5 {
-  font-size: 1.0rem;
-  font-weight: bold;
-  color: #aaa;
-  text-align: left;
-  margin-top: 2rem;
-  margin-bottom: .6rem;
 }
 blockquote {
   border-left: .2rem solid $border-color;
