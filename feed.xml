@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Jun 2017 00:58:54 +0800</pubDate>
-    <lastBuildDate>Fri, 02 Jun 2017 00:58:54 +0800</lastBuildDate>
+    <pubDate>Fri, 02 Jun 2017 01:43:24 +0800</pubDate>
+    <lastBuildDate>Fri, 02 Jun 2017 01:43:24 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       
@@ -34,9 +34,9 @@
 
 &lt;p&gt;唯独 Slack 似乎没有找到自己的位置，毕竟自己跟自己协作没有必要聊天。但我知道 Slack 的意义可不只是当 QQ 用，用多了国外的工具链后，我发现了 Slack 存在的另一大意义——取代邮件。并且陆续找到了一些适合个人开发者的玩法，现在分享给大家。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;通知中心&lt;/h2&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;通知中心&lt;/h3&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;服务通知&lt;/h3&gt;
+&lt;h5 id=&quot;section-2&quot;&gt;服务通知&lt;/h5&gt;
 
 &lt;p&gt;欧美IT企业对于邮件的使用程度远远超过了国内，邮件是主要通知方式，比如 Travis 默认状态下持续集成成功、失败、重新成功等得给你来一封邮件。而作为强迫症的我，就必须点进去删除一封邮件。这种方式既浪费时间又不低碳。&lt;/p&gt;
 
@@ -54,7 +54,7 @@
 
 &lt;p&gt;不过，这里有个限制，免费用户只能添加10个应用。还好我用的云服务不足10个。真需要付费的时候，那也未尝不可，花钱买时间没什么不对的。&lt;/p&gt;
 
-&lt;h3 id=&quot;chatops&quot;&gt;ChatOps&lt;/h3&gt;
+&lt;h5 id=&quot;chatops&quot;&gt;ChatOps&lt;/h5&gt;
 
 &lt;p&gt;ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，完成对服务器状态的查看和操作。Slack 就是这一领域的典型代表。&lt;/p&gt;
 
@@ -66,7 +66,7 @@
 
 &lt;p&gt;当然，我还远没有用到 ChatOps 的精髓，有空还会继续探索试一些更实用的工具，真正地 Chat 起来。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;稍后阅读&lt;/h2&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;稍后阅读&lt;/h3&gt;
 
 &lt;p&gt;我是稍后阅读类 App 的重度用户，Pocket 世界阅读量排名进入 Top 1%，最近也经常用 Instapaper。我也维持着一套 Reeder 订阅 RSS，然后泛读和稍后阅读的阅读 flow。&lt;/p&gt;
 
@@ -74,7 +74,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/image/slack-share-article.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-4&quot;&gt;看图 &amp;amp; 获得灵感&lt;/h2&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;看图 &amp;amp; 获得灵感&lt;/h3&gt;
 
 &lt;p&gt;开发的过程是快乐的，但也时常伴随着挫折和焦急。我们需要一些方式娱乐和舒缓自己，重新获得力量和灵感。&lt;/p&gt;
 
@@ -90,7 +90,7 @@
 
 &lt;p&gt;此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack &lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt;。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-5&quot;&gt;随机图片&lt;/h3&gt;
+&lt;h5 id=&quot;section-5&quot;&gt;随机图片&lt;/h5&gt;
 
 &lt;p&gt;休闲过后还需要来点灵感，随机是个好方法，于是剩下不多的 Apps 集成额度就用在了这里，我选择加入了 Dribbble 和 Unsplash。&lt;/p&gt;
 
