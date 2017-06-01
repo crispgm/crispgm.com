@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -82,9 +82,8 @@ blockquote {
 a {
   text-decoration: none;
   color: #06c; }
-
-a:hover {
-  text-decoration: underline; }
+  a:hover {
+    text-decoration: underline; }
 
 ul p {
   margin: 0; }
@@ -323,7 +322,7 @@ img {
  */
 pre,
 code {
-  font-family: "Fira Mono", Menlo, Monaco, Consolas, Courier; }
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, Courier, monospace; }
 
 pre.highlight {
   border: 1px solid #2d2d2d;
@@ -331,7 +330,7 @@ pre.highlight {
   font-size: .9rem; }
 
 code.hljs {
-  padding: .8rem; }
+  padding: .4rem; }
 
 /* inline codes */
 code.highlighter-rouge {
@@ -376,7 +375,7 @@ code.highlighter-rouge {
       text-align: left; }
       #credit-list .credit-item .credit-reason {
         display: inline-block;
-        padding-top: .25rem; }
+        padding-top: .2rem; }
       #credit-list .credit-item .credit-name {
         padding: 0; } }
 /*
