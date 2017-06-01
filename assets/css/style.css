@@ -246,7 +246,7 @@ hr {
       line-height: 1.8rem; }
     .article .article-main li p {
       margin: 0;
-      line-height: 1rem; }
+      line-height: 2rem; }
   .article .article-tag {
     display: flex;
     flex-direction: row;
@@ -413,11 +413,15 @@ code.highlighter-rouge {
   padding-bottom: 1.0rem;
   border-bottom: .1rem solid #bbbbbb; }
   .things .things-item .things-title {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color: #555; }
   .things .things-item .things-link {
     font-size: .8rem;
-    padding-top: .2rem; }
+    padding-top: .2rem;
+    line-height: 1.2rem; }
+  .things .things-item .things-list {
+    font-size: .9rem;
+    line-height: 1.4rem; }
 .things ul {
   margin: 0; }
 
