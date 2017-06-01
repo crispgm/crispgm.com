@@ -151,6 +151,7 @@ footer {
 }
 @media (max-width: $breakpoint) {
   .content-wrapper {
+    width: 100%;
     padding-left: .5rem;
     padding-right: .5rem;
   }
