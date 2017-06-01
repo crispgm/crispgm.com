@@ -38,34 +38,43 @@ body ::selection {
 
 h1 {
   font-size: 1.6rem;
+  font-weight: 400;
   color: #555;
-  margin-top: 2.8rem;
   text-align: left;
+  padding-top: 1.6rem;
+  padding-bottom: 1.2rem;
 }
 h2 {
   font-size: 1.4rem;
+  font-weight: 400;
   color: #555;
-  margin-top: 2.8rem;
   text-align: left;
+  padding-top: 1.4rem;
+  padding-bottom: 1.2rem;
 }
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
   color: #555;
-  margin-top: 2.8rem;
   text-align: left;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 }
 h4 {
   font-size: 1.0rem;
+  font-weight: 600;
   color: #555;
-  margin-top: 2rem;
   text-align: left;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
 }
 h5 {
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #555;
   text-align: left;
-  margin-top: 2rem;
+  padding-top: .8rem;
+  padding-bottom: 0;
 }
 blockquote {
   border-left: .2rem solid $border-color;
@@ -86,7 +95,7 @@ ul {
 }
 li {
   margin-left: -1rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
 }
 
 table {
@@ -98,17 +107,17 @@ table {
       background-color: #f5f5f5;
     }
     th {
-      padding: .25rem;
+      padding: .2rem .4rem .2rem .4rem;
       background-color: #f5f5f5;
     }
     td {
-      padding: .25rem;
+      padding: .2rem .4rem .2rem .4rem;
     }
   }
 }
 
 p {
-  line-height: 2.4rem;
+  line-height: 1.8rem;
 }
 
 sup {
@@ -127,12 +136,18 @@ hr {
 .content {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid $border-color;
 }
+
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: $breakpoint;
+  width: $breakpoint;
+  border-bottom: 1px solid $border-color;
+}
+footer {
+  .content-wrapper {
+    border-bottom: 0;
+  }
 }
 @media (max-width: $breakpoint) {
   .content-wrapper {
