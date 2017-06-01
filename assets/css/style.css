@@ -134,6 +134,7 @@ footer .content-wrapper {
 
 @media (max-width: 36rem) {
   .content-wrapper {
+    width: 100%;
     padding-left: .5rem;
     padding-right: .5rem; } }
 /* Menu */
