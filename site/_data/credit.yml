@@ -16,9 +16,6 @@
 - name:   Unsplash
   reason: Random Photo
   link:   https://unsplash.com/
-- name:   Noto Sans
-  reason: Text Font
-  link:   https://www.google.com/get/noto/
 - name:   Font Awesome
   reason: Icon Font
   link:   http://fontawesome.io/
@@ -28,6 +25,12 @@
 - name:   Tomorrow Night Eighties
   reason: Syntax Theme
   link:   https://github.com/chriskempson/tomorrow-theme
-- name:   Fira Mono
+- name:   San Francisco
+  reason: Text Font (Mac)
+  link:   https://developer.apple.com/fonts/
+- name:   Noto Sans
+  reason: Text Font (Other)
+  link:   https://www.google.com/get/noto/
+- name:   Source Code Pro
   reason: Code Font
-  link:   https://fonts.google.com/specimen/Fira+Mono
+  link:   http://adobe-fonts.github.io/source-code-pro/
