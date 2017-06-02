@@ -1,30 +1,8 @@
 ---
-title: Favorite
+title: Things
 permalink: /favorite.html
 ---
 
-<div id="favorite" class="things">
-  {% for thing in site.data.things %}
-  <div class="things-item">
-    <div class="things-title">
-      {{ thing.category }}
-    </div>
-    <div class="things-list">
-      <ul>
-        {% for item in thing.items %}
-          {% if item.link != nil %}
-          <li><a href="{{ item.link }}">{{ item.name }}</a></li>
-          {% else %}
-          <li>{{ item.name }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-<p>
-  <div>This page is inspired by the Things page of <a href="http://www.kennethreitz.org/things/">Kenneth Reitz</a>.</div>
-  <div>There is a blog post about what hardwares and apps I use, <a href="/page/my-tools.html">read it for details</a>.</div>
-</p>  
+<script>
+location.href = "/things.html"
+</script>

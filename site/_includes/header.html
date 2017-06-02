@@ -1,8 +1,5 @@
     <header class="content-wrapper menu">
       <div class="menu-links">
-        <div class="menu-item{% if page.title == "Bio" %}{{ " menu-active" }}{% endif %}">
-          <a href="/bio.html">Bio</a>
-        </div>
         <div class="menu-item{% if page.title == "Blog" %}{{ " menu-active" }}{% endif %}">
           <a href="/blog.html">Blog</a>
         </div>
@@ -11,6 +8,12 @@
         </div>
         <div class="menu-item">
           <a href="/wiki/">Wiki</a>
+        </div>
+        <div class="menu-item{% if page.title == "Things" %}{{ " menu-active" }}{% endif %}">
+          <a href="/things.html">Things</a>
+        </div>
+        <div class="menu-item{% if page.title == "Bio" %}{{ " menu-active" }}{% endif %}">
+          <a href="/bio.html">Bio</a>
         </div>
         <div class="menu-item{% if page.title == "About" %}{{ " menu-active" }}{% endif %}">
           <a href="/about.html">About</a>
