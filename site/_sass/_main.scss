@@ -138,21 +138,24 @@ hr {
   text-align: center;
 }
 
-
 .content-wrapper {
   margin: 0 auto;
   width: $breakpoint;
   border-bottom: 1px solid $border-color;
-}
-footer {
-  .content-wrapper {
-    border-bottom: 0;
-  }
 }
 @media (max-width: $breakpoint) {
   .content-wrapper {
     width: 100%;
     padding-left: .5rem;
     padding-right: .5rem;
+  }
+}
+img {
+  border: 0;
+  max-width: $breakpoint;
+}
+@media (max-width: $breakpoint) {
+  img {
+    max-width: 100%;
   }
 }

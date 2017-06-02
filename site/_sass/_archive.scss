@@ -1,0 +1,47 @@
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ *
+ * Style for archive
+ */
+
+.archive-main {
+  margin-bottom: 1rem;
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .archive-item {
+    margin-top: .6rem;
+    line-height: 1.8rem;
+    overflow: auto; /* clearfix */
+
+    .archive-title {}
+
+    .archive-date {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #bbbbbb;
+    }
+  }
+  @media (min-width: $breakpoint) {
+    .archive-item {
+      margin-top: 0;
+
+      .archive-date {
+        float: right;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+.archive-old {
+  color: #bbbbbb;
+  a {
+    color: #bbbbbb;
+  }
+}
