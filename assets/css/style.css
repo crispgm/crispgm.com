@@ -237,7 +237,7 @@ img {
 .page {
   text-align: left; }
   .page .page-main h3 {
-    margin: 0; }
+    margin: 1rem 0; }
 
 /*
  * Theme of Crisp Blog
@@ -300,6 +300,7 @@ img {
  * Style for archive
  */
 .archive-main {
+  margin-top: 1rem;
   margin-bottom: 1rem; }
   .archive-main a {
     text-decoration: none; }
