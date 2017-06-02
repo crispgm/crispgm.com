@@ -1,6 +1,6 @@
 ---
 layout: post
-type: programming
+type: legacy
 title: Enable HTTPS with Let's Encrypt
 date: 2015/12/07 23:35:00 +0800
 permalink: /page/enable-https-with-letsencrypt.html
