@@ -129,14 +129,18 @@ hr {
   width: 36rem;
   border-bottom: 1px solid #aaa; }
 
-footer .content-wrapper {
-  border-bottom: 0; }
-
 @media (max-width: 36rem) {
   .content-wrapper {
     width: 100%;
     padding-left: .5rem;
     padding-right: .5rem; } }
+img {
+  border: 0;
+  max-width: 36rem; }
+
+@media (max-width: 36rem) {
+  img {
+    max-width: 100%; } }
 /* Menu */
 .menu {
   padding-top: 1.2rem;
@@ -228,12 +232,22 @@ footer .content-wrapper {
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2017
  *
+ * Style for page
+ */
+.page {
+  text-align: left; }
+  .page .page-main h3 {
+    margin: 0; }
+
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ *
  * Style for article
  */
 .article {
   text-align: left;
-  margin-top: 2.0rem;
-  margin-bottom: 3.0rem;
+  margin-bottom: 2.0rem;
   /* Tags */ }
   .article .article-head {
     text-align: left;
@@ -275,7 +289,16 @@ footer .content-wrapper {
       .article .article-tag .tag-item .tag-item-count {
         font-size: .75rem; }
 
-/* Archive */
+/* disqus */
+#disqus_thread iframe {
+  text-align: center; }
+
+/*
+ * Theme of Crisp Blog
+ * Copyright(c) David Zhang, 2017
+ *
+ * Style for archive
+ */
 .archive-main {
   margin-bottom: 1rem; }
   .archive-main a {
@@ -283,7 +306,7 @@ footer .content-wrapper {
     .archive-main a:hover {
       text-decoration: underline; }
   .archive-main .archive-item {
-    margin-top: .5rem;
+    margin-top: .6rem;
     line-height: 1.8rem;
     overflow: auto;
     /* clearfix */ }
@@ -303,25 +326,15 @@ footer .content-wrapper {
   .archive-old a {
     color: #bbbbbb; }
 
-/* disqus */
-#disqus_thread iframe {
-  text-align: center; }
-
 /* footer */
 footer {
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
-  margin-top: 3.5rem;
-  margin-bottom: 1.2rem; }
+  margin-top: 1rem; }
+  footer .content-wrapper {
+    border-bottom: 0; }
 
-img {
-  border: 0;
-  max-width: 36rem; }
-
-@media (max-width: 36rem) {
-  img {
-    max-width: 100%; } }
 /*
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2017
@@ -356,7 +369,8 @@ code.highlighter-rouge {
  */
 #credit-list {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
   #credit-list .credit-item {
     width: 12rem;
     text-align: center;
@@ -414,24 +428,26 @@ code.highlighter-rouge {
  * Style for things & project list
  */
 /* things & project */
-.things .things-item {
-  display: flex;
-  width: 100%;
-  margin-bottom: 1.0rem;
-  padding-bottom: 1.0rem;
-  border-bottom: .1rem solid #bbbbbb; }
-  .things .things-item .things-title {
-    font-size: 1.0rem;
-    color: #555; }
-  .things .things-item .things-link {
-    font-size: .8rem;
-    padding-top: .2rem;
-    line-height: 1.2rem; }
-  .things .things-item .things-list {
-    font-size: .9rem;
-    line-height: 1.4rem; }
-.things ul {
-  margin: 0; }
+.things {
+  margin-top: 1rem; }
+  .things .things-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.0rem;
+    padding-bottom: 1.0rem;
+    border-bottom: .1rem solid #bbbbbb; }
+    .things .things-item .things-title {
+      font-size: 1.0rem;
+      color: #555; }
+    .things .things-item .things-link {
+      font-size: .8rem;
+      padding-top: .2rem;
+      line-height: 1.2rem; }
+    .things .things-item .things-list {
+      font-size: .9rem;
+      line-height: 1.4rem; }
+  .things ul {
+    margin: 0; }
 
 @media (max-width: 36rem) {
   .things .things-item {
