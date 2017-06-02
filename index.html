@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
-    <title>Home | David Zhang</title>
+    <title>Index | David Zhang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://crispgm.com/index.html">
     <link rel="alternate" href="https://crisp.lol">
@@ -17,21 +17,116 @@
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
-    <div class="index-wrapper">
-      <div class="index">
-        <div id="name">
-  DAVID ZHANG
-</div>
+    <div class="content" id="header">
+          <header class="content-wrapper menu">
+      <div class="menu-links">
+        <div class="menu-item">
+          <a href="/blog.html">Blog</a>
+        </div>
+        <div class="menu-item">
+          <a href="/project.html">Project</a>
+        </div>
+        <div class="menu-item">
+          <a href="/wiki/">Wiki</a>
+        </div>
+        <div class="menu-item">
+          <a href="/things.html">Things</a>
+        </div>
+        <div class="menu-item">
+          <a href="/bio.html">Bio</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="menu-bars">
+        <i id="dropdown-button" class="fa fa-bars"></i>
+      </div>
+      <div class="menu-home">
+        <a href="/">DAVID ZHANG</a>
+      </div>
+    </header>
 
-<div id="links">
-  <a href="/bio.html">Bio</a>
-  <a href="/blog.html">Blog</a>
-  <a href="/project.html">Project</a>
-  <a href="/wiki/">Wiki</a>
-  <a href="/about.html">About</a>
+    </div>
+    <div class="content" id="main-content">
+      <div class="content-wrapper">
+        <div class="page">
+  <div class="page-main">
+    <script>
+location.href = "/blog.html"
+</script>
+
+  </div>
 </div>
 
       </div>
     </div>
+        <footer>
+      <div class="content-wrapper" id="contact">
+        <div id="links">
+          <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
+          <a href="/feed.xml"><i class="fa fa-rss"></i></a>
+          <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
+          <a href="https://instagram.com/crispgm"><i class="fa fa-instagram"></i></a>
+          <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
+          <a href="http://weibo.com/crispgm"><i class="fa fa-weibo"></i></a>
+        </div>
+
+        <div id="copyright">
+          David Zhang &copy; 2017
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        isToggle = false;
+
+        document.body.addEventListener("click", function(evt){
+          if (isToggle && evt.target.id != 'dropdown-button') {
+            toggleMenu();
+          }
+        });
+
+        var dropdown = document.querySelector("#dropdown-button");
+        dropdown.addEventListener("click", function(evt) {
+          toggleMenu();
+        });
+
+        document.body.addEventListener("touchstart", function(evt){
+          evt.stopPropagation();
+        });
+      }, false);
+
+      function toggleMenu() {
+        var menuElement = document.querySelector(".menu-links");
+        var dropdownElement = document.querySelector("#dropdown-button");
+        if (isToggle) {
+          menuElement.classList.remove("menu-dropdown");
+          dropdownElement.classList.remove("fa-close");
+          dropdownElement.classList.add("fa-bars");
+        }
+        else {
+          menuElement.classList.add("menu-dropdown");
+          dropdownElement.classList.remove("fa-bars");
+          dropdownElement.classList.add("fa-close");
+        }
+        isToggle = !isToggle;
+      }
+    </script>
+    
+    <script src="/assets/scripts/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50708664-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
   </body>
 </html>
