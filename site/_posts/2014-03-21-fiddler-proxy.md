@@ -39,7 +39,7 @@ Fiddler 使用 C# 开发，支持 Windows XP 以上版本。对于 Linux 和 Mac
 
 ## 网络请求抓取
 
-完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。
+完成了上述设置后，Fiddler 就已经可以抓取本地的网络请求。如果需要对手机 app 进行调试，则需要设置手机代理。
 
 * iPhone  
     * 进入 Settings -> WLAN，单击你连接中的 Wi-Fi，在 HTTP PROXY 下选择 Manual，然后 Server 填写 Fiddler 所在机器在此 Wi-Fi 中的 IP 地址，Port 是默认的 8888。
@@ -47,34 +47,34 @@ Fiddler 使用 C# 开发，支持 Windows XP 以上版本。对于 Linux 和 Mac
 * Android
     * 进入设置 -> Wi-Fi，长按你连接中的 Wi-Fi，点击修改网络网络，勾选高级选项，在 HTTP 代理中填写主机名和端口。
 
-* PC本地  
+* PC 本地  
     * 用 ProxySwitchy 一类的插件，代理到 localhost:8888
 
-选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。
+选中请求后，可以查看 Headers、Cookies 和多种模式的（TextView/WebForms等）请求参数。
 
-如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。
+如果想查看 Response，则可以选中请求后点击 Inspectors 或者直接双击请求查看响应 Headers 和多种格式的响应内容。对于常见的数据结构，可以格式化展示 JSON 或 XML。
 
 ## Web Debugging
 
-在进行调试时，我们可以使用Fiddler的几种调试功能：
+在进行调试时，我们可以使用 Fiddler 的几种调试功能：
 
-* HOSTS，等同于操作系统的HOSTS文件。
+* HOSTS，等同于操作系统的 HOSTS 文件。
 
-* Filters，可以修改Request或Response的包体。
+* Filters，可以修改 Request 或 Response 的包体。
 
-* AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。
+* AutoResponder，可以截获请求，直接将请求代理到指定 URL 进行响应。
 
-* FiddlerScript，以FiddlerScript(JScript.NET)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。
+* FiddlerScript，以 FiddlerScript(JScript.NET) 形式，实现 Filters 和 AutoResponder 的所有功能，并且可以定制 UI 界面。
 
 ## HOSTS
 
-Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。
+Fiddler 自带有 HOSTS 功能，跟 Windows 自带的 HOSTS 应该是一回事，不过在 Fiddler 中操作比较方便。
 
-而是直接从菜单进入Tools -> HOSTS...，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。
+而是直接从菜单进入 Tools -> HOSTS...，勾选 Enable remapping of requests（此处省略数十字），就可以把请求线上服务通过 HOST 方式，代理到沙盒或者测试机。
 
 ## Filters
 
-很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter 功能就可以选择性截取
+很多时候，客户端一次行为可能会产生多次 HTTP 请求，会造成很大的干扰，Filter 功能就可以选择性截取
 
 首先进入 Filters 标签，勾选 Use Filters。
 
@@ -120,4 +120,3 @@ if (oSession.uriContains("c.tieba.baidu.com")) {
 ```
 
 更多用法，请参考 [Fiddler Documentation](http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse)
-

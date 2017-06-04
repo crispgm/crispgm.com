@@ -17,11 +17,11 @@ tags:
 常用的补全插件如 ctags 和 AutoComplPop 等是基于文本的，类似于搜索时的 suggest 功能。不过，前者是事先扫描文本生成 tags 文件，后者是对当前打开的文件内容进行扫描。
 如果 tags 或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。
 
-所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入.之后 ycm 可以补全提示对象的成员变量和成员函数等。
+所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入`.`之后 ycm 可以补全提示对象的成员变量和成员函数等。
 一般的成熟 IDE 如 Visual Studio 和 Eclipse 都具有这种能力。
 
 目前 ycm 支持5种程序语言:
-C/C++/Objective-C (基于 clang)，Python(基于 [Jedi](https://github.com/davidhalter/jedi))和C# (基于 [OmniSharp](https://github.com/nosami/OmniSharpServer))。
+C/C++/Objective-C (基于 clang)，Python (基于 [Jedi](https://github.com/davidhalter/jedi)) 和 C# (基于 [OmniSharp](https://github.com/nosami/OmniSharpServer))。
 
 至于其他语言，ycm 会调用 vim omnifunc 来匹配，因此不是很有必要使用 ycm。
 
@@ -51,7 +51,7 @@ vim ~/.vimrc
 Bundle 'Valloric/YouCompleteMe'
 ```
 
-保存重启 vim 后 _:BundleInstall_，就开始安装了。这个安装并没有包括编译，只是把 ycm 的 vim、python 以及 C++ 代码下载下来。
+保存重启 vim 后 `:BundleInstall`，就开始安装了。这个安装并没有包括编译，只是把 ycm 的 vim、python 以及 C++ 代码下载下来。
 
 然后进入 YouCompleteMe 的目录开始编译，```--clang-completer``` 是启用 C family languages 提示(为的就是这功能，果断要加上)
 
