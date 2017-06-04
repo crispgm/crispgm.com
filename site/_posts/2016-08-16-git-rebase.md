@@ -12,9 +12,9 @@ tags:
 
 当维护者完成 Code Review 之后，往往就会提出类似这样的要求：
 
-> LGTM after a quick rebase!
+* _LGTM after a quick rebase!_
 
-> Can you squash the git commits, otherwise LGTM.
+* _Can you squash the git commits, otherwise LGTM._
 
 这是维护者要求提交者使用 ```git rebase``` 将自己的所有提交合并成一条。
 
