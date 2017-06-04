@@ -99,7 +99,7 @@
 
 <h2 id="section-1">网络请求抓取</h2>
 
-<p>完成了上述设置后，Fiddler就已经可以抓取本地的网络请求。如果需要对手机app进行调试，则需要设置手机代理。</p>
+<p>完成了上述设置后，Fiddler 就已经可以抓取本地的网络请求。如果需要对手机 app 进行调试，则需要设置手机代理。</p>
 
 <ul>
   <li>iPhone
@@ -112,45 +112,45 @@
       <li>进入设置 -&gt; Wi-Fi，长按你连接中的 Wi-Fi，点击修改网络网络，勾选高级选项，在 HTTP 代理中填写主机名和端口。</li>
     </ul>
   </li>
-  <li>PC本地
+  <li>PC 本地
     <ul>
       <li>用 ProxySwitchy 一类的插件，代理到 localhost:8888</li>
     </ul>
   </li>
 </ul>
 
-<p>选中请求后，可以查看Headers、Cookies和多种模式的(TextView/WebForms等)请求参数。</p>
+<p>选中请求后，可以查看 Headers、Cookies 和多种模式的（TextView/WebForms等）请求参数。</p>
 
-<p>如果想查看Response，则可以选中请求后点击Inspectors或者直接双击请求查看响应Headers和多种格式的响应内容。对于常见的数据结构，可以格式化展示JSON或XML。</p>
+<p>如果想查看 Response，则可以选中请求后点击 Inspectors 或者直接双击请求查看响应 Headers 和多种格式的响应内容。对于常见的数据结构，可以格式化展示 JSON 或 XML。</p>
 
 <h2 id="web-debugging">Web Debugging</h2>
 
-<p>在进行调试时，我们可以使用Fiddler的几种调试功能：</p>
+<p>在进行调试时，我们可以使用 Fiddler 的几种调试功能：</p>
 
 <ul>
   <li>
-    <p>HOSTS，等同于操作系统的HOSTS文件。</p>
+    <p>HOSTS，等同于操作系统的 HOSTS 文件。</p>
   </li>
   <li>
-    <p>Filters，可以修改Request或Response的包体。</p>
+    <p>Filters，可以修改 Request 或 Response 的包体。</p>
   </li>
   <li>
-    <p>AutoResponder，可以截获请求，直接将请求代理到指定URL进行响应。</p>
+    <p>AutoResponder，可以截获请求，直接将请求代理到指定 URL 进行响应。</p>
   </li>
   <li>
-    <p>FiddlerScript，以FiddlerScript(JScript.NET)形式，实现Filters和AutoResponder的所有功能，并且可以定制UI界面。</p>
+    <p>FiddlerScript，以 FiddlerScript(JScript.NET) 形式，实现 Filters 和 AutoResponder 的所有功能，并且可以定制 UI 界面。</p>
   </li>
 </ul>
 
 <h2 id="hosts">HOSTS</h2>
 
-<p>Fiddler自带有HOSTS功能，跟Windows自带的HOSTS应该是一回事，不过在Fiddler中操作比较方便。</p>
+<p>Fiddler 自带有 HOSTS 功能，跟 Windows 自带的 HOSTS 应该是一回事，不过在 Fiddler 中操作比较方便。</p>
 
-<p>而是直接从菜单进入Tools -&gt; HOSTS…，勾选Enable remapping of requests(此处省略数十字)，就可以把请求线上服务通过HOST方式，代理到沙盒或者测试机。</p>
+<p>而是直接从菜单进入 Tools -&gt; HOSTS…，勾选 Enable remapping of requests（此处省略数十字），就可以把请求线上服务通过 HOST 方式，代理到沙盒或者测试机。</p>
 
 <h2 id="filters">Filters</h2>
 
-<p>很多时候，客户端一次行为可能会产生多次HTTP请求，会造成很大的干扰，Filter 功能就可以选择性截取</p>
+<p>很多时候，客户端一次行为可能会产生多次 HTTP 请求，会造成很大的干扰，Filter 功能就可以选择性截取</p>
 
 <p>首先进入 Filters 标签，勾选 Use Filters。</p>
 
@@ -196,7 +196,6 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");
 </div>
 
 <p>更多用法，请参考 <a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>
-
 
   </div>
   

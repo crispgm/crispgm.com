@@ -267,7 +267,8 @@ img {
     margin-bottom: 1.2rem; }
     .article .article-main p {
       margin-top: 1.5rem;
-      line-height: 1.8rem; }
+      line-height: 1.8rem;
+      hyphens: auto; }
     .article .article-main li p {
       margin: 0;
       line-height: 1.8rem; }
@@ -346,7 +347,8 @@ footer {
  */
 pre,
 code {
-  font-family: "Source Code Pro", Menlo, Monaco, Consolas, Courier, monospace; }
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, Courier, monospace;
+  hyphens: none; }
 
 pre.highlight {
   border: 1px solid #2d2d2d;
