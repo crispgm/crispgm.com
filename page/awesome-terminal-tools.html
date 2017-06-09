@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="A minimalist programmer, photographer and lifes lover."/>
-    <title>推荐有趣的终端 Terminal 工具 | David Zhang</title>
+    <title>Awesome Terminal Tools | David Zhang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://crispgm.com/page/funny-terminal-tools.html">
-    <link rel="alternate" href="https://crisp.lol">
+    <link rel="canonical" href="https://crispgm.com/page/awesome-terminal-tools.html">
+    <link rel="alternate" href="https://crisp.lol/page/awesome-terminal-tools.html">
     <link rel="alternate" href="https://crispgm.com/feed.xml" type="application/rss+xml" title="RSS">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
@@ -57,31 +57,158 @@
       <div class="content-wrapper">
         <div class="article">
   <div class="article-head">
-    <div class="article-title">推荐有趣的终端 Terminal 工具</div>
-    <div class="article-date">October 22, 2015</div>
+    <div class="article-title">Awesome Terminal Tools</div>
+    <div class="article-date">June 09, 2017</div>
   </div>
   <div class="article-main">
-    <h3 id="doubanfmhttpsgithubcomturingoudoubanfm"><a href="https://github.com/turingou/douban.fm">Douban.fm</a></h3>
+    <p>This article recommends awesome (and even funny) terminal tools, both executables and libraries.</p>
 
-<p>Node.js 编写的控制台版的豆瓣 FM，Mac 上亲测可用，但不太稳定。</p>
+<p>I first posted this on Oct 22th, 2015. And it is renewed on Jun 9th, 2017.</p>
+
+<h3 id="mashttpsgithubcommas-climas"><a href="https://github.com/mas-cli/mas">MAS</a></h3>
+
+<p><em>Mac App Store command line interface.</em></p>
+
+<p>It is designed for scripting and automation. However, I really like and need this awesome tool to update with terminal instead of the AppStore GUI, which fails frequently in China mainland.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mas list
+
+724472954 Manico (2.3.2)
+623795237 Ulysses (2.8.2)
+411246225 Caffeine (1.1.1)
+409203825 Numbers (4.1.1)
+836500024 WeChat (2.2.8)
+928871589 Noizio (1.5)
+409201541 Pages (6.1.1)
+784801555 Microsoft OneNote (15.34)
+409183694 Keynote (7.1.1)
+410628904 Wunderlist (3.4.6)
+973134470 Be Focused (1.6.2)
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mas upgrade
+
+Upgrading 1 outdated application:
+WeChat (2.2.8)
+==&gt; Downloading WeChat
+==&gt; Installed WeChat
+</code></pre>
+</div>
+
+<h3 id="terminal-tablehttpsgithubcomtjterminal-table"><a href="https://github.com/tj/terminal-table">Terminal Table</a></h3>
+
+<p><em>Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby.</em></p>
+
+<p>Simple but useful gem for Ruby. <code class="highlighter-rouge">terminal-table</code> is really powerful and easy-to-use to build and display tables in console based GUI.</p>
+
+<p>This is the official example of <code class="highlighter-rouge">terminal-table</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rows = []
+rows &lt;&lt; ['One', 1]
+rows &lt;&lt; ['Two', 2]
+rows &lt;&lt; ['Three', 3]
+table = Terminal::Table.new :rows =&gt; rows
+
+# &gt; puts table
+#
+# +-------+---+
+# | One   | 1 |
+# | Two   | 2 |
+# | Three | 3 |
+# +-------+---+
+</code></pre>
+</div>
+
+<h3 id="m-clihttpsgithubcomrgcrm-cli"><a href="https://github.com/rgcr/m-cli">m-cli</a></h3>
+
+<p><em>Swiss Army Knife for macOS!</em> By <code class="highlighter-rouge">m-cli</code>, it enables you to control everything of Mac with commands.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ m 
+
+  Swiss Army Knife for macOS ! 
+
+
+usage:  m [OPTIONS] COMMAND [help]
+
+    OPTIONS
+        --update        update m-cli to the latest version
+        --uninstall     uninstall m-cli
+
+    COMMANDS:
+        help
+        battery
+        bluetooth
+        dir
+        disk
+        display
+        dns
+        dock
+        finder
+        firewall
+        gatekeeper
+        group
+        hostname
+        info
+        itunes
+        lock
+        network
+        nosleep
+        notification
+        ntp
+        printer
+        restart
+        safeboot
+        screensaver
+        service
+        shutdown
+        sleep
+        timezone
+        trash
+        update
+        user
+        volume
+        vpn
+        wallpaper
+        wifi
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ m battery status
+Now drawing from 'AC Power'
+ -InternalBattery-0 (id=3997795)	100%; charged; 0:00 remaining present: true
+</code></pre>
+</div>
+
+<h3 id="proxychainshttpsgithubcomrofl0rproxychains-ng"><a href="https://github.com/rofl0r/proxychains-ng">ProxyChains</a></h3>
+
+<p>Socks and HTTP proxy for terminal. And we can use <code class="highlighter-rouge">proxychains</code> to boost speed of some services and get across the wall.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ proxychains4 git push
+</code></pre>
+</div>
+
+<h3 id="doubanfmhttpsgithubcomturingoudoubanfm"><a href="https://github.com/turingou/douban.fm">Douban.fm</a></h3>
+
+<p>Console based <a href="https://douban.fm/">Douban FM</a> client, written in Node.js. It runs on Mac but not very stable.</p>
 
 <p><img src="https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067" alt="" /></p>
 
 <h3 id="gottyhttpsgithubcomyudaigotty"><a href="https://github.com/yudai/gotty">Gotty</a></h3>
 
-<p>Go 编写的终端“直播”工具，将你的 terminal 输出到网页上。</p>
+<p>An awesome live broadcasting tool, which output your terminal, written with Go.</p>
 
 <p><img src="https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif" alt="" /></p>
 
 <h3 id="wegohttpsgithubcomschachmatwego"><a href="https://github.com/schachmat/wego">Wego</a></h3>
 
-<p>Go 编写的天气预报工具。</p>
+<p>Weather forecasting with ASCII GUI written in Go.</p>
 
 <p><img src="https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966" alt="" /></p>
 
 <h3 id="qrcode-terminalhttpsgithubcomgtannerqrcode-terminal"><a href="https://github.com/gtanner/qrcode-terminal">Qrcode-terminal</a></h3>
 
-<p>Node.js 编写的在终端显示二维码工具。</p>
+<p>Generate and display QR code with Node.js.</p>
 
 <p><img src="https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67" alt="" /></p>
 
@@ -89,6 +216,10 @@
   
   <hr>
   <div class="article-tag">
+    
+    <div class="tag-item">
+    Awesome
+    </div>
     
     <div class="tag-item">
     Terminal
@@ -183,7 +314,7 @@
     
     <script>
     var disqus_config = function () {
-      this.page.identifier = '/page/funny-terminal-tools.html';
+      this.page.identifier = '/page/awesome-terminal-tools.html';
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE
