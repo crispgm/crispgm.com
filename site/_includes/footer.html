@@ -41,13 +41,19 @@
         var dropdownElement = document.querySelector("#dropdown-button");
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
+          menuElement.classList.remove("animated");
+          menuElement.classList.remove("fadeIn");
           dropdownElement.classList.remove("fa-close");
+          dropdownElement.classList.remove("fa-inverse");
           dropdownElement.classList.add("fa-bars");
         }
         else {
           menuElement.classList.add("menu-dropdown");
+          menuElement.classList.add("animated");
+          menuElement.classList.add("fadeIn");
           dropdownElement.classList.remove("fa-bars");
           dropdownElement.classList.add("fa-close");
+          dropdownElement.classList.add("fa-inverse");
         }
         isToggle = !isToggle;
       }
