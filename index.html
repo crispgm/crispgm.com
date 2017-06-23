@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/image/logo.png">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -104,13 +105,19 @@ location.href = "/blog.html"
         var dropdownElement = document.querySelector("#dropdown-button");
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
+          menuElement.classList.remove("animated");
+          menuElement.classList.remove("fadeIn");
           dropdownElement.classList.remove("fa-close");
+          dropdownElement.classList.remove("fa-inverse");
           dropdownElement.classList.add("fa-bars");
         }
         else {
           menuElement.classList.add("menu-dropdown");
+          menuElement.classList.add("animated");
+          menuElement.classList.add("fadeIn");
           dropdownElement.classList.remove("fa-bars");
           dropdownElement.classList.add("fa-close");
+          dropdownElement.classList.add("fa-inverse");
         }
         isToggle = !isToggle;
       }

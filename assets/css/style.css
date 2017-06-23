@@ -173,7 +173,8 @@ img {
   @media (max-width: 36rem) {
     .menu .menu-bars {
       display: block;
-      float: right;
+      position: absolute;
+      right: .4rem;
       height: 2rem;
       line-height: 2rem;
       font-size: 1.2rem;
@@ -181,6 +182,8 @@ img {
       .menu .menu-bars a {
         color: #555;
         text-decoration: none; }
+      .menu .menu-bars .fa-inverse {
+        color: #bbb; }
     .menu .menu-links {
       display: none; }
     .menu .menu-dropdown {
@@ -191,14 +194,13 @@ img {
       justify-content: flex-start;
       background-color: #333;
       left: 0;
-      top: 4.2rem;
+      top: 0;
       width: 100%;
-      height: auto;
-      padding-top: .8rem;
-      padding-bottom: .8rem; }
+      height: 4.3rem;
+      padding-top: 1.2rem; }
       .menu .menu-dropdown .menu-item {
         text-align: left;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding-left: .4rem;
         padding-right: .4rem; }
         .menu .menu-dropdown .menu-item a {

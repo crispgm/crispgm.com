@@ -14,9 +14,9 @@
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
     
     <link rel="stylesheet" href="/assets/css/tomorrow-night-eighties.css">
-    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -174,13 +174,19 @@
         var dropdownElement = document.querySelector("#dropdown-button");
         if (isToggle) {
           menuElement.classList.remove("menu-dropdown");
+          menuElement.classList.remove("animated");
+          menuElement.classList.remove("fadeIn");
           dropdownElement.classList.remove("fa-close");
+          dropdownElement.classList.remove("fa-inverse");
           dropdownElement.classList.add("fa-bars");
         }
         else {
           menuElement.classList.add("menu-dropdown");
+          menuElement.classList.add("animated");
+          menuElement.classList.add("fadeIn");
           dropdownElement.classList.remove("fa-bars");
           dropdownElement.classList.add("fa-close");
+          dropdownElement.classList.add("fa-inverse");
         }
         isToggle = !isToggle;
       }
