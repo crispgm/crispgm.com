@@ -61,7 +61,7 @@
     <div class="article-date">August 18, 2016</div>
   </div>
   <div class="article-main">
-    <h1 id="section">介绍</h1>
+    <h1 id="介绍">介绍</h1>
 
 <p>Jekyll 是一个为博客设计的静态网站生成器，也可以用于个人、项目或组织的网站构建。可以认为，Jekyll 是一个基于文件的内容管理系统（CMS）。它使用 Ruby 编写，通过 Markdown 和 Liquid 模板生成内容。</p>
 
@@ -79,7 +79,7 @@
 
 <p>所以在短期内，我还是比较推荐使用上一个稳定的版本——3.1.6 版的模式。当然，即使程序是 3.2.1 版本也可以按旧的方式来使用，因为 Jekyll 是向下兼容的。</p>
 
-<h1 id="section-1">快速入门</h1>
+<h1 id="快速入门">快速入门</h1>
 
 <p>对于 Jekyll 本身和 GitHub Pages，由于市面上此类教程很多，本文就不重复造轮子了。可以阅读：</p>
 
@@ -88,7 +88,7 @@
   <li><a href="https://jekyllrb.com/docs/home/">Jekyll 官方文档</a></li>
 </ul>
 
-<h1 id="jekyll">深入 Jekyll</h1>
+<h1 id="深入-jekyll">深入 Jekyll</h1>
 
 <p>Jekyll 和一般的 Ruby 程序一样，设计思想上易用性强入门简单。但 Jekyll 其实还可以有很多超频的能力。</p>
 
@@ -170,7 +170,7 @@
 
 <p>有兴趣可以到 <a href="https://github.com/crispgm/jekyll-tags-list-plugin">https://github.com/crispgm/jekyll-tags-list-plugin</a> 详细了解。</p>
 
-<h1 id="jekyll-">Jekyll 社区</h1>
+<h1 id="jekyll-社区">Jekyll 社区</h1>
 
 <p>由于受到 GitHub 官方的支持，Jekyll 在静态博客生成器中应该说是最热门的。这或许也是 Jekyll 的社区非常繁荣的原因。它迭代很快，维护者对 Issues 和 PRs 的处理也很快。</p>
 
@@ -183,11 +183,11 @@
   <li>版本发布：会在 GitHub 打 tag 并发布 release，release 内容会从更新列表中拉取；自动更新并 push gemspec 文件到 RubyGems；获取这个版本内的所有变更贡献者，加入到版本发布新闻的感谢列表中。</li>
 </ul>
 
-<h1 id="section-2">启发</h1>
+<h1 id="启发">启发</h1>
 
 <p>受到了 Jekyll 的启发，我也进行了很多关于工作流自动化方面的思考。主要做了几件小事：</p>
 
-<h4 id="section-3">博客自动化部署</h4>
+<h4 id="博客自动化部署">博客自动化部署</h4>
 
 <p>由于种种原因，我的博客并没有部署在 GitHub Pages 上，而是独立的主机。因此，在 push 到 GitHub 之后还需要部署到主机中。我们可以在主机上起一个代码更新部署进程，在 push 后通过 GitHub WebHooks 回调主机上的更新接口，实现自动化部署。这样，只要一 push 代码就会触发主机上的更新。</p>
 
@@ -199,7 +199,7 @@ git push origin master
 </code></pre>
 </div>
 
-<h4 id="section-4">日报/周报邮件模板</h4>
+<h4 id="日报周报邮件模板">日报/周报邮件模板</h4>
 
 <p>日常工作中，需要每天或每周发送各类日报和周报。发送的内容一般会维护在某个表格或文档中，但邮件的收件人和抄送都是固定的一类人，标题则是标题+时间的格式，正文会有开头问好和结尾签名。这恰好是模板类需求，可以用 Liquid 实现。</p>
 
@@ -259,10 +259,10 @@ git push origin master
           <a href="/feed.xml"><i class="fa fa-rss"></i></a>
           <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
           <a href="https://stackoverflow.com/users/6858150/david-zhang/"><i class="fa fa-stack-overflow"></i></a>
-          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
           <a href="https://instagram.com/crispgm"><i class="fa fa-instagram"></i></a>
           <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
-          <a href="http://weibo.com/crispgm"><i class="fa fa-weibo"></i></a>
+          <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
+          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
         </div>
 
         <div id="copyright">

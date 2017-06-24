@@ -61,7 +61,7 @@
     <div class="article-date">September 03, 2014</div>
   </div>
   <div class="article-main">
-    <h1 id="section">原文信息</h1>
+    <h1 id="原文信息">原文信息</h1>
 
 <p>Original Post: <a href="http://hakre.wordpress.com/2010/05/13/php-casting-vs-intval">PHP: Casting vs. intval()</a></p>
 
@@ -69,13 +69,13 @@
 
 <p>Translated by <a href="http://crispgm.com">Crisp</a></p>
 
-<h1 id="section-1">正文</h1>
+<h1 id="正文">正文</h1>
 
 <p>在 PHP 中，使用 <code class="highlighter-rouge">(int)$var</code> 方式进行类型转换比使用 <code class="highlighter-rouge">intval($var)</code> 函数方式快 400% 到 650%。</p>
 
-<h2 id="section-2">运行测试</h2>
+<h2 id="运行测试">运行测试</h2>
 
-<h3 id="intval-vs-intvalval--1">(int)$val vs. intval($val) 速度对比[系统 #1]</h3>
+<h3 id="intval-vs-intvalval-速度对比系统-1">(int)$val vs. intval($val) 速度对比[系统 #1]</h3>
 
 <table>
   <thead>
@@ -217,7 +217,7 @@
   </tbody>
 </table>
 
-<h3 id="intval-vs-intvalval--2">(int)$val vs. intval($val) 速度对比[系统 #2]</h3>
+<h3 id="intval-vs-intvalval-速度对比系统-2">(int)$val vs. intval($val) 速度对比[系统 #2]</h3>
 
 <table>
   <thead>
@@ -361,7 +361,7 @@
 
 <p>这组测试每个项目进行了 100000 次循环。两个测试都在 Windows 上运行。系统 #1 使用的是 PHP 5.2.8，而系统 #2 使用 PHP 5.2.9 并且有更高的 CPU、内存和硬盘速度。</p>
 
-<h3 id="intval--int-">intval() 和 int 的结果对比</h3>
+<h3 id="intval-和-int-的结果对比">intval() 和 int 的结果对比</h3>
 
 <p>为了证明 <code class="highlighter-rouge">intval()</code> 和 <code class="highlighter-rouge">int</code> 得到同样的值，我进行了另一个测试：</p>
 
@@ -524,7 +524,7 @@
   </tbody>
 </table>
 
-<h3 id="settype--intval--1">settype() 和 intval() 速度对比[系统 #1]</h3>
+<h3 id="settype-和-intval-速度对比系统-1">settype() 和 intval() 速度对比[系统 #1]</h3>
 
 <p>用于对比，我还进行了 <code class="highlighter-rouge">settype()</code> 和 <code class="highlighter-rouge">intval()</code> 速度测试。
 两者的差别并不大，但我不确定这个测试是否合理，因为并不容易直接对这个函数进行测试。既然已经跑了这个测试，我认为值得把结果同前面的数据一起分享出来。</p>
@@ -674,7 +674,7 @@
 <p>我进行了一些关于 <code class="highlighter-rouge">0 + $var</code> 的测试，因为这也是一种获得数字的方式。
 这种方法没那么”类型安全”，不过作为对比，我认为有必要一起列出来：</p>
 
-<h3 id="intval--0--var-">intval() 和 0 + $var 对比结果</h3>
+<h3 id="intval-和-0--var-对比结果">intval() 和 0 + $var 对比结果</h3>
 
 <table>
   <thead>
@@ -835,7 +835,7 @@
   </tbody>
 </table>
 
-<h3 id="intval0--var-1">(int)$val和0 + $var速度测试[系统 #1]</h3>
+<h3 id="intval和0--var速度测试系统-1">(int)$val和0 + $var速度测试[系统 #1]</h3>
 
 <table>
   <thead>
@@ -979,20 +979,20 @@
 
 <p><em>*: 在上一个测试中，结果未通过</em></p>
 
-<h2 id="section-3">测试结论</h2>
+<h2 id="测试结论">测试结论</h2>
 
 <p>使用 (int) 类型转换，便捷而且没有负面效果。
 事实上，它在速度快的同时，还和 intval() 函数有完全一样的结果。
 两者甚至还会有同样的 warning 信息。</p>
 
-<h2 id="section-4">扩展阅读</h2>
+<h2 id="扩展阅读">扩展阅读</h2>
 
 <ul>
   <li><a href="http://stackoverflow.com/questions/1912599/php-is-there-any-particular-difference-between-intval-and-int">PHP: Is there any particular difference between intval and (int)?</a></li>
   <li><a href="http://stackoverflow.com/questions/239136/fastest-way-to-convert-string-to-integer-in-php">Fastest way to convert string to integer in PHP</a></li>
 </ul>
 
-<h2 id="section-5">深层原因</h2>
+<h2 id="深层原因">深层原因</h2>
 
 <p>对于作者的结论，网友 Joseph Scott 对 OPCODE 进行了分析，解释了其深层原因。</p>
 
@@ -1017,7 +1017,7 @@
 </code></pre>
 </div>
 
-<h2 id="section-6">最终结论</h2>
+<h2 id="最终结论">最终结论</h2>
 
 <ol>
   <li><code class="highlighter-rouge">int</code> 比 <code class="highlighter-rouge">intval()</code> 快3-6倍。</li>
@@ -1064,10 +1064,10 @@
           <a href="/feed.xml"><i class="fa fa-rss"></i></a>
           <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
           <a href="https://stackoverflow.com/users/6858150/david-zhang/"><i class="fa fa-stack-overflow"></i></a>
-          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
           <a href="https://instagram.com/crispgm"><i class="fa fa-instagram"></i></a>
           <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
-          <a href="http://weibo.com/crispgm"><i class="fa fa-weibo"></i></a>
+          <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
+          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
         </div>
 
         <div id="copyright">

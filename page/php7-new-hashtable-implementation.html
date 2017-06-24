@@ -61,7 +61,7 @@
     <div class="article-date">July 06, 2016</div>
   </div>
   <div class="article-main">
-    <h1 id="section">声明</h1>
+    <h1 id="声明">声明</h1>
 
 <p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
 
@@ -74,7 +74,7 @@ in which I have done a small amount of adjustment based on the reading habit of 
 
 <p>Original Post: <a href="https://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html">PHP’s new hashtable implementation</a></p>
 
-<h1 id="section-1">正文</h1>
+<h1 id="正文">正文</h1>
 
 <p>大约三年前，我写过一篇<a href="/page/how-big-are-php-arrays.html">分析 PHP 5 数组内存消耗的文章</a>。作为即将推出的 PHP 7 的工作的一部分，Zend 引擎很大一部分已经被重写，这些工作针对于更小的数据结构和更少的内存分配。在这篇文章中，我将对新的 Hash 表实现做一个概述，并展示为什么它比之前的实现更有效。</p>
 
@@ -98,7 +98,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>换句话说，PHP 7 中的数组在 32 位系统中节省了 2.5 倍的内存，在 64 位（LP64）系统中节省了 3.5 倍，这相当的可观。</p>
 
-<h2 id="hash-">Hash 表介绍</h2>
+<h2 id="hash-表介绍">Hash 表介绍</h2>
 
 <p>本质上，PHP 的数组其实是有序词典。也就是说，它们代表了一个由 key/value 对组成的有序列表，其中 key/value 映射由 Hash 表实现。</p>
 
@@ -110,7 +110,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>通常来说，Hash 表不会有明确的顺序：元素存储在数组底层的顺序依赖于 Hash 函数，并且相当的随机。但这个行为和 PHP 数组的语义不一致：如果你遍历一个 PHP 数组，你将会得到按插入顺序排列的元素。这意味着，PHP 的 Hash 表实现不得不加入额外的机制来记录数组元素的顺序。</p>
 
-<h2 id="hash--1">旧的 Hash 表实现</h2>
+<h2 id="旧的-hash-表实现">旧的 Hash 表实现</h2>
 
 <p>我在这里只会简短的概述一下旧的 Hash 表实现，想获得更全面的解释可以阅读 PHP 内核书的 <a href="http://www.phpinternalsbook.com/hashtables/basic_structure.html">Hash 表章节</a>。下图所示是一个 PHP 5 Hash 表的高级视图：</p>
 
@@ -132,7 +132,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>新的 Hash 表实现设法解决（或至少是改善）这些问题。</p>
 
-<h2 id="zval-">新的 zval 实现</h2>
+<h2 id="新的-zval-实现">新的 zval 实现</h2>
 
 <p>在进入实际的 Hash 表之前，我想先简单的看一下新的 <code class="highlighter-rouge">zval</code> 结构并且突出它和旧版的区别。<code class="highlighter-rouge">zval</code> 结构定义如下：</p>
 
@@ -177,7 +177,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
   <li>由于所有复杂的值现在集成了引用计数，它们可以独立共享 <code class="highlighter-rouge">zval</code> 的机制，尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非留存（译者注：此处 interned 没有找到好的翻译，<a href="https://en.wikipedia.org/wiki/String_interning">string interning</a> 是指一种为每个不同的不可变字符串值只存储一个拷贝的方法）的字符串类型的键值。</li>
 </ul>
 
-<h2 id="hash--2">新的 Hash 表实现</h2>
+<h2 id="新的-hash-表实现">新的 Hash 表实现</h2>
 
 <p>在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 <code class="highlighter-rouge">bucket</code> 的结构开始：</p>
 
@@ -220,7 +220,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p><code class="highlighter-rouge">bucket</code>（相当于数组元素）存储在 <code class="highlighter-rouge">arData</code> 数组中，以 2 的幂为大小进行分配，数组的大小存储在 <code class="highlighter-rouge">nTableSize</code>（最小值为 8）。元素的实际数量是 <code class="highlighter-rouge">nNumOfElements</code>。注意，这个数组直接包含有 <code class="highlighter-rouge">bucket</code>。之前，我们使用一个指针数组去单独分配 <code class="highlighter-rouge">bucket</code>，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。</p>
 
-<h2 id="section-2">元素的顺序</h2>
+<h2 id="元素的顺序">元素的顺序</h2>
 
 <p><code class="highlighter-rouge">arData</code> 数组按照插入的顺序存储元素。所以第一个元素会被存储在 <code class="highlighter-rouge">arData[0]</code>，第二个会被存储在 <code class="highlighter-rouge">arData[1]</code> ，等等。这完全不依赖用过的 key，只跟插入顺序有关。</p>
 
@@ -277,7 +277,7 @@ for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
 
 <p>当前实现的一个问题是 <code class="highlighter-rouge">arData</code> 从不收缩（除非明确告诉它这样做）。所以如果你创建一个几百万个元素的数组并在后来删除，数组还是会占用大量的内存。我们可能应该让 <code class="highlighter-rouge">arData</code> 的大小减半，如果使用降低到一定的程度。</p>
 
-<h2 id="hash--3">Hash 表查找</h2>
+<h2 id="hash-表查找">Hash 表查找</h2>
 
 <p>到现在，我们只是讨论了 PHP 数组如何表示顺序。实际 Hash 表的查找使用了第二个包含有 <code class="highlighter-rouge">uint32_t</code> 值的 <code class="highlighter-rouge">arHash</code> 数组。<code class="highlighter-rouge">arHash</code> 数组合 <code class="highlighter-rouge">arData</code> 有相同的大小（<code class="highlighter-rouge">nTableSize</code>），两者实际上都被分配在同一内存分片上。</p>
 
@@ -308,7 +308,7 @@ return NULL;
 
 <p>在一些上下文情况下的删除（比如：删除迭代器当前所在的元素）可能会需要遍历冲突链表，以寻找前一个元素。但这不是一个很常见的场景，对于这种情况我们比起减少一次遍历更倾向于节省内存。</p>
 
-<h2 id="hash--4">打包 Hash 表</h2>
+<h2 id="打包-hash-表">打包 Hash 表</h2>
 
 <p>PHP 对于任何数组都使用 Hash 表。然而，对于一些很常见的连续、整数下标的数组（比如：实数组），整个 Hash 系统并没有什么用。这是 PHP 7 要引入一个“打包 Hash 表”概念的原因。</p>
 
@@ -320,7 +320,7 @@ return NULL;
 
 <p>我们留着这些无用的值，所以 <code class="highlighter-rouge">bucket</code> 有一样的结构，与是否使用打包无关。这意味着，迭代可以使用相同的代码。然而，我们可能会在未来切换到“完全打包”的结构，如果可以那时将会使用纯粹的 <code class="highlighter-rouge">zval</code> 数组。</p>
 
-<h2 id="hash--5">空 Hash 表</h2>
+<h2 id="空-hash-表">空 Hash 表</h2>
 
 <p>空 Hash 表在 PHP 5.x 和 PHP 7 中都会被特殊处理。如果你创建了空数组 <code class="highlighter-rouge">array []</code>，很有可能你不会实际上插入任何元素。<code class="highlighter-rouge">arData/arHash</code> 数组只会在你插入第一个元素时分配内存。</p>
 
@@ -328,7 +328,7 @@ return NULL;
 
 <p>所以在这个情况中，<code class="highlighter-rouge">arHash</code> 数组只有一个带有 <code class="highlighter-rouge">INVALID_IDX</code> 值、下标为 0 的元素（这个特殊数组被称为 <code class="highlighter-rouge">uninitialized_bucket</code>，并且被静态分配了内存）。当进行查找时，我们会一直找到 <code class="highlighter-rouge">INVALID_IDX</code> 值，意味着 key（实际上你只想静态分配创建一个空表）没有被找到。</p>
 
-<h2 id="section-3">内存使用</h2>
+<h2 id="内存使用">内存使用</h2>
 
 <p>内存使用应该涉及了 PHP 7 Hash 表实现最重要的方面。首先，我们总结下为什么新的实现省内存。我在这里只会用 64 位系统的数据，并且只看单个元素的大小，会忽略主 <code class="highlighter-rouge">HashTable</code> 结构（这是渐进不重要的）。</p>
 
@@ -373,7 +373,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>事情会变得更加复杂，如果我们考虑字符串作 key（这可能是共享的或者是留存的）和复杂的 value。这种情况下 PHP 7 会显著比 PHP 5.x 节省内存，但介绍里的数字在很多情况下可能过于乐观。</p>
 
-<h2 id="section-4">性能</h2>
+<h2 id="性能">性能</h2>
 
 <p>我们已经谈论了很多关于内存占用的问题，现在我们进入下一个环节，叫做性能。最终，phpng 项目的目标并不是改善内存占用，而是提升性能。内存占用优化只是达成目标的一个方法，因为减少内存占用可以得到更好的 CPU 缓存利用，以达到更好的性能。</p>
 
@@ -383,7 +383,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>也许还需要在性能主题多说一些，但本文的主要兴趣在内存使用上，所以我就不在这扩展细节了。</p>
 
-<h2 id="section-5">结尾思考</h2>
+<h2 id="结尾思考">结尾思考</h2>
 
 <p>PHP 7 的 Hash 表实现毫无疑问迈进一大步，很多无用的内存不再使用了。</p>
 
@@ -437,10 +437,10 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
           <a href="/feed.xml"><i class="fa fa-rss"></i></a>
           <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
           <a href="https://stackoverflow.com/users/6858150/david-zhang/"><i class="fa fa-stack-overflow"></i></a>
-          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
           <a href="https://instagram.com/crispgm"><i class="fa fa-instagram"></i></a>
           <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
-          <a href="http://weibo.com/crispgm"><i class="fa fa-weibo"></i></a>
+          <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
+          <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
         </div>
 
         <div id="copyright">
