@@ -30,3 +30,19 @@
     float: right;
   }
 }
+
+@media (max-width: $breakpoint) {
+  #contact {
+    #copyright {
+      margin-left: .6rem;
+      padding-top: 1rem;
+      width: 100%;
+    }
+
+    #links {
+      margin-left: -0.1rem;
+      width: 100%;
+      float: none;
+    }
+  }
+}
