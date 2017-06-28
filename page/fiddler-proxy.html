@@ -61,7 +61,7 @@
     <div class="article-date">March 21, 2014</div>
   </div>
   <div class="article-main">
-    <h2 id="什么是fiddler">什么是Fiddler</h2>
+    <h2 id="fiddler">什么是Fiddler</h2>
 
 <p>Fiddler 官方给 Fiddler 的描述语是 Web Debugging Proxy，也就是 Web 调试代理工具。</p>
 
@@ -87,7 +87,7 @@
 
 <p>本文，主要讨论前三项功能的使用方法，包括 Fiddler 的基础配置和功能以及使用内置 FiddlerScript 脚本进行复杂功能调试。</p>
 
-<h2 id="准备和配置">准备和配置</h2>
+<h2 id="section">准备和配置</h2>
 
 <p>Fiddler 使用 C# 开发，支持 Windows XP 以上版本。对于 Linux 和 Mac 用户，有一个基于 Mono 的 Alpha 版本，经本人 Mac 实际测试，基本上算是不能用的状态。因此，不建议使用。</p>
 
@@ -97,7 +97,7 @@
 
 <p>准备完毕后，请打开 Fiddler 进入 Tools-&gt;Fiddler Options，在 Connections 中勾选 Allow remote computers to connect，并重新启动 Fiddler。</p>
 
-<h2 id="网络请求抓取">网络请求抓取</h2>
+<h2 id="section-1">网络请求抓取</h2>
 
 <p>完成了上述设置后，Fiddler 就已经可以抓取本地的网络请求。如果需要对手机 app 进行调试，则需要设置手机代理。</p>
 
@@ -174,20 +174,20 @@
 
 <p>在 <code class="highlighter-rouge">OnBeforeRequest</code> 函数中修改：</p>
 
-<h3 id="添加-headers">添加 Headers</h3>
+<h3 id="headers">添加 Headers</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
 </code></pre>
 </div>
 
-<h4 id="添加-cookies">添加 Cookies</h4>
+<h4 id="cookies">添加 Cookies</h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>// 增加预览机标识
 oSession.oRequest.headers.Add("Cookie", "pub_env=1");
 </code></pre>
 </div>
 
-<h4 id="匹配-url防止添加的字段干扰到其他网页">匹配 URL，防止添加的字段干扰到其他网页</h4>
+<h4 id="url">匹配 URL，防止添加的字段干扰到其他网页</h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
     // TODO

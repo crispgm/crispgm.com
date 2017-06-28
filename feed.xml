@@ -5,9 +5,9 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Jun 2017 11:40:32 +0800</pubDate>
-    <lastBuildDate>Sat, 24 Jun 2017 11:40:32 +0800</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <pubDate>Wed, 28 Jun 2017 16:09:38 +0800</pubDate>
+    <lastBuildDate>Wed, 28 Jun 2017 16:09:38 +0800</lastBuildDate>
+    <generator>Jekyll v3.3.0</generator>
     
       
       <item>
@@ -16,7 +16,7 @@
 
 &lt;p&gt;I first posted this on Oct 22th, 2015. And it is renewed on Jun 9th, 2017.&lt;/p&gt;
 
-&lt;h3 id=&quot;mas&quot;&gt;&lt;a href=&quot;https://github.com/mas-cli/mas&quot;&gt;MAS&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;mashttpsgithubcommas-climas&quot;&gt;&lt;a href=&quot;https://github.com/mas-cli/mas&quot;&gt;MAS&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Mac App Store command line interface.&lt;/em&gt;&lt;/p&gt;
 
@@ -47,7 +47,7 @@ WeChat (2.2.8)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;terminal-table&quot;&gt;&lt;a href=&quot;https://github.com/tj/terminal-table&quot;&gt;Terminal Table&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;terminal-tablehttpsgithubcomtjterminal-table&quot;&gt;&lt;a href=&quot;https://github.com/tj/terminal-table&quot;&gt;Terminal Table&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby.&lt;/em&gt;&lt;/p&gt;
 
@@ -71,7 +71,7 @@ table = Terminal::Table.new :rows =&amp;gt; rows
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;m-cli&quot;&gt;&lt;a href=&quot;https://github.com/rgcr/m-cli&quot;&gt;m-cli&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;m-clihttpsgithubcomrgcrm-cli&quot;&gt;&lt;a href=&quot;https://github.com/rgcr/m-cli&quot;&gt;m-cli&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Swiss Army Knife for macOS!&lt;/em&gt; By &lt;code class=&quot;highlighter-rouge&quot;&gt;m-cli&lt;/code&gt;, it enables you to control everything of Mac with commands.&lt;/p&gt;
 
@@ -131,7 +131,7 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;proxychains&quot;&gt;&lt;a href=&quot;https://github.com/rofl0r/proxychains-ng&quot;&gt;ProxyChains&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;proxychainshttpsgithubcomrofl0rproxychains-ng&quot;&gt;&lt;a href=&quot;https://github.com/rofl0r/proxychains-ng&quot;&gt;ProxyChains&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Socks and HTTP proxy for terminal. And we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;proxychains&lt;/code&gt; to boost speed of some services and get across the wall.&lt;/p&gt;
 
@@ -139,25 +139,25 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;doubanfm&quot;&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;Douban.fm&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;doubanfmhttpsgithubcomturingoudoubanfm&quot;&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;Douban.fm&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Console based &lt;a href=&quot;https://douban.fm/&quot;&gt;Douban FM&lt;/a&gt; client, written in Node.js. It runs on Mac but not very stable.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;gotty&quot;&gt;&lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;Gotty&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;gottyhttpsgithubcomyudaigotty&quot;&gt;&lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;Gotty&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;An awesome live broadcasting tool, which output your terminal, written with Go.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;wego&quot;&gt;&lt;a href=&quot;https://github.com/schachmat/wego&quot;&gt;Wego&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;wegohttpsgithubcomschachmatwego&quot;&gt;&lt;a href=&quot;https://github.com/schachmat/wego&quot;&gt;Wego&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Weather forecasting with ASCII GUI written in Go.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;qrcode-terminal&quot;&gt;&lt;a href=&quot;https://github.com/gtanner/qrcode-terminal&quot;&gt;Qrcode-terminal&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;qrcode-terminalhttpsgithubcomgtannerqrcode-terminal&quot;&gt;&lt;a href=&quot;https://github.com/gtanner/qrcode-terminal&quot;&gt;Qrcode-terminal&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Generate and display QR code with Node.js.&lt;/p&gt;
 
@@ -196,7 +196,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;Slack 另一创新点是对第三方应用的集成，可以集成各类 Apps 和聊天机器人。不同类型的应用集成，和 Slack 碰撞出了更多生产力的火花，同时还催生了 ChatOps 之类的用法，大大提高了工作效率和体验。&lt;/p&gt;
 
-&lt;h1 id=&quot;为什么和自己聊天&quot;&gt;为什么和自己聊天？&lt;/h1&gt;
+&lt;h1 id=&quot;section&quot;&gt;为什么和自己聊天？&lt;/h1&gt;
 
 &lt;p&gt;由于种种原因，我所在的“大公司”还在用着非常落后的即时通信软件，大环境是不能指望了。而小团队，倒是可能会有些兴趣，但要翻越知识普及、群体翻墙等诸多障碍，况且基础设施基本不支持 ChatOps，而且大部分协作还是跟外面的团队。唉，“覆巢之下，焉有完卵”啊！任你有好工具的选择，但垃圾的生态让你寸步难行。&lt;/p&gt;
 
@@ -206,9 +206,9 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;唯独 Slack 似乎没有找到自己的位置，毕竟自己跟自己协作没有必要聊天。但我知道 Slack 的意义可不只是当 QQ 用，用多了国外的工具链后，我发现了 Slack 存在的另一大意义——取代邮件。并且陆续找到了一些适合个人开发者的玩法，现在分享给大家。&lt;/p&gt;
 
-&lt;h3 id=&quot;通知中心&quot;&gt;通知中心&lt;/h3&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;通知中心&lt;/h3&gt;
 
-&lt;h5 id=&quot;服务通知&quot;&gt;服务通知&lt;/h5&gt;
+&lt;h5 id=&quot;section-2&quot;&gt;服务通知&lt;/h5&gt;
 
 &lt;p&gt;欧美IT企业对于邮件的使用程度远远超过了国内，邮件是主要通知方式，比如 Travis 默认状态下持续集成成功、失败、重新成功等得给你来一封邮件。而作为强迫症的我，就必须点进去删除一封邮件。这种方式既浪费时间又不低碳。&lt;/p&gt;
 
@@ -238,7 +238,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;当然，我还远没有用到 ChatOps 的精髓，有空还会继续探索试一些更实用的工具，真正地 Chat 起来。&lt;/p&gt;
 
-&lt;h3 id=&quot;稍后阅读&quot;&gt;稍后阅读&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;稍后阅读&lt;/h3&gt;
 
 &lt;p&gt;我是稍后阅读类 App 的重度用户，Pocket 世界阅读量排名进入 Top 1%，最近也经常用 Instapaper。我也维持着一套 Reeder 订阅 RSS，然后泛读和稍后阅读的阅读 flow。&lt;/p&gt;
 
@@ -246,7 +246,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;&lt;img src=&quot;/image/slack-share-article.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;看图--获得灵感&quot;&gt;看图 &amp;amp; 获得灵感&lt;/h3&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;看图 &amp;amp; 获得灵感&lt;/h3&gt;
 
 &lt;p&gt;开发的过程是快乐的，但也时常伴随着挫折和焦急。我们需要一些方式娱乐和舒缓自己，重新获得力量和灵感。&lt;/p&gt;
 
@@ -262,7 +262,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack &lt;code class=&quot;highlighter-rouge&quot;&gt;#girls&lt;/code&gt;。&lt;/p&gt;
 
-&lt;h5 id=&quot;随机图片&quot;&gt;随机图片&lt;/h5&gt;
+&lt;h5 id=&quot;section-5&quot;&gt;随机图片&lt;/h5&gt;
 
 &lt;p&gt;休闲过后还需要来点灵感，随机是个好方法，于是剩下不多的 Apps 集成额度就用在了这里，我选择加入了 Dribbble 和 Unsplash。&lt;/p&gt;
 
@@ -282,7 +282,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;最后&quot;&gt;最后&lt;/h1&gt;
+&lt;h1 id=&quot;section-6&quot;&gt;最后&lt;/h1&gt;
 
 &lt;p&gt;如果一个工具，既可以让人提高生产力，又能让人愉悦，那我们就赶快拿起&lt;del&gt;电话订购&lt;/del&gt;电脑使用吧！&lt;/p&gt;
 </description>
@@ -301,7 +301,7 @@ Now drawing from 'AC Power'
       
       <item>
         <title>摄影的意义</title>
-        <description>&lt;h2 id=&quot;最初的入门&quot;&gt;最初的入门&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;section&quot;&gt;最初的入门&lt;/h2&gt;
 
 &lt;p&gt;通常来说，我并不是一个很有艺术细胞的人。我画画垃圾、写字不好看、手工能力不强，艺术匠心的东西似乎是不怎么行。&lt;/p&gt;
 
@@ -317,7 +317,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;借助 Instagram 优秀的滤镜，我也能拍出看着“还行”的作品（事实上，事后看来，这大多只是在滤镜加持下出现的错觉）。所以开始想玩摄影，也是在 2015 年 6 月购入了黑卡 3 代——索尼 RX100 Mark III。&lt;/p&gt;
 
-&lt;h2 id=&quot;黑卡3&quot;&gt;黑卡3&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;黑卡3&lt;/h2&gt;
 
 &lt;p&gt;当时对参数并不是很懂，我只知道它是“大法黑科技”，有蔡司变焦镜头（据说新手用变焦入门比较好）。价格比较贵似乎是质量的保证，颜值也颇为喜爱。至于单反和微单，我实在觉得单反太丑了，微单的话按照黑卡吹的说法：&lt;del&gt;微单套头比不过黑卡&lt;/del&gt;。&lt;/p&gt;
 
@@ -329,13 +329,13 @@ Now drawing from 'AC Power'
 
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;7&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/-37aqbS1Jl/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;We can use Lightroom or #vsco to make the leaves either green or red. However, it is impossible to make a blue sky and breathe the fresh air in a haze day. #beijing #autumn #rx100&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by David Zhang (@crispgm) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2015-12-04T14:50:53+00:00&quot;&gt;Dec 4, 2015 at 6:50am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
 
-&lt;h3 id=&quot;黑卡事后评价&quot;&gt;黑卡事后评价&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;黑卡事后评价&lt;/h3&gt;
 
 &lt;p&gt;黑卡是一款很经典的机器，2400 万像素 1 寸 CMOS，配备等效 24-70mm F1.8-2.8 Zeiss 镜头，并内置有可弹出式的 EVF。&lt;/p&gt;
 
 &lt;p&gt;容易糊的原因有很多，我认为主要的还是因为对快门速度的掌控不好。可能有一个不太靠谱的原因是 1 寸底配 2400 万像素，或许像素密度较大更容易这样。&lt;/p&gt;
 
-&lt;h2 id=&quot;奥林巴斯&quot;&gt;奥林巴斯&lt;/h2&gt;
+&lt;h2 id=&quot;section-3&quot;&gt;奥林巴斯&lt;/h2&gt;
 
 &lt;p&gt;为了满足可换镜头相机的梦想，开始不断在索尼全画幅、富士、松下等微单厂商之间摇摆，摇着摇着到了奥林巴斯。某个周末，突然看到京东 E-M5 Mark II 特价，于是入手。就这样戏剧性的进入了奥林巴斯和 M43 的阵营。&lt;/p&gt;
 
@@ -353,19 +353,19 @@ Now drawing from 'AC Power'
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;7&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/BMPCZNEjUYY/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;The boundary #autumn #autumn🍁 #vsco #vscocam #m43 #em5 #em5markii #olympus #olympuscamera&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by David Zhang (@crispgm) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-10-31T17:02:30+00:00&quot;&gt;Oct 31, 2016 at 10:02am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
 
-&lt;h3 id=&quot;45mm-f18&quot;&gt;45mm F1.8&lt;/h3&gt;
+&lt;h3 id=&quot;mm-f18&quot;&gt;45mm F1.8&lt;/h3&gt;
 
 &lt;p&gt;这是一只物美价廉体积小的人像头，充分发挥了 M43 镜头的优势。虽然光圈也就那样，但等效 90mm 的焦距可以获得可观的虚化效果。&lt;/p&gt;
 
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;7&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/BAsICT5y1DT/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#summerpalace #olympuscamera #em5mark2 #vsco #portrait&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by David Zhang (@crispgm) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-01-18T17:53:03+00:00&quot;&gt;Jan 18, 2016 at 9:53am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
 
-&lt;h3 id=&quot;9-18mm-f45-56&quot;&gt;9-18mm F4.5-5.6&lt;/h3&gt;
+&lt;h3 id=&quot;mm-f45-56&quot;&gt;9-18mm F4.5-5.6&lt;/h3&gt;
 
 &lt;p&gt;纠结了一阵购入的一个超广角变焦镜头。出片率似乎比较高，但其实比较失败的一个镜头。广角畸变特别大，边缘不能细看。&lt;/p&gt;
 
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;7&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:37.4537037037037% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/BES2Dy7y1Gv/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#forbiddencity #olympus #olympuscamera #olympusomd #em5mark2 #m43 #zuiko #beijing #instabeijing&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by David Zhang (@crispgm) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-04-17T08:20:32+00:00&quot;&gt;Apr 17, 2016 at 1:20am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
 
-&lt;h2 id=&quot;富士&quot;&gt;富士&lt;/h2&gt;
+&lt;h2 id=&quot;section-4&quot;&gt;富士&lt;/h2&gt;
 
 &lt;p&gt;其实在黑卡后期，我就曾经险些动心在富士 X-T1 打折的时候下单了，但最后忍住了。之后时不时会中毒一阵富士，比如 X-Pro2 刚发布时，但这价格有点望而生畏所以能忍得住。2016 年中旬，我又开始毒起了 X-100T，因为既想体验富士的色彩又可以获得一个轻便的35mm定焦相机。&lt;/p&gt;
 
@@ -387,7 +387,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;因此，除去感情因素，也为了这个原因，我并不想灭门奥林巴斯。况且，比起堪称旗舰的 X-Pro2，E-M5 Mark II 非常小巧，挂着 DG15 出去溜达没什么负担。&lt;/p&gt;
 
-&lt;h2 id=&quot;感受&quot;&gt;感受&lt;/h2&gt;
+&lt;h2 id=&quot;section-5&quot;&gt;感受&lt;/h2&gt;
 
 &lt;p&gt;对于我来说，摄影最初的意义只是随手分享一些有意思的“东西”。可能是高兴的瞬间，也可能是看到了一个好看的景色。很自然，很随意。之后就是记录美的瞬间，包括美丽的景色、人物、静物等等。在这期间，审美的能力会得到提升，包括构图、色彩和对光的掌握。当我们能够完美记录美的时候，就进入了最后的境界，那就是情感与画面的结合。我们即使水平不够但也可能偶尔会踏入其中。&lt;/p&gt;
 
@@ -410,19 +410,19 @@ Now drawing from 'AC Power'
       
       <item>
         <title>技术周刊自动化</title>
-        <description>&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;section&quot;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;技术博客和技术周刊对于一个有技术追求的技术团队来说都是标配，意义在于团队的技术氛围。由于日常业务繁忙和技术深度等原因，大多数技术周刊都是以转载为主。技术周刊的“主编”也就是负责人，肯定需要从事文章收集、筛选、格式化、校验和编译，并不需要编辑什么内容。这部分工作量不大，但枯燥无意义。我也是其中的一员，因此我决定用“技术周刊自动化”来解决技术周刊的整套收集、筛选、校验和发布的流程。&lt;/p&gt;
 
 &lt;p&gt;这是我所在团队的技术博客 &lt;a href=&quot;https://msbu-tech.github.io/&quot;&gt;https://msbu-tech.github.io/&lt;/a&gt;，基于 Jekyll 创建，分为博客、周刊、分享、项目等板块。其中，最活跃的就是&lt;a href=&quot;https://msbu-tech.github.io/weekly/&quot;&gt;技术周刊&lt;/a&gt;。技术周刊每周都会发布，接收所有团队成员投稿，收集编译完毕后会发布到网站上，并且需要再在内部邮件组转一份。&lt;/p&gt;
 
-&lt;h2 id=&quot;如何自动化&quot;&gt;如何自动化？&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;如何自动化？&lt;/h2&gt;
 
 &lt;p&gt;整体思路是基于 GitHub 构建一套自动化流程，通过 issues 进行收集，然后用脚本调用 GitHub API 处理导入和编译的各项步骤。&lt;/p&gt;
 
 &lt;p&gt;由于是 Jekyll 是 Ruby 编写的，因此选择 Ruby 比较合适。并且由于只是一些简单的任务式脚本，所以选择 &lt;code class=&quot;highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; 作为载体来编写。&lt;/p&gt;
 
-&lt;h3 id=&quot;整体流程&quot;&gt;整体流程&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;整体流程&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;在 issues 中开启收集贴&lt;/li&gt;
@@ -432,7 +432,7 @@ Now drawing from 'AC Power'
   &lt;li&gt;完成 Wunderlist 中的任务&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;准备工作&quot;&gt;准备工作&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;准备工作&lt;/h3&gt;
 
 &lt;h4 id=&quot;github-api&quot;&gt;GitHub API&lt;/h4&gt;
 
@@ -442,7 +442,7 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;access_token&quot;&gt;access_token&lt;/h4&gt;
+&lt;h4 id=&quot;accesstoken&quot;&gt;access_token&lt;/h4&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;access_token&lt;/code&gt; 不能对外暴露，因此需要在环境变量中设置或者通过指定环境变量来运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;rake&lt;/code&gt;。&lt;/p&gt;
 
@@ -450,7 +450,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;作为一个自动化的工作，我引入了一个机器人账号 &lt;a href=&quot;https://github.com/msbu-bot/&quot;&gt;msbu-bot&lt;/a&gt;，在调用 GitHub API 时使用。&lt;/p&gt;
 
-&lt;h3 id=&quot;文章收集&quot;&gt;文章收集&lt;/h3&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;文章收集&lt;/h3&gt;
 
 &lt;p&gt;建立一个专门 Repo 收集周刊内容 &lt;a href=&quot;https://github.com/msbu-tech/weekly&quot;&gt;msbu-tech/weekly&lt;/a&gt;。里面没有代码，只有 &lt;code class=&quot;highlighter-rouge&quot;&gt;README&lt;/code&gt; 来说明投稿的步骤流程，而 issues 则是收集贴。&lt;/p&gt;
 
@@ -468,7 +468,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;&lt;img src=&quot;/image/msbu-bot-open-issue.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;导入和编译&quot;&gt;导入和编译&lt;/h3&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;导入和编译&lt;/h3&gt;
 
 &lt;p&gt;周刊文章收集完毕后，我们开始导入：&lt;/p&gt;
 
@@ -525,7 +525,7 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;测试&quot;&gt;测试&lt;/h3&gt;
+&lt;h3 id=&quot;section-6&quot;&gt;测试&lt;/h3&gt;
 
 &lt;p&gt;导入了文章后，需要进行一些基本的测试。投稿人和主编们时常会写错写重复一些字段，所以做了个自动化测试进行重复检测和字段缺失检测。这也接了 Travis 进行持续集成。&lt;/p&gt;
 
@@ -535,7 +535,7 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;发布&quot;&gt;发布&lt;/h3&gt;
+&lt;h3 id=&quot;section-7&quot;&gt;发布&lt;/h3&gt;
 
 &lt;p&gt;最后一步就是发布了。&lt;/p&gt;
 
@@ -560,7 +560,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;&lt;img src=&quot;/image/msbu-bot-say-thanks-and-close.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;完成-wunderlist&quot;&gt;完成 Wunderlist&lt;/h3&gt;
+&lt;h3 id=&quot;wunderlist&quot;&gt;完成 Wunderlist&lt;/h3&gt;
 
 &lt;p&gt;这里需要再引入一个非官方的 Wunderlist API：&lt;/p&gt;
 
@@ -585,9 +585,9 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;写在最后&quot;&gt;写在最后&lt;/h2&gt;
+&lt;h2 id=&quot;section-8&quot;&gt;写在最后&lt;/h2&gt;
 
-&lt;h5 id=&quot;文章所说的源码在&quot;&gt;文章所说的源码在:&lt;/h5&gt;
+&lt;h5 id=&quot;section-9&quot;&gt;文章所说的源码在:&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/msbu-tech/msbu-tech.github.io/blob/master/Rakefile&quot;&gt;https://github.com/msbu-tech/msbu-tech.github.io/blob/master/Rakefile&lt;/a&gt;&lt;/p&gt;
 
@@ -655,13 +655,17 @@ Now drawing from 'AC Power'
         <title>48 个你需要知道的 Jekyll 使用技巧</title>
         <description>&lt;p&gt;很久以前，本人的个人博客是 PHP 写的简单页面，实时转换 Markdown。后来，为了简单，用 PHP 写了一个静态博客转换器。虽用起来还比较舒服，但通用性太差了。于是转向 GitHub Pages 官方支持的 Jekyll，没想到只花了20分钟就完成了迁移，开发体验颇好。深入使用和参与了许久后，决定写一篇 Jekyll 相关的 Tips 的文章，仅供大家参考。&lt;/p&gt;
 
-&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;简介&lt;/h2&gt;
 
-&lt;h4 id=&quot;什么是-jekyll&quot;&gt;什么是 Jekyll&lt;/h4&gt;
+&lt;h4 id=&quot;jekyll&quot;&gt;什么是 Jekyll&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 是一个简单的，博客感知的，静态网站生成器。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 是一个简单的，博客感知的，静态网站生成器。可以认为，Jekyll 是一个基于文件的内容管理系统（CMS）。它使用 Ruby 编写，通过 Markdown 和 Liquid 模板生成内容。&lt;/p&gt;
 
-&lt;h4 id=&quot;安装&quot;&gt;安装&lt;/h4&gt;
+&lt;p&gt;Jekyll 最初由 GitHub co-founder、前首席执行官 &lt;a href=&quot;https://github.com/mojombo&quot;&gt;Tom Preston-Werner&lt;/a&gt; 创立。&lt;/p&gt;
+
+&lt;p&gt;目前，Jekyll 的维护者是 &lt;a href=&quot;https://github.com/parkr&quot;&gt;Parker Moore&lt;/a&gt;，他本人也于&lt;a href=&quot;https://byparker.com/blog/2016/joining-github/&quot;&gt;2016年初加入了 GitHub&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;安装&lt;/h4&gt;
 
 &lt;p&gt;首先，你得有 Ruby。对于 Mac 用户，可以使用 Homebrew 安装。&lt;/p&gt;
 
@@ -675,7 +679,7 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;gem-安装不上或者很慢怎么办&quot;&gt;Gem 安装不上或者很慢怎么办？&lt;/h4&gt;
+&lt;h4 id=&quot;gem-&quot;&gt;Gem 安装不上或者很慢怎么办？&lt;/h4&gt;
 
 &lt;p&gt;RubyGems 是一个优秀的包管理系统，但再优秀也扛不住墙和距离，所以一般情况下，中国大陆的用户需要更换 RubyGems 的源。&lt;/p&gt;
 
@@ -687,7 +691,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;同时，也广告一下本人的作品：&lt;a href=&quot;https://crispgm.github.io/gsm/&quot;&gt;Gem Sources Manager&lt;/a&gt;，专门用于切换源。&lt;/p&gt;
 
-&lt;h4 id=&quot;mac-osx-el-capitan-安装失败&quot;&gt;Mac OSX El Capitan 安装失败&lt;/h4&gt;
+&lt;h4 id=&quot;mac-osx-el-capitan-&quot;&gt;Mac OSX El Capitan 安装失败&lt;/h4&gt;
 
 &lt;p&gt;从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/bin&lt;/code&gt; 等文件夹无法写入。因此需要更换安装路径。&lt;/p&gt;
 
@@ -711,9 +715,9 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;命令&quot;&gt;命令&lt;/h2&gt;
+&lt;h2 id=&quot;section-2&quot;&gt;命令&lt;/h2&gt;
 
-&lt;h4 id=&quot;使用-jekyll-new-创建新站点&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; 创建新站点&lt;/h4&gt;
+&lt;h4 id=&quot;jekyll-new-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; 创建新站点&lt;/h4&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new my-jekyll-site
 &lt;/code&gt;&lt;/pre&gt;
@@ -727,7 +731,7 @@ $ jekyll new .
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;使用-jekyll-serve-在本地运行站点&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 在本地运行站点&lt;/h4&gt;
+&lt;h4 id=&quot;jekyll-serve-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 在本地运行站点&lt;/h4&gt;
 
 &lt;p&gt;以下三种使用方式是等价的：&lt;/p&gt;
 
@@ -739,7 +743,7 @@ $ jekyll s
 
 &lt;p&gt;通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt; 进行访问。&lt;/p&gt;
 
-&lt;h4 id=&quot;使用-jekyll-build-生成站点&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 生成站点&lt;/h4&gt;
+&lt;h4 id=&quot;jekyll-build-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 生成站点&lt;/h4&gt;
 
 &lt;p&gt;以下两种使用方式是等价的：&lt;/p&gt;
 
@@ -754,15 +758,15 @@ $ jekyll b
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;使用-jekyll-new-theme-创建主题&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new-theme&lt;/code&gt; 创建主题&lt;/h4&gt;
+&lt;h4 id=&quot;jekyll-new-theme-&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new-theme&lt;/code&gt; 创建主题&lt;/h4&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new-theme my-theme
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
+&lt;h2 id=&quot;section-3&quot;&gt;基础&lt;/h2&gt;
 
-&lt;h4 id=&quot;目录结构&quot;&gt;目录结构&lt;/h4&gt;
+&lt;h4 id=&quot;section-4&quot;&gt;目录结构&lt;/h4&gt;
 
 &lt;p&gt;一个基本的 Jekyll 站点目录结构：&lt;/p&gt;
 
@@ -833,7 +837,7 @@ $ jekyll b
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;_configyml&quot;&gt;_config.yml&lt;/h4&gt;
+&lt;h4 id=&quot;configyml&quot;&gt;_config.yml&lt;/h4&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 是整个站点的整体配置，以下是所有配置项和默认值：&lt;/p&gt;
 
@@ -915,7 +919,7 @@ kramdown:
 
 &lt;p&gt;Jekyll 整个站点的配置是站点根目录下的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 文件，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 等目录下的文件中也可以有自己的变量。文件头部的 &lt;code class=&quot;highlighter-rouge&quot;&gt;yaml&lt;/code&gt; 配置被称作 Front Matter。&lt;/p&gt;
 
-&lt;h4 id=&quot;front-matter-默认值&quot;&gt;Front Matter 默认值&lt;/h4&gt;
+&lt;h4 id=&quot;front-matter-&quot;&gt;Front Matter 默认值&lt;/h4&gt;
 
 &lt;p&gt;可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;defaults&lt;/code&gt; 设置一个路径下 Front Matter 默认值。&lt;/p&gt;
 
@@ -929,7 +933,7 @@ kramdown:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;忽略文件&quot;&gt;忽略文件&lt;/h4&gt;
+&lt;h4 id=&quot;section-5&quot;&gt;忽略文件&lt;/h4&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exclude&lt;/code&gt; 用于忽略文件或文件夹，其中 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 和以&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;开头的文件或文件夹都会被自动忽略。后续版本，&lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; 等文件夹也被隐式忽略了（参考 _config.yml 章节）。&lt;/p&gt;
 
@@ -941,7 +945,7 @@ kramdown:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;分页&quot;&gt;分页&lt;/h4&gt;
+&lt;h4 id=&quot;section-6&quot;&gt;分页&lt;/h4&gt;
 
 &lt;p&gt;Jekyll 没有内置分页功能，而是提供了一个分页插件 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt;。&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 仅在特定的默认条件下生效，如果你对网站结构有自己的一套，&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 可能是无法满足需求的。&lt;/p&gt;
 
@@ -954,7 +958,7 @@ kramdown:
 
 &lt;p&gt;如果想继续使用，请详细阅读 &lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot;&gt;http://jekyllrb.com/docs/pagination/&lt;/a&gt;。这是一个复杂的问题！&lt;/p&gt;
 
-&lt;h4 id=&quot;文章摘要&quot;&gt;文章摘要&lt;/h4&gt;
+&lt;h4 id=&quot;section-7&quot;&gt;文章摘要&lt;/h4&gt;
 
 &lt;p&gt;Jekyll 提供了文章摘要摘取功能，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;post.excerpt&lt;/code&gt; 就可以获得摘要内容。&lt;/p&gt;
 
@@ -964,7 +968,7 @@ kramdown:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;评论&quot;&gt;评论&lt;/h4&gt;
+&lt;h4 id=&quot;section-8&quot;&gt;评论&lt;/h4&gt;
 
 &lt;p&gt;由于是静态站点，我们没发内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：&lt;a href=&quot;https://disqus.com/&quot;&gt;disqus&lt;/a&gt;，国内推荐：&lt;a href=&quot;http://duoshuo.com/&quot;&gt;duoshuo&lt;/a&gt;。&lt;/p&gt;
 
@@ -1000,9 +1004,9 @@ kramdown:
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;liquid-模板&quot;&gt;Liquid 模板&lt;/h2&gt;
+&lt;h2 id=&quot;liquid-&quot;&gt;Liquid 模板&lt;/h2&gt;
 
-&lt;h4 id=&quot;什么是-liquid&quot;&gt;什么是 Liquid?&lt;/h4&gt;
+&lt;h4 id=&quot;liquid&quot;&gt;什么是 Liquid?&lt;/h4&gt;
 
 &lt;p&gt;Liquid 是一个开源模版语言，由电商公司 Shopify 实现，用 Ruby 编写。Shopify 自己使用 Liquid 来构建自己电商网站模板生态。&lt;/p&gt;
 
@@ -1010,7 +1014,7 @@ kramdown:
 
 &lt;p&gt;Jekyll 实用 Liquid 作为模版引擎，构建页面。&lt;/p&gt;
 
-&lt;h4 id=&quot;变量&quot;&gt;变量&lt;/h4&gt;
+&lt;h4 id=&quot;section-9&quot;&gt;变量&lt;/h4&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;title&amp;gt;
 {{ page.title }}
@@ -1020,7 +1024,7 @@ kramdown:
 
 &lt;p&gt;其中，Jekyll 预设了 &lt;code class=&quot;highlighter-rouge&quot;&gt;site&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;content&lt;/code&gt; 四个全局变量。&lt;/p&gt;
 
-&lt;h4 id=&quot;逻辑判断&quot;&gt;逻辑判断&lt;/h4&gt;
+&lt;h4 id=&quot;section-10&quot;&gt;逻辑判断&lt;/h4&gt;
 
 &lt;p&gt;Liquid 的逻辑判断跟 Ruby 完全一致。&lt;/p&gt;
 
@@ -1037,7 +1041,7 @@ kramdown:
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;遍历&quot;&gt;遍历&lt;/h4&gt;
+&lt;h4 id=&quot;section-11&quot;&gt;遍历&lt;/h4&gt;
 
 &lt;p&gt;在 Liquid 中可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;in&lt;/code&gt; 语法遍历数组，并且支持一般语言循环中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;continue&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt;。&lt;/p&gt;
 
@@ -1051,7 +1055,7 @@ kramdown:
 
 &lt;p&gt;详见 &lt;a href=&quot;https://shopify.github.io/liquid/tags/iteration/&quot;&gt;https://shopify.github.io/liquid/tags/iteration/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;赋值&quot;&gt;赋值&lt;/h4&gt;
+&lt;h4 id=&quot;section-12&quot;&gt;赋值&lt;/h4&gt;
 
 &lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assign&lt;/code&gt; 进行赋值：&lt;/p&gt;
 
@@ -1097,15 +1101,15 @@ kramdown:
 
 &lt;p&gt;详见 &lt;a href=&quot;http://jekyllrb.com/docs/templates/#filters&quot;&gt;http://jekyllrb.com/docs/templates/#filters&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;插件&quot;&gt;插件&lt;/h2&gt;
+&lt;h2 id=&quot;section-13&quot;&gt;插件&lt;/h2&gt;
 
-&lt;h4 id=&quot;插件简介&quot;&gt;插件简介&lt;/h4&gt;
+&lt;h4 id=&quot;section-14&quot;&gt;插件简介&lt;/h4&gt;
 
 &lt;p&gt;Jekyll 支持使用插件进行扩展，插件的类型分为：Generators、Converters、Commands、Hooks、Liquid Tag、Liquid Filter 等。&lt;/p&gt;
 
 &lt;p&gt;如果希望开发插件，请参考 &lt;a href=&quot;http://jekyllrb.com/docs/plugins/&quot;&gt;http://jekyllrb.com/docs/plugins/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;使用插件&quot;&gt;使用插件&lt;/h4&gt;
+&lt;h4 id=&quot;section-15&quot;&gt;使用插件&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -1120,7 +1124,7 @@ kramdown:
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;常用插件&quot;&gt;常用插件&lt;/h2&gt;
+&lt;h2 id=&quot;section-16&quot;&gt;常用插件&lt;/h2&gt;
 
 &lt;h4 id=&quot;jekyll-watch&quot;&gt;Jekyll Watch&lt;/h4&gt;
 
@@ -1204,7 +1208,7 @@ kramdown:
 
 &lt;h2 id=&quot;github-pages&quot;&gt;GitHub Pages&lt;/h2&gt;
 
-&lt;h4 id=&quot;创建个人主页&quot;&gt;创建个人主页&lt;/h4&gt;
+&lt;h4 id=&quot;section-17&quot;&gt;创建个人主页&lt;/h4&gt;
 
 &lt;p&gt;创建一个名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username.github.io&lt;/code&gt; 的 Repo，&lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username&lt;/code&gt; 是你的用户名。&lt;/p&gt;
 
@@ -1212,51 +1216,51 @@ kramdown:
 
 &lt;p&gt;&lt;img src=&quot;/image/github-pages-source.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;在-github-pages-只可以使用部分插件&quot;&gt;在 GitHub Pages 只可以使用部分插件&lt;/h4&gt;
+&lt;h4 id=&quot;github-pages-&quot;&gt;在 GitHub Pages 只可以使用部分插件&lt;/h4&gt;
 
 &lt;p&gt;由于安全性等原因的考虑，在 GitHub Pages 平台上只能使用白名单中的 7 个 Jekyll 插件。它们分别是：Jekyll Sitemap, Jekyll SEO Tag, github-metadata, Jekyll Feed, Jekyll Redirect From, Jemoji 和 Jekyll Mentions。&lt;/p&gt;
 
 &lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/&quot;&gt;https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h4 id=&quot;github-pages-上的-jekyll-只支持-kramdown&quot;&gt;GitHub Pages 上的 Jekyll 只支持 kramdown&lt;/h4&gt;
+&lt;h4 id=&quot;github-pages--jekyll--kramdown&quot;&gt;GitHub Pages 上的 Jekyll 只支持 kramdown&lt;/h4&gt;
 
 &lt;p&gt;从 2016 年 5 月 1 日起，GitHub Pages 只支持 kramdown 作为 Markdown 引擎。&lt;/p&gt;
 
 &lt;p&gt;详见 &lt;a href=&quot;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&quot;&gt;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h4 id=&quot;在根目录下创建-nojekyll-文件可以跳过-jekyll-解析&quot;&gt;在根目录下创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 文件可以跳过 Jekyll 解析&lt;/h4&gt;
+&lt;h4 id=&quot;nojekyll--jekyll-&quot;&gt;在根目录下创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 文件可以跳过 Jekyll 解析&lt;/h4&gt;
 
 &lt;p&gt;GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 跳过解析。&lt;/p&gt;
 
 &lt;p&gt;详见 &lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;https://github.com/blog/572-bypassing-jekyll-on-github-pages&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h4 id=&quot;你可以使用自己的域名&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
+&lt;h4 id=&quot;section-18&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
 
 &lt;p&gt;在 Source 的根路径下，创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt; 写入域名，然后把 DNS 解析到 GitHub Pages 的 IP：&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.153&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.154&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;你也可以为账号下任意项目创建独立的项目页面&quot;&gt;你也可以为账号下任意项目创建独立的项目页面&lt;/h4&gt;
+&lt;h4 id=&quot;section-19&quot;&gt;你也可以为账号下任意项目创建独立的项目页面&lt;/h4&gt;
 
 &lt;p&gt;任何一个项目的 Repo，都可以开启这个项目的 GitHub Pages。开启方式同个人主页。&lt;/p&gt;
 
 &lt;p&gt;如项目：&lt;a href=&quot;https://github.com/crispgm/gsm&quot;&gt;crispgm/gsm&lt;/a&gt;，设置完成后，就可以通过 &lt;a href=&quot;https://crispgm.github.io/gsm/&quot;&gt;https://crispgm.github.io/gsm/&lt;/a&gt; 进行访问。&lt;/p&gt;
 
-&lt;h4 id=&quot;你可以通过-sitegithub-获得-repo-的信息&quot;&gt;你可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.github&lt;/code&gt; 获得 Repo 的信息&lt;/h4&gt;
+&lt;h4 id=&quot;sitegithub--repo-&quot;&gt;你可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.github&lt;/code&gt; 获得 Repo 的信息&lt;/h4&gt;
 
 &lt;p&gt;由上面所说的 &lt;a href=&quot;https://github.com/jekyll/github-metadata&quot;&gt;github-metadata&lt;/a&gt; 提供服务，通过 GitHub API 获取 Repo 的信息。当然，在本地环境下，也可以通过手动安装 github-metadata 来使用。&lt;/p&gt;
 
-&lt;h4 id=&quot;私有-repo-也可以开启-github-pages&quot;&gt;私有 Repo 也可以开启 GitHub Pages&lt;/h4&gt;
+&lt;h4 id=&quot;repo--github-pages&quot;&gt;私有 Repo 也可以开启 GitHub Pages&lt;/h4&gt;
 
 &lt;p&gt;GitHub 的付费用户建立的私有项目 Private Repo，也可以开启 GitHub Pages。&lt;/p&gt;
 
-&lt;h4 id=&quot;github-pages-无法在使用-gh-pages-分支作为源的情况下关闭&quot;&gt;GitHub Pages 无法在使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; 分支作为源的情况下关闭&lt;/h4&gt;
+&lt;h4 id=&quot;github-pages--gh-pages-&quot;&gt;GitHub Pages 无法在使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; 分支作为源的情况下关闭&lt;/h4&gt;
 
 &lt;p&gt;有些奇怪的设定，真想关闭直接删除掉，在 Source 选择 None 就好。&lt;/p&gt;
 
-&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+&lt;h2 id=&quot;section-20&quot;&gt;最后&lt;/h2&gt;
 
-&lt;h4 id=&quot;本博客也是用-jekyll-生成的&quot;&gt;本博客也是用 Jekyll 生成的&lt;/h4&gt;
+&lt;h4 id=&quot;jekyll-&quot;&gt;本博客也是用 Jekyll 生成的&lt;/h4&gt;
 
 &lt;p&gt;Happy Jekylling!&lt;/p&gt;
 </description>
@@ -1277,7 +1281,7 @@ kramdown:
         <title>我是如何把自己的 VPS 容器化的</title>
         <description>&lt;p&gt;Docker 是后端近期最火的技术，但在公司生产环境中并没机会使用。由于我的 VPS 主机有容器化的需求，借此机会部署并稍微体验了一下 Docker，谈谈事情的经过和自己的感受。&lt;/p&gt;
 
-&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;一直以来，我使用 Linode VPS 作为个人主机，上面部署着网站。后来，随着国内网络环境的持续恶化，不得不搭建了 VPN 和 Shadowsocks。又由于个人网站样式和博客内容更新的频繁，将网站做成了通过 GitHub Webhook 自动化部署更新。&lt;/p&gt;
 
@@ -1319,7 +1323,7 @@ kramdown:
 
 &lt;p&gt;由于现在的 Linode 东京机房机器非常稳定，且和北京的 ping 非常低。所以，我不会轻易放弃这个 Linode，希望能在 Linode 上搭建 Docker。还好，Linode 早在 2014 年就已经支持了 Docker&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 
-&lt;h2 id=&quot;安装-docker&quot;&gt;安装 Docker&lt;/h2&gt;
+&lt;h2 id=&quot;docker&quot;&gt;安装 Docker&lt;/h2&gt;
 
 &lt;p&gt;我的 Linux 镜像是 Ubuntu 14.04 LTS，安装方法非常简单&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;，只需要执行：&lt;/p&gt;
 
@@ -1329,7 +1333,7 @@ kramdown:
 
 &lt;p&gt;PS：起初，我使用的是比较新的 Ubuntu 16.04 LTS 镜像，在此强烈不推荐。这个版本和 systemd 之间有某种问题。本想着轻松无脑地安装完毕，结果就在 docker-engine 处卡住了。找了好久，才在 StackOverflow 找到&lt;a href=&quot;http://stackoverflow.com/questions/37227349/unable-to-start-docker-service-in-ubuntu-16-04/37640824#37640824&quot; target=&quot;_blank&quot;&gt;解决方法&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h2 id=&quot;制作镜像&quot;&gt;制作镜像&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;制作镜像&lt;/h2&gt;
 
 &lt;p&gt;根据功能来说，需要起三个 Container 分别包含服务：&lt;/p&gt;
 
@@ -1361,7 +1365,7 @@ CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 
 &lt;p&gt;镜像基于 &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu:trusty&lt;/code&gt;，这个版本跟 Linode 上的系统版本并没有什么必然联系。Shadowsocks 在 pip 上，因此安装步骤异常简单。最后，把配置文件 &lt;code class=&quot;highlighter-rouge&quot;&gt;COPY&lt;/code&gt; 进去，再 &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPOSE&lt;/code&gt; 端口。&lt;code class=&quot;highlighter-rouge&quot;&gt;CMD&lt;/code&gt; 是 Container 启动后执行的命令。&lt;/p&gt;
 
-&lt;h2 id=&quot;启动-container&quot;&gt;启动 Container&lt;/h2&gt;
+&lt;h2 id=&quot;container&quot;&gt;启动 Container&lt;/h2&gt;
 
 &lt;p&gt;完成编写后，就可以进行 Build：&lt;/p&gt;
 
@@ -1399,7 +1403,7 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
 
 &lt;p&gt;到此，“容器化”改造顺利完成。附上相关 &lt;a href=&quot;https://github.com/crispgm/docker&quot;&gt;Dockerfiles&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&quot;结论&quot;&gt;结论&lt;/h1&gt;
+&lt;h1 id=&quot;section-2&quot;&gt;结论&lt;/h1&gt;
 
 &lt;p&gt;比起更加底层的服务器虚拟化技术，Docker 是以应用程序为中心的虚拟化技术，它提供了标准可交付的软件。通过 Docker，我们可以快速构建出资源隔离的、安全的、不同的软件服务。&lt;/p&gt;
 
@@ -1410,19 +1414,19 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Enable HTTPS with Let’s Encrypt. &lt;a href=&quot;https://crispgm.com/page/enable-https-with-letsencrypt.html&quot;&gt;https://crispgm.com/page/enable-https-with-letsencrypt.html&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Enable HTTPS with Let’s Encrypt. &lt;a href=&quot;https://crispgm.com/page/enable-https-with-letsencrypt.html&quot;&gt;https://crispgm.com/page/enable-https-with-letsencrypt.html&lt;/a&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Prepare for removal of PPTP VPN before you upgrade to iOS 10 and macOS Sierra. &lt;a href=&quot;https://support.apple.com/en-us/HT206844&quot;&gt;https://support.apple.com/en-us/HT206844&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Prepare for removal of PPTP VPN before you upgrade to iOS 10 and macOS Sierra. &lt;a href=&quot;https://support.apple.com/en-us/HT206844&quot;&gt;https://support.apple.com/en-us/HT206844&lt;/a&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;Container技术和服务器虚拟化是一样的技术吗？&lt;a href=&quot;http://dockone.io/question/5&quot;&gt;http://dockone.io/question/5&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Container技术和服务器虚拟化是一样的技术吗？&lt;a href=&quot;http://dockone.io/question/5&quot;&gt;http://dockone.io/question/5&lt;/a&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Docker on Linode. &lt;a href=&quot;https://blog.linode.com/2014/01/03/docker-on-linode/&quot;&gt;https://blog.linode.com/2014/01/03/docker-on-linode/&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Docker on Linode. &lt;a href=&quot;https://blog.linode.com/2014/01/03/docker-on-linode/&quot;&gt;https://blog.linode.com/2014/01/03/docker-on-linode/&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;Docker Quick Reference. &lt;a href=&quot;https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet&quot;&gt;https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Docker Quick Reference. &lt;a href=&quot;https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet&quot;&gt;https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet&lt;/a&gt;. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
