@@ -13,7 +13,11 @@ tags:
 
 #### 什么是 Jekyll
 
-[Jekyll](https://jekyllrb.com/) 是一个简单的，博客感知的，静态网站生成器。
+[Jekyll](https://jekyllrb.com/) 是一个简单的，博客感知的，静态网站生成器。可以认为，Jekyll 是一个基于文件的内容管理系统（CMS）。它使用 Ruby 编写，通过 Markdown 和 Liquid 模板生成内容。
+
+Jekyll 最初由 GitHub co-founder、前首席执行官 [Tom Preston-Werner](https://github.com/mojombo) 创立。
+
+目前，Jekyll 的维护者是 [Parker Moore](https://github.com/parkr)，他本人也于[2016年初加入了 GitHub](https://byparker.com/blog/2016/joining-github/)。
 
 #### 安装
 
