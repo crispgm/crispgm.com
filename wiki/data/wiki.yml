@@ -1,3 +1,10 @@
+- id: why-should-text-files-end-with-a-newline
+  q: 为什么文件后面需要加一个空行？
+  a: |
+    <a href="https://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline">Stackoverflow</a>: POSIX 标准定义
+    <pre><code>3.206 Line
+    A sequence of zero or more non-&lt;newline&gt; characters plus a terminating &lt;newline&gt; character.
+    </pre></code>
 - id: what-is-inversion-of-control
   q: 什么是控制反转 IoC?
   a: |
