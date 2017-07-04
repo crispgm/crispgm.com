@@ -243,8 +243,9 @@ img {
   text-align: left; }
   .page .page-main h3 {
     margin: 1rem 0;
+    padding-bottom: .2rem;
     font-family: "Crimson Text", Georgia, "Hiragino Sans GB", "Microsoft Yahei", serif;
-    font-size: 1.4rem; }
+    font-size: 1.6rem; }
 
 /*
  * Theme of Crisp Blog
