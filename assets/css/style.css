@@ -144,12 +144,12 @@ img {
 /* Menu */
 .menu {
   padding-top: 1.2rem;
-  padding-bottom: 1rem;
+  padding-bottom: .4rem;
   text-align: left; }
   .menu .menu-home {
-    font-size: 1.2rem;
-    height: 2rem;
-    line-height: 2rem; }
+    font-size: 1.4rem;
+    font-family: "Crimson Text", Georgia, serif;
+    font-weight: 500; }
     .menu .menu-home a {
       color: #555;
       text-decoration: none; }
@@ -157,15 +157,14 @@ img {
     display: none; }
   .menu .menu-links {
     float: right;
-    height: 2rem;
-    line-height: 2rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
     display: flex;
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding-top: .5rem; }
     .menu .menu-links .menu-item {
       height: 2rem;
-      padding-left: 1.2rem;
+      padding-left: .8rem;
       text-align: center; }
     .menu .menu-links .menu-active a {
       color: #555;
@@ -196,8 +195,9 @@ img {
       left: 0;
       top: 0;
       width: 100%;
-      height: 4.3rem;
-      padding-top: 1.2rem; }
+      height: 3.7rem;
+      padding-top: 1.5rem;
+      padding-left: .4rem; }
       .menu .menu-dropdown .menu-item {
         text-align: left;
         font-size: 1.2rem;
@@ -258,7 +258,9 @@ img {
     margin-top: 4.2rem;
     margin-bottom: 4.2rem; }
     .article .article-head .article-title {
-      font-size: 2rem; }
+      font-size: 1.8rem;
+      font-family: "Crimson Text", Georgia, "Hiragino Sans GB", "Microsoft Yahei", serif;
+      font-weight: 500; }
     .article .article-head .article-date {
       font-size: 1.0rem;
       color: #bbbbbb;
