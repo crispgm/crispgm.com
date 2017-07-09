@@ -21,14 +21,14 @@ education:
     major: Bachelor of Computer Science & Technology.
 skills:
   - title: Web Stacks
-    items: PHP/hhvm, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis
+    items: PHP, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis
   - title: Web Architecture
     items: Micro-service Architecture, Distributing Web Systems
   - title: Computer Systems
-    items: Linux, Shell, awk, git
-  - title: Frontend (not in production)
-    items: JavaScript, HTML, CSS/Sass
-  - title: Methodology
+    items: Linux, Shell, awk, git, CI/CD
+  - title: Frontend
+    items: HTML, CSS/Sass, JavaScript/ES, React
+  - title: Methodologies
     items: Agile, Design Patterns
 experience:
   - title: Senior Software Engineer
@@ -40,7 +40,7 @@ experience:
     duration: Apr 2016 - Feb 2017
     company: Baidu Inc.
     description: >
-      Worked as software architect for Medical Services Division.
+      I played the role of software architect for Medical Services Division.
       I was responsible for the architecture team of the division, implementing micro-service architecture and leading development model.
       I was the project manager of React-Native for search product on mobile apps.
   - title: Software Engineer/Senior Software Engineer
@@ -48,9 +48,9 @@ experience:
     company: Baidu Inc.
     description: >
       <div>
-      Worked as software engineer and later senior software engineer for Tieba Division (tieba.baidu.com), which is one of the largest online forums in China.
+      I started in Baidu as software engineer and later senior software engineer for Tieba Division (tieba.baidu.com), which is one of the largest online forums in China.
       I was responsible for implementing products with continued growth of visits (1b PVs) at first.
-      And then, I took over the development and then architecture for enterprise business, including both backend and testing team.
+      Then, I took over the technology and architecture work for enterprise business division, both backend and testing team.
       I am highly experienced in building and optimizing large scale distributing LAMP applications.
       </div>
       <div>
@@ -60,7 +60,7 @@ experience:
     duration: Dec 2011 - Mar 2012
     company: Taikang Life Insurance Company Ltd.
     description: >
-      Worked as software developer to build internal software systems for Shenzhen branch of Taikang.
+      I was software developer to build internal software systems for Shenzhen branch of Taikang.
       I finished building the Attendent System for Training Department.
 projects:
   - name: Jekyll
