@@ -1,3 +1,19 @@
+- id: why-git-still-asking-for-password
+  q: 为什么配置好了 GitHub SSH Key 之后还需要输密码？
+  a: |
+    在确保<a href="https://help.github.com/articles/testing-your-ssh-connection/">可以正常连接</a>的情况下，应该是因为你的 Git 使用了 HTTPS 协议。<br>
+    对于 macOS 用户，可以：
+    <pre><code>ssh-add -K ~/.ssh/id_rsa
+    </pre></code>
+    修改或创建 <code>~/.ssh/config</code>：
+    <pre><code>Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
+    </pre></code>
+    通用的方法是，对 git 远程地址进行切换，换成 SSH 协议：
+    <pre><code>git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+    </pre></code>
 - id: why-should-text-files-end-with-a-newline
   q: 为什么文件后面需要加一个空行？
   a: |
