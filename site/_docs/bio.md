@@ -5,9 +5,9 @@ font_awesome: true
 ---
 ### Bio
 
-Hi, I am **David Zhang** ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a **Crisp** or **Crispgm** on the internet. I work as a software engineer of web development, mainly focus on the LAMP stacks. And I am also a fullstack engineer in professional level. I am interested in improving productivity with great tools chain and systematic methodology all the time.
+Hi, I am **David Zhang** ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a **crisp** or **crispgm** on the internet. I am a software engineer specialised in fullstack web development. I make web product in the right and swift way, with systematic methodology and great tools chain all the time.
 
-In leisure times, I enjoy photography, reading and coffee.  And I go to the theater cheering for my idols with **glo-sticks** every weekends.
+I greatly appreciate minimalism and simplicity. I enjoy photography, reading, and coffee. And I go to the theater cheering for my idols with **glo-sticks** every weekends.
 
 Checkout [awesome equipments, apps & tools](/page/my-tools.html) I am using.
 
