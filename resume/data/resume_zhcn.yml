@@ -20,17 +20,19 @@ education:
     location: "南京, 江苏, 中国"
     major: "计算机科学与技术, 学士"
 skills:
-  - title: LAMP 技术
-    items: "PHP/hhvm, Ruby, Nginx, MySQL, Memcache, Redis, Linux"
+  - title: 后端技术
+    items: "PHP, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis"
   - title: Web 架构
     items: "微服务架构, 分布式服务设计, 业务系统架构设计"
-  - title: 其它
-    items: "前端技术, 持续交付, Shell, awk, git, 设计模式"
+  - title: 前端技术
+    items: "HTML, CSS/Sass, JavaScript/ES, React"
+  - title: 计算机系统
+    items: "Shell, awk, git, 持续交付, 设计模式"
 experience:
   - title: 资深研发工程师
     duration: 2017.03 - 至今
     company: "百度, 首页业务部"
-    description: "负责百度 Feed 后台的基础技术架构，以及时效性和运营方向。"
+    description: "负责百度 Feed 平台的基础技术架构，以及时效性和运营方向业务。"
   - title: 资深研发工程师
     duration: 2016.04 - 2017.02
     company: "百度, 医疗技术部"
@@ -38,9 +40,9 @@ experience:
   - title: 高级研发工程师
     duration: 2013.04 - 2016.03
     company: "百度, 贴吧技术部"
-    description: "主要负责贴吧核心页面和企业商业化后端技术，后续接手了企业商业化测试技术；百度 ODP（PHP 框架）小组和 Nginx 小组成员。设计和实现：<br>- 贴吧大流量（10亿PV）核心页面框架<br>- 企业商业化非标广告售卖平台<br>- 企业商业化运营活动平台"
+    description: "主要负责贴吧核心页面和企业商业化后端技术和测试技术；百度 ODP（PHP 框架）小组和 Nginx 小组成员。设计和实现：<br><br>- 贴吧大流量（10亿PV）核心页面框架<br>- 企业商业化非标广告售卖平台<br>- 企业商业化运营活动平台"
 projects:
-  - name: 医疗事业部后端架构2.0
+  - name: 医疗事业部后端架构
     description: "对于开发方式，采用微服务架构思路，实现了微服务模式方案和框架，并抽象出核心服务。对于开发流程，在百度现有基础架构基础上，构建了持续交付的整套系统。"
     contribution: 架构设计和框架实现
   - name: 贴吧 BigPipe 项目
@@ -50,10 +52,10 @@ projects:
     description: "运营活动平台是面向最终用户的运营活动业务。运营活动平台在原有独立的抽奖、秒杀、头图等活动相关模块之上，构建出有统一投放过程的抽象平台层，采用 Adapter 模式支持不同种类和搭配的灵活配置。"
     contribution: 设计和实现者
   - name: 开源项目 Jekyll
-    description: GitHub Pages 所依赖的静态网站生成器，在 GitHub 上28000+ Stars。
+    description: GitHub Pages 所依赖的静态网站生成器，在 GitHub 上 28000+ Stars。
     contribution: 贡献者
 languages:
-  - name: 英语
-    proficiency: 工作流利
   - name: 中文
     proficiency: 母语
+  - name: 英语
+    proficiency: 工作流利
