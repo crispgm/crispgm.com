@@ -17,11 +17,11 @@
 html {
   width: 100%;
   height: 100%;
-  font-size: 18px; }
+  font-size: 16px; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   html {
-    font-size: 12px; } }
+    font-size: 14px; } }
 body {
   margin: 0;
   height: 100%;
@@ -38,7 +38,7 @@ body ::selection {
   color: #fbfbfb; }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   font-weight: 400;
   color: #555;
   text-align: left;
@@ -46,7 +46,7 @@ h1 {
   padding-bottom: 1.2rem; }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #555;
   text-align: left;
@@ -54,7 +54,7 @@ h2 {
   padding-bottom: 1.2rem; }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #555;
   text-align: left;
@@ -62,7 +62,7 @@ h3 {
   padding-bottom: 1.2rem; }
 
 h4 {
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #555;
   text-align: left;
@@ -70,7 +70,7 @@ h4 {
   padding-bottom: .8rem; }
 
 h5 {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: #555;
   text-align: left;
@@ -126,19 +126,18 @@ hr {
 
 .content-wrapper {
   margin: 0 auto;
-  width: 36rem;
-  border-bottom: 1px solid #aaa; }
+  width: 38rem; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   .content-wrapper {
     width: 100%;
     padding-left: .5rem;
     padding-right: .5rem; } }
 img {
   border: 0;
-  max-width: 36rem; }
+  max-width: 38rem; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   img {
     max-width: 100%; } }
 /* Menu */
@@ -166,7 +165,7 @@ img {
     .menu .menu-links .menu-active a {
       color: #555;
       text-decoration: none; }
-  @media (max-width: 36rem) {
+  @media (max-width: 38rem) {
     .menu {
       padding-top: .4rem; }
       .menu .menu-home {
@@ -230,7 +229,7 @@ img {
         .index-wrapper .index #links a:last-child {
           padding-right: 0; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   .index-wrapper .index {
     font-size: 1.2rem; } }
 /*
@@ -241,11 +240,14 @@ img {
  */
 .page {
   text-align: left; }
-  .page .page-main h3 {
-    margin: 1rem 0;
-    padding-bottom: .2rem;
-    font-family: "Crimson Text", Georgia, "Hiragino Sans GB", "Microsoft Yahei", serif;
-    font-size: 1.6rem; }
+  .page .page-main .page-title {
+    color: #555;
+    font-size: 1.0rem;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 1.2rem;
+    padding-top: .8rem;
+    padding-bottom: 0; }
 
 /*
  * Theme of Crisp Blog
@@ -262,8 +264,7 @@ img {
     margin-top: 4.2rem;
     margin-bottom: 4.2rem; }
     .article .article-head .article-title {
-      font-size: 1.8rem;
-      font-family: "Crimson Text", Georgia, "Hiragino Sans GB", "Microsoft Yahei", serif; }
+      font-size: 2.2rem; }
     .article .article-head .article-date {
       font-size: 1.0rem;
       color: #bbbbbb;
@@ -325,7 +326,7 @@ img {
       margin-top: 0;
       margin-bottom: 0;
       color: #bbbbbb; }
-  @media (min-width: 36rem) {
+  @media (min-width: 38rem) {
     .archive-main .archive-item {
       margin-top: 0; }
       .archive-main .archive-item .archive-date {
@@ -342,10 +343,13 @@ footer {
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
-  margin-top: 1rem; }
+  margin-top: 2.4rem; }
   footer .content-wrapper {
     border-bottom: 0; }
 
+@media (max-width: 38rem) {
+  footer .content-wrapper {
+    padding-left: 0; } }
 /*
  * Theme of Crisp Blog
  * Copyright(c) David Zhang, 2017
@@ -384,8 +388,8 @@ code.highlighter-rouge {
   flex-wrap: wrap;
   margin-bottom: 1rem; }
   #credit-list .credit-item {
-    width: 12rem;
-    text-align: center;
+    width: 18rem;
+    text-align: left;
     margin-top: 1rem; }
     #credit-list .credit-item a {
       color: #333; }
@@ -401,7 +405,7 @@ code.highlighter-rouge {
       padding-bottom: 1rem;
       font-weight: bold; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   #credit-list {
     display: block; }
     #credit-list .credit-item {
@@ -432,7 +436,7 @@ code.highlighter-rouge {
   #contact #links {
     float: right; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   #contact #copyright {
     margin-left: .6rem;
     padding-top: 1rem;
@@ -469,7 +473,7 @@ code.highlighter-rouge {
   .things ul {
     margin: 0; }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
   .things .things-item {
     display: block; }
     .things .things-item .things-link {
