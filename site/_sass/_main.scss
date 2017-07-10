@@ -12,11 +12,11 @@
 html {
   width: 100%;
   height: 100%;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: $breakpoint) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -37,7 +37,7 @@ body ::selection {
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   font-weight: 400;
   color: #555;
   text-align: left;
@@ -45,7 +45,7 @@ h1 {
   padding-bottom: 1.2rem;
 }
 h2 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #555;
   text-align: left;
@@ -53,7 +53,7 @@ h2 {
   padding-bottom: 1.2rem;
 }
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #555;
   text-align: left;
@@ -61,7 +61,7 @@ h3 {
   padding-bottom: 1.2rem;
 }
 h4 {
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #555;
   text-align: left;
@@ -69,7 +69,7 @@ h4 {
   padding-bottom: .8rem;
 }
 h5 {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: #555;
   text-align: left;
@@ -141,7 +141,7 @@ hr {
 .content-wrapper {
   margin: 0 auto;
   width: $breakpoint;
-  border-bottom: 1px solid $border-color;
+  // border-bottom: 1px solid $border-color;
 }
 @media (max-width: $breakpoint) {
   .content-wrapper {
