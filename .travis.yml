@@ -3,3 +3,4 @@ rvm:
   - 2.3.1
 notifications:
   slack: navyblue-team:ioO5diAGc5WUQVDKc5BH1UbE
+  email: false
