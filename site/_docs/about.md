@@ -2,36 +2,20 @@
 title: About
 permalink: /about.html
 ---
-### About
+<div class="page-title">About</div>
 
-David Zhang &copy; {{ site.time | date: "%Y" }}.
+Hello, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a crisp or crispgm on the internet. I am a software engineer specialised in fullstack web development. I make web product in the right and swift way, with systematic methodology and great tools chain all the time.
 
-All the articles are written in GitHub Flavored Markdown format.
+I greatly appreciate minimalism and simplicity. I enjoy photography, reading, and coffee. And I go to the theater cheering for my idols with **glo-sticks** every weekends.
 
-The site source is [on GitHub](https://github.com/crispgm/crispgm.com). The site theme is [working in progress](https://github.com/crispgm/jekyll-crisp-theme) but not available yet.
+<div class="page-title">My Advocation</div>
 
-![](https://img.shields.io/badge/Last built on-{{ site.time | date: "%b %d, %Y" }}-green.svg)
+* [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
+* [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
+* [Against Piracy Software](/page/piracy-software-or-app.html)
+* Against Cyberbullying
 
-### License
+<div class="page-title">License</div>
 
 * All the blogs are licensed under a [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/) license.
-* Site source is licensed under MIT License.
-
-### Credit
-
-<div id="credit-list">
-  {% for item in site.data.credit %}
-  <div class="credit-item">
-    <a href="{{ item.link }}" target="_blank">
-      <div class="credit-reason">
-        {{ item.reason }}
-      </div>
-      <div class="credit-name">
-        {{ item.name }}
-      </div>
-    </a>
-  </div>
-  {% endfor %}
-</div>
-
-[^7]: Disqus, <https://disqus.com/>{:target="_blank"}. Though Disqus is banned in most places of China, I will neither migrate to other comment system nor remove it. Because I like Disqus, and there isn't many comments and I am a person with anti-social tendency. You may get access to the comments if possible. Otherwise, contact me with Twitter/Weibo.
+* [Site source](https://github.com/crispgm/crispgm.com) is licensed under MIT License.

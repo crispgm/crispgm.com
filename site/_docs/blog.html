@@ -3,7 +3,7 @@ title: Blog
 permalink: /blog.html
 ---
 
-<h3 id="programming">Programming</h3>
+<div class="page-title" id="programming">Programming</div>
 <div class="archive-main">
   {% for post in site.posts %}
     {% if post.type == "programming" %}
@@ -15,7 +15,7 @@ permalink: /blog.html
   {% endfor %}
 </div>
 
-<h3 id="lifestyle">Lifestyle</h3>
+<div class="page-title" id="lifestyle">Lifestyle</div>
 <div class="archive-main">
   {% for post in site.posts %}
     {% if post.type == "lifestyle" %}

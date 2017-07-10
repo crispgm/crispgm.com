@@ -3,9 +3,16 @@ footer {
   text-align: center;
   font-size: 1rem;
   overflow: hidden;
-  margin-top: 1rem;
+  margin-top: 2.4rem;
 
   .content-wrapper {
     border-bottom: 0;
+  }
+}
+@media (max-width: $breakpoint) {
+  footer {
+    .content-wrapper {
+      padding-left: 0;
+    }
   }
 }

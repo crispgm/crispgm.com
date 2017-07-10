@@ -9,11 +9,14 @@
   text-align: left;
 
   .page-main {
-    h3 {
-      margin: 1rem 0;
-      padding-bottom: .2rem;
-      font-family: "Crimson Text", Georgia, "Hiragino Sans GB", "Microsoft Yahei", serif;
-      font-size: 1.6rem;
+    .page-title {
+      color: #555;
+      font-size: 1.0rem;
+      font-weight: 700;
+      text-align: left;
+      margin-top: 1.2rem;
+      padding-top: .8rem;
+      padding-bottom: 0;
     }
   }
 }
