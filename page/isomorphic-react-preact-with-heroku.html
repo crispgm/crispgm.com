@@ -86,7 +86,106 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <h2 id="react-app">React App</h2>
 
-<p>Initially, I setup my project with <a href="https://github.com/verekia/js-stack-from-scratch"><em>JavaScript Stack from Scratch</em></a>. I won’t post many <a href="https://github.com/rugby-board/rugby-board-node">codes</a> here, since it is routine work with React.</p>
+<p>Initially, I setup my project with <a href="https://github.com/verekia/js-stack-from-scratch"><em>JavaScript Stack from Scratch</em></a>. I won’t post many <a href="https://github.com/rugby-board/rugby-board-node">codes</a> here, since it is routine work with React. The only unfortunate thing is that I forgot to use ESLint from start. In consequence, I had to spend hours fixing 200+ issues.</p>
+
+<p>However, Webpack is just like a blackbox and I have to do a lot of work to get it done. What I need to do was to specify my entries and outputs with various kinds of loaders and plugins.</p>
+
+<h2 id="webpack-with-multiple-entries">Webpack with Multiple Entries</h2>
+
+<p>Examples and boilerplates are typically in one HTML form. However, there are two pages in my application. One is <code class="highlighter-rouge">index.html</code> for user requests, the other is <code class="highlighter-rouge">admin.html</code> for editors. Both of them should be equipped with HMR (Hot Module Replacement).</p>
+
+<p>This article is great as the title <a href="https://kuzzmi.com/blog/truly-multiple-entries-with-webpack"><em>Truly Multiple Entries with Webpack</em></a> says.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">index</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s1">'webpack-hot-middleware/client'</span><span class="p">,</span>
+      <span class="s1">'./client/index.jsx'</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="na">admin</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s1">'webpack-hot-middleware/client'</span><span class="p">,</span>
+      <span class="s1">'./client/admin.jsx'</span><span class="p">,</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="c1">// loaders ...</span>
+  <span class="p">},</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">],</span>
+  <span class="p">},</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'..'</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'[name]/bundle.js'</span><span class="p">,</span>
+    <span class="na">publicPath</span><span class="p">:</span> <span class="s1">'/'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="s1">'./client/index.html'</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="s1">'index.html'</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
+      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="s1">'index'</span><span class="p">],</span>
+      <span class="na">hash</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="s1">'./client/admin.html'</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="s1">'admin.html'</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
+      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="s1">'admin'</span><span class="p">],</span>
+      <span class="na">hash</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">HotModuleReplacementPlugin</span><span class="p">(),</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">NoEmitOnErrorsPlugin</span><span class="p">(),</span>
+  <span class="p">],</span>
+  <span class="na">devServer</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">historyApiFallback</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<h2 id="dev-server">Dev Server</h2>
+
+<p>To get good developer experience, it is important to setup a realtime debugging environment for development. I was prepared to setup dev server for my isomorphic app with webpack-dev-middleware and webpack-hot-middleware.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">webpackConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../config/webpack.dev.config.js'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">compiler</span> <span class="o">=</span> <span class="nx">webpack</span><span class="p">(</span><span class="nx">webpackConfig</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">webpackDevMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack-dev-middleware'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">webpackHotMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack-hot-middleware'</span><span class="p">);</span>
+<span class="c1">// Dev</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">webpackDevMiddleware</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">noInfo</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">publicPath</span><span class="p">:</span> <span class="nx">webpackConfig</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">publicPath</span><span class="p">,</span>
+<span class="p">}));</span>
+<span class="c1">// HMR</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">webpackHotMiddleware</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">log</span><span class="p">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span>
+  <span class="na">path</span><span class="p">:</span> <span class="s1">'/__webpack_hmr'</span><span class="p">,</span>
+  <span class="na">heartbeat</span><span class="p">:</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span>
+<span class="p">}));</span>
+</code></pre>
+</div>
+
+<p>However, things became complex with multiple pages. It seemed that webpack-dev-middleware never actually build files into output path.</p>
+
+<p>The <code class="highlighter-rouge">index.html</code> was always accessbile, while the other page - <code class="highlighter-rouge">admin.html</code> was possibly in some black hole. I resolved it by <a href="https://github.com/jantimon/html-webpack-plugin/issues/145#issuecomment-170554832">serve the files from the compiler</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">compiler</span><span class="p">.</span><span class="nx">outputPath</span><span class="p">,</span> <span class="s1">'admin.html'</span><span class="p">);</span>
+  <span class="nx">compiler</span><span class="p">.</span><span class="nx">outputFileSystem</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'content-type'</span><span class="p">,</span> <span class="s1">'text/html'</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>In the end, I managed to make it work that I can simply start to dev by one command <code class="highlighter-rouge">yarn server</code>, with a Node server, a React app and HMR.</p>
 
 <h2 id="build-after-deployment">Build after Deployment</h2>
 
