@@ -3,6 +3,26 @@ task default: %w[test]
 
 require "rake/testtask"
 require "listen"
+require 'net/http'
+require 'uri'
+require 'json'
+
+def post_to_slack(msg)
+  uri = URI.parse(ENV["SLACK_WEBHOOK_URL"])
+  request = Net::HTTP::Post.new(uri)
+  request.content_type = "application/json"
+  request.body = JSON.dump({
+    "text" => msg
+  })
+
+  req_options = {
+    use_ssl: uri.scheme == "https",
+  }
+
+  response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+    http.request(request)
+  end
+end
 
 Rake::TestTask.new do |t|
   t.libs << "test"
@@ -18,6 +38,11 @@ task :init do
   Dir.chdir("resume") do
     sh "git submodule update --init --recursive"
   end
+end
+
+desc "Ping Slack"
+task :slack do
+  post_to_slack("Hello, *Slack*!")
 end
 
 namespace :site do
@@ -75,6 +100,8 @@ namespace :site do
       sh "git push origin gh-pages"
     end
   end
+
+  post_to_slack("Ship a new build to *crispgm.com*")
 end
 
 namespace :resume do
