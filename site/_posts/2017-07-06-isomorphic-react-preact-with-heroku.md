@@ -10,9 +10,9 @@ tags:
 - Heroku
 ---
 
-[Rugby News Board](http://rugbynews.space) is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is not Rugby news site in Chinese and I love Rugby.
+[Rugby News Board](http://rugbynews.space) is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.
 
-Rugby News Board was [firstly built](https://github.com/crispgm/rugby-board) with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a `news` table with ORM with SQLite. It ran on Linode VPS and I did DevOps by myself.
+Rugby News Board was [firstly built](https://github.com/crispgm/rugby-board) with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a `news` table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.
 
 # Heroku
 
@@ -27,7 +27,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 By the way, I feel quite strange using CoffeeScript, as part of Rails stacks. Being surrounded by Vanilla JavaScript, EcmaScript of all versions, and TypeScript, I have no interest in learning an unpopular JavaScript replacement, which some dudes said it was dead.
 
-I tried using React with [react-rails](https://github.com/reactjs/react-rails) to build translator system of Rugby names. It is merely based on Rails, and we can use React Component with `react_component` tag and simply pass the data to the component:
+I tried using React with [react-rails](https://github.com/reactjs/react-rails) to build translating system of Rugby names. It is merely based on Rails, and we can use React Component with `react_component` tag and simply pass the data (Ruby objects) to the component seamlessly.
 
 ```html
 <div class="section-item">
@@ -45,19 +45,21 @@ Initially, I setup my project with [_JavaScript Stack from Scratch_](https://git
 
 ## Build after Deployment
 
-Deployment on Heroku is easy, but I had to commit `dist` folder to codebase at first, which was not an elegant way. Then I found `heroku-postbuild` hook, by which deployment can trigger Webpack build.
+Deployment on Heroku is easy, but I had to commit `dist` folder to codebase at first, which was really a heavy way (hundreds of kilobytes each push). Then I found `heroku-postbuild` hook, by which deployment can trigger Webpack build.
 
-Add `heroku-postbuild` to `package.json`：
+So let's add `heroku-postbuild` to `package.json`:
 
 ```
 "heroku-postbuild": "webpack -p --config ./config/webpack.prod.config.js"
 ```
 
+_Hint_: We should ensure that the build process works before pushing codes. Otherwise, deployment fails.
+
 # Optimizing and Preact
 
-After the launch of new Node/React application, I could hardly ignore the long gap before I saw the page finally. Heroku is commonly lag in China due to firewall. I put it down to this reason until I found the `bundle.js` is 1.8 mb.
+After the launch of new Node/React application, I could hardly ignore the long gap between the response reached and I saw the page finally. Heroku is commonly laggy in China due to geolocation reason and the great firewall. I put it down to this reason until I found the `bundle.js` is 1.8 mb.
 
-The reason is Webpack production configuration is wrong, I fixed it by adding `UglifyJsPlugin` and it is now 700 kb. 
+The reason is that the Webpack production configuration was wrong, I fixed it by adding `UglifyJsPlugin` and it is now 700 kb. 
 
 ```js
 plugins: [
@@ -81,7 +83,7 @@ plugins: [
 ],
 ```
 
-Even 700 kb is not good. And then I came up with an idea of using [Preact](https://github.com/developit/preact), "Fast 3kb React alternative with the same ES6 API", which is confirmed by my frontend expert friend [@yanni4night](https://github.com/yanni4night).
+Even 700 kb is a considerably large size. And then I came up with an idea of using [Preact](https://github.com/developit/preact), "Fast 3kb React alternative with the same ES6 API", which is confirmed by my frontend expert friend [@yanni4night](https://github.com/yanni4night).
 
 I had no many codes so I use Preact directly, without using preact-compat to make it compatible with React.
 
@@ -91,7 +93,7 @@ import { h, Component } from 'preact';
 
 It goes as soon as I change the import statements on the top.
 
-react-router was replaced by preact-router, which is even user-friendly. The parameters are simply passed to `props`:
+react-router was replaced by preact-router, which is even more user-friendly. The parameters are simply passed to `props`:
 
 Router:
 
