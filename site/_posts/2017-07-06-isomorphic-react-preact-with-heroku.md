@@ -41,7 +41,106 @@ They both prefered build isomorphic JavaScript application with Node and React. 
 
 ## React App
 
-Initially, I setup my project with [_JavaScript Stack from Scratch_](https://github.com/verekia/js-stack-from-scratch). I won't post many [codes](https://github.com/rugby-board/rugby-board-node) here, since it is routine work with React.
+Initially, I setup my project with [_JavaScript Stack from Scratch_](https://github.com/verekia/js-stack-from-scratch). I won't post many [codes](https://github.com/rugby-board/rugby-board-node) here, since it is routine work with React. The only unfortunate thing is that I forgot to use ESLint from start. In consequence, I had to spend hours fixing 200+ issues.
+
+However, Webpack is just like a blackbox and I have to do a lot of work to get it done. What I need to do was to specify my entries and outputs with various kinds of loaders and plugins.
+
+## Webpack with Multiple Entries
+
+Examples and boilerplates are typically in one HTML form. However, there are two pages in my application. One is `index.html` for user requests, the other is `admin.html` for editors. Both of them should be equipped with HMR (Hot Module Replacement).
+
+This article is great as the title [_Truly Multiple Entries with Webpack_](https://kuzzmi.com/blog/truly-multiple-entries-with-webpack) says.
+
+```javascript
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  entry: {
+    index: [
+      'webpack-hot-middleware/client',
+      './client/index.jsx',
+    ],
+    admin: [
+      'webpack-hot-middleware/client',
+      './client/admin.jsx',
+    ],
+  },
+  module: {
+    // loaders ...
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  output: {
+    path: path.resolve(__dirname, '..', 'dist'),
+    filename: '[name]/bundle.js',
+    publicPath: '/',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './client/index.html',
+      filename: 'index.html',
+      inject: 'body',
+      chunks: ['index'],
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: './client/admin.html',
+      filename: 'admin.html',
+      inject: 'body',
+      chunks: ['admin'],
+      hash: true,
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
+  devServer: {
+    historyApiFallback: true,
+  },
+};
+```
+
+## Dev Server
+
+To get good developer experience, it is important to setup a realtime debugging environment for development. I was prepared to setup dev server for my isomorphic app with webpack-dev-middleware and webpack-hot-middleware.
+
+```javascript
+const webpack = require('webpack');
+const webpackConfig = require('../config/webpack.dev.config.js');
+const compiler = webpack(webpackConfig);
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+// Dev
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
+  publicPath: webpackConfig.output.publicPath,
+}));
+// HMR
+app.use(webpackHotMiddleware(compiler, {
+  log: console.log,
+  path: '/__webpack_hmr',
+  heartbeat: 10 * 1000,
+}));
+```
+
+However, things became complex with multiple pages. It seemed that webpack-dev-middleware never actually build files into output path.
+
+The `index.html` was always accessbile, while the other page - `admin.html` was possibly in some black hole. I resolved it by [serve the files from the compiler](https://github.com/jantimon/html-webpack-plugin/issues/145#issuecomment-170554832).
+
+```javascript
+app.get('/admin', (req, res) => {
+  const filename = path.join(compiler.outputPath, 'admin.html');
+  compiler.outputFileSystem.readFile(filename, (err, result) => {
+    res.set('content-type', 'text/html');
+    res.send(result);
+    res.end();
+  });
+});
+```
+
+In the end, I managed to make it work that I can simply start to dev by one command `yarn server`, with a Node server, a React app and HMR.
 
 ## Build after Deployment
 
