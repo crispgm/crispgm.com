@@ -5,16 +5,16 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Jul 2017 10:31:35 +0800</pubDate>
-    <lastBuildDate>Tue, 11 Jul 2017 10:31:35 +0800</lastBuildDate>
+    <pubDate>Tue, 11 Jul 2017 14:15:40 +0800</pubDate>
+    <lastBuildDate>Tue, 11 Jul 2017 14:15:40 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       
       <item>
         <title>Isomorphic React/Preact with Heroku</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://rugbynews.space&quot;&gt;Rugby News Board&lt;/a&gt; is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is not Rugby news site in Chinese and I love Rugby.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://rugbynews.space&quot;&gt;Rugby News Board&lt;/a&gt; is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.&lt;/p&gt;
 
-&lt;p&gt;Rugby News Board was &lt;a href=&quot;https://github.com/crispgm/rugby-board&quot;&gt;firstly built&lt;/a&gt; with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a &lt;code class=&quot;highlighter-rouge&quot;&gt;news&lt;/code&gt; table with ORM with SQLite. It ran on Linode VPS and I did DevOps by myself.&lt;/p&gt;
+&lt;p&gt;Rugby News Board was &lt;a href=&quot;https://github.com/crispgm/rugby-board&quot;&gt;firstly built&lt;/a&gt; with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a &lt;code class=&quot;highlighter-rouge&quot;&gt;news&lt;/code&gt; table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.&lt;/p&gt;
 
 &lt;h1 id=&quot;heroku&quot;&gt;Heroku&lt;/h1&gt;
 
@@ -29,7 +29,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 &lt;p&gt;By the way, I feel quite strange using CoffeeScript, as part of Rails stacks. Being surrounded by Vanilla JavaScript, EcmaScript of all versions, and TypeScript, I have no interest in learning an unpopular JavaScript replacement, which some dudes said it was dead.&lt;/p&gt;
 
-&lt;p&gt;I tried using React with &lt;a href=&quot;https://github.com/reactjs/react-rails&quot;&gt;react-rails&lt;/a&gt; to build translator system of Rugby names. It is merely based on Rails, and we can use React Component with &lt;code class=&quot;highlighter-rouge&quot;&gt;react_component&lt;/code&gt; tag and simply pass the data to the component:&lt;/p&gt;
+&lt;p&gt;I tried using React with &lt;a href=&quot;https://github.com/reactjs/react-rails&quot;&gt;react-rails&lt;/a&gt; to build translating system of Rugby names. It is merely based on Rails, and we can use React Component with &lt;code class=&quot;highlighter-rouge&quot;&gt;react_component&lt;/code&gt; tag and simply pass the data (Ruby objects) to the component seamlessly.&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;section-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= react_component &quot;RugbyDictQuery&quot;, {title: &quot;Rugby Dictionary&quot;} %&amp;gt;
@@ -47,19 +47,21 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 &lt;h2 id=&quot;build-after-deployment&quot;&gt;Build after Deployment&lt;/h2&gt;
 
-&lt;p&gt;Deployment on Heroku is easy, but I had to commit &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; folder to codebase at first, which was not an elegant way. Then I found &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku-postbuild&lt;/code&gt; hook, by which deployment can trigger Webpack build.&lt;/p&gt;
+&lt;p&gt;Deployment on Heroku is easy, but I had to commit &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; folder to codebase at first, which was really a heavy way (hundreds of kilobytes each push). Then I found &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku-postbuild&lt;/code&gt; hook, by which deployment can trigger Webpack build.&lt;/p&gt;
 
-&lt;p&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku-postbuild&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;So let’s add &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku-postbuild&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;heroku-postbuild&quot;: &quot;webpack -p --config ./config/webpack.prod.config.js&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;em&gt;Hint&lt;/em&gt;: We should ensure that the build process works before pushing codes. Otherwise, deployment fails.&lt;/p&gt;
+
 &lt;h1 id=&quot;optimizing-and-preact&quot;&gt;Optimizing and Preact&lt;/h1&gt;
 
-&lt;p&gt;After the launch of new Node/React application, I could hardly ignore the long gap before I saw the page finally. Heroku is commonly lag in China due to firewall. I put it down to this reason until I found the &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle.js&lt;/code&gt; is 1.8 mb.&lt;/p&gt;
+&lt;p&gt;After the launch of new Node/React application, I could hardly ignore the long gap between the response reached and I saw the page finally. Heroku is commonly laggy in China due to geolocation reason and the great firewall. I put it down to this reason until I found the &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle.js&lt;/code&gt; is 1.8 mb.&lt;/p&gt;
 
-&lt;p&gt;The reason is Webpack production configuration is wrong, I fixed it by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;UglifyJsPlugin&lt;/code&gt; and it is now 700 kb.&lt;/p&gt;
+&lt;p&gt;The reason is that the Webpack production configuration was wrong, I fixed it by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;UglifyJsPlugin&lt;/code&gt; and it is now 700 kb.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPluginConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -83,7 +85,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Even 700 kb is not good. And then I came up with an idea of using &lt;a href=&quot;https://github.com/developit/preact&quot;&gt;Preact&lt;/a&gt;, “Fast 3kb React alternative with the same ES6 API”, which is confirmed by my frontend expert friend &lt;a href=&quot;https://github.com/yanni4night&quot;&gt;@yanni4night&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Even 700 kb is a considerably large size. And then I came up with an idea of using &lt;a href=&quot;https://github.com/developit/preact&quot;&gt;Preact&lt;/a&gt;, “Fast 3kb React alternative with the same ES6 API”, which is confirmed by my frontend expert friend &lt;a href=&quot;https://github.com/yanni4night&quot;&gt;@yanni4night&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I had no many codes so I use Preact directly, without using preact-compat to make it compatible with React.&lt;/p&gt;
 
@@ -93,7 +95,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 &lt;p&gt;It goes as soon as I change the import statements on the top.&lt;/p&gt;
 
-&lt;p&gt;react-router was replaced by preact-router, which is even user-friendly. The parameters are simply passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;props&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;react-router was replaced by preact-router, which is even more user-friendly. The parameters are simply passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;props&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;Router:&lt;/p&gt;
 

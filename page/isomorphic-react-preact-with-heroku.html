@@ -55,9 +55,9 @@
     <div class="article-date">July 06, 2017</div>
   </div>
   <div class="article-main">
-    <p><a href="http://rugbynews.space">Rugby News Board</a> is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is not Rugby news site in Chinese and I love Rugby.</p>
+    <p><a href="http://rugbynews.space">Rugby News Board</a> is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.</p>
 
-<p>Rugby News Board was <a href="https://github.com/crispgm/rugby-board">firstly built</a> with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a <code class="highlighter-rouge">news</code> table with ORM with SQLite. It ran on Linode VPS and I did DevOps by myself.</p>
+<p>Rugby News Board was <a href="https://github.com/crispgm/rugby-board">firstly built</a> with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a <code class="highlighter-rouge">news</code> table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.</p>
 
 <h1 id="heroku">Heroku</h1>
 
@@ -72,7 +72,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>By the way, I feel quite strange using CoffeeScript, as part of Rails stacks. Being surrounded by Vanilla JavaScript, EcmaScript of all versions, and TypeScript, I have no interest in learning an unpopular JavaScript replacement, which some dudes said it was dead.</p>
 
-<p>I tried using React with <a href="https://github.com/reactjs/react-rails">react-rails</a> to build translator system of Rugby names. It is merely based on Rails, and we can use React Component with <code class="highlighter-rouge">react_component</code> tag and simply pass the data to the component:</p>
+<p>I tried using React with <a href="https://github.com/reactjs/react-rails">react-rails</a> to build translating system of Rugby names. It is merely based on Rails, and we can use React Component with <code class="highlighter-rouge">react_component</code> tag and simply pass the data (Ruby objects) to the component seamlessly.</p>
 
 <div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-item"</span><span class="nt">&gt;</span>
   <span class="err">&lt;</span>%= react_component "RugbyDictQuery", {title: "Rugby Dictionary"} %&gt;
@@ -90,19 +90,21 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <h2 id="build-after-deployment">Build after Deployment</h2>
 
-<p>Deployment on Heroku is easy, but I had to commit <code class="highlighter-rouge">dist</code> folder to codebase at first, which was not an elegant way. Then I found <code class="highlighter-rouge">heroku-postbuild</code> hook, by which deployment can trigger Webpack build.</p>
+<p>Deployment on Heroku is easy, but I had to commit <code class="highlighter-rouge">dist</code> folder to codebase at first, which was really a heavy way (hundreds of kilobytes each push). Then I found <code class="highlighter-rouge">heroku-postbuild</code> hook, by which deployment can trigger Webpack build.</p>
 
-<p>Add <code class="highlighter-rouge">heroku-postbuild</code> to <code class="highlighter-rouge">package.json</code>：</p>
+<p>So let’s add <code class="highlighter-rouge">heroku-postbuild</code> to <code class="highlighter-rouge">package.json</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>"heroku-postbuild": "webpack -p --config ./config/webpack.prod.config.js"
 </code></pre>
 </div>
 
+<p><em>Hint</em>: We should ensure that the build process works before pushing codes. Otherwise, deployment fails.</p>
+
 <h1 id="optimizing-and-preact">Optimizing and Preact</h1>
 
-<p>After the launch of new Node/React application, I could hardly ignore the long gap before I saw the page finally. Heroku is commonly lag in China due to firewall. I put it down to this reason until I found the <code class="highlighter-rouge">bundle.js</code> is 1.8 mb.</p>
+<p>After the launch of new Node/React application, I could hardly ignore the long gap between the response reached and I saw the page finally. Heroku is commonly laggy in China due to geolocation reason and the great firewall. I put it down to this reason until I found the <code class="highlighter-rouge">bundle.js</code> is 1.8 mb.</p>
 
-<p>The reason is Webpack production configuration is wrong, I fixed it by adding <code class="highlighter-rouge">UglifyJsPlugin</code> and it is now 700 kb.</p>
+<p>The reason is that the Webpack production configuration was wrong, I fixed it by adding <code class="highlighter-rouge">UglifyJsPlugin</code> and it is now 700 kb.</p>
 
 <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">plugins</span><span class="err">:</span> <span class="p">[</span>
   <span class="nx">HtmlWebpackPluginConfig</span><span class="p">,</span>
@@ -126,7 +128,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 </code></pre>
 </div>
 
-<p>Even 700 kb is not good. And then I came up with an idea of using <a href="https://github.com/developit/preact">Preact</a>, “Fast 3kb React alternative with the same ES6 API”, which is confirmed by my frontend expert friend <a href="https://github.com/yanni4night">@yanni4night</a>.</p>
+<p>Even 700 kb is a considerably large size. And then I came up with an idea of using <a href="https://github.com/developit/preact">Preact</a>, “Fast 3kb React alternative with the same ES6 API”, which is confirmed by my frontend expert friend <a href="https://github.com/yanni4night">@yanni4night</a>.</p>
 
 <p>I had no many codes so I use Preact directly, without using preact-compat to make it compatible with React.</p>
 
@@ -136,7 +138,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>It goes as soon as I change the import statements on the top.</p>
 
-<p>react-router was replaced by preact-router, which is even user-friendly. The parameters are simply passed to <code class="highlighter-rouge">props</code>:</p>
+<p>react-router was replaced by preact-router, which is even more user-friendly. The parameters are simply passed to <code class="highlighter-rouge">props</code>:</p>
 
 <p>Router:</p>
 
