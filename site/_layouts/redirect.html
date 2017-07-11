@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+  <body>
+    <div class="content" id="header">
+      {% include header.html %}
+    </div>
+    <div class="content" id="main-content">
+      <div class="content-wrapper">
+        <div class="page">
+          Redirecting to <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+  <script>
+    location.href = '{{ page.redirect_to }}';
+  </script>
+</html>
