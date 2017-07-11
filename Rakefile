@@ -3,12 +3,14 @@ task default: %w[test]
 
 require "rake/testtask"
 require "listen"
-require 'net/http'
-require 'uri'
-require 'json'
+require "net/http"
+require "uri"
+require "json"
 
 def post_to_slack(msg)
-  uri = URI.parse(ENV["SLACK_WEBHOOK_URL"])
+  token = ENV["SLACK_WEBHOOK_URL"]
+  return if token.nil?
+  uri = URI.parse(token)
   request = Net::HTTP::Post.new(uri)
   request.content_type = "application/json"
   request.body = JSON.dump({
