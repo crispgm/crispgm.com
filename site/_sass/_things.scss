@@ -1,34 +1,35 @@
-/*
- * Theme of Crisp Blog
- * Copyright(c) David Zhang, 2017
- *
- * Style for things & project list
- */
+// Theme of Crisp Blog
+// Copyright(c) David Zhang, 2017
 
-/* things & project */
 .things {
   margin-top: 1rem;
+
   .things-item {
+    border-bottom: 1px solid $border-color;
     display: flex;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     width: 100%;
-    margin-bottom: 1.0rem;
-    padding-bottom: 1.0rem;
-    border-bottom: 1px solid #bbbbbb;
 
     .things-title {
-      font-size: 1.0rem;
-      color: #555;
+      color: $sub-color;
+      font-size: 1rem;
+      min-width: 12.4rem;
     }
+
     .things-link {
       font-size: .8rem;
-      padding-top: .2rem;
       line-height: 1.2rem;
+      min-width: 8rem;
+      padding-top: .2rem;
     }
+
     .things-list {
       font-size: .9rem;
       line-height: 1.4rem;
     }
   }
+
   ul {
     margin: 0;
   }
@@ -38,33 +39,15 @@
   .things {
     .things-item {
       display: block;
+
       .things-link {
         display: flex;
-        padding-top: .2rem;
-        padding-bottom: .2rem;
+        padding: .2rem 0;
+
         a {
           padding-right: .2rem;
         }
       }
-    }
-  }
-}
-
-#project {
-  .things-item {
-    .things-title {
-      min-width: 12.4rem;
-    }
-    .things-link {
-      min-width: 8rem;
-    }
-  }
-}
-
-#favorite {
-  .things-item {
-    .things-title {
-      min-width: 8rem;
     }
   }
 }

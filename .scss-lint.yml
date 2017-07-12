@@ -1,0 +1,8 @@
+linters:
+  QualifyingElement:
+    exclude:
+      - "site/_sass/_code-highlight.scss"
+  SelectorDepth:
+    enabled: false
+  NestingDepth:
+    enabled: false
