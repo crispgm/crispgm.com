@@ -185,8 +185,4 @@ end
 
 ## 写在最后
 
-##### 文章所说的源码在:
-
-<https://github.com/msbu-tech/msbu-tech.github.io/blob/master/Rakefile>
-
-如果本文帮助了你或者给了一些启发，帮忙来个 Star 吧。
+文章所说的[源码在此](https://github.com/crispgm/weekly)，如果本文帮助了你或者给了一些启发，帮忙来个 Star 吧。

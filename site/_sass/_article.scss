@@ -1,79 +1,142 @@
-/*
- * Theme of Crisp Blog
- * Copyright(c) David Zhang, 2017
- *
- * Style for article
- */
+// Theme of Crisp Blog
+// Copyright(c) David Zhang, 2017
 
 .article {
+  margin-bottom: 2rem;
   text-align: left;
-  margin-bottom: 2.0rem;
 
   .article-head {
-    text-align: left;
-    margin-top: 4.2rem;
     margin-bottom: 4.2rem;
+    margin-top: 4.2rem;
+    text-align: left;
 
     .article-title {
+      color: $sub-color;
       font-size: 2.2rem;
     }
+
     .article-date {
-      font-size: 1.0rem;
-      color: #bbbbbb;
+      color: $light-color;
+      font-size: 1rem;
       margin-top: 1rem;
     }
   }
+
   .article-main {
-    font-size: 1.0rem;
+    font-size: 1rem;
+    margin-bottom: 3.2rem;
     margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-
-    p {
-      margin-top: 1.5rem;
-      line-height: 1.8rem;
-      hyphens: auto;
-    }
-
-    li {
-      p {
-        margin: 0;
-        line-height: 1.8rem;
-      }
-    }
   }
-  /* Tags */
-  .article-tag {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
 
-    .tag-item {
-      padding: .2rem;
-      margin-right: .25rem;
-      margin-bottom: .25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      &:before {
-        content: "#";
-        padding-right: .2rem;
-      }
-
-      .tag-item-name {
-        margin-right: .5rem;
-      }
-      .tag-item-count {
-        font-size: .75rem;
-      }
+  // disqus
+  .article-comment {
+    iframe {
+      text-align: center;
     }
   }
 }
 
-/* disqus */
-#disqus_thread {
-  iframe {
-    text-align: center;
+h1 {
+  color: $sub-color;
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding-bottom: 1.2rem;
+  padding-top: 1.6rem;
+  text-align: left;
+}
+
+h2 {
+  color: $sub-color;
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 1.2rem;
+  padding-top: 1.4rem;
+  text-align: left;
+}
+
+h3 {
+  color: $sub-color;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 1.2rem;
+  padding-top: 1.2rem;
+  text-align: left;
+}
+
+h4 {
+  color: $sub-color;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: .8rem;
+  padding-top: .8rem;
+  text-align: left;
+}
+
+h5 {
+  color: $sub-color;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-bottom: 0;
+  padding-top: .8rem;
+  text-align: left;
+}
+
+blockquote {
+  border-left: .2rem solid $border-color;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+p {
+  hyphens: auto;
+  line-height: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+sup {
+  font-size: .6rem;
+  line-height: .6rem;
+  vertical-align: auto;
+}
+
+hr {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: 3rem;
+}
+
+ul {
+  p {
+    margin: 0;
+  }
+
+  li {
+    line-height: 1.8rem;
+    margin-left: -1rem;
+
+    p {
+      line-height: 1.8rem;
+      margin: 0;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    &:hover {
+      background-color: $light-color;
+    }
+
+    th {
+      background-color: $light-color;
+      padding: .2rem .4rem;
+    }
+
+    td {
+      padding: .2rem .4rem;
+    }
   }
 }

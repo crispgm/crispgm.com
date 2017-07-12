@@ -9,16 +9,6 @@ layout: default
   <div class="article-main">
     {{ content }}
   </div>
-  {% if page.tags.size > 0 %}
-  <hr>
-  <div class="article-tag">
-    {% for tag in page.tags %}
-    <div class="tag-item">
-    {{ tag }}
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-  <div id="disqus_thread"></div>
+  <div id="disqus_thread" class="article-comment"></div>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

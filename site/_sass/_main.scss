@@ -1,19 +1,16 @@
-/*
- * Theme of Crisp Blog
- * Copyright(c) David Zhang, 2017
- *
- * Style for main layout
- */
+// Theme of Crisp Blog
+// Copyright(c) David Zhang, 2017
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  width: 100%;
-  height: 100%;
   font-size: 16px;
+  height: 100%;
+  width: 100%;
 }
+
 @media (max-width: $breakpoint) {
   html {
     font-size: 14px;
@@ -21,139 +18,54 @@ html {
 }
 
 body {
-  margin: 0;
-  height: 100%;
+  background-color: $bg-color;
+  color: $main-color;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
-  color: #333;
-  background-color: $bg-color;
-  word-wrap: break-word;
+  height: 100%;
+  margin: 0;
   text-align: center;
-}
-body ::selection {
-  background-color: #06c;
-  color: $bg-color;
+  word-wrap: break-word;
+
+  ::selection {
+    background-color: $link-color;
+    color: $bg-color;
+  }
 }
 
-h1 {
-  font-size: 2.4rem;
-  font-weight: 400;
-  color: #555;
-  text-align: left;
-  padding-top: 1.6rem;
-  padding-bottom: 1.2rem;
-}
-h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #555;
-  text-align: left;
-  padding-top: 1.4rem;
-  padding-bottom: 1.2rem;
-}
-h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #555;
-  text-align: left;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-}
-h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #555;
-  text-align: left;
-  padding-top: .8rem;
-  padding-bottom: .8rem;
-}
-h5 {
-  font-size: 1.0rem;
-  font-weight: 700;
-  color: #555;
-  text-align: left;
-  padding-top: .8rem;
-  padding-bottom: 0;
-}
-blockquote {
-  border-left: .2rem solid $border-color;
-  margin-left: 1rem;
-  padding-left: 1rem;
-}
 a {
+  color: $link-color;
   text-decoration: none;
-  color: #06c;
+
   &:hover {
     text-decoration: underline;
   }
 }
-ul {
-  p {
-    margin: 0;
-  }
-}
-li {
-  margin-left: -1rem;
-  line-height: 1.8rem;
-}
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-
-  tr {
-    &:hover {
-      background-color: #f5f5f5;
-    }
-    th {
-      padding: .2rem .4rem .2rem .4rem;
-      background-color: #f5f5f5;
-    }
-    td {
-      padding: .2rem .4rem .2rem .4rem;
-    }
-  }
-}
-
-p {
-  line-height: 1.8rem;
-}
-
-sup {
-  vertical-align: auto;
-  font-size: 0.6rem;
-  line-height: 0.6rem;
-}
-
-hr {
-  width: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-/* Content Wrapper */
 .content {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .content-wrapper {
   margin: 0 auto;
   width: $breakpoint;
-  // border-bottom: 1px solid $border-color;
 }
+
 @media (max-width: $breakpoint) {
   .content-wrapper {
-    width: 100%;
     padding-left: .5rem;
     padding-right: .5rem;
+    width: 100%;
   }
 }
+
 img {
   border: 0;
   max-width: $breakpoint;
 }
+
 @media (max-width: $breakpoint) {
   img {
     max-width: 100%;
