@@ -264,41 +264,15 @@ echo memory_get_usage() - $startMemory, ' bytes';
 <p>它做了相同的事情，但如果你运行它，会发现它“只”会消耗 5600640 bytes。也就是每个元素 56 bytes，远比每个元素 144 bytes 的普通数组少。这是因为一个固定数组不需要 <code class="highlighter-rouge">Bucket</code> 结构：所以它每个元素只需要一个 <code class="highlighter-rouge">zval</code>（48 bytes）和一个指针（8 bytes），也就是我们观察到的 56 bytes。</p>
 
   </div>
-  
-  <hr>
-  <div class="article-tag">
-    
-    <div class="tag-item">
-    PHP
-    </div>
-    
-    <div class="tag-item">
-    PHP5
-    </div>
-    
-    <div class="tag-item">
-    Internal
-    </div>
-    
-    <div class="tag-item">
-    Array
-    </div>
-    
-    <div class="tag-item">
-    Hash
-    </div>
-    
-  </div>
-  
-  <div id="disqus_thread"></div>
+  <div id="disqus_thread" class="article-comment"></div>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
       </div>
     </div>
         <footer>
-      <div class="content-wrapper" id="contact">
-        <div id="links">
+      <div class="content-wrapper contact" id="contact">
+        <div class="contact-links">
           <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
           <a href="/feed.xml"><i class="fa fa-rss"></i></a>
           <a href="https://github.com/crispgm"><i class="fa fa-github"></i></a>
@@ -309,7 +283,7 @@ echo memory_get_usage() - $startMemory, ' bytes';
           <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
         </div>
 
-        <div id="copyright">
+        <div class="contact-copyright">
           David Zhang &copy; 2017
         </div>
       </div>
