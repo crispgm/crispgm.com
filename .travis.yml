@@ -2,7 +2,6 @@ language: ruby
 script:
   - bundle exec rake
   - bundle exec scss-lint site/_sass
-  - bundle exec scss-lint site/assets/css/style.scss
 rvm:
   - 2.3.1
 notifications:
