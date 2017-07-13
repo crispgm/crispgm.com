@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer and lifes lover.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Jul 2017 17:27:58 +0800</pubDate>
-    <lastBuildDate>Wed, 12 Jul 2017 17:27:58 +0800</lastBuildDate>
+    <pubDate>Thu, 13 Jul 2017 11:19:41 +0800</pubDate>
+    <lastBuildDate>Thu, 13 Jul 2017 11:19:41 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       
@@ -895,7 +895,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;首先，你得有 Ruby。对于 Mac 用户，可以使用 Homebrew 安装。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install ruby
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install ruby
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -921,7 +921,7 @@ Now drawing from 'AC Power'
 
 &lt;p&gt;从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/bin&lt;/code&gt; 等文件夹无法写入。因此需要更换安装路径。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gem install -n /usr/local/bin jekyll
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo gem install -n /usr/local/bin jekyll
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
