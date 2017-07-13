@@ -24,7 +24,7 @@ Jekyll 最初由 GitHub co-founder、前首席执行官 [Tom Preston-Werner](htt
 首先，你得有 Ruby。对于 Mac 用户，可以使用 Homebrew 安装。
 
 ```
-brew install ruby
+$ brew install ruby
 ```
 
 然后：
@@ -50,7 +50,7 @@ $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 `/usr/bin` 等文件夹无法写入。因此需要更换安装路径。
 
 ```
-sudo gem install -n /usr/local/bin jekyll
+$ sudo gem install -n /usr/local/bin jekyll
 ```
 
 详见 <https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011>
