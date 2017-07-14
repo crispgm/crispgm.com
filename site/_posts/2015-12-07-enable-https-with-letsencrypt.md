@@ -83,4 +83,3 @@ Actually, [crispgm.com](https://crispgm.com) is a full static site. Almost no di
 ## In The End
 
 Safe journey on [crispgm.com](https://crispgm.com) :)
-
