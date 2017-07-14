@@ -63,4 +63,3 @@ m3u8 是 Apple iOS 流媒体使用的一种格式，它本质上是个文本的�
     ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
 
 当然，ffmpeg 功能还很强大，比如保存成其它格式什么的。有兴趣可以深入探索下。
-
