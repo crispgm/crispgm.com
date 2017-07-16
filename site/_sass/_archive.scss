@@ -19,23 +19,13 @@
 
     .archive-date {
       color: $light-color;
+      font-size: .8rem;
       margin: 0;
-    }
-  }
-
-  @media (min-width: $breakpoint) {
-    .archive-item {
-      margin-top: 0;
-
-      .archive-date {
-        float: right;
-        margin-left: 1rem;
-      }
     }
   }
 }
 
-.archive-old {
+.archive-more {
   color: $light-color;
 
   a {
