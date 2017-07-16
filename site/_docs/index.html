@@ -1,6 +1,18 @@
 ---
 title: Home
 permalink: /index.html
-layout: redirect
-redirect_to: "/blog.html"
 ---
+
+<div class="page-title" id="programming">Latest Posts</div>
+<div class="archive-main">
+  {% for post in site.posts limit:6 %}
+    <div class="archive-item">
+      <div class="archive-date">{{ post.date | date:"%B %d, %Y" }}</div>
+      <div class="archive-title"><a href="{{ post.permalink }}">{{ post.title }}</a></div>
+    </div>
+  {% endfor %}
+</div>
+<p class="archive-more">
+  <a href="/blog.html">More</a> |
+  <a href="/feed.xml">Subscribe</a>
+</p>
