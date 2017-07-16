@@ -58,7 +58,6 @@ namespace :site do
   desc "Lint"
   task :lint do
     sh "bundle exec scss-lint site/_sass"
-    sh "bundle exec site/assets/css/style.scss"
   end
 
   desc "Build jekyll and push to gh-pages branch"
