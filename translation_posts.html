@@ -40,7 +40,7 @@
         <i id="dropdown-button" class="fa fa-bars"></i>
       </div>
       <div class="menu-home">
-        <a href="/blog.html">DAVID ZHANG</a>
+        <a href="/">DAVID ZHANG</a>
       </div>
     </header>
 
@@ -137,7 +137,7 @@
   
     
   
-  <p class="archive-old">
+  <p class="archive-more">
     <a href="/translation_posts.html"><strong>Translations</strong></a> |
     <a href="/legacy_posts.html">Legacy Posts</a> |
     <a href="http://crispgm.iteye.com/" target="_blank">Oldschool Blog</a>
@@ -194,7 +194,6 @@
           menuElement.classList.remove("animated");
           menuElement.classList.remove("fadeIn");
           dropdownElement.classList.remove("fa-close");
-          dropdownElement.classList.remove("fa-inverse");
           dropdownElement.classList.add("fa-bars");
         }
         else {
@@ -203,7 +202,6 @@
           menuElement.classList.add("fadeIn");
           dropdownElement.classList.remove("fa-bars");
           dropdownElement.classList.add("fa-close");
-          dropdownElement.classList.add("fa-inverse");
         }
         isToggle = !isToggle;
       }

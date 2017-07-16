@@ -40,7 +40,7 @@
         <i id="dropdown-button" class="fa fa-bars"></i>
       </div>
       <div class="menu-home">
-        <a href="/blog.html">DAVID ZHANG</a>
+        <a href="/">DAVID ZHANG</a>
       </div>
     </header>
 
@@ -48,8 +48,49 @@
     <div class="content" id="main-content">
       <div class="content-wrapper">
         <div class="page">
-          Redirecting to <a href="/blog.html">/blog.html</a>
-        </div>
+  <div class="page-main">
+    <div class="page-title" id="programming">Latest Posts</div>
+<div class="archive-main">
+  
+    <div class="archive-item">
+      <div class="archive-date">July 06, 2017</div>
+      <div class="archive-title"><a href="/page/isomorphic-react-preact-with-heroku.html">Isomorphic React/Preact with Heroku</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">June 09, 2017</div>
+      <div class="archive-title"><a href="/page/awesome-terminal-tools.html">Awesome Terminal Tools</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">May 23, 2017</div>
+      <div class="archive-title"><a href="/page/self-collaborating-with-slack.html">我在 Slack 和自己聊天</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">January 08, 2017</div>
+      <div class="archive-title"><a href="/page/meaning-of-photography.html">摄影的意义</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">December 06, 2016</div>
+      <div class="archive-title"><a href="/page/engineering-weekly-automation.html">技术周刊自动化</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">November 30, 2016</div>
+      <div class="archive-title"><a href="/page/unsplash-simple-pure-photos.html">Unsplash, 简单纯粹的图片分享</a></div>
+    </div>
+  
+</div>
+<p class="archive-more">
+  <a href="/blog.html">More</a> |
+  <a href="/feed.xml">Subscribe</a>
+</p>
+
+  </div>
+</div>
+
       </div>
     </div>
         <footer>
@@ -98,7 +139,6 @@
           menuElement.classList.remove("animated");
           menuElement.classList.remove("fadeIn");
           dropdownElement.classList.remove("fa-close");
-          dropdownElement.classList.remove("fa-inverse");
           dropdownElement.classList.add("fa-bars");
         }
         else {
@@ -107,7 +147,6 @@
           menuElement.classList.add("fadeIn");
           dropdownElement.classList.remove("fa-bars");
           dropdownElement.classList.add("fa-close");
-          dropdownElement.classList.add("fa-inverse");
         }
         isToggle = !isToggle;
       }
@@ -127,7 +166,4 @@
     </script>
     
   </body>
-  <script>
-    location.href = '/blog.html';
-  </script>
 </html>

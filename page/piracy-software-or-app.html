@@ -42,7 +42,7 @@
         <i id="dropdown-button" class="fa fa-bars"></i>
       </div>
       <div class="menu-home">
-        <a href="/blog.html">DAVID ZHANG</a>
+        <a href="/">DAVID ZHANG</a>
       </div>
     </header>
 
@@ -200,7 +200,6 @@
           menuElement.classList.remove("animated");
           menuElement.classList.remove("fadeIn");
           dropdownElement.classList.remove("fa-close");
-          dropdownElement.classList.remove("fa-inverse");
           dropdownElement.classList.add("fa-bars");
         }
         else {
@@ -209,7 +208,6 @@
           menuElement.classList.add("fadeIn");
           dropdownElement.classList.remove("fa-bars");
           dropdownElement.classList.add("fa-close");
-          dropdownElement.classList.add("fa-inverse");
         }
         isToggle = !isToggle;
       }
