@@ -7,14 +7,14 @@
 
 $breakpoint: 38rem;
 
-$bg-color: #fbfbfb;
-$border-color: #aaa;
-$code-bg-color: #2d2d2d;
+$main-color:    #212529; // grey 9
+$sub-color:     #343a40; // grey 8
+$code-bg-color: #495057; // grey 7
+$light-color:   #adb5bd; // grey 5
+$border-color:  #dee2e6; // grey 3
+$bg-color:      #f8f9fa; // grey 0
 
-$main-color: #333;
-$sub-color: #555;
-$light-color: #bbb;
-$link-color: #06c;
+$link-color:    #329af0; // blue 5
 
 @import "main";
 @import "menu";
