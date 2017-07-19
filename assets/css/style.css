@@ -103,11 +103,11 @@ img {
         justify-content: flex-start;
         left: 0;
         margin: 0;
-        padding: 0 .2rem 0;
+        padding: 0 .2rem;
         top: 3rem;
         width: 100%; }
       .menu .menu-item {
-        line-height: 2.0rem; }
+        line-height: 2rem; }
         .menu .menu-item a {
           color: #adb5bd; }
       .menu .menu-active a {
