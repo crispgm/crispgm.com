@@ -2,6 +2,8 @@
 // Copyright(c) David Zhang, 2017
 
 .menu {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: .4rem;
   padding-top: 1.2rem;
   text-align: left;
@@ -16,32 +18,23 @@
   }
 
   .menu-links {
-    display: none;
-  }
-
-  .menu-bars {
-    display: block;
-    float: right;
-    font-size: 1.2rem;
-    right: .4rem;
-  }
-
-  .menu-dropdown {
     display: flex;
-    flex-wrap: wrap;
-    height: 3.1rem;
-    justify-content: flex-end;
-    margin: auto;
-    padding: .8rem 2.4rem 0 .4rem;
-    position: absolute;
-    top: 0;
-    width: $breakpoint;
+    float: right;
+    margin-top: 0;
   }
 
   .menu-item {
     font-size: 1rem;
-    padding: .6rem .4rem;
+    padding: .1rem .4rem;
     text-align: left;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
 
     a {
       color: $sub-color;
@@ -60,30 +53,21 @@
   }
 
   @media (max-width: $breakpoint) {
+    display: block;
     padding-top: .4rem;
 
     .menu-home {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       padding: .4rem 0;
     }
 
-    .menu-bars {
-      padding: .4rem .6rem 0 0;
-    }
-
-    .menu-dropdown {
-      background-color: $main-color;
-      justify-content: flex-start;
-      left: 0;
-      margin: 0;
-      padding: 0 .2rem;
-      top: 3rem;
+    .menu-links {
+      float: left;
+      margin-bottom: 1.8rem;
       width: 100%;
     }
 
     .menu-item {
-      line-height: 2rem;
-
       a {
         color: $light-color;
       }
