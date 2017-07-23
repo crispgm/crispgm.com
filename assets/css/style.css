@@ -77,7 +77,7 @@ img {
     .menu .menu-item:last-of-type {
       padding-right: 0; }
     .menu .menu-item a {
-      color: #343a40;
+      color: #adb5bd;
       text-decoration: none; }
       .menu .menu-item a:hover {
         text-decoration: underline; }
@@ -93,11 +93,7 @@ img {
       .menu .menu-links {
         float: left;
         margin-bottom: 1.8rem;
-        width: 100%; }
-      .menu .menu-item a {
-        color: #adb5bd; }
-      .menu .menu-active a {
-        color: #adb5bd; } }
+        width: 100%; } }
 
 footer {
   font-size: 1rem;
