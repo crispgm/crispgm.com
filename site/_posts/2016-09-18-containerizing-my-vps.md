@@ -2,7 +2,7 @@
 layout: post
 type: programming
 title: Containerizing My VPS
-permalink: /page/containerize-my-vps.html
+permalink: /page/containerizing-my-vps.html
 tags:
 - Docker
 - Linode

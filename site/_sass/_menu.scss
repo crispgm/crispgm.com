@@ -37,7 +37,7 @@
     }
 
     a {
-      color: $sub-color;
+      color: $light-color;
       text-decoration: none;
 
       &:hover {
@@ -65,18 +65,6 @@
       float: left;
       margin-bottom: 1.8rem;
       width: 100%;
-    }
-
-    .menu-item {
-      a {
-        color: $light-color;
-      }
-    }
-
-    .menu-active {
-      a {
-        color: $light-color;
-      }
     }
   }
 }
