@@ -18,8 +18,9 @@ defaults:
       type: docs
     values:
       layout: page
-      syntax_highlight: false
+      disable_syntax_highlight: true
 
+# Contacts
 contact:
   email: crispgm@gmail.com
   github: crispgm
@@ -29,9 +30,14 @@ contact:
   stack_overflow: 6858150/david-zhang
   medium: crispgm
 
+# Applications
 ga:
   tracking_id: UA-50708664-1
+disqus:
+  short_name: crispgm
 
+
+# Exclusion
 exclude:
   - Rakefile
   - Gemfile

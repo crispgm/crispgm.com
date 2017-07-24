@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+  {% include head.html %}
   <body>
     <div class="content" id="header">
       {% include header.html %}
@@ -11,5 +11,8 @@
       </div>
     </div>
     {% include footer.html %}
+    {% include syntax_highlight.html %}
+    {% include disqus.html %}
+    {% include google_analytics.html %}
   </body>
 </html>
