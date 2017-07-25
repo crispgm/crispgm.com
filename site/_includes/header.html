@@ -1,6 +1,6 @@
 <header class="content-wrapper menu">
   <div class="menu-home">
-    <a href="/">{{ site.title }}</a>
+    <a href="/">{{ site.title | upcase }}</a>
   </div>
   <div class="menu-links">
     <div class="menu-item{% if page.title == "Blog" %}{{ " menu-active" }}{% endif %}">
