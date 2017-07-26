@@ -169,7 +169,7 @@ $ jekyll new-theme my-theme
 
 `_config.yml` 是整个站点的整体配置，以下是所有配置项和默认值：
 
-```
+```yaml
 # Where things are
 source:       .
 destination:  ./_site
@@ -251,7 +251,7 @@ Jekyll 整个站点的配置是站点根目录下的 `_config.yml` 文件，而 
 
 可以使用 `defaults` 设置一个路径下 Front Matter 默认值。
 
-```
+```yaml
 defaults:
   - scope:
       path: ""
@@ -265,7 +265,7 @@ defaults:
 
 `exclude` 用于忽略文件或文件夹，其中 `_config.yml` 和以`.`开头的文件或文件夹都会被自动忽略。后续版本，`node_modules` 等文件夹也被隐式忽略了（参考 _config.yml 章节）。
 
-```
+```yaml
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -360,7 +360,7 @@ Liquid 的逻辑判断跟 Ruby 完全一致。
 为了简单，只以 `if` 为例：
 
 ```
-{% raw %}{% if page.disable_syntax_highlight != true %}
+{% raw %}{% if page.syntax_highlight != 'false' %}
 <link rel="stylesheet" href="{{ site.assets }}/css/zenburn.css">
 {% endif %}{% endraw %}
 ```
