@@ -18,7 +18,7 @@ defaults:
       type: docs
     values:
       layout: page
-      disable_syntax_highlight: true
+      syntax_highlight: false
 
 # Contacts
 contact:
