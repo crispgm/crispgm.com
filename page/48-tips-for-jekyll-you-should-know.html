@@ -240,77 +240,77 @@ $ jekyll b
 
 <p><code class="highlighter-rouge">_config.yml</code> 是整个站点的整体配置，以下是所有配置项和默认值：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Where things are
-source:       .
-destination:  ./_site
-plugins_dir:  _plugins
-layouts_dir:  _layouts
-data_dir:     _data
-includes_dir: _includes
-collections:
-  posts:
-    output:   true
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="c1"># Where things are</span>
+<span class="s">source</span><span class="pi">:</span>       <span class="s">.</span>
+<span class="s">destination</span><span class="pi">:</span>  <span class="s">./_site</span>
+<span class="s">plugins_dir</span><span class="pi">:</span>  <span class="s">_plugins</span>
+<span class="s">layouts_dir</span><span class="pi">:</span>  <span class="s">_layouts</span>
+<span class="s">data_dir</span><span class="pi">:</span>     <span class="s">_data</span>
+<span class="s">includes_dir</span><span class="pi">:</span> <span class="s">_includes</span>
+<span class="s">collections</span><span class="pi">:</span>
+  <span class="s">posts</span><span class="pi">:</span>
+    <span class="s">output</span><span class="pi">:</span>   <span class="s">true</span>
 
-# Handling Reading
-safe:         false
-include:      [".htaccess"]
-exclude:      ["node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
-keep_files:   [".git", ".svn"]
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+<span class="c1"># Handling Reading</span>
+<span class="s">safe</span><span class="pi">:</span>         <span class="s">false</span>
+<span class="s">include</span><span class="pi">:</span>      <span class="pi">[</span><span class="s2">"</span><span class="s">.htaccess"</span><span class="pi">]</span>
+<span class="s">exclude</span><span class="pi">:</span>      <span class="pi">[</span><span class="s2">"</span><span class="s">node_modules"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/bundle/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/cache/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/gems/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/ruby/"</span><span class="pi">]</span>
+<span class="s">keep_files</span><span class="pi">:</span>   <span class="pi">[</span><span class="s2">"</span><span class="s">.git"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">.svn"</span><span class="pi">]</span>
+<span class="s">encoding</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">utf-8"</span>
+<span class="s">markdown_ext</span><span class="pi">:</span> <span class="s2">"</span><span class="s">markdown,mkdown,mkdn,mkd,md"</span>
 
-# Filtering Content
-show_drafts: null
-limit_posts: 0
-future:      false
-unpublished: false
+<span class="c1"># Filtering Content</span>
+<span class="s">show_drafts</span><span class="pi">:</span> <span class="s">null</span>
+<span class="s">limit_posts</span><span class="pi">:</span> <span class="s">0</span>
+<span class="s">future</span><span class="pi">:</span>      <span class="s">false</span>
+<span class="s">unpublished</span><span class="pi">:</span> <span class="s">false</span>
 
-# Plugins
-whitelist: []
-gems:      []
+<span class="c1"># Plugins</span>
+<span class="s">whitelist</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="s">gems</span><span class="pi">:</span>      <span class="pi">[]</span>
 
-# Conversion
-markdown:    kramdown
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-incremental: false
+<span class="c1"># Conversion</span>
+<span class="s">markdown</span><span class="pi">:</span>    <span class="s">kramdown</span>
+<span class="s">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+<span class="s">lsi</span><span class="pi">:</span>         <span class="s">false</span>
+<span class="s">excerpt_separator</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s">"</span>
+<span class="s">incremental</span><span class="pi">:</span> <span class="s">false</span>
 
-# Serving
-detach:  false
-port:    4000
-host:    127.0.0.1
-baseurl: "" # does not include hostname
-show_dir_listing: false
+<span class="c1"># Serving</span>
+<span class="s">detach</span><span class="pi">:</span>  <span class="s">false</span>
+<span class="s">port</span><span class="pi">:</span>    <span class="s">4000</span>
+<span class="s">host</span><span class="pi">:</span>    <span class="s">127.0.0.1</span>
+<span class="s">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># does not include hostname</span>
+<span class="s">show_dir_listing</span><span class="pi">:</span> <span class="s">false</span>
 
-# Outputting
-permalink:     date
-paginate_path: /page:num
-timezone:      null
+<span class="c1"># Outputting</span>
+<span class="s">permalink</span><span class="pi">:</span>     <span class="s">date</span>
+<span class="s">paginate_path</span><span class="pi">:</span> <span class="s">/page:num</span>
+<span class="s">timezone</span><span class="pi">:</span>      <span class="s">null</span>
 
-quiet:    false
-verbose:  false
-defaults: []
+<span class="s">quiet</span><span class="pi">:</span>    <span class="s">false</span>
+<span class="s">verbose</span><span class="pi">:</span>  <span class="s">false</span>
+<span class="s">defaults</span><span class="pi">:</span> <span class="pi">[]</span>
 
-liquid:
-  error_mode: warn
+<span class="s">liquid</span><span class="pi">:</span>
+  <span class="s">error_mode</span><span class="pi">:</span> <span class="s">warn</span>
 
-# Markdown Processors
-rdiscount:
-  extensions: []
+<span class="c1"># Markdown Processors</span>
+<span class="s">rdiscount</span><span class="pi">:</span>
+  <span class="s">extensions</span><span class="pi">:</span> <span class="pi">[]</span>
 
-redcarpet:
-  extensions: []
+<span class="s">redcarpet</span><span class="pi">:</span>
+  <span class="s">extensions</span><span class="pi">:</span> <span class="pi">[]</span>
 
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  input:          GFM
-  hard_wrap:      false
-  footnote_nr:    1
+<span class="s">kramdown</span><span class="pi">:</span>
+  <span class="s">auto_ids</span><span class="pi">:</span>       <span class="s">true</span>
+  <span class="s">footnote_nr</span><span class="pi">:</span>    <span class="s">1</span>
+  <span class="s">entity_output</span><span class="pi">:</span>  <span class="s">as_char</span>
+  <span class="s">toc_levels</span><span class="pi">:</span>     <span class="s">1..6</span>
+  <span class="s">smart_quotes</span><span class="pi">:</span>   <span class="s">lsquo,rsquo,ldquo,rdquo</span>
+  <span class="s">input</span><span class="pi">:</span>          <span class="s">GFM</span>
+  <span class="s">hard_wrap</span><span class="pi">:</span>      <span class="s">false</span>
+  <span class="s">footnote_nr</span><span class="pi">:</span>    <span class="s">1</span>
 </code></pre>
 </div>
 
@@ -322,13 +322,13 @@ kramdown:
 
 <p>可以使用 <code class="highlighter-rouge">defaults</code> 设置一个路径下 Front Matter 默认值。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>defaults:
-  - scope:
-      path: ""
-      type: weekly
-    values:
-      layout: weekly
-      title: 技术周刊
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">defaults</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">scope</span><span class="pi">:</span>
+      <span class="s">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+      <span class="s">type</span><span class="pi">:</span> <span class="s">weekly</span>
+    <span class="s">values</span><span class="pi">:</span>
+      <span class="s">layout</span><span class="pi">:</span> <span class="s">weekly</span>
+      <span class="s">title</span><span class="pi">:</span> <span class="s">技术周刊</span>
 </code></pre>
 </div>
 
@@ -336,11 +336,11 @@ kramdown:
 
 <p><code class="highlighter-rouge">exclude</code> 用于忽略文件或文件夹，其中 <code class="highlighter-rouge">_config.yml</code> 和以<code class="highlighter-rouge">.</code>开头的文件或文件夹都会被自动忽略。后续版本，<code class="highlighter-rouge">node_modules</code> 等文件夹也被隐式忽略了（参考 _config.yml 章节）。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENSE
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Gemfile</span>
+  <span class="pi">-</span> <span class="s">Gemfile.lock</span>
+  <span class="pi">-</span> <span class="s">README.md</span>
+  <span class="pi">-</span> <span class="s">LICENSE</span>
 </code></pre>
 </div>
 
@@ -434,7 +434,7 @@ kramdown:
 
 <p>为了简单，只以 <code class="highlighter-rouge">if</code> 为例：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">page.disable_syntax_highlight</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">true</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">page.syntax_highlight</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">'false'</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
 </span><span class="err">&lt;link</span><span class="w"> </span><span class="err">rel=</span><span class="s2">"stylesheet"</span><span class="w"> </span><span class="err">href=</span><span class="s2">"{{ site.assets }}/css/zenburn.css"</span><span class="err">&gt;</span><span class="w">
 </span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endif</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -692,6 +692,7 @@ kramdown:
     
 <script src="/assets/scripts/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
 
     
 <script>
