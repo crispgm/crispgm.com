@@ -206,6 +206,8 @@ blockquote {
   padding-left: 1rem; }
 
 p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
   line-height: 1.8rem;
   margin-top: 1.5rem; }
