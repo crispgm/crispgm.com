@@ -88,6 +88,9 @@ blockquote {
 }
 
 p {
+  // scss-lint:disable VendorPrefix
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
   line-height: 1.8rem;
   margin-top: 1.5rem;
