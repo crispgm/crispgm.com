@@ -311,5 +311,12 @@ code.highlighter-rouge {
     .things .things-item .things-link {
       display: flex;
       padding: .2rem 0; }
+      .things .things-item .things-link div {
+        border-right: 1px solid #dee2e6;
+        padding-left: .2rem; }
+        .things .things-item .things-link div:first-of-type {
+          padding-left: 0; }
+        .things .things-item .things-link div:last-of-type {
+          border-right: 0; }
       .things .things-item .things-link a {
         padding-right: .2rem; } }
