@@ -25,6 +25,18 @@
       href: https://urlautoredirector.github.io/
     - text: GitHub
       href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
+- name: Rugby News Board
+  description: "#1 Rugby news board in Chinese, which is built with Preact, Express, and Rails."
+  links:
+    - text: Homepage
+      href: http://rugbynews.space/
+    - text: GitHub
+      href: https://github.com/rugby-board
+- name: jekyll-crisp-theme
+  description: A minimalism theme for Jekyll.
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/jekyll-crisp-theme
 - name: crisp-resume
   description: A minimalist's résumé template powered by Jekyll.
   links:
@@ -32,11 +44,6 @@
       href: https://github.com/crispgm/resume
     - text: Demo
       href: https://crispgm.github.io/resume/resume.html
-- name: Rugby News Board
-  description: Yet another rugby news feed in Chinese.
-  links:
-    - text: Homepage
-      href: http://rugbynews.space/
 - name: GSM Sources Manager
   description: GSM is a simple sources manager for RubyGems.
   links:
@@ -46,6 +53,13 @@
       href: https://rubygems.org/gems/gsm-sources-manager
     - text: GitHub
       href: https://github.com/crispgm/gsm
+- name: GitHub Meta Badges
+  description: Simple GitHub Metadata Badges (e.g. stars, issues, and more)
+  links:
+    - text: Homepage
+      href: https://crispgm.github.io/github-meta-badges/
+    - text: GitHub
+      href: https://github.com/crispgm/github-meta-badges
 - name: jekyll-tagslist
   description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
   links:
