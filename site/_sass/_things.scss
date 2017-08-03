@@ -44,6 +44,18 @@
         display: flex;
         padding: .2rem 0;
 
+        div {
+          border-right: 1px solid $border-color;
+          padding-left: .2rem;
+
+          &:first-of-type {
+            padding-left: 0;
+          }
+          &:last-of-type {
+            border-right: 0;
+          }
+        }
+
         a {
           padding-right: .2rem;
         }

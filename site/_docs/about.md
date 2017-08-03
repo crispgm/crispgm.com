@@ -8,12 +8,17 @@ Hello, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}
 
 I greatly appreciate minimalism and simplicity. I enjoy photography, reading, and coffee. And I go to the theater cheering for my idols with **glo-sticks** every weekends.
 
-<div class="page-title">My Advocation</div>
+<div class="page-title">Advocation</div>
 
 * [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
+
+<div class="page-title">Links</div>
+
+* [Rugby News Board](http://www.rugbynews.space/)
+* [Crisp Programming Weekly](https://crispgm.github.io/weekly/)
 
 <div class="page-title">License</div>
 
