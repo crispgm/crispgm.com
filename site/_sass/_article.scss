@@ -6,7 +6,7 @@
   text-align: left;
 
   .article-head {
-    margin-bottom: 4.2rem;
+    margin-bottom: 3.2rem;
     margin-top: 4.2rem;
     text-align: left;
 
@@ -40,7 +40,6 @@ h1 {
   color: $sub-color;
   font-size: 2.4rem;
   font-weight: 400;
-  padding-bottom: 1.2rem;
   padding-top: 1.6rem;
   text-align: left;
 }
@@ -49,7 +48,6 @@ h2 {
   color: $sub-color;
   font-size: 2rem;
   font-weight: 400;
-  padding-bottom: 1.2rem;
   padding-top: 1.4rem;
   text-align: left;
 }
@@ -58,7 +56,6 @@ h3 {
   color: $sub-color;
   font-size: 1.5rem;
   font-weight: 500;
-  padding-bottom: 1.2rem;
   padding-top: 1.2rem;
   text-align: left;
 }
@@ -67,7 +64,6 @@ h4 {
   color: $sub-color;
   font-size: 1.2rem;
   font-weight: 600;
-  padding-bottom: .8rem;
   padding-top: .8rem;
   text-align: left;
 }
@@ -76,7 +72,6 @@ h5 {
   color: $sub-color;
   font-size: 1rem;
   font-weight: 700;
-  padding-bottom: 0;
   padding-top: .8rem;
   text-align: left;
 }
@@ -103,9 +98,10 @@ sup {
 }
 
 hr {
+  border-top: 2px $sub-color dashed;
   margin-bottom: 3rem;
   margin-top: 3rem;
-  width: 3rem;
+  width: 2.4rem;
 }
 
 ul {
