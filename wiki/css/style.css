@@ -76,7 +76,8 @@ a:hover {
 .section-item {
   display: flex;
   line-height: 1.25;
-  overflow: auto;
+  overflow: hidden;
+  width: 100%;
 }
 .section-item:first-of-type {
   margin-bottom: 1rem;
@@ -85,7 +86,7 @@ a:hover {
 }
 .section-content {
   padding-right: .5rem;
-  width: 100%;
+  width: 37.6rem;
 }
 .title-q:before {
   content: "Q";
