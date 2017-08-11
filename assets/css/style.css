@@ -155,8 +155,16 @@ footer {
       margin-top: 1rem; }
   .article .article-main {
     font-size: 1rem;
-    margin-bottom: 3.2rem;
     margin-top: 1.2rem; }
+  .article .article-share {
+    font-size: 1.4rem;
+    margin: 3.2rem 0;
+    text-align: center; }
+    .article .article-share a {
+      color: #343a40;
+      padding: 0 .4rem; }
+      .article .article-share a:hover {
+        text-decoration: none; }
   .article .article-comment iframe {
     text-align: center; }
 

@@ -48,8 +48,12 @@
       <div class="content-wrapper">
         <div class="article">
   <div class="article-head">
-    <div class="article-title">『翻译』PHP 数组有多大？</div>
-    <div class="article-date">July 05, 2016</div>
+    <div class="article-title">
+      『翻译』PHP 数组有多大？
+    </div>
+    <div class="article-date">
+      July 05, 2016
+    </div>
   </div>
   <div class="article-main">
     <p>提示：很大！</p>
@@ -260,6 +264,15 @@ echo memory_get_usage() - $startMemory, ' bytes';
 
 <p>它做了相同的事情，但如果你运行它，会发现它“只”会消耗 5600640 bytes。也就是每个元素 56 bytes，远比每个元素 144 bytes 的普通数组少。这是因为一个固定数组不需要 <code class="highlighter-rouge">Bucket</code> 结构：所以它每个元素只需要一个 <code class="highlighter-rouge">zval</code>（48 bytes）和一个指针（8 bytes），也就是我们观察到的 56 bytes。</p>
 
+  </div>
+  <div class="article-share">
+    <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fhow-big-are-php-arrays.html&text=%E3%80%8E%E7%BF%BB%E8%AF%91%E3%80%8FPHP+%E6%95%B0%E7%BB%84%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F">
+      <i class="fa fa-twitter"></i>
+    </a>
+    
+    <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fhow-big-are-php-arrays.html%26rhash%3Da3e6c7b51eec6a">
+      <i class="fa fa-telegram"></i>
+    </a>
   </div>
   <div id="disqus_thread" class="article-comment"></div>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
