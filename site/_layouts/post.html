@@ -3,11 +3,24 @@ layout: default
 ---
 <div class="article">
   <div class="article-head">
-    <div class="article-title">{{page.title}}</div>
-    <div class="article-date">{{page.date | date:"%B %d, %Y"}}</div>
+    <div class="article-title">
+      {{ page.title }}
+    </div>
+    <div class="article-date">
+      {{ page.date | date:"%B %d, %Y" }}
+    </div>
   </div>
   <div class="article-main">
     {{ content }}
+  </div>
+  <div class="article-share">
+    <a href="https://twitter.com/share?url={{ page.permalink | absolute_url | url_encode }}&text={{ page.title | url_encode }}">
+      <i class="fa fa-twitter"></i>
+    </a>
+    {% capture tg_share %}https://t.me/iv?url={{ page.permalink | absolute_url | url_encode }}&rhash=a3e6c7b51eec6a{% endcapture %}
+    <a href="tg://msg_url?url={{ tg_share | url_encode }}">
+      <i class="fa fa-telegram"></i>
+    </a>
   </div>
   <div id="disqus_thread" class="article-comment"></div>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
