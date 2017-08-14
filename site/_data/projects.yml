@@ -29,7 +29,7 @@
   description: "#1 Rugby news board in Chinese, which is built with Preact, Express, and Rails."
   links:
     - text: Homepage
-      href: http://rugbynews.space/
+      href: http://nbrugby.com/
     - text: GitHub
       href: https://github.com/rugby-board
 - name: jekyll-crisp-theme

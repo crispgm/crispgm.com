@@ -10,7 +10,7 @@ tags:
 - Heroku
 ---
 
-[Rugby News Board](http://rugbynews.space) is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.
+[Rugby News Board](http://nbrugby.com/) is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.
 
 Rugby News Board was [firstly built](https://github.com/crispgm/rugby-board) with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a `news` table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.
 

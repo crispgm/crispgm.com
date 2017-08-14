@@ -17,7 +17,7 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, an
 
 <div class="page-title">Links</div>
 
-* [Rugby News Board](http://www.rugbynews.space/)
+* [Rugby News Board](http://nbrugby.com/)
 * [Crisp Programming Weekly](https://crispgm.github.io/weekly/)
 
 <div class="page-title">License</div>
