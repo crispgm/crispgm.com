@@ -221,17 +221,17 @@ sup {
   vertical-align: auto; }
 
 hr {
-  border-top: 2px #343a40 dashed;
+  border-top: 1px #343a40 solid;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 2.4rem; }
 
-ul p {
+ul p, ol p {
   margin: 0; }
-ul li {
+ul li, ol li {
   line-height: 1.8rem;
   margin-left: -1rem; }
-  ul li p {
+  ul li p, ol li p {
     line-height: 1.8rem;
     margin: 0; }
 
