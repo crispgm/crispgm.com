@@ -112,13 +112,13 @@ sup {
 }
 
 hr {
-  border-top: 2px $sub-color dashed;
+  border-top: 1px $sub-color solid;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 2.4rem;
 }
 
-ul {
+ul, ol {
   p {
     margin: 0;
   }
