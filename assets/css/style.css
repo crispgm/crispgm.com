@@ -226,12 +226,15 @@ hr {
   margin-top: 3rem;
   width: 2.4rem; }
 
-ul p, ol p {
+ul p,
+ol p {
   margin: 0; }
-ul li, ol li {
+ul li,
+ol li {
   line-height: 1.8rem;
   margin-left: -1rem; }
-  ul li p, ol li p {
+  ul li p,
+  ol li p {
     line-height: 1.8rem;
     margin: 0; }
 
