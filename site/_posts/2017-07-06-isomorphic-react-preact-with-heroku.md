@@ -192,7 +192,7 @@ import { h, Component } from 'preact';
 
 It goes as soon as I change the import statements on the top.
 
-react-router was replaced by preact-router, which is even more user-friendly. The parameters are simply passed to `props`:
+`react-router` was replaced by `preact-router`, which is even more user-friendly. The parameters are simply passed to `props`:
 
 Router:
 
@@ -216,6 +216,8 @@ export default class EventPage extends Component {
 ```
 
 After the optimization, it is *only* 364 kb and typically takes less than 2 seconds to load the application. Using Preact is a good choice, while we can get the advantage of React and benefit from the lightweight.
+
+At last, **DO NOT** forget to turn on `gzip` of your Express server or other static file server like Nginx. That dramatically cuts the bundle size to 1/4, which is less than 100kb now.
 
 # Conclusion
 
