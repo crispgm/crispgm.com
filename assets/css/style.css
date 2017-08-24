@@ -16,7 +16,7 @@ html {
 body {
   background-color: #f8f9fa;
   color: #212529;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-family: "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   height: 100%;
