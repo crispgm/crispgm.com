@@ -21,9 +21,9 @@ education:
     major: "计算机科学与技术, 学士"
 skills:
   - title: 后端技术
-    items: "PHP, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis"
+    items: "Python, Django/Flask, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis, PHP"
   - title: 前端技术
-    items: "HTML, CSS/Sass, JavaScript/ES, React"
+    items: "HTML, CSS/Sass, JavaScript/ES, React, Vue.js"
   - title: Web 架构
     items: "微服务架构, 分布式服务设计, 业务系统架构设计"
   - title: 计算机系统
@@ -31,6 +31,10 @@ skills:
 experience:
   - title: 高级研发工程师
     duration: 2017.03 - 至今
+    company: "字节跳动"
+    description: "懂车帝：一个专业、有趣的汽车内容资讯平台。"
+  - title: 高级研发工程师
+    duration: 2017.03 - 2017.08
     company: "百度, 首页业务部"
     description: "负责百度 Feed 平台的基础技术架构，以及时效性和运营方向业务。"
   - title: 高级研发工程师

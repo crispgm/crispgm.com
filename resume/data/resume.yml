@@ -1,6 +1,6 @@
 title: Resume | Wanlong Zhang
 name: WANLONG ZHANG
-jobtitle: Senior Web Developer
+jobtitle: Senior Software Engineer
 contact:
   - icon: fa-envelope
     text: crispgm@gmail.com
@@ -21,9 +21,9 @@ education:
     major: Bachelor of Computer Science & Technology.
 skills:
   - title: Backends
-    items: PHP, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis
+    items: Python, Django/Flask, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis, PHP
   - title: Frontends
-    items: HTML, CSS/Sass, JavaScript/ES, React
+    items: HTML, CSS/Sass, JavaScript/ES, React, Vue.js
   - title: Architectures
     items: Micro-service Architecture, Distributing Web Systems
   - title: Computer Systems
@@ -32,10 +32,15 @@ skills:
     items: Agile, Design Patterns
 experience:
   - title: Senior Software Engineer
-    duration: Mar 2017 - Now
+    duration: Sep 2017 - present
+    company: ByteDance Inc.
+    description: >
+      I build app of cars' information.
+  - title: Senior Software Engineer
+    duration: Mar 2017 - Aug 2017
     company: Baidu Inc., News Feed
     description: >
-      I build platform for content auditing and operations.
+      I built platform for content auditing and operations.
   - title: Senior Software Engineer
     duration: Apr 2016 - Feb 2017
     company: Baidu Inc., MSBU
