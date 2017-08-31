@@ -130,19 +130,15 @@ Now drawing from 'AC Power'
  -InternalBattery-0 (id=3997795)	100%; charged; 0:00 remaining present: true
 ```
 
-### [ProxyChains](https://github.com/rofl0r/proxychains-ng)
+### [lock-cli](https://github.com/sindresorhus/lock-cli)
 
-Socks and HTTP proxy for terminal. And we can use `proxychains` to boost speed of some services and get across the wall.
+Lock your system from the command-line. Support macOS, Linux, and Windows.
 
 ```
-$ proxychains4 git push
+$ lock
 ```
 
-### [Douban.fm](https://github.com/turingou/douban.fm)
-
-Console based [Douban FM](https://douban.fm/) client, written in Node.js. It runs on Mac but not very stable.
-
-![](https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067)
+Then, your OS will be locked.
 
 ### [Gotty](https://github.com/yudai/gotty)
 
@@ -161,3 +157,17 @@ Weather forecasting with ASCII GUI written in Go.
 Generate and display QR code with Node.js.
 
 ![](https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67)
+
+### [Douban.fm](https://github.com/turingou/douban.fm)
+
+Console based [Douban FM](https://douban.fm/) client, written in Node.js. It runs on Mac but not very stable.
+
+![](https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067)
+
+### [ProxyChains](https://github.com/rofl0r/proxychains-ng)
+
+Socks and HTTP proxy for terminal. And we can use `proxychains` to boost speed of some services and get across the wall.
+
+```
+$ proxychains4 git push
+```
