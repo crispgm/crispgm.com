@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Aug 2017 13:49:49 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2017 13:49:49 +0800</lastBuildDate>
+    <pubDate>Thu, 31 Aug 2017 20:11:43 +0800</pubDate>
+    <lastBuildDate>Thu, 31 Aug 2017 20:11:43 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       
@@ -530,19 +530,15 @@ Now drawing from 'AC Power'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;proxychains&quot;&gt;&lt;a href=&quot;https://github.com/rofl0r/proxychains-ng&quot;&gt;ProxyChains&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;lock-cli&quot;&gt;&lt;a href=&quot;https://github.com/sindresorhus/lock-cli&quot;&gt;lock-cli&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;Socks and HTTP proxy for terminal. And we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;proxychains&lt;/code&gt; to boost speed of some services and get across the wall.&lt;/p&gt;
+&lt;p&gt;Lock your system from the command-line. Support macOS, Linux, and Windows.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ proxychains4 git push
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ lock
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;doubanfm&quot;&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;Douban.fm&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Console based &lt;a href=&quot;https://douban.fm/&quot;&gt;Douban FM&lt;/a&gt; client, written in Node.js. It runs on Mac but not very stable.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Then, your OS will be locked.&lt;/p&gt;
 
 &lt;h3 id=&quot;gotty&quot;&gt;&lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;Gotty&lt;/a&gt;&lt;/h3&gt;
 
@@ -561,6 +557,20 @@ Now drawing from 'AC Power'
 &lt;p&gt;Generate and display QR code with Node.js.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;doubanfm&quot;&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;Douban.fm&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Console based &lt;a href=&quot;https://douban.fm/&quot;&gt;Douban FM&lt;/a&gt; client, written in Node.js. It runs on Mac but not very stable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;proxychains&quot;&gt;&lt;a href=&quot;https://github.com/rofl0r/proxychains-ng&quot;&gt;ProxyChains&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Socks and HTTP proxy for terminal. And we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;proxychains&lt;/code&gt; to boost speed of some services and get across the wall.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ proxychains4 git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Fri, 09 Jun 2017 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/awesome-terminal-tools.html</link>
