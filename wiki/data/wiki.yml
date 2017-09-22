@@ -1,3 +1,9 @@
+- id: how-to-view-specific-process-in-top
+  q: 如何用 TOP 查看制定进程的性能数据？
+  a: |
+    假设要看的进程是 Sublime Text:
+    <pre><code>top -pid `pgrep 'Sublime\ Text'`
+    </pre></code>
 - id: why-git-still-asking-for-password
   q: 为什么配置好了 GitHub SSH Key 之后还需要输密码？
   a: |
