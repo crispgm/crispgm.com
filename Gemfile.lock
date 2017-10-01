@@ -7,7 +7,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     minitest (5.10.3)
-    rake (12.0.0)
+    rake (12.1.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -29,4 +29,4 @@ DEPENDENCIES
   shoulda-context
 
 BUNDLED WITH
-   1.15.0
+   1.15.4
