@@ -14,7 +14,7 @@ html {
   html {
     font-size: 14px; } }
 body {
-  background-color: #f8f9fa;
+  background-color: #fff;
   color: #212529;
   font-family: "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
@@ -26,7 +26,7 @@ body {
   word-wrap: break-word; }
   body ::selection {
     background-color: #329af0;
-    color: #f8f9fa; }
+    color: #fff; }
 
 a {
   color: #329af0;
