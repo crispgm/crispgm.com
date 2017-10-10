@@ -1,5 +1,5 @@
 - id: how-to-view-specific-process-in-top
-  q: 如何用 TOP 查看制定进程的性能数据？
+  q: 如何用 TOP 查看指定进程的性能数据？
   a: |
     假设要看的进程是 Sublime Text:
     <pre><code>top -pid `pgrep 'Sublime\ Text'`
