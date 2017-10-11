@@ -58,21 +58,25 @@ img {
   display: flex;
   justify-content: space-between;
   padding-bottom: .4rem;
-  padding-top: 1.2rem;
+  padding-top: .4rem;
   text-align: left; }
   .menu .menu-home {
-    font-size: 1.2rem;
-    letter-spacing: 2px; }
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding-top: .1rem; }
     .menu .menu-home a {
       color: #343a40;
       text-decoration: none; }
+      .menu .menu-home a:hover {
+        background-color: #212529;
+        color: #fff; }
   .menu .menu-links {
     display: flex;
     float: right;
     margin-top: 0; }
   .menu .menu-item {
     font-size: 1rem;
-    padding: .1rem .4rem;
+    padding: 0 .4rem;
     text-align: left; }
     .menu .menu-item:first-of-type {
       padding-left: 0; }
@@ -85,17 +89,6 @@ img {
         text-decoration: underline; }
   .menu .menu-active a {
     text-decoration: underline; }
-  @media (max-width: 38rem) {
-    .menu {
-      display: block;
-      padding-top: .4rem; }
-      .menu .menu-home {
-        font-size: 1.6rem;
-        padding: .4rem 0; }
-      .menu .menu-links {
-        float: left;
-        margin-bottom: 1.8rem;
-        width: 100%; } }
 
 footer {
   font-size: 1rem;
@@ -135,9 +128,8 @@ footer {
   text-align: left; }
   .page .page-main .page-title {
     color: #343a40;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 1.2rem;
+    font-size: 1.6rem;
+    margin-top: .8rem;
     padding: .8rem 0;
     text-align: left; }
 
