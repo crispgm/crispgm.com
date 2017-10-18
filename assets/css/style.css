@@ -302,6 +302,9 @@ code.highlighter-rouge {
       padding-bottom: .2rem; }
     .things .things-item .things-list {
       font-size: .9rem;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
       line-height: 1.4rem; }
   .things ul {
     margin: 0; }
