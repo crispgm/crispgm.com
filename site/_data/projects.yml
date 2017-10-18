@@ -24,7 +24,7 @@
     - text: Homepage
       href: https://urlautoredirector.github.io/
     - text: GitHub
-      href: https://github.com/UrlAutoRedirector/UrlAutoRedirector
+      href: https://github.com/URLAutoRedirector/URLAutoRedirector
 - name: Rugby News Board
   description: "#1 Rugby news board in Chinese, which is built with Preact, Express, and Rails."
   links:
@@ -32,11 +32,6 @@
       href: http://nbrugby.com/
     - text: GitHub
       href: https://github.com/rugby-board
-- name: jekyll-crisp-theme
-  description: A minimalism theme for Jekyll.
-  links:
-    - text: GitHub
-      href: https://github.com/crispgm/jekyll-crisp-theme
 - name: crisp-resume
   description: A minimalist's résumé template powered by Jekyll.
   links:
@@ -54,12 +49,28 @@
     - text: GitHub
       href: https://github.com/crispgm/gsm
 - name: GitHub Meta Badges
-  description: Simple GitHub Metadata Badges (e.g. stars, issues, and more)
+  description: Simple GitHub Metadata Badges (e.g. stars, issues, and more).
   links:
     - text: Homepage
       href: https://crispgm.github.io/github-meta-badges/
     - text: GitHub
       href: https://github.com/crispgm/github-meta-badges
+- name: Caravan
+  description: Simple project files watcher and deployer.
+  links:
+    - text: RubyGems
+      href: https://rubygems.org/gems/caravan
+    - text: GitHub
+      href: https://github.com/crispgm/caravan
+- name: URL Auto Splicer
+  description: URLAutoSplicer is a simple Chrome Extension, which construct URL with context selection and go instantly.
+  links:
+    - text: Chrome WebStore
+      href: https://chrome.google.com/webstore/detail/url-auto-splicer/kmlnjaeipdljbegfnfofknfaeojgojgm
+    - text: Homepage
+      href: https://urlautoredirector.github.io/URLAutoSplicer
+    - text: GitHub
+      href: https://github.com/URLAutoRedirector/URLAutoSplicer
 - name: jekyll-tagslist
   description: A Liquid tag plugin for Jekyll, which enables you to collect, order and filter tags on your posts.
   links:
@@ -67,3 +78,8 @@
       href: https://rubygems.org/gems/jekyll-tagslist
     - text: GitHub
       href: https://github.com/crispgm/jekyll-tags-list-plugin
+- name: jekyll-crisp-theme
+  description: (WIP) A minimalism theme for Jekyll.
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/jekyll-crisp-theme
