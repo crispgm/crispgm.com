@@ -41,9 +41,12 @@ a {
   padding: 0;
   width: 45rem; }
 
+.blog-wrapper {
+  display: block; }
+
 .sidebar {
-  width: 15.4rem;
-  margin: 0 .8rem 0 0; }
+  margin: 0 .8rem 0 0;
+  width: 15.4rem; }
 
 .content {
   text-align: center;
@@ -58,8 +61,8 @@ a {
     width: 100%; }
 
   .sidebar {
-    width: 100%;
-    margin: 0; }
+    margin: 0;
+    width: 100%; }
 
   .content-wrapper {
     padding-left: .5rem;
