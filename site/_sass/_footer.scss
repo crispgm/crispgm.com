@@ -2,32 +2,25 @@
 // Copyright(c) David Zhang, 2017
 
 footer {
+  border-top: 1px dotted $border-color;
   font-size: 1rem;
   margin-top: 2.4rem;
   overflow: hidden;
   text-align: center;
-
-  .content-wrapper {
-    border-bottom: 0;
-  }
-}
-
-@media (max-width: $breakpoint) {
-  footer {
-    .content-wrapper {
-      padding-left: 0;
-    }
-  }
 }
 
 .contact {
   font-size: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   text-align: left;
 
   a {
     color: $main-color;
     padding-left: .8rem;
+
+    &:first-of-type {
+      padding-left: .2rem;
+    }
   }
 
   &:hover {
@@ -47,15 +40,10 @@ footer {
 
 @media (max-width: $breakpoint) {
   .contact {
-    .contact-copyright {
-      margin-left: .6rem;
-      padding-top: 1rem;
-      width: 100%;
-    }
-
     .contact-links {
-      float: none;
-      margin-left: -.1rem;
+      float: left;
+      margin: .4rem 0 0 -.1rem;
+      text-align: left;
       width: 100%;
     }
   }
