@@ -24,41 +24,26 @@
 </head>
 
   <body>
-    <div class="content" id="header">
-      <header class="content-wrapper menu">
-  <div class="menu-home">
-    <a href="/">DAVID ZHANG</a>
-  </div>
-  <div class="menu-links">
-    <div class="menu-item">
-      <a href="/blog.html">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/project.html">Project</a>
-    </div>
-    <div class="menu-item">
-      <a href="/wiki/">Wiki</a>
-    </div>
-    <div class="menu-item">
-      <a href="/about.html">About</a>
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="content" id="main-content">
-      <div class="content-wrapper">
-        <div class="article">
-  <div class="article-head">
-    <div class="article-title">
-      MySQL 更新多条记录的不同值
-    </div>
-    <div class="article-date">
-      September 12, 2014
-    </div>
-  </div>
-  <div class="article-main">
-    <p>MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：</p>
+    <div class="wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">DAVID ZHANG</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            MySQL 更新多条记录的不同值
+          </div>
+          <div class="article-date">
+            September 12, 2014
+          </div>
+        </div>
+        <div class="article-main">
+          <p>MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：</p>
 
 <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
 <span class="k">SET</span> <span class="n">column_value</span><span class="o">=</span><span class="mi">1</span>  
@@ -107,24 +92,25 @@
 
 <p>END.</p>
 
-  </div>
-  <div class="article-share">
-    <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fmysql-update-multirows.html&text=MySQL+%E6%9B%B4%E6%96%B0%E5%A4%9A%E6%9D%A1%E8%AE%B0%E5%BD%95%E7%9A%84%E4%B8%8D%E5%90%8C%E5%80%BC">
-      <i class="fa fa-twitter"></i>
-    </a>
-    
-    <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fmysql-update-multirows.html%26rhash%3Da3e6c7b51eec6a">
-      <i class="fa fa-telegram"></i>
-    </a>
-  </div>
-  <div id="disqus_thread" class="article-comment"></div>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fmysql-update-multirows.html&text=MySQL+%E6%9B%B4%E6%96%B0%E5%A4%9A%E6%9D%A1%E8%AE%B0%E5%BD%95%E7%9A%84%E4%B8%8D%E5%90%8C%E5%80%BC">
+            <i class="fa fa-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fmysql-update-multirows.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="fa fa-telegram"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
     </div>
-    <footer>
-  <div class="content-wrapper contact" id="contact">
+    <footer class="wrapper content-wrapper contact" id="contact">
+  <div class="sidebar">
+    David Zhang &copy; 2017
+  </div>
+  <div class="content">
     <div class="contact-links">
       <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
       <a href="/feed.xml"><i class="fa fa-rss"></i></a>
@@ -134,10 +120,6 @@
       <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
       <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
       <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-    <div class="contact-copyright">
-      David Zhang &copy; 2017
     </div>
   </div>
 </footer>

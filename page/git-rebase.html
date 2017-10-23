@@ -24,41 +24,26 @@
 </head>
 
   <body>
-    <div class="content" id="header">
-      <header class="content-wrapper menu">
-  <div class="menu-home">
-    <a href="/">DAVID ZHANG</a>
-  </div>
-  <div class="menu-links">
-    <div class="menu-item">
-      <a href="/blog.html">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/project.html">Project</a>
-    </div>
-    <div class="menu-item">
-      <a href="/wiki/">Wiki</a>
-    </div>
-    <div class="menu-item">
-      <a href="/about.html">About</a>
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="content" id="main-content">
-      <div class="content-wrapper">
-        <div class="article">
-  <div class="article-head">
-    <div class="article-title">
-      开源项目中使用 git-rebase 合并提交
-    </div>
-    <div class="article-date">
-      August 16, 2016
-    </div>
-  </div>
-  <div class="article-main">
-    <p>最近，在 GitHub 上贡献代码时，常常是在本地提交 <code class="highlighter-rouge">git commit</code> 很多次后才发起 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commits。</p>
+    <div class="wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">DAVID ZHANG</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            开源项目中使用 git-rebase 合并提交
+          </div>
+          <div class="article-date">
+            August 16, 2016
+          </div>
+        </div>
+        <div class="article-main">
+          <p>最近，在 GitHub 上贡献代码时，常常是在本地提交 <code class="highlighter-rouge">git commit</code> 很多次后才发起 PR。亦或是在发起 PR 后，又因为功能、自动化测试、代码风格等原因，进行了几次修复性质的 commits。</p>
 
 <p>当维护者完成 Code Review 之后，往往就会提出类似这样的要求：</p>
 
@@ -172,24 +157,25 @@ s 030f64a Graceful require
 
 <p>完成 push 后，GitHub 的 PR 中，几条提交就会被合并到了同一条中。</p>
 
-  </div>
-  <div class="article-share">
-    <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fgit-rebase.html&text=%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8+git-rebase+%E5%90%88%E5%B9%B6%E6%8F%90%E4%BA%A4">
-      <i class="fa fa-twitter"></i>
-    </a>
-    
-    <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fgit-rebase.html%26rhash%3Da3e6c7b51eec6a">
-      <i class="fa fa-telegram"></i>
-    </a>
-  </div>
-  <div id="disqus_thread" class="article-comment"></div>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fgit-rebase.html&text=%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8+git-rebase+%E5%90%88%E5%B9%B6%E6%8F%90%E4%BA%A4">
+            <i class="fa fa-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fgit-rebase.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="fa fa-telegram"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
     </div>
-    <footer>
-  <div class="content-wrapper contact" id="contact">
+    <footer class="wrapper content-wrapper contact" id="contact">
+  <div class="sidebar">
+    David Zhang &copy; 2017
+  </div>
+  <div class="content">
     <div class="contact-links">
       <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
       <a href="/feed.xml"><i class="fa fa-rss"></i></a>
@@ -199,10 +185,6 @@ s 030f64a Graceful require
       <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
       <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
       <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-    <div class="contact-copyright">
-      David Zhang &copy; 2017
     </div>
   </div>
 </footer>

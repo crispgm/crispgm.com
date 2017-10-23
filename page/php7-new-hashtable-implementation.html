@@ -24,41 +24,26 @@
 </head>
 
   <body>
-    <div class="content" id="header">
-      <header class="content-wrapper menu">
-  <div class="menu-home">
-    <a href="/">DAVID ZHANG</a>
-  </div>
-  <div class="menu-links">
-    <div class="menu-item">
-      <a href="/blog.html">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/project.html">Project</a>
-    </div>
-    <div class="menu-item">
-      <a href="/wiki/">Wiki</a>
-    </div>
-    <div class="menu-item">
-      <a href="/about.html">About</a>
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="content" id="main-content">
-      <div class="content-wrapper">
-        <div class="article">
-  <div class="article-head">
-    <div class="article-title">
-      『翻译』PHP 7 新 Hash 表实现
-    </div>
-    <div class="article-date">
-      July 06, 2016
-    </div>
-  </div>
-  <div class="article-main">
-    <h1 id="声明">声明</h1>
+    <div class="wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">DAVID ZHANG</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            『翻译』PHP 7 新 Hash 表实现
+          </div>
+          <div class="article-date">
+            July 06, 2016
+          </div>
+        </div>
+        <div class="article-main">
+          <h1 id="声明">声明</h1>
 
 <p>本文翻译自 PHP 开发组成员 Nikita Popov(<a href="https://github.com/nikic">@nikic</a>) 的博客，文章根据中文习惯做了一定的调整。</p>
 
@@ -394,24 +379,25 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>希望我能够给你们一些 PHP 7 Hash 表内核的洞见。可能我还会写一篇关于 <code class="highlighter-rouge">zval</code> 的后续文章，我已经在本文中触及到了它的一些不同，但对于这个话题还可以说更多的东西。</p>
 
-  </div>
-  <div class="article-share">
-    <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fphp7-new-hashtable-implementation.html&text=%E3%80%8E%E7%BF%BB%E8%AF%91%E3%80%8FPHP+7+%E6%96%B0+Hash+%E8%A1%A8%E5%AE%9E%E7%8E%B0">
-      <i class="fa fa-twitter"></i>
-    </a>
-    
-    <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fphp7-new-hashtable-implementation.html%26rhash%3Da3e6c7b51eec6a">
-      <i class="fa fa-telegram"></i>
-    </a>
-  </div>
-  <div id="disqus_thread" class="article-comment"></div>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fphp7-new-hashtable-implementation.html&text=%E3%80%8E%E7%BF%BB%E8%AF%91%E3%80%8FPHP+7+%E6%96%B0+Hash+%E8%A1%A8%E5%AE%9E%E7%8E%B0">
+            <i class="fa fa-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fphp7-new-hashtable-implementation.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="fa fa-telegram"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
     </div>
-    <footer>
-  <div class="content-wrapper contact" id="contact">
+    <footer class="wrapper content-wrapper contact" id="contact">
+  <div class="sidebar">
+    David Zhang &copy; 2017
+  </div>
+  <div class="content">
     <div class="contact-links">
       <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
       <a href="/feed.xml"><i class="fa fa-rss"></i></a>
@@ -421,10 +407,6 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
       <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
       <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
       <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-    <div class="contact-copyright">
-      David Zhang &copy; 2017
     </div>
   </div>
 </footer>

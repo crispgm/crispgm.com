@@ -24,41 +24,26 @@
 </head>
 
   <body>
-    <div class="content" id="header">
-      <header class="content-wrapper menu">
-  <div class="menu-home">
-    <a href="/">DAVID ZHANG</a>
-  </div>
-  <div class="menu-links">
-    <div class="menu-item">
-      <a href="/blog.html">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/project.html">Project</a>
-    </div>
-    <div class="menu-item">
-      <a href="/wiki/">Wiki</a>
-    </div>
-    <div class="menu-item">
-      <a href="/about.html">About</a>
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="content" id="main-content">
-      <div class="content-wrapper">
-        <div class="article">
-  <div class="article-head">
-    <div class="article-title">
-      Ruby 相见恨晚
-    </div>
-    <div class="article-date">
-      August 28, 2016
-    </div>
-  </div>
-  <div class="article-main">
-    <p>大学时因为好奇的原因在图书馆借阅过几次 Ruby 和 Ruby on Rails 的书籍，大概是道行不够的原因，完全体会不到它的优点。</p>
+    <div class="wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">DAVID ZHANG</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            Ruby 相见恨晚
+          </div>
+          <div class="article-date">
+            August 28, 2016
+          </div>
+        </div>
+        <div class="article-main">
+          <p>大学时因为好奇的原因在图书馆借阅过几次 Ruby 和 Ruby on Rails 的书籍，大概是道行不够的原因，完全体会不到它的优点。</p>
 
 <p>两个月前，因为 <a href="https://jekyllrb.com/">Jekyll</a> 接触到了 Ruby，并且成为了 Jekyll 的忠实贡献者。之后，不仅所有的个人做的网站都变成了 “Powered by Jekyll”，还学会了 Jekyll 整个 Project 极致的自动化工具链。Jekyll 通过测试驱动 (TDD, Test Driven Development) 覆盖 lib 层功能，通过行为驱动 (BDD, Behavior Driven Development) 回归整体功能，并在 Travis 和 AppVeyor 分别进行 Linux 环境和 Windows 环境下的持续集成。Jekyll 还通过 <code class="highlighter-rouge">rake</code> 实现同个 Project 下网站部分的生成发布到 <code class="highlighter-rouge">gh-pages</code> 分支、发布时从打包到上传 <code class="highlighter-rouge">gem push</code> 等操作。甚至说，Jekyll 的维护者还引入了一个账户名为 jekyllbot 的机器人完成 PR Merge、追加 Changelog、Issues/PR 自动分配 assignee 和发布 Releasenotes 等工作。</p>
 
@@ -92,24 +77,25 @@
 
 <p>End.</p>
 
-  </div>
-  <div class="article-share">
-    <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fregret-not-meet-ruby-before.html&text=Ruby+%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A">
-      <i class="fa fa-twitter"></i>
-    </a>
-    
-    <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fregret-not-meet-ruby-before.html%26rhash%3Da3e6c7b51eec6a">
-      <i class="fa fa-telegram"></i>
-    </a>
-  </div>
-  <div id="disqus_thread" class="article-comment"></div>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fregret-not-meet-ruby-before.html&text=Ruby+%E7%9B%B8%E8%A7%81%E6%81%A8%E6%99%9A">
+            <i class="fa fa-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fregret-not-meet-ruby-before.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="fa fa-telegram"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
     </div>
-    <footer>
-  <div class="content-wrapper contact" id="contact">
+    <footer class="wrapper content-wrapper contact" id="contact">
+  <div class="sidebar">
+    David Zhang &copy; 2017
+  </div>
+  <div class="content">
     <div class="contact-links">
       <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
       <a href="/feed.xml"><i class="fa fa-rss"></i></a>
@@ -119,10 +105,6 @@
       <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
       <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
       <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-    <div class="contact-copyright">
-      David Zhang &copy; 2017
     </div>
   </div>
 </footer>

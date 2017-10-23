@@ -24,41 +24,26 @@
 </head>
 
   <body>
-    <div class="content" id="header">
-      <header class="content-wrapper menu">
-  <div class="menu-home">
-    <a href="/">DAVID ZHANG</a>
-  </div>
-  <div class="menu-links">
-    <div class="menu-item">
-      <a href="/blog.html">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/project.html">Project</a>
-    </div>
-    <div class="menu-item">
-      <a href="/wiki/">Wiki</a>
-    </div>
-    <div class="menu-item">
-      <a href="/about.html">About</a>
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="content" id="main-content">
-      <div class="content-wrapper">
-        <div class="article">
-  <div class="article-head">
-    <div class="article-title">
-      Isomorphic React/Preact with Heroku
-    </div>
-    <div class="article-date">
-      July 06, 2017
-    </div>
-  </div>
-  <div class="article-main">
-    <p><a href="http://nbrugby.com/">Rugby News Board</a> is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.</p>
+    <div class="wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">DAVID ZHANG</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            Isomorphic React/Preact with Heroku
+          </div>
+          <div class="article-date">
+            July 06, 2017
+          </div>
+        </div>
+        <div class="article-main">
+          <p><a href="http://nbrugby.com/">Rugby News Board</a> is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.</p>
 
 <p>Rugby News Board was <a href="https://github.com/crispgm/rugby-board">firstly built</a> with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a <code class="highlighter-rouge">news</code> table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.</p>
 
@@ -271,24 +256,25 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>The development experience of frontend is great, with fancy frameworks, tools and developer’s ecology. It evolves very fast, faster than evolvement of its documentation. The examples of the documentations fail frequently as version increases fast. But, it’s fantastic that they often give accurate migration advice so that I can fix immediately. For other problems, StackOverflow provides strong supports as frontend people are the most vigorous in the industry.</p>
 
-  </div>
-  <div class="article-share">
-    <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fisomorphic-react-preact-with-heroku.html&text=Isomorphic+React%2FPreact+with+Heroku">
-      <i class="fa fa-twitter"></i>
-    </a>
-    
-    <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fisomorphic-react-preact-with-heroku.html%26rhash%3Da3e6c7b51eec6a">
-      <i class="fa fa-telegram"></i>
-    </a>
-  </div>
-  <div id="disqus_thread" class="article-comment"></div>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fisomorphic-react-preact-with-heroku.html&text=Isomorphic+React%2FPreact+with+Heroku">
+            <i class="fa fa-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fisomorphic-react-preact-with-heroku.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="fa fa-telegram"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
     </div>
-    <footer>
-  <div class="content-wrapper contact" id="contact">
+    <footer class="wrapper content-wrapper contact" id="contact">
+  <div class="sidebar">
+    David Zhang &copy; 2017
+  </div>
+  <div class="content">
     <div class="contact-links">
       <a href="mailto:crispgm@gmail.com"><i class="fa fa-envelope-o"></i></a>
       <a href="/feed.xml"><i class="fa fa-rss"></i></a>
@@ -298,10 +284,6 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
       <a href="https://twitter.com/crispgm"><i class="fa fa-twitter"></i></a>
       <a href="http://medium.com/@crispgm"><i class="fa fa-medium"></i></a>
       <a href="https://www.linkedin.com/in/wanlong-zhang"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-    <div class="contact-copyright">
-      David Zhang &copy; 2017
     </div>
   </div>
 </footer>
