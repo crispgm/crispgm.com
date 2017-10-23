@@ -1,5 +1,8 @@
-<footer>
-  <div class="content-wrapper contact" id="contact">
+<footer class="wrapper content-wrapper contact" id="contact">
+  <div class="sidebar">
+    {{ site.author }} &copy; {{ site.time | date: "%Y" }}
+  </div>
+  <div class="content">
     <div class="contact-links">
       <a href="mailto:{{ site.contact.email }}"><i class="fa fa-envelope-o"></i></a>
       <a href="/feed.xml"><i class="fa fa-rss"></i></a>
@@ -9,10 +12,6 @@
       <a href="https://twitter.com/{{ site.contact.twitter }}"><i class="fa fa-twitter"></i></a>
       <a href="http://medium.com/@{{ site.contact.medium }}"><i class="fa fa-medium"></i></a>
       <a href="https://www.linkedin.com/in/{{ site.contact.linkedin }}"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-    <div class="contact-copyright">
-      {{ site.author }} &copy; {{ site.time | date: "%Y" }}
     </div>
   </div>
 </footer>

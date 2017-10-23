@@ -7,10 +7,20 @@
   .page-main {
     .page-title {
       color: $sub-color;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       margin-top: .8rem;
-      padding: .8rem 0;
+      padding-top: .8rem;
       text-align: left;
+    }
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .page {
+    .page-main {
+      .page-title {
+        padding: 0;
+      }
     }
   }
 }

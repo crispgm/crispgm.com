@@ -2,46 +2,32 @@
 // Copyright(c) David Zhang, 2017
 
 .menu {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: .4rem;
-  padding-top: .4rem;
+  background-color: $sub-color;
+  color: $bg-color;
+  margin: 1.5rem 0;
+  padding: .8rem;
   text-align: left;
 
   .menu-home {
-    font-size: 1rem;
-    letter-spacing: 2px;
+    font-size: 1.4rem;
     padding-top: .1rem;
+    width: 100%;
 
     a {
-      color: $sub-color;
+      color: $bg-color;
       text-decoration: none;
-
-      &:hover {
-        background-color: $main-color;
-        color: $bg-color;
-      }
     }
   }
 
   .menu-links {
-    display: flex;
-    float: right;
-    margin-top: 0;
+    margin-top: 1rem;
   }
 
   .menu-item {
     font-size: 1rem;
-    padding: 0 .4rem;
+    margin-top: .6rem;
+    padding-right: .8rem;
     text-align: left;
-
-    &:first-of-type {
-      padding-left: 0;
-    }
-
-    &:last-of-type {
-      padding-right: 0;
-    }
 
     a {
       color: $light-color;
@@ -56,6 +42,21 @@
   .menu-active {
     a {
       text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .menu {
+    margin: 0;
+
+    .menu-links {
+      display: flex;
+      margin: 0;
+    }
+
+    .menu-item {
+      margin: 0;
     }
   }
 }

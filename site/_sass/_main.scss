@@ -26,6 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100%;
   margin: 0;
+  padding: 0;
   text-align: center;
   word-wrap: break-word;
 
@@ -44,17 +45,38 @@ a {
   }
 }
 
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  width: $breakpoint;
+}
+
+.sidebar {
+  width: 15.4rem;
+  margin: 0 .8rem 0 0;
+}
+
 .content {
   text-align: center;
   width: 100%;
 }
 
 .content-wrapper {
-  margin: 0 auto;
-  width: $breakpoint;
+  padding: .8rem 0;
 }
 
 @media (max-width: $breakpoint) {
+  .wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 0;
+  }
+
   .content-wrapper {
     padding-left: .5rem;
     padding-right: .5rem;
