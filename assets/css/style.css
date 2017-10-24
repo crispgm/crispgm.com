@@ -60,7 +60,8 @@ img {
   padding-top: 1.2rem;
   text-align: left; }
   .menu .menu-home {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    letter-spacing: 2px; }
     .menu .menu-home a {
       color: #343a40;
       text-decoration: none; }
@@ -88,7 +89,7 @@ img {
       display: block;
       padding-top: .4rem; }
       .menu .menu-home {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         padding: .4rem 0; }
       .menu .menu-links {
         float: left;
