@@ -11,7 +11,7 @@
     }
 
     a {
-      color: $main-color;
+      color: $grey-9;
       text-decoration: none;
 
       &:hover {
@@ -26,12 +26,12 @@
     text-align: left;
 
     .article-title {
-      color: $sub-color;
+      color: $grey-8;
       font-size: 2.2rem;
     }
 
     .article-date {
-      color: $light-color;
+      color: $grey-5;
       font-size: 1rem;
       margin-top: 1rem;
     }
@@ -48,7 +48,7 @@
     text-align: center;
 
     a {
-      color: $sub-color;
+      color: $grey-8;
       padding: 0 .4rem;
 
       &:hover {
@@ -66,7 +66,7 @@
 }
 
 h1 {
-  color: $sub-color;
+  color: $grey-8;
   font-size: 2.4rem;
   font-weight: 400;
   padding-top: 1.6rem;
@@ -74,7 +74,7 @@ h1 {
 }
 
 h2 {
-  color: $sub-color;
+  color: $grey-8;
   font-size: 2rem;
   font-weight: 400;
   padding-top: 1.4rem;
@@ -82,7 +82,7 @@ h2 {
 }
 
 h3 {
-  color: $sub-color;
+  color: $grey-8;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1.2rem;
@@ -90,7 +90,7 @@ h3 {
 }
 
 h4 {
-  color: $sub-color;
+  color: $grey-8;
   font-size: 1.2rem;
   font-weight: 600;
   padding-top: .8rem;
@@ -98,7 +98,7 @@ h4 {
 }
 
 h5 {
-  color: $sub-color;
+  color: $grey-8;
   font-size: 1rem;
   font-weight: 700;
   padding-top: .8rem;
@@ -106,7 +106,7 @@ h5 {
 }
 
 blockquote {
-  border-left: .2rem solid $border-color;
+  border-left: .2rem solid $grey-3;
   margin-left: 0;
   padding-left: 1rem;
 }
@@ -127,7 +127,7 @@ sup {
 }
 
 hr {
-  border-top: 1px $sub-color solid;
+  border-top: 1px solid $grey-8;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 2.4rem;
@@ -156,11 +156,11 @@ table {
 
   tr {
     &:hover {
-      background-color: $light-color;
+      background-color: $grey-5;
     }
 
     th {
-      background-color: $light-color;
+      background-color: $grey-5;
       padding: .2rem .4rem;
     }
 
