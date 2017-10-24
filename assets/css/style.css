@@ -241,7 +241,7 @@ sup {
   vertical-align: auto; }
 
 hr {
-  border-top: 1px #343a40 solid;
+  border-top: 1px solid #343a40;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 2.4rem; }
