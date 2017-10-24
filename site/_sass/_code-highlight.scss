@@ -8,7 +8,7 @@ code {
 }
 
 pre.highlight {
-  border: 1px solid $code-bg-color;
+  border: 1px solid $grey-7;
   border-radius: 4px;
   font-size: .9rem;
 }
@@ -18,7 +18,7 @@ code.hljs {
 }
 
 code.highlighter-rouge {
-  border: 1px solid $border-color;
+  border: 1px solid $grey-3;
   border-radius: .2rem;
   font-size: .9rem;
   font-weight: bold;

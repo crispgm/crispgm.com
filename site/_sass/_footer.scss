@@ -2,7 +2,7 @@
 // Copyright(c) David Zhang, 2017
 
 footer {
-  border-top: 1px dotted $border-color;
+  border-top: 1px dotted $grey-3;
   font-size: 1rem;
   margin-top: 2.4rem;
   overflow: hidden;
@@ -15,7 +15,7 @@ footer {
   text-align: left;
 
   a {
-    color: $main-color;
+    color: $grey-9;
     padding-left: .8rem;
 
     &:first-of-type {
@@ -25,10 +25,10 @@ footer {
 
   &:hover {
     a {
-      color: $light-color;
+      color: $grey-5;
 
       &:hover {
-        color: $main-color;
+        color: $grey-9;
       }
     }
   }

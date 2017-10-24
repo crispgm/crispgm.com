@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  background-color: $bg-color;
-  color: $main-color;
+  background-color: $white;
+  color: $grey-9;
   font-family: "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -moz-osx-font-smoothing: grayscale;
@@ -31,13 +31,13 @@ body {
   word-wrap: break-word;
 
   ::selection {
-    background-color: $link-color;
-    color: $bg-color;
+    background-color: $blue-5;
+    color: $white;
   }
 }
 
 a {
-  color: $link-color;
+  color: $blue-5;
   text-decoration: none;
 
   &:hover {

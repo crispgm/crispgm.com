@@ -2,8 +2,8 @@
 // Copyright(c) David Zhang, 2017
 
 .menu {
-  background-color: $sub-color;
-  color: $bg-color;
+  background-color: $grey-8;
+  color: $white;
   margin: 1.5rem 0;
   padding: .8rem;
   text-align: left;
@@ -14,7 +14,7 @@
     width: 100%;
 
     a {
-      color: $bg-color;
+      color: $white;
       text-decoration: none;
     }
   }
@@ -30,7 +30,7 @@
     text-align: left;
 
     a {
-      color: $light-color;
+      color: $grey-5;
       text-decoration: none;
 
       &:hover {
