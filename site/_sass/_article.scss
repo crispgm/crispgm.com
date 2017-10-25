@@ -1,6 +1,15 @@
 // Theme of Crisp Blog
 // Copyright(c) David Zhang, 2017
 
+.progress-bar {
+  background-color: $grey-3;
+  height: 2px;
+  position: fixed;
+  top: 0;
+  width: 0;
+  z-index: 101;
+}
+
 .article {
   margin-bottom: 2rem;
   text-align: left;

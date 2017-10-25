@@ -1,0 +1,19 @@
+<script type="text/javascript">
+document.addEventListener('scroll', function(e) {
+  var winHeight = window.innerHeight;
+  var wrapper   = document.querySelector('.blog-wrapper');
+  var article   = document.querySelector('.article');
+  var docHeight = wrapper.offsetHeight;
+  var docWidth  = article.offsetWidth;
+  var maxHeight = docHeight - winHeight - article.offsetTop;
+  var scrollTop = window.scrollY || window.scollTop || document.getElementsByTagName("html")[0].scrollTop;
+  var ratio = scrollTop / maxHeight;
+  var progressBar = document.querySelector('.progress-bar');
+  if (ratio <= 1.0) {
+    progressBar.style.width = docWidth * ratio + 'px';
+  }
+  else {
+    progressBar.style.width = docWidth + 'px';
+  }
+});
+</script>
