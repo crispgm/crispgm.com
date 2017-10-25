@@ -152,6 +152,14 @@ footer {
 @media (max-width: 45rem) {
   .page .page-main .page-title {
     padding: 0; } }
+.progress-bar {
+  background-color: #dee2e6;
+  height: 2px;
+  position: fixed;
+  top: 0;
+  width: 0;
+  z-index: 101; }
+
 .article {
   margin-bottom: 2rem;
   text-align: left; }
