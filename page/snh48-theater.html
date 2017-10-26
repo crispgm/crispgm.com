@@ -24,8 +24,8 @@
 </head>
 
   <body>
+    <div class="progress-bar"></div>
     <div class="wrapper blog-wrapper content-wrapper">
-      <div class="progress-bar"></div>
       <div class="article">
         <div class="article-menu">
           <div class="article-home">
@@ -225,22 +225,21 @@ s.setAttribute('data-timestamp', +new Date());
 
 
   </body>
-  <script type="text/javascript">
+  <script>
 document.addEventListener('scroll', function(e) {
-  var winHeight = window.innerHeight;
   var wrapper   = document.querySelector('.blog-wrapper');
   var article   = document.querySelector('.article');
   var docHeight = wrapper.offsetHeight;
-  var docWidth  = article.offsetWidth;
-  var maxHeight = docHeight - winHeight - article.offsetTop;
+  var maxHeight = docHeight - window.innerHeight - article.offsetTop;
   var scrollTop = window.scrollY || window.scollTop || document.getElementsByTagName("html")[0].scrollTop;
   var ratio = scrollTop / maxHeight;
   var progressBar = document.querySelector('.progress-bar');
+  var winWidth  = window.innerWidth;
   if (ratio <= 1.0) {
-    progressBar.style.width = docWidth * ratio + 'px';
+    progressBar.style.width = winWidth * ratio + 'px';
   }
   else {
-    progressBar.style.width = docWidth + 'px';
+    progressBar.style.width = winWidth + 'px';
   }
 });
 </script>
