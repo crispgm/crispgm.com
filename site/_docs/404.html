@@ -1,0 +1,31 @@
+---
+title: 404 Not Found
+permalink: /404.html
+jquery: true
+---
+
+<div class="page-title">404 Not Found</div>
+  <p>
+    The resource you requested was not found. To (help me) handle the problem, please report the problem by <a href="https://github.com/crispgm/crispgm.com/issues/new?title=[Report]%20404%20Not%20Found" target="_blank">creating an issue</a>.
+  </p>
+  <p>
+    You may checkout the <a href="/blog.html">latest posts</a>:
+  </p>
+  <ul>
+  {% for post in site.posts limit:3 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+  <p>
+    Random beautiful photo from <a href="https://unsplash.com/">Unsplash</a>:
+  </p>
+  <a href="#" id="unsplash">
+    <img src="https://source.unsplash.com/random" alt="Unsplash Random Photo">
+  </a>
+</div>
+
+<script>
+$('#unsplash>img').click(function(){
+  $(this).attr('src', 'https://source.unsplash.com/random?t=' + Math.random());
+});
+</script>
