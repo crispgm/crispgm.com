@@ -46,7 +46,100 @@
         <div class="article-main">
           <p>This article recommends awesome (and even funny) terminal tools, both executables and libraries.</p>
 
-<p>I first posted this on Oct 22th, 2015. And it is renewed on Jun 9th, 2017.</p>
+<p>I first posted this on Oct 22th, 2015. And it is renewed on Nov 29th, 2017.</p>
+
+<h2 id="softwares">Softwares</h2>
+
+<h3 id="tldr"><a href="https://tldr-pages.github.io/">tldr</a></h3>
+
+<p>📚 Simplified and community-driven man pages.</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>tldr ps
+
+ps
+
+Information about running processes.
+
+- List all running processes:
+    ps aux
+
+- List all running processes including the full <span class="nb">command </span>string:
+    ps auxww
+
+- Search <span class="k">for </span>a process that matches a string:
+    ps aux | grep string
+</code></pre>
+</div>
+
+<h3 id="lock-cli"><a href="https://github.com/sindresorhus/lock-cli">lock-cli</a></h3>
+
+<p>Lock your system from the command-line. Support macOS, Linux, and Windows.</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>lock
+</code></pre>
+</div>
+
+<p>Then, your OS will be locked.</p>
+
+<h3 id="gotty"><a href="https://github.com/yudai/gotty">Gotty</a></h3>
+
+<p>An awesome live broadcasting tool, which output your terminal, written with Go.</p>
+
+<p><img src="https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif" alt="" /></p>
+
+<h3 id="wego"><a href="https://github.com/schachmat/wego">Wego</a></h3>
+
+<p>Weather forecasting with ASCII GUI written in Go.</p>
+
+<p><img src="https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966" alt="" /></p>
+
+<h3 id="qrcode-terminal"><a href="https://github.com/gtanner/qrcode-terminal">Qrcode-terminal</a></h3>
+
+<p>Generate and display QR code with Node.js.</p>
+
+<p><img src="https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67" alt="" /></p>
+
+<h3 id="doubanfm"><a href="https://github.com/turingou/douban.fm">Douban.fm</a></h3>
+
+<p>Console based <a href="https://douban.fm/">Douban FM</a> client, written in Node.js. It runs on Mac but not very stable.</p>
+
+<p><img src="https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067" alt="" /></p>
+
+<h3 id="proxychains"><a href="https://github.com/rofl0r/proxychains-ng">ProxyChains</a></h3>
+
+<p>Socks and HTTP proxy for terminal. And we can use <code class="highlighter-rouge">proxychains</code> to boost speed of some services and get across the wall.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ proxychains4 git push
+</code></pre>
+</div>
+
+<h2 id="libraries">Libraries</h2>
+
+<h3 id="terminal-table"><a href="https://github.com/tj/terminal-table">Terminal Table</a></h3>
+
+<p><em>Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby.</em></p>
+
+<p>Simple but useful gem for Ruby. <code class="highlighter-rouge">terminal-table</code> is really powerful and easy-to-use to build and display tables in console based GUI.</p>
+
+<p>This is the official example of <code class="highlighter-rouge">terminal-table</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rows = []
+rows &lt;&lt; ['One', 1]
+rows &lt;&lt; ['Two', 2]
+rows &lt;&lt; ['Three', 3]
+table = Terminal::Table.new :rows =&gt; rows
+
+# &gt; puts table
+#
+# +-------+---+
+# | One   | 1 |
+# | Two   | 2 |
+# | Three | 3 |
+# +-------+---+
+</code></pre>
+</div>
+
+<h2 id="macos-specifics">macOS Specifics</h2>
 
 <h3 id="mas"><a href="https://github.com/mas-cli/mas">MAS</a></h3>
 
@@ -76,30 +169,6 @@ Upgrading 1 outdated application:
 WeChat (2.2.8)
 ==&gt; Downloading WeChat
 ==&gt; Installed WeChat
-</code></pre>
-</div>
-
-<h3 id="terminal-table"><a href="https://github.com/tj/terminal-table">Terminal Table</a></h3>
-
-<p><em>Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby.</em></p>
-
-<p>Simple but useful gem for Ruby. <code class="highlighter-rouge">terminal-table</code> is really powerful and easy-to-use to build and display tables in console based GUI.</p>
-
-<p>This is the official example of <code class="highlighter-rouge">terminal-table</code>:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>rows = []
-rows &lt;&lt; ['One', 1]
-rows &lt;&lt; ['Two', 2]
-rows &lt;&lt; ['Three', 3]
-table = Terminal::Table.new :rows =&gt; rows
-
-# &gt; puts table
-#
-# +-------+---+
-# | One   | 1 |
-# | Two   | 2 |
-# | Three | 3 |
-# +-------+---+
 </code></pre>
 </div>
 
@@ -160,48 +229,6 @@ usage:  m [OPTIONS] COMMAND [help]
 <div class="highlighter-rouge"><pre class="highlight"><code>$ m battery status
 Now drawing from 'AC Power'
  -InternalBattery-0 (id=3997795)	100%; charged; 0:00 remaining present: true
-</code></pre>
-</div>
-
-<h3 id="lock-cli"><a href="https://github.com/sindresorhus/lock-cli">lock-cli</a></h3>
-
-<p>Lock your system from the command-line. Support macOS, Linux, and Windows.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ lock
-</code></pre>
-</div>
-
-<p>Then, your OS will be locked.</p>
-
-<h3 id="gotty"><a href="https://github.com/yudai/gotty">Gotty</a></h3>
-
-<p>An awesome live broadcasting tool, which output your terminal, written with Go.</p>
-
-<p><img src="https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif" alt="" /></p>
-
-<h3 id="wego"><a href="https://github.com/schachmat/wego">Wego</a></h3>
-
-<p>Weather forecasting with ASCII GUI written in Go.</p>
-
-<p><img src="https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966" alt="" /></p>
-
-<h3 id="qrcode-terminal"><a href="https://github.com/gtanner/qrcode-terminal">Qrcode-terminal</a></h3>
-
-<p>Generate and display QR code with Node.js.</p>
-
-<p><img src="https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67" alt="" /></p>
-
-<h3 id="doubanfm"><a href="https://github.com/turingou/douban.fm">Douban.fm</a></h3>
-
-<p>Console based <a href="https://douban.fm/">Douban FM</a> client, written in Node.js. It runs on Mac but not very stable.</p>
-
-<p><img src="https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067" alt="" /></p>
-
-<h3 id="proxychains"><a href="https://github.com/rofl0r/proxychains-ng">ProxyChains</a></h3>
-
-<p>Socks and HTTP proxy for terminal. And we can use <code class="highlighter-rouge">proxychains</code> to boost speed of some services and get across the wall.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ proxychains4 git push
 </code></pre>
 </div>
 

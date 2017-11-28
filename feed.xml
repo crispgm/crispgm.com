@@ -5,9 +5,9 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Nov 2017 10:34:10 +0800</pubDate>
-    <lastBuildDate>Thu, 16 Nov 2017 10:34:10 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.2</generator>
+    <pubDate>Wed, 29 Nov 2017 01:58:54 +0800</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 01:58:54 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       
       <item>
@@ -413,7 +413,100 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
         <title>Awesome Terminal Tools</title>
         <description>&lt;p&gt;This article recommends awesome (and even funny) terminal tools, both executables and libraries.&lt;/p&gt;
 
-&lt;p&gt;I first posted this on Oct 22th, 2015. And it is renewed on Jun 9th, 2017.&lt;/p&gt;
+&lt;p&gt;I first posted this on Oct 22th, 2015. And it is renewed on Nov 29th, 2017.&lt;/p&gt;
+
+&lt;h2 id=&quot;softwares&quot;&gt;Softwares&lt;/h2&gt;
+
+&lt;h3 id=&quot;tldr&quot;&gt;&lt;a href=&quot;https://tldr-pages.github.io/&quot;&gt;tldr&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;📚 Simplified and community-driven man pages.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;tldr ps
+
+ps
+
+Information about running processes.
+
+- List all running processes:
+    ps aux
+
+- List all running processes including the full &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;string:
+    ps auxww
+
+- Search &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;a process that matches a string:
+    ps aux | grep string
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;lock-cli&quot;&gt;&lt;a href=&quot;https://github.com/sindresorhus/lock-cli&quot;&gt;lock-cli&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Lock your system from the command-line. Support macOS, Linux, and Windows.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;lock
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then, your OS will be locked.&lt;/p&gt;
+
+&lt;h3 id=&quot;gotty&quot;&gt;&lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;Gotty&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;An awesome live broadcasting tool, which output your terminal, written with Go.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wego&quot;&gt;&lt;a href=&quot;https://github.com/schachmat/wego&quot;&gt;Wego&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Weather forecasting with ASCII GUI written in Go.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;qrcode-terminal&quot;&gt;&lt;a href=&quot;https://github.com/gtanner/qrcode-terminal&quot;&gt;Qrcode-terminal&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Generate and display QR code with Node.js.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;doubanfm&quot;&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;Douban.fm&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Console based &lt;a href=&quot;https://douban.fm/&quot;&gt;Douban FM&lt;/a&gt; client, written in Node.js. It runs on Mac but not very stable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;proxychains&quot;&gt;&lt;a href=&quot;https://github.com/rofl0r/proxychains-ng&quot;&gt;ProxyChains&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Socks and HTTP proxy for terminal. And we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;proxychains&lt;/code&gt; to boost speed of some services and get across the wall.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ proxychains4 git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;libraries&quot;&gt;Libraries&lt;/h2&gt;
+
+&lt;h3 id=&quot;terminal-table&quot;&gt;&lt;a href=&quot;https://github.com/tj/terminal-table&quot;&gt;Terminal Table&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Simple but useful gem for Ruby. &lt;code class=&quot;highlighter-rouge&quot;&gt;terminal-table&lt;/code&gt; is really powerful and easy-to-use to build and display tables in console based GUI.&lt;/p&gt;
+
+&lt;p&gt;This is the official example of &lt;code class=&quot;highlighter-rouge&quot;&gt;terminal-table&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rows = []
+rows &amp;lt;&amp;lt; ['One', 1]
+rows &amp;lt;&amp;lt; ['Two', 2]
+rows &amp;lt;&amp;lt; ['Three', 3]
+table = Terminal::Table.new :rows =&amp;gt; rows
+
+# &amp;gt; puts table
+#
+# +-------+---+
+# | One   | 1 |
+# | Two   | 2 |
+# | Three | 3 |
+# +-------+---+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;macos-specifics&quot;&gt;macOS Specifics&lt;/h2&gt;
 
 &lt;h3 id=&quot;mas&quot;&gt;&lt;a href=&quot;https://github.com/mas-cli/mas&quot;&gt;MAS&lt;/a&gt;&lt;/h3&gt;
 
@@ -443,30 +536,6 @@ Upgrading 1 outdated application:
 WeChat (2.2.8)
 ==&amp;gt; Downloading WeChat
 ==&amp;gt; Installed WeChat
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;terminal-table&quot;&gt;&lt;a href=&quot;https://github.com/tj/terminal-table&quot;&gt;Terminal Table&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Terminal Table is a fast and simple, yet feature rich ASCII table generator written in Ruby.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Simple but useful gem for Ruby. &lt;code class=&quot;highlighter-rouge&quot;&gt;terminal-table&lt;/code&gt; is really powerful and easy-to-use to build and display tables in console based GUI.&lt;/p&gt;
-
-&lt;p&gt;This is the official example of &lt;code class=&quot;highlighter-rouge&quot;&gt;terminal-table&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rows = []
-rows &amp;lt;&amp;lt; ['One', 1]
-rows &amp;lt;&amp;lt; ['Two', 2]
-rows &amp;lt;&amp;lt; ['Three', 3]
-table = Terminal::Table.new :rows =&amp;gt; rows
-
-# &amp;gt; puts table
-#
-# +-------+---+
-# | One   | 1 |
-# | Two   | 2 |
-# | Three | 3 |
-# +-------+---+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -527,48 +596,6 @@ usage:  m [OPTIONS] COMMAND [help]
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ m battery status
 Now drawing from 'AC Power'
  -InternalBattery-0 (id=3997795)	100%; charged; 0:00 remaining present: true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;lock-cli&quot;&gt;&lt;a href=&quot;https://github.com/sindresorhus/lock-cli&quot;&gt;lock-cli&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Lock your system from the command-line. Support macOS, Linux, and Windows.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ lock
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Then, your OS will be locked.&lt;/p&gt;
-
-&lt;h3 id=&quot;gotty&quot;&gt;&lt;a href=&quot;https://github.com/yudai/gotty&quot;&gt;Gotty&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;An awesome live broadcasting tool, which output your terminal, written with Go.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/yudai/gotty/master/screenshot.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;wego&quot;&gt;&lt;a href=&quot;https://github.com/schachmat/wego&quot;&gt;Wego&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Weather forecasting with ASCII GUI written in Go.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/c3d2b92671f1ded5d5a9a9ebafdc836527f97269/687474703a2f2f7363686163686d61742e6769746875622e696f2f7765676f2f7765676f2e676966&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;qrcode-terminal&quot;&gt;&lt;a href=&quot;https://github.com/gtanner/qrcode-terminal&quot;&gt;Qrcode-terminal&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Generate and display QR code with Node.js.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1b87ab92f230c35ff19abf2449e0fd52bea3f124/68747470733a2f2f7261772e6769746875622e636f6d2f6774616e6e65722f7172636f64652d7465726d696e616c2f6d61737465722f6578616d706c652f62617369632e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;doubanfm&quot;&gt;&lt;a href=&quot;https://github.com/turingou/douban.fm&quot;&gt;Douban.fm&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Console based &lt;a href=&quot;https://douban.fm/&quot;&gt;Douban FM&lt;/a&gt; client, written in Node.js. It runs on Mac but not very stable.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/ca0a75a041cb65d1ad9dddc2e44b1c52903db7d0/687474703a2f2f7777312e73696e61696d672e636e2f6c617267652f36316666306465337477316563696a3364713830626a32306d3430657a3735752e6a7067&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;proxychains&quot;&gt;&lt;a href=&quot;https://github.com/rofl0r/proxychains-ng&quot;&gt;ProxyChains&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Socks and HTTP proxy for terminal. And we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;proxychains&lt;/code&gt; to boost speed of some services and get across the wall.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ proxychains4 git push
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
