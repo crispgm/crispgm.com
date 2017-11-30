@@ -35,7 +35,16 @@ experience:
     duration: Sep 2017 - present
     company: ByteDance Inc.
     description: >
-      I build app of cars' information.
+      <div>
+      I work on Dongchedi, an app about cars.
+      </div>
+      <br>
+      <div>
+      - Infrastructure of web engineering & AI, all the libraries & tools both backend & frontend.
+      </div>
+      <div>
+      - Mobile web & AI products.
+      </div>
   - title: Senior Software Engineer
     duration: Mar 2017 - Aug 2017
     company: Baidu Inc., News Feed
