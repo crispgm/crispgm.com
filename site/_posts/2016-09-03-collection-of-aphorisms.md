@@ -41,4 +41,4 @@ tags:
 [^3]: Ludwig Mies van der Rohe
 [^4]: 《我的应许之地》(My Promised Land: The Triumph and Tragedy of Israel)，阿里·沙维特 (Ari Shavit)。
 [^5]: 《史蒂夫·乔布斯传》（Steve Jobs），沃尔特·艾萨克森 (Walter Isaacson)。
-[^6]: 《灵魂经营：富士胶片的第二次创业神话》，古村重隆。
+[^6]: 《灵魂经营：富士胶片的第二次创业神话》，古森重隆。
