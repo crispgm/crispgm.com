@@ -5,9 +5,80 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Dec 2017 23:43:43 +0800</pubDate>
-    <lastBuildDate>Fri, 01 Dec 2017 23:43:43 +0800</lastBuildDate>
+    <pubDate>Tue, 05 Dec 2017 02:07:19 +0800</pubDate>
+    <lastBuildDate>Tue, 05 Dec 2017 02:07:19 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      
+      <item>
+        <title>高斯速算法和微小的优化</title>
+        <description>&lt;p&gt;今天在阅读 Linus Torvalds 的自传《Just for Fun》时（或者说是重温，因为大学时粗略的看过一遍），Linus 在书中提到了1加到100的高斯速算法。作为擅长中小学数学的中国人应该都很清楚这个是什么，我就不在此介绍了。&lt;/p&gt;
+
+&lt;p&gt;在书中他主要表达的是对故事真实性的一些质疑，因为他认为：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;伟大的数学家不会采用既繁琐又无趣的方法解决问题，因为他们能理解问题背后的真正内涵，并且利用这个内涵找到更为简便的方法，从而得到答案。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;容易走神的我，于是就在想：对于用笔算的小学生们，Bruteforce 意味着从1加到100，在很细心不出现低级失误的前提下，我想花个20分钟还是必要的。而对于掌握了高斯速算法的人来说，顶多10秒钟。这之间差了千倍。&lt;/p&gt;
+
+&lt;p&gt;那对于计算能力已经经历了几十年摩尔定律发展的情况下，高斯速算法和“无脑”的 Bruteforce 循环之间能差到多少？&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'benchmark/ips'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gaussian_add_to_100&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bruteforce_add_to_100&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;Benchmark&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ips&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gaussian add to 100'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gaussian_add_to_100&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'brute force add to 100'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bruteforce_add_to_100&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;compare!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;好奇的我，写了一段简单的 Ruby benchmark 程序。结果是：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-plain&quot;&gt;Warming up --------------------------------------
+ gaussian add to 100   157.824k i/100ms
+brute force add to 100
+                        11.804k i/100ms
+Calculating -------------------------------------
+ gaussian add to 100      5.103M (±12.3%) i/s -     25.094M in   5.003086s
+brute force add to 100
+                        140.711k (± 7.9%) i/s -    708.240k in   5.065663s
+
+Comparison:
+ gaussian add to 100:  5102771.3 i/s
+brute force add to 100:   140711.1 i/s - 36.26x  slower
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;相差了足足36倍。&lt;/p&gt;
+
+&lt;p&gt;产品开发中，我们往往会抱怨，程序“简单”到不用让你把链表拼来接去、不需要让你折腾二叉树。但我们真正把事情做好了吗？这些小小的优化并非微不足道。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Dec 2017 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/gaussian-summation.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/gaussian-summation.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1889,35 +1960,6 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
         <category>VPS</category>
         
         <category>DevOps</category>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>Awesome Coffee Shops in Beijing</title>
-        <description>&lt;p&gt;Coffee is one of &lt;a href=&quot;/things.html&quot;&gt;my favorite things&lt;/a&gt; and an important source of daily energy, which help me keep focus on work and be productive. I usually drink two cups of coffee provided by the company I serve every work day. And at the weekends, we need awesome coffee shops in Beijing city.&lt;/p&gt;
-
-&lt;p&gt;The data is powered by a open source project that I have contribute to all the time. It is called &lt;a href=&quot;https://github.com/ElaWorkshop/awesome-cn-cafe&quot;&gt;awesome-cn-cafe&lt;/a&gt;, which is a curated list of awesome café places in China. Currently, Beijing, Shanghai, Nanjing, Wuhan, Hangzhou, Guangzhou and Shenzhen are included.&lt;/p&gt;
-
-&lt;div class=&quot;text-center&quot;&gt;
-&lt;script src=&quot;https://embed.github.com/view/geojson/ElaWorkshop/awesome-cn-cafe/master/beijing.geojson&quot;&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Please star or contribute to the project if you like it.&lt;/p&gt;
-
-&lt;p&gt;Happy coffeeing!&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Sep 2016 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/awesome-coffee-shops-in-beijing.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/awesome-coffee-shops-in-beijing.html</guid>
-        
-        <category>awesome</category>
-        
-        <category>coffee</category>
-        
-        <category>coffeeshop</category>
         
         
       </item>
