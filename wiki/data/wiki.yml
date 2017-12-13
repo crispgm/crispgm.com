@@ -1,3 +1,9 @@
+- id: list-swap-usage-of-process
+  q: 如何查看进程消耗了多少 swap？
+  a: |
+    快速答案：
+    <pre><code>for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less</code></pre>
+    详见: <a href="https://www.cyberciti.biz/faq/linux-which-process-is-using-swap/">https://www.cyberciti.biz/faq/linux-which-process-is-using-swap/</a>
 - id: how-to-view-specific-process-in-top
   q: 如何用 TOP 查看指定进程的性能数据？
   a: |
