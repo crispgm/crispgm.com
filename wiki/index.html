@@ -23,6 +23,26 @@
       </header>
       <div class="section">
         
+        <div class="section-wrap" id="list-swap-usage-of-process">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              <a href="#list-swap-usage-of-process">如何查看进程消耗了多少 swap？</a>
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              快速答案：
+<pre><code>for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less</code></pre>
+详见: <a href="https://www.cyberciti.biz/faq/linux-which-process-is-using-swap/">https://www.cyberciti.biz/faq/linux-which-process-is-using-swap/</a>
+
+            </div>
+          </div>
+        </div>
+        
         <div class="section-wrap" id="how-to-view-specific-process-in-top">
           <div class="section-item">
             <div class="section-title title-q">
