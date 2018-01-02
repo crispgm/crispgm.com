@@ -5,9 +5,90 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jan 2018 00:57:20 +0800</pubDate>
-    <lastBuildDate>Mon, 01 Jan 2018 00:57:20 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.2</generator>
+    <pubDate>Tue, 02 Jan 2018 23:17:41 +0800</pubDate>
+    <lastBuildDate>Tue, 02 Jan 2018 23:17:41 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      
+      <item>
+        <title>为什么我们需要自建博客</title>
+        <description>&lt;p&gt;自从公众号起飞🚀之后，自媒体发展迅猛，在中华互联网领土上就出现了无数的『号』。即便是“号”时代之前，众多博客和轻博客平台也是一类常见的选择。那在这个时代，为什么我们需要自建博客呢？我想通过本文给出一个答案。&lt;/p&gt;
+
+&lt;h2 id=&quot;创造&quot;&gt;创造&lt;/h2&gt;
+
+&lt;p&gt;对于自建博客来说，我们将会创造一个网站。&lt;/p&gt;
+
+&lt;p&gt;最初，在技术上，我们需要申请域名、使用开源程序或者自己编写，然后部署上线。在设计上，我们需要自己设计或是选择 UI，字体，体验，交互。&lt;/p&gt;
+
+&lt;p&gt;接着，让我们的博客更美观、体验更好，支持评论、点赞、分享，做到 mobile friendly，支持国际化界面，支持 a11y&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。统统没有问题，自己创造就好。&lt;/p&gt;
+
+&lt;p&gt;对于内容，那本身就是创造。由于本文不是“为什么我们需要写博客”，这里就不解释了。&lt;/p&gt;
+
+&lt;h2 id=&quot;展示个性&quot;&gt;展示个性&lt;/h2&gt;
+
+&lt;p&gt;个人博客是个展示个性的好地方。在博客上，我们可以搞一些酷炫的动画，来点小清新的背景音乐。&lt;/p&gt;
+
+&lt;p&gt;除了博客本身，我们还可以嵌入或链接到简历、Portfolio、相册、and more。&lt;/p&gt;
+
+&lt;p&gt;我们可以用独特的设计、独特的配色、或者独特的字体。就像你的家，“装修”在线的家。&lt;/p&gt;
+
+&lt;h2 id=&quot;开放自由&quot;&gt;开放、自由&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;中文世界最大的悲劇便是封閉。從國家到公司，從公司到個人，都在打造圍牆，建起一個又一個圈子。&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;博客是 Web 1.0 时的就存在的，一切都以开放的方式进行着，没有平台化、大数据和推荐引擎。&lt;/p&gt;
+
+&lt;p&gt;域名、网站、链接、RSS。&lt;/p&gt;
+
+&lt;p&gt;有个&lt;code class=&quot;highlighter-rouge&quot;&gt;.com&lt;/code&gt;域名大概是我从小的梦想之一。&lt;/p&gt;
+
+&lt;p&gt;个人网站个人管理，没有平台，没有人和谐你，没人下线你喜欢的功能。&lt;/p&gt;
+
+&lt;p&gt;网站和文章通过链接传播分享，搜索引擎收录你的链接。&lt;/p&gt;
+
+&lt;p&gt;通过 RSS 订阅内容，只有自己主动选取的优质内容，没有骚扰没有推送没有推荐。推荐更懂你？如果是，说明你大概有些 naive。&lt;/p&gt;
+
+&lt;h2 id=&quot;甚至没有读者&quot;&gt;甚至没有读者&lt;/h2&gt;
+
+&lt;p&gt;或许有些丧。&lt;/p&gt;
+
+&lt;p&gt;域名没有备案，指不定哪天国内就无法访问。评论系统 Disqus 压根就在墙外呢。&lt;/p&gt;
+
+&lt;p&gt;没有平台的推荐，曝光很难。或许，你搜站名，Google、百度、Bing 第一位都不是你。额，最好赶紧确定是否有被收录？毕竟，搜索引擎支持手动提交链接。&lt;/p&gt;
+
+&lt;p&gt;RSS 别逗了。现在的年轻人有多少知道 RSS 是啥的，都在刷头条呢。即使知道，苹果上的 RSS 阅读器都被下架了&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;。当然，你确定你的内容值得订阅？&lt;/p&gt;
+
+&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
+
+&lt;p&gt;我还是推荐自建博客。因为没有读者也没关系，就像我们写作文也不是为了让别人看吧。况且，有自己的自建博客，也可以同步到各类自媒体号上，这是一种折衷。&lt;/p&gt;
+
+&lt;p&gt;但创造、个性和开放、自由才是我最珍视的东西。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Computer Accessibility &lt;a href=&quot;https://www.wikiwand.com/en/Computer_accessibility&quot;&gt;https://www.wikiwand.com/en/Computer_accessibility&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;利器拾遺 &lt;a href=&quot;http://lepture.com/zh/2017/liqi&quot;&gt;http://lepture.com/zh/2017/liqi&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;苹果从中国区应用商店下架 RSS 类应用 &lt;a href=&quot;http://www.solidot.org/story?sid=54239&quot;&gt;http://www.solidot.org/story?sid=54239&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 02 Jan 2018 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/why-should-we-create-a-blog.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/why-should-we-create-a-blog.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1774,192 +1855,6 @@ $ jekyll b
         <category>jekyll</category>
         
         <category>tips</category>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>Containerizing My VPS</title>
-        <description>&lt;p&gt;Docker is the &lt;em&gt;hyped&lt;/em&gt; technology in backend recently. I have no chance to use Docker, since the company I serve has been on private PaaS years before. Fortunately, I encountered problems with my own VPS. Thus, I decided to try Docker and now I want to share the process and my thought.&lt;/p&gt;
-
-&lt;h1 id=&quot;problems&quot;&gt;Problems&lt;/h1&gt;
-
-&lt;p&gt;So far, I use Linode VPS to deploy my websites. I update and deploy my personal website frequently, and I use GitHub webhook to trigger the updating script. With the deterioration of China’s web environment, I have to build VPN and Shadowsocks for myself, which is useful for productivity.&lt;/p&gt;
-
-&lt;p&gt;At present, there are several services running on the VPS:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Personal website (generated by Jekyll, HTTPS certificated by Certbot&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, served by Nginx)&lt;/li&gt;
-  &lt;li&gt;Personal website updater&lt;/li&gt;
-  &lt;li&gt;Shadowsocks server (the core function, VPN is kind of a substitute)&lt;/li&gt;
-  &lt;li&gt;PPTP VPN (changed to L2TP, since PPTP support is removed in iOS 10&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
-  &lt;li&gt;Side projects&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It seems not complicated but I did encounter problems on ops and security.&lt;/p&gt;
-
-&lt;h2 id=&quot;provisioning&quot;&gt;Provisioning&lt;/h2&gt;
-
-&lt;p&gt;VPS provisioning is not automated and manual provisioning is trivial and boring.&lt;/p&gt;
-
-&lt;p&gt;On July, it was attacked and I had to rebuild my Linode. I then changed the default SSH port and it took tens of minutes to rebuild manually. Especially setting up VPN server is not easy and fallible.&lt;/p&gt;
-
-&lt;h2 id=&quot;security-risks&quot;&gt;Security Risks&lt;/h2&gt;
-
-&lt;p&gt;In addition to aforementioned attacks, there are other kind of security risks. For example, Shell injection and actually I just fixed one on the projects.&lt;/p&gt;
-
-&lt;h2 id=&quot;disturbance-among-services&quot;&gt;Disturbance Among Services&lt;/h2&gt;
-
-&lt;p&gt;Different programs may have conflicts with each other. For example, iptables is needed by VPN and it may cause failure of Nginx’s port with wrong configuration.&lt;/p&gt;
-
-&lt;p&gt;Also, it’s not only a production server but also used in development mode, which generates trashes in system folders.&lt;/p&gt;
-
-&lt;p&gt;Therefore, my requirements are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Simple and fast provisioning. Instant and recoverable.&lt;/li&gt;
-  &lt;li&gt;Programs run in restricted sandboxes with isolated resources.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;why-docker&quot;&gt;Why Docker&lt;/h1&gt;
-
-&lt;p&gt;Docker is a major containerization software, which packs applications into image and runs in container. The definition of container is:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Using containers, everything required to make a piece of software run is packaged into isolated containers. Unlike VMs, containers do not bundle a full operating system - only libraries and settings required to make the software work are needed. This makes for efficient, lightweight, self-contained systems and guarantees that software will always run the same, regardless of where it’s deployed.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Docker just meets my requirement, because of its container system. I can run the independent parts in different containers and rebuild a new Linode by initiating all the containers in an efficient way. Even I can scale my applications by the power of Docker.&lt;/p&gt;
-
-&lt;p&gt;Every cutting-edge popular (somehow over-hyped) technology solves problems. And Docker is a trend in infrastructure field.&lt;/p&gt;
-
-&lt;p&gt;I want to continue to use and build Docker on my current VPS node, as it has a good latency between Tokyo and Beijing, with a low ping of about 80ms. Luckily, Linode has started to support Docker since 2014&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;install-docker&quot;&gt;Install Docker&lt;/h2&gt;
-
-&lt;p&gt;My Linux image is Ubuntu 14.04 LTS, installation is quite easy&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, simply execute:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sSL https://get.docker.com/ | sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;P.S.: I used Ubuntu 16.04 LTS image at first, which is the lastest. But it’s not recommended. This version has conflict with &lt;code class=&quot;highlighter-rouge&quot;&gt;systemd&lt;/code&gt;. In consequence, I got stuck in starting &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-engine&lt;/code&gt;, though I found the &lt;a href=&quot;http://stackoverflow.com/questions/37227349/unable-to-start-docker-service-in-ubuntu-16-04/37640824#37640824&quot; target=&quot;_blank&quot;&gt;solution on StackOverflow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;make-images&quot;&gt;Make Images&lt;/h2&gt;
-
-&lt;p&gt;Based on “products”, I need to build four container:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Nginx&lt;/li&gt;
-  &lt;li&gt;Certbot&lt;/li&gt;
-  &lt;li&gt;Website updater&lt;/li&gt;
-  &lt;li&gt;Shadowsocks&lt;/li&gt;
-  &lt;li&gt;L2TP VPN Server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An image is describe as &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;, which is a Shell-like description file. Actually, there are images for me on Docker Hub, which is the Docker GitHub equivalent. This shows one of the advantages of Docker that, we may distribute softwares with Docker.&lt;/p&gt;
-
-&lt;p&gt;I found a &lt;a href=&quot;https://github.com/hwdsl2/docker-ipsec-vpn-server&quot;&gt;hwdsl2/docker-ipsec-vpn-server&lt;/a&gt;, which is so complicated that use an exsited image saves me lots of time.&lt;/p&gt;
-
-&lt;p&gt;For simplicity, I built Shadowsocks image by myself.&lt;/p&gt;
-
-&lt;p&gt;It is not hard for a Shell user to quick start on Dockerfile, which consists of some declarations and installation processes. I simply got started by reading the &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/&quot;&gt;reference&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM ubuntu:trusty
-MAINTAINER David Zhang &amp;lt;crispgm@gmail.com&amp;gt;
-RUN apt-get update \
-    &amp;amp;&amp;amp; apt-get install -y python-pip \
-    &amp;amp;&amp;amp; pip install shadowsocks
-
-COPY etc/shadowsocks.json /etc/shadowsocks.json
-
-EXPOSE 2968
-
-CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The image is based on &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu:trusty&lt;/code&gt;, of which the version can have no relationship with the host OS. Shadowsocks is distributed on pip. Therefore, executing &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install&lt;/code&gt; is the only thing in installation. At last, don’t forget to &lt;code class=&quot;highlighter-rouge&quot;&gt;COPY&lt;/code&gt; configuration file into the image and &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPOSE&lt;/code&gt; inner port to host OS. The &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD&lt;/code&gt; command is the starting point.&lt;/p&gt;
-
-&lt;h2 id=&quot;start-container&quot;&gt;Start Container&lt;/h2&gt;
-
-&lt;p&gt;Build the Dockerfile:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t crisp/shadowsocks .
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Start in daemon mode:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --name ssserver -d -p 2968:2968 crisp/shadowsocks
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Then I ran &lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps&lt;/code&gt; but found that the container had been shutdown, no containers listed.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker ps
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Docker runs only if there is a foreground process, instead of a daemon process. Shadowsocks offers foreground mode but typical server’s programs run in daemon. Here is a trick:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start \
-    &amp;amp;&amp;amp; tail -f /var/log/shadowsocks.log
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;As a result, the container runs &lt;code class=&quot;highlighter-rouge&quot;&gt;tail&lt;/code&gt; command on foreground.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker ps
-CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      PORTS                  NAMES
-81f57c6c0710 crisp/shadowsocks &quot;/bin/sh -c '/usr/loc&quot; 22 hours ago Up 22 hours 0.0.0.0:2967-&amp;gt;2968/tcp ssserver
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;So far, the &lt;em&gt;containerization&lt;/em&gt; progress bar reached 100%. Here is the &lt;a href=&quot;https://github.com/crispgm/docker&quot;&gt;Dockerfiles&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
-
-&lt;p&gt;Compared to VMs that in lower level, Docker focuses on virtualization of applications and provides deployable softwares. We can quickly build and ship applications.&lt;/p&gt;
-
-&lt;p&gt;In addition, Docker plays an important role in CI/CD fields and I will dive into it in the future.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Enable HTTPS with Let’s Encrypt. &lt;a href=&quot;https://crispgm.com/page/enable-https-with-letsencrypt.html&quot;&gt;https://crispgm.com/page/enable-https-with-letsencrypt.html&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Prepare for removal of PPTP VPN before you upgrade to iOS 10 and macOS Sierra. &lt;a href=&quot;https://support.apple.com/en-us/HT206844&quot;&gt;https://support.apple.com/en-us/HT206844&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Docker on Linode. &lt;a href=&quot;https://blog.linode.com/2014/01/03/docker-on-linode/&quot;&gt;https://blog.linode.com/2014/01/03/docker-on-linode/&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;What is Docker &lt;a href=&quot;https://www.docker.com/what-docker&quot;&gt;https://www.docker.com/what-docker&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;Docker Quick Reference. &lt;a href=&quot;https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet&quot;&gt;https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet&lt;/a&gt;.&amp;nbsp;&lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sun, 18 Sep 2016 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/containerizing-my-vps.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/containerizing-my-vps.html</guid>
-        
-        <category>Docker</category>
-        
-        <category>Linode</category>
-        
-        <category>VPS</category>
-        
-        <category>DevOps</category>
         
         
       </item>
