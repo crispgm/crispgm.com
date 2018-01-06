@@ -3,22 +3,10 @@ title: Blog
 permalink: /blog.html
 ---
 
-<div class="page-title" id="programming">Programming</div>
+<div class="page-title" id="programming">Blog</div>
 <div class="archive-main">
   {% for post in site.posts %}
-    {% if post.type == "programming" %}
-    <div class="archive-item">
-      <div class="archive-date">{{ post.date | date:"%B %d, %Y" }}</div>
-      <div class="archive-title"><a href="{{ post.permalink }}">{{ post.title }}</a></div>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div class="page-title" id="lifestyle">Lifestyle</div>
-<div class="archive-main">
-  {% for post in site.posts %}
-    {% if post.type == "lifestyle" %}
+    {% if post.type == "programming" or post.type == "lifestyle" %}
     <div class="archive-item">
       <div class="archive-date">{{ post.date | date:"%B %d, %Y" }}</div>
       <div class="archive-title"><a href="{{ post.permalink }}">{{ post.title }}</a></div>
