@@ -1,3 +1,9 @@
+- id: how-to-view-crontab-log
+  q: 如何查看 crontab 的日志
+  a: |
+    搜索 syslog：
+    <pre><code>grep CRON /var/log/syslog
+    </pre></code>
 - id: you-have-new-mail
   q: Linux/Unix/macOS 提示 You have new mail 该怎么处理？
   a: 的确是有邮件，邮件内容在：<code>/var/mail/$USER</code>或<code>/var/spool/mail/$USER</code>，通常是 Crontab 的执行信息。
