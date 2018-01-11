@@ -4,9 +4,11 @@ permalink: /about.html
 ---
 <div class="page-title">About</div>
 
-Hello, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a crisp or crispgm on the internet. I am a software engineer specialised in fullstack web development. I make web product in the right and swift way, with systematic methodology and great tools chain all the time.
+Hello, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a crisp or crispgm on the internet. I am a software engineer of fullstack web development. I make web products, and contribute to open source community. I write blog posts here, and post photos on Instagram.
 
 I greatly appreciate minimalism and simplicity. I enjoy photography, reading, and coffee. And I go to the theater cheering for my idols with **glo-sticks** every weekends.
+
+{% include buy-me-a-coffee.html %}
 
 <div class="page-title">Advocation</div>
 
