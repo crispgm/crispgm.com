@@ -1,6 +1,6 @@
 /*
  * Theme of Crisp Blog
- * Copyright(c) David Zhang, 2017
+ * Copyright (c) David Zhang, 2018
  */
 * {
   box-sizing: border-box; }
@@ -26,11 +26,11 @@ body {
   text-align: center;
   word-wrap: break-word; }
   body ::selection {
-    background-color: #329af0;
-    color: #fff; }
+    background-color: #dee2e6; }
 
 a {
-  color: #329af0;
+  color: #495057;
+  font-weight: 400;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -76,7 +76,7 @@ img {
   img {
     max-width: 100%; } }
 .menu {
-  background-color: #343a40;
+  background-color: #212529;
   color: #fff;
   margin: 1.5rem 0;
   padding: .8rem;
@@ -143,7 +143,7 @@ footer {
 .page {
   text-align: left; }
   .page .page-main .page-title {
-    color: #343a40;
+    color: #212529;
     font-size: 1.4rem;
     margin-top: .8rem;
     padding-top: .8rem;
@@ -177,7 +177,7 @@ footer {
     margin-top: 4.2rem;
     text-align: left; }
     .article .article-head .article-title {
-      color: #343a40;
+      color: #495057;
       font-size: 2.2rem; }
     .article .article-head .article-date {
       color: #adb5bd;
@@ -191,7 +191,7 @@ footer {
     margin: 3.2rem 0;
     text-align: center; }
     .article .article-share a {
-      color: #343a40;
+      color: #495057;
       padding: 0 .4rem; }
       .article .article-share a:hover {
         text-decoration: none; }
@@ -199,35 +199,35 @@ footer {
     text-align: center; }
 
 h1 {
-  color: #343a40;
+  color: #495057;
   font-size: 2.4rem;
   font-weight: 400;
   padding-top: 1.6rem;
   text-align: left; }
 
 h2 {
-  color: #343a40;
+  color: #495057;
   font-size: 2rem;
   font-weight: 400;
   padding-top: 1.4rem;
   text-align: left; }
 
 h3 {
-  color: #343a40;
+  color: #495057;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1.2rem;
   text-align: left; }
 
 h4 {
-  color: #343a40;
+  color: #495057;
   font-size: 1.2rem;
   font-weight: 600;
   padding-top: .8rem;
   text-align: left; }
 
 h5 {
-  color: #343a40;
+  color: #495057;
   font-size: 1rem;
   font-weight: 700;
   padding-top: .8rem;
@@ -251,7 +251,7 @@ sup {
   vertical-align: auto; }
 
 hr {
-  border-top: 1px solid #343a40;
+  border-top: 1px dotted #dee2e6;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 2.4rem; }
@@ -326,7 +326,7 @@ code.highlighter-rouge {
     padding-bottom: 1rem;
     width: 100%; }
     .things .things-item .things-title {
-      color: #343a40;
+      color: #212529;
       font-size: 1rem;
       min-width: 12.4rem; }
     .things .things-item .things-link {
