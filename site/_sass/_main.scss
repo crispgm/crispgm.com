@@ -1,5 +1,5 @@
 // Theme of Crisp Blog
-// Copyright(c) David Zhang, 2017
+// Copyright (c) David Zhang, 2017
 
 * {
   box-sizing: border-box;
@@ -31,13 +31,13 @@ body {
   word-wrap: break-word;
 
   ::selection {
-    background-color: $blue-5;
-    color: $white;
+    background-color: $grey-3;
   }
 }
 
 a {
-  color: $blue-5;
+  color: $grey-7;
+  font-weight: 400;
   text-decoration: none;
 
   &:hover {
