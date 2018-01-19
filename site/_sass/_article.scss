@@ -1,5 +1,5 @@
 // Theme of Crisp Blog
-// Copyright(c) David Zhang, 2017
+// Copyright (c) David Zhang, 2018
 
 .progress-bar {
   background-color: $grey-3;
@@ -35,7 +35,7 @@
     text-align: left;
 
     .article-title {
-      color: $grey-8;
+      color: $grey-7;
       font-size: 2.2rem;
     }
 
@@ -57,7 +57,7 @@
     text-align: center;
 
     a {
-      color: $grey-8;
+      color: $grey-7;
       padding: 0 .4rem;
 
       &:hover {
@@ -75,7 +75,7 @@
 }
 
 h1 {
-  color: $grey-8;
+  color: $grey-7;
   font-size: 2.4rem;
   font-weight: 400;
   padding-top: 1.6rem;
@@ -83,7 +83,7 @@ h1 {
 }
 
 h2 {
-  color: $grey-8;
+  color: $grey-7;
   font-size: 2rem;
   font-weight: 400;
   padding-top: 1.4rem;
@@ -91,7 +91,7 @@ h2 {
 }
 
 h3 {
-  color: $grey-8;
+  color: $grey-7;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1.2rem;
@@ -99,7 +99,7 @@ h3 {
 }
 
 h4 {
-  color: $grey-8;
+  color: $grey-7;
   font-size: 1.2rem;
   font-weight: 600;
   padding-top: .8rem;
@@ -107,7 +107,7 @@ h4 {
 }
 
 h5 {
-  color: $grey-8;
+  color: $grey-7;
   font-size: 1rem;
   font-weight: 700;
   padding-top: .8rem;
@@ -136,7 +136,7 @@ sup {
 }
 
 hr {
-  border-top: 1px solid $grey-8;
+  border-top: 1px dotted $grey-3;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 2.4rem;
