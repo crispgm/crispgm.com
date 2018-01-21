@@ -10,7 +10,7 @@ html {
   height: 100%;
   width: 100%; }
 
-@media (max-width: 45rem) {
+@media (max-width: 42rem) {
   html {
     font-size: 14px; } }
 body {
@@ -36,50 +36,43 @@ a {
     text-decoration: underline; }
 
 .wrapper {
-  display: flex;
   margin: 0 auto;
   padding: 0;
-  width: 45rem; }
+  width: 42rem; }
 
 .blog-wrapper {
   display: block; }
-
-.sidebar {
-  margin: 0 .8rem 0 0;
-  width: 15.4rem; }
 
 .content {
   text-align: center;
   width: 100%; }
 
 .content-wrapper {
-  padding: .8rem 0; }
+  padding: 0; }
 
-@media (max-width: 45rem) {
+@media (max-width: 42rem) {
   .wrapper {
     display: block;
     width: 100%; }
 
-  .sidebar {
-    margin: 0;
-    width: 100%; }
-
   .content-wrapper {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding: 0 .4rem;
     width: 100%; } }
 img {
   border: 0;
-  max-width: 45rem; }
+  max-width: 42rem; }
 
-@media (max-width: 45rem) {
+@media (max-width: 42rem) {
   img {
     max-width: 100%; } }
-.menu {
+.header {
   background-color: #212529;
+  width: 100%; }
+
+.menu {
   color: #fff;
-  margin: 1.5rem 0;
-  padding: .8rem;
+  display: flex;
+  padding: .8rem 0;
   text-align: left; }
   .menu .menu-home {
     font-size: 1.4rem;
@@ -89,38 +82,45 @@ img {
       color: #fff;
       text-decoration: none; }
   .menu .menu-links {
-    margin-top: 1rem; }
+    display: flex;
+    margin-top: .2rem; }
   .menu .menu-item {
     font-size: 1rem;
-    margin-top: .6rem;
-    padding-right: .8rem;
+    padding-left: .8rem;
     text-align: left; }
+    .menu .menu-item:first-of-type {
+      padding-left: 0; }
     .menu .menu-item a {
       color: #adb5bd;
       text-decoration: none; }
       .menu .menu-item a:hover {
-        text-decoration: underline; }
+        color: #fff; }
   .menu .menu-active a {
     text-decoration: underline; }
 
-@media (max-width: 45rem) {
+@media (max-width: 42rem) {
   .menu {
-    margin: 0; }
+    display: block;
+    margin: 0;
+    padding: .4rem .4rem; }
     .menu .menu-links {
       display: flex;
-      margin: 0; }
+      margin-top: .4rem; }
     .menu .menu-item {
       margin: 0; } }
 footer {
   border-top: 1px dotted #dee2e6;
   font-size: 1rem;
-  margin-top: 2.4rem;
+  margin-top: 1.2rem;
   overflow: hidden;
   text-align: center; }
 
 .contact {
+  display: flex;
   font-size: 1rem;
+  justify-content: space-between;
   margin-bottom: 1rem;
+  padding: .8rem 0 0;
   text-align: left; }
   .contact a {
     color: #212529;
@@ -134,26 +134,24 @@ footer {
   .contact .contact-links {
     float: right; }
 
-@media (max-width: 45rem) {
-  .contact .contact-links {
-    float: left;
-    margin: .4rem 0 0 -.1rem;
-    text-align: left;
-    width: 100%; } }
+@media (max-width: 42rem) {
+  .contact {
+    display: block;
+    padding: .4rem 0 0;
+    text-align: center; }
+    .contact .contact-links {
+      float: none;
+      margin: .4rem 0; } }
 .page {
   text-align: left; }
   .page .page-main .page-title {
     color: #212529;
     font-size: 1.4rem;
-    margin-top: .8rem;
     padding-top: .8rem;
     text-align: left; }
   .page img {
     max-width: 100%; }
 
-@media (max-width: 45rem) {
-  .page .page-main .page-title {
-    padding: 0; } }
 .progress-bar {
   background-color: #dee2e6;
   height: 2px;
@@ -343,7 +341,7 @@ code.highlighter-rouge {
   .things ul {
     margin: 0; }
 
-@media (max-width: 45rem) {
+@media (max-width: 42rem) {
   .things .things-item {
     display: block; }
     .things .things-item .things-link {
