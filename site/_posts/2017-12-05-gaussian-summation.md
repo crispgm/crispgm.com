@@ -43,21 +43,28 @@ Benchmark.ips do |x|
 end
 ```
 
-好奇的我，写了一段简单的 Ruby benchmark 程序。结果是：
+好奇的我，写了一段简单的 Ruby benchmark 程序。结果是（为了显示好看与实际输出有格式调整）：
 
-```plain
-Warming up --------------------------------------
- gaussian add to 100   157.824k i/100ms
-brute force add to 100
-                        11.804k i/100ms
-Calculating -------------------------------------
- gaussian add to 100      5.103M (±12.3%) i/s -     25.094M in   5.003086s
-brute force add to 100
-                        140.711k (± 7.9%) i/s -    708.240k in   5.065663s
+```
+Warming up:
+  gaussian add to 100
+    157.824k i/100ms
+  brute force add to 100
+    11.804k i/100ms
+
+Calculating:
+  gaussian add to 100
+    5.103M (±12.3%) i/s
+    25.094M in   5.003086s
+  brute force add to 100
+    140.711k (± 7.9%) i/s
+    708.240k in   5.065663s
 
 Comparison:
- gaussian add to 100:  5102771.3 i/s
-brute force add to 100:   140711.1 i/s - 36.26x  slower
+  gaussian add to 100:
+    5102771.3 i/s
+  brute force add to 100:
+    140711.1 i/s - 36.26x  slower
 ```
 
 相差了足足36倍。

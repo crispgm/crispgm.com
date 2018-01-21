@@ -8,7 +8,6 @@
     .page-title {
       color: $grey-9;
       font-size: 1.4rem;
-      margin-top: .8rem;
       padding-top: .8rem;
       text-align: left;
     }
@@ -16,15 +15,5 @@
 
   img {
     max-width: 100%;
-  }
-}
-
-@media (max-width: $breakpoint) {
-  .page {
-    .page-main {
-      .page-title {
-        padding: 0;
-      }
-    }
   }
 }

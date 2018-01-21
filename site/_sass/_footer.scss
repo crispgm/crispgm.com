@@ -4,14 +4,17 @@
 footer {
   border-top: 1px dotted $grey-3;
   font-size: 1rem;
-  margin-top: 2.4rem;
+  margin-top: 1.2rem;
   overflow: hidden;
   text-align: center;
 }
 
 .contact {
+  display: flex;
   font-size: 1rem;
+  justify-content: space-between;
   margin-bottom: 1rem;
+  padding: .8rem 0 0;
   text-align: left;
 
   a {
@@ -40,11 +43,13 @@ footer {
 
 @media (max-width: $breakpoint) {
   .contact {
+    display: block;
+    padding: .4rem 0 0;
+    text-align: center;
+
     .contact-links {
-      float: left;
-      margin: .4rem 0 0 -.1rem;
-      text-align: left;
-      width: 100%;
+      float: none;
+      margin: .4rem 0;
     }
   }
 }
