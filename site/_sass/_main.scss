@@ -46,7 +46,6 @@ a {
 }
 
 .wrapper {
-  display: flex;
   margin: 0 auto;
   padding: 0;
   width: $breakpoint;
@@ -56,18 +55,13 @@ a {
   display: block;
 }
 
-.sidebar {
-  margin: 0 .8rem 0 0;
-  width: 15.4rem;
-}
-
 .content {
   text-align: center;
   width: 100%;
 }
 
 .content-wrapper {
-  padding: .8rem 0;
+  padding: 0;
 }
 
 @media (max-width: $breakpoint) {
@@ -76,14 +70,8 @@ a {
     width: 100%;
   }
 
-  .sidebar {
-    margin: 0;
-    width: 100%;
-  }
-
   .content-wrapper {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding: 0 .4rem;
     width: 100%;
   }
 }

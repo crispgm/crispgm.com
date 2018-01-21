@@ -1,11 +1,15 @@
 // Theme of Crisp Blog
 // Copyright (c) David Zhang, 2017
 
-.menu {
+.header {
   background-color: $grey-9;
+  width: 100%;
+}
+
+.menu {
   color: $white;
-  margin: 1.5rem 0;
-  padding: .8rem;
+  display: flex;
+  padding: .8rem 0;
   text-align: left;
 
   .menu-home {
@@ -20,21 +24,25 @@
   }
 
   .menu-links {
-    margin-top: 1rem;
+    display: flex;
+    margin-top: .2rem;
   }
 
   .menu-item {
     font-size: 1rem;
-    margin-top: .6rem;
-    padding-right: .8rem;
+    padding-left: .8rem;
     text-align: left;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
 
     a {
       color: $grey-5;
       text-decoration: none;
 
       &:hover {
-        text-decoration: underline;
+        color: $white;
       }
     }
   }
@@ -48,11 +56,13 @@
 
 @media (max-width: $breakpoint) {
   .menu {
+    display: block;
     margin: 0;
+    padding: .4rem .4rem;
 
     .menu-links {
       display: flex;
-      margin: 0;
+      margin-top: .4rem;
     }
 
     .menu-item {
