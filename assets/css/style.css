@@ -102,7 +102,7 @@ img {
   .menu {
     display: block;
     margin: 0;
-    padding: .4rem .4rem; }
+    padding: .4rem; }
     .menu .menu-links {
       display: flex;
       margin-top: .4rem; }
