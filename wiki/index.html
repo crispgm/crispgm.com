@@ -23,6 +23,25 @@
       </header>
       <div class="section">
         
+        <div class="section-wrap" id="awk-random-sample">
+          <div class="section-item">
+            <div class="section-title title-q">
+            </div>
+            <div class="section-content">
+              <a href="#awk-random-sample">Random sample from a file with awk</a>
+            </div>
+          </div>
+          <div class="section-item">
+            <div class="section-title title-a">
+            </div>
+            <div class="section-content">
+              使用一样的随机种子，可以分两次取训练组和对照组：
+<pre><code>awk 'BEGIN {srand()} !/^$/ { if (rand() <= .01) print $0}'</pre></code>
+
+            </div>
+          </div>
+        </div>
+        
         <div class="section-wrap" id="how-to-view-crontab-log">
           <div class="section-item">
             <div class="section-title title-q">
