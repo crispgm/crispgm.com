@@ -1,3 +1,8 @@
+- id: awk-random-sample
+  q: Random sample from a file with awk
+  a: |
+    使用一样的随机种子，可以分两次取训练组和对照组：
+    <pre><code>awk 'BEGIN {srand()} !/^$/ { if (rand() <= .01) print $0}'</pre></code>
 - id: how-to-view-crontab-log
   q: 如何查看 crontab 的日志
   a: |
