@@ -61,7 +61,7 @@ a {
 }
 
 .content-wrapper {
-  padding: 0;
+  padding: 1.2rem 0;
 }
 
 @media (max-width: $breakpoint) {
@@ -71,7 +71,7 @@ a {
   }
 
   .content-wrapper {
-    padding: 0 .4rem;
+    padding: .4rem .4rem;
     width: 100%;
   }
 }
