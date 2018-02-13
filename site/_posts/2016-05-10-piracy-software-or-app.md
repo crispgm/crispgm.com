@@ -78,12 +78,14 @@ tags:
 
 这里列出一些我购买过的软件或 App 的列表，算是一个小小的推荐。这里我列出的都是官网，而不是直达下载 AppStore 的链接。通过官网的风格和设计，我们可以更好的感受和体会开发者。
 
-* ¥283 [Ulysses for Mac](https://ulyssesapp.com/)
+* $80 [Sublime Text](http://www.sublimetext.com)
 * ¥163 [Dash 3](https://kapeli.com/dash)
 * ¥30 [Reeder 3 for iOS](http://reederapp.com/ios/)
 * ¥25 [Enlight](https://www.enlightapp.com/)
 * ¥12 [WordBook](https://www.trancreative.com/iPhone/WordBook/)
-* ¥18 [Workflow](https://workflow.is/)
 * ¥25 [Manico](https://manico.im/)
 * ¥30 [Noizio for Mac](http://noiz.io/)
 * ¥68 [Tweetbot 4](http://tapbots.com/tweetbot/)
+
+* ¥283 [Ulysses for Mac](https://ulyssesapp.com/) _已经转为订阅制_
+* ¥18 [Workflow](https://workflow.is/) _被苹果收购后转为免费_
