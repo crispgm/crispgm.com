@@ -5,9 +5,286 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Feb 2018 11:28:30 +0800</pubDate>
-    <lastBuildDate>Tue, 13 Feb 2018 11:28:30 +0800</lastBuildDate>
+    <pubDate>Thu, 22 Feb 2018 20:53:38 +0800</pubDate>
+    <lastBuildDate>Thu, 22 Feb 2018 20:53:38 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      
+      <item>
+        <title>Word Kanban，看板风格的单词本</title>
+        <description>&lt;h1 id=&quot;这是什么&quot;&gt;这是什么？&lt;/h1&gt;
+
+&lt;p&gt;看板来源自日本，是丰田生产模式中的重要概念，用于流程管理&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。看板在生产线中主要分为两类：领取看板和生产看板。在学习单词时，我们也可以类比成：生词看板和已掌握单词看板。&lt;/p&gt;
+
+&lt;p&gt;在互联网产品的项目管理领域，也有很多借助看板概念的工具，比如 Trello。而我做的就是一个看板风格的背单词工具，可以看作是 Trello 上的两个 kanban，或一个分为生词和已背单词列表的 Wunderlist。&lt;/p&gt;
+
+&lt;p&gt;所以，这是一个单词本，由生词和已掌握单词单词两个看板组成。它还有这些 features：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;简单易用&lt;/li&gt;
+  &lt;li&gt;默认展示英文，悬浮会展示中文解释&lt;/li&gt;
+  &lt;li&gt;可点击跳转到更加精准的英英词典&lt;/li&gt;
+  &lt;li&gt;具有 API，可与 &lt;a href=&quot;https://workflow.is/&quot;&gt;Workflow&lt;/a&gt; 等进行整合&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
+
+&lt;p&gt;先 show 出来：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/wk-main.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;体验：&lt;a href=&quot;https://word-kanban.herokuapp.com/&quot;&gt;https://word-kanban.herokuapp.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GitHub：&lt;a href=&quot;https://github.com/crispgm/word-kanban&quot;&gt;https://github.com/crispgm/word-kanban&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;技术方案&quot;&gt;技术方案&lt;/h1&gt;
+
+&lt;p&gt;之前在个人项目中，我使用 Rails 作为后端，Node.js 代理加上 Preact 作为前端，并且部署在 Heroku。详细请参考 &lt;a href=&quot;/page/isomorphic-react-preact-with-heroku.html&quot;&gt;Isomorphic React/Preact with Heroku&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;这次也基本如此，不过索性把 Rails 也换成 Node.js。&lt;/p&gt;
+
+&lt;p&gt;前后端基础部分的 Setup 工作（Webpack 配置、Express 等）完全来自其中：&lt;a href=&quot;https://github.com/rugby-board/rugby-board-node&quot;&gt;rugby-board/rugby-board-node&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;后端&quot;&gt;后端&lt;/h2&gt;
+
+&lt;h3 id=&quot;orm&quot;&gt;ORM&lt;/h3&gt;
+
+&lt;p&gt;全 Node.js 方案就需要一个数据库 ORM 层，我&lt;del&gt;随机&lt;/del&gt;选择了 &lt;a href=&quot;http://docs.sequelizejs.com/&quot;&gt;Sequelize&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;先安装包，这里我是用 Postgres。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yarn add sequelize
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yarn add pg pg-hstore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;初始化并创建 Migration：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn add sequelize-cli
+$ cd server
+$ ../node_modules/.bin/sequelize init
+$ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:string,userId:string,status:integer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;运行 Migration：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ../node_modules/.bin/sequelize db:migrate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;对于 DB 的操作就不细说了，看文档就好。&lt;/p&gt;
+
+&lt;h3 id=&quot;auth0&quot;&gt;Auth0&lt;/h3&gt;
+
+&lt;p&gt;用户系统是个比较麻烦的东西，涉及用户信息保存、校验、权限验证和 Cookie 保存等。我没有选择自己实现一套完整的用户系统，而是选择了基于 &lt;a href=&quot;https://jwt.io/&quot;&gt;JSON Web Token&lt;/a&gt; 的 &lt;a href=&quot;https://auth0.com/&quot;&gt;Auth0&lt;/a&gt; 用户认证服务。&lt;/p&gt;
+
+&lt;p&gt;Auth0 是 Serverless 时代十分有用且强大的工具，无需自己建立后端就可以拥有强大的用户系统。除去基本的注册、登陆和权限校验流程，还可以一键集成第三方登陆系统，甚至提供 &lt;a href=&quot;https://en.wikipedia.org/wiki/Multi-factor_authentication&quot;&gt;Multi-factor authentication&lt;/a&gt; 等高级安全功能。&lt;/p&gt;
+
+&lt;p&gt;这是部分它支持的第三方登陆，国内的有百度、人人和微博，稍微有些匪夷所思。这里我选择 GitHub 和 Twitter。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/auth0-connections.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;它还提供了丰富的基于实际框架的示例，我就是基于它提供的基于 &lt;a href=&quot;https://auth0.com/docs/architecture-scenarios/application/spa-api/api-implementation-nodejs&quot;&gt;Express 的后端&lt;/a&gt; 和 &lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react&quot;&gt;SPA React 客户端&lt;/a&gt;的 demo 开发。&lt;/p&gt;
+
+&lt;h3 id=&quot;express&quot;&gt;Express&lt;/h3&gt;
+
+&lt;p&gt;在 Express 中，创建一个中间件用于校验 JSON Web Token：&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'express-jwt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwksRsa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jwks-rsa'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cors'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkJwt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwksRsa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expressJwtSecret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;rateLimit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;jwksRequestsPerMinute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;jwksUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://crispgm.au.auth0.com/.well-known/jwks.json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;audience&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'api.word-kanban.words'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;issuer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://crispgm.au.auth0.com/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;algorithms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'RS256'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在具体接口中引入中间件：&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/word/create'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkJwt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;google-translate&quot;&gt;Google Translate&lt;/h3&gt;
+
+&lt;p&gt;前面的 features 中提到，要显示悬浮的单词的中文解释，这里引入 Google Translate API。记得把 Token 放在环境变量中。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// token.js&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// translate.js&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'node-fetch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'../token'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'en'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'zh'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'text'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//translation.googleapis.com/language/translate/v2?key=${GOOGLE_TRANSLATE_API_KEY}`;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'POST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;api&quot;&gt;API&lt;/h3&gt;
+
+&lt;p&gt;为了实现跟 Workflow 等自动化工具的结合，得提供一套基础简单的 API 系统。&lt;/p&gt;
+
+&lt;p&gt;使用私钥、用户ID和时间戳生成一个简单的 Token，存到数据库里：&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TOKEN_PRIVATE_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这里是&lt;a href=&quot;https://github.com/crispgm/word-kanban/blob/master/docs/integration.md&quot;&gt;API 文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;前端&quot;&gt;前端&lt;/h2&gt;
+
+&lt;p&gt;前端部分则继续使用 Preact 和 preact-router，跟写 React 没什么区别。用户权限校验和用户信息页完全根据 Auth0 的 React demo：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react&quot;&gt;React Login&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react/02-user-profile&quot;&gt;React User Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不过有一个教训，就是没有使用状态管理（如：Redux/Mobx），导致组件间（&lt;code class=&quot;highlighter-rouge&quot;&gt;Kanban&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;WordList&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;WordItem&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;WordInput&lt;/code&gt;）相互传递数据有些复杂。幸好只有两个列表，否则代码会不太好维护。&lt;/p&gt;
+
+&lt;h3 id=&quot;react-trend&quot;&gt;React Trend&lt;/h3&gt;
+
+&lt;p&gt;使用 Preact 的一大优势就是，在包体积小的前提下还能使用完全基于 React 的组件。&lt;/p&gt;
+
+&lt;p&gt;在用户设置页，我希望展示用户动态的曲线，于是找到了 &lt;a href=&quot;https://github.com/unsplash/react-trend&quot;&gt;React Trend&lt;/a&gt; 用于生成曲线。React Trend 是 &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt; 开源的一个 React 组件，用在 Unsplash 的用户统计展示页（比如我的 &lt;a href=&quot;https://unsplash.com/@crispgm/stats&quot;&gt;https://unsplash.com/@crispgm/stats&lt;/a&gt;）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/react-trend-on-unsplash.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这是个 React Component，我们需要用 &lt;a href=&quot;https://github.com/developit/preact-compat&quot;&gt;preact-compat&lt;/a&gt; 来进行兼容。兼容的方式有很多，我选择在 Webpack 进行。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat',
+    },
+  },
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;给上数据之后，React Trend 就可以正常绘制了。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Trend&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;gradient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#343a40'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#e64980'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#f03e3e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;smooth&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;autoDraw&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;autoDrawDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;autoDrawEasing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ease-out&quot;&lt;/span&gt;
+        &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/word-kanban-react-trend.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;完成&quot;&gt;完成&lt;/h2&gt;
+
+&lt;p&gt;Auth0 跳转登陆：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/wk-login.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;主界面：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/wk-main.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;个人设置：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/wk-setting.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;加入-workflow&quot;&gt;加入 Workflow&lt;/h1&gt;
+
+&lt;p&gt;最后，我们使用 Word-kanban 的 API 创建一个可以从网页中摘录生词的 Workflow。&lt;/p&gt;
+
+&lt;p&gt;创建一个 Share Extension 的 Workflow，选择一个好看的图标并取一个喜欢的名字，比如我的叫：「Send My Word」。&lt;/p&gt;
+
+&lt;p&gt;依次加入动作：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Choose from List&lt;/li&gt;
+  &lt;li&gt;URL
+    &lt;ul&gt;
+      &lt;li&gt;添加生词的 API 接口：&lt;code class=&quot;highlighter-rouge&quot;&gt;https://word-kanban.herokuapp.com/api/v1/word&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Get Contents from URL
+    &lt;ul&gt;
+      &lt;li&gt;选择 &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; 请求，加入 &lt;code class=&quot;highlighter-rouge&quot;&gt;token&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;word&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;token&lt;/code&gt; 在用户页面生成粘贴过来&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/send-my-word-workflow.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;阅读一篇英文文章，然后选取一个不认识的单词，发送到 Word Kanban。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/send-to-word-kanban.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;最后&quot;&gt;最后&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;欢迎体验：&lt;a href=&quot;https://word-kanban.herokuapp.com/&quot;&gt;https://word-kanban.herokuapp.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;欢迎点赞：&lt;a href=&quot;https://github.com/crispgm/word-kanban&quot;&gt;https://github.com/crispgm/word-kanban&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86&quot;&gt;看板管理&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 22 Feb 2018 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/word-kanban.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/word-kanban.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1247,632 +1524,6 @@ Now drawing from 'AC Power'
         <guid isPermaLink="true">https://crispgm.com/page/unsplash-simple-pure-photos.html</guid>
         
         <category>unsplash</category>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>48 个你需要知道的 Jekyll 使用技巧</title>
-        <description>&lt;p&gt;很久以前，本人的个人博客是 PHP 写的简单页面，实时转换 Markdown。后来，为了简单，用 PHP 写了一个静态博客转换器。虽用起来还比较舒服，但通用性太差了。于是转向 GitHub Pages 官方支持的 Jekyll，没想到只花了20分钟就完成了迁移，开发体验颇好。深入使用和参与了许久后，决定写一篇 Jekyll 相关的 Tips 的文章，仅供大家参考。&lt;/p&gt;
-
-&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
-
-&lt;h4 id=&quot;什么是-jekyll&quot;&gt;什么是 Jekyll&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 是一个简单的，博客感知的，静态网站生成器。可以认为，Jekyll 是一个基于文件的内容管理系统（CMS）。它使用 Ruby 编写，通过 Markdown 和 Liquid 模板生成内容。&lt;/p&gt;
-
-&lt;p&gt;Jekyll 最初由 GitHub co-founder、前首席执行官 &lt;a href=&quot;https://github.com/mojombo&quot;&gt;Tom Preston-Werner&lt;/a&gt; 创立。&lt;/p&gt;
-
-&lt;p&gt;目前，Jekyll 的维护者是 &lt;a href=&quot;https://github.com/parkr&quot;&gt;Parker Moore&lt;/a&gt;，他本人也于&lt;a href=&quot;https://byparker.com/blog/2016/joining-github/&quot;&gt;2016年初加入了 GitHub&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;安装&quot;&gt;安装&lt;/h4&gt;
-
-&lt;p&gt;首先，你得有 Ruby。对于 Mac 用户，可以使用 Homebrew 安装。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install ruby
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;然后：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;gem-安装不上或者很慢怎么办&quot;&gt;Gem 安装不上或者很慢怎么办？&lt;/h4&gt;
-
-&lt;p&gt;RubyGems 是一个优秀的包管理系统，但再优秀也扛不住墙和距离，所以一般情况下，中国大陆的用户需要更换 RubyGems 的源。&lt;/p&gt;
-
-&lt;p&gt;建议更换成 Ruby-China 的源，参考 &lt;a href=&quot;https://gems.ruby-china.org/&quot;&gt;https://gems.ruby-china.org/&lt;/a&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;同时，也广告一下本人的作品：&lt;a href=&quot;https://crispgm.github.io/gsm/&quot;&gt;Gem Sources Manager&lt;/a&gt;，专门用于切换源。&lt;/p&gt;
-
-&lt;h4 id=&quot;mac-osx-el-capitan-安装失败&quot;&gt;Mac OSX El Capitan 安装失败&lt;/h4&gt;
-
-&lt;p&gt;从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/bin&lt;/code&gt; 等文件夹无法写入。因此需要更换安装路径。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo gem install -n /usr/local/bin jekyll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011&quot;&gt;https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;bundler&quot;&gt;Bundler&lt;/h4&gt;
-
-&lt;p&gt;Jekyll 3.3.0 之后开始采用 Bundler 方式运行。安装时，需要同时安装 Bundler：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll bundler
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;所以所有命令可能也需要使用 Bundler：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;命令&quot;&gt;命令&lt;/h2&gt;
-
-&lt;h4 id=&quot;使用-jekyll-new-创建新站点&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; 创建新站点&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new my-jekyll-site
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;也可以：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir my-jekyll-site
-$ cd my-jekyll-site
-$ jekyll new .
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;使用-jekyll-serve-在本地运行站点&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 在本地运行站点&lt;/h4&gt;
-
-&lt;p&gt;以下三种使用方式是等价的：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve
-$ jekyll server
-$ jekyll s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt; 进行访问。&lt;/p&gt;
-
-&lt;h4 id=&quot;使用-jekyll-build-生成站点&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 生成站点&lt;/h4&gt;
-
-&lt;p&gt;以下两种使用方式是等价的：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build
-$ jekyll b
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;--destination&lt;/code&gt; 指定目标路径：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build --destination=/path/to/site
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;使用-jekyll-new-theme-创建主题&quot;&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new-theme&lt;/code&gt; 创建主题&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll new-theme my-theme
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
-
-&lt;h4 id=&quot;目录结构&quot;&gt;目录结构&lt;/h4&gt;
-
-&lt;p&gt;一个基本的 Jekyll 站点目录结构：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html # 也可以是 index.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;_config.yml
-    &lt;ul&gt;
-      &lt;li&gt;Jekyll 站点的总配置文件，有很多选项也可以通过命令行方式指定。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;_drafts
-    &lt;ul&gt;
-      &lt;li&gt;未发布的草稿，文件名不需要带有日期。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;_includes
-    &lt;ul&gt;
-      &lt;li&gt;代码片段，可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt; 进行引用。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;_layouts
-    &lt;ul&gt;
-      &lt;li&gt;布局。布局文件可以被继承，&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; 用于表示被继承者的内容。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;_posts
-    &lt;ul&gt;
-      &lt;li&gt;文件，命名需要以日期开头：如 &lt;code class=&quot;highlighter-rouge&quot;&gt;2016-12-01-my-article.md&lt;/code&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;_sass
-    &lt;ul&gt;
-      &lt;li&gt;sass 文件，可以通过插件完成编译。也可以选择引入原生 CSS，或者 Less 等。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;_site
-    &lt;ul&gt;
-      &lt;li&gt;目标文件，建议加入到 &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; 中。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;index.html/index.md
-    &lt;ul&gt;
-      &lt;li&gt;首页&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;_configyml&quot;&gt;_config.yml&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 是整个站点的整体配置，以下是所有配置项和默认值：&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Where things are&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;       &lt;span class=&quot;s&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;./_site&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;plugins_dir&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;_plugins&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;layouts_dir&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;_layouts&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;data_dir&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;     &lt;span class=&quot;s&quot;&gt;_data&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;includes_dir&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;_includes&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Handling Reading&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;safe&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;         &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;      &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.htaccess&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;      &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;node_modules&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;vendor/bundle/&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;vendor/cache/&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;vendor/gems/&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;vendor/ruby/&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;keep_files&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.git&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.svn&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;     &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;utf-8&quot;&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;markdown_ext&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;markdown,mkdown,mkdn,mkd,md&quot;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Filtering Content&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;show_drafts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;null&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;limit_posts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;future&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;      &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;unpublished&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Plugins&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;whitelist&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;      &lt;span class=&quot;pi&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Conversion&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;kramdown&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;highlighter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rouge&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;lsi&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;         &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;excerpt_separator&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;incremental&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Serving&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;detach&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;4000&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;127.0.0.1&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# does not include hostname&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;show_dir_listing&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Outputting&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;     &lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;paginate_path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/page:num&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;timezone&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;      &lt;span class=&quot;s&quot;&gt;null&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;quiet&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;liquid&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;error_mode&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;warn&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Markdown Processors&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;rdiscount&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;redcarpet&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;kramdown&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;auto_ids&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;       &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;footnote_nr&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;entity_output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;as_char&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;toc_levels&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;     &lt;span class=&quot;s&quot;&gt;1..6&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;smart_quotes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;lsquo,rsquo,ldquo,rdquo&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;          &lt;span class=&quot;s&quot;&gt;GFM&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;hard_wrap&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;      &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;footnote_nr&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;front-matter&quot;&gt;Front Matter&lt;/h4&gt;
-
-&lt;p&gt;Jekyll 整个站点的配置是站点根目录下的 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 文件，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 等目录下的文件中也可以有自己的变量。文件头部的 &lt;code class=&quot;highlighter-rouge&quot;&gt;yaml&lt;/code&gt; 配置被称作 Front Matter。&lt;/p&gt;
-
-&lt;h4 id=&quot;front-matter-默认值&quot;&gt;Front Matter 默认值&lt;/h4&gt;
-
-&lt;p&gt;可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;defaults&lt;/code&gt; 设置一个路径下 Front Matter 默认值。&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;weekly&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;weekly&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;技术周刊&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;忽略文件&quot;&gt;忽略文件&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exclude&lt;/code&gt; 用于忽略文件或文件夹，其中 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 和以&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;开头的文件或文件夹都会被自动忽略。后续版本，&lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; 等文件夹也被隐式忽略了（参考 _config.yml 章节）。&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Gemfile&lt;/span&gt;
-  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Gemfile.lock&lt;/span&gt;
-  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;README.md&lt;/span&gt;
-  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;LICENSE&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;分页&quot;&gt;分页&lt;/h4&gt;
-
-&lt;p&gt;Jekyll 没有内置分页功能，而是提供了一个分页插件 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt;。&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 仅在特定的默认条件下生效，如果你对网站结构有自己的一套，&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 可能是无法满足需求的。&lt;/p&gt;
-
-&lt;p&gt;限制如下：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;分页功能必须在 HTML 格式文件中调用，如：&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;必须使用默认的链接格式 &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果想继续使用，请详细阅读 &lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot;&gt;http://jekyllrb.com/docs/pagination/&lt;/a&gt;。这是一个复杂的问题！&lt;/p&gt;
-
-&lt;h4 id=&quot;文章摘要&quot;&gt;文章摘要&lt;/h4&gt;
-
-&lt;p&gt;Jekyll 提供了文章摘要摘取功能，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;post.excerpt&lt;/code&gt; 就可以获得摘要内容。&lt;/p&gt;
-
-&lt;p&gt;我们也可以设置摘取摘要的分隔符：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;excerpt_separator: &amp;lt;!--more--&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;评论&quot;&gt;评论&lt;/h4&gt;
-
-&lt;p&gt;由于是静态站点，我们没发内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：&lt;a href=&quot;https://disqus.com/&quot;&gt;disqus&lt;/a&gt;，国内推荐：&lt;a href=&quot;http://duoshuo.com/&quot;&gt;duoshuo&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;page&quot;&gt;Page&lt;/h4&gt;
-
-&lt;p&gt;可以认为，不在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_post&lt;/code&gt; 目录下的页面都是 Page 而不是 Post，其它方面区别不大。&lt;/p&gt;
-
-&lt;h4 id=&quot;collection&quot;&gt;Collection&lt;/h4&gt;
-
-&lt;p&gt;并不是每个页面都是独立“页面”和以日期为顺序的“博文”，因此 Jekyll 引入了 Collection。Collection 可以根据路径定义一类具有相同属性的页面集合。Collection 也可以通过 Front Matter 设定默认值。&lt;/p&gt;
-
-&lt;h4 id=&quot;data&quot;&gt;Data&lt;/h4&gt;
-
-&lt;p&gt;Data 相当于动态页面中的数据库，Jekyll Data 支持 &lt;code class=&quot;highlighter-rouge&quot;&gt;yaml&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt; 三种格式，可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.data&lt;/code&gt; 直接访问。&lt;/p&gt;
-
-&lt;p&gt;例如：&lt;/p&gt;
-
-&lt;p&gt;团队成员有 Fa, Li, Zhang 三人，于是我们在默认路径 &lt;code class=&quot;highlighter-rouge&quot;&gt;_data&lt;/code&gt; 创建一个数据文件 &lt;code class=&quot;highlighter-rouge&quot;&gt;member.yml&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Fa&lt;/span&gt;
-&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Li&lt;/span&gt;
-&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Zhang&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;在页面中显示团队成员列表：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.data.member&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;member.name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;liquid-模板&quot;&gt;Liquid 模板&lt;/h2&gt;
-
-&lt;h4 id=&quot;什么是-liquid&quot;&gt;什么是 Liquid?&lt;/h4&gt;
-
-&lt;p&gt;Liquid 是一个开源模版语言，由电商公司 Shopify 实现，用 Ruby 编写。Shopify 自己使用 Liquid 来构建自己电商网站模板生态。&lt;/p&gt;
-
-&lt;p&gt;详细文档请参考 &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;https://shopify.github.io/liquid/&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;Jekyll 实用 Liquid 作为模版引擎，构建页面。&lt;/p&gt;
-
-&lt;h4 id=&quot;变量&quot;&gt;变量&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;title&amp;gt;
-{{ page.title }}
-&amp;lt;/title&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;其中，Jekyll 预设了 &lt;code class=&quot;highlighter-rouge&quot;&gt;site&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;content&lt;/code&gt; 四个全局变量。&lt;/p&gt;
-
-&lt;h4 id=&quot;逻辑判断&quot;&gt;逻辑判断&lt;/h4&gt;
-
-&lt;p&gt;Liquid 的逻辑判断跟 Ruby 完全一致。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;else if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;elsif&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt;。同时，Liquid 也可以使用 Ruby 特有的 &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;常见语言中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;switch&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; 在 Liquid 中的对应是 &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;为了简单，只以 &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; 为例：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;page.syntax_highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'false'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;link&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ site.assets }}/css/zenburn.css&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;遍历&quot;&gt;遍历&lt;/h4&gt;
-
-&lt;p&gt;在 Liquid 中可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;in&lt;/code&gt; 语法遍历数组，并且支持一般语言循环中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;continue&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;除此之外，还可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;offset&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;limit&lt;/code&gt; 控制遍历范围，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;reversed&lt;/code&gt; 进行倒序。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.posts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ post.permalink }}&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post.title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;https://shopify.github.io/liquid/tags/iteration/&quot;&gt;https://shopify.github.io/liquid/tags/iteration/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;赋值&quot;&gt;赋值&lt;/h4&gt;
-
-&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assign&lt;/code&gt; 进行赋值：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;my_variable&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;capture&lt;/code&gt; 进行捕捉赋值：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;capture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;my_variable&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;am&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;being&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;captured.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endcapture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;liquid-filters&quot;&gt;Liquid Filters&lt;/h4&gt;
-
-&lt;p&gt;Liquid Filters 是一种针对 Liquid 中变量的过滤器，语法是：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;filter:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;param&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cgi_escape&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;url_escape&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;xml_escape&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;对变量进行相应的 escape&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;markdownify&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;scssify&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sassify&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;jsonify&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;对变量内容的格式转换&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;where&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;where_exp&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;group_by&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sort&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;对变量数据的查询排序等操作&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;http://jekyllrb.com/docs/templates/#filters&quot;&gt;http://jekyllrb.com/docs/templates/#filters&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;插件&quot;&gt;插件&lt;/h2&gt;
-
-&lt;h4 id=&quot;插件简介&quot;&gt;插件简介&lt;/h4&gt;
-
-&lt;p&gt;Jekyll 支持使用插件进行扩展，插件的类型分为：Generators、Converters、Commands、Hooks、Liquid Tag、Liquid Filter 等。&lt;/p&gt;
-
-&lt;p&gt;如果希望开发插件，请参考 &lt;a href=&quot;http://jekyllrb.com/docs/plugins/&quot;&gt;http://jekyllrb.com/docs/plugins/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;使用插件&quot;&gt;使用插件&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;基于 Gem 的方式&lt;/p&gt;
-
-    &lt;p&gt;对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;gems&lt;/code&gt; 字段加入相应插件名称即可。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;基于本地文件&lt;/p&gt;
-
-    &lt;p&gt;对于没有发布的插件，可以在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_plugins&lt;/code&gt; 文件夹中直接引入 &lt;code class=&quot;highlighter-rouge&quot;&gt;*.rb&lt;/code&gt; Ruby 源文件。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;常用插件&quot;&gt;常用插件&lt;/h2&gt;
-
-&lt;h4 id=&quot;jekyll-watch&quot;&gt;Jekyll Watch&lt;/h4&gt;
-
-&lt;p&gt;Jekyll “必备”的插件，因为这是 Jekyll 程序的依赖，只是因为程序结构设计被剥离成了插件。它在本地预览时，提供文件变更的自动更新，让我们每次刷新都能自动看到最新的内容。&lt;/p&gt;
-
-&lt;p&gt;Jekyll Watch 是自动开启的：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve --watch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;jekyll-compose&quot;&gt;Jekyll Compose&lt;/h4&gt;
-
-&lt;p&gt;安装了 &lt;a href=&quot;https://github.com/jekyll/jekyll-compose&quot;&gt;Jekyll Compose&lt;/a&gt; 后，Jekyll 会额外提供一些命令，便于发布管理博文。&lt;/p&gt;
-
-&lt;p&gt;创建草稿：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll draft
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;创建新博客：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll post
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;创建新博客：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll page
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;发布草稿：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll publish
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;撤销发布：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll unpublish
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;jekyll-admin&quot;&gt;Jekyll Admin&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-admin&quot;&gt;Jekyll Admin&lt;/a&gt; 是一个 CMS 风格的图形化后台管理插件，可以在本地给用户提供服务。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/jekyll/jekyll-admin/raw/master/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll-seo-tag&quot;&gt;Jekyll SEO Tag&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-seo-tag&quot;&gt;Jekyll SEO Tag&lt;/a&gt; 帮你生成一大堆 Meta 标签。&lt;/p&gt;
-
-&lt;h4 id=&quot;jemoji&quot;&gt;Jemoji&lt;/h4&gt;
-
-&lt;p&gt;你可以通过 &lt;a href=&quot;https://github.com/jekyll/jemoji&quot;&gt;Jemoji&lt;/a&gt; 在 Jekyll 生成的网站中，加入自己 Emoji 表情。&lt;/p&gt;
-
-&lt;p&gt;Emoji 语法采用 GitHub 的语法风格。&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll-mentions&quot;&gt;Jekyll Mentions&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-mentions&quot;&gt;Jekyll Mentions&lt;/a&gt; 允许你在文章中直接“@” GitHub 或其它网站用户。&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll-feed&quot;&gt;Jekyll Feed&lt;/h4&gt;
-
-&lt;p&gt;你可以通过 &lt;a href=&quot;https://github.com/jekyll/jekyll-feed&quot;&gt;Jekyll Feed&lt;/a&gt; 在 Jekyll 生成的网站中，生成 RSS 源。&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll-import&quot;&gt;Jekyll Import&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-import&quot;&gt;Jekyll Import&lt;/a&gt; 支持从一些国外的主流站点导入博文，如 Blogger, WordPress 和 Tumblr 等，同样也支持 RSS 和 CSV 等数据格式导入。&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll-archives&quot;&gt;Jekyll Archives&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;Jekyll Archives&lt;/a&gt; 用于生成带标签和分类的『存档』页面。&lt;/p&gt;
-
-&lt;h4 id=&quot;jekyll-redirect-from&quot;&gt;Jekyll Redirect From&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-redirect-from&quot;&gt;Jekyll Redirect From&lt;/a&gt; 提供页面跳转功能，比较简单，也可以自行通过 JavaScript 实现。&lt;/p&gt;
-
-&lt;h2 id=&quot;github-pages&quot;&gt;GitHub Pages&lt;/h2&gt;
-
-&lt;h4 id=&quot;创建个人主页&quot;&gt;创建个人主页&lt;/h4&gt;
-
-&lt;p&gt;创建一个名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username.github.io&lt;/code&gt; 的 Repo，&lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-username&lt;/code&gt; 是你的用户名。&lt;/p&gt;
-
-&lt;p&gt;只需在 Repo 中设置 GitHub Pages 的 Source，就可以开启 GitHub Pages，支持 &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;/docs&lt;/code&gt; 文件夹三种 Source。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/image/github-pages-source.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;在-github-pages-只可以使用部分插件&quot;&gt;在 GitHub Pages 只可以使用部分插件&lt;/h4&gt;
-
-&lt;p&gt;由于安全性等原因的考虑，在 GitHub Pages 平台上只能使用白名单中的 7 个 Jekyll 插件。它们分别是：Jekyll Sitemap, Jekyll SEO Tag, github-metadata, Jekyll Feed, Jekyll Redirect From, Jemoji 和 Jekyll Mentions。&lt;/p&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/&quot;&gt;https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;github-pages-上的-jekyll-只支持-kramdown&quot;&gt;GitHub Pages 上的 Jekyll 只支持 kramdown&lt;/h4&gt;
-
-&lt;p&gt;从 2016 年 5 月 1 日起，GitHub Pages 只支持 kramdown 作为 Markdown 引擎。&lt;/p&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&quot;&gt;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;在根目录下创建-nojekyll-文件可以跳过-jekyll-解析&quot;&gt;在根目录下创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 文件可以跳过 Jekyll 解析&lt;/h4&gt;
-
-&lt;p&gt;GitHub Pages 支持 Jekyll 或者原始文件。最初 GitHub Pages 只支持 Jekyll，后来 GitHub 允许在 Repo 根目录下添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; 跳过解析。&lt;/p&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;https://github.com/blog/572-bypassing-jekyll-on-github-pages&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;你可以使用自己的域名&quot;&gt;你可以使用自己的域名&lt;/h4&gt;
-
-&lt;p&gt;在 Source 的根路径下，创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt; 写入域名，然后把 DNS 解析到 GitHub Pages 的 IP：&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.153&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;192.30.252.154&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;详见 &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;你也可以为账号下任意项目创建独立的项目页面&quot;&gt;你也可以为账号下任意项目创建独立的项目页面&lt;/h4&gt;
-
-&lt;p&gt;任何一个项目的 Repo，都可以开启这个项目的 GitHub Pages。开启方式同个人主页。&lt;/p&gt;
-
-&lt;p&gt;如项目：&lt;a href=&quot;https://github.com/crispgm/gsm&quot;&gt;crispgm/gsm&lt;/a&gt;，设置完成后，就可以通过 &lt;a href=&quot;https://crispgm.github.io/gsm/&quot;&gt;https://crispgm.github.io/gsm/&lt;/a&gt; 进行访问。&lt;/p&gt;
-
-&lt;h4 id=&quot;你可以通过-sitegithub-获得-repo-的信息&quot;&gt;你可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;site.github&lt;/code&gt; 获得 Repo 的信息&lt;/h4&gt;
-
-&lt;p&gt;由上面所说的 &lt;a href=&quot;https://github.com/jekyll/github-metadata&quot;&gt;github-metadata&lt;/a&gt; 提供服务，通过 GitHub API 获取 Repo 的信息。当然，在本地环境下，也可以通过手动安装 github-metadata 来使用。&lt;/p&gt;
-
-&lt;h4 id=&quot;私有-repo-也可以开启-github-pages&quot;&gt;私有 Repo 也可以开启 GitHub Pages&lt;/h4&gt;
-
-&lt;p&gt;GitHub 的付费用户建立的私有项目 Private Repo，也可以开启 GitHub Pages。&lt;/p&gt;
-
-&lt;h4 id=&quot;github-pages-无法在使用-gh-pages-分支作为源的情况下关闭&quot;&gt;GitHub Pages 无法在使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; 分支作为源的情况下关闭&lt;/h4&gt;
-
-&lt;p&gt;有些奇怪的设定，真想关闭直接删除掉，在 Source 选择 None 就好。&lt;/p&gt;
-
-&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
-
-&lt;h4 id=&quot;本博客也是用-jekyll-生成的&quot;&gt;本博客也是用 Jekyll 生成的&lt;/h4&gt;
-
-&lt;p&gt;Happy Jekylling!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 19 Nov 2016 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/48-tips-for-jekyll-you-should-know.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/48-tips-for-jekyll-you-should-know.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>tips</category>
         
         
       </item>
