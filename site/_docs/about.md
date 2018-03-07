@@ -21,6 +21,7 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, an
 
 * [Rugby News Board](http://nbrugby.com/)
 * [Crisp Programming Weekly](https://crispgm.github.io/weekly/)
+* [Word Kanban](https://word-kanban.herokuapp.com/)
 
 <div class="page-title">License</div>
 
