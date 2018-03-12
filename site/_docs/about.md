@@ -10,6 +10,8 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, an
 
 {% include buy-me-a-coffee.html %}
 
+My Ethereum Address: `0xa023F7e4F6AeDCEad6cDB28DF9c6D0CbEB61f62B`
+
 <div class="page-title">Advocation</div>
 
 * [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
