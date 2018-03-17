@@ -5,11 +5,13 @@ permalink: /page/programming-ethereum.html
 type: programming
 ---
 
-最近区块链技术大火，到处都在谈论和蹭热点，以至于豆瓣留言上看到了区块链的言论。于是，当事有些愤怒：
+最近区块链技术大火，到处都在谈论（国内朋友圈，国外比如说 Software Engineering Daily 播客刷屏的区块链）和蹭热点（各种 CryptoCopycats）。
+
+我甚至会在豆瓣留言上看到了区块链的言论，以至于被评论的当事人有些愤怒：
 
 > “不要什么都扯到区块链，现在火到这样子又几乎没几个人真明白怎么回事，简直是个笑话。”
 
-即使是作为“资深”程序员的我，起初也对于比特币和区块链云里雾里的感觉，原理和应用处于模糊的状态，只知道有各种币的交易所可以“炒币”。但春节前夕，因为参加了 [Beijing Bitcoin Cash Meetup](https://www.meetup.com/Beijing-Bitcoin-Cash-Meetup/)，之后持续关注加密货币交易、区块链技术和应用，以及免不了的奇闻逸事。
+即使是作为多年程序员的我，起初也对于比特币和区块链云里雾里的感觉，原理和应用处于模糊的状态，只知道有各种币的交易所可以“炒币”。但春节前夕，因为参加了 [Beijing Bitcoin Cash Meetup](https://www.meetup.com/Beijing-Bitcoin-Cash-Meetup/)，所以之后持续关注加密货币交易、区块链技术和应用，以及免不了的奇闻逸事。
 
 逐渐对区块链技术有了一些了解，在此推荐[深入浅出区块链](https://learnblockchain.cn/)。终于，我决定开发第一个智能合约——Cryptoflags。
 
@@ -35,7 +37,7 @@ Ethereum，中文译为以太坊，它是：
 
 ### [Remix](https://remix.ethereum.org/)
 
-Ethereum 官方的 Solidity 在线 IDE，用于调试合约部分非常好用。体积有些，国内网络打开可能会十分的慢。请耐心等待。
+Ethereum 官方的 Solidity 在线 IDE，用于调试合约部分非常好用。包体积有些大，国内网络打开可能会十分的慢。请耐心等待。
 
 ### [Truffle](http://truffleframework.com/)
 
