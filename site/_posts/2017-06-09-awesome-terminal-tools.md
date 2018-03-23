@@ -13,7 +13,7 @@ tags:
 
 This article recommends awesome (and even funny) terminal tools, both executables and libraries.
 
-I first posted this on Oct 22th, 2015. And it is renewed on Nov 29th, 2017.
+I first posted this on Oct 22th, 2015. And it is renewed on Mar 23rd, 2018.
 
 ## Softwares
 
@@ -79,6 +79,16 @@ Socks and HTTP proxy for terminal. And we can use `proxychains` to boost speed o
 ```
 $ proxychains4 git push
 ```
+
+### [coinmon](https://github.com/bichenkk/coinmon)
+
+💰 Cryptocurrency price ticker CLI.
+
+```
+$ coinmon
+```
+
+![](https://raw.githubusercontent.com/bichenkk/coinmon/master/screenshot.png)
 
 ## Libraries
 
