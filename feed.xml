@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Mar 2018 14:07:07 +0800</pubDate>
-    <lastBuildDate>Mon, 12 Mar 2018 14:07:07 +0800</lastBuildDate>
+    <pubDate>Fri, 23 Mar 2018 11:04:14 +0800</pubDate>
+    <lastBuildDate>Fri, 23 Mar 2018 11:04:14 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       
@@ -850,7 +850,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
         <title>Awesome Terminal Tools</title>
         <description>&lt;p&gt;This article recommends awesome (and even funny) terminal tools, both executables and libraries.&lt;/p&gt;
 
-&lt;p&gt;I first posted this on Oct 22th, 2015. And it is renewed on Nov 29th, 2017.&lt;/p&gt;
+&lt;p&gt;I first posted this on Oct 22th, 2015. And it is renewed on Mar 23rd, 2018.&lt;/p&gt;
 
 &lt;h2 id=&quot;softwares&quot;&gt;Softwares&lt;/h2&gt;
 
@@ -916,6 +916,16 @@ Information about running processes.
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ proxychains4 git push
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;coinmon&quot;&gt;&lt;a href=&quot;https://github.com/bichenkk/coinmon&quot;&gt;coinmon&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;💰 Cryptocurrency price ticker CLI.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ coinmon
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/bichenkk/coinmon/master/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;libraries&quot;&gt;Libraries&lt;/h2&gt;
 
