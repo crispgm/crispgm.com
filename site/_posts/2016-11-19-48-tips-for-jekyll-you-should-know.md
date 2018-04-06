@@ -50,7 +50,7 @@ $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 `/usr/bin` 等文件夹无法写入。因此需要更换安装路径。
 
 ```
-$ sudo gem install -n /usr/local/bin jekyll
+$ gem install -n /usr/local/bin jekyll
 ```
 
 详见 <https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011>
@@ -275,7 +275,7 @@ exclude:
 
 #### 分页
 
-Jekyll 没有内置分页功能，而是提供了一个分页插件 `jekyll-paginate`。`jekyll-paginate` 仅在特定的默认条件下生效，如果你对网站结构有自己的一套，`jekyll-paginate` 可能是无法满足需求的。
+Jekyll 没有内置分页功能，而是提供了一个分页插件 `jekyll-paginate`。`jekyll-paginate` 仅在特定的默认条件下生效，如果你对网站结构有自己的一套风格，`jekyll-paginate` 可能是无法满足需求的。
 
 限制如下：
 
@@ -296,7 +296,7 @@ excerpt_separator: <!--more-->
 
 #### 评论
 
-由于是静态站点，我们没发内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：[disqus](https://disqus.com/)，国内推荐：[duoshuo](http://duoshuo.com/)。
+由于是静态站点，我们没法内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：[disqus](https://disqus.com/)，国内推荐：[duoshuo](http://duoshuo.com/)。
 
 #### Page
 
@@ -338,7 +338,7 @@ Liquid 是一个开源模版语言，由电商公司 Shopify 实现，用 Ruby �
 
 详细文档请参考 <https://shopify.github.io/liquid/>。
 
-Jekyll 实用 Liquid 作为模版引擎，构建页面。
+Jekyll 使用 Liquid 作为模版引擎，构建页面。
 
 #### 变量
 
@@ -426,7 +426,7 @@ Jekyll 支持使用插件进行扩展，插件的类型分为：Generators、Con
 
 1. 基于 Gem 的方式
 
-    对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 `_config.yml` 中 `gems` 字段加入相应插件名称即可。
+    对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 `_config.yml` 中 `gems` 字段加入相应插件名称即可。Jekyll 3.5.0 版之后请使用 `plugins` 字段配置。
 
 2. 基于本地文件
 
