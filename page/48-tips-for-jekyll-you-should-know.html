@@ -86,7 +86,7 @@
 
 <p>从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 <code class="highlighter-rouge">/usr/bin</code> 等文件夹无法写入。因此需要更换安装路径。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo gem install -n /usr/local/bin jekyll
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install -n /usr/local/bin jekyll
 </code></pre>
 </div>
 
@@ -338,7 +338,7 @@ $ jekyll b
 
 <h4 id="分页">分页</h4>
 
-<p>Jekyll 没有内置分页功能，而是提供了一个分页插件 <code class="highlighter-rouge">jekyll-paginate</code>。<code class="highlighter-rouge">jekyll-paginate</code> 仅在特定的默认条件下生效，如果你对网站结构有自己的一套，<code class="highlighter-rouge">jekyll-paginate</code> 可能是无法满足需求的。</p>
+<p>Jekyll 没有内置分页功能，而是提供了一个分页插件 <code class="highlighter-rouge">jekyll-paginate</code>。<code class="highlighter-rouge">jekyll-paginate</code> 仅在特定的默认条件下生效，如果你对网站结构有自己的一套风格，<code class="highlighter-rouge">jekyll-paginate</code> 可能是无法满足需求的。</p>
 
 <p>限制如下：</p>
 
@@ -361,7 +361,7 @@ $ jekyll b
 
 <h4 id="评论">评论</h4>
 
-<p>由于是静态站点，我们没发内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：<a href="https://disqus.com/">disqus</a>，国内推荐：<a href="http://duoshuo.com/">duoshuo</a>。</p>
+<p>由于是静态站点，我们没法内建评论系统，因此需要引入一些纯前端就可以使用的评论系统。国外推荐：<a href="https://disqus.com/">disqus</a>，国内推荐：<a href="http://duoshuo.com/">duoshuo</a>。</p>
 
 <h4 id="page">Page</h4>
 
@@ -403,7 +403,7 @@ $ jekyll b
 
 <p>详细文档请参考 <a href="https://shopify.github.io/liquid/">https://shopify.github.io/liquid/</a>。</p>
 
-<p>Jekyll 实用 Liquid 作为模版引擎，构建页面。</p>
+<p>Jekyll 使用 Liquid 作为模版引擎，构建页面。</p>
 
 <h4 id="变量">变量</h4>
 
@@ -506,7 +506,7 @@ $ jekyll b
   <li>
     <p>基于 Gem 的方式</p>
 
-    <p>对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 <code class="highlighter-rouge">_config.yml</code> 中 <code class="highlighter-rouge">gems</code> 字段加入相应插件名称即可。</p>
+    <p>对于已经发布到 RubyGems 的插件，推荐使用这种方式。只需要在 <code class="highlighter-rouge">_config.yml</code> 中 <code class="highlighter-rouge">gems</code> 字段加入相应插件名称即可。Jekyll 3.5.0 版之后请使用 <code class="highlighter-rouge">plugins</code> 字段配置。</p>
   </li>
   <li>
     <p>基于本地文件</p>
