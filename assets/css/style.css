@@ -125,17 +125,17 @@ footer {
   margin-bottom: 1rem;
   padding: .8rem 0 0;
   text-align: left; }
-  .contact a {
-    color: #212529;
-    padding-left: .8rem; }
-    .contact a:first-of-type {
-      padding-left: .2rem; }
-  .contact:hover a {
-    color: #adb5bd; }
-    .contact:hover a:hover {
-      color: #212529; }
   .contact .contact-links {
     float: right; }
+    .contact .contact-links a {
+      color: #212529;
+      padding-left: .8rem; }
+      .contact .contact-links a:first-of-type {
+        padding-left: .2rem; }
+    .contact .contact-links:hover a {
+      color: #adb5bd; }
+      .contact .contact-links:hover a:hover {
+        color: #212529; }
 
 @media (max-width: 42rem) {
   .contact {
