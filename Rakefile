@@ -106,9 +106,18 @@ namespace :site do
       sh "git commit --allow-empty -m \"Deployed at #{Time.now}\""
       sh "git push origin gh-pages"
     end
+
+    post_to_slack("Ship a new build to *crispgm.com*")
   end
 
-  post_to_slack("Ship a new build to *crispgm.com*")
+  desc "Evaluate views on different devices"
+  task :evaluate do
+    Dir.chdir("integrated-test") do
+      sh "mkdir -p screenshots"
+      sh "npm run evaluate"
+      sh "open ./screenshots"
+    end
+  end
 end
 
 namespace :resume do
