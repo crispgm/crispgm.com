@@ -113,7 +113,7 @@ namespace :site do
   desc "Evaluate views on different devices"
   task :evaluate do
     Dir.chdir("integrated-test") do
-      sh "mkdir screenshots"
+      sh "mkdir -p screenshots"
       sh "npm run evaluate"
       sh "open ./screenshots"
     end
