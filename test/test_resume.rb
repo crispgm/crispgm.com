@@ -15,7 +15,7 @@ class TestResume < Minitest::Test
     end
 
     should "content type be text/html" do
-      assert_equal "text/html", @resp.meta["content-type"]
+      assert_equal "text/html; charset=UTF-8", @resp.meta["content-type"]
     end
   end
 end
