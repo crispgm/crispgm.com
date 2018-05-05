@@ -36,6 +36,10 @@ ga:
 disqus:
   short_name: crispgm
 
+# Inclusion
+include:
+  - _redirects
+
 # Exclusion
 exclude:
   - Rakefile
