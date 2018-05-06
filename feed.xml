@@ -5,9 +5,112 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 05 May 2018 16:14:23 +0800</pubDate>
-    <lastBuildDate>Sat, 05 May 2018 16:14:23 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.0</generator>
+    <pubDate>Mon, 07 May 2018 00:55:11 +0800</pubDate>
+    <lastBuildDate>Mon, 07 May 2018 00:55:11 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      
+      <item>
+        <title>我也说 RSS 复兴</title>
+        <description>&lt;p&gt;Facebook 和 Cambridge Analytica 事件发生后，伴随着对于隐私的担忧，在 &lt;a href=&quot;https://www.wired.com/story/rss-readers-feedly-inoreader-old-reader/&quot;&gt;Wired 发文呼吁&lt;/a&gt;后，是否要复兴“古老”的 RSS 似乎成为了一个议题。&lt;/p&gt;
+
+&lt;p&gt;中国是一个隐私问题的重灾区，基于用户数据挖掘的所谓 AI 技术可以说是有如无人之境，蓬勃发展。但在意自己权利的人一直在积极思考讨论，比如由 Checked 出品的播客 &lt;a href=&quot;http://checked.fm/58&quot;&gt;#58: RSS 会复兴还是会消亡？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这里，我作为一个长期 RSS 用户，也谈一谈对 RSS 的看法。&lt;/p&gt;
+
+&lt;h3 id=&quot;why-rss&quot;&gt;Why RSS？&lt;/h3&gt;
+
+&lt;p&gt;先说下，我最早中学时期就开始用 Opera Mail 进行订阅，后来也断断续续使用了鲜果以及 Google Reader。直到4年前，我有了 iPhone 手机，幸运地了解到了 &lt;a href=&quot;http://reederapp.com/ios/&quot;&gt;Reeder&lt;/a&gt; 并一直频发使用直到现在。&lt;/p&gt;
+
+&lt;p&gt;要想知道为什么用 RSS，首先要说为什么要有文章聚合。我认为文章聚合主要有3个主要需求：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;订阅更新&lt;/li&gt;
+  &lt;li&gt;一致阅读体验&lt;/li&gt;
+  &lt;li&gt;内容分类过滤&lt;/li&gt;
+  &lt;li&gt;整理记录保存&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;通常意义上的 RSS 负责订阅分布在各处的网站，并能够检查其更新。也就是说主要满足了第一点。&lt;/p&gt;
+
+&lt;p&gt;比较现代的 RSS 阅读器通常会满足第二条和第三条。大多情况下 RSS Feed 会有全文，而不是摘要。用户完全可以在阅读器中进行阅读，获得一致的用户体验，而不是前往五花八门的页面。&lt;/p&gt;
+
+&lt;p&gt;有些网站设计的好、加载速度快，阅读起来赏心悦目。但也有不少设计较差，加载缓慢，那在 RSS 阅读器的体验或许就可以超越。尤其是在像 Reeder 这样优美的阅读器中，阅读体验会好过很大一部分源网站甚至其 App。这就像自建博客和使用博客一样，可能大部分人建的站不如 Medium、不如公众号、不如今日头条。&lt;/p&gt;
+
+&lt;p&gt;内容分类过滤则是对订阅源的后置处理，提高信息获取的效率。&lt;/p&gt;
+
+&lt;p&gt;至于整理记录保存这环节，目前可能 RSS 阅读器涉足不多。但在实际使用中，RSS 结合稍后阅读类应用，以及笔记类应用是十分常见的事情。&lt;/p&gt;
+
+&lt;h3 id=&quot;怎么使用-rss&quot;&gt;怎么使用 RSS&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;选择适合自己的阅读器，比如 Reeder&lt;/li&gt;
+  &lt;li&gt;选择自己合适的订阅源&lt;/li&gt;
+  &lt;li&gt;找到自己喜欢或者需要看的内容，去除不再用的&lt;/li&gt;
+  &lt;li&gt;不断调整迭代以上步骤&lt;/li&gt;
+  &lt;li&gt;根据情况选择阅读地点
+    &lt;ul&gt;
+      &lt;li&gt;阅读器&lt;/li&gt;
+      &lt;li&gt;源网页&lt;/li&gt;
+      &lt;li&gt;稍后阅读&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;和整理记录类工具协作&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这里我有个想法，稍有些脱离主题。就是很多内容网站包括 App，都很精美或是很有自己的设计特色。比如 &lt;a href=&quot;https://www.washingtonpost.com/&quot;&gt;Washington Post&lt;/a&gt; 那铅字印刷感觉的 LOGO 以及报纸色的 UI；&lt;a href=&quot;https://www.newyorker.com/&quot;&gt;The New Yorker&lt;/a&gt; 的文章标题就不那么正式，配套的衬线字体也稍显活泼；&lt;a href=&quot;https://stackshare.io/&quot;&gt;StackShare&lt;/a&gt; 这种科技类网站，非衬线字体为主，带有蓝色元素的简洁明快。&lt;/p&gt;
+
+&lt;p&gt;这些多样性才是人类文明的体现。&lt;/p&gt;
+
+&lt;p&gt;因此网页有时候也需要“复兴”，我们需要做的是对于体验好或是有个性的内容，用 RSS 作为中转，到源网站进行阅读；对于体验差的网站，美观舒服的阅读器也是个很优秀的选择。&lt;/p&gt;
+
+&lt;h3 id=&quot;也说推荐的弊端&quot;&gt;也说推荐的弊端&lt;/h3&gt;
+
+&lt;p&gt;推荐的弊端我想大家或多或少都会知道，少数派文章&lt;a href=&quot;https://sspai.com/post/43998&quot;&gt;『论 RSS 的「复兴」』&lt;/a&gt;总结的很到位：「回音壁」现象和「信息过载」的问题。我就自己重复总结了。&lt;/p&gt;
+
+&lt;p&gt;对于智能推荐，我觉得整体是好的。大体来讲，我们获取知识更加便捷了，被训练到狭窄前的多维度推荐可以快速让人了解到相对的全貌。有些相关和协同推荐，能让我们意外发现一些新的爱好。&lt;/p&gt;
+
+&lt;p&gt;“回音壁”会存在固化偏见的问题，但偏见并非推荐造成。我不了解心理学，但我知道我从不看抨击 Java 的文章，但我并不喜欢；我从不看吹捧日本的文章，但却喜欢它的文化。&lt;/p&gt;
+
+&lt;p&gt;真正“信息过载”的人更是恐怕自己都意识不到或者难以抵抗。手机 App 上到处是小红点；一天刷超过一小时的新闻和短视频；看一天鸡汤和知乎，觉得自己学到了很多。&lt;/p&gt;
+
+&lt;p&gt;况且在没发明智能手机之前，人们在走路的时候也不见得会拿着纸质书或者报纸看，而是会选择直接走路，在地铁上发呆或者睡觉。不但不过载，甚至没信息。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;错误不在推荐，而是在于互联网公司的粗放发展和指标导向文化&lt;/strong&gt;。智能算法从来都没打算干涉用户对事情的判断，而是互联网公司里为了完成指标、超越预期，给用户尽可能感兴趣会去点的内容；是文章撰写们为了迎合用户点击，在标题和配图上取巧，而不是核心内容上。&lt;/p&gt;
+
+&lt;p&gt;这些行为让“回音壁”和“信息过载”被放大，内容面变得狭窄，时间被浪费。我认为，这可以说是一个社会问题。人们需要更便捷的获取信息的工具，因此搜索引擎、推荐、智能语音都是必定受到欢迎的。但 RSS 并不能解决这个问题，它只是一个朴素的订阅更新方式。&lt;/p&gt;
+
+&lt;h3 id=&quot;结论&quot;&gt;结论&lt;/h3&gt;
+
+&lt;h4 id=&quot;rss-不会死但不会复兴&quot;&gt;RSS 不会死，但不会复兴&lt;/h4&gt;
+
+&lt;p&gt;我们需要 RSS 带来的订阅更新的便捷；我们也需要它在需要的时候，提供足够好的一致性体验；我们需要 RSS 作为一个中转站，提供更多可能，不仅是整理记录保存。&lt;/p&gt;
+
+&lt;p&gt;对于能够独立获取信息、管理自己时间的人，RSS 始终是一个不错的选择。&lt;/p&gt;
+
+&lt;p&gt;但 RSS 并始终只做了简单的工作，正如它的名字一样&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;修复社会问题&quot;&gt;修复社会问题&lt;/h4&gt;
+
+&lt;p&gt;智能算法从一些角度上解决了获取信息的问题，但也带来了新的问题和挑战，这不正是人类发展中常常出现的情况吗？所以，现在最重要的是它带来修复社会问题。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;RSS: Really Simple Syndication, 简单资讯聚合。&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 07 May 2018 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/rss-revival.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/rss-revival.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1493,47 +1596,6 @@ Now drawing from 'AC Power'
         <category>周刊</category>
         
         <category>自动化</category>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>Unsplash, 简单纯粹的图片分享</title>
-        <description>&lt;p&gt;最近，微博上关注的开发者推荐了一个由&lt;a href=&quot;http://sspai.com/&quot;&gt;少数派&lt;/a&gt;制作的小而美的壁纸 App - &lt;a href=&quot;http://sspai.com/33525&quot;&gt;Cuto&lt;/a&gt;。这 PR 文里面提到：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Cuto 每周只会更新 6 ~ 10 张新图片，每一张都会经过精挑细选。因为我们认为，随便选几十张图片抛给用户挑选，不仅是对用户的不负责，也是对自己产品的不负责。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;同时，也将到图片的来源：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Cuto 里面的图片来自著名的无版权图片网站 Unsplash&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;于是，我出于好奇就找到了 &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;，以及 Cuto 壁纸的 &lt;a href=&quot;https://unsplash.com/collections/136026/cuto-wallpaper&quot;&gt;Collection&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt; 是一个免费的高清图片网站。&lt;strong&gt;高品质&lt;/strong&gt;，在 Unsplash 上传照片至少要有300万像素。&lt;strong&gt;简单&lt;/strong&gt;，Unsplash 的设计很简洁，精力会被集中在图片本身。&lt;strong&gt;纯粹&lt;/strong&gt;，没有过度的社交，没有任何 annoying 提醒。除了查看、下载和收藏外，也就只有点赞了。点赞并不是为了社交，而是对作者表示感谢。最后，令人惊喜和值得期待的是，Unsplash 上面的图片可以免费下载和使用。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;我从来不轻易相信免费的东西，但 Unsplash 真正做到了免费的高品质。毫无犹豫，我在 &lt;a href=&quot;https://crispgm.com/&quot;&gt;crispgm.com&lt;/a&gt; 的404页面中，嵌入了 Unsplash 随机推荐图。点这里看看吧： &lt;a href=&quot;https://crispgm.com/404.html&quot;&gt;https://crispgm.com/404.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;同时，也推荐一下 &lt;a href=&quot;https://chrome.google.com/webstore/detail/unsplash-instant/pejkokffkapolfffcgbmdmhdelanoaih?hl=en&quot;&gt;Unsplash Instant&lt;/a&gt;。Unsplash 官方出品的 Chrome 扩展，每次打开一个 Tab，都会显示一张图片。&lt;/p&gt;
-
-&lt;p&gt;感谢 &lt;a href=&quot;https://crew.co/&quot;&gt;Crew&lt;/a&gt; 让我们拥有这么美好的体验！Crew 也是一个很美的公司，有兴趣的可以自行看看它们的招聘页面和团队博客，体会一下别人家的公司是什么样。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crew.co/app/uploads/2017/02/3can7mahta-crew-1024x794.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/unsplash-simple-pure-photos.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/unsplash-simple-pure-photos.html</guid>
-        
-        <category>unsplash</category>
         
         
       </item>
