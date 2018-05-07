@@ -51,7 +51,7 @@ namespace :site do
   desc "Serve site"
   task :serve do
     Dir.chdir("site") do
-      sh "bundle exec jekyll serve --draft"
+      sh "bundle exec jekyll serve --draft --future --livereload"
     end
   end
 
