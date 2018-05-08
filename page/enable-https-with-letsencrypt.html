@@ -99,20 +99,18 @@
 
 <p>As the <code class="highlighter-rouge">letsencrypt-nginx</code> is not fully developed, I choose <code class="highlighter-rouge">certonly</code> to generate SSL certificate and configure nginx manually.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
+</code></pre></div></div>
 
 <h3 id="nginx-configuration">Nginx Configuration</h3>
 
 <p>Configure nginx.conf</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
 ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
 
 ssl_session_timeout  1440m;     
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Others are as default.</p>
 

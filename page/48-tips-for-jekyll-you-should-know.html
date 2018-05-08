@@ -60,15 +60,13 @@
 
 <p>首先，你得有 Ruby。对于 Mac 用户，可以使用 Homebrew 安装。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ brew install ruby
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install ruby
+</code></pre></div></div>
 
 <p>然后：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install jekyll
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll
+</code></pre></div></div>
 
 <h4 id="gem-安装不上或者很慢怎么办">Gem 安装不上或者很慢怎么办？</h4>
 
@@ -76,9 +74,8 @@
 
 <p>建议更换成 Ruby-China 的源，参考 <a href="https://gems.ruby-china.org/">https://gems.ruby-china.org/</a>。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+</code></pre></div></div>
 
 <p>同时，也广告一下本人的作品：<a href="https://crispgm.github.io/gsm/">Gem Sources Manager</a>，专门用于切换源。</p>
 
@@ -86,9 +83,8 @@
 
 <p>从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 <code class="highlighter-rouge">/usr/bin</code> 等文件夹无法写入。因此需要更换安装路径。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install -n /usr/local/bin jekyll
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install -n /usr/local/bin jekyll
+</code></pre></div></div>
 
 <p>详见 <a href="https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011">https://jekyllrb.com/docs/troubleshooting/#jekyll-amp-mac-os-x-1011</a></p>
 
@@ -96,41 +92,36 @@
 
 <p>Jekyll 3.3.0 之后开始采用 Bundler 方式运行。安装时，需要同时安装 Bundler：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install jekyll bundler
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll bundler
+</code></pre></div></div>
 
 <p>所以所有命令可能也需要使用 Bundler：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle exec jekyll serve
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle exec jekyll serve
+</code></pre></div></div>
 
 <h2 id="命令">命令</h2>
 
 <h4 id="使用-jekyll-new-创建新站点">使用 <code class="highlighter-rouge">jekyll new</code> 创建新站点</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll new my-jekyll-site
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll new my-jekyll-site
+</code></pre></div></div>
 
 <p>也可以：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir my-jekyll-site
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir my-jekyll-site
 $ cd my-jekyll-site
 $ jekyll new .
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="使用-jekyll-serve-在本地运行站点">使用 <code class="highlighter-rouge">jekyll serve</code> 在本地运行站点</h4>
 
 <p>以下三种使用方式是等价的：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll serve
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll serve
 $ jekyll server
 $ jekyll s
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>通过 <code class="highlighter-rouge">http://localhost:4000</code> 进行访问。</p>
 
@@ -138,22 +129,19 @@ $ jekyll s
 
 <p>以下两种使用方式是等价的：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll build
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll build
 $ jekyll b
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>通过 <code class="highlighter-rouge">--destination</code> 指定目标路径：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll build --destination=/path/to/site
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll build --destination=/path/to/site
+</code></pre></div></div>
 
 <h4 id="使用-jekyll-new-theme-创建主题">使用 <code class="highlighter-rouge">jekyll new-theme</code> 创建主题</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll new-theme my-theme
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll new-theme my-theme
+</code></pre></div></div>
 
 <h2 id="基础">基础</h2>
 
@@ -161,7 +149,7 @@ $ jekyll b
 
 <p>一个基本的 Jekyll 站点目录结构：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
 ├── _config.yml
 ├── _data
 |   └── members.yml
@@ -183,8 +171,7 @@ $ jekyll b
 ├── _site
 ├── .jekyll-metadata
 └── index.html # 也可以是 index.md
-</code></pre>
-</div>
+</code></pre></div></div>
 <ul>
   <li>_config.yml
     <ul>
@@ -203,7 +190,7 @@ $ jekyll b
   </li>
   <li>_layouts
     <ul>
-      <li>布局。布局文件可以被继承，<code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">content</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> 用于表示被继承者的内容。</li>
+      <li>布局。布局文件可以被继承，<code class="highlighter-rouge">{{ content }}</code> 用于表示被继承者的内容。</li>
     </ul>
   </li>
   <li>_posts
@@ -232,79 +219,78 @@ $ jekyll b
 
 <p><code class="highlighter-rouge">_config.yml</code> 是整个站点的整体配置，以下是所有配置项和默认值：</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="c1"># Where things are</span>
-<span class="s">source</span><span class="pi">:</span>       <span class="s">.</span>
-<span class="s">destination</span><span class="pi">:</span>  <span class="s">./_site</span>
-<span class="s">plugins_dir</span><span class="pi">:</span>  <span class="s">_plugins</span>
-<span class="s">layouts_dir</span><span class="pi">:</span>  <span class="s">_layouts</span>
-<span class="s">data_dir</span><span class="pi">:</span>     <span class="s">_data</span>
-<span class="s">includes_dir</span><span class="pi">:</span> <span class="s">_includes</span>
-<span class="s">collections</span><span class="pi">:</span>
-  <span class="s">posts</span><span class="pi">:</span>
-    <span class="s">output</span><span class="pi">:</span>   <span class="s">true</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Where things are</span>
+<span class="na">source</span><span class="pi">:</span>       <span class="s">.</span>
+<span class="na">destination</span><span class="pi">:</span>  <span class="s">./_site</span>
+<span class="na">plugins_dir</span><span class="pi">:</span>  <span class="s">_plugins</span>
+<span class="na">layouts_dir</span><span class="pi">:</span>  <span class="s">_layouts</span>
+<span class="na">data_dir</span><span class="pi">:</span>     <span class="s">_data</span>
+<span class="na">includes_dir</span><span class="pi">:</span> <span class="s">_includes</span>
+<span class="na">collections</span><span class="pi">:</span>
+  <span class="na">posts</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span>   <span class="no">true</span>
 
 <span class="c1"># Handling Reading</span>
-<span class="s">safe</span><span class="pi">:</span>         <span class="s">false</span>
-<span class="s">include</span><span class="pi">:</span>      <span class="pi">[</span><span class="s2">"</span><span class="s">.htaccess"</span><span class="pi">]</span>
-<span class="s">exclude</span><span class="pi">:</span>      <span class="pi">[</span><span class="s2">"</span><span class="s">node_modules"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/bundle/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/cache/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/gems/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/ruby/"</span><span class="pi">]</span>
-<span class="s">keep_files</span><span class="pi">:</span>   <span class="pi">[</span><span class="s2">"</span><span class="s">.git"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">.svn"</span><span class="pi">]</span>
-<span class="s">encoding</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">utf-8"</span>
-<span class="s">markdown_ext</span><span class="pi">:</span> <span class="s2">"</span><span class="s">markdown,mkdown,mkdn,mkd,md"</span>
+<span class="na">safe</span><span class="pi">:</span>         <span class="no">false</span>
+<span class="na">include</span><span class="pi">:</span>      <span class="pi">[</span><span class="s2">"</span><span class="s">.htaccess"</span><span class="pi">]</span>
+<span class="na">exclude</span><span class="pi">:</span>      <span class="pi">[</span><span class="s2">"</span><span class="s">node_modules"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/bundle/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/cache/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/gems/"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">vendor/ruby/"</span><span class="pi">]</span>
+<span class="na">keep_files</span><span class="pi">:</span>   <span class="pi">[</span><span class="s2">"</span><span class="s">.git"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">.svn"</span><span class="pi">]</span>
+<span class="na">encoding</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">utf-8"</span>
+<span class="na">markdown_ext</span><span class="pi">:</span> <span class="s2">"</span><span class="s">markdown,mkdown,mkdn,mkd,md"</span>
 
 <span class="c1"># Filtering Content</span>
-<span class="s">show_drafts</span><span class="pi">:</span> <span class="s">null</span>
-<span class="s">limit_posts</span><span class="pi">:</span> <span class="s">0</span>
-<span class="s">future</span><span class="pi">:</span>      <span class="s">false</span>
-<span class="s">unpublished</span><span class="pi">:</span> <span class="s">false</span>
+<span class="na">show_drafts</span><span class="pi">:</span> <span class="no">null</span>
+<span class="na">limit_posts</span><span class="pi">:</span> <span class="s">0</span>
+<span class="na">future</span><span class="pi">:</span>      <span class="no">false</span>
+<span class="na">unpublished</span><span class="pi">:</span> <span class="no">false</span>
 
 <span class="c1"># Plugins</span>
-<span class="s">whitelist</span><span class="pi">:</span> <span class="pi">[]</span>
-<span class="s">gems</span><span class="pi">:</span>      <span class="pi">[]</span>
+<span class="na">whitelist</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">gems</span><span class="pi">:</span>      <span class="pi">[]</span>
 
 <span class="c1"># Conversion</span>
-<span class="s">markdown</span><span class="pi">:</span>    <span class="s">kramdown</span>
-<span class="s">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
-<span class="s">lsi</span><span class="pi">:</span>         <span class="s">false</span>
-<span class="s">excerpt_separator</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s">"</span>
-<span class="s">incremental</span><span class="pi">:</span> <span class="s">false</span>
+<span class="na">markdown</span><span class="pi">:</span>    <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+<span class="na">lsi</span><span class="pi">:</span>         <span class="no">false</span>
+<span class="na">excerpt_separator</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s">"</span>
+<span class="na">incremental</span><span class="pi">:</span> <span class="no">false</span>
 
 <span class="c1"># Serving</span>
-<span class="s">detach</span><span class="pi">:</span>  <span class="s">false</span>
-<span class="s">port</span><span class="pi">:</span>    <span class="s">4000</span>
-<span class="s">host</span><span class="pi">:</span>    <span class="s">127.0.0.1</span>
-<span class="s">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># does not include hostname</span>
-<span class="s">show_dir_listing</span><span class="pi">:</span> <span class="s">false</span>
+<span class="na">detach</span><span class="pi">:</span>  <span class="no">false</span>
+<span class="na">port</span><span class="pi">:</span>    <span class="s">4000</span>
+<span class="na">host</span><span class="pi">:</span>    <span class="s">127.0.0.1</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># does not include hostname</span>
+<span class="na">show_dir_listing</span><span class="pi">:</span> <span class="no">false</span>
 
 <span class="c1"># Outputting</span>
-<span class="s">permalink</span><span class="pi">:</span>     <span class="s">date</span>
-<span class="s">paginate_path</span><span class="pi">:</span> <span class="s">/page:num</span>
-<span class="s">timezone</span><span class="pi">:</span>      <span class="s">null</span>
+<span class="na">permalink</span><span class="pi">:</span>     <span class="s">date</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s">/page:num</span>
+<span class="na">timezone</span><span class="pi">:</span>      <span class="no">null</span>
 
-<span class="s">quiet</span><span class="pi">:</span>    <span class="s">false</span>
-<span class="s">verbose</span><span class="pi">:</span>  <span class="s">false</span>
-<span class="s">defaults</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">quiet</span><span class="pi">:</span>    <span class="no">false</span>
+<span class="na">verbose</span><span class="pi">:</span>  <span class="no">false</span>
+<span class="na">defaults</span><span class="pi">:</span> <span class="pi">[]</span>
 
-<span class="s">liquid</span><span class="pi">:</span>
-  <span class="s">error_mode</span><span class="pi">:</span> <span class="s">warn</span>
+<span class="na">liquid</span><span class="pi">:</span>
+  <span class="na">error_mode</span><span class="pi">:</span> <span class="s">warn</span>
 
 <span class="c1"># Markdown Processors</span>
-<span class="s">rdiscount</span><span class="pi">:</span>
-  <span class="s">extensions</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">rdiscount</span><span class="pi">:</span>
+  <span class="na">extensions</span><span class="pi">:</span> <span class="pi">[]</span>
 
-<span class="s">redcarpet</span><span class="pi">:</span>
-  <span class="s">extensions</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">redcarpet</span><span class="pi">:</span>
+  <span class="na">extensions</span><span class="pi">:</span> <span class="pi">[]</span>
 
-<span class="s">kramdown</span><span class="pi">:</span>
-  <span class="s">auto_ids</span><span class="pi">:</span>       <span class="s">true</span>
-  <span class="s">footnote_nr</span><span class="pi">:</span>    <span class="s">1</span>
-  <span class="s">entity_output</span><span class="pi">:</span>  <span class="s">as_char</span>
-  <span class="s">toc_levels</span><span class="pi">:</span>     <span class="s">1..6</span>
-  <span class="s">smart_quotes</span><span class="pi">:</span>   <span class="s">lsquo,rsquo,ldquo,rdquo</span>
-  <span class="s">input</span><span class="pi">:</span>          <span class="s">GFM</span>
-  <span class="s">hard_wrap</span><span class="pi">:</span>      <span class="s">false</span>
-  <span class="s">footnote_nr</span><span class="pi">:</span>    <span class="s">1</span>
-</code></pre>
-</div>
+<span class="na">kramdown</span><span class="pi">:</span>
+  <span class="na">auto_ids</span><span class="pi">:</span>       <span class="no">true</span>
+  <span class="na">footnote_nr</span><span class="pi">:</span>    <span class="s">1</span>
+  <span class="na">entity_output</span><span class="pi">:</span>  <span class="s">as_char</span>
+  <span class="na">toc_levels</span><span class="pi">:</span>     <span class="s">1..6</span>
+  <span class="na">smart_quotes</span><span class="pi">:</span>   <span class="s">lsquo,rsquo,ldquo,rdquo</span>
+  <span class="na">input</span><span class="pi">:</span>          <span class="s">GFM</span>
+  <span class="na">hard_wrap</span><span class="pi">:</span>      <span class="no">false</span>
+  <span class="na">footnote_nr</span><span class="pi">:</span>    <span class="s">1</span>
+</code></pre></div></div>
 
 <h4 id="front-matter">Front Matter</h4>
 
@@ -314,27 +300,25 @@ $ jekyll b
 
 <p>可以使用 <code class="highlighter-rouge">defaults</code> 设置一个路径下 Front Matter 默认值。</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">defaults</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">scope</span><span class="pi">:</span>
-      <span class="s">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-      <span class="s">type</span><span class="pi">:</span> <span class="s">weekly</span>
-    <span class="s">values</span><span class="pi">:</span>
-      <span class="s">layout</span><span class="pi">:</span> <span class="s">weekly</span>
-      <span class="s">title</span><span class="pi">:</span> <span class="s">技术周刊</span>
-</code></pre>
-</div>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">defaults</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">scope</span><span class="pi">:</span>
+      <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">weekly</span>
+    <span class="na">values</span><span class="pi">:</span>
+      <span class="na">layout</span><span class="pi">:</span> <span class="s">weekly</span>
+      <span class="na">title</span><span class="pi">:</span> <span class="s">技术周刊</span>
+</code></pre></div></div>
 
 <h4 id="忽略文件">忽略文件</h4>
 
 <p><code class="highlighter-rouge">exclude</code> 用于忽略文件或文件夹，其中 <code class="highlighter-rouge">_config.yml</code> 和以<code class="highlighter-rouge">.</code>开头的文件或文件夹都会被自动忽略。后续版本，<code class="highlighter-rouge">node_modules</code> 等文件夹也被隐式忽略了（参考 _config.yml 章节）。</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">exclude</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">Gemfile</span>
   <span class="pi">-</span> <span class="s">Gemfile.lock</span>
   <span class="pi">-</span> <span class="s">README.md</span>
   <span class="pi">-</span> <span class="s">LICENSE</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="分页">分页</h4>
 
@@ -355,9 +339,8 @@ $ jekyll b
 
 <p>我们也可以设置摘取摘要的分隔符：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>excerpt_separator: &lt;!--more--&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>excerpt_separator: &lt;!--more--&gt;
+</code></pre></div></div>
 
 <h4 id="评论">评论</h4>
 
@@ -379,21 +362,19 @@ $ jekyll b
 
 <p>团队成员有 Fa, Li, Zhang 三人，于是我们在默认路径 <code class="highlighter-rouge">_data</code> 创建一个数据文件 <code class="highlighter-rouge">member.yml</code>：</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">Fa</span>
-<span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">Li</span>
-<span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">Zhang</span>
-</code></pre>
-</div>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Fa</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Li</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Zhang</span>
+</code></pre></div></div>
 
 <p>在页面中显示团队成员列表：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">member</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">site.data.member</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span><span class="err">&lt;ul&gt;</span><span class="w">
-  </span><span class="err">&lt;li&gt;</span><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">member.name</span><span class="w"> </span><span class="p">}</span><span class="err">}&lt;/li&gt;</span><span class="w">
-</span><span class="err">&lt;/ul&gt;</span><span class="w">
-</span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endfor</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% for member in site.data.member %}
+&lt;ul&gt;
+  &lt;li&gt;{{ member.name }}&lt;/li&gt;
+&lt;/ul&gt;
+{% endfor %}
+</code></pre></div></div>
 
 <h2 id="liquid-模板">Liquid 模板</h2>
 
@@ -407,11 +388,10 @@ $ jekyll b
 
 <h4 id="变量">变量</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;title&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;title&gt;
 {{ page.title }}
 &lt;/title&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>其中，Jekyll 预设了 <code class="highlighter-rouge">site</code>, <code class="highlighter-rouge">layout</code>, <code class="highlighter-rouge">page</code>, <code class="highlighter-rouge">content</code> 四个全局变量。</p>
 
@@ -426,11 +406,10 @@ $ jekyll b
 
 <p>为了简单，只以 <code class="highlighter-rouge">if</code> 为例：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">page.syntax_highlight</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">'false'</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span><span class="err">&lt;link</span><span class="w"> </span><span class="err">rel=</span><span class="s2">"stylesheet"</span><span class="w"> </span><span class="err">href=</span><span class="s2">"{{ site.assets }}/css/zenburn.css"</span><span class="err">&gt;</span><span class="w">
-</span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endif</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if page.syntax_highlight != 'false' %}
+&lt;link rel="stylesheet" href="{{ site.assets }}/css/zenburn.css"&gt;
+{% endif %}
+</code></pre></div></div>
 
 <h4 id="遍历">遍历</h4>
 
@@ -438,11 +417,10 @@ $ jekyll b
 
 <p>除此之外，还可以使用 <code class="highlighter-rouge">offset</code> 和 <code class="highlighter-rouge">limit</code> 控制遍历范围，通过 <code class="highlighter-rouge">reversed</code> 进行倒序。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">post</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">site.posts</span><span class="w"> </span><span class="err">reversed</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span><span class="err">&lt;a</span><span class="w"> </span><span class="err">href=</span><span class="s2">"{{ post.permalink }}"</span><span class="err">&gt;</span><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">post.title</span><span class="w"> </span><span class="p">}</span><span class="err">}&lt;/a&gt;</span><span class="w">
-</span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endfor</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% for post in site.posts reversed %}
+&lt;a href="{{ post.permalink }}"&gt;{{ post.title }}&lt;/a&gt;
+{% endfor %}
+</code></pre></div></div>
 
 <p>详见 <a href="https://shopify.github.io/liquid/tags/iteration/">https://shopify.github.io/liquid/tags/iteration/</a></p>
 
@@ -450,25 +428,22 @@ $ jekyll b
 
 <p>使用 <code class="highlighter-rouge">assign</code> 进行赋值：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">assign</span><span class="w"> </span><span class="err">my_variable</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">false</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% assign my_variable = false %}
+</code></pre></div></div>
 
 <p>使用 <code class="highlighter-rouge">capture</code> 进行捕捉赋值：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">capture</span><span class="w"> </span><span class="err">my_variable</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span><span class="err">I</span><span class="w"> </span><span class="err">am</span><span class="w"> </span><span class="err">being</span><span class="w"> </span><span class="err">captured.</span><span class="w">
-</span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endcapture</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% capture my_variable %}
+I am being captured.
+{% endcapture %}
+</code></pre></div></div>
 
 <h4 id="liquid-filters">Liquid Filters</h4>
 
 <p>Liquid Filters 是一种针对 Liquid 中变量的过滤器，语法是：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">var</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">filter:</span><span class="w"> </span><span class="nt">"param"</span><span class="w"> </span><span class="err">}}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ var | filter: "param" }}
+</code></pre></div></div>
 
 <p>除去 Liquid 自身丰富的过滤器之外，Jekyll 还额外扩展了一些实用的：</p>
 
@@ -523,9 +498,8 @@ $ jekyll b
 
 <p>Jekyll Watch 是自动开启的：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll serve --watch
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll serve --watch
+</code></pre></div></div>
 
 <h4 id="jekyll-compose">Jekyll Compose</h4>
 
@@ -533,33 +507,28 @@ $ jekyll b
 
 <p>创建草稿：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll draft
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll draft
+</code></pre></div></div>
 
 <p>创建新博客：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll post
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll post
+</code></pre></div></div>
 
 <p>创建新博客：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll page
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll page
+</code></pre></div></div>
 
 <p>发布草稿：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll publish
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll publish
+</code></pre></div></div>
 
 <p>撤销发布：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll unpublish
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll unpublish
+</code></pre></div></div>
 
 <h4 id="jekyll-admin">Jekyll Admin</h4>
 

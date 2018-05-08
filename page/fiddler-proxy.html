@@ -159,24 +159,21 @@
 
 <h3 id="添加-headers">添加 Headers</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
+</code></pre></div></div>
 
 <h4 id="添加-cookies">添加 Cookies</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 增加预览机标识
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 增加预览机标识
 oSession.oRequest.headers.Add("Cookie", "pub_env=1");
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="匹配-url防止添加的字段干扰到其他网页">匹配 URL，防止添加的字段干扰到其他网页</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
     // TODO
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>更多用法，请参考 <a href="http://docs.telerik.com/fiddler/knowledgebase/fiddlerscript/modifyrequestorresponse">Fiddler Documentation</a></p>
 

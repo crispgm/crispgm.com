@@ -72,9 +72,8 @@
 
 <p>选择 Ruby 还有个好处就是 GitHub 自身是用 Ruby 编写，因此 GitHub API 的 Ruby 库 <a href="https://github.com/octokit/octokit.rb">Octokit.rb</a> 非常简单好用。</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">client</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">::</span><span class="no">Client</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:access_token</span> <span class="o">=&gt;</span> <span class="n">access_token</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">client</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">::</span><span class="no">Client</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:access_token</span> <span class="o">=&gt;</span> <span class="n">access_token</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h4 id="access_token">access_token</h4>
 
@@ -90,15 +89,13 @@
 
 <p>开始收集一周的周刊时，先用创建一个收集贴。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ rake open[2016-12-06]
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake open[2016-12-06]
+</code></pre></div></div>
 
 <p>也就是调用 <code class="highlighter-rouge">Octokit.rb</code> 发 issue 接口：</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">client</span><span class="p">.</span><span class="nf">create_issue</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">issue_name</span><span class="p">,</span> <span class="s2">"MSBU Weekly </span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="s2"> is now in collecting. Post your entry following the instruction of &lt;https://github.com/msbu-tech/weekly#投稿&gt;."</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">client</span><span class="p">.</span><span class="nf">create_issue</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">issue_name</span><span class="p">,</span> <span class="s2">"MSBU Weekly </span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="s2"> is now in collecting. Post your entry following the instruction of &lt;https://github.com/msbu-tech/weekly#投稿&gt;."</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p><img src="/image/msbu-bot-open-issue.jpg" alt="" /></p>
 
@@ -106,23 +103,21 @@
 
 <p>周刊文章收集完毕后，我们开始导入：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ rake weekly[2016-12-06, true]
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake weekly[2016-12-06, true]
+</code></pre></div></div>
 
 <p>文章投稿的格式是：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/post
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/post
 - 疯狂的JSONP
 - http://www.cnblogs.com/twobin/p/3395086.html
 - 何为跨域？何为JSONP？JSONP技术能实现什么？是否有必要使用JSONP技术？
 - javascript, jsonp, 跨域
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>这里面的工作主要是是遍历 issue，识别 <code class="highlighter-rouge">/post</code> 投稿标识，然后获取标签、链接、介绍或评语、标签，而回贴人的 ID 就视为推荐人。</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">issue_comment</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">issue_comment</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span>
   <span class="n">body</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="ss">:body</span><span class="p">]</span>
   <span class="n">title</span> <span class="o">=</span> <span class="s2">""</span>
   <span class="n">link</span> <span class="o">=</span> <span class="s2">""</span>
@@ -148,16 +143,14 @@
     <span class="k">end</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>其中，<code class="highlighter-rouge">Spacifier</code> 是我自己做的一个 <a href="https://github.com/crispgm/spacifier">Gem</a>，用于在中英文共存的字符串中，在中英文之间加一个空格。这样可以优化显示效果，之前为了一些完美主义都是手动转的。<code class="highlighter-rouge">Spacifier</code> 目前功能还不太完善，后续会慢慢改善。</p>
 
 <p>导入文件后会提示导入文章数，并创建周刊网页和邮件所需的 Markdown 文件。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[INFO] Imported 8 article(s).
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[INFO] Imported 8 article(s).
+</code></pre></div></div>
 
 <h3 id="测试">测试</h3>
 
@@ -165,9 +158,8 @@
 
 <p>同时，推荐一个好用的 Gem —— <a href="https://github.com/fazibear/colorize">colorize</a>。<code class="highlighter-rouge">colorize</code> “打开”了 <code class="highlighter-rouge">String</code>，需要报错的时候，只需要在输出的字符串后面调用 <code class="highlighter-rouge">.red</code> 方法，就可以在控制台用红色显示，很醒目。</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"[ERROR] Import articles error!"</span><span class="p">.</span><span class="nf">red</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"[ERROR] Import articles error!"</span><span class="p">.</span><span class="nf">red</span>
+</code></pre></div></div>
 
 <h3 id="发布">发布</h3>
 
@@ -177,11 +169,10 @@
 
 <p>我们还需要做的是告诉大家周刊发布的好消息，对投稿人表示感谢，然后关闭掉 issue。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ rake publish
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake publish
+</code></pre></div></div>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">comment</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOL</span><span class="sh">
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">comment</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOL</span><span class="sh">
   Congratulations!
   MSBU Weekly </span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="sh"> is published on &lt;https://msbu-tech.github.io/weekly/</span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="sh">-weekly.html&gt;!
   Thanks </span><span class="si">#{</span><span class="n">contributors_list</span><span class="p">.</span><span class="nf">join</span> <span class="s1">', '</span><span class="si">}</span><span class="sh"> for your great contribution!
@@ -189,8 +180,7 @@
 
 <span class="n">client</span><span class="p">.</span><span class="nf">add_comment</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">comment</span><span class="p">)</span>
 <span class="n">client</span><span class="p">.</span><span class="nf">close_issue</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><img src="/image/msbu-bot-say-thanks-and-close.jpg" alt="" /></p>
 
@@ -198,11 +188,10 @@
 
 <p>这里需要再引入一个非官方的 Wunderlist API：</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"wunderlist-api"</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"wunderlist-api"</span>
+</code></pre></div></div>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">wl</span> <span class="o">=</span> <span class="no">Wunderlist</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">({</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wl</span> <span class="o">=</span> <span class="no">Wunderlist</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">({</span>
   <span class="ss">access_token: </span><span class="no">ENV</span><span class="p">[</span><span class="s2">"WLIST_ACCESS_TOKEN"</span><span class="p">],</span>
   <span class="ss">client_id: </span><span class="no">ENV</span><span class="p">[</span><span class="s2">"WLIST_CLIENT_ID"</span><span class="p">]</span>
 <span class="p">})</span>
@@ -216,8 +205,7 @@
     <span class="k">break</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="写在最后">写在最后</h2>
 

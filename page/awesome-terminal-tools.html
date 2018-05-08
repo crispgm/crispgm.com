@@ -54,7 +54,7 @@
 
 <p>📚 Simplified and community-driven man pages.</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>tldr ps
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>tldr ps
 
 ps
 
@@ -67,17 +67,15 @@ Information about running processes.
     ps auxww
 
 - Search <span class="k">for </span>a process that matches a string:
-    ps aux | grep string
-</code></pre>
-</div>
+    ps aux | <span class="nb">grep </span>string
+</code></pre></div></div>
 
 <h3 id="lock-cli"><a href="https://github.com/sindresorhus/lock-cli">lock-cli</a></h3>
 
 <p>Lock your system from the command-line. Support macOS, Linux, and Windows.</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>lock
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>lock
+</code></pre></div></div>
 
 <p>Then, your OS will be locked.</p>
 
@@ -109,17 +107,15 @@ Information about running processes.
 
 <p>Socks and HTTP proxy for terminal. And we can use <code class="highlighter-rouge">proxychains</code> to boost speed of some services and get across the wall.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ proxychains4 git push
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ proxychains4 git push
+</code></pre></div></div>
 
 <h3 id="coinmon"><a href="https://github.com/bichenkk/coinmon">coinmon</a></h3>
 
 <p>💰 Cryptocurrency price ticker CLI.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ coinmon
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ coinmon
+</code></pre></div></div>
 
 <p><img src="https://raw.githubusercontent.com/bichenkk/coinmon/master/screenshot.png" alt="" /></p>
 
@@ -133,7 +129,7 @@ Information about running processes.
 
 <p>This is the official example of <code class="highlighter-rouge">terminal-table</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rows = []
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rows = []
 rows &lt;&lt; ['One', 1]
 rows &lt;&lt; ['Two', 2]
 rows &lt;&lt; ['Three', 3]
@@ -146,8 +142,7 @@ table = Terminal::Table.new :rows =&gt; rows
 # | Two   | 2 |
 # | Three | 3 |
 # +-------+---+
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="macos-specifics">macOS Specifics</h2>
 
@@ -157,7 +152,7 @@ table = Terminal::Table.new :rows =&gt; rows
 
 <p>It is designed for scripting and automation. However, I really like and need this awesome tool to update with terminal instead of the AppStore GUI, which fails frequently in China mainland.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mas list
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mas list
 
 724472954 Manico (2.3.2)
 623795237 Ulysses (2.8.2)
@@ -170,23 +165,21 @@ table = Terminal::Table.new :rows =&gt; rows
 409183694 Keynote (7.1.1)
 410628904 Wunderlist (3.4.6)
 973134470 Be Focused (1.6.2)
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mas upgrade
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mas upgrade
 
 Upgrading 1 outdated application:
 WeChat (2.2.8)
 ==&gt; Downloading WeChat
 ==&gt; Installed WeChat
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="m-cli"><a href="https://github.com/rgcr/m-cli">m-cli</a></h3>
 
 <p><em>Swiss Army Knife for macOS!</em> By <code class="highlighter-rouge">m-cli</code>, it enables you to control everything of Mac with commands.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ m 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ m 
 
   Swiss Army Knife for macOS ! 
 
@@ -233,14 +226,12 @@ usage:  m [OPTIONS] COMMAND [help]
         vpn
         wallpaper
         wifi
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ m battery status
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ m battery status
 Now drawing from 'AC Power'
  -InternalBattery-0 (id=3997795)	100%; charged; 0:00 remaining present: true
-</code></pre>
-</div>
+</code></pre></div></div>
 
         </div>
         <div class="article-share">

@@ -58,23 +58,21 @@
 
 <h2 id="简单-demo">简单 Demo</h2>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>echo 'hello';
-flush();
-ob_flush();
-sleep(1);
-echo 'world';
-</code></pre>
-</div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">echo</span> <span class="s1">'hello'</span><span class="p">;</span>
+<span class="nb">flush</span><span class="p">();</span>
+<span class="nb">ob_flush</span><span class="p">();</span>
+<span class="nb">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s1">'world'</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>这是一个最简单的 BigPipe demo，然而由于 <code class="highlighter-rouge">fastcgi_buffer</code> 的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用 <code class="highlighter-rouge">str_pad</code> 填充一些字符以达到 buffer。ps：吐槽一下 <code class="highlighter-rouge">str_pad</code> 这个函数名，明明 str 系列函数都是不带下划线的，如 <code class="highlighter-rouge">strlen</code>, <code class="highlighter-rouge">strcpy</code> 等，但这个函数却有下划线。str 系列函数表示：我们之间出现了叛徒！</p>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>echo str_pad('hello', 10000, ' ');
-flush();
-ob_flush();
-sleep(1);
-echo str_pad('world', 10000, ' ');
-</code></pre>
-</div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">echo</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">' '</span><span class="p">);</span>
+<span class="nb">flush</span><span class="p">();</span>
+<span class="nb">ob_flush</span><span class="p">();</span>
+<span class="nb">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">'world'</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">' '</span><span class="p">);</span>
+</code></pre></div></div>
 
 <p>进行字符填充后，BigPipe 效果显现了出来，hello 之后过1秒后会才会出现 world。由此可见，buffer 这块是个问题，后面会单独具体介绍科学优雅的解决方法。</p>
 
@@ -102,9 +100,8 @@ echo str_pad('world', 10000, ' ');
 
 <p>由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>t = max(t1, t2, t3...)
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t = max(t1, t2, t3...)
+</code></pre></div></div>
 
 <p>框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。</p>
 
@@ -126,19 +123,17 @@ echo str_pad('world', 10000, ' ');
 
 <p>然而，这样带来了一个问题。线上运行中的 Nginx 1.4.4版本过低，关闭 <code class="highlighter-rouge">proxy_buffer</code> 的指令 <code class="highlighter-rouge">proxy_buffering off</code> 原生就支持。而关闭 <code class="highlighter-rouge">fastcgi_buffer</code> 的 <code class="highlighter-rouge">fastcgi_buffering</code> 需要1.5.6版本。所以首先，我们把 Nginx 版本升级到了1.7.8，重编译后上线。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Syntax: fastcgi_buffering on | off;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Syntax: fastcgi_buffering on | off;
 Default: fastcgi_buffering on;
 Context: http, server, location
 This directive appeared in version 1.5.6.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>详见 <a href="http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering">http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># 旧版本的Nginx并不支持fastcgi_buffering
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 旧版本的Nginx并不支持fastcgi_buffering
 nginx: [emerg] unknown directive "fastcgi_buffering"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>还有一个问题，就是我们并不想对所有请求都关闭 buffer。为了将影响面做得最小，我们只想关闭特定模块的 buffer。改 <code class="highlighter-rouge">nginx.conf</code> 固然可以实现，不过对于不支持嵌套 <code class="highlighter-rouge">if</code> 的 <code class="highlighter-rouge">nginx.conf</code> 来说这是个很不舒服的用法。</p>
 
@@ -150,9 +145,8 @@ nginx: [emerg] unknown directive "fastcgi_buffering"
 
 <p>因此，配置上完全不用关闭 buffer，只需要在 php 代码中加 header 就好，顺利把 buffer 优雅关闭。</p>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>header('X-Accel-Buffering: no');
-</code></pre>
-</div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">header</span><span class="p">(</span><span class="s1">'X-Accel-Buffering: no'</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h3 id="效果评估">效果评估</h3>
 

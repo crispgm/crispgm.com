@@ -129,13 +129,12 @@
 
 <p>于是，我修改了 Jekyll 的 <code class="highlighter-rouge">_layout/post.html</code> 模板中的 Disqus 片段。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var disqus_config = function () {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var disqus_config = function () {
   this.page.url = '{{ site.url }}{{ page.permalink }}';
   this.page.identifier = '{{ page.permalink }}';
   this.page.title = '{{ page.title }}';
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>现在，问题终于彻底得到了解决。</p>
 

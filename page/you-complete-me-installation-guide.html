@@ -82,24 +82,21 @@ C/C++/Objective-C (基于 clang)，Python (基于 <a href="https://github.com/da
 
 <p>安装完 vundle 后，修改 .vimrc</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>vim ~/.vimrc
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.vimrc
+</code></pre></div></div>
 
 <p>加入</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Bundle 'Valloric/YouCompleteMe'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle 'Valloric/YouCompleteMe'
+</code></pre></div></div>
 
 <p>保存重启 vim 后 <code class="highlighter-rouge">:BundleInstall</code>，就开始安装了。这个安装并没有包括编译，只是把 ycm 的 vim、python 以及 C++ 代码下载下来。</p>
 
 <p>然后进入 YouCompleteMe 的目录开始编译，<code class="highlighter-rouge">--clang-completer</code> 是启用 C family languages 提示(为的就是这功能，果断要加上)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/.vim/bundle/YouCompleteMe
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>到此，插件已经编译完毕，基本上可以使用了。不过此时进入编辑 cpp 文件，发现代码提示怎么还是基于 omnifunc 呢？原来缺少了一条配置。</p>
 
@@ -107,9 +104,8 @@ C/C++/Objective-C (基于 clang)，Python (基于 <a href="https://github.com/da
 
 <p>编辑 ~/.vimrc 文件，加入</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+</code></pre></div></div>
 
 <p>重新进入 vim，已经可以正常对代码进行提示。</p>
 

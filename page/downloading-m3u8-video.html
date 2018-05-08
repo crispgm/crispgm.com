@@ -86,9 +86,8 @@
 
 <p>那么就：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cat 2.ts &gt;&gt; 1.ts
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat 2.ts &gt;&gt; 1.ts
+</code></pre></div></div>
 
 <p>这样，视频完全可以看，只不过因为 meta 信息还是 1.ts 的，会导致视频进度条显示不正确。</p>
 
@@ -96,9 +95,8 @@
 
 <p>安装好 ffmpeg 后，执行下面的命令就可以完成合并：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
+</code></pre></div></div>
 
 <p>当然，ffmpeg 功能还很强大，比如保存成其它格式什么的。有兴趣可以深入探索下。</p>
 

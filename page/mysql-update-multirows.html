@@ -46,39 +46,36 @@
         <div class="article-main">
           <p>MySQL语句使用过程中，会用到一些多行更新的场景。比较常见的是，把多行都更新成同一个值。如：</p>
 
-<div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
 <span class="k">SET</span> <span class="n">column_value</span><span class="o">=</span><span class="mi">1</span>  
 <span class="k">WHERE</span> <span class="n">column_id</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>如果更新多行数据，且值是不同的，往往会使用for循环进行更新。如：</p>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>foreach ($data_list as $item) {  
-    $sql = "UPDATE table_name SET column={$item['value']} WHERE column={$item['id']}";  
-    $ret = mysql_query($sql);  
-    if ($ret === false) {  
-        //...
-    }  
-}  
-</code></pre>
-</div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">foreach</span> <span class="p">(</span><span class="nv">$data_list</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"UPDATE table_name SET column=</span><span class="si">{</span><span class="nv">$item</span><span class="p">[</span><span class="s1">'value'</span><span class="p">]</span><span class="si">}</span><span class="s2"> WHERE column=</span><span class="si">{</span><span class="nv">$item</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>  
+    <span class="nv">$ret</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>  
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$ret</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="c1">//...</span>
+    <span class="p">}</span>  
+<span class="p">}</span>  
+</code></pre></div></div>
 
 <p>这样写网络交互次数比较多，可能会导致性能问题，看起来也不优雅。
 那能否一条SQL搞定呢？答案是肯定的。</p>
 
-<div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
 <span class="k">SET</span> <span class="n">column_value</span> <span class="o">=</span> <span class="k">CASE</span> <span class="n">column_id</span>  
     <span class="k">WHEN</span> <span class="mi">1</span> <span class="k">THEN</span> <span class="mi">0</span>  
     <span class="k">WHEN</span> <span class="mi">2</span> <span class="k">THEN</span> <span class="mi">1</span>  
     <span class="k">WHEN</span> <span class="mi">3</span> <span class="k">THEN</span> <span class="mi">2</span>  
 <span class="k">WHERE</span> <span class="n">column_id</span> <span class="k">IN</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>同理，也可以使用此方法设置多行多个值。</p>
 
-<div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>  
 <span class="k">SET</span> <span class="n">column_value</span> <span class="o">=</span> <span class="k">CASE</span> <span class="n">column_id</span>  
     <span class="k">WHEN</span> <span class="mi">1</span> <span class="k">THEN</span> <span class="mi">0</span>  
     <span class="k">WHEN</span> <span class="mi">2</span> <span class="k">THEN</span> <span class="mi">1</span>  
@@ -88,8 +85,7 @@
     <span class="k">WHEN</span> <span class="mi">2</span> <span class="k">THEN</span> <span class="s1">'test 2'</span>
     <span class="k">WHEN</span> <span class="mi">3</span> <span class="k">THEN</span> <span class="s1">'test 3'</span>
 <span class="k">WHERE</span> <span class="n">column_id</span> <span class="k">IN</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>END.</p>
 

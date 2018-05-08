@@ -63,21 +63,19 @@ in which I have done a small amount of adjustment based on the reading habit of 
 
 <p>我使用一个脚本来测量内存使用情况，这个脚本会测试创建一个 100000 个不同整型数的数组所需要的内存：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = range(1, 100000);
 echo memory_get_usage() - $startMemory, " bytes\n";
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>下面的这张表展示了 PHP 5.6 和 PHP 7 在 32 位和 64 位系统中的内存占用对比：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>        |   32 bit |    64 bit
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |   32 bit |    64 bit
 ------------------------------
 PHP 5.6 | 7.37 MiB | 13.97 MiB
 ------------------------------
 PHP 7.0 | 3.00 MiB |  4.00 MiB
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>换句话说，PHP 7 中的数组在 32 位系统中节省了 2.5 倍的内存，在 64 位（LP64）系统中节省了 3.5 倍，这相当的可观。</p>
 
@@ -119,7 +117,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>在进入实际的 Hash 表之前，我想先简单的看一下新的 <code class="highlighter-rouge">zval</code> 结构并且突出它和旧版的区别。<code class="highlighter-rouge">zval</code> 结构定义如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>struct _zval_struct {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct _zval_struct {
     zend_value value;
     union {
         struct {
@@ -138,8 +136,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
         uint32_t lineno;     /* line number (for ast nodes) */
     } u2;
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>你可以安全的忽略在定义中的宏 <code class="highlighter-rouge">ZEND_ENDIAN_LOHI_4</code>，它只用于在不同字节顺序的机器下保证可预计的内存布局。</p>
 
@@ -164,13 +161,12 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 <code class="highlighter-rouge">bucket</code> 的结构开始：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _Bucket {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct _Bucket {
     zend_ulong        h;
     zend_string      *key;
     zval              val;
 } Bucket;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>一个 <code class="highlighter-rouge">bucket</code> 是一个 Hash 表中的入口。它包含了很多你可以预料到的：一个 Hash 值 <code class="highlighter-rouge">h</code>，一个字符串键值 <code class="highlighter-rouge">key</code>，一个 <code class="highlighter-rouge">zval</code> 值 <code class="highlighter-rouge">val</code>。整型的键值会被存储在 <code class="highlighter-rouge">h</code>（键值和 Hash 在这里是一样的），<code class="highlighter-rouge">key</code> 将会被设为 <code class="highlighter-rouge">NULL</code>。</p>
 
@@ -178,7 +174,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>主 Hash 表的结构更加有趣：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct _HashTable {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct _HashTable {
     uint32_t          nTableSize;
     uint32_t          nTableMask;
     uint32_t          nNumUsed;
@@ -198,8 +194,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
         uint32_t flags;
     } u;
 } HashTable;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">bucket</code>（相当于数组元素）存储在 <code class="highlighter-rouge">arData</code> 数组中，以 2 的幂为大小进行分配，数组的大小存储在 <code class="highlighter-rouge">nTableSize</code>（最小值为 8）。元素的实际数量是 <code class="highlighter-rouge">nNumOfElements</code>。注意，这个数组直接包含有 <code class="highlighter-rouge">bucket</code>。之前，我们使用一个指针数组去单独分配 <code class="highlighter-rouge">bucket</code>，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。</p>
 
@@ -213,7 +208,7 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>用下面的代码作为例子：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$array = [
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$array = [
     'foo' =&gt; 0,
     'bar' =&gt; 1,
     0     =&gt; 2,
@@ -222,12 +217,11 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 ];
 unset($array[0]);
 unset($array['xyz']);
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>这会形成如下的 <code class="highlighter-rouge">arData</code> 结构：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>nTableSize     = 8
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nTableSize     = 8
 nNumOfElements = 3
 nNumUsed       = 5
 
@@ -239,22 +233,20 @@ nNumUsed       = 5
 [5]: NOT INITIALIZED
 [6]: NOT INITIALIZED
 [7]: NOT INITIALIZED
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>如你所见，前五个 <code class="highlighter-rouge">arData</code> 元素被使用了，但下标 2（key 为 0） 和 3（key 为 ‘xyz’） 被替换成了 <code class="highlighter-rouge">IS_UNDEF</code>，因为它们被 unset 了。这些元素现在还会浪费内存。然而，一旦 <code class="highlighter-rouge">nNumUsed</code> 达到 <code class="highlighter-rouge">nTableSize</code>，PHP会通过丢弃任何 <code class="highlighter-rouge">UNDEF</code> 的记录，自动压缩 <code class="highlighter-rouge">arData</code> 数组。只有当所有 <code class="highlighter-rouge">bucket</code> 真的有值才会被重分配到两倍大。</p>
 
 <p>新的维护数组顺序的方式对于 PHP 5.x 的双向链表有很多优点。一个明显的优点是我们对于每个 <code class="highlighter-rouge">bucket</code> 节省两个指针，相当于 8/16 bytes。并且，这意味着数组迭代粗略如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>uint32_t i;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint32_t i;
 for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
     Bucket *b = &amp;ht-&gt;arData[i];
     if (Z_ISUNDEF(b-&gt;val)) continue;
 
     // do stuff with bucket
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>这相当于一个内存线性扫描，比起链表遍历（需要进行向前向后的相对随机的内存寻址）更能有效缓存。</p>
 
@@ -272,7 +264,7 @@ for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
 
 <p>查找机制如下代码中所示：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>zend_ulong h = zend_string_hash_val(key);
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zend_ulong h = zend_string_hash_val(key);
 uint32_t idx = ht-&gt;arHash[h &amp; ht-&gt;nTableMask];
 while (idx != INVALID_IDX) {
     Bucket *b = &amp;ht-&gt;arData[idx];
@@ -282,8 +274,7 @@ while (idx != INVALID_IDX) {
     idx = Z_NEXT(b-&gt;val); // b-&gt;val.u2.next
 }
 return NULL;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>让我们考虑下对于过去的实现做了怎样的优化：在 PHP 5.x 中，冲突处理链表是一个双向链表。使用 <code class="highlighter-rouge">uint32_t</code> 下标比指针更好，因为在 64 位系统只需要一半的内存。并且，4 bytes 刚好可以将 <code class="highlighter-rouge">next</code> 节点的链接内置在没有用到的 <code class="highlighter-rouge">zval</code> 槽中，所以我们本质上是没有付出任何代价使用的。</p>
 
@@ -336,21 +327,19 @@ return NULL;
 
 <p>另一件需要考虑的事情是，如果不是所有存储的值都不相同的情况下会发生什么。为了简单，我们假设所有的值是完全相同的。所以让我们把开头的脚本 <code class="highlighter-rouge">range</code> 函数替换成 <code class="highlighter-rouge">array_fill</code>。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = array_fill(0, 100000, 42);
 echo memory_get_usage() - $startMemory, " bytes\n";
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>这个脚本的结果如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>        |   32 bit |    64 bit
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |   32 bit |    64 bit
 ------------------------------
 PHP 5.6 | 4.70 MiB |  9.39 MiB
 ------------------------------
 PHP 7.0 | 3.00 MiB |  4.00 MiB
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>你可以从内存使用中看到，PHP 7 保持了同样的内存占用。这没有理由发生变化，因为每个 <code class="highlighter-rouge">zval</code> 都是分开的。在 PHP 5.x 中内存消耗现在明显降低了，因为只需要一个 <code class="highlighter-rouge">zval</code> 来存储所有值。所以，虽然 PHP 7 还有一些优势，但差距变小了。</p>
 

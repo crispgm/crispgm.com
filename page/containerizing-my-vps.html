@@ -103,9 +103,8 @@
 
 <p>My Linux image is Ubuntu 14.04 LTS, installation is quite easy<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>, simply execute:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>curl -sSL https://get.docker.com/ | sh
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://get.docker.com/ | sh
+</code></pre></div></div>
 
 <p>P.S.: I used Ubuntu 16.04 LTS image at first, which is the lastest. But it’s not recommended. This version has conflict with <code class="highlighter-rouge">systemd</code>. In consequence, I got stuck in starting <code class="highlighter-rouge">docker-engine</code>, though I found the <a href="http://stackoverflow.com/questions/37227349/unable-to-start-docker-service-in-ubuntu-16-04/37640824#37640824" target="_blank">solution on StackOverflow</a>.</p>
 
@@ -129,7 +128,7 @@
 
 <p>It is not hard for a Shell user to quick start on Dockerfile, which consists of some declarations and installation processes. I simply got started by reading the <a href="https://docs.docker.com/engine/reference/builder/">reference</a>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>FROM ubuntu:trusty
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ubuntu:trusty
 MAINTAINER David Zhang &lt;crispgm@gmail.com&gt;
 RUN apt-get update \
     &amp;&amp; apt-get install -y python-pip \
@@ -140,8 +139,7 @@ COPY etc/shadowsocks.json /etc/shadowsocks.json
 EXPOSE 2968
 
 CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The image is based on <code class="highlighter-rouge">ubuntu:trusty</code>, of which the version can have no relationship with the host OS. Shadowsocks is distributed on pip. Therefore, executing <code class="highlighter-rouge">pip install</code> is the only thing in installation. At last, don’t forget to <code class="highlighter-rouge">COPY</code> configuration file into the image and <code class="highlighter-rouge">EXPOSE</code> inner port to host OS. The <code class="highlighter-rouge">CMD</code> command is the starting point.</p>
 
@@ -149,37 +147,32 @@ CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 
 <p>Build the Dockerfile:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker build -t crisp/shadowsocks .
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t crisp/shadowsocks .
+</code></pre></div></div>
 
 <p>Start in daemon mode:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run --name ssserver -d -p 2968:2968 crisp/shadowsocks
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --name ssserver -d -p 2968:2968 crisp/shadowsocks
+</code></pre></div></div>
 
 <p>Then I ran <code class="highlighter-rouge">docker ps</code> but found that the container had been shutdown, no containers listed.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker ps
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
 CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Docker runs only if there is a foreground process, instead of a daemon process. Shadowsocks offers foreground mode but typical server’s programs run in daemon. Here is a trick:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start \
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CMD /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start \
     &amp;&amp; tail -f /var/log/shadowsocks.log
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>As a result, the container runs <code class="highlighter-rouge">tail</code> command on foreground.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker ps
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
 CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      PORTS                  NAMES
 81f57c6c0710 crisp/shadowsocks "/bin/sh -c '/usr/loc" 22 hours ago Up 22 hours 0.0.0.0:2967-&gt;2968/tcp ssserver
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>So far, the <em>containerization</em> progress bar reached 100%. Here is the <a href="https://github.com/crispgm/docker">Dockerfiles</a>.</p>
 
@@ -194,19 +187,19 @@ CONTAINER ID IMAGE             COMMAND                CREATED      STATUS      P
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>Enable HTTPS with Let’s Encrypt. <a href="https://crispgm.com/page/enable-https-with-letsencrypt.html">https://crispgm.com/page/enable-https-with-letsencrypt.html</a>.&nbsp;<a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>Enable HTTPS with Let’s Encrypt. <a href="https://crispgm.com/page/enable-https-with-letsencrypt.html">https://crispgm.com/page/enable-https-with-letsencrypt.html</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>Prepare for removal of PPTP VPN before you upgrade to iOS 10 and macOS Sierra. <a href="https://support.apple.com/en-us/HT206844">https://support.apple.com/en-us/HT206844</a>.&nbsp;<a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>Prepare for removal of PPTP VPN before you upgrade to iOS 10 and macOS Sierra. <a href="https://support.apple.com/en-us/HT206844">https://support.apple.com/en-us/HT206844</a>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>Docker on Linode. <a href="https://blog.linode.com/2014/01/03/docker-on-linode/">https://blog.linode.com/2014/01/03/docker-on-linode/</a>.&nbsp;<a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>Docker on Linode. <a href="https://blog.linode.com/2014/01/03/docker-on-linode/">https://blog.linode.com/2014/01/03/docker-on-linode/</a>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
-      <p>What is Docker <a href="https://www.docker.com/what-docker">https://www.docker.com/what-docker</a>.&nbsp;<a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>What is Docker <a href="https://www.docker.com/what-docker">https://www.docker.com/what-docker</a>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:5">
-      <p>Docker Quick Reference. <a href="https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet">https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet</a>.&nbsp;<a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+      <p>Docker Quick Reference. <a href="https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet">https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet</a>. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
