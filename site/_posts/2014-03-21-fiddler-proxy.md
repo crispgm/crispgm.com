@@ -98,20 +98,20 @@ FiddlerScript 就是通过 JScript.NET 语言(可以约等于 JavaScript)，直�
 
 在 ```OnBeforeRequest``` 函数中修改：
 
-### 添加 Headers
+* 添加 Headers
 
 ```
 oSession.oRequest["http_net_type"] = "1";
 ```
 
-#### 添加 Cookies
+* 添加 Cookies
 
 ```
 // 增加预览机标识
 oSession.oRequest.headers.Add("Cookie", "pub_env=1");
 ```
 
-#### 匹配 URL，防止添加的字段干扰到其他网页
+* 匹配 URL，防止添加的字段干扰到其他网页
 
 ```
 if (oSession.uriContains("c.tieba.baidu.com")) {  
