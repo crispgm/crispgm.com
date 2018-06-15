@@ -3,3 +3,4 @@ wiki/wiki/
 /integrated-test/node_modules
 /integrated-test/screenshots
 npm-debug.log
+.DS_Store
