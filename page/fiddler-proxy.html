@@ -156,18 +156,24 @@
 
 <p>在 <code class="highlighter-rouge">OnBeforeRequest</code> 函数中修改：</p>
 
-<h3 id="添加-headers">添加 Headers</h3>
+<ul>
+  <li>添加 Headers</li>
+</ul>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
 </code></pre></div></div>
 
-<h4 id="添加-cookies">添加 Cookies</h4>
+<ul>
+  <li>添加 Cookies</li>
+</ul>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 增加预览机标识
 oSession.oRequest.headers.Add("Cookie", "pub_env=1");
 </code></pre></div></div>
 
-<h4 id="匹配-url防止添加的字段干扰到其他网页">匹配 URL，防止添加的字段干扰到其他网页</h4>
+<ul>
+  <li>匹配 URL，防止添加的字段干扰到其他网页</li>
+</ul>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
     // TODO
