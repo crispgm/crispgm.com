@@ -16,7 +16,7 @@ html {
 body {
   background-color: #fff;
   color: #212529;
-  font-family: "Noto Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-family: "Crimson Text", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   font-size: 1rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -282,7 +282,7 @@ table {
 
 pre,
 code {
-  font-family: "Source Code Pro", Menlo, Monaco, Consolas, Courier, monospace;
+  font-family: "Fira Mono", Menlo, Monaco, Consolas, Courier, monospace;
   hyphens: none; }
 
 pre.highlight {
