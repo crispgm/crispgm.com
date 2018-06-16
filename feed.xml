@@ -5,9 +5,191 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Jun 2018 14:04:16 +0800</pubDate>
-    <lastBuildDate>Fri, 15 Jun 2018 14:04:16 +0800</lastBuildDate>
+    <pubDate>Sat, 16 Jun 2018 16:05:57 +0800</pubDate>
+    <lastBuildDate>Sat, 16 Jun 2018 16:05:57 +0800</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
+    
+      
+      <item>
+        <title>About Podcast</title>
+        <description>&lt;h3 id=&quot;what-is-podcast&quot;&gt;What is Podcast?&lt;/h3&gt;
+
+&lt;p&gt;Podcast&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 是 iPod 和 broadcast 结合后产生的新词，是一种数字广播技术。通俗地讲，是一种非直播的音频广播节目。它通常使用音频文件进行分发，通过 RSS 技术进行订阅。&lt;/p&gt;
+
+&lt;p&gt;如果说网络视频是互联网时代电视节目的话，那 Podcast 就是互联网时代的音频节目。&lt;/p&gt;
+
+&lt;p&gt;Podcast 的中文译名是『播客』，个人认为这个翻译还是比较信达雅的。&lt;/p&gt;
+
+&lt;p&gt;在中国&lt;del&gt;局域网&lt;/del&gt;互联网内，也有一些类似播客的东西，比如荔枝FM、喜马拉雅等，网易云音乐等也能提供类似的功能。但这些类播客平台和播客本身有着本质的不同，他们是『中心化』的。用博客打个比方，自建博客用 RSS 订阅就是博客，如果是中心化内容平台，就会被叫做“XX号”。&lt;/p&gt;
+
+&lt;h3 id=&quot;podcast-很火&quot;&gt;Podcast 很“火”&lt;/h3&gt;
+
+&lt;p&gt;如果把范围限定在国外的话，Podcast 很“火”。知名新闻类网站如 BBC、Financial Times 等都有自己的官方 Podcast，互联网公司就更不用说了。初期互联网从业者建立的 Podcast 节目应该为数不少，现在很多商业公司也有官方的节目，如 Mozilla&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 和 Basecamp&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; 等。&lt;/p&gt;
+
+&lt;p&gt;总之，在欧美国家，Podcast 成为了除社交媒体和视频媒体外，又一个营销覆盖的点。&lt;/p&gt;
+
+&lt;h3 id=&quot;podcast-很冷&quot;&gt;Podcast 很“冷”&lt;/h3&gt;
+
+&lt;p&gt;Podcast 在国内是小众，小众到：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;没有多少商业化&lt;/li&gt;
+  &lt;li&gt;没有被网红充斥&lt;/li&gt;
+  &lt;li&gt;内容审查可能都没覆盖&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;因此，这是一个比较纯粹的地方，主要是为了传达一些信息和知识。&lt;/p&gt;
+
+&lt;h3 id=&quot;why-podcast&quot;&gt;Why Podcast?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“长”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在这个“微”博、“短”视频的年代，“长”的东西越来越少。短视频们甚至已经发展到被定义为几十秒的级别，几分钟都得算是长视频。获取的信息质量越来越低。&lt;/p&gt;
+
+&lt;p&gt;所以我喜欢阅读书籍和传统博客，Podcast 往往几十分钟到小时级不等，也属于这个范畴。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;通勤时间&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;北京的通勤公认的长，去个地方40分钟起步，除去看文章、书籍外，Podcast 也是一个不错的选择。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;情怀&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;小时候还比较喜欢听收音机，虽然也没有多少深刻的回忆，但这也是一种情怀的感觉。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;没有干扰&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;专注于音频内容本身，而不是一些有的没的，所以也不需要有多余的评论。&lt;/p&gt;
+
+&lt;h3 id=&quot;podcast-播放软件&quot;&gt;Podcast 播放软件&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apple Podcasts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;苹果官方的 Podcast 客户端，早年体验不好。现在用起来十分不错，系统一致的体验，该有的功能基本都没问题，算是入门 Podcast 的利器。自带类似 Podcast 的 AppStore 类的东西，有助于初期发现内容。弱点的话，可能是播放类扩展功能缺失，这也是和第三方客户端目前的主要差异。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pocketcasts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在我看来，这是最好的 Podcast 播放器之一。它可以说是 Podcast 中的 Spotify，支持多种平台（macOS、iOS、Android等，甚至也有 WebPlayer）。可以不同平台播放同一内容，无缝切换。Pocketcasts 甚至还支持 Sonos 音响，可以用家中的 Sonos 音响播放。&lt;/p&gt;
+
+&lt;p&gt;Pocketcasts 也有优秀的内容发现系统，服务端表现稳定。播放器支持调速、去除空白、增强音量。&lt;/p&gt;
+
+&lt;p&gt;Pocketcasts 一直是付费软件，iOS 版价格¥25。它由一个来自澳大利亚的软件公司出品，目前已经被 NPR（美国国家公共电台）收购。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Castro&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;知名的独立开发者开发的 Podcast 播放器，颜值较高。界面比较“性感”，交互很有特色。播放器支持调速、增强音量。之前是一次性付费软件，Castro 3.0 目前刚刚转型订阅制。&lt;/p&gt;
+
+&lt;p&gt;我曾经是 Castro 2 的用户，现在“抛弃” Castro 的主要原因是，Castro 的服务在我使用时遇到过几次问题。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;由于某期节目下载失败，导致整个 App 从此无法下载任何东西&lt;/li&gt;
+  &lt;li&gt;部分节目实际已经存在，但搜索不到&lt;/li&gt;
+  &lt;li&gt;某些节目页面，进入后网页报错（还是 Heroku 错误页😅）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;除去这些，市面上还有 Overcast、Instacast、Network，功能定位各异，就不一一推荐了。&lt;/p&gt;
+
+&lt;h3 id=&quot;好听的节目&quot;&gt;好听的节目&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://changelog.com/&quot;&gt;The Changelog&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;老牌技术类播客节目，旗下有多款子栏目。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://softwareengineeringdaily.com/&quot;&gt;Software Engineering Daily&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;有些倾向软件工程的程序员播客节目，很有专业感，语速不快。尤其是每次开头，主持人 Jeff Meyerson 会朗读一段2分钟左右的节目介绍开头。语言十分简练，传达的意思十分明确。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.indiehackers.com/podcast&quot;&gt;Indie Hackers&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.indiehackers.com/&quot;&gt;Indie Hackers&lt;/a&gt; 旗下的播客节目，主要关于黑客的创业故事。开头音乐我很喜欢。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://teahour.fm&quot;&gt;TeaHour&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;国内的 IT 技术类播客，全栈都有，有很多国内程序圈名人作为嘉宾。但现在更新很少很少。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ipn.li&quot;&gt;IPN&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;旗下有多款播客节目，并有多个已完结和独立出去的节目。比如后面的路书。&lt;/li&gt;
+      &lt;li&gt;IPN 不但节目众多，还为国内播客节目设立了标杆：带有博客的官网网站和很有仪式感的开场白“推荐大家使用泛用型播客客户端”部分（见结尾处）。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://anyway.fm/&quot;&gt;Anyway.FM&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;知名设计类播客。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thetype.com/category/podcast/&quot;&gt;字弹字唱&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://thetype.com/&quot;&gt;Type Is Beautiful&lt;/a&gt; 旗下的字体排印主题播客，对字体感兴趣的必听。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://byte.coffee/&quot;&gt;Byte.Coffee&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;大学教师@Milkshake羊制作的一档有趣的播客。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://checked.fm/&quot;&gt;Checked.FM&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;科技类播客节目，对 IT 硬件产品和 App 有很多不错的见解。于2018年6月5日停更。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ted.com/about/programs-initiatives/ted-talks/ted-talks-audio&quot;&gt;TED Talks Daily&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;几分钟到十几分钟左右的 TED Talks Daily 音频。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lushu88.com/&quot;&gt;路书&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;壁下观原班人马打造，是一档讨论艺术和历史的播客节目。作为一个人，应该了解一些关于艺术和历史的内容。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;最后&quot;&gt;最后&lt;/h3&gt;
+
+&lt;p&gt;虽然在喜马拉雅、荔枝FM、网易云音乐等平台上同步放出，但还是强烈的推荐大家使用泛用型播客客户端收听 Podcast。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Podcast &lt;a href=&quot;https://en.wikipedia.org/wiki/Podcast&quot;&gt;https://en.wikipedia.org/wiki/Podcast&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://blog.mozilla.org/internetcitizen/2017/06/19/introducing-irl-original-podcast-mozilla/&quot;&gt;Introducing IRL: An Original Podcast From Mozilla&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://rework.fm/&quot;&gt;Rework.fm&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 16 Jun 2018 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/about-podcast.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/about-podcast.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1365,192 +1547,6 @@ Now drawing from 'AC Power'
         <category>Camera</category>
         
         <category>Photography</category>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>技术周刊自动化</title>
-        <description>&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;技术博客和技术周刊对于一个有技术追求的技术团队来说都是标配，意义在于团队的技术氛围。由于日常业务繁忙和技术深度等原因，大多数技术周刊都是以转载为主。技术周刊的“主编”也就是负责人，肯定需要从事文章收集、筛选、格式化、校验和编译，并不需要编辑什么内容。这部分工作量不大，但枯燥无意义。我也是其中的一员，因此我决定用“技术周刊自动化”来解决技术周刊的整套收集、筛选、校验和发布的流程。&lt;/p&gt;
-
-&lt;p&gt;这是我所在团队的技术博客 &lt;a href=&quot;https://msbu-tech.github.io/&quot;&gt;https://msbu-tech.github.io/&lt;/a&gt;，基于 Jekyll 创建，分为博客、周刊、分享、项目等板块。其中，最活跃的就是&lt;a href=&quot;https://msbu-tech.github.io/weekly/&quot;&gt;技术周刊&lt;/a&gt;。技术周刊每周都会发布，接收所有团队成员投稿，收集编译完毕后会发布到网站上，并且需要再在内部邮件组转一份。&lt;/p&gt;
-
-&lt;h2 id=&quot;如何自动化&quot;&gt;如何自动化？&lt;/h2&gt;
-
-&lt;p&gt;整体思路是基于 GitHub 构建一套自动化流程，通过 issues 进行收集，然后用脚本调用 GitHub API 处理导入和编译的各项步骤。&lt;/p&gt;
-
-&lt;p&gt;由于是 Jekyll 是 Ruby 编写的，因此选择 Ruby 比较合适。并且由于只是一些简单的任务式脚本，所以选择 &lt;code class=&quot;highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; 作为载体来编写。&lt;/p&gt;
-
-&lt;h3 id=&quot;整体流程&quot;&gt;整体流程&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;在 issues 中开启收集贴&lt;/li&gt;
-  &lt;li&gt;从 issues 中导入周刊（处理格式、生成 yaml 和 markdown）&lt;/li&gt;
-  &lt;li&gt;人工编译确认和自动化检测&lt;/li&gt;
-  &lt;li&gt;发布然后关闭 issue 并感谢投稿人&lt;/li&gt;
-  &lt;li&gt;完成 Wunderlist 中的任务&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;准备工作&quot;&gt;准备工作&lt;/h3&gt;
-
-&lt;h4 id=&quot;github-api&quot;&gt;GitHub API&lt;/h4&gt;
-
-&lt;p&gt;选择 Ruby 还有个好处就是 GitHub 自身是用 Ruby 编写，因此 GitHub API 的 Ruby 库 &lt;a href=&quot;https://github.com/octokit/octokit.rb&quot;&gt;Octokit.rb&lt;/a&gt; 非常简单好用。&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Octokit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:access_token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;access_token&quot;&gt;access_token&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;access_token&lt;/code&gt; 不能对外暴露，因此需要在环境变量中设置或者通过指定环境变量来运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;rake&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;msbu-bot&quot;&gt;msbu-bot&lt;/h4&gt;
-
-&lt;p&gt;作为一个自动化的工作，我引入了一个机器人账号 &lt;a href=&quot;https://github.com/msbu-bot/&quot;&gt;msbu-bot&lt;/a&gt;，在调用 GitHub API 时使用。&lt;/p&gt;
-
-&lt;h3 id=&quot;文章收集&quot;&gt;文章收集&lt;/h3&gt;
-
-&lt;p&gt;建立一个专门 Repo 收集周刊内容 &lt;a href=&quot;https://github.com/msbu-tech/weekly&quot;&gt;msbu-tech/weekly&lt;/a&gt;。里面没有代码，只有 &lt;code class=&quot;highlighter-rouge&quot;&gt;README&lt;/code&gt; 来说明投稿的步骤流程，而 issues 则是收集贴。&lt;/p&gt;
-
-&lt;p&gt;开始收集一周的周刊时，先用创建一个收集贴。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rake open[2016-12-06]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;也就是调用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Octokit.rb&lt;/code&gt; 发 issue 接口：&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create_issue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repo_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;issue_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;MSBU Weekly &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weekly_date&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is now in collecting. Post your entry following the instruction of &amp;lt;https://github.com/msbu-tech/weekly#投稿&amp;gt;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/image/msbu-bot-open-issue.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;导入和编译&quot;&gt;导入和编译&lt;/h3&gt;
-
-&lt;p&gt;周刊文章收集完毕后，我们开始导入：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rake weekly[2016-12-06, true]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;文章投稿的格式是：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/post
-- 疯狂的JSONP
-- http://www.cnblogs.com/twobin/p/3395086.html
-- 何为跨域？何为JSONP？JSONP技术能实现什么？是否有必要使用JSONP技术？
-- javascript, jsonp, 跨域
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这里面的工作主要是是遍历 issue，识别 &lt;code class=&quot;highlighter-rouge&quot;&gt;/post&lt;/code&gt; 投稿标识，然后获取标签、链接、介绍或评语、标签，而回贴人的 ID 就视为推荐人。&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;issue_comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;referrer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:login&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_with_index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;eql?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/post&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;[INFO] Skip comment &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;green&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Spacifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;spacify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;- &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;- &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Spacifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;spacify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;- &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;- &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;articles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:tags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:referrer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;referrer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;其中，&lt;code class=&quot;highlighter-rouge&quot;&gt;Spacifier&lt;/code&gt; 是我自己做的一个 &lt;a href=&quot;https://github.com/crispgm/spacifier&quot;&gt;Gem&lt;/a&gt;，用于在中英文共存的字符串中，在中英文之间加一个空格。这样可以优化显示效果，之前为了一些完美主义都是手动转的。&lt;code class=&quot;highlighter-rouge&quot;&gt;Spacifier&lt;/code&gt; 目前功能还不太完善，后续会慢慢改善。&lt;/p&gt;
-
-&lt;p&gt;导入文件后会提示导入文章数，并创建周刊网页和邮件所需的 Markdown 文件。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[INFO] Imported 8 article(s).
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;测试&quot;&gt;测试&lt;/h3&gt;
-
-&lt;p&gt;导入了文章后，需要进行一些基本的测试。投稿人和主编们时常会写错写重复一些字段，所以做了个自动化测试进行重复检测和字段缺失检测。这也接了 Travis 进行持续集成。&lt;/p&gt;
-
-&lt;p&gt;同时，推荐一个好用的 Gem —— &lt;a href=&quot;https://github.com/fazibear/colorize&quot;&gt;colorize&lt;/a&gt;。&lt;code class=&quot;highlighter-rouge&quot;&gt;colorize&lt;/code&gt; “打开”了 &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;，需要报错的时候，只需要在输出的字符串后面调用 &lt;code class=&quot;highlighter-rouge&quot;&gt;.red&lt;/code&gt; 方法，就可以在控制台用红色显示，很醒目。&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;[ERROR] Import articles error!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;red&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;发布&quot;&gt;发布&lt;/h3&gt;
-
-&lt;p&gt;最后一步就是发布了。&lt;/p&gt;
-
-&lt;p&gt;文件都已经生成好，只需要 &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt; 到 GitHub，就能生效了。&lt;/p&gt;
-
-&lt;p&gt;我们还需要做的是告诉大家周刊发布的好消息，对投稿人表示感谢，然后关闭掉 issue。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rake publish
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOL&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
-  Congratulations!
-  MSBU Weekly &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weekly_date&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt; is published on &amp;lt;https://msbu-tech.github.io/weekly/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weekly_date&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;-weekly.html&amp;gt;!
-  Thanks &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contributors_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt; for your great contribution!
-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;  EOL&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repo_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close_issue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repo_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/image/msbu-bot-say-thanks-and-close.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;完成-wunderlist&quot;&gt;完成 Wunderlist&lt;/h3&gt;
-
-&lt;p&gt;这里需要再引入一个非官方的 Wunderlist API：&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;wunderlist-api&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;wl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Wunderlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;API&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;access_token: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;WLIST_ACCESS_TOKEN&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;client_id: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;WLIST_CLIENT_ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tasks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;工作清单&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;eql?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MSBU Tech Weekly&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weekly_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;eql?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;due_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;show_info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Completing wunderlist task...&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;写在最后&quot;&gt;写在最后&lt;/h2&gt;
-
-&lt;p&gt;文章所说的&lt;a href=&quot;https://github.com/crispgm/weekly&quot;&gt;源码在此&lt;/a&gt;，如果本文帮助了你或者给了一些启发，帮忙来个 Star 吧。&lt;/p&gt;
-</description>
-        <pubDate>Tue, 06 Dec 2016 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/engineering-weekly-automation.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/engineering-weekly-automation.html</guid>
-        
-        <category>Jekyll</category>
-        
-        <category>rake</category>
-        
-        <category>周刊</category>
-        
-        <category>自动化</category>
         
         
       </item>
