@@ -21,15 +21,13 @@ education:
     major: Bachelor of Computer Science & Technology.
 skills:
   - title: Backends
-    items: Python, Django/Flask, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis, PHP
+    items: Go, Python, Django, Flask, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis, PHP
   - title: Frontends
     items: HTML, CSS/Sass, JavaScript/ES, React, Vue.js
   - title: Architectures
     items: Micro-service Architecture, Distributing Web Systems
   - title: Computer Systems
-    items: Linux, Shell, awk, git, CI/CD
-  - title: Methodologies
-    items: Agile, Design Patterns
+    items: Linux, Shell, awk, git, CI/CD, Design Patterns
 experience:
   - title: Senior Software Engineer
     duration: Sep 2017 - present
@@ -40,10 +38,10 @@ experience:
       </div>
       <br>
       <div>
-      - Infrastructure of web engineering & AI, all the libraries & tools both backend & frontend.
+      - Searching system
       </div>
       <div>
-      - Mobile web & AI products.
+      - Infrastructure of web engineering
       </div>
   - title: Senior Software Engineer
     duration: Mar 2017 - Aug 2017
