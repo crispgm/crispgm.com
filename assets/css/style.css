@@ -48,7 +48,7 @@ a {
   width: 100%; }
 
 .content-wrapper {
-  padding: 1.2rem 0; }
+  padding: 1.2rem 0 0; }
 
 @media (max-width: 42rem) {
   .wrapper {
@@ -67,13 +67,11 @@ img {
     max-width: 100%; } }
 .header {
   background-color: #fff;
-  border-bottom: 1px solid #dee2e6;
   width: 100%; }
 
 .menu {
   color: #495057;
   display: flex;
-  padding: 1.6rem 0;
   text-align: left; }
   .menu .menu-home {
     font-size: 1.4rem;
@@ -86,8 +84,9 @@ img {
         text-decoration: underline; }
   .menu .menu-links {
     display: flex;
-    margin-top: .4rem; }
+    margin-top: .3rem; }
   .menu .menu-item {
+    color: #adb5bd;
     font-size: 1rem;
     padding-left: .8rem;
     text-align: left; }
