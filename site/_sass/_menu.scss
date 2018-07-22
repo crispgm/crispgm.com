@@ -3,14 +3,14 @@
 
 .header {
   background-color: $white;
-  border-bottom: 1px solid $grey-3;
+  // border-bottom: 1px solid $grey-3;
   width: 100%;
 }
 
 .menu {
   color: $grey-7;
   display: flex;
-  padding: 1.6rem 0;
+  // padding: 1.6rem 0;
   text-align: left;
 
   .menu-home {
@@ -30,10 +30,11 @@
 
   .menu-links {
     display: flex;
-    margin-top: .4rem;
+    margin-top: .3rem;
   }
 
   .menu-item {
+    color: $grey-5;
     font-size: 1rem;
     padding-left: .8rem;
     text-align: left;
