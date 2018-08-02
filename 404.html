@@ -14,9 +14,6 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   
   
-  
-  <script src="/assets/scripts/jquery-3.1.0.min.js"></script>
-  
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="https://use.typekit.net/syr2mmc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -77,8 +74,10 @@
 </div>
 
 <script>
-$('#unsplash>img').click(function(){
-  $(this).attr('src', 'https://source.unsplash.com/random?t=' + Math.random());
+var unsplashImage = document.querySelector('#unsplash>img');
+unsplashImage.addEventListener('click', function(e) {
+  var randomImageURL = 'https://source.unsplash.com/random?t=' + Math.random();
+  unsplashImage.setAttribute('src', randomImageURL);
 });
 </script>
 
