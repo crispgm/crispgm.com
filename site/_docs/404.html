@@ -1,7 +1,6 @@
 ---
 title: 404 Not Found
 permalink: /404.html
-jquery: true
 ---
 
 <div class="page-title">404 Not Found</div>
@@ -25,7 +24,9 @@ jquery: true
 </div>
 
 <script>
-$('#unsplash>img').click(function(){
-  $(this).attr('src', 'https://source.unsplash.com/random?t=' + Math.random());
+var unsplashImage = document.querySelector('#unsplash>img');
+unsplashImage.addEventListener('click', function(e) {
+  var randomImageURL = 'https://source.unsplash.com/random?t=' + Math.random();
+  unsplashImage.setAttribute('src', randomImageURL);
 });
 </script>
