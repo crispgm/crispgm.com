@@ -7,19 +7,6 @@ Source of [crispgm.com](https://crispgm.com/). There are 3 Jekyll sites here and
 
 Status Page: <http://stats.pingdom.com/nmfhsd4gur4u>
 
-## Code Structures
-
-```
-site/
-        Main site source
-resume/
-        Unofficial resume
-wiki/
-        Simple QA based wiki
-test/
-        Smoke tests
-```
-
 ## License
 
 * All the blogs are licensed under a CC BY-NC-ND 4.0 license.
