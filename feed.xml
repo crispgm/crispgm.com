@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Aug 2018 12:14:45 +0800</pubDate>
-    <lastBuildDate>Tue, 14 Aug 2018 12:14:45 +0800</lastBuildDate>
+    <pubDate>Sat, 08 Sep 2018 21:12:52 +0800</pubDate>
+    <lastBuildDate>Sat, 08 Sep 2018 21:12:52 +0800</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
     
       
@@ -711,7 +711,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
   &lt;p&gt;中文世界最大的悲劇便是封閉。從國家到公司，從公司到個人，都在打造圍牆，建起一個又一個圈子。&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;博客是 Web 1.0 时的就存在的，一切都以开放的方式进行着，没有平台化、大数据和推荐引擎。&lt;/p&gt;
+&lt;p&gt;博客是 Web 1.0 时就存在的，一切都以开放的方式进行着，没有平台化、大数据和推荐引擎。&lt;/p&gt;
 
 &lt;p&gt;域名、网站、链接、RSS。&lt;/p&gt;
 
@@ -735,7 +735,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 
 &lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
 
-&lt;p&gt;我还是推荐自建博客。因为没有读者也没关系，就像我们写作文也不是为了让别人看吧。况且，有自己的自建博客，也可以同步到各类自媒体号上，这是一种折衷。&lt;/p&gt;
+&lt;p&gt;我还是推荐自建博客。因为没有读者也没关系，就像我们写作文也不是都为了让别人看吧。况且，有自己的自建博客，也可以同步到各类自媒体号上，这是一种折衷。&lt;/p&gt;
 
 &lt;p&gt;但创造、个性和开放、自由才是我最珍视的东西。&lt;/p&gt;
 
