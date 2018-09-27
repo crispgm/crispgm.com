@@ -1,3 +1,8 @@
+- id: what-is-a-101
+  q: 什么是「某某某101」？
+  a: |
+    看国外的文章，有时会遇到名叫“某某某101”的，比如“区块链101”、“微服务101”。
+    意思是 <a href="https://english.stackexchange.com/questions/14265/what-does-something-101-mean">introductory something</a> 某某导论（也就是科普），源自美国大学课程中代号101的一般是课程导论。
 - id: awk-random-sample
   q: Random sample from a file with awk
   a: |
