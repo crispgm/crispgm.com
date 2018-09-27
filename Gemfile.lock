@@ -1,21 +1,25 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ffi (1.9.18)
+    ffi (1.9.25)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    minitest (5.10.3)
-    rake (12.1.0)
-    rb-fsevent (0.10.2)
+    minitest (5.11.3)
+    rake (12.3.1)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ruby_dep (1.5.0)
-    sass (3.4.25)
-    scss_lint (0.54.0)
+    sass (3.5.7)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    scss_lint (0.57.0)
       rake (>= 0.9, < 13)
-      sass (~> 3.4.20)
+      sass (~> 3.5.5)
     shoulda-context (1.2.2)
 
 PLATFORMS
@@ -29,4 +33,4 @@ DEPENDENCIES
   shoulda-context
 
 BUNDLED WITH
-   1.15.4
+   1.16.2
