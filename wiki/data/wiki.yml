@@ -1,3 +1,7 @@
+- id: set-e-bash
+  q: Bash 中的<code>set -e</code>是什么？
+  a: |
+    表示如果遇到错误立刻终止执行。<https://stackoverflow.com/questions/19622198/what-does-set-e-mean-in-a-bash-script>
 - id: what-is-a-101
   q: 什么是「某某某101」？
   a: |
