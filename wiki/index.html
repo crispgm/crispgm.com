@@ -35,7 +35,7 @@
             <div class="section-title title-a">
             </div>
             <div class="section-content">
-              表示如果遇到错误立刻终止执行。<https://stackoverflow.com/questions/19622198/what-does-set-e-mean-in-a-bash-script>
+              表示如果遇到错误立刻终止执行。<a href="https://stackoverflow.com/questions/19622198/what-does-set-e-mean-in-a-bash-script">参考 StackOverflow 详细解释</a>。
 
             </div>
           </div>
@@ -564,6 +564,7 @@ sort -n
 <pre><code>set +o history
 watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  
 </pre></code>
+
             </div>
           </div>
         </div>
