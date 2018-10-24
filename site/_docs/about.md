@@ -6,11 +6,9 @@ permalink: /about.html
 
 Hello, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a crisp or crispgm on the internet. I am a software engineer of fullstack web development. I make web products, and contribute to open source community. I write blog posts here, and post photos on Instagram.
 
-I greatly appreciate minimalism and simplicity. I enjoy photography, reading, and coffee. And I go to the theater cheering for my idols with **glo-sticks** every weekends.
+I greatly appreciate minimalism and simplicity. I enjoy photography, reading, coffee, and Japanese idol groups.
 
 {% include buy-me-a-coffee.html %}
-
-My Ethereum Address: `0xa023F7e4F6AeDCEad6cDB28DF9c6D0CbEB61f62B`
 
 <div class="page-title">Advocation</div>
 
