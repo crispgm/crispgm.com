@@ -45,6 +45,8 @@ type: lifestyle
 
 把 `Control` 挪到 `CapsLock` 虽然可以带来快乐和效率，但也会付出比较大的代价。我认为我可以以一种更加演进式的方式使用 HHKB。
 
+所以“演进 Evolutionary” 是与“革命性 Revolutionary” 相对应的，我认为没有必要为了一款键盘抛弃长期依赖的肌肉记忆。
+
 我的方式是使用 Karabiner 合理改键并且加入一些魔法。
 
 ## Karabiner
@@ -55,6 +57,8 @@ type: lifestyle
 
 * 把 `Control` 和 `Option` 交换，保持用普通键盘时的手势。HHKB 虽然在左下角没有按键，但由于 Mac 的左下角是 `Fn`，所以 `Option` 其实和 Mac 的 `Control` 位置差不多。`Option` 不那么常用，放在不喜欢的位置也没关系。
 * 重音号/波浪号、退格和反斜杠三者进行交换。这样反斜杠和退格都回到熟悉的位置，重音号/波浪号的位置并没有得到改善，因此我会在后续说到怎么使用魔法优化。
+
+![HHKB Option](/image/HHKB-option.jpg)
 
 #### 魔法
 
@@ -79,7 +83,7 @@ type: lifestyle
 * 设置 `disable_built_in_keyboard_if_exists`，便于放在 Mac 键盘上时不会按到下面。
 * 弯头 USB 线。原装电线会伸到屏幕上。
 
-![USB Cable]()
+![USB Cable](/image/HHKB-usb-cable.jpg)
 
 ## 结论
 
@@ -99,4 +103,4 @@ HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并
 * 没有 Karabiner 生活不能自理
 * 键盘唤醒时间很慢
 
-![HHKB]()
+![HHKB](/image/HHKB-at-work.jpg)
