@@ -1,0 +1,7 @@
+?path: /page/.+
+$main: //div[has-class("article")]
+title: $main//div[has-class("article-title")]
+author: "David Zhang"
+author_url: "https://crispgm.com/"
+published_date: $main//div[has-class("article-date")]
+body: $main//div[has-class("article-main")]
