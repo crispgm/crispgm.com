@@ -5,24 +5,38 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Oct 2018 11:10:02 +0800</pubDate>
-    <lastBuildDate>Mon, 29 Oct 2018 11:10:02 +0800</lastBuildDate>
+    <pubDate>Mon, 29 Oct 2018 23:34:18 +0800</pubDate>
+    <lastBuildDate>Mon, 29 Oct 2018 23:34:18 +0800</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
     
       
       <item>
         <title>我的 HHKB 键盘演进式布局方案</title>
-        <description>&lt;p&gt;自从工作时使用的 MacBook Pro 的&lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt;键间歇性故障后，我经常会遇到一些类似打出 &lt;del&gt;retturn&lt;/del&gt; 和 &lt;del&gt;ttype&lt;/del&gt; 这样的错误。在编程中，这会造成了很大的麻烦，毕竟这是语法错误。&lt;/p&gt;
+        <description>&lt;p&gt;自从工作时使用的 MacBook Pro 的「蝶式」键盘&lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt;键出现间歇性「连击」故障后，我就经常会打出 &lt;del&gt;retturn&lt;/del&gt; 和 &lt;del&gt;ttype&lt;/del&gt; 这样的错误拼写。在程序设计中，这会造成了很大的麻烦，毕竟这是语法错误。&lt;/p&gt;
 
-&lt;p&gt;于是，我选择了有线（我总是不相信无线设备）、无刻的 &lt;a href=&quot;http://www.pfu.fujitsu.com/hhkeyboard/type-s/&quot;&gt;HHKB Professional2 Type-S&lt;/a&gt;。对它的第一印象是，小、安静、极简，可以直接覆盖在 MacBook Pro 的键盘上。&lt;/p&gt;
+&lt;p&gt;于是，我选择入手了有线（我总是不相信无线设备）、无刻的 &lt;a href=&quot;http://www.pfu.fujitsu.com/hhkeyboard/type-s/&quot;&gt;HHKB Professional2 Type-S&lt;/a&gt; 作为替代。&lt;/p&gt;
 
-&lt;h2 id=&quot;标准布局&quot;&gt;标准布局&lt;/h2&gt;
+&lt;p&gt;HHKB 是个很有态度的键盘，接受了它往往代表着接受了一种「革命性」的键位设计，或许也是一种「生活方式」。我从不惧怕折腾，但我想说的是比起“革命性”（revolutionary）的方式，我更倾向于在此选择“演进式”（evolutionary）的方式。&lt;/p&gt;
 
-&lt;p&gt;首先说起布局，这也是 HHKB 为我所知的第一印象——通过独特的布局获得很高的效率。&lt;/p&gt;
+&lt;p&gt;下面我就分享下我使用 HHKB 的方式。&lt;/p&gt;
+
+&lt;h2 id=&quot;印象和布局&quot;&gt;印象和布局&lt;/h2&gt;
+
+&lt;p&gt;首先，拿到 HHKB 的第一印象是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;小，可以直接覆盖在 MacBook Pro 的键盘上&lt;/li&gt;
+  &lt;li&gt;简，由于是无刻的按键没有字，正面只有右下角有标志&lt;/li&gt;
+  &lt;li&gt;静，Type S 的 S 是 Silent，比起机械键盘，声音几乎都可以忽略&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/image/HHKB-small-size.jpg&quot; alt=&quot;small-size&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;接着说布局，这也是 HHKB 为人所知的最大印象——通过独特的布局获得很高的效率。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/HHKB-Pro-2-default-layout.png&quot; alt=&quot;keyboard-setting&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;不过仔细观察了键位布局后，发现了很多不同：&lt;/p&gt;
+&lt;p&gt;仔细观察了键位布局后，就会发现了很多不同：&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;只有60键&lt;/li&gt;
@@ -40,17 +54,17 @@
   &lt;li&gt;👍 这很极简，我喜欢&lt;/li&gt;
   &lt;li&gt;👌 问题不大，因为 macOS 默认式关闭功能键的，平时也就用来调声音什么的&lt;/li&gt;
   &lt;li&gt;😨 &lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt; 在这个位置的确很舒服，但老的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt; 位置已经习惯了&lt;/li&gt;
-  &lt;li&gt;😨 这很坑。波浪号常用语切换到 &lt;code class=&quot;highlighter-rouge&quot;&gt;$HOME&lt;/code&gt;，重音号常用于 Markdown&lt;/li&gt;
+  &lt;li&gt;😨 这很坑。波浪号常用于切换到 &lt;code class=&quot;highlighter-rouge&quot;&gt;$HOME&lt;/code&gt;，重音号常用于 Markdown&lt;/li&gt;
   &lt;li&gt;🤷 还好，但其实编程中反斜杠用的也比较多&lt;/li&gt;
   &lt;li&gt;😢 这可以说十分不方便&lt;/li&gt;
-  &lt;li&gt;😢 这和一般键盘比很不同&lt;/li&gt;
+  &lt;li&gt;😢 这和一般键盘不同&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;我的方案&quot;&gt;我的方案&lt;/h2&gt;
 
-&lt;p&gt;作为背景，除去工作中的 MBP 外，我其实在家中还有一个配备了 Filco 键盘的 Windows 系统台式机，以及另外一台 Mac 设备。&lt;/p&gt;
+&lt;p&gt;这里我想简单说下背景，除去工作中的 MBP 外，我其实在家中还有一个配备了 Filco 键盘的 Windows 系统台式机，以及另外一台 Mac 笔记本。&lt;/p&gt;
 
-&lt;p&gt;我不担心我无法适应什么的，不爱折腾的人估计不会买这样另类的键盘。但如果全面拥抱 HHKB 风格，我大概需要维护&lt;strong&gt;3套&lt;/strong&gt;肌肉记忆。从 87 键 Windows 键盘到标准 Mac 键盘，再到 HHKB。而且 HHKB 作为工作中的键盘势必使用时间会远比另两种长，那么长久下来一定是对于 HHKB 更熟悉，在家中使用时反而效率会因为切换手感大大降低了。&lt;/p&gt;
+&lt;p&gt;我不担心我无法适应什么的，不爱折腾的人估计不会买这样另类的键盘，但需要考虑到同时使用其它设备。如果全面拥抱 HHKB 风格，我大概需要维护&lt;strong&gt;3套&lt;/strong&gt;肌肉记忆。从 87 键 Windows 键盘到标准 Mac 键盘，再到 HHKB。而且 HHKB 作为工作中的键盘势必使用时间会远比另两种长，那么长久下来一定是对于 HHKB 更熟悉，在家中使用时反而效率会因为切换手感大大降低了。&lt;/p&gt;
 
 &lt;p&gt;并且，HHKB 的默认布局会使一些已有的 Mac 快捷键很难按。比如 &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + 重音键&lt;/code&gt; 切换同一个应用程序的不同窗口，原先是左手单手操作，现在要改成双手操作。&lt;/p&gt;
 
@@ -62,7 +76,7 @@
 
 &lt;h2 id=&quot;karabiner&quot;&gt;Karabiner&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://pqrs.org/osx/karabiner/&quot;&gt;Karabiner&lt;/a&gt; 是 macOS 最好最强大的改键工具。它为我解决 HHKB 的布局问题提供了思路。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pqrs.org/osx/karabiner/&quot;&gt;Karabiner&lt;/a&gt; 是 macOS 上最好最强大的改键工具，它为我解决 HHKB 的布局问题提供了思路。&lt;/p&gt;
 
 &lt;h4 id=&quot;基本改动&quot;&gt;基本改动&lt;/h4&gt;
 
@@ -71,16 +85,17 @@
   &lt;li&gt;重音号/波浪号、退格和反斜杠三者进行交换。这样反斜杠和退格都回到熟悉的位置，重音号/波浪号的位置并没有得到改善，因此我会在后续说到怎么使用魔法优化。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/image/HHKB-option.jpg&quot; alt=&quot;HHKB Option&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/HHKB-option.jpg&quot; alt=&quot;HHKB Option&quot; /&gt;
+注：HHKB 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Option&lt;/code&gt; 其实和 MacBook Pro 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt; 位置几乎一样。&lt;/p&gt;
 
 &lt;h4 id=&quot;魔法&quot;&gt;魔法&lt;/h4&gt;
 
-&lt;p&gt;魔法其实就是用 Karabiner 的组合改键。&lt;/p&gt;
+&lt;p&gt;魔法其实就是用 Karabiner 的组合改键，在保证原先按键功能的前提下，实现原来的效果。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Command + Esc&lt;/code&gt; 改成 &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + 重音键&lt;/code&gt;。这样可以继续用原先的方式切换窗口。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + Esc&lt;/code&gt; 改成 &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;。。这样可以继续用原先的方式输入波浪号。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + delete&lt;/code&gt; 改成向前删除。这和 Mac 一致。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Command + Esc&lt;/code&gt; 改成 &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + 重音键&lt;/code&gt;，这样可以继续用原先的方式切换窗口。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + Esc&lt;/code&gt; 改成 &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;，这样可以继续用原先的方式输入波浪号。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + Delete&lt;/code&gt; 改成向前删除，这和 macOS 标准快捷键一致。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;最后，记得&lt;strong&gt;备份&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;karabiner.json&lt;/code&gt; 到你自己的 dotfiles，否则一旦丢失后果不堪设想。&lt;/p&gt;
@@ -89,22 +104,22 @@
 
 &lt;h2 id=&quot;方向键&quot;&gt;方向键&lt;/h2&gt;
 
-&lt;p&gt;方向键并没有更好的方式，HHKB 自带的 Fn 组合键整体还算可行。&lt;/p&gt;
+&lt;p&gt;至于方向键的确没有更好的方式，HHKB 自带的 Fn 组合键整体还算可行。&lt;/p&gt;
 
 &lt;h2 id=&quot;其它-tips&quot;&gt;其它 Tips&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;我的 DIP 选在 Lite Ext. Mode。比去 Mac Mode 只关闭了几个多媒体组合键。&lt;/li&gt;
+  &lt;li&gt;我的 DIP 选在 Lite Ext. Mode。比起 Mac Mode 只关闭了几个多媒体组合键。&lt;/li&gt;
   &lt;li&gt;禁用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Fn + P&lt;/code&gt;。&lt;code class=&quot;highlighter-rouge&quot;&gt;Fn + P&lt;/code&gt; 就在组合的方向键旁边，一旦按错就会调屏幕亮度，很烦人。&lt;/li&gt;
   &lt;li&gt;设置 &lt;code class=&quot;highlighter-rouge&quot;&gt;disable_built_in_keyboard_if_exists&lt;/code&gt;，便于放在 Mac 键盘上时不会按到下面。&lt;/li&gt;
-  &lt;li&gt;弯头 USB 线。原装电线会伸到屏幕上。&lt;/li&gt;
+  &lt;li&gt;弯头 USB 线。原装线会伸到屏幕上。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/HHKB-usb-cable.jpg&quot; alt=&quot;USB Cable&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
 
-&lt;p&gt;HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并不值得。Karabiner 可以帮助我采用更演进式的方式使用 HHKB。这里我给出我的 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/macOS/karabiner.json&quot;&gt;karabiner.json&lt;/a&gt; 供参考。&lt;/p&gt;
+&lt;p&gt;HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并不值得，Karabiner 可以帮助我采用更演进式的方式使用 HHKB。这里我给出我的 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/macOS/karabiner.json&quot;&gt;karabiner.json&lt;/a&gt; 供参考。&lt;/p&gt;
 
 &lt;p&gt;这里我给出一些配置后的优点和缺点：&lt;/p&gt;
 
@@ -124,7 +139,10 @@
   &lt;li&gt;键盘唤醒时间很慢&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/image/HHKB-at-work.jpg&quot; alt=&quot;HHKB&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;最后，附上工作照：
+&lt;img src=&quot;/image/HHKB-at-work.jpg&quot; alt=&quot;HHKB&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Happy Hacking!&lt;/p&gt;
 </description>
         <pubDate>Fri, 26 Oct 2018 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/hhkb-evolutionary-way.html</link>
