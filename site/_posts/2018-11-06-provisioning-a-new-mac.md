@@ -5,19 +5,25 @@ permalink: /page/provisioning-a-new-mac.html
 type: programming
 ---
 
-每个开发者可能都有自己的 dotfiles，我也不例外。这是对于一些复杂的命令行工具的备份，但对于自动化来说完全不够。
+每个开发者或许都有自己的 dotfiles，我也不例外。这是对于一些复杂的命令行工具（vim、bash 等）配置的备份，并且衍生出了初始化一台新电脑环境的自动化脚本。
+
+在 GitHub 可以[搜到很多](https://github.com/search?q=dotfiles)点赞很多的 dotfiles 项目，相关配置十分全面，并且几乎自动化了所有东西。这些项目做的都很好很有参考意义，但因为每个人实际的个性化配置需求很强，所以只能说进行参考，没法全盘使用。
+
+一些无法自动化的东西也需要文档来指导如何手动配置，比如 [KrauseFx/new-mac](https://github.com/KrauseFx/new-mac) 就是完全通过文档指导。
 
 我希望在得到一台崭新 Mac 时，只需要执行自动化脚本完成80%的工作，并且按照文档配置剩余20%无法自动化的部分。
 
 ### 准备工作
 
-为了让后续工作可以进行，我们先安装 macOS Command Line Tools。
+首先，先参照 [KrauseFx/new-mac](https://github.com/KrauseFx/new-mac) 撰写 [README](https://github.com/crispgm/dotfiles/blob/master/README.md) ，把步骤用文本的形式写好。即使自动化了，文档也是有必要的。
+
+然后，为了让后续工作可以进行，我们先安装 macOS Command Line Tools。
 
 ```shell
 xcode-select --install
 ```
 
-当然，也可以选择下载安装 <https://developer.apple.com/download/more/>。
+也可以选择下载安装 <https://developer.apple.com/download/more/>。
 
 ### Homebrew
 
@@ -40,11 +46,9 @@ fi
 
 Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 Homebrew Bundler 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 `Brewfile`，就可以配置好所有需要的应用。
 
-熟悉 Ruby 的人应该不太需要解释，毕竟 Ruby 自己就有 Bundler 这个东西。
-
 Homebrew 默认就安装了 Homebrew Bundler。
 
-如果你的安装列表已经足够干净，那么可以执行：
+如果你的安装列表已经足够干净，那么可以执行 `brew bundle dump` 来生成现有依赖，输出到 `Brewfile`：
 
 ```shell
 $ brew bundle dump
@@ -57,9 +61,9 @@ brew "p7zip"
 ...
 ```
 
-来生成现有依赖，输出到 `Brewfile`。
+如果想自己写也比较容易，`Brewfile` 是一种简单的 Ruby DSL，写起来比大部分配置文件都简单。熟悉 Ruby 的人应该不太需要解释，毕竟 Ruby 自己就有 Bundler 这套东西，Brewfile 和 Gemfile 属于对应关系。
 
-如果想自己写也比较容易，`Brewfile` 是一种简单的 Ruby DSL，写起来比大部分配置文件都简单。常用到的命令主要有 `brew` `tap` `cask` `mas`。
+普通用户写 `Brewfile` 也并不困难，只需要掌握一些常用到的命令，主要有 `brew`, `tap`, `cask` 和 `mas`。
 
 这四条命令分别对应：
 
@@ -140,7 +144,51 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### dotfiles
 
+dotfiles 非常因人而异，对于我来说主要用 vim 和 zsh，因此主要配置这两个。脚本化比较简单，只需要 `cp`：
+
+```shell
+cp .bash_profile .zshrc .vimrc ~/
+cp -r zarniwoop.vim/colors ~/.vim/
+```
+
+最后，启用 fzf：
+
+```shell
+$(brew --prefix)/opt/fzf/install
+```
+
 ### 开发相关
+
+也是因人而异，我平时主要用 Go 和 Ruby。
+
+Go 需要配置：
+
+```shell
+mkdir -p ~/go
+```
+
+并在 `.zshrc` 加入：
+
+```shell
+export GOROOT=`brew --prefix go`/libexec
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+```
+
+Ruby 则要配置 `.gemrc` 和代理：
+
+```shell
+cp .gemrc ~/
+gem install bundler
+bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+```
+
+编辑器用 Sublime 和 VSCode，增加快捷方式：
+
+```shell
+sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/Applications/subl
+sudo ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code ~/Applications/code
+```
 
 ### 应用配置
 
@@ -153,7 +201,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### macOS 配置
 
-macOS 配置其实已经很个性化了，我这里权当分享一下。
+macOS 的配置目前是手动，按理来说可以通过 `defaults` 进行配置。但目前还没有找到每一个的配置项，暂且手动解决，等 hack 完再来更新。
 
 ##### 触摸板
 
@@ -173,7 +221,15 @@ macOS 配置其实已经很个性化了，我这里权当分享一下。
 
 ##### Dock
 
+* 改成自己喜欢的 size
+* 取消显示最近应用
+* Downloads 文件夹用 Grid 方式显示
+
 ### 最后
+
+为了测试这一套东西的确 work，我把家里的 Mac Book Air 2013 给重置了，创造了一个崭新的 Mac。经过实战测试的确可用 :)
+
+把成品 [crispgm/dotfiles](https://github.com/crispgm/dotfiles) 分享出来，不求能直接用，也是给大家参考。
 
 ---
 
