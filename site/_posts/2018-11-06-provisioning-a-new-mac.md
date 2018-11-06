@@ -119,7 +119,7 @@ Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主�
 
 但想自己进行配置，学习和开发成本都比较高，因此就需要 Oh My Zsh。
 
-Oh My Zsh 是个开源社区驱动的项目，简单的说就是集成一些常见的 Zsh 配置、插件和主题。我们需要做的只是配置一些简单直观的参数。甚至说，什么都不做，也有一个默认的开箱即用的配置。
+[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) 是个开源社区驱动的项目，简单的说就是集成一些常见的 Zsh 配置、插件和主题。我们需要做的只是配置一些简单直观的参数。甚至说，什么都不做，也有一个默认的开箱即用的配置。
 
 Oh My Zsh 的 README 中说到：
 
@@ -201,29 +201,9 @@ sudo ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/cod
 
 ### macOS 配置
 
-macOS 的配置目前是手动，按理来说可以通过 `defaults` 进行配置。但目前还没有找到每一个的配置项，暂且手动解决，等 hack 完再来更新。
+macOS 的配置目前是手动，按理来说可以通过 `defaults` 进行配置。但目前还没有找到每一个的配置项，缺少的暂且手动解决，等 hack 完再来更新。
 
-##### 触摸板
-
-* 设置轻触触摸板 Tap to click
-* 设置右键为触摸板右下角
-
-##### 时间
-
-* 自动切换时区
-* 24小时
-* 显示日期
-
-##### Finder
-
-* 打开时默认进入桌面
-* 清除无用的标签和侧边栏项
-
-##### Dock
-
-* 改成自己喜欢的 size
-* 取消显示最近应用
-* Downloads 文件夹用 Grid 方式显示
+已有的可以参考 <https://github.com/mathiasbynens/dotfiles/blob/master/.macos>，覆盖了大多数。
 
 ### 最后
 
