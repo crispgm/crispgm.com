@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Nov 2018 17:57:16 +0800</pubDate>
-    <lastBuildDate>Tue, 06 Nov 2018 17:57:16 +0800</lastBuildDate>
+    <pubDate>Mon, 12 Nov 2018 14:27:54 +0800</pubDate>
+    <lastBuildDate>Mon, 12 Nov 2018 14:27:54 +0800</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
     
       
@@ -96,9 +96,9 @@ brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
 
 &lt;p&gt;非官方 Formula 应用：&lt;/p&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;heroku/brew&quot;&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;heroku/brew&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;heroku&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;homebrew/cask-fonts&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;homebrew/cask-fonts&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;font-source-code-pro&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -179,7 +179,7 @@ gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;编辑器用 Sublime 和 VSCode，增加快捷方式：&lt;/p&gt;
+&lt;p&gt;编辑器用 Sublime Text 和 VS Code，增加快捷方式：&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /Applications/Sublime&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Text.app/Contents/SharedSupport/bin/subl ~/Applications/subl
 &lt;span class=&quot;nb&quot;&gt;sudo ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /Applications/Visual&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Studio&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Code.app/Contents/Resources/app/bin/code ~/Applications/code
@@ -195,6 +195,17 @@ bundle config mirror.https://rubygems.org https://gems.ruby-china.com
   &lt;li&gt;可同步配置：可以通过云端网盘进行同步，比如 Alfred 和 Dash。这种国内环境可以使用坚果云同步。&lt;/li&gt;
   &lt;li&gt;无解的：那就只能无解了。&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;具体需要视情况而定，还有一些稍微特殊的。比如说 VS Code，配置部分可以用 &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync&quot;&gt;Settings Sync&lt;/a&gt; 插件同步，插件的话可以通过命令行模式，也能做到自动安装。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# VS Code CLI 模式安装插件&lt;/span&gt;
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; arcticicestudio.nord-visual-studio-code
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-vscode.Go
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code-settings-sync
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;更多此类的东西，需要自己探索和总结。&lt;/p&gt;
 
 &lt;h3 id=&quot;macos-配置&quot;&gt;macOS 配置&lt;/h3&gt;
 
