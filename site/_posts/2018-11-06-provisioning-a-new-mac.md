@@ -93,9 +93,9 @@ cask "visual-studio-code"
 非官方 Formula 应用：
 
 ```ruby
-tap "heroku/brew"
+tap  "heroku/brew"
 brew "heroku"
-tap "homebrew/cask-fonts"
+tap  "homebrew/cask-fonts"
 cask "font-source-code-pro"
 ```
 
@@ -183,7 +183,7 @@ gem install bundler
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com
 ```
 
-编辑器用 Sublime 和 VSCode，增加快捷方式：
+编辑器用 Sublime Text 和 VS Code，增加快捷方式：
 
 ```shell
 sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/Applications/subl
@@ -198,6 +198,18 @@ sudo ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/cod
 * dotfiles 风格配置：既然是 dotfiles 风格，那也可以用 dotfiles 的方式，直接提交到 dotfiles 中就好了。比如：Karabiner 和 Shadowsocksx-NG。
 * 可同步配置：可以通过云端网盘进行同步，比如 Alfred 和 Dash。这种国内环境可以使用坚果云同步。
 * 无解的：那就只能无解了。
+
+具体需要视情况而定，还有一些稍微特殊的。比如说 VS Code，配置部分可以用 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) 插件同步，插件的话可以通过命令行模式，也能做到自动安装。
+
+```shell
+# VS Code CLI 模式安装插件
+code --install-extension arcticicestudio.nord-visual-studio-code
+code --install-extension ms-vscode.Go
+code --install-extension Shan.code-settings-sync
+...
+```
+
+更多此类的东西，需要自己探索和总结。
 
 ### macOS 配置
 
