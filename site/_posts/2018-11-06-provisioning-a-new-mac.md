@@ -44,7 +44,7 @@ fi
 
 ### Homebrew Bundler
 
-Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 Homebrew Bundler 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 `Brewfile`，就可以配置好所有需要的应用。
+Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 [Homebrew Bundler](https://github.com/Homebrew/homebrew-bundle)[^1] 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 `Brewfile`，就可以配置好所有需要的应用。
 
 Homebrew 默认就安装了 Homebrew Bundler。
 
@@ -115,13 +115,13 @@ brew bundle
 
 ### zsh/oh-my-zsh
 
-Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大[^1]。
+Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大[^2]。
 
 但想自己进行配置，学习和开发成本都比较高，因此就需要 Oh My Zsh。
 
 [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) 是个开源社区驱动的项目，简单的说就是集成一些常见的 Zsh 配置、插件和主题。我们需要做的只是配置一些简单直观的参数。甚至说，什么都不做，也有一个默认的开箱即用的配置。
 
-Oh My Zsh 的 README 中说到：
+Oh My Zsh 的 README [^3]中说到：
 
 > Oh My Zsh will not make you a 10x developer...but you might feel like one.
 
@@ -215,7 +215,7 @@ code --install-extension Shan.code-settings-sync
 
 macOS 的配置目前是手动，按理来说可以通过 `defaults` 进行配置。但目前还没有找到每一个的配置项，缺少的暂且手动解决，等 hack 完再来更新。
 
-已有的可以参考 <https://github.com/mathiasbynens/dotfiles/blob/master/.macos>，覆盖了大多数。
+已有的可以参考 [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) 中的 `.macos` 文件[^4]，覆盖了大多数。
 
 ### 最后
 
@@ -225,4 +225,7 @@ macOS 的配置目前是手动，按理来说可以通过 `defaults` 进行配�
 
 ---
 
-[^1]: [What is ZSH, and Why Should You Use It Instead of Bash?](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
+[^1]: [Homebrew/homebrew-bundle](https://github.com/Homebrew/homebrew-bundle)
+[^2]: [What is ZSH, and Why Should You Use It Instead of Bash?](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/)
+[^3]: [robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+[^4]: [mathiasbynens/dotfiles .macos](https://github.com/mathiasbynens/dotfiles/blob/master/.macos)
