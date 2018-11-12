@@ -79,7 +79,7 @@
 
 <h3 id="homebrew-bundler">Homebrew Bundler</h3>
 
-<p>Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 Homebrew Bundler 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 <code class="highlighter-rouge">Brewfile</code>，就可以配置好所有需要的应用。</p>
+<p>Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 <a href="https://github.com/Homebrew/homebrew-bundle">Homebrew Bundler</a><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 <code class="highlighter-rouge">Brewfile</code>，就可以配置好所有需要的应用。</p>
 
 <p>Homebrew 默认就安装了 Homebrew Bundler。</p>
 
@@ -146,13 +146,13 @@ brew <span class="s2">"p7zip"</span>
 
 <h3 id="zshoh-my-zsh">zsh/oh-my-zsh</h3>
 
-<p>Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>。</p>
+<p>Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>。</p>
 
 <p>但想自己进行配置，学习和开发成本都比较高，因此就需要 Oh My Zsh。</p>
 
 <p><a href="https://github.com/robbyrussell/oh-my-zsh">Oh My Zsh</a> 是个开源社区驱动的项目，简单的说就是集成一些常见的 Zsh 配置、插件和主题。我们需要做的只是配置一些简单直观的参数。甚至说，什么都不做，也有一个默认的开箱即用的配置。</p>
 
-<p>Oh My Zsh 的 README 中说到：</p>
+<p>Oh My Zsh 的 README <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>中说到：</p>
 
 <blockquote>
   <p>Oh My Zsh will not make you a 10x developer…but you might feel like one.</p>
@@ -241,7 +241,7 @@ code <span class="nt">--install-extension</span> Shan.code-settings-sync
 
 <p>macOS 的配置目前是手动，按理来说可以通过 <code class="highlighter-rouge">defaults</code> 进行配置。但目前还没有找到每一个的配置项，缺少的暂且手动解决，等 hack 完再来更新。</p>
 
-<p>已有的可以参考 <a href="https://github.com/mathiasbynens/dotfiles/blob/master/.macos">https://github.com/mathiasbynens/dotfiles/blob/master/.macos</a>，覆盖了大多数。</p>
+<p>已有的可以参考 <a href="https://github.com/mathiasbynens/dotfiles">mathiasbynens/dotfiles</a> 中的 <code class="highlighter-rouge">.macos</code> 文件<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>，覆盖了大多数。</p>
 
 <h3 id="最后">最后</h3>
 
@@ -254,7 +254,16 @@ code <span class="nt">--install-extension</span> Shan.code-settings-sync
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p><a href="https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/">What is ZSH, and Why Should You Use It Instead of Bash?</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p><a href="https://github.com/Homebrew/homebrew-bundle">Homebrew/homebrew-bundle</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/">What is ZSH, and Why Should You Use It Instead of Bash?</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://github.com/robbyrussell/oh-my-zsh">robbyrussell/oh-my-zsh</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://github.com/mathiasbynens/dotfiles/blob/master/.macos">mathiasbynens/dotfiles .macos</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

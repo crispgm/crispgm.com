@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Nov 2018 14:27:54 +0800</pubDate>
-    <lastBuildDate>Mon, 12 Nov 2018 14:27:54 +0800</lastBuildDate>
+    <pubDate>Mon, 12 Nov 2018 15:33:40 +0800</pubDate>
+    <lastBuildDate>Mon, 12 Nov 2018 15:33:40 +0800</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
     
       
@@ -49,7 +49,7 @@
 
 &lt;h3 id=&quot;homebrew-bundler&quot;&gt;Homebrew Bundler&lt;/h3&gt;
 
-&lt;p&gt;Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 Homebrew Bundler 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;，就可以配置好所有需要的应用。&lt;/p&gt;
+&lt;p&gt;Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 &lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Homebrew Bundler&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;，就可以配置好所有需要的应用。&lt;/p&gt;
 
 &lt;p&gt;Homebrew 默认就安装了 Homebrew Bundler。&lt;/p&gt;
 
@@ -116,13 +116,13 @@ brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
 
 &lt;h3 id=&quot;zshoh-my-zsh&quot;&gt;zsh/oh-my-zsh&lt;/h3&gt;
 
-&lt;p&gt;Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 
 &lt;p&gt;但想自己进行配置，学习和开发成本都比较高，因此就需要 Oh My Zsh。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;Oh My Zsh&lt;/a&gt; 是个开源社区驱动的项目，简单的说就是集成一些常见的 Zsh 配置、插件和主题。我们需要做的只是配置一些简单直观的参数。甚至说，什么都不做，也有一个默认的开箱即用的配置。&lt;/p&gt;
 
-&lt;p&gt;Oh My Zsh 的 README 中说到：&lt;/p&gt;
+&lt;p&gt;Oh My Zsh 的 README &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;中说到：&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Oh My Zsh will not make you a 10x developer…but you might feel like one.&lt;/p&gt;
@@ -211,7 +211,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
 
 &lt;p&gt;macOS 的配置目前是手动，按理来说可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;defaults&lt;/code&gt; 进行配置。但目前还没有找到每一个的配置项，缺少的暂且手动解决，等 hack 完再来更新。&lt;/p&gt;
 
-&lt;p&gt;已有的可以参考 &lt;a href=&quot;https://github.com/mathiasbynens/dotfiles/blob/master/.macos&quot;&gt;https://github.com/mathiasbynens/dotfiles/blob/master/.macos&lt;/a&gt;，覆盖了大多数。&lt;/p&gt;
+&lt;p&gt;已有的可以参考 &lt;a href=&quot;https://github.com/mathiasbynens/dotfiles&quot;&gt;mathiasbynens/dotfiles&lt;/a&gt; 中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;.macos&lt;/code&gt; 文件&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;，覆盖了大多数。&lt;/p&gt;
 
 &lt;h3 id=&quot;最后&quot;&gt;最后&lt;/h3&gt;
 
@@ -224,7 +224,16 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/&quot;&gt;What is ZSH, and Why Should You Use It Instead of Bash?&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Homebrew/homebrew-bundle&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/&quot;&gt;What is ZSH, and Why Should You Use It Instead of Bash?&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;robbyrussell/oh-my-zsh&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/mathiasbynens/dotfiles/blob/master/.macos&quot;&gt;mathiasbynens/dotfiles .macos&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
