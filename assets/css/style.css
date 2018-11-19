@@ -167,6 +167,8 @@ footer {
 .article {
   margin-bottom: 2rem;
   text-align: left; }
+  .article a {
+    color: #329af0; }
   .article .article-menu .article-home {
     float: right; }
   .article .article-menu a {
