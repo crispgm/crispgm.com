@@ -43,3 +43,4 @@ exclude:
   - Rakefile
   - Gemfile
   - Gemfile.lock
+  - assets/fonts/selection.json
