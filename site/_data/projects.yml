@@ -4,10 +4,20 @@
   links:
     - text: Homepage
       href: https://jekyllrb.com/
-    - text: Commits
-      href: https://github.com/jekyll/jekyll/commits?author=crispgm
     - text: GitHub
       href: https://github.com/jekyll/jekyll
+    - text: Commits
+      href: https://github.com/jekyll/jekyll/commits?author=crispgm
+- name: gorm
+  description: The fantastic ORM library for Golang, aims to be developer friendly.
+  contributed: true
+  links:
+    - text: Homepage
+      href: http://gorm.io/
+    - text: GitHub
+      href: https://github.com/jinzhu/gorm
+    - text: Commits
+      href: https://github.com/jinzhu/gorm/commits?author=crispgm
 - name: Crisp Minimal Résumé
   description: A minimalist résumé template for Jekyll.
   links:
@@ -31,7 +41,7 @@
     - text: GitHub
       href: https://github.com/ElaWorkshop/awesome-cn-cafe
 - name: URL Auto Redirector
-  description: URL Auto Redirector is a chrome extension that enables you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
+  description: URL Auto Redirector is a Chrome extension that allows you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
   links:
     - text: Chrome WebStore
       href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
@@ -53,33 +63,3 @@
       href: https://word-kanban.herokuapp.com/
     - text: GitHub
       href: https://github.com/crispgm/word-kanban
-- name: GSM Sources Manager
-  description: GSM is a simple sources manager for RubyGems.
-  links:
-    - text: Homepage
-      href: https://crispgm.github.io/gsm/
-    - text: RubyGems
-      href: https://rubygems.org/gems/gsm-sources-manager
-    - text: GitHub
-      href: https://github.com/crispgm/gsm
-- name: GitHub Meta Badges
-  description: Simple GitHub Metadata Badges (e.g. stars, issues, and more).
-  links:
-    - text: Homepage
-      href: https://crispgm.github.io/github-meta-badges/
-    - text: GitHub
-      href: https://github.com/crispgm/github-meta-badges
-- name: URL Auto Splicer
-  description: URLAutoSplicer is a simple Chrome Extension, which construct URL with context selection and go instantly.
-  links:
-    - text: Chrome WebStore
-      href: https://chrome.google.com/webstore/detail/url-auto-splicer/kmlnjaeipdljbegfnfofknfaeojgojgm
-    - text: Homepage
-      href: https://urlautoredirector.github.io/URLAutoSplicer
-    - text: GitHub
-      href: https://github.com/URLAutoRedirector/URLAutoSplicer
-- name: jekyll-crisp-theme
-  description: (WIP) A minimalism theme for Jekyll.
-  links:
-    - text: GitHub
-      href: https://github.com/crispgm/jekyll-crisp-theme
