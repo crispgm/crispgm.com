@@ -82,7 +82,7 @@ namespace :site do
         sh "git pull origin master"
         sh "cp ../data/resume*.yml _data"
         sh "cp ../_config.yml ."
-        sh "jekyll build --destination=../../gh-pages/resume/"
+        sh "bundle exec jekyll build --destination=../../gh-pages/resume/"
         sh "git stash"
         sh "git clean -f"
       end
@@ -95,7 +95,7 @@ namespace :site do
         sh "cp ../data/wiki.yml _data"
         sh "cp ../css/custom.css css"
         sh "cp ../_config.yml ../home/index.html ."
-        sh "jekyll build --destination=../../gh-pages/wiki/"
+        sh "bundle exec jekyll build --destination=../../gh-pages/wiki/"
         sh "git stash"
         sh "git clean -f"
       end
@@ -149,7 +149,7 @@ namespace :resume do
       listener.start
 
       Dir.chdir("resume") do
-        sh "jekyll serve"
+        sh "bundle exec jekyll serve"
       end
     end
   end
@@ -198,7 +198,7 @@ namespace :wiki do
       listener.start
 
       Dir.chdir("wiki") do
-        sh "jekyll serve"
+        sh "bundle exec jekyll serve"
       end
     end
   end
