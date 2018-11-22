@@ -37,10 +37,10 @@ $ gem install jekyll
 
 RubyGems 是一个优秀的包管理系统，但再优秀也扛不住墙和距离，所以一般情况下，中国大陆的用户需要更换 RubyGems 的源。
 
-建议更换成 Ruby-China 的源，参考 <https://gems.ruby-china.org/>。
+建议更换成 Ruby-China 的源，参考 <https://gems.ruby-china.com/>。
 
 ```
-$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+$ gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 ```
 
 同时，也广告一下本人的作品：[Gem Sources Manager](https://crispgm.github.io/gsm/)，专门用于切换源。
