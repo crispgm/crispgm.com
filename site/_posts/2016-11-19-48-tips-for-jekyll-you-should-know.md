@@ -43,8 +43,6 @@ RubyGems 是一个优秀的包管理系统，但再优秀也扛不住墙和距�
 $ gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 ```
 
-同时，也广告一下本人的作品：[Gem Sources Manager](https://crispgm.github.io/gsm/)，专门用于切换源。
-
 #### Mac OSX El Capitan 安装失败
 
 从 Mac OSX El Capitan 开始，Apple 采取了一个叫 SIP 的东西保护系统文件夹，导致 `/usr/bin` 等文件夹无法写入。因此需要更换安装路径。
