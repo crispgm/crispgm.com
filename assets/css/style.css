@@ -255,10 +255,10 @@ sup {
   vertical-align: auto; }
 
 hr {
-  border-top: 1px dotted #E7E9EB;
+  border-top: 1px solid #E7E9EB;
   margin-bottom: 3rem;
   margin-top: 3rem;
-  width: 2.4rem; }
+  width: 30%; }
 
 ul p,
 ol p {

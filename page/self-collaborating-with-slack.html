@@ -38,11 +38,11 @@
             我在 Slack 和自己聊天
           </div>
           <div class="article-date">
-            May 23, 2017
+            <time datetime="2017-05-23 00:00:00 +0800">May 23, 2017</time>
           </div>
         </div>
         <div class="article-main">
-          <p><img src="/image/slack-logo.jpg" alt="" /></p>
+          <p><img src="https://crispgm.com/image/slack-logo.jpg" alt="" /></p>
 
 <p><a href="https://slack.com/">Slack</a> 是一款为团队协作设计的即时通信软件，维基百科的定义是：</p>
 
@@ -79,7 +79,7 @@
   slack: token-of-your-slack
 </code></pre></div></div>
 
-<p><img src="/image/slack-travis-msg.jpg" alt="" /></p>
+<p><img src="https://crispgm.com/image/slack-travis-msg.jpg" alt="" /></p>
 
 <p>不过，这里有个限制，免费用户只能添加10个应用。还好我用的云服务不足10个。真需要付费的时候，那也未尝不可，花钱买时间没什么不对的。</p>
 
@@ -89,7 +89,7 @@
 
 <p>我会把运维相关的内容发送到 <code class="highlighter-rouge">#ops</code> 频道。对于 Heroku 这样成熟、开发体验友好的平台，其实没有什么需要运维的。通过 <code class="highlighter-rouge">heroku-cli</code> 几乎可以干任何事情，因为 <code class="highlighter-rouge">#ops</code> 频道只会接到代码更新部署的事件。而 Linode 那边的确需要运维，对于部署我已经通过 GitHub WebHooks 和部署脚本实现了自动化，所以这里只会接收到 NewRelic 的监控报警。</p>
 
-<p><img src="/image/slack-ops-msg.jpg" alt="" /></p>
+<p><img src="https://crispgm.com/image/slack-ops-msg.jpg" alt="" /></p>
 
 <p>不过这个地方有个尴尬😅之处，NewRelic 监控的是部署 VPN 的主机，如果报警后会发送到 Slack，但 Slack 又是通过这个 VPN 访问的，因此……</p>
 
@@ -101,7 +101,7 @@
 
 <p>但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。于是，我创建了 <code class="highlighter-rouge">#articles</code> 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。至少，这比微信的文件同步助手手感更丝滑。</p>
 
-<p><img src="/image/slack-share-article.jpg" alt="" /></p>
+<p><img src="https://crispgm.com/image/slack-share-article.jpg" alt="" /></p>
 
 <h3 id="看图--获得灵感">看图 &amp; 获得灵感</h3>
 
@@ -115,7 +115,7 @@
 
 <p>为了增加分享图片的仪式感，我引入了 <a href="https://workflow.is/">Workflow</a>：Post Image To Slack，通过 Action Extension 触发分享操作。</p>
 
-<p><img src="/image/slack-post-image-workflow.jpg" alt="" /></p>
+<p><img src="https://crispgm.com/image/slack-post-image-workflow.jpg" alt="" /></p>
 
 <p>此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack <code class="highlighter-rouge">#girls</code>。</p>
 
@@ -128,7 +128,7 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dribbble london
 </code></pre></div></div>
 
-<p><img src="/image/slack-dribbble-london.jpg" alt="" /></p>
+<p><img src="https://crispgm.com/image/slack-dribbble-london.jpg" alt="" /></p>
 
 <p>Unsplash 我在<a href="/page/unsplash-simple-pure-photos.html">之前的文章</a>进行过介绍，在 Slack 中可以随机获取一张高质量摄影作品，这是一种调节开发节奏的好方法。</p>
 
