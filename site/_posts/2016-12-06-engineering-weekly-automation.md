@@ -64,7 +64,7 @@ $ rake open[2016-12-06]
 client.create_issue(repo_name, issue_name, "MSBU Weekly #{weekly_date} is now in collecting. Post your entry following the instruction of <https://github.com/msbu-tech/weekly#投稿>.")
 ```
 
-![](/image/msbu-bot-open-issue.jpg)
+![]({{ "/image/msbu-bot-open-issue.jpg" | absolute_url }})
 
 ### 导入和编译
 
@@ -156,7 +156,7 @@ client.add_comment(repo_name, number, comment)
 client.close_issue(repo_name, number)
 ```
 
-![](/image/msbu-bot-say-thanks-and-close.jpg)
+![]({{ "/image/msbu-bot-say-thanks-and-close.jpg" | absolute_url }})
 
 ### 完成 Wunderlist
 

@@ -41,7 +41,7 @@ ASMR 和冥想（Meditation）有些相似之处。
 
 ASMR 有一些专业的器材，最常见的就是 [3Dio](https://3diosound.com/) 仿生麦克风，麦克风的输入是两支“耳朵”。
 
-![](/image/3dio-free-space.jpg)
+![]({{ "/image/3dio-free-space.jpg" | absolute_url }})
 
 ### 内容
 
@@ -134,7 +134,7 @@ ASMR 和色情并没有任何直接关系，当然主播做色情主题的 ASMR 
 [HeadSpace](https://www.headspace.com/) 就是一家提供这类服务的硅谷创业公司，提供冥想 App 和实体硬件。他们在今年以2.5亿美元的估值获得了3700万美元的融资，投资方是 Spectrum Equity[^3]。随着 ASMR 的不断普及，未来未尝不会有类似的高质量 ASMR 服务产生。让我们拭目以待。
 
 在办公室里冥想的 HeadSpace 员工们[^4]:
-![](/image/headspace-work.jpg)
+![]({{ "/image/headspace-work.jpg" | absolute_url }})
 
 ---
 

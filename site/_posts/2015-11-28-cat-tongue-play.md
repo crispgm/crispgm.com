@@ -26,12 +26,12 @@ tags:
 
 最后，感谢所有制作人和[女主](http://weibo.com/u/1762833134)给我们带来这么好看的剧，一些剧照给懂的喜欢的人看。
 
-![](/image/p2285703042.jpg)
+![]({{ "/image/p2285703042.jpg" | absolute_url }})
 
-![](/image/p2285703047.jpg)
+![]({{ "/image/p2285703047.jpg" | absolute_url }})
 
-![](/image/p2288150825.jpg)
+![]({{ "/image/p2288150825.jpg" | absolute_url }})
 
-![](/image/p2288151541.jpg)
+![]({{ "/image/p2288151541.jpg" | absolute_url }})
 
-![](/image/p2288151554.jpg)
+![]({{ "/image/p2288151554.jpg" | absolute_url }})

@@ -8,7 +8,7 @@ tags:
 - Dev
 ---
 
-![](/image/slack-logo.jpg)
+![]({{ "/image/slack-logo.jpg" | absolute_url }})
 
 [Slack](https://slack.com/) 是一款为团队协作设计的即时通信软件，维基百科的定义是：
 
@@ -44,7 +44,7 @@ notifications:
   slack: token-of-your-slack
 ```
 
-![](/image/slack-travis-msg.jpg)
+![]({{ "/image/slack-travis-msg.jpg" | absolute_url }})
 
 不过，这里有个限制，免费用户只能添加10个应用。还好我用的云服务不足10个。真需要付费的时候，那也未尝不可，花钱买时间没什么不对的。
 
@@ -54,7 +54,7 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 我会把运维相关的内容发送到 `#ops` 频道。对于 Heroku 这样成熟、开发体验友好的平台，其实没有什么需要运维的。通过 `heroku-cli` 几乎可以干任何事情，因为 `#ops` 频道只会接到代码更新部署的事件。而 Linode 那边的确需要运维，对于部署我已经通过 GitHub WebHooks 和部署脚本实现了自动化，所以这里只会接收到 NewRelic 的监控报警。
 
-![](/image/slack-ops-msg.jpg)
+![]({{ "/image/slack-ops-msg.jpg" | absolute_url }})
 
 不过这个地方有个尴尬😅之处，NewRelic 监控的是部署 VPN 的主机，如果报警后会发送到 Slack，但 Slack 又是通过这个 VPN 访问的，因此……
 
@@ -66,7 +66,7 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。于是，我创建了 `#articles` 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。至少，这比微信的文件同步助手手感更丝滑。
 
-![](/image/slack-share-article.jpg)
+![]({{ "/image/slack-share-article.jpg" | absolute_url }})
 
 ### 看图 & 获得灵感
 
@@ -80,7 +80,7 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 
 为了增加分享图片的仪式感，我引入了 [Workflow](https://workflow.is/)：Post Image To Slack，通过 Action Extension 触发分享操作。
 
-![](/image/slack-post-image-workflow.jpg)
+![]({{ "/image/slack-post-image-workflow.jpg" | absolute_url }})
 
 此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack `#girls`。
 
@@ -94,7 +94,7 @@ ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，
 /dribbble london
 ```
 
-![](/image/slack-dribbble-london.jpg)
+![]({{ "/image/slack-dribbble-london.jpg" | absolute_url }})
 
 Unsplash 我在[之前的文章](/page/unsplash-simple-pure-photos.html)进行过介绍，在 Slack 中可以随机获取一张高质量摄影作品，这是一种调节开发节奏的好方法。
 

@@ -17,7 +17,7 @@ I am a backpack guy. Backpack makes me feel more comfortable and relaxed than ot
 
 GORUCK GR1[^3] is what I carry for a trip. It builds for intense environment, which means it is robust and a little bit heavier than normal. The size is 21L. MOLLE strapping allows for additional pockets both inside and outside.
 
-![the-bag](/image/goruck-gr1.jpg)
+![the-bag]({{ "/image/goruck-gr1.jpg" | absolute_url }})
 
 ### Organization
 
@@ -25,7 +25,7 @@ GORUCK GR1[^3] is what I carry for a trip. It builds for intense environment, wh
 
 As _the Van Man_ said[^2], it's necessary to get organized inside the bag. Putting things together unorganized like a black hole is horrible. It is easy to get things lost and just hard to find anything. And also, this applies recursively to its sub storages. My idea is to make sub storages based on the types of items.
 
-![organization](/image/bag-organization.jpg)
+![organization]({{ "/image/bag-organization.jpg" | absolute_url }})
 
 __Topo Designs Accessory Bag Medium__[^4]: A simple bag hangs up to the inside MOLLE system, which keeps my passport, tickets, and stationery.
 
@@ -41,7 +41,7 @@ I am a software developer and a geek. Electronics are huge part of my life.
 
 __Sennhaiser Momentum[^5]__: It is not noise cancelling but can isolate much noise. I won't say it has the best sound but it is in a high level. The ivory color looks great.
 
-![mac-and-momentum](/image/mac-and-momentum.jpg)
+![mac-and-momentum]({{ "/image/mac-and-momentum.jpg" | absolute_url }})
 
 __Mac Book Air 13"[^7]__: The most important productivity and entertaining tool. What I have is actually a "late 2013" without retina. Every mac book launched later may replace it, because each one of them is more powerful and portable.
 
@@ -49,7 +49,7 @@ __iPhone X[^8]__: The immersive experience of iPhone X is incredible, bought is 
 
 __Kindle Oasis[^9]__: Fast system and dedicated paging buttons. Portable library for everyone. I enjoy reading calmly.
 
-![kindle-and-book](/image/kindle-and-book.jpg)
+![kindle-and-book]({{ "/image/kindle-and-book.jpg" | absolute_url }})
 
 __FUJIFILM X-Pro2__: Best rangefinder mirrorless camera. I usually take it with XF35 F2 WR in non-photography trip, which equals to 50MM full frame. For a photography trip, a camera bag is needed then.
 
@@ -59,13 +59,13 @@ __Anker PowerCore[^10]__: Handy and stable.
 
 While most time we use electronics for everything, a pen and paper is still indispensable for ideas and quick notes. For me, handscripting helps me think better a lot.
 
-![writing](/image/topo-muji-pen-and-book.jpg)
+![writing]({{ "/image/topo-muji-pen-and-book.jpg" | absolute_url }})
 
 __MUJI Ballpoint Pen__: Travel with a fountain pen is not a good choice for me, the ink sometimes can be huge trouble. Instead, I always bring a ballpoint pen from MUJI. It is minimalistic.
 
 __MUJI Note A6__: Another MUJI stationery, a nice hand note book. It may not be used for design from architecture to details. But it is **big** enough for ideas and quick notes.
 
-![fast-trip-sh](/image/tokyo-tower-cityview.jpg)
+![fast-trip-sh]({{ "/image/tokyo-tower-cityview.jpg" | absolute_url }})
 
 <hr>
 

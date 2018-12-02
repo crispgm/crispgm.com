@@ -22,7 +22,7 @@ permalink: /page/word-kanban.html
 
 先 show 出来：
 
-![](/image/wk-main.png)
+![]({{ "/image/wk-main.png" | absolute_url }})
 
 * 体验：<https://word-kanban.herokuapp.com/>
 * GitHub：<https://github.com/crispgm/word-kanban>
@@ -73,7 +73,7 @@ Auth0 是 Serverless 时代十分有用且强大的工具，无需自己建立�
 
 这是部分它支持的第三方登陆，国内的有百度、人人和微博，稍微有些匪夷所思。这里我选择 GitHub 和 Twitter。
 
-![](/image/auth0-connections.png)
+![]({{ "/image/auth0-connections.png" | absolute_url }})
 
 它还提供了丰富的基于实际框架的示例，我就是基于它提供的基于 [Express 的后端](https://auth0.com/docs/architecture-scenarios/application/spa-api/api-implementation-nodejs) 和 [SPA React 客户端](https://auth0.com/docs/quickstart/spa/react)的 demo 开发。
 
@@ -168,7 +168,7 @@ const token = md5(`${TOKEN_PRIVATE_KEY}${userId}${ts}`);
 
 在用户设置页，我希望展示用户动态的曲线，于是找到了 [React Trend](https://github.com/unsplash/react-trend) 用于生成曲线。React Trend 是 [Unsplash](https://unsplash.com/) 开源的一个 React 组件，用在 Unsplash 的用户统计展示页（比如我的 <https://unsplash.com/@crispgm/stats>）。
 
-![](/image/react-trend-on-unsplash.png)
+![]({{ "/image/react-trend-on-unsplash.png" | absolute_url }})
 
 这是个 React Component，我们需要用 [preact-compat](https://github.com/developit/preact-compat) 来进行兼容。兼容的方式有很多，我选择在 Webpack 进行。
 
@@ -204,21 +204,21 @@ const token = md5(`${TOKEN_PRIVATE_KEY}${userId}${ts}`);
   }
 ```
 
-![](/image/word-kanban-react-trend.png)
+![]({{ "/image/word-kanban-react-trend.png" | absolute_url }})
 
 ## 完成
 
 Auth0 跳转登陆：
 
-![](/image/wk-login.png)
+![]({{ "/image/wk-login.png" | absolute_url }})
 
 主界面：
 
-![](/image/wk-main.png)
+![]({{ "/image/wk-main.png" | absolute_url }})
 
 个人设置：
 
-![](/image/wk-setting.png)
+![]({{ "/image/wk-setting.png" | absolute_url }})
 
 # 加入 Workflow
 
@@ -234,11 +234,11 @@ Auth0 跳转登陆：
 * Get Contents from URL
   * 选择 `POST` 请求，加入 `token` 和 `word`，`token` 在用户页面生成粘贴过来
 
-![](/image/send-my-word-workflow.jpg)
+![]({{ "/image/send-my-word-workflow.jpg" | absolute_url }})
 
 阅读一篇英文文章，然后选取一个不认识的单词，发送到 Word Kanban。
 
-![](/image/send-to-word-kanban.gif)
+![]({{ "/image/send-to-word-kanban.gif" | absolute_url }})
 
 # 最后
 

@@ -520,7 +520,7 @@ Emoji 语法采用 GitHub 的语法风格。
 
 只需在 Repo 中设置 GitHub Pages 的 Source，就可以开启 GitHub Pages，支持 `master`, `gh-pages`, `master` 中 `/docs` 文件夹三种 Source。
 
-![](/image/github-pages-source.jpg)
+![]({{ "/image/github-pages-source.jpg" | absolute_url }})
 
 #### 在 GitHub Pages 只可以使用部分插件
 

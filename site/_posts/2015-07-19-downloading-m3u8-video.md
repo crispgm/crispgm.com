@@ -26,7 +26,7 @@ m3u8 是 Apple iOS 流媒体使用的一种格式，它本质上是个文本的�
 
 首先要拿到 URL，方法是在 Chrome 上用 iPhone6 的 User-Agent 打开，然后在 Chrome 中找到，如下：
 
-![](/image/video-url.png)
+![]({{ "/image/video-url.png" | absolute_url }})
 
 > http://us.sinaimg.cn/000MLkkJjx06TSSGESJF050d010000oz0k01.m3u8?KID=unistore,video&Expires=1437309945&ssig=kh06r9cH7F
 
@@ -34,13 +34,13 @@ m3u8 是 Apple iOS 流媒体使用的一种格式，它本质上是个文本的�
 
 紧接着下载下来这个文件，用编辑器打开，就会看到里面的内容，是一堆 ts 格式的文件。
 
-![](/image/m3u8-file-content.png)
+![]({{ "/image/m3u8-file-content.png" | absolute_url }})
 
 ### 下载源文件
 
 把这些 ts 文件名跟 http://us.sinaimg.cn/ 拼在一起下载下来，就是被切成分片的视频源文件了。
 
-![](/image/ts-file.png)
+![]({{ "/image/ts-file.png" | absolute_url }})
 
 ### 文件合并
 
@@ -52,7 +52,9 @@ m3u8 是 Apple iOS 流媒体使用的一种格式，它本质上是个文本的�
 
 那么就：
 
-    cat 2.ts >> 1.ts
+```shell
+cat 2.ts >> 1.ts
+```
 
 这样，视频完全可以看，只不过因为 meta 信息还是 1.ts 的，会导致视频进度条显示不正确。
 
@@ -60,6 +62,8 @@ m3u8 是 Apple iOS 流媒体使用的一种格式，它本质上是个文本的�
 
 安装好 ffmpeg 后，执行下面的命令就可以完成合并：
 
-    ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
+```shell
+ffmpeg -i "concat:1.ts|2.ts" -c copy output.ts
+```
 
 当然，ffmpeg 功能还很强大，比如保存成其它格式什么的。有兴趣可以深入探索下。

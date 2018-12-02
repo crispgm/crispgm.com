@@ -20,7 +20,7 @@ tags:
 
 这款 App 我提前下载了 Trial Version 试用了几天，并为它所折服。于是鼠标轻轻一点，购入了人生中最贵的软件产品（¥283）。
 
-![](/image/ulysses-order.png)
+![]({{ "/image/ulysses-order.png" | absolute_url }})
 
 ## 知识产权和盗版
 

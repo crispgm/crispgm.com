@@ -74,7 +74,7 @@ let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/yc
 
 ## In The End
 
-![](/image/ycm-demo.png)
+![]({{ "/image/ycm-demo.png" | absolute_url }})
 
 Congrats to myself!
 

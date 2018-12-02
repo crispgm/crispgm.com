@@ -21,11 +21,11 @@ HHKB 是个很有态度的键盘，接受了它往往代表着接受了一种「
 * 简，由于是无刻的按键没有字，正面只有右下角有标志
 * 静，Type S 的 S 是 Silent，比起机械键盘，声音几乎都可以忽略
 
-![small-size](/image/HHKB-small-size.jpg)
+![small-size]({{ "/image/HHKB-small-size.jpg" | absolute_url }})
 
 接着说布局，这也是 HHKB 为人所知的最大印象——通过独特的布局获得很高的效率。
 
-![keyboard-setting](/image/HHKB-Pro-2-default-layout.png)
+![keyboard-setting]({{ "/image/HHKB-Pro-2-default-layout.png" | absolute_url }})
 
 仔细观察了键位布局后，就会发现了很多不同：
 
@@ -70,7 +70,7 @@ HHKB 是个很有态度的键盘，接受了它往往代表着接受了一种「
 * 把 `Control` 和 `Option` 交换，保持用普通键盘时的手势。HHKB 虽然在左下角没有按键，但由于 Mac 的左下角是 `Fn`，所以 `Option` 其实和 Mac 的 `Control` 位置差不多。`Option` 不那么常用，放在不喜欢的位置也没关系。
 * 重音号/波浪号、退格和反斜杠三者进行交换。这样反斜杠和退格都回到熟悉的位置，重音号/波浪号的位置并没有得到改善，因此我会在后续说到怎么使用魔法优化。
 
-![HHKB Option](/image/HHKB-option.jpg)
+![HHKB Option]({{ "/image/HHKB-option.jpg" | absolute_url }})
 注：HHKB 的 `Option` 其实和 MacBook Pro 的 `Control` 位置几乎一样。
 
 #### 魔法
@@ -96,7 +96,7 @@ HHKB 是个很有态度的键盘，接受了它往往代表着接受了一种「
 * 设置 `disable_built_in_keyboard_if_exists`，便于放在 Mac 键盘上时不会按到下面。
 * 弯头 USB 线。原装线会伸到屏幕上。
 
-![USB Cable](/image/HHKB-usb-cable.jpg)
+![USB Cable]({{ "/image/HHKB-usb-cable.jpg" | absolute_url }})
 
 ## 结论
 
@@ -117,6 +117,6 @@ HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并
 * 键盘唤醒时间很慢
 
 最后，附上工作照：
-![HHKB](/image/HHKB-at-work.jpg)
+![HHKB]({{ "/image/HHKB-at-work.jpg" | absolute_url }})
 
 Happy Hacking!
