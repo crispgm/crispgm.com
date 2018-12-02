@@ -18,7 +18,7 @@
             {{ page.title }}
           </div>
           <div class="article-date">
-            {{ page.date | date:"%B %d, %Y" }}
+            <time datetime="{{ page.date }}">{{ page.date | date:"%B %d, %Y" }}</time>
           </div>
         </div>
         <div class="article-main">
