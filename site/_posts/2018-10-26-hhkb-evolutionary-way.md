@@ -100,7 +100,7 @@ HHKB 是个很有态度的键盘，接受了它往往代表着接受了一种「
 
 ## 结论
 
-HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并不值得，Karabiner 可以帮助我采用更演进式的方式使用 HHKB。这里我给出我的 [karabiner.json](https://github.com/crispgm/dotfiles/blob/master/macOS/karabiner.json) 供参考。
+HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并不值得，Karabiner 可以帮助我采用更演进式的方式使用 HHKB。这里我给出我的 [karabiner.json](https://github.com/crispgm/dotfiles/blob/master/Karabiner/karabiner.json) 供参考。
 
 这里我给出一些配置后的优点和缺点：
 
