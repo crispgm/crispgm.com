@@ -130,7 +130,8 @@ footer {
     float: right; }
     .contact .contact-links a {
       color: #113654;
-      padding-left: .8rem; }
+      padding-left: .8rem;
+      text-decoration: none; }
       .contact .contact-links a:first-of-type {
         padding-left: .2rem; }
     .contact .contact-links:hover a {

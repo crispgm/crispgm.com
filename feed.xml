@@ -5,8 +5,8 @@
     <description>A minimalist programmer, photographer, and lifehacker. Blog, project, wiki, and about.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Dec 2018 10:50:54 +0800</pubDate>
-    <lastBuildDate>Mon, 03 Dec 2018 10:50:54 +0800</lastBuildDate>
+    <pubDate>Fri, 28 Dec 2018 23:28:42 +1100</pubDate>
+    <lastBuildDate>Fri, 28 Dec 2018 23:28:42 +1100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       
@@ -110,7 +110,7 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sun, 18 Nov 2018 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 18 Nov 2018 00:00:00 +1100</pubDate>
         <link>https://crispgm.com/page/minimal-packing-list-for-a-fast-trip.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/minimal-packing-list-for-a-fast-trip.html</guid>
         
@@ -347,7 +347,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Tue, 06 Nov 2018 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 06 Nov 2018 00:00:00 +1100</pubDate>
         <link>https://crispgm.com/page/provisioning-a-new-mac.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/provisioning-a-new-mac.html</guid>
         
@@ -465,7 +465,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
 
 &lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
 
-&lt;p&gt;HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并不值得，Karabiner 可以帮助我采用更演进式的方式使用 HHKB。这里我给出我的 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/macOS/karabiner.json&quot;&gt;karabiner.json&lt;/a&gt; 供参考。&lt;/p&gt;
+&lt;p&gt;HHKB 是个很好的键盘，但我觉得为了它而彻底改变肌肉记忆并不值得，Karabiner 可以帮助我采用更演进式的方式使用 HHKB。这里我给出我的 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/Karabiner/karabiner.json&quot;&gt;karabiner.json&lt;/a&gt; 供参考。&lt;/p&gt;
 
 &lt;p&gt;这里我给出一些配置后的优点和缺点：&lt;/p&gt;
 
@@ -490,7 +490,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
 
 &lt;p&gt;Happy Hacking!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 26 Oct 2018 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 26 Oct 2018 00:00:00 +1100</pubDate>
         <link>https://crispgm.com/page/hhkb-evolutionary-way.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/hhkb-evolutionary-way.html</guid>
         
@@ -611,7 +611,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
 
 &lt;p&gt;整体的效果还是比较满意的，但不天天现场做监督的后果就是细节处容易&lt;del&gt;出现瑕疵&lt;/del&gt;惨不忍睹。&lt;/p&gt;
 </description>
-        <pubDate>Sun, 29 Jul 2018 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 29 Jul 2018 00:00:00 +1000</pubDate>
         <link>https://crispgm.com/page/decorate-my-apartment.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/decorate-my-apartment.html</guid>
         
@@ -793,7 +793,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sat, 16 Jun 2018 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 16 Jun 2018 00:00:00 +1000</pubDate>
         <link>https://crispgm.com/page/about-podcast.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/about-podcast.html</guid>
         
@@ -896,7 +896,7 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Mon, 07 May 2018 00:00:00 +0800</pubDate>
+        <pubDate>Mon, 07 May 2018 00:00:00 +1000</pubDate>
         <link>https://crispgm.com/page/rss-revival.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/rss-revival.html</guid>
         
@@ -1163,7 +1163,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Thu, 22 Feb 2018 00:00:00 +0800</pubDate>
+        <pubDate>Thu, 22 Feb 2018 00:00:00 +1100</pubDate>
         <link>https://crispgm.com/page/word-kanban.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/word-kanban.html</guid>
         
@@ -1244,7 +1244,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Tue, 02 Jan 2018 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 02 Jan 2018 00:00:00 +1100</pubDate>
         <link>https://crispgm.com/page/why-should-we-create-a-blog.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/why-should-we-create-a-blog.html</guid>
         
@@ -1321,7 +1321,7 @@ Comparison:
 
 &lt;p&gt;产品开发中，我们往往会抱怨，程序“简单”到不用让你把链表拼来接去、不需要让你折腾二叉树。但我们真正把事情做好了吗？这些小小的优化并非微不足道。&lt;/p&gt;
 </description>
-        <pubDate>Tue, 05 Dec 2017 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 05 Dec 2017 00:00:00 +1100</pubDate>
         <link>https://crispgm.com/page/gaussian-summation.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/gaussian-summation.html</guid>
         
@@ -1488,7 +1488,7 @@ Comparison:
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 18 Aug 2017 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 18 Aug 2017 00:00:00 +1000</pubDate>
         <link>https://crispgm.com/page/asmr-the-best-white-noise.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/asmr-the-best-white-noise.html</guid>
         
