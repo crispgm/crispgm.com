@@ -25,7 +25,7 @@ Penguin Drip Starter Kit includes:
 
 And later, a Kalita Glass Server because I broke the kit one.
 
-![]({{ "/image/penguin-starter-kit.png" | absolute_url }})
+![]({{ "/image/penguin-starter-kit.jpg" | absolute_url }})
 _P.S. Blue Bottle Coffee is not included._
 
 The price (¥1284/$188) is reasonable. It’s great for a new comer to understand how drip coffee works and dive into drip coffee with joy.
@@ -46,7 +46,7 @@ The conclusion is that freshly brewed coffee works only if you brew frequently.
 
 Drip Coffee Bag provides a similar experience as typical drip coffee, and even faster and more convenient. More importantly, the oxidation rate is just low enough to keep on a good flavour level. Though it tastes worse than real fresh brewed coffee, its average taste is good enough for me as an occasional brewer.
 
-![]({{ "/image/fisher-coffee.png" | absolute_url }})
+![]({{ "/image/fisher-coffee.jpg" | absolute_url }})
 
 Another advantage of coffee bag is that we may buy a pack with various kinds of beans, which means we can easily taste lots of beans.
 
@@ -54,7 +54,7 @@ With Drip Coffee Bag, I omitted the grinder step but it remained to be a weekend
 
 ### Nespresso
 
-![]({{ "/image/sydney-opera-house.png" | absolute_url }})
+![]({{ "/image/sydney-opera-house.jpg" | absolute_url }})
 
 When I was staying at Sydney, the hotel provided Delonghi Nespresso coffee maker (however, I don’t know the exact model). I used it several times a day to get caffeinated. That’s great experience for me, both the city and the coffee.
 
@@ -66,6 +66,6 @@ It basically need one minute to fill the water tank (if in need) and one more mi
 
 And there are major differences between Nespresso and drip coffee. Nespresso brews Espresso coffee or its derivatives. The tastes can be quite different, which is the reason why I will keep the drip coffee kit and have a drink when I want.
 
-![]({{ "/image/coffee-life.png" | absolute_url }})
+![]({{ "/image/coffee-life.jpg" | absolute_url }})
 
 Enjoy the coffee life!
