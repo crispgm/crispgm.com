@@ -14,8 +14,8 @@
   text-align: left;
 
   .menu-home {
-    font-size: 1.4rem;
-    padding-top: .1rem;
+    font-size: 1.2rem;
+    padding-top: .2rem;
     width: 100%;
 
     a {
@@ -34,7 +34,6 @@
   }
 
   .menu-item {
-    color: $grey-5;
     font-size: 1rem;
     padding-left: .8rem;
     text-align: left;
@@ -62,12 +61,12 @@
 
 @media (max-width: $breakpoint) {
   .menu {
-    display: block;
     margin: 0;
     padding: .4rem;
 
     .menu-home {
-      font-size: 2rem;
+      font-size: 1.2rem;
+      margin-top: .2rem;
     }
 
     .menu-links {
