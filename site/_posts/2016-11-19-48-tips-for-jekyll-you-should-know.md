@@ -280,6 +280,8 @@ Jekyll 没有内置分页功能，而是提供了一个分页插件 `jekyll-pagi
 * 分页功能必须在 HTML 格式文件中调用，如：`index.html`
 * 必须使用默认的链接格式 `permalink`
 
+同时，jekyll-paginate 官方已经不再活跃开发，非官方的 [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2) 在兼容的情况下还在活跃状态，更建议使用。
+
 如果想继续使用，请详细阅读 <http://jekyllrb.com/docs/pagination/>。这是一个复杂的问题！
 
 #### 文章摘要
