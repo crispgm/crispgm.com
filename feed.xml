@@ -5,9 +5,76 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Jan 2019 18:36:37 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Jan 2019 18:36:37 +0800</lastBuildDate>
+    <pubDate>Mon, 04 Mar 2019 21:32:30 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Mar 2019 21:32:30 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      
+      <item>
+        <title>盘点2018：我的年度推荐</title>
+        <description>&lt;p&gt;看了&lt;a href=&quot;https://sspai.com/page/2018&quot;&gt;少数派 2018 年度盘点&lt;/a&gt;活动，我也来盘点一下自己的年度推荐。推荐的物品并没有购买链接，相信大家会通过自己的方式找到购买或下载方法。&lt;/p&gt;
+
+&lt;h3 id=&quot;硬件&quot;&gt;硬件&lt;/h3&gt;
+
+&lt;p&gt;硬件严格上来说不是2018年的，但实在想推荐一下，还有就是2018的确没买什么太厉害的新硬件。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sonos Play:1&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我一直喜欢专业的东西，只做好一件事情，Sonos 可以说就是这样的。作为一个音响，只能专注地播放音乐。甚至连电脑的声音输出都不支持，同样也不智能。正因为如此，用 Sonos 听歌不会被干扰更有专注性。&lt;/p&gt;
+
+&lt;p&gt;同时，可以集成所有常见的音乐服务提供商，是一种特殊的解决国内不同 App 之间曲库版权差异的方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sony W600D 电视&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;买电视也是一定要不智能，无广告秒开机，可惜某些歌华的机顶盒太垃圾启动速度太慢。&lt;/p&gt;
+
+&lt;p&gt;至于为什么能接受这么小的尺寸，客观原因是客厅小和花钱少，主观原因是希望小而美以及信仰充值。&lt;/p&gt;
+
+&lt;h3 id=&quot;软件和服务&quot;&gt;软件和服务&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Telegram&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;并不是刚刚接触的 app，但重拾 Telegram 后，它给我带来了极致的快速响应感。UI 简洁明快，整体感觉比之前常用的微信和 Slack 都快得多。功能上有 &lt;a href=&quot;https://instantview.telegram.org/&quot;&gt;Instant View&lt;/a&gt; 这个神器，再加上有趣的机器人和表情生态，可以及时没什么朋友聊天也能玩的风生水起。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scanner Pro&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;之前对此类 App 有些误解，以为是扫描名片之类的，其实并非如此。在信任和保证安全的前提下，可以用 Scanner Pro 保存个人证件和信用卡等物品复印件，免得每次需要这些信息时要回到家拿原件查询或复印。除此之外，平时的那些说明书也都可以电子化方式保存，之后直接扔掉。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1Password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;虽然久闻大名，但第一次使用这种密码管理服务，于是选择同类产品中最知名的。我的主要动机是现在密码泄漏事件实在太多了，各种网站都是那几个密码十分危险。1Password 能解决这种烦恼。我的建议是，不那么重要的网站用 1Password 比较好，对于核心的几个账户还是自己编一些能记住的独立的密码，否则 1Password 一旦故障或出现问题或被人“&lt;del&gt;一锅端&lt;/del&gt;”，损失也能够控制得住。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bear&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;废弃了之前用的 Ulysses（因为贵）和 Quip（对协作需求不强），并且经过调研没有选择 Notion，最终选择了 Bear 作为长期协作工具。选择的原因是 Bear 写作体验和跨平台能力都不错，价格也不贵，适合我这种写作并不频繁、对写作需求没那么强的用户。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RSSHub&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;十分实用的 RSS 工具，可以把网络内容做成 RSS Feed。用官方文档的说法就是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;🍰 万物皆可 RSS&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;对于我来说，RSSHub 提供了一个不安装 App 而获得其中部分对我有用的资讯的能力。比如，我可以通过 RSSHub 订阅新浪微博某些感兴趣的账户，而不用装微博这样超级恶心的 App。&lt;/p&gt;
+
+&lt;h3 id=&quot;书籍&quot;&gt;书籍&lt;/h3&gt;
+
+&lt;p&gt;《It doesn’t have to be crazy at work》&lt;/p&gt;
+
+&lt;p&gt;书不长而且很多都是 Basecamp 的官方博客 Signal v.s. Noise 摘录，主题就跟标题说的一样，阐述为什么他们可以不疯狂工作。和现在很多鸡汤内容以及创业内容都是对立的。虽然我们&lt;del&gt;可能无法&lt;/del&gt;去到这样的公司，但需要知道他们是怎么不疯狂工作的。&lt;/p&gt;
+
+&lt;p&gt;《极简宇宙史》&lt;/p&gt;
+
+&lt;p&gt;这是一本为了看懂《 隐藏的现实：平行宇宙是什么》而买的书，不过对于不是那么物理爱好者的人来说，前者更合适一些，能让人基本理解20世纪后的宇宙研究上的进展，包括爱因斯坦和霍金等人都在解决怎样的物理学问题。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Feb 2019 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/2018-lifestyle-summary.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/2018-lifestyle-summary.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1325,83 +1392,6 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
         <pubDate>Tue, 02 Jan 2018 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/why-should-we-create-a-blog.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/why-should-we-create-a-blog.html</guid>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>高斯速算法和微小的优化</title>
-        <description>&lt;p&gt;今天在阅读 Linus Torvalds 的自传《Just for Fun》时（或者说是重温，因为大学时粗略的看过一遍），Linus 在书中提到了1加到100的高斯速算法。作为擅长中小学数学的中国人应该都很清楚这个是什么，我就不在此介绍了。&lt;/p&gt;
-
-&lt;p&gt;在书中他主要表达的是对故事真实性的一些质疑，因为他认为：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;伟大的数学家不会采用既繁琐又无趣的方法解决问题，因为他们能理解问题背后的真正内涵，并且利用这个内涵找到更为简便的方法，从而得到答案。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;容易走神的我，于是就在想：对于用笔算的小学生们，Bruteforce 意味着从1加到100，在很细心不出现低级失误的前提下，我想花个20分钟还是必要的。而对于掌握了高斯速算法的人来说，顶多10秒钟。这之间差了千倍。&lt;/p&gt;
-
-&lt;p&gt;那对于计算能力已经经历了几十年摩尔定律发展的情况下，高斯速算法和“无脑”的 Bruteforce 循环之间能差到多少？&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'benchmark/ips'&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gaussian_add_to_100&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bruteforce_add_to_100&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;no&quot;&gt;Benchmark&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ips&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gaussian add to 100'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;gaussian_add_to_100&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'brute force add to 100'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;bruteforce_add_to_100&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;compare!&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;好奇的我，写了一段简单的 Ruby benchmark 程序。结果是（为了显示好看与实际输出有格式调整）：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Warming up:
-  gaussian add to 100
-    157.824k i/100ms
-  brute force add to 100
-    11.804k i/100ms
-
-Calculating:
-  gaussian add to 100
-    5.103M (±12.3%) i/s
-    25.094M in   5.003086s
-  brute force add to 100
-    140.711k (± 7.9%) i/s
-    708.240k in   5.065663s
-
-Comparison:
-  gaussian add to 100:
-    5102771.3 i/s
-  brute force add to 100:
-    140711.1 i/s - 36.26x  slower
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;相差了足足36倍。&lt;/p&gt;
-
-&lt;p&gt;产品开发中，我们往往会抱怨，程序“简单”到不用让你把链表拼来接去、不需要让你折腾二叉树。但我们真正把事情做好了吗？这些小小的优化并非微不足道。&lt;/p&gt;
-</description>
-        <pubDate>Tue, 05 Dec 2017 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/gaussian-summation.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/gaussian-summation.html</guid>
         
         
       </item>
