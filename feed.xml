@@ -5,9 +5,335 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Mar 2019 21:32:30 +0800</pubDate>
-    <lastBuildDate>Mon, 04 Mar 2019 21:32:30 +0800</lastBuildDate>
+    <pubDate>Thu, 21 Mar 2019 17:30:59 +0800</pubDate>
+    <lastBuildDate>Thu, 21 Mar 2019 17:30:59 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      
+      <item>
+        <title>Homebrew 深度应用</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;macOS 上各种软件的管理，只要有 Homebrew 就足够了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;简介&quot;&gt;简介&lt;/h1&gt;
+
+&lt;p&gt;Homebrew 是一款享有盛名的包管理工具，是 macOS 上包管理的事实(de facto)标准 。Homebrew 的意思是家酿啤酒。&lt;/p&gt;
+
+&lt;p&gt;它的官方 slogan 是 The missing package manager for macOS (or Linux)。Linuxbrew 已经在 Homebrew 1.9正式合入，成为 Homebrew 的“一等公民”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;p&gt;Homebrew 最早的创建者是 Max Howell，目前的主要维护者是 Mike McQuaid。同 Jekyll 等开源项目一样，Homebrew 的核心维护者也是 GitHub 的员工。GitHub 对于员工亲自参加开源项目方面，做得一直不错。&lt;/p&gt;
+
+&lt;p&gt;顺带插播一条奇闻逸事：Homebrew 的创始人 Max Howell 活跃在开源社区，目前主要从事 Swift 相关的库开发。他在2015年初曾去 Google 面试，因为“白板”写算法题「翻转二叉树」失败，愤而发 tweet 讽刺：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off. &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;why-homebrew&quot;&gt;Why Homebrew&lt;/h3&gt;
+
+&lt;p&gt;对于使用 Unix/Linux 类系统的用户往往都遇到过这些需求：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;开源程序是源码分发，需要自己编译，但 &lt;code class=&quot;highlighter-rouge&quot;&gt;./configure&lt;/code&gt; 参数超多，还要解决各种库的依赖&lt;/li&gt;
+  &lt;li&gt;想把软件安装到用户目录，而不是系统目录（这样不需要 root 权限）&lt;/li&gt;
+  &lt;li&gt;自己编译安装了软件，想删除时却不知道在哪里删除和删除哪些文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;各 Linux 发行版为了提升安装软件的体验，大多都提供了官方的包管理器，如 Ubuntu 的 aptitude (apt-get)。而苹果官方没有为 macOS 提供包管理器，市面上最好的解决方案就是 Homebrew。&lt;/p&gt;
+
+&lt;p&gt;目前 Homebrew 的中文内容大多以简单入门级教程为主，对于它的各类能力提之甚少，我希望在这里更全面的分享 Homebrew。&lt;/p&gt;
+
+&lt;h1 id=&quot;快速入门&quot;&gt;快速入门&lt;/h1&gt;
+
+&lt;p&gt;网上基础的教程很多，我这里只简略的介绍下。对于基础功能类的深度用法，推荐这篇 &lt;a href=&quot;https://swiftcafe.io/post/home-brew&quot;&gt;macOS 包管理工具 Homebrew 不完全指南&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;开始安装前需要安装 macOS 命令行工具：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xcode-select —install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;或者，在&lt;a href=&quot;https://developer.apple.com/download/more/&quot;&gt;https://developer.apple.com/download/more/&lt;/a&gt;下载安装。&lt;/p&gt;
+
+&lt;p&gt;然后执行：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;/usr/bin/ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;基础功能&quot;&gt;基础功能&lt;/h3&gt;
+
+&lt;h5 id=&quot;安装-1&quot;&gt;安装&lt;/h5&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;完成安装后可以列出已安装内容：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew list
+wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;升级&quot;&gt;升级&lt;/h5&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 显示可以升级的包&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew outdated
+cmake &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3.13.4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &amp;lt; 3.14.0
+yarn &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1.13.0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &amp;lt; 1.15.2
+youtube-dl &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2019.03.09&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &amp;lt; 2019.03.18
+
+&lt;span class=&quot;c&quot;&gt;# 进行升级&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew upgrade cmake
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;删除&quot;&gt;删除&lt;/h5&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew uninstall wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;安装桌面程序&quot;&gt;安装桌面程序&lt;/h5&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;google-chrome
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;对于 Homebrew-cask 管理桌面程序，这里先不细说，后面会专门讲。&lt;/p&gt;
+
+&lt;p&gt;Homebrew 会把软件安装到 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/Cellar&lt;/code&gt;，并且通过软链链接到 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt;。我们可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew unlink&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew link&lt;/code&gt; 删除或创建链接。&lt;/p&gt;
+
+&lt;h3 id=&quot;名词解释&quot;&gt;名词解释&lt;/h3&gt;
+
+&lt;p&gt;Homebrew 把软件安装过程中的各种名词都进行了拟物化命名&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;，这些命名挺有意思，但对于大多数英语水平一般的人来说，有不少词汇有些生僻。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;英文&lt;/th&gt;
+      &lt;th&gt;直译&lt;/th&gt;
+      &lt;th&gt;实际含义&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;formula(e)&lt;/td&gt;
+      &lt;td&gt;公式&lt;/td&gt;
+      &lt;td&gt;安装包的描述文件，formulae 为复数&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cellar&lt;/td&gt;
+      &lt;td&gt;地窖&lt;/td&gt;
+      &lt;td&gt;安装好后所在的目录&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;keg&lt;/td&gt;
+      &lt;td&gt;小桶&lt;/td&gt;
+      &lt;td&gt;具体某个包所在的目录，keg 是 cellar 的子目录&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;bottle&lt;/td&gt;
+      &lt;td&gt;瓶子&lt;/td&gt;
+      &lt;td&gt;预先编译好的包，不需要现场下载编译源码，速度会快很多；&lt;br /&gt;官方库中的包大多都是通过 bottle 方式安装&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;tap&lt;/td&gt;
+      &lt;td&gt;(插入)水龙头&lt;/td&gt;
+      &lt;td&gt;下载启用某个源&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cask&lt;/td&gt;
+      &lt;td&gt;木桶&lt;/td&gt;
+      &lt;td&gt;安装 macOS native 应用的扩展&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
+      &lt;td&gt;捆&lt;/td&gt;
+      &lt;td&gt;描述 Homebrew 依赖的扩展&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;进阶用法&quot;&gt;进阶用法&lt;/h1&gt;
+
+&lt;p&gt;对于 Homebrew，我们很多时候往往都是上来就&lt;code class=&quot;highlighter-rouge&quot;&gt;brew search&lt;/code&gt;或是&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install&lt;/code&gt;。缺什么安什么，没有充分的应用它的强大能力。&lt;/p&gt;
+
+&lt;p&gt;首先，Homebrew 虽为解决控制台程序而生，但它完全有能力（Cask）安装任何桌面软件。它还支持丰富的分类目软件库或第三方库。&lt;/p&gt;
+
+&lt;p&gt;除此之外，它还有一个打包安装或备份工具，可以把已安装的软件输出成 Brewfile。迁移到新电脑时，只要根据 Brewfile 运行 Homebrew bundle，就可以一键安装全部控制台、桌面和来自 Mac App Store 的程序（Mac App Store 上的软件通过 &lt;a href=&quot;https://github.com/mas-cli/mas&quot;&gt;mas&lt;/a&gt; 支持）。&lt;/p&gt;
+
+&lt;h3 id=&quot;tap&quot;&gt;Tap&lt;/h3&gt;
+
+&lt;p&gt;Tap 在 Homebrew 中我理解是个动词，指的是启用某个源。实际看了下发现，homebrew-services 和 homebrew-bundle 也已 tap 形式存在，因此可以认为 tap 实际指的应该是扩展（extension）。&lt;/p&gt;
+
+&lt;p&gt;Homebrew 默认情况下会自带：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;homebrew/core&lt;/li&gt;
+  &lt;li&gt;homebrew/cask&lt;/li&gt;
+  &lt;li&gt;homebrew/services&lt;/li&gt;
+  &lt;li&gt;homebrew/bundle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;后两者并没有任何公式配方，而只是扩展程序。&lt;/p&gt;
+
+&lt;p&gt;除此之外的源，需要通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew tap&lt;/code&gt;来启用。如：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew tap heroku/brew
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;heroku
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;services&quot;&gt;Services&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Homebrew/homebrew-services&quot;&gt;Homebrew-services&lt;/a&gt; 是 Homebrew 的后台服务程序扩展，它基于 macOS 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;launchctl&lt;/code&gt;。后台服务类程序的安装依旧使用 Homebrew，在管理时可以使用 Homebrew-services 进行启动、重启和停止等操作。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mysql
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services start mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;cask&quot;&gt;Cask&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Homebrew/homebrew-cask&quot;&gt;Homebrew-cask&lt;/a&gt; 是 Homebrew 的 macOS Native 应用扩展，通过 cask 可以安装各类应用程序。&lt;/p&gt;
+
+&lt;p&gt;搜索 Cask 的方法和搜索普通包一样，但安装时需要加上 cask 指令：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew search google-chrome
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;google-chrome
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;cask-versions&quot;&gt;cask-versions&lt;/h5&gt;
+
+&lt;p&gt;Homebrew Cask 和 Homebrew 一样，默认库只维护最新版本，但有的时候我们还是需要用旧版的（比如：我只有 Dash 3 的 License，所以需要用 Dash 3 而不是最新的 Dash 4），那就可能需要使用 cask-versions。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew tap homebrew/cask-versions
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;dash3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;cask-fonts&quot;&gt;cask-fonts&lt;/h5&gt;
+
+&lt;p&gt;Homebrew 官方的字体源，比如 Mozilla 的开源字体 Fira Code：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew tap homebrew/cask-fonts
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-fira-code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bundle&quot;&gt;Bundle&lt;/h3&gt;
+
+&lt;p&gt;Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 &lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Homebrew Bundle&lt;/a&gt; 可以帮你解决所有软件依赖，包括官方和第三方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。&lt;/p&gt;
+
+&lt;p&gt;Homebrew 默认就安装了 Homebrew Bundle。&lt;/p&gt;
+
+&lt;p&gt;我们只需要一个&lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;，就可以配置好所有需要的应用。熟悉 Ruby 的人应该不太需要解释，毕竟 Ruby 自己就有 Bundler 这套东西，Brewfile 和 Gemfile 属于对应关系。&lt;/p&gt;
+
+&lt;p&gt;如果你的安装列表已经足够“干净”，那么可以执行&lt;code class=&quot;highlighter-rouge&quot;&gt;brew bundle dump&lt;/code&gt;来生成现有依赖，输出到&lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew bundle dump
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;Brewfile
+
+brew &lt;span class=&quot;s2&quot;&gt;&quot;git&quot;&lt;/span&gt;
+brew &lt;span class=&quot;s2&quot;&gt;&quot;wget&quot;&lt;/span&gt;
+brew &lt;span class=&quot;s2&quot;&gt;&quot;mas&quot;&lt;/span&gt;
+brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果想自己写也比较容易，&lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;是一种简单的 Ruby DSL，写起来比大部分配置文件都简单。只需要掌握一些常用到的命令，主要有&lt;code class=&quot;highlighter-rouge&quot;&gt;brew&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;tap&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;cask&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;mas&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;这四条命令分别对应：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew tap&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew cask install&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mas install&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注：mas 也就是&lt;a href=&quot;https://crispgm.com/page/awesome-terminal-tools.html#mas&quot;&gt;之前文章中&lt;/a&gt;介绍过的 Mac App Store 命令行工具&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;命令行类应用：&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;wget&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;vim&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;非命令行类：&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;google-chrome&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;alfred&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;visual-studio-code&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;非官方 Formula 应用：&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;homebrew/cask-versions&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dash3&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;homebrew/cask-fonts&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;font-source-code-pro&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Mac App Store 上的应用：&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mas&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;WeChat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;id: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;836500024&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;因此，维护好 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/Brewfile&quot;&gt;Brewfile&lt;/a&gt; 就可以完美解决应用自动化安装，只需要运行：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;扩展用法&quot;&gt;扩展用法&lt;/h1&gt;
+
+&lt;h3 id=&quot;提交-formula&quot;&gt;提交 Formula&lt;/h3&gt;
+
+&lt;p&gt;创建并提交一个 Formula 比较容易，官方教程非常详细&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;。这里，我就不做单独介绍了。&lt;/p&gt;
+
+&lt;h3 id=&quot;自建-tap&quot;&gt;自建 Tap&lt;/h3&gt;
+
+&lt;p&gt;Homebrew 除了各种官方维护的源外，还支持自建软件库。默认使用 GitHub，需要以“homebrew-xxx”格式命名 Repo。Formula 或 Cask 文件需要存放在 Formula 或 Casks 二级目录中。&lt;/p&gt;
+
+&lt;p&gt;比如，Heroku 的自建库在 GitHub 上是&lt;code class=&quot;highlighter-rouge&quot;&gt;heroku/homebrew-brew&lt;/code&gt;。通过&lt;code class=&quot;highlighter-rouge&quot;&gt;brew tap heroku/brew&lt;/code&gt;就可以获取库里维护的包了。&lt;/p&gt;
+
+&lt;h2 id=&quot;私有-tap&quot;&gt;私有 Tap&lt;/h2&gt;
+
+&lt;p&gt;上面说到，Tap 默认维护在 GitHub，那么当我们想安装一些需要&lt;strong&gt;保密&lt;/strong&gt;的软件时该怎么办呢？&lt;/p&gt;
+
+&lt;p&gt;答案是 Tap 支持指定 Git，因此也可以使用内网域名内的 Git：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew tap yourcompany/brew git@git.yourcompany.com: yourcompany/homebrew-brew.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;inhouse-app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;tips&quot;&gt;Tips&lt;/h1&gt;
+
+&lt;h5 id=&quot;禁用自动升级&quot;&gt;禁用自动升级&lt;/h5&gt;
+
+&lt;p&gt;Homebrew 自动升级触发概率很高，由于网络等问题，检查更新会很久有时会比较烦。可以通过环境变量禁用自动升级：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;HOMEBREW_NO_AUTO_UPDATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 brew info mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://twitter.com/mxcl/status/608682016205344768&quot;&gt;Max Howell on Twitter: “Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.”&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/Linuxbrew/brew/issues/612&quot;&gt;https://github.com/Linuxbrew/brew/issues/612&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&quot;&gt;Formula Cookbook — Homebrew Documentation&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://tmr08c.github.io/devops/2016/10/24/homebrew-glossary.html&quot;&gt;Glossary of Homebrew Terms&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://docs.brew.sh/Formula-Cookbook#an-introduction&quot;&gt;Formula Cookbook — Homebrew Documentation&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 21 Mar 2019 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/dive-in-homebrew.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/dive-in-homebrew.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1311,87 +1637,6 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
         <pubDate>Thu, 22 Feb 2018 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/word-kanban.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/word-kanban.html</guid>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>为什么我们需要自建博客</title>
-        <description>&lt;p&gt;自从公众号起飞🚀之后，自媒体发展迅猛，在中华互联网领土上就出现了无数的『号』。即便是“号”时代之前，众多博客和轻博客平台也是一类常见的选择。那在这个时代，为什么我们需要自建博客呢？我想通过本文给出一个答案。&lt;/p&gt;
-
-&lt;h2 id=&quot;创造&quot;&gt;创造&lt;/h2&gt;
-
-&lt;p&gt;对于自建博客来说，我们将会创造一个网站。&lt;/p&gt;
-
-&lt;p&gt;最初，在技术上，我们需要申请域名、使用开源程序或者自己编写，然后部署上线。在设计上，我们需要自己设计或是选择 UI，字体，体验，交互。&lt;/p&gt;
-
-&lt;p&gt;接着，让我们的博客更美观、体验更好，支持评论、点赞、分享，做到 mobile friendly，支持国际化界面，支持 a11y&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。统统没有问题，自己创造就好。&lt;/p&gt;
-
-&lt;p&gt;对于内容，那本身就是创造。由于本文不是“为什么我们需要写博客”，这里就不解释了。&lt;/p&gt;
-
-&lt;h2 id=&quot;展示个性&quot;&gt;展示个性&lt;/h2&gt;
-
-&lt;p&gt;个人博客是个展示个性的好地方。在博客上，我们可以搞一些酷炫的动画，来点小清新的背景音乐。&lt;/p&gt;
-
-&lt;p&gt;除了博客本身，我们还可以嵌入或链接到简历、Portfolio、相册、and more。&lt;/p&gt;
-
-&lt;p&gt;我们可以用独特的设计、独特的配色、或者独特的字体。就像你的家，“装修”在线的家。&lt;/p&gt;
-
-&lt;h2 id=&quot;开放自由&quot;&gt;开放、自由&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;中文世界最大的悲劇便是封閉。從國家到公司，從公司到個人，都在打造圍牆，建起一個又一個圈子。&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;博客是 Web 1.0 时就存在的，一切都以开放的方式进行着，没有平台化、大数据和推荐引擎。&lt;/p&gt;
-
-&lt;p&gt;域名、网站、链接、RSS。&lt;/p&gt;
-
-&lt;p&gt;有个&lt;code class=&quot;highlighter-rouge&quot;&gt;.com&lt;/code&gt;域名大概是我从小的梦想之一。&lt;/p&gt;
-
-&lt;p&gt;个人网站个人管理，没有平台，没有人和谐你，没人下线你喜欢的功能。&lt;/p&gt;
-
-&lt;p&gt;网站和文章通过链接传播分享，搜索引擎收录你的链接。&lt;/p&gt;
-
-&lt;p&gt;通过 RSS 订阅内容，只有自己主动选取的优质内容，没有骚扰没有推送没有推荐。推荐更懂你？如果是，说明你大概有些 naive。&lt;/p&gt;
-
-&lt;h2 id=&quot;甚至没有读者&quot;&gt;甚至没有读者&lt;/h2&gt;
-
-&lt;p&gt;或许有些丧。&lt;/p&gt;
-
-&lt;p&gt;域名没有备案，指不定哪天国内就无法访问。评论系统 Disqus 压根就在墙外呢。&lt;/p&gt;
-
-&lt;p&gt;没有平台的推荐，曝光很难。或许，你搜站名，Google、百度、Bing 第一位都不是你。额，最好赶紧确定是否有被收录？毕竟，搜索引擎支持手动提交链接。&lt;/p&gt;
-
-&lt;p&gt;RSS 别逗了。现在的年轻人有多少知道 RSS 是啥的，都在刷头条呢。即使知道，苹果上的 RSS 阅读器都被下架了&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;。当然，你确定你的内容值得订阅？&lt;/p&gt;
-
-&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
-
-&lt;p&gt;我还是推荐自建博客。因为没有读者也没关系，就像我们写作文也不是都为了让别人看吧。况且，有自己的自建博客，也可以同步到各类自媒体号上，这是一种折衷。&lt;/p&gt;
-
-&lt;p&gt;但创造、个性和开放、自由才是我最珍视的东西。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Computer Accessibility &lt;a href=&quot;https://www.wikiwand.com/en/Computer_accessibility&quot;&gt;https://www.wikiwand.com/en/Computer_accessibility&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;利器拾遺 &lt;a href=&quot;http://lepture.com/zh/2017/liqi&quot;&gt;http://lepture.com/zh/2017/liqi&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;苹果从中国区应用商店下架 RSS 类应用 &lt;a href=&quot;http://www.solidot.org/story?sid=54239&quot;&gt;http://www.solidot.org/story?sid=54239&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Tue, 02 Jan 2018 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/why-should-we-create-a-blog.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/why-should-we-create-a-blog.html</guid>
         
         
       </item>
