@@ -270,6 +270,25 @@ Homebrew 自动升级触发概率很高，由于网络等问题，检查更新�
 HOMEBREW_NO_AUTO_UPDATE=1 brew info mysql
 ```
 
+##### 直接安装 Formula
+
+Homebrew 的安装指令并非只支持名字，也可以用文件安装包括网络文件和本地文件。
+
+```shell
+# 本地
+$ brew install blabla.rb
+# 远程
+$ brew install https://blablablabla.com/blabla.rb
+```
+
+##### 安装旧版软件
+
+Homebrew 默认情况下只支持最新版软件安装，有些重要的版本会单独存在。但想安装一些小版本就得自己 DIY 了。
+
+我所知有两种方法：
+1. 在 GitHub 找到 Formula 所在Repo 中（默认为 [homebrew-core](https://github.com/Homebrew/homebrew-core/blob/master/Formula/)）的文件，把文件远程地址复制下来，用 `brew install` 安装。
+2. 进入 homebrew-core 在 macOS 本地的路径，默认为 `/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core`，`git checkout`到所在 commit，再用 `brew pin` 锁定这个文件的更新，然后进行安装。
+
 ---
 [^1]: [Max Howell on Twitter: “Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.”](https://twitter.com/mxcl/status/608682016205344768)
 [^2]:  [https://github.com/Linuxbrew/brew/issues/612](https://github.com/Linuxbrew/brew/issues/612) 
