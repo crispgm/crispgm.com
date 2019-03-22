@@ -5,8 +5,8 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Mar 2019 17:30:59 +0800</pubDate>
-    <lastBuildDate>Thu, 21 Mar 2019 17:30:59 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Mar 2019 17:29:09 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Mar 2019 17:29:09 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       
@@ -305,6 +305,26 @@ brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;HOMEBREW_NO_AUTO_UPDATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 brew info mysql
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;直接安装-formula&quot;&gt;直接安装 Formula&lt;/h5&gt;
+
+&lt;p&gt;Homebrew 的安装指令并非只支持名字，也可以用文件安装包括网络文件和本地文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 本地&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;blabla.rb
+&lt;span class=&quot;c&quot;&gt;# 远程&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;https://blablablabla.com/blabla.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;安装旧版软件&quot;&gt;安装旧版软件&lt;/h5&gt;
+
+&lt;p&gt;Homebrew 默认情况下只支持最新版软件安装，有些重要的版本会单独存在。但想安装一些小版本就得自己 DIY 了。&lt;/p&gt;
+
+&lt;p&gt;我所知有两种方法：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;在 GitHub 找到 Formula 所在Repo 中（默认为 &lt;a href=&quot;https://github.com/Homebrew/homebrew-core/blob/master/Formula/&quot;&gt;homebrew-core&lt;/a&gt;）的文件，把文件远程地址复制下来，用 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew install&lt;/code&gt; 安装。&lt;/li&gt;
+  &lt;li&gt;进入 homebrew-core 在 macOS 本地的路径，默认为 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout&lt;/code&gt;到所在 commit，再用 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew pin&lt;/code&gt; 锁定这个文件的更新，然后进行安装。&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;hr /&gt;
 &lt;div class=&quot;footnotes&quot;&gt;

@@ -340,6 +340,26 @@ brew <span class="s2">"p7zip"</span>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">HOMEBREW_NO_AUTO_UPDATE</span><span class="o">=</span>1 brew info mysql
 </code></pre></div></div>
 
+<h5 id="直接安装-formula">直接安装 Formula</h5>
+
+<p>Homebrew 的安装指令并非只支持名字，也可以用文件安装包括网络文件和本地文件。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 本地</span>
+<span class="nv">$ </span>brew <span class="nb">install </span>blabla.rb
+<span class="c"># 远程</span>
+<span class="nv">$ </span>brew <span class="nb">install </span>https://blablablabla.com/blabla.rb
+</code></pre></div></div>
+
+<h5 id="安装旧版软件">安装旧版软件</h5>
+
+<p>Homebrew 默认情况下只支持最新版软件安装，有些重要的版本会单独存在。但想安装一些小版本就得自己 DIY 了。</p>
+
+<p>我所知有两种方法：</p>
+<ol>
+  <li>在 GitHub 找到 Formula 所在Repo 中（默认为 <a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/">homebrew-core</a>）的文件，把文件远程地址复制下来，用 <code class="highlighter-rouge">brew install</code> 安装。</li>
+  <li>进入 homebrew-core 在 macOS 本地的路径，默认为 <code class="highlighter-rouge">/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</code>，<code class="highlighter-rouge">git checkout</code>到所在 commit，再用 <code class="highlighter-rouge">brew pin</code> 锁定这个文件的更新，然后进行安装。</li>
+</ol>
+
 <hr />
 <div class="footnotes">
   <ol>
