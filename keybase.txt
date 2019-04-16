@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/crispgm
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://crispgm.com
+  * I am crispgm (https://keybase.io/crispgm) on keybase.
+  * I have a public key ASAdGm896HU6rlyeNwP5ubKwDHvixAp9L72QhvkL_rty8wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200e005af3025e60a1d440edbb2eab7c9f47fa5ca0b57cf867e8f15d2e96141a210a",
+      "host": "keybase.io",
+      "kid": "01201d1a6f3de8753aae5c9e3703f9b9b2b00c7be2c40a7d2fbd9086f90bfebb72f30a",
+      "uid": "8e774a69a48becf9edaecf73b4a8d119",
+      "username": "crispgm"
+    },
+    "merkle_root": {
+      "ctime": 1555384984,
+      "hash": "43239ab8d2a75f1cf8e5d8d81c6fd111e7684dc1f535467ca378a856352044b9698e5ddc07f057ac83c271c4085e90dca18975164af682af9e8ba4601f0a93d7",
+      "hash_meta": "3427127fb4a5884b58a14a4be7593d4c043f464a4feb0687ebe4aeee27906ebc",
+      "seqno": 5177765
+    },
+    "service": {
+      "entropy": "HJg6eFdg7yRDFAA4aa1TxfUH",
+      "hostname": "crispgm.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555384991,
+  "expire_in": 504576000,
+  "prev": "e64b701a511f4deb37921a3d13f4cd019edb6b291a826f9c9ca2dfa24b261420",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgHRpvPeh1Oq5cnjcD+bmysAx74sQKfS+9kIb5C/67cvMKp3BheWxvYWTESpcCEcQg5ktwGlEfTes3kho9E/TNAZ7baykagm+cnKLfoksmFCDEIBFXsm7w8FlJjOO85GnFgFvcRDzfZPLzAd9MjHhiO7ZsAgHCo3NpZ8RA9kBE1FtaKZN54da7RA9pfHjWkegNlvTIB/310PuJ+qwen/AOTCpDVEGsGzgzAo/y7VjHw58NmCncH1LY1DO2DqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICRtNduTDR45qKI5Bh7YdlSvyZt/ank0lHJ/cfC68NY7o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/crispgm
+
+==================================================================
