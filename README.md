@@ -5,8 +5,6 @@
 
 Source of [crispgm.com](https://crispgm.com/). Also available at: <https://crisp.dev> and <https://crisp.lol>.
 
-Status Page: <http://stats.pingdom.com/nmfhsd4gur4u>
-
 ## Dev
 
 There are 3 Jekyll sites here and will be built into `gh-pages` branch.
