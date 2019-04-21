@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker."/>
+  <title>How to be a 100x Programmer? | David Zhang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://crispgm.com/page/how-to-be-a-100x-programmer.html">
+  
+  <link rel="alternate" href="https://crisp.lol/page/how-to-be-a-100x-programmer.html">
+  
+  <link rel="alternate" href="https://crisp.dev/page/how-to-be-a-100x-programmer.html">
+  
+  <link rel="alternate" href="https://crispgm.com/feed.xml" type="application/rss+xml" title="RSS">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/image/logo.png">
+  
+  <link rel="stylesheet" href="/assets/css/font.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/nord.css">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://use.typekit.net/syr2mmc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+  <body>
+    <div class="progress-bar"></div>
+    <div class="wrapper blog-wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">DAVID ZHANG</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            How to be a 100x Programmer?
+          </div>
+          <div class="article-date">
+            <time datetime="2019-04-21 00:00:00 +0800">April 21, 2019</time>
+          </div>
+        </div>
+        <div class="article-main">
+          <blockquote>
+  <p>A 10x programmer is, in the mythology of programming, a programmer that can do ten times the work of another normal programmer, where for normal programmer we can imagine one good at doing its work, but without the magical abilities of the 10x programmer.</p>
+
+  <p>– <a href="http://antirez.com/news/112">The mythical 10x programmer</a></p>
+</blockquote>
+
+<p>Every programmer is a unique person, and he/she may improve his/her productivity in various ways.</p>
+
+<p>As an old Chinese proverb said:</p>
+
+<blockquote>
+  <p>工欲善其事，必先利其器 (To do a good job, an artisan needs the best tools)</p>
+</blockquote>
+
+<p>At least we should use some powerful tools to boost our productivity. Even if a tool may only increase 10x at most, it multiplies.</p>
+
+<p>Let me show a example:</p>
+
+<ul>
+  <li>Tool No1 (10x)</li>
+  <li>Tool No.2 (3x)</li>
+  <li>Tool No.3 (2x)</li>
+  <li>Tool No.4 (1.6x)</li>
+  <li>Tool No.5 (1.1x)</li>
+</ul>
+
+<p>Total: 10x * 2x * 1.5x * 3x * 1.1x = 100x</p>
+
+<h1 id="solutions">Solutions</h1>
+
+<h3 id="zsh--oh-my-zsh">zsh &amp; oh-my-zsh</h3>
+
+<p><a href="https://www.zsh.org/">zsh</a> provides more power than bash and <a href="https://ohmyz.sh/">oh-my-zsh</a> make it be powerful out-of-box, with great tab completion, clever aliases, and themes &amp; plugins system.</p>
+
+<p>Here is what happened after I typed <code class="highlighter-rouge">git &lt;tab&gt;</code>:</p>
+
+<p><img src="https://crispgm.com/image/zsh-git-completion.png" alt="zsh-git-completion" /></p>
+
+<p>Install zsh:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>zsh zsh-completions
+<span class="nv">$ </span>chsh <span class="nt">-s</span> /bin/zsh
+</code></pre></div></div>
+
+<p>Install oh-my-zsh:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>sh <span class="nt">-c</span> <span class="s2">"</span><span class="k">$(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh <span class="nt">-O</span> -<span class="k">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>And Oh My Zsh indicates its BOOST officially.</p>
+
+<blockquote>
+  <p>Oh My Zsh will not make you a 10x developer…but you might feel like one.</p>
+</blockquote>
+
+<p>Now that it claims to make you “feel like” a 10x developer, I think it must be true.</p>
+
+<p><strong>BOOST</strong>: 10x, <strong>PROGRESS: 10%</strong></p>
+
+<h3 id="tmux">tmux</h3>
+
+<p>tmux is a terminal multiplexer. It is not only multiplexes terminals, but also multiplexes our productivity.</p>
+
+<p>With tmux, we may open and keep multiple sessions in a terminal, open windows (actually tabs) inside a session, and even split windows to panes.</p>
+
+<p><img src="https://crispgm.com/image/tmux-example.png" alt="tmux-example" /></p>
+
+<p>And <a href="https://github.com/gpakosz/.tmux">gpakosz/.tmux</a> is just like <code class="highlighter-rouge">oh-my-tmux</code>. If we do not want to setup tmux configuration by ourselves, checkout this one.</p>
+
+<p>Install tmux:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>tmux
+</code></pre></div></div>
+
+<p>Install gpakosz/.tmux:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span>
+<span class="nv">$ </span>git clone https://github.com/gpakosz/.tmux.git
+<span class="nv">$ </span><span class="nb">ln</span> <span class="nt">-s</span> <span class="nt">-f</span> .tmux/.tmux.conf
+<span class="nv">$ </span><span class="nb">cp</span> .tmux/.tmux.conf.local <span class="nb">.</span>
+</code></pre></div></div>
+
+<p><strong>BOOST</strong>: 2x, <strong>PROGRESS: 20%</strong></p>
+
+<h3 id="fzf">fzf</h3>
+
+<p><a href="https://github.com/junegunn/fzf">fzf</a> is a command-line fuzzy finder.</p>
+
+<p>It’s a great replacement to the default &lt;CTRL+R&gt; but have more features, which is fuzzy and can be used with any lists.</p>
+
+<p><img src="https://crispgm.com/image/fzf-fuzzy-example.png" alt="fzf-fuzzy-example" /></p>
+
+<p>I think it a must-have one.</p>
+
+<p>Install fzf:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>fzf
+<span class="nv">$ </span><span class="k">$(</span>brew <span class="nt">--prefix</span><span class="k">)</span>/opt/fzf/install
+</code></pre></div></div>
+
+<p>Enable fzf in <code class="highlighter-rouge">.zshrc</code>:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span> <span class="nt">-f</span> ~/.fzf.zsh <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.fzf.zsh
+</code></pre></div></div>
+
+<p><strong>BOOST</strong>: 1.5x, <strong>PROGRESS: 30%</strong></p>
+
+<h3 id="neovim">Neovim</h3>
+
+<p><a href="https://neovim.io/">Neovim</a> a Vim-fork focused on extensibility and usability. If you are already a hardcore vim user, you may keep your choice. It makes no difference between the usabilities but provides modern GUIs, asynchronous job control, and API based on RPC. As a result, it is now really easy to develop a new plugin with popular programming languages compared to old-school VimScript.</p>
+
+<p>Install Neovim:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>neovim
+</code></pre></div></div>
+
+<p>And we may “replace” vim with nvim in case you like:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s2">"nvim"</span>
+</code></pre></div></div>
+
+<p>HINT: Neovim do not use <code class="highlighter-rouge">.vimrc</code>, it support XDG base directories by default.</p>
+
+<p>We now should setup in <code class="highlighter-rouge">~/.config/nvim/init.vim</code>. Just copy your <code class="highlighter-rouge">.vimrc</code> here, it mostly works.</p>
+
+<p>And I recommend <a href="https://github.com/Shougo/dein.vim">Shougo/dein.vim</a> as a plugin manager, which is “dark powered”. Vim/Neovim plugins is another big topic. For myself, I use deoplete, NERDTree, and vim-airline.</p>
+
+<p><strong>BOOST</strong>: 3x, <strong>PROGRESS: 90%</strong></p>
+
+<h3 id="themes--colorschemes">Themes &amp; Colorschemes</h3>
+
+<p>Colors are important to programmer, because we actually stare at the screen, terminal, and editor for the most time, especially the coding period.</p>
+
+<p>I recommend <a href="https://www.nordtheme.com/">Nord</a> here. It is “an arctic, north-bluish color palette” and provides various ports officially. Thus, we can use Nord as theme or colorscheme in whatever libraries, tools, editors, and et cetera.</p>
+
+<p><img src="https://crispgm.com/image/nord-ports.png" alt="nord ports" /></p>
+
+<p>It could calm developer down, improve eyesight, and even prevent bugs. IMO, it increases productivity by about 10%, not that big but take effects on multiple places.</p>
+
+<p><strong>BOOST:</strong> 1.1x, <strong>PROGRESS: 100%</strong></p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>The productivity of a developer can largely improves with an approachable toolset indeed. Get the tools ready is the first step. There are still 99% other parts to be concerned, especially our efforts.</p>
+
+<p>Thanks for reading this article.</p>
+
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fhow-to-be-a-100x-programmer.html&text=How+to+be+a+100x+Programmer%3F">
+            <i class="icon-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fhow-to-be-a-100x-programmer.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="icon-telegram"></i>
+          </a>
+          <a href="https://www.buymeacoffee.com/crispgm">
+            <i class="icon-coffee"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+    <footer class="wrapper" id="contact">
+  <div class="content content-wrapper">
+    <div class="contact">
+      <div class="contact-links">
+        <a href="mailto:crispgm@gmail.com"><i class="icon-envelope-o"></i></a>
+        <a href="/feed.xml"><i class="icon-rss"></i></a>
+        <a href="https://github.com/crispgm"><i class="icon-github"></i></a>
+        <a href="https://stackoverflow.com/users/6858150/david-zhang/"><i class="icon-stack-overflow"></i></a>
+        <a href="https://instagram.com/crispgm"><i class="icon-instagram"></i></a>
+        <a href="https://twitter.com/crispgm"><i class="icon-twitter"></i></a>
+      </div>
+      <div class="contact-left">
+        <a href="https://crispgm.com">David Zhang</a> &copy; 2019
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+<script src="/assets/scripts/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+<script>
+var disqus_config = function () {
+  this.page.identifier = '/page/how-to-be-a-100x-programmer.html';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://crispgm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+
+  </body>
+  <script>
+document.addEventListener('scroll', function(e) {
+  var wrapper   = document.querySelector('.blog-wrapper');
+  var article   = document.querySelector('.article');
+  var docHeight = wrapper.offsetHeight;
+  var maxHeight = docHeight - window.innerHeight - article.offsetTop;
+  var scrollTop = window.scrollY || window.scollTop || document.getElementsByTagName("html")[0].scrollTop;
+  var ratio = scrollTop / maxHeight;
+  var progressBar = document.querySelector('.progress-bar');
+  var winWidth  = window.innerWidth;
+  if (ratio <= 1.0) {
+    progressBar.style.width = winWidth * ratio + 'px';
+  }
+  else {
+    progressBar.style.width = winWidth + 'px';
+  }
+});
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50708664-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

@@ -5,9 +5,167 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Apr 2019 11:24:17 +0800</pubDate>
-    <lastBuildDate>Tue, 16 Apr 2019 11:24:17 +0800</lastBuildDate>
+    <pubDate>Sun, 21 Apr 2019 17:27:06 +0800</pubDate>
+    <lastBuildDate>Sun, 21 Apr 2019 17:27:06 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      
+      <item>
+        <title>How to be a 100x Programmer?</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;A 10x programmer is, in the mythology of programming, a programmer that can do ten times the work of another normal programmer, where for normal programmer we can imagine one good at doing its work, but without the magical abilities of the 10x programmer.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;a href=&quot;http://antirez.com/news/112&quot;&gt;The mythical 10x programmer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Every programmer is a unique person, and he/she may improve his/her productivity in various ways.&lt;/p&gt;
+
+&lt;p&gt;As an old Chinese proverb said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;工欲善其事，必先利其器 (To do a good job, an artisan needs the best tools)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At least we should use some powerful tools to boost our productivity. Even if a tool may only increase 10x at most, it multiplies.&lt;/p&gt;
+
+&lt;p&gt;Let me show a example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tool No1 (10x)&lt;/li&gt;
+  &lt;li&gt;Tool No.2 (3x)&lt;/li&gt;
+  &lt;li&gt;Tool No.3 (2x)&lt;/li&gt;
+  &lt;li&gt;Tool No.4 (1.6x)&lt;/li&gt;
+  &lt;li&gt;Tool No.5 (1.1x)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Total: 10x * 2x * 1.5x * 3x * 1.1x = 100x&lt;/p&gt;
+
+&lt;h1 id=&quot;solutions&quot;&gt;Solutions&lt;/h1&gt;
+
+&lt;h3 id=&quot;zsh--oh-my-zsh&quot;&gt;zsh &amp;amp; oh-my-zsh&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.zsh.org/&quot;&gt;zsh&lt;/a&gt; provides more power than bash and &lt;a href=&quot;https://ohmyz.sh/&quot;&gt;oh-my-zsh&lt;/a&gt; make it be powerful out-of-box, with great tab completion, clever aliases, and themes &amp;amp; plugins system.&lt;/p&gt;
+
+&lt;p&gt;Here is what happened after I typed &lt;code class=&quot;highlighter-rouge&quot;&gt;git &amp;lt;tab&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/zsh-git-completion.png&quot; alt=&quot;zsh-git-completion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Install zsh:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;zsh zsh-completions
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /bin/zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install oh-my-zsh:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; -&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And Oh My Zsh indicates its BOOST officially.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Oh My Zsh will not make you a 10x developer…but you might feel like one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now that it claims to make you “feel like” a 10x developer, I think it must be true.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BOOST&lt;/strong&gt;: 10x, &lt;strong&gt;PROGRESS: 10%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tmux&quot;&gt;tmux&lt;/h3&gt;
+
+&lt;p&gt;tmux is a terminal multiplexer. It is not only multiplexes terminals, but also multiplexes our productivity.&lt;/p&gt;
+
+&lt;p&gt;With tmux, we may open and keep multiple sessions in a terminal, open windows (actually tabs) inside a session, and even split windows to panes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/tmux-example.png&quot; alt=&quot;tmux-example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And &lt;a href=&quot;https://github.com/gpakosz/.tmux&quot;&gt;gpakosz/.tmux&lt;/a&gt; is just like &lt;code class=&quot;highlighter-rouge&quot;&gt;oh-my-tmux&lt;/code&gt;. If we do not want to setup tmux configuration by ourselves, checkout this one.&lt;/p&gt;
+
+&lt;p&gt;Install tmux:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tmux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install gpakosz/.tmux:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/gpakosz/.tmux.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; .tmux/.tmux.conf
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; .tmux/.tmux.conf.local &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;BOOST&lt;/strong&gt;: 2x, &lt;strong&gt;PROGRESS: 20%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fzf&quot;&gt;fzf&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/junegunn/fzf&quot;&gt;fzf&lt;/a&gt; is a command-line fuzzy finder.&lt;/p&gt;
+
+&lt;p&gt;It’s a great replacement to the default &amp;lt;CTRL+R&amp;gt; but have more features, which is fuzzy and can be used with any lists.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/fzf-fuzzy-example.png&quot; alt=&quot;fzf-fuzzy-example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think it a must-have one.&lt;/p&gt;
+
+&lt;p&gt;Install fzf:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fzf
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/opt/fzf/install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enable fzf in &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ~/.fzf.zsh &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.fzf.zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;BOOST&lt;/strong&gt;: 1.5x, &lt;strong&gt;PROGRESS: 30%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;neovim&quot;&gt;Neovim&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://neovim.io/&quot;&gt;Neovim&lt;/a&gt; a Vim-fork focused on extensibility and usability. If you are already a hardcore vim user, you may keep your choice. It makes no difference between the usabilities but provides modern GUIs, asynchronous job control, and API based on RPC. As a result, it is now really easy to develop a new plugin with popular programming languages compared to old-school VimScript.&lt;/p&gt;
+
+&lt;p&gt;Install Neovim:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;neovim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And we may “replace” vim with nvim in case you like:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nvim&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;HINT: Neovim do not use &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;, it support XDG base directories by default.&lt;/p&gt;
+
+&lt;p&gt;We now should setup in &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/nvim/init.vim&lt;/code&gt;. Just copy your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; here, it mostly works.&lt;/p&gt;
+
+&lt;p&gt;And I recommend &lt;a href=&quot;https://github.com/Shougo/dein.vim&quot;&gt;Shougo/dein.vim&lt;/a&gt; as a plugin manager, which is “dark powered”. Vim/Neovim plugins is another big topic. For myself, I use deoplete, NERDTree, and vim-airline.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BOOST&lt;/strong&gt;: 3x, &lt;strong&gt;PROGRESS: 90%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;themes--colorschemes&quot;&gt;Themes &amp;amp; Colorschemes&lt;/h3&gt;
+
+&lt;p&gt;Colors are important to programmer, because we actually stare at the screen, terminal, and editor for the most time, especially the coding period.&lt;/p&gt;
+
+&lt;p&gt;I recommend &lt;a href=&quot;https://www.nordtheme.com/&quot;&gt;Nord&lt;/a&gt; here. It is “an arctic, north-bluish color palette” and provides various ports officially. Thus, we can use Nord as theme or colorscheme in whatever libraries, tools, editors, and et cetera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/nord-ports.png&quot; alt=&quot;nord ports&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It could calm developer down, improve eyesight, and even prevent bugs. IMO, it increases productivity by about 10%, not that big but take effects on multiple places.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BOOST:&lt;/strong&gt; 1.1x, &lt;strong&gt;PROGRESS: 100%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;The productivity of a developer can largely improves with an approachable toolset indeed. Get the tools ready is the first step. There are still 99% other parts to be concerned, especially our efforts.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading this article.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 21 Apr 2019 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/how-to-be-a-100x-programmer.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/how-to-be-a-100x-programmer.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1390,273 +1548,6 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
         <pubDate>Mon, 07 May 2018 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/rss-revival.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/rss-revival.html</guid>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>Word Kanban，看板风格的单词本</title>
-        <description>&lt;h1 id=&quot;这是什么&quot;&gt;这是什么？&lt;/h1&gt;
-
-&lt;p&gt;看板来源自日本，是丰田生产模式中的重要概念，用于流程管理&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。看板在生产线中主要分为两类：领取看板和生产看板。在学习单词时，我们也可以类比成：生词看板和已掌握单词看板。&lt;/p&gt;
-
-&lt;p&gt;在互联网产品的项目管理领域，也有很多借助看板概念的工具，比如 Trello。而我做的就是一个看板风格的背单词工具，可以看作是 Trello 上的两个 kanban，或一个分为生词和已背单词列表的 Wunderlist。&lt;/p&gt;
-
-&lt;p&gt;所以，这是一个单词本，由生词和已掌握单词单词两个看板组成。它还有这些 features：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;简单易用&lt;/li&gt;
-  &lt;li&gt;默认展示英文，悬浮会展示中文解释&lt;/li&gt;
-  &lt;li&gt;可点击跳转到更加精准的英英词典&lt;/li&gt;
-  &lt;li&gt;具有 API，可与 &lt;a href=&quot;https://workflow.is/&quot;&gt;Workflow&lt;/a&gt; 等进行整合&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
-
-&lt;p&gt;先 show 出来：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/wk-main.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;体验：&lt;a href=&quot;https://word-kanban.herokuapp.com/&quot;&gt;https://word-kanban.herokuapp.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;GitHub：&lt;a href=&quot;https://github.com/crispgm/word-kanban&quot;&gt;https://github.com/crispgm/word-kanban&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;技术方案&quot;&gt;技术方案&lt;/h1&gt;
-
-&lt;p&gt;之前在个人项目中，我使用 Rails 作为后端，Node.js 代理加上 Preact 作为前端，并且部署在 Heroku。详细请参考 &lt;a href=&quot;/page/isomorphic-react-preact-with-heroku.html&quot;&gt;Isomorphic React/Preact with Heroku&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;这次也基本如此，不过索性把 Rails 也换成 Node.js。&lt;/p&gt;
-
-&lt;p&gt;前后端基础部分的 Setup 工作（Webpack 配置、Express 等）完全来自其中：&lt;a href=&quot;https://github.com/rugby-board/rugby-board-node&quot;&gt;rugby-board/rugby-board-node&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;后端&quot;&gt;后端&lt;/h2&gt;
-
-&lt;h3 id=&quot;orm&quot;&gt;ORM&lt;/h3&gt;
-
-&lt;p&gt;全 Node.js 方案就需要一个数据库 ORM 层，我&lt;del&gt;随机&lt;/del&gt;选择了 &lt;a href=&quot;http://docs.sequelizejs.com/&quot;&gt;Sequelize&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;先安装包，这里我是用 Postgres。&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add sequelize
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add pg pg-hstore
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;初始化并创建 Migration：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn add sequelize-cli
-$ cd server
-$ ../node_modules/.bin/sequelize init
-$ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:string,userId:string,status:integer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;运行 Migration：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ../node_modules/.bin/sequelize db:migrate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;对于 DB 的操作就不细说了，看文档就好。&lt;/p&gt;
-
-&lt;h3 id=&quot;auth0&quot;&gt;Auth0&lt;/h3&gt;
-
-&lt;p&gt;用户系统是个比较麻烦的东西，涉及用户信息保存、校验、权限验证和 Cookie 保存等。我没有选择自己实现一套完整的用户系统，而是选择了基于 &lt;a href=&quot;https://jwt.io/&quot;&gt;JSON Web Token&lt;/a&gt; 的 &lt;a href=&quot;https://auth0.com/&quot;&gt;Auth0&lt;/a&gt; 用户认证服务。&lt;/p&gt;
-
-&lt;p&gt;Auth0 是 Serverless 时代十分有用且强大的工具，无需自己建立后端就可以拥有强大的用户系统。除去基本的注册、登陆和权限校验流程，还可以一键集成第三方登陆系统，甚至提供 &lt;a href=&quot;https://en.wikipedia.org/wiki/Multi-factor_authentication&quot;&gt;Multi-factor authentication&lt;/a&gt; 等高级安全功能。&lt;/p&gt;
-
-&lt;p&gt;这是部分它支持的第三方登陆，国内的有百度、人人和微博，稍微有些匪夷所思。这里我选择 GitHub 和 Twitter。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/auth0-connections.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;它还提供了丰富的基于实际框架的示例，我就是基于它提供的基于 &lt;a href=&quot;https://auth0.com/docs/architecture-scenarios/application/spa-api/api-implementation-nodejs&quot;&gt;Express 的后端&lt;/a&gt; 和 &lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react&quot;&gt;SPA React 客户端&lt;/a&gt;的 demo 开发。&lt;/p&gt;
-
-&lt;h3 id=&quot;express&quot;&gt;Express&lt;/h3&gt;
-
-&lt;p&gt;在 Express 中，创建一个中间件用于校验 JSON Web Token：&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'express-jwt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwksRsa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jwks-rsa'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cors'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkJwt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jwksRsa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expressJwtSecret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;rateLimit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;jwksRequestsPerMinute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;jwksUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://crispgm.au.auth0.com/.well-known/jwks.json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;audience&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'api.word-kanban.words'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;issuer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://crispgm.au.auth0.com/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;algorithms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'RS256'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在具体接口中引入中间件：&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/word/create'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkJwt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;google-translate&quot;&gt;Google Translate&lt;/h3&gt;
-
-&lt;p&gt;前面的 features 中提到，要显示悬浮的单词的中文解释，这里引入 Google Translate API。记得把 Token 放在环境变量中。&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// token.js&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// translate.js&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'node-fetch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'../token'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'en'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'zh'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'text'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`https://translation.googleapis.com/language/translate/v2?key=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GOOGLE_TRANSLATE_API_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'POST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;api&quot;&gt;API&lt;/h3&gt;
-
-&lt;p&gt;为了实现跟 Workflow 等自动化工具的结合，得提供一套基础简单的 API 系统。&lt;/p&gt;
-
-&lt;p&gt;使用私钥、用户ID和时间戳生成一个简单的 Token，存到数据库里：&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TOKEN_PRIVATE_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这里是&lt;a href=&quot;https://github.com/crispgm/word-kanban/blob/master/docs/integration.md&quot;&gt;API 文档&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;前端&quot;&gt;前端&lt;/h2&gt;
-
-&lt;p&gt;前端部分则继续使用 Preact 和 preact-router，跟写 React 没什么区别。用户权限校验和用户信息页完全根据 Auth0 的 React demo：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react&quot;&gt;React Login&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://auth0.com/docs/quickstart/spa/react/02-user-profile&quot;&gt;React User Profile&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;不过有一个教训，就是没有使用状态管理（如：Redux/Mobx），导致组件间（&lt;code class=&quot;highlighter-rouge&quot;&gt;Kanban&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;WordList&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;WordItem&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;WordInput&lt;/code&gt;）相互传递数据有些复杂。幸好只有两个列表，否则代码会不太好维护。&lt;/p&gt;
-
-&lt;h3 id=&quot;react-trend&quot;&gt;React Trend&lt;/h3&gt;
-
-&lt;p&gt;使用 Preact 的一大优势就是，在包体积小的前提下还能使用完全基于 React 的组件。&lt;/p&gt;
-
-&lt;p&gt;在用户设置页，我希望展示用户动态的曲线，于是找到了 &lt;a href=&quot;https://github.com/unsplash/react-trend&quot;&gt;React Trend&lt;/a&gt; 用于生成曲线。React Trend 是 &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt; 开源的一个 React 组件，用在 Unsplash 的用户统计展示页（比如我的 &lt;a href=&quot;https://unsplash.com/@crispgm/stats&quot;&gt;https://unsplash.com/@crispgm/stats&lt;/a&gt;）。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/react-trend-on-unsplash.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这是个 React Component，我们需要用 &lt;a href=&quot;https://github.com/developit/preact-compat&quot;&gt;preact-compat&lt;/a&gt; 来进行兼容。兼容的方式有很多，我选择在 Webpack 进行。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat',
-    },
-  },
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;给上数据之后，React Trend 就可以正常绘制了。&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Trend&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;gradient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#343a40'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#e64980'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#f03e3e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;smooth&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;autoDraw&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;autoDrawDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;autoDrawEasing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ease-out&quot;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/word-kanban-react-trend.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;完成&quot;&gt;完成&lt;/h2&gt;
-
-&lt;p&gt;Auth0 跳转登陆：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/wk-login.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;主界面：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/wk-main.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;个人设置：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/wk-setting.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;加入-workflow&quot;&gt;加入 Workflow&lt;/h1&gt;
-
-&lt;p&gt;最后，我们使用 Word-kanban 的 API 创建一个可以从网页中摘录生词的 Workflow。&lt;/p&gt;
-
-&lt;p&gt;创建一个 Share Extension 的 Workflow，选择一个好看的图标并取一个喜欢的名字，比如我的叫：「Send My Word」。&lt;/p&gt;
-
-&lt;p&gt;依次加入动作：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Choose from List&lt;/li&gt;
-  &lt;li&gt;URL
-    &lt;ul&gt;
-      &lt;li&gt;添加生词的 API 接口：&lt;code class=&quot;highlighter-rouge&quot;&gt;https://word-kanban.herokuapp.com/api/v1/word&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Get Contents from URL
-    &lt;ul&gt;
-      &lt;li&gt;选择 &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; 请求，加入 &lt;code class=&quot;highlighter-rouge&quot;&gt;token&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;word&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;token&lt;/code&gt; 在用户页面生成粘贴过来&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/send-my-word-workflow.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;阅读一篇英文文章，然后选取一个不认识的单词，发送到 Word Kanban。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/send-to-word-kanban.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;最后&quot;&gt;最后&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;欢迎体验：&lt;a href=&quot;https://word-kanban.herokuapp.com/&quot;&gt;https://word-kanban.herokuapp.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;欢迎点赞：&lt;a href=&quot;https://github.com/crispgm/word-kanban&quot;&gt;https://github.com/crispgm/word-kanban&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86&quot;&gt;看板管理&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 22 Feb 2018 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/word-kanban.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/word-kanban.html</guid>
         
         
       </item>
