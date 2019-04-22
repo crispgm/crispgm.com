@@ -21,20 +21,20 @@ education:
     major: Bachelor of Computer Science & Technology.
 skills:
   - title: Backends
-    items: Go, Python, Django, Flask, Ruby, Ruby on Rails, Nginx, MySQL, Memcache, Redis, PHP
+    items: Go, Python, Django, Flask, Ruby, Nginx, MySQL, Memcache, Redis, Ruby on Rails, PHP
   - title: Frontends
-    items: HTML, CSS/Sass, JavaScript/ES, React, Vue.js
+    items: HTML, CSS/Sass, JavaScript/TypeScript, React, Vue.js
   - title: Architectures
     items: Micro-service Architecture, Distributing Web Systems
   - title: Computer Systems
-    items: Linux, Shell, awk, git, CI/CD, Design Patterns
+    items: CI/CD, Design Patterns, Linux, Shell, awk, git, vim
 experience:
   - title: Senior Software Engineer
     duration: Sep 2017 - present
     company: ByteDance Inc.
     description: >
       <div>
-      I work on Dongchedi, an app about cars.
+      I work on Dongchedi (DCar), a comprehensive app about automobiles.
       </div>
       <br>
       <div>
@@ -77,10 +77,6 @@ projects:
     contribution: Contributor
   - name: Rugby News Board
     description: "#1 rugby news feed in China."
-    contribution: Creator
-  - name: URL Auto Redirector
-    description: >
-      A simple Chrome Extension for redirecting URLs with Regular Expression presets. It enables you to skip referral/AD pages and adapt mobile pages gracefully, which is time-saving, helps to be more productive and improves web browsing experiences.
     contribution: Creator
   - name: jekyll-crisp-resume
     description: A minimalist resume template for Jekyll. This resume itself uses it, after all. :)

@@ -30,7 +30,7 @@ skills:
     items: "Shell, awk, git, 持续交付, 设计模式"
 experience:
   - title: 高级研发工程师
-    duration: 2017.03 - 至今
+    duration: 2017.09 - 至今
     company: "字节跳动"
     description: "懂车帝：一个专业、有趣的汽车内容资讯平台。"
   - title: 高级研发工程师
@@ -46,9 +46,6 @@ experience:
     company: "百度, 贴吧技术部"
     description: "主要负责贴吧核心页面和企业商业化后端技术和测试技术；百度 ODP（PHP 框架）小组和 Nginx 小组成员。设计和实现：<br><br>- 贴吧大流量（10亿PV）核心页面框架<br>- 企业商业化非标广告售卖平台<br>- 企业商业化运营活动平台"
 projects:
-  - name: 贴吧 BigPipe 项目
-    description: "基于 HTTP chunked 实现的页面分段输出方案，提升复杂页面的整体加载体验。设计并实现了 BigPipe 后端，以及核心页面落地框架。部分细节可以参考技术博客 https://crispgm.com/page/bigpipe-practice.html"
-    contribution: 后端技术负责人和主要实现者
   - name: Jekyll
     description: GitHub Pages 所依赖的静态网站生成器。
     contribution: 贡献者
