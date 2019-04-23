@@ -14,6 +14,7 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, co
 
 * [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
+* [Againt "996"](https://996.icu/)
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
 
