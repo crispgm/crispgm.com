@@ -56,7 +56,7 @@ a {
     width: 100%; }
 
   .content-wrapper {
-    padding: .4rem;
+    padding: .8rem;
     width: 100%; } }
 img {
   border: 0;
@@ -102,7 +102,7 @@ img {
 @media (max-width: 42rem) {
   .menu {
     margin: 0;
-    padding: .4rem; }
+    padding: 0 .8rem; }
     .menu .menu-home {
       font-size: 1.2rem;
       margin-top: .2rem; }
@@ -145,7 +145,9 @@ footer {
     text-align: center; }
     .contact .contact-links {
       float: none;
-      margin: .4rem 0; } }
+      margin: .4rem 0; }
+      .contact .contact-links:first {
+        padding: 0; } }
 .page {
   text-align: left; }
   .page .page-main .page-title {
