@@ -51,6 +51,10 @@ footer {
     .contact-links {
       float: none;
       margin: .4rem 0;
+
+      &:first {
+        padding: 0;
+      }
     }
   }
 }
