@@ -1,6 +1,6 @@
 /*
  * Theme of Crisp Blog
- * Copyright (c) David Zhang, 2018
+ * Copyright (c) David Zhang, 2019
  */
 * {
   box-sizing: border-box; }
@@ -300,7 +300,7 @@ code.hljs {
 
 code.highlighter-rouge {
   border: 1px solid #E7E9EB;
-  border-radius: .2rem;
+  border-radius: 6px;
   font-size: .9rem;
   font-weight: bold;
   padding: .1rem .3rem; }
