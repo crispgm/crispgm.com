@@ -2,10 +2,14 @@
 ---
 /*
  * Theme of Crisp Blog
- * Copyright (c) David Zhang, 2018
+ * Copyright (c) David Zhang, 2019
  */
 
 $breakpoint: 42rem;
+
+// fonts
+$main-font: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+$code-font: "Fira Mono", Menlo, Monaco, Consolas, Courier, monospace;
 
 // colors
 $grey-9: #113654;
