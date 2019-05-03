@@ -42,7 +42,7 @@ footer {
   }
 }
 
-@media (max-width: $breakpoint) {
+@include mobile {
   .contact {
     display: block;
     padding: .4rem 0 0;
