@@ -1,3 +1,7 @@
+- id: iterm2-select-text-using-keyboard
+  q: iTerm2 中如何不用鼠标选择文本？
+  a: |
+    <code>Cmd + Shift + c</code>, <code>v</code> to select, and <Cmd + c> to copy. <a href="https://superuser.com/questions/93573/select-text-in-iterm-using-keyboard">参考链接</a>.
 - id: set-e-bash
   q: Bash 中的<code>set -e</code>是什么？
   a: |
