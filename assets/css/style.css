@@ -72,10 +72,10 @@ img {
 .menu {
   color: #485d6f;
   display: flex;
+  margin-top: 1.8rem;
   text-align: left; }
   .menu .menu-home {
-    font-size: 1.2rem;
-    padding-top: .2rem;
+    font-size: 1.4rem;
     width: 100%; }
     .menu .menu-home a {
       color: inherit;
@@ -84,7 +84,7 @@ img {
         text-decoration: underline; }
   .menu .menu-links {
     display: flex;
-    margin-top: .3rem; }
+    margin-top: .2rem; }
   .menu .menu-item {
     font-size: 1rem;
     padding-left: .8rem;
@@ -105,10 +105,10 @@ img {
     padding: 0 .8rem; }
     .menu .menu-home {
       font-size: 1.2rem;
-      margin-top: .2rem; }
+      margin-top: .8rem; }
     .menu .menu-links {
       display: flex;
-      margin-top: .4rem; }
+      margin-top: .8rem; }
     .menu .menu-item {
       margin: 0; } }
 footer {
