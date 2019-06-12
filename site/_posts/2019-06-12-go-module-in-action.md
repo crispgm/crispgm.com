@@ -5,7 +5,7 @@ title: Go Module in Action
 permalink: /page/go-module-in-action.html
 ---
 
-For a long time, Golang provides an extremely simple dependency management model. It just depends by Git repos and actually its `master` branch.
+For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its `master` branch.
 
 If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed including `GOPATH`. That is because **Google** uses monorepo.
 
