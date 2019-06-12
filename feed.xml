@@ -5,9 +5,168 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Jun 2019 01:25:59 +0800</pubDate>
-    <lastBuildDate>Sun, 09 Jun 2019 01:25:59 +0800</lastBuildDate>
+    <pubDate>Wed, 12 Jun 2019 15:12:38 +0800</pubDate>
+    <lastBuildDate>Wed, 12 Jun 2019 15:12:38 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      
+      <item>
+        <title>Go Module in Action</title>
+        <description>&lt;p&gt;For a long time, Golang provides an extremely simple dependency management model. It just depends by Git repos and actually its &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed including &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;. That is because &lt;strong&gt;Google&lt;/strong&gt; uses monorepo.&lt;/p&gt;
+
+&lt;p&gt;There are some advantages claimed&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and Golang’s dependency management could work on that well.&lt;/p&gt;
+
+&lt;p&gt;However, monorepo does not dominate the world, which leads to lots of issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No tag, no semver. When &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; makes breaking change, it breaks build.&lt;/li&gt;
+  &lt;li&gt;Not compatible with GitHub’s fork model, unless you make some hack on Git remote&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To make it easier, there are some efforts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://labix.org/gopkg.in&quot;&gt;Gopkg.in&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kardianos/govendor&quot;&gt;Govendor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/golang/dep&quot;&gt;Go Dep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By these tools, we may handle vendors better. But these tools are not officialy supported and it needs commit all vendor packages to repository! Can you imagine a frontend or Node.js project commits its &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;? This is ridiculous.&lt;/p&gt;
+
+&lt;h2 id=&quot;go-module&quot;&gt;Go Module&lt;/h2&gt;
+
+&lt;p&gt;I don’t know the decision process, but Golang team finally launched Go Module in 1.11, which embraces the non-monorepo part of the world.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;, and now we can clone to anywhere.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;go get&lt;/code&gt; inside a repo is not global, it works only at local.&lt;/li&gt;
+  &lt;li&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Dependencies are defined in &lt;code class=&quot;highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; with git tags, commit hashes, and semver.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to&quot;&gt;HOW TO&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install or upgrade to Go &amp;gt;=1.11 (currently 1.12)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enable Go Module, edit &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GO111MODULE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Initialize Go Module&lt;/p&gt;
+
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go mod init &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;commands&quot;&gt;Commands&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add missing and remove unused modules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go mod tidy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add new module&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get github.com/crispgm/go-g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Update a module&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; github.com/crispgm/go-g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Update all modules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get specific version of module&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get github.com/crispgm/go-g@master
+go get github.com/crispgm/go-g@1.0.0
+go get github.com/crispgm/go-g@617f32e
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make vendored copy of dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go mod vendor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I highly &lt;strong&gt;not&lt;/strong&gt; recommend this, since getting rid of vendor is one of the major advantages of Go Module.&lt;/p&gt;
+
+&lt;h2 id=&quot;editors-support&quot;&gt;Editor’s Support&lt;/h2&gt;
+
+&lt;h3 id=&quot;vscode&quot;&gt;VSCode&lt;/h3&gt;
+
+&lt;p&gt;There is a &lt;a href=&quot;https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code&quot;&gt;Go modules support&lt;/a&gt; guide in &lt;a href=&quot;https://github.com/microsoft/vscode-go&quot;&gt;vscode-go&lt;/a&gt; plugin. It is actually very easy that we just need to enable Language Server for go by adding one line to &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;go.useLanguageServer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;troubles-encountered&quot;&gt;Troubles Encountered&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Dependency’s Dependency”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One of our in-house library depends on &lt;a href=&quot;https://github.com/satori/go.uuid&quot;&gt;satori/go.uuid&lt;/a&gt;, with traditional &lt;code class=&quot;highlighter-rouge&quot;&gt;go get&lt;/code&gt; it means depend on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;. But Go Module got the latest tag by default. So the solution should be:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; github.com/satori/go.uuid@master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Got “ambiguous import: found github.com/ugorji/go/codec in multiple modules”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is actually caused by &lt;a href=&quot;https://github.com/gin-gonic/gin&quot;&gt;gin-gonic/gin&lt;/a&gt; (the web framework we use) and there is a &lt;a href=&quot;https://github.com/gin-gonic/gin/issues/1673&quot;&gt;solution&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;Add the following to &lt;code class=&quot;highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; to solve the trouble.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;replace github.com/ugorji/go v1.1.4 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; github.com/ugorji/go/codec v0.0.0-20190204201341-e444a5086c43
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Go Module is not a silver bullet, and it is more a compatibility than a fix. But for me, it is great improvement.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/Monorepo &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;https://dev.to/loderunner/working-with-forks-in-go-3ab6 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 12 Jun 2019 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/go-module-in-action.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/go-module-in-action.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1445,109 +1604,6 @@ code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code
         <pubDate>Sat, 16 Jun 2018 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/about-podcast.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/about-podcast.html</guid>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>我也说 RSS 复兴</title>
-        <description>&lt;p&gt;Facebook 和 Cambridge Analytica 事件发生后，伴随着对于隐私的担忧，在 &lt;a href=&quot;https://www.wired.com/story/rss-readers-feedly-inoreader-old-reader/&quot;&gt;Wired 发文呼吁&lt;/a&gt;后，是否要复兴“古老”的 RSS 似乎成为了一个议题。&lt;/p&gt;
-
-&lt;p&gt;中国是一个隐私问题的重灾区，基于用户数据挖掘的所谓 AI 技术可以说是如入无人之境，蓬勃发展。但在意自己隐私权利的人一直在积极思考讨论，比如由 Checked 出品的播客 &lt;a href=&quot;http://checked.fm/58&quot;&gt;#58: RSS 会复兴还是会消亡？&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;这里，我作为一个长期 RSS 用户，也谈一谈对 RSS 的看法。&lt;/p&gt;
-
-&lt;h3 id=&quot;why-rss&quot;&gt;Why RSS？&lt;/h3&gt;
-
-&lt;p&gt;先说下，我最早中学时期就开始用 Opera Mail 进行邮件订阅 RSS，后来也断断续续使用了鲜果以及 Google Reader。直到4年前，我有了 iPhone 手机，幸运地了解到了 &lt;a href=&quot;http://reederapp.com/ios/&quot;&gt;Reeder&lt;/a&gt; 并一直频繁使用直到现在。&lt;/p&gt;
-
-&lt;p&gt;要想知道为什么用 RSS，首先要说为什么要有文章聚合。我认为文章聚合主要有4个主要需求：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;订阅更新&lt;/li&gt;
-  &lt;li&gt;一致阅读体验&lt;/li&gt;
-  &lt;li&gt;内容分类过滤&lt;/li&gt;
-  &lt;li&gt;整理记录保存&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;通常意义上的 RSS 负责订阅分布在各处的网站，并能够检查其更新。也就是说主要满足了第一点。&lt;/p&gt;
-
-&lt;p&gt;比较现代的 RSS 阅读器通常会满足第二条和第三条。大多情况下 RSS Feed 会有全文，而不是摘要。用户完全可以在阅读器中进行阅读，获得一致的用户体验，而不是前往五花八门的页面。&lt;/p&gt;
-
-&lt;p&gt;有些网站设计的好、加载速度快，阅读起来赏心悦目。但也有不少设计较差，加载缓慢，那在 RSS 阅读器的体验或许就可以超越。尤其是在像 Reeder 这样优美的阅读器中，阅读体验会好过很大一部分源网站甚至其 App。这就像自建博客和使用博客一样，可能大部分人建的站不如 Medium、不如公众号、不如今日头条。&lt;/p&gt;
-
-&lt;p&gt;内容分类过滤则是对订阅源的后置处理，提高信息获取的效率。常见的阅读器都会提供基本的分类分组能力。&lt;/p&gt;
-
-&lt;p&gt;至于整理记录保存这环节，目前可能 RSS 阅读器涉足不多。但在实际使用中，RSS 结合稍后阅读类应用以及笔记类应用也是十分常见的搭配。&lt;/p&gt;
-
-&lt;h3 id=&quot;怎么使用-rss&quot;&gt;怎么使用 RSS&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;选择适合自己的阅读器，比如 Reeder&lt;/li&gt;
-  &lt;li&gt;选择自己合适的订阅源&lt;/li&gt;
-  &lt;li&gt;找到自己喜欢或者需要看的内容，去除不再用的&lt;/li&gt;
-  &lt;li&gt;不断调整迭代以上步骤&lt;/li&gt;
-  &lt;li&gt;根据情况选择阅读地点
-    &lt;ul&gt;
-      &lt;li&gt;阅读器&lt;/li&gt;
-      &lt;li&gt;源网页&lt;/li&gt;
-      &lt;li&gt;稍后阅读&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;和整理记录类工具协作&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;这里我有个想法，稍有些脱离主题。就是很多内容网站包括 App，都很精美或是很有自己的设计特色。比如 &lt;a href=&quot;https://www.washingtonpost.com/&quot;&gt;Washington Post&lt;/a&gt; 那铅字印刷感觉的 LOGO 以及报纸色的 UI；&lt;a href=&quot;https://www.newyorker.com/&quot;&gt;The New Yorker&lt;/a&gt; 的文章标题就不那么正式，配套的衬线字体也稍显活泼；&lt;a href=&quot;https://stackshare.io/&quot;&gt;StackShare&lt;/a&gt; 这种科技类网站，非衬线字体为主，带有蓝色元素的简洁明快。&lt;/p&gt;
-
-&lt;p&gt;这些多样性才是人类文明的体现。&lt;/p&gt;
-
-&lt;p&gt;因此网页有时候也需要“复兴”，我们需要做的是对于体验好或是有个性的内容，用 RSS 作为中转，到源网站进行阅读；对于体验差的网站，美观舒服的阅读器也是个很优秀的选择。&lt;/p&gt;
-
-&lt;h3 id=&quot;也说推荐的弊端&quot;&gt;也说推荐的弊端&lt;/h3&gt;
-
-&lt;p&gt;推荐的弊端我想大家或多或少都会知道，少数派文章&lt;a href=&quot;https://sspai.com/post/43998&quot;&gt;『论 RSS 的「复兴」』&lt;/a&gt;总结的很到位：「回音壁」现象和「信息过载」的问题。我就不自己重复总结了。&lt;/p&gt;
-
-&lt;p&gt;对于智能推荐，我觉得整体是好的。大体来讲，我们获取知识更加便捷了，多维度推荐（推荐 Feed 被训练到狭窄前往往是这样）可以快速让人了解到相对的全貌。有些相关和协同推荐，能让我们意外发现一些新的爱好。&lt;/p&gt;
-
-&lt;p&gt;“回音壁”会存在固化偏见的问题，但偏见并非推荐造成。我不了解心理学，但我知道我从不看抨击 Java 的文章，因为我并不喜欢也不关注；我从不看吹捧日本的文章，但却喜欢它的文化。&lt;/p&gt;
-
-&lt;p&gt;真正“信息过载”的人更是恐怕自己都意识不到或者难以抵抗。手机 App 上到处是小红点；一天刷超过一小时的新闻和短视频；看一天鸡汤和知乎，觉得自己学到了很多。&lt;/p&gt;
-
-&lt;p&gt;况且在没发明智能手机之前，人们在走路的时候也不见得会拿着纸质书或者报纸看，而是会选择直接走路，在地铁上发呆或者睡觉。不但不过载，甚至没信息。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;错误不在推荐，而是在于互联网公司的粗放发展和指标导向文化&lt;/strong&gt;。智能算法从来都没打算干涉用户对事情的判断，而是互联网公司里为了完成指标、超越预期，给用户尽可能感兴趣会去点的内容；是文章撰写者们为了迎合用户点击，在标题和配图上取巧，而不是核心内容上。&lt;/p&gt;
-
-&lt;p&gt;这些行为让“回音壁”和“信息过载”被放大，内容面变得狭窄，时间被浪费。我认为，这可以说是一个社会问题。人们需要更便捷的获取信息的工具，因此搜索引擎、推荐、智能语音都是必定受到欢迎的。但 RSS 并不能解决这个问题，它只是一个朴素的订阅更新方式。&lt;/p&gt;
-
-&lt;h3 id=&quot;结论&quot;&gt;结论&lt;/h3&gt;
-
-&lt;h4 id=&quot;rss-不会死但不会复兴&quot;&gt;RSS 不会死，但不会复兴&lt;/h4&gt;
-
-&lt;p&gt;我们需要 RSS 带来的订阅更新的便捷；我们也需要它在需要的时候，提供足够好的一致性体验；我们需要 RSS 作为一个中转站，提供更多可能，不仅是整理记录保存。&lt;/p&gt;
-
-&lt;p&gt;对于能够独立获取信息、管理自己时间的人，RSS 始终是一个不错的选择。&lt;/p&gt;
-
-&lt;p&gt;但 RSS 并始终只做了简单的工作，正如它的名字一样&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;修复社会问题&quot;&gt;修复社会问题&lt;/h4&gt;
-
-&lt;p&gt;智能算法从一些角度上解决了获取信息的问题，但也带来了新的问题和挑战，这不正是人类发展中常常出现的情况吗？所以，现在最重要的是修复它带来的社会问题。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;RSS: Really Simple Syndication, 简单资讯聚合。 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Mon, 07 May 2018 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/rss-revival.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/rss-revival.html</guid>
         
         
       </item>
