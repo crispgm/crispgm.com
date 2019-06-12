@@ -5,14 +5,14 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Jun 2019 15:12:38 +0800</pubDate>
-    <lastBuildDate>Wed, 12 Jun 2019 15:12:38 +0800</lastBuildDate>
+    <pubDate>Wed, 12 Jun 2019 15:25:35 +0800</pubDate>
+    <lastBuildDate>Wed, 12 Jun 2019 15:25:35 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       
       <item>
         <title>Go Module in Action</title>
-        <description>&lt;p&gt;For a long time, Golang provides an extremely simple dependency management model. It just depends by Git repos and actually its &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+        <description>&lt;p&gt;For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.&lt;/p&gt;
 
 &lt;p&gt;If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed including &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;. That is because &lt;strong&gt;Google&lt;/strong&gt; uses monorepo.&lt;/p&gt;
 
