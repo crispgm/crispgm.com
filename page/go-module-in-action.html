@@ -48,20 +48,23 @@
         <div class="article-main">
           <p>For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its <code class="highlighter-rouge">master</code> branch.</p>
 
-<p>If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed including <code class="highlighter-rouge">GOPATH</code>. That is because <strong>Google</strong> uses monorepo.</p>
+<p>If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> including the existence of <code class="highlighter-rouge">GOPATH</code>. That is because <strong>Google</strong> uses monorepo.</p>
 
-<p>There are some advantages claimed<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> and Golang’s dependency management could work on that well.</p>
+<p>There are some advantages claimed<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> and Golang’s dependency management could work on that well.</p>
 
-<p>However, monorepo does not dominate the world, which leads to lots of issues:</p>
+<p>However, monorepo does not dominate the world. The dominance of open source community is GitHub. In contrast, GitHub follows fork &amp; pull request workflow.</p>
+
+<p>This (Go’s dependency management design) leads to lots of issues:</p>
 
 <ul>
   <li>No tag, no semver. When <code class="highlighter-rouge">master</code> makes breaking change, it breaks build.</li>
-  <li>Not compatible with GitHub’s fork model, unless you make some hack on Git remote<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</li>
+  <li>Not compatible with GitHub’s fork model, unless you make some hack on Git remote<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</li>
 </ul>
 
 <p>To make it easier, there are some efforts:</p>
 
 <ul>
+  <li><a href="https://glide.sh/">Glide</a></li>
   <li><a href="http://labix.org/gopkg.in">Gopkg.in</a></li>
   <li><a href="https://github.com/kardianos/govendor">Govendor</a></li>
   <li><a href="https://github.com/golang/dep">Go Dep</a></li>
@@ -186,10 +189,13 @@ go get github.com/crispgm/go-g@617f32e
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>https://en.wikipedia.org/wiki/Monorepo <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p><a href="http://benjvi.com/2016/07/05/Dependency-Management-In-Golang">http://benjvi.com/2016/07/05/Dependency-Management-In-Golang</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>https://dev.to/loderunner/working-with-forks-in-go-3ab6 <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Monorepo">https://en.wikipedia.org/wiki/Monorepo</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://dev.to/loderunner/working-with-forks-in-go-3ab6">https://dev.to/loderunner/working-with-forks-in-go-3ab6</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

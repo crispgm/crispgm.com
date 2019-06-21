@@ -5,8 +5,8 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Jun 2019 01:40:18 +0800</pubDate>
-    <lastBuildDate>Tue, 18 Jun 2019 01:40:18 +0800</lastBuildDate>
+    <pubDate>Fri, 21 Jun 2019 14:17:58 +0800</pubDate>
+    <lastBuildDate>Fri, 21 Jun 2019 14:17:58 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       
@@ -14,20 +14,23 @@
         <title>Go Module in Action</title>
         <description>&lt;p&gt;For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.&lt;/p&gt;
 
-&lt;p&gt;If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed including &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;. That is because &lt;strong&gt;Google&lt;/strong&gt; uses monorepo.&lt;/p&gt;
+&lt;p&gt;If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; including the existence of &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;. That is because &lt;strong&gt;Google&lt;/strong&gt; uses monorepo.&lt;/p&gt;
 
-&lt;p&gt;There are some advantages claimed&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and Golang’s dependency management could work on that well.&lt;/p&gt;
+&lt;p&gt;There are some advantages claimed&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and Golang’s dependency management could work on that well.&lt;/p&gt;
 
-&lt;p&gt;However, monorepo does not dominate the world, which leads to lots of issues:&lt;/p&gt;
+&lt;p&gt;However, monorepo does not dominate the world. The dominance of open source community is GitHub. In contrast, GitHub follows fork &amp;amp; pull request workflow.&lt;/p&gt;
+
+&lt;p&gt;This (Go’s dependency management design) leads to lots of issues:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;No tag, no semver. When &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; makes breaking change, it breaks build.&lt;/li&gt;
-  &lt;li&gt;Not compatible with GitHub’s fork model, unless you make some hack on Git remote&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+  &lt;li&gt;Not compatible with GitHub’s fork model, unless you make some hack on Git remote&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;To make it easier, there are some efforts:&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://glide.sh/&quot;&gt;Glide&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://labix.org/gopkg.in&quot;&gt;Gopkg.in&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/kardianos/govendor&quot;&gt;Govendor&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/golang/dep&quot;&gt;Go Dep&lt;/a&gt;&lt;/li&gt;
@@ -152,10 +155,13 @@ go get github.com/crispgm/go-g@617f32e
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;https://en.wikipedia.org/wiki/Monorepo &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://benjvi.com/2016/07/05/Dependency-Management-In-Golang&quot;&gt;http://benjvi.com/2016/07/05/Dependency-Management-In-Golang&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;https://dev.to/loderunner/working-with-forks-in-go-3ab6 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Monorepo&quot;&gt;https://en.wikipedia.org/wiki/Monorepo&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://dev.to/loderunner/working-with-forks-in-go-3ab6&quot;&gt;https://dev.to/loderunner/working-with-forks-in-go-3ab6&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
