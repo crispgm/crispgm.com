@@ -7,17 +7,20 @@ permalink: /page/go-module-in-action.html
 
 For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its `master` branch.
 
-If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed including `GOPATH`. That is because **Google** uses monorepo.
+If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this[^1] including the existence of `GOPATH`. That is because **Google** uses monorepo.
 
-There are some advantages claimed[^1] and Golang's dependency management could work on that well.
+There are some advantages claimed[^2] and Golang's dependency management could work on that well.
 
-However, monorepo does not dominate the world, which leads to lots of issues:
+However, monorepo does not dominate the world. The dominance of open source community is GitHub. In contrast, GitHub follows fork & pull request workflow.
+
+This (Go's dependency management design) leads to lots of issues:
 
 * No tag, no semver. When `master` makes breaking change, it breaks build.
-* Not compatible with GitHub's fork model, unless you make some hack on Git remote[^2].
+* Not compatible with GitHub's fork model, unless you make some hack on Git remote[^3].
 
 To make it easier, there are some efforts:
 
+* [Glide](https://glide.sh/)
 * [Gopkg.in](http://labix.org/gopkg.in)
 * [Govendor](https://github.com/kardianos/govendor)
 * [Go Dep](https://github.com/golang/dep)
@@ -126,5 +129,6 @@ Go Module is not a silver bullet, and it is more a compatibility than a fix. But
 
 ---
 
-[^1]: https://en.wikipedia.org/wiki/Monorepo
-[^2]: https://dev.to/loderunner/working-with-forks-in-go-3ab6
+[^1]: <http://benjvi.com/2016/07/05/Dependency-Management-In-Golang>
+[^2]: <https://en.wikipedia.org/wiki/Monorepo>
+[^3]: <https://dev.to/loderunner/working-with-forks-in-go-3ab6>
