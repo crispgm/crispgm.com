@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: $white;
+  background-color: $grey-0;
   color: $grey-9;
   font-family: $main-font;
   font-size: 1rem;
@@ -31,7 +31,7 @@ body {
   word-wrap: break-word;
 
   ::selection {
-    background-color: $grey-3;
+    background-color: $green;
   }
 }
 
