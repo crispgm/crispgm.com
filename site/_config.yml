@@ -3,8 +3,7 @@ title: David Zhang
 author: David Zhang
 description: "Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker."
 url: "https://crispgm.com"
-alt_url: 
-  - "https://crisp.lol"
+alt_url:
   - "https://crisp.dev"
 encoding: utf-8
 markdown: kramdown
