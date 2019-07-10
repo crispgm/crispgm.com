@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   {% if page.font_awesome != false %}
-  <link rel="stylesheet" href="{{ site.assets }}/css/font.css">
+  <link rel="stylesheet" href="{{ site.assets }}/css/font.css?v={{ site.time | date: "%s" }}">
   {% endif %}
   {% if page.syntax_highlight != false %}
   <link rel="stylesheet" href="{{ site.assets }}/css/nord.css">
