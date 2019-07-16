@@ -17,7 +17,10 @@ task :init do
     sh "bundle install"
   end
   Dir.chdir("resume") do
-    sh "git submodule update --init --recursive"
+    sh "bundle install"
+  end
+  Dir.chdir("wiki") do
+    sh "bundle install"
   end
 end
 
