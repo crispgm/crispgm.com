@@ -36,6 +36,9 @@ namespace :site do
 
   desc "Build jekyll and push to gh-pages branch"
   task :build do
+    # Update master branch
+    sh "git checkout master"
+    sh "git pull --rebase"
     # Clone to gh-pages
     unless File.exist?("gh-pages")
       sh "git clone -b gh-pages https://github.com/crispgm/crispgm.com.git gh-pages"
