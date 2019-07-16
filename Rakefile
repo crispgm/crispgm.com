@@ -51,15 +51,7 @@ namespace :site do
     end
     # Build resume
     Dir.chdir("resume") do
-      Dir.chdir("resume") do
-        sh "git stash"
-        sh "git pull origin master"
-        sh "cp ../data/resume*.yml _data"
-        sh "cp ../_config.yml ."
-        sh "bundle exec jekyll build --destination=../../gh-pages/resume/"
-        sh "git stash"
-        sh "git clean -f"
-      end
+      sh "bundle exec jekyll build --destination=../gh-pages/resume/"
     end
     # Build wiki
     Dir.chdir("wiki") do
@@ -96,46 +88,7 @@ namespace :resume do
   desc "Serve resume"
   task :serve do
     Dir.chdir("resume") do
-      sh "cp data/resume*.yml resume/_data"
-      sh "cp _config.yml resume"
-
-      listener = Listen.to("./data") do |modified, added, removed|
-        changes = []
-        unless modified.empty?
-          puts "Changes detected on #{modified}"
-          changes += modified
-        end
-        unless added.empty?
-          puts "Changes detected to #{added}"
-          changes += added
-        end
-        unless removed.empty?
-          puts "Changes detected to #{removed}"
-          changes += removed
-        end
-
-        changes.each do |file_name|
-          sh "cp ../data/resume*.yml _data"
-        end
-      end
-      listener.start
-
-      Dir.chdir("resume") do
-        sh "bundle exec jekyll serve"
-      end
-    end
-  end
-
-  desc "Update resume version"
-  task :update do
-    Dir.chdir("resume") do
-      Dir.chdir("resume") do
-        sh "git pull origin master"
-      end
-
-      sh "git add resume/"
-      sh "git commit --allow-empty -m \"Bump crispgm/resume at #{Time.now.to_i} [ci skip]\""
-      sh "git push"
+      sh "bundle exec jekyll serve"
     end
   end
 end

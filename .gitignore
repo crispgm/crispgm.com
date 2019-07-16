@@ -4,3 +4,5 @@ wiki/wiki/
 /integrated-test/screenshots
 npm-debug.log
 .DS_Store
+/resume/_site
+.sass-cache
