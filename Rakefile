@@ -49,6 +49,7 @@ namespace :site do
     # Checkout and pull
     Dir.chdir("gh-pages") do
       sh "git checkout gh-pages"
+      sh "git reset --hard"
       sh "git pull origin gh-pages"
     end
     # Build site
