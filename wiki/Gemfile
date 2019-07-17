@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "jekyll"
+gem "jekyll-theme-crisp-wiki"
+
+group :test do
+  gem "rake"
+end

@@ -62,16 +62,7 @@ namespace :site do
     end
     # Build wiki
     Dir.chdir("wiki") do
-      Dir.chdir("wiki") do
-        sh "git stash"
-        sh "git pull origin master"
-        sh "cp ../data/wiki.yml _data"
-        sh "cp ../css/custom.css css"
-        sh "cp ../_config.yml ../home/index.html ."
-        sh "bundle exec jekyll build --destination=../../gh-pages/wiki/"
-        sh "git stash"
-        sh "git clean -f"
-      end
+      sh "bundle exec jekyll build --destination=../gh-pages/wiki/"
     end
     # Push
     Dir.chdir("gh-pages") do
@@ -104,47 +95,7 @@ namespace :wiki do
   desc "Serve wiki"
   task :serve do
     Dir.chdir("wiki") do
-      sh "cp data/wiki.yml wiki/_data"
-      sh "cp css/custom.css wiki/css"
-      sh "cp _config.yml home/index.html wiki"
-
-      listener = Listen.to("./data", "./css", "./home") do |modified, added, removed|
-        changes = []
-        unless modified.empty?
-          puts "Changes detected on #{modified}"
-          changes += modified
-        end
-        unless added.empty?
-          puts "Changes detected to #{added}"
-          changes += added
-        end
-        unless removed.empty?
-          puts "Changes detected to #{removed}"
-          changes += removed
-        end
-
-        changes.each do |file_name|
-          sh "cp ../data/wiki.yml ../css/custom.css ../home/index.html _data"
-        end
-      end
-      listener.start
-
-      Dir.chdir("wiki") do
-        sh "bundle exec jekyll serve"
-      end
-    end
-  end
-
-  desc "Update wiki version"
-  task :update do
-    Dir.chdir("wiki") do
-      Dir.chdir("wiki") do
-        sh "git pull origin master"
-      end
-
-      sh "git add wiki/"
-      sh "git commit --allow-empty -m \"Bump crispgm/wiki at #{Time.now.to_i} [ci skip]\""
-      sh "git push"
+      sh "bundle exec jekyll serve"
     end
   end
 end

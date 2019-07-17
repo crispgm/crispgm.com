@@ -1,7 +1,11 @@
 title: Wiki | David Zhang
 author: David Zhang
 baseurl: "/wiki"
+theme: jekyll-theme-crisp-wiki
+highlight: true
 exclude:
   - README.md
+  - README_zh-CN.md
   - LICENSE
-  - /screenshots
+  - Gemfile
+  - Gemfile.lock

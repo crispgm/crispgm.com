@@ -5,4 +5,5 @@ wiki/wiki/
 npm-debug.log
 .DS_Store
 /resume/_site
+/wiki/_site
 .sass-cache
