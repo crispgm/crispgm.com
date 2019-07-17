@@ -1,19 +1,22 @@
 /*
  * Theme of Crisp Wiki
- * Copyright(c) David Zhang, 2016
+ * Copyright(c) David Zhang, 2019
  */
 * {
   box-sizing: border-box;
 }
+
 html {
   width: 100%;
   font-size: 16px;
 }
+
 @media (max-width: 42rem) {
   html {
     font-size: 12px;
   }
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
@@ -25,6 +28,7 @@ body {
   text-align: center;
   height: 100%;
 }
+
 footer {
   text-align: center;
   font-size: 1rem;
@@ -32,13 +36,16 @@ footer {
   margin-top: 2rem;
   margin-bottom: 1.2rem;
 }
+
 a {
   text-decoration: none;
   color: #06c;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 .container {
   max-width: 42rem;
   margin-left: auto;
@@ -46,23 +53,28 @@ a:hover {
   text-align: left;
   margin-bottom: 3rem;
 }
+
 @media (max-width: 42rem) {
   .container {
     padding-left: .4rem;
     padding-right: .4rem;
   }
 }
+
 .menu {
   font-size: 1rem;
   font-weight: bold;
 }
+
 .menu a {
   margin-right: 1rem;
 }
+
 .section {
   text-align: left;
   margin-top: 2rem;
 }
+
 .section-wrap {
   margin-top: .6rem;
   background-color: #ffffff;
@@ -70,24 +82,30 @@ a:hover {
   border-radius: 4px;
   padding: 1rem;
 }
+
 .section-wrap:hover {
   box-shadow: 0 .1rem .4rem .1rem #ddd;
 }
+
 .section-item {
   display: flex;
   line-height: 1.25;
   overflow: hidden;
   width: 100%;
 }
+
 .section-item:first-of-type {
   margin-bottom: 1rem;
 }
+
 .section-title {
 }
+
 .section-content {
   padding-right: .5rem;
   width: 37.6rem;
 }
+
 .title-q:before {
   content: "Q";
   display: inline-block;
@@ -96,6 +114,7 @@ a:hover {
   margin-right: .5rem;
   border-right: .1rem solid #aaa;
 }
+
 .title-a:before {
   content: "A";
   display: inline-block;
@@ -103,4 +122,18 @@ a:hover {
   padding-right: .5rem;
   margin-right: .5rem;
   border-right: .1rem solid #aaa;
+}
+
+/* codes */
+pre {
+  font-size: .85rem;
+}
+code {
+  font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border: .05rem solid #aaaaaa;
+  border-radius: .2rem;
+  max-width: 100%;
+  overflow: hidden;
 }
