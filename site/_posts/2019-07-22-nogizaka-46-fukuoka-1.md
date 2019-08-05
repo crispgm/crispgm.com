@@ -102,4 +102,4 @@ type: lifestyle
 
 _未完待续，敬请期待：_
 
-* 福冈之旅——乃木坂演唱会（下）
+* [福冈之旅——乃木坂演唱会（下）](/page/nogizaka-46-fukuoka-2.html)
