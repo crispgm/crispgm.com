@@ -13,7 +13,7 @@ type: lifestyle
 
 住宿订的 Airbnb，但日本现在实行了专门的民宿法规，民宿本身都是有资质的，并且住宿者也要提交个人信息。由此以来，日本的真正民宿都没了，取而代之的是近似旅店体验的民宿。这种民宿可以抽象为没有接待人员并且不是每天都打扫房间的旅馆。
 
-![Airbnb Room]({{ "/image/nogizaka-fukuoka-airbnb.jpg" | absolute_url }})
+![Airbnb Room]({{ "/image/nogizaka-fukuoka-airbnb.jpg" | absolute_url }}){:style="height: 480px;"}
 
 或许这也是 Airbnb 生意做大后的本质，宣扬的与当地人分享体验的场景越来越少，只是提供了更便宜的住宿。
 
