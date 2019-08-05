@@ -5,8 +5,8 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Aug 2019 23:40:36 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Aug 2019 23:40:36 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Aug 2019 23:43:12 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Aug 2019 23:43:12 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       
@@ -20,7 +20,7 @@
 
 &lt;p&gt;住宿订的 Airbnb，但日本现在实行了专门的民宿法规，民宿本身都是有资质的，并且住宿者也要提交个人信息。由此以来，日本的真正民宿都没了，取而代之的是近似旅店体验的民宿。这种民宿可以抽象为没有接待人员并且不是每天都打扫房间的旅馆。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/nogizaka-fukuoka-airbnb.jpg&quot; alt=&quot;Airbnb Room&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/nogizaka-fukuoka-airbnb.jpg&quot; alt=&quot;Airbnb Room&quot; style=&quot;height: 480px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;或许这也是 Airbnb 生意做大后的本质，宣扬的与当地人分享体验的场景越来越少，只是提供了更便宜的住宿。&lt;/p&gt;
 
