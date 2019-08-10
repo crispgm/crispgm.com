@@ -64,6 +64,15 @@ namespace :site do
     Dir.chdir("wiki") do
       sh "bundle exec jekyll build --destination=../gh-pages/wiki/"
     end
+    # Build wedding invitation
+    unless File.exists?("wedding-invitation")
+      sh "git clone https://github.com/crispgm/wedding-invitation.git"
+    end
+    Dir.chdir("wedding-invitation") do
+      sh "git reset --hard"
+      sh "git pull --rebase"
+      sh "bundle exec jekyll build --destination=../gh-pages/wedding-invitation/"
+    end
     # Push
     Dir.chdir("gh-pages") do
       sh "git add ."
