@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1565019792">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1565428811">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -121,26 +121,26 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 
 <p>在 Express 中，创建一个中间件用于校验 JSON Web Token：</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">jwt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express-jwt'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">jwksRsa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jwks-rsa'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cors'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">jwt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express-jwt</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">jwksRsa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">jwks-rsa</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cors</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">checkJwt</span> <span class="o">=</span> <span class="nx">jwt</span><span class="p">({</span>
   <span class="na">secret</span><span class="p">:</span> <span class="nx">jwksRsa</span><span class="p">.</span><span class="nx">expressJwtSecret</span><span class="p">({</span>
     <span class="na">cache</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="na">rateLimit</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="na">jwksRequestsPerMinute</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="na">jwksUri</span><span class="p">:</span> <span class="s1">'https://crispgm.au.auth0.com/.well-known/jwks.json'</span><span class="p">,</span>
+    <span class="na">jwksUri</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://crispgm.au.auth0.com/.well-known/jwks.json</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">}),</span>
-  <span class="na">audience</span><span class="p">:</span> <span class="s1">'api.word-kanban.words'</span><span class="p">,</span>
-  <span class="na">issuer</span><span class="p">:</span> <span class="s1">'https://crispgm.au.auth0.com/'</span><span class="p">,</span>
-  <span class="na">algorithms</span><span class="p">:</span> <span class="p">[</span><span class="s1">'RS256'</span><span class="p">],</span>
+  <span class="na">audience</span><span class="p">:</span> <span class="dl">'</span><span class="s1">api.word-kanban.words</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">issuer</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://crispgm.au.auth0.com/</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">algorithms</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">RS256</span><span class="dl">'</span><span class="p">],</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
 <p>在具体接口中引入中间件：</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/word/create'</span><span class="p">,</span> <span class="nx">checkJwt</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/word/create</span><span class="dl">'</span><span class="p">,</span> <span class="nx">checkJwt</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">Word</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></div>
@@ -154,20 +154,20 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 </code></pre></div></div>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// translate.js</span>
-<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'node-fetch'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">GOOGLE_TRANSLATE_API_KEY</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../token'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">GOOGLE_TRANSLATE_API_KEY</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../token</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">translate</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">word</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">word</span><span class="p">;</span>
 
   <span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">q</span><span class="p">:</span> <span class="nx">word</span><span class="p">,</span>
-    <span class="na">source</span><span class="p">:</span> <span class="s1">'en'</span><span class="p">,</span>
-    <span class="na">target</span><span class="p">:</span> <span class="s1">'zh'</span><span class="p">,</span>
-    <span class="na">format</span><span class="p">:</span> <span class="s1">'text'</span><span class="p">,</span>
+    <span class="na">source</span><span class="p">:</span> <span class="dl">'</span><span class="s1">en</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">target</span><span class="p">:</span> <span class="dl">'</span><span class="s1">zh</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">};</span>
   <span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">`https://translation.googleapis.com/language/translate/v2?key=</span><span class="p">${</span><span class="nx">GOOGLE_TRANSLATE_API_KEY</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
-  <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span> <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span> <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()).</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span> <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()).</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">}</span>
@@ -228,11 +228,11 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
         <span class="o">&lt;</span><span class="nx">Trend</span>
           <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span>
           <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">50</span><span class="p">}</span>
-          <span class="nx">gradient</span><span class="o">=</span><span class="p">{[</span><span class="s1">'#343a40'</span><span class="p">,</span> <span class="s1">'#e64980'</span><span class="p">,</span> <span class="s1">'#f03e3e'</span><span class="p">]}</span>
+          <span class="nx">gradient</span><span class="o">=</span><span class="p">{[</span><span class="dl">'</span><span class="s1">#343a40</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#e64980</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#f03e3e</span><span class="dl">'</span><span class="p">]}</span>
           <span class="nx">smooth</span>
           <span class="nx">autoDraw</span>
           <span class="nx">autoDrawDuration</span><span class="o">=</span><span class="p">{</span><span class="mi">3000</span><span class="p">}</span>
-          <span class="nx">autoDrawEasing</span><span class="o">=</span><span class="s2">"ease-out"</span>
+          <span class="nx">autoDrawEasing</span><span class="o">=</span><span class="dl">"</span><span class="s2">ease-out</span><span class="dl">"</span>
         <span class="o">/&gt;</span>
       <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>    <span class="p">);</span>

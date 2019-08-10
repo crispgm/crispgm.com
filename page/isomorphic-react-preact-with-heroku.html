@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1565019792">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1565428811">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -84,45 +84,45 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>This article is great as the title <a href="https://kuzzmi.com/blog/truly-multiple-entries-with-webpack"><em>Truly Multiple Entries with Webpack</em></a> says.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
     <span class="na">index</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s1">'webpack-hot-middleware/client'</span><span class="p">,</span>
-      <span class="s1">'./client/index.jsx'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">webpack-hot-middleware/client</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">./client/index.jsx</span><span class="dl">'</span><span class="p">,</span>
     <span class="p">],</span>
     <span class="na">admin</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s1">'webpack-hot-middleware/client'</span><span class="p">,</span>
-      <span class="s1">'./client/admin.jsx'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">webpack-hot-middleware/client</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">./client/admin.jsx</span><span class="dl">'</span><span class="p">,</span>
     <span class="p">],</span>
   <span class="p">},</span>
   <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
     <span class="c1">// loaders ...</span>
   <span class="p">},</span>
   <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">],</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">.js</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.jsx</span><span class="dl">'</span><span class="p">],</span>
   <span class="p">},</span>
   <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'..'</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
-    <span class="na">filename</span><span class="p">:</span> <span class="s1">'[name]/bundle.js'</span><span class="p">,</span>
-    <span class="na">publicPath</span><span class="p">:</span> <span class="s1">'/'</span><span class="p">,</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">..</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[name]/bundle.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">publicPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">},</span>
   <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
     <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
-      <span class="na">template</span><span class="p">:</span> <span class="s1">'./client/index.html'</span><span class="p">,</span>
-      <span class="na">filename</span><span class="p">:</span> <span class="s1">'index.html'</span><span class="p">,</span>
-      <span class="na">inject</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
-      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="s1">'index'</span><span class="p">],</span>
+      <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./client/index.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">index</span><span class="dl">'</span><span class="p">],</span>
       <span class="na">hash</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="p">}),</span>
     <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
-      <span class="na">template</span><span class="p">:</span> <span class="s1">'./client/admin.html'</span><span class="p">,</span>
-      <span class="na">filename</span><span class="p">:</span> <span class="s1">'admin.html'</span><span class="p">,</span>
-      <span class="na">inject</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
-      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="s1">'admin'</span><span class="p">],</span>
+      <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./client/admin.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">admin.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">admin</span><span class="dl">'</span><span class="p">],</span>
       <span class="na">hash</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="p">}),</span>
     <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">HotModuleReplacementPlugin</span><span class="p">(),</span>
@@ -138,11 +138,11 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>To get good developer experience, it is important to setup a realtime debugging environment for development. I was prepared to setup dev server for my isomorphic app with webpack-dev-middleware and webpack-hot-middleware.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpackConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../config/webpack.dev.config.js'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpackConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../config/webpack.dev.config.js</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">compiler</span> <span class="o">=</span> <span class="nx">webpack</span><span class="p">(</span><span class="nx">webpackConfig</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpackDevMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack-dev-middleware'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpackHotMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack-hot-middleware'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpackDevMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-dev-middleware</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpackHotMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-hot-middleware</span><span class="dl">'</span><span class="p">);</span>
 <span class="c1">// Dev</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">webpackDevMiddleware</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">noInfo</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -151,7 +151,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 <span class="c1">// HMR</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">webpackHotMiddleware</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">log</span><span class="p">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span>
-  <span class="na">path</span><span class="p">:</span> <span class="s1">'/__webpack_hmr'</span><span class="p">,</span>
+  <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/__webpack_hmr</span><span class="dl">'</span><span class="p">,</span>
   <span class="na">heartbeat</span><span class="p">:</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span>
 <span class="p">}));</span>
 </code></pre></div></div>
@@ -160,10 +160,10 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>The <code class="highlighter-rouge">index.html</code> was always accessbile, while the other page - <code class="highlighter-rouge">admin.html</code> was possibly in some black hole. I resolved it by <a href="https://github.com/jantimon/html-webpack-plugin/issues/145#issuecomment-170554832">serve the files from the compiler</a>.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">compiler</span><span class="p">.</span><span class="nx">outputPath</span><span class="p">,</span> <span class="s1">'admin.html'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/admin</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">compiler</span><span class="p">.</span><span class="nx">outputPath</span><span class="p">,</span> <span class="dl">'</span><span class="s1">admin.html</span><span class="dl">'</span><span class="p">);</span>
   <span class="nx">compiler</span><span class="p">.</span><span class="nx">outputFileSystem</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">res</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s1">'content-type'</span><span class="p">,</span> <span class="s1">'text/html'</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">content-type</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">text/html</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
   <span class="p">});</span>
@@ -192,7 +192,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
   <span class="nx">HtmlWebpackPluginConfig</span><span class="p">,</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">NoEmitOnErrorsPlugin</span><span class="p">(),</span>
-  <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span> <span class="s1">'process.env.NODE_ENV'</span><span class="p">:</span> <span class="s1">'"production"'</span> <span class="p">}),</span>
+  <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span> <span class="dl">'</span><span class="s1">process.env.NODE_ENV</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">"production"</span><span class="dl">'</span> <span class="p">}),</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">OccurrenceOrderPlugin</span><span class="p">(),</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
     <span class="na">compress</span><span class="p">:</span> <span class="p">{</span>
