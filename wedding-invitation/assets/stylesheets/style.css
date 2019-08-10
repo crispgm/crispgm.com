@@ -38,17 +38,19 @@ a {
   padding: 12vh 0 0; }
 
 .title-line {
-  width: 6rem;
-  margin: .8rem auto;
+  width: 4rem;
+  margin: 2.4rem auto 2rem;
   border-top: 1px solid #2E3440; }
 
 .name {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   padding: 0 0 1.2rem 0; }
 
 .date {
   color: #FFFFFF;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2rem 0 0; }
 
 .join {
   font-size: 1.2rem;
@@ -87,6 +89,9 @@ a {
     max-width: 100%; }
 
 @media (min-width: 36rem) {
+  .date {
+    margin: 3.6rem 0 0; }
+
   .event-detail {
     left: 0;
     right: 0;
