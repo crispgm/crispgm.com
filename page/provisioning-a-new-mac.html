@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1565437504">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1567236290">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -73,9 +73,9 @@
 
 <p>所以第一步，我们先安装 Homebrew：</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="nb">test</span> <span class="o">!</span> <span class="si">$(</span>which brew<span class="si">)</span><span class="p">;</span> <span class="k">then
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="nb">test</span> <span class="o">!</span> <span class="k">$(</span>which brew<span class="k">)</span><span class="p">;</span> <span class="k">then
   </span><span class="nb">echo</span> <span class="s2">"Installing homebrew..."</span>
-  /usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+  /usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
 <span class="k">fi</span>
 </code></pre></div></div>
 
@@ -167,12 +167,12 @@ brew <span class="s2">"p7zip"</span>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 把 zsh 加入 shell 列表</span>
 <span class="nb">sudo </span>sh <span class="nt">-c</span> <span class="s1">'echo /usr/local/bin/zsh &gt;&gt; /etc/shells'</span>
 <span class="c"># 设置 zsh 为默认 shell</span>
-chsh <span class="nt">-s</span> <span class="si">$(</span>which zsh<span class="si">)</span>
+chsh <span class="nt">-s</span> <span class="k">$(</span>which zsh<span class="k">)</span>
 </code></pre></div></div>
 
 <p>然后安装 Oh My Zsh：</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <h3 id="dotfiles">dotfiles</h3>
@@ -185,7 +185,7 @@ chsh <span class="nt">-s</span> <span class="si">$(</span>which zsh<span class="
 
 <p>最后，启用 fzf：</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/opt/fzf/install
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">$(</span>brew <span class="nt">--prefix</span><span class="k">)</span>/opt/fzf/install
 </code></pre></div></div>
 
 <h3 id="开发相关">开发相关</h3>

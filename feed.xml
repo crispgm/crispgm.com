@@ -5,9 +5,180 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Aug 2019 19:45:04 +0800</pubDate>
-    <lastBuildDate>Sat, 10 Aug 2019 19:45:04 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Sat, 31 Aug 2019 15:24:50 +0800</pubDate>
+    <lastBuildDate>Sat, 31 Aug 2019 15:24:50 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      
+      <item>
+        <title>The Fascinating Arch Linux RICE</title>
+        <description>&lt;p&gt;Recently, I dive into Linux the third time. The first time is in my childhood, I was attracted by the magazines, which introduced me the hacker culture. The second time was weird, I wanted to focus on study instead of PC gaming.&lt;/p&gt;
+
+&lt;p&gt;This time, it’s totally different. &lt;a href=&quot;https://www.reddit.com/r/unixporn/&quot;&gt;/r/unixporn&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/MechanicalKeyboards&quot;&gt;/r/MechanicalKeyboards&lt;/a&gt; attracted me. The most fascinating part of that is RICE or RICE culture.&lt;/p&gt;
+
+&lt;h2 id=&quot;rice&quot;&gt;RICE&lt;/h2&gt;
+
+&lt;p&gt;RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel like we get better efficiency.&lt;/p&gt;
+
+&lt;p&gt;Just as I remember, my first deep experience on RICE is in the World of Warcraft. WoW is an epic Blizzard game, with great storyline and gaming experience.&lt;/p&gt;
+
+&lt;p&gt;Another fascinating part of WoW is the customizable user interface. For WoW, it provides a simple UI, even lacking of basic functions on quests, timers and so on. But its APIs are full pledged. Developers make lots of WoW plugins. And gamers composite the plugins into their own user interface. It’s a typical RICE art and I like to watch FD (first down) videos because of their great UI in different styles. And I spent a lot of time compositing my own one.&lt;/p&gt;
+
+&lt;p&gt;My WoW Interfaces:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-wow-interface1.jpg&quot; alt=&quot;my-wow-interface-1&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/rice-wow-interface2.jpg&quot; alt=&quot;my-wow-interface-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;linux-rice&quot;&gt;Linux RICE&lt;/h2&gt;
+
+&lt;p&gt;Mac/macOS are great hardware and software. But Apple seems never really create the soil for RICE. Apple’s idea is to create great product where hardware and software are seamless and is easy to use for normal users. RICE has nothing to do with easy to use by its definition. And macOS has long time been an authority software and closed ecosystem, so that we can hardly make deep customization into system core.&lt;/p&gt;
+
+&lt;p&gt;And it’s similar to Windows. RICE should only be great in the Linux world.&lt;/p&gt;
+
+&lt;p&gt;Try Ubuntu?&lt;/p&gt;
+
+&lt;p&gt;Ubuntu may be the most popular Linux distribution. I was a once Ubuntu user. It is a great distribution, which is maybe the first beginner-friendly Linux distribution. It is a success to get big population within developers and is pre-installed on some cheaper PCs.&lt;/p&gt;
+
+&lt;p&gt;But to some extent, it is a failure. For developers, they may use Linux a lot but they may not actually use a Linux desktop. Most of them access Linux remotely with SSH from either Windows or macOS. The basic setup of IT companies is MacBook with real or virtual Linux box. The desktop is just not friendly enough. For others, it is simply hard to find Linux either user-friendly or productive. e.g. The &lt;a href=&quot;https://www.techrepublic.com/article/linux-to-windows-10-why-did-munich-switch-and-why-does-it-matter/&quot;&gt;LiMux Project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For Unix/Linux RICE, I found ArchLinux and i3 are their major choices on operating system, though Ubuntu sometimes be mentioned.&lt;/p&gt;
+
+&lt;h3 id=&quot;arch-linux&quot;&gt;Arch Linux&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt; has the best home page (IMO) and wiki of Linux distros in the world. The color scheme of its home page win at its beginning. When I was a simply early Linux enthusiastic, I heard about these main distros. e.g. Redhat/Fedora, Debian, SUES, Slackware, Ubuntu, Gentoo, and also Arch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-arch-linux-org.png&quot; alt=&quot;arch-linux-org&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Arch Linux chooses blue as major color, which is vivid and shows the sense of technology. I kept on copying the color scheme when I was building my own home page. Even though today, I still feel it is a good color scheme.&lt;/p&gt;
+
+&lt;p&gt;Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get &lt;em&gt;solid&lt;/em&gt; skills on that, I appreciate its idea: &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simplicity, minimalism, and code elegance&lt;/li&gt;
+  &lt;li&gt;Installed as a minimal base system, configured by the user upon which their own ideal environment is assembled by installing only what is required or desired for their unique purposes.&lt;/li&gt;
+  &lt;li&gt;Pacman package manager&lt;/li&gt;
+  &lt;li&gt;Rolling-release upgrades model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As soon as I read Arch’s philosophy, I know that the second point is the most important reason why it is popular in RICE culture. And Pacman makes it even easier and powerful.&lt;/p&gt;
+
+&lt;p&gt;It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally, it is like you make your own system and are responsible for yourself. You choose what you need and configure as you like based on what you can do. No surprise, no weird parts, so it is totally in control.&lt;/p&gt;
+
+&lt;p&gt;The Arch Linux Wiki is so good that I can easily follow the &lt;a href=&quot;https://wiki.archlinux.org/index.php/Installation_guide&quot;&gt;Installation guide&lt;/a&gt; and it is done.&lt;/p&gt;
+
+&lt;p&gt;It is like a non-GUI operating system and we need some more to setup a GUI system.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Login Manager
+sudo pacman -s lightdm lightdm-gtk-greeter
+# X Window
+sudo pacman -S xorg-server xorg-apps xorg-xinit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;i3&quot;&gt;i3&lt;/h3&gt;
+
+&lt;p&gt;i3 is a popular tiling window manager. Tiling window manager? It’s a kind of window manager, where all windows lay on the desktop like tiles or panes, and you just do not move windows by dragging title panel. Instead, it’s controlled by keys. You can easily move around and resize the windows.&lt;/p&gt;
+
+&lt;p&gt;i3-gaps is an i3 fork, which is almost the same and adds more features such as gaps between windows, that’s why it is called i3-gaps.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S i3-gaps
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After installing X Window and i3-gaps, I got an empty desktop while I can open a terminal with &lt;code class=&quot;highlighter-rouge&quot;&gt;Mod+Enter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;alacritty&quot;&gt;Alacritty&lt;/h3&gt;
+
+&lt;p&gt;To work with tiling window manager, we need a minimal style terminal. It may not provide either multi-tabs support or multi-panes support.&lt;/p&gt;
+
+&lt;p&gt;urxvt, kitty, and st are common picks. I tried urxvt, which is actually rxvt-unicode, but I have problems with Asian language displays.&lt;/p&gt;
+
+&lt;p&gt;Then I found that &lt;a href=&quot;https://github.com/jwilm/alacritty&quot;&gt;Alacritty&lt;/a&gt; is the right one for me. It is high-performance, GPU powered and easy configuration.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S alacritty
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-alacritty.png&quot; alt=&quot;alacritty&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;i3wm-themer&quot;&gt;i3wm-themer&lt;/h3&gt;
+
+&lt;p&gt;For i3 starters, &lt;a href=&quot;https://github.com/unix121/i3wm-themer&quot;&gt;i3wm-themer&lt;/a&gt; should be mentioned. It is a CLI tool setups simple and minimalistic desktop themes for you. It is best for newcomers to setup a basic theme and have a panorama and basic concepts on what composite a capable desktop.&lt;/p&gt;
+
+&lt;p&gt;i3wm-themer integrates i3-gaps, Polybar, Nitrogen, Rofi, rxvt-unicode, various fonts and others.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Polybar&lt;/strong&gt; is to help users create awesome status bars.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rofi&lt;/strong&gt; is an application launcher, a replacement of dmenu. dmenu is the default one for X but Rofi seems to be more popular. And there are also Alfred-like application launchers, but for most scenario, Rofi is enough.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nitrogen&lt;/strong&gt; is basically a background setter.&lt;/p&gt;
+
+&lt;p&gt;And as aforementioned, I replace rxvt-unicode with Alacrity. All configuration files of those parts are stored under &lt;code class=&quot;highlighter-rouge&quot;&gt;$XDG_CONFIG_HOME&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Based on i3wm-themer, I have finally done my first Arch Linux RICE.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-screenshot.jpg&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;other-applications&quot;&gt;Other Applications&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Ranger&lt;/strong&gt; is a file manager and previewer with terminal interface, and navigation is similar to Vim key bindings.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vimiv&lt;/strong&gt; may not be a well-known software but it worth a try. There are a variety choice of image viewers and managers. vimiv is a Ranger but for images. It is fast and works with GIF animations. A vim-style image manager is so minimalistic.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Firefox&lt;/strong&gt; is a well-known browser. It is real free software and does not compromise on privacy, comparing to Google. That’s the reason why I did not choose Chrome or Chromium.&lt;/p&gt;
+
+&lt;h3 id=&quot;obstacles&quot;&gt;Obstacles&lt;/h3&gt;
+
+&lt;p&gt;RICE on Arch Linux and maybe just Linux could be interesting but it also has obstacles. There are common parts, however, every component actually follows its own choice. e.g.:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bash or Zsh uses dot rc files&lt;/li&gt;
+  &lt;li&gt;Most modern softwares use XDG directories&lt;/li&gt;
+  &lt;li&gt;GUI apperances are configured under &lt;code class=&quot;highlighter-rouge&quot;&gt;.Xresources&lt;/code&gt; or using GTK (or Qt) themes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And to make things much more difficult, they have their own file specifications.&lt;/p&gt;
+
+&lt;p&gt;I have to write Shell Script, JSON, XML, YAML, INI, and other private formatted configuration codes.&lt;/p&gt;
+
+&lt;p&gt;For tools like Vim, it’s actually Vim Language and we have to learn a lot to make it powerful together with plugins. Luckily, Vim configuration is another topic that I have already dived into before.&lt;/p&gt;
+
+&lt;p&gt;That’s the cost of freedom. We as users have the freedom to choose everything and software programmers also have.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I think RICE is the art of building things special with our own personalities. I know that not everyone is interested or has the passion on RICE. Once I dived into that, I have had a lot of happiness.&lt;/p&gt;
+
+&lt;p&gt;My Arch Linux dotfiles: &lt;a href=&quot;https://github.com/crispgm/arch-linux-dotfiles&quot;&gt;https://github.com/crispgm/arch-linux-dotfiles&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.urbandictionary.com/define.php?term=rice&amp;amp;defid=955541&quot;&gt;Urban Dictionary: rice&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/about/&quot;&gt;https://www.archlinux.org/about/&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Arch_compared_to_other_distributions#Gentoo/Funtoo_Linux&quot;&gt;Arch compared to other distributions&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 31 Aug 2019 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/the-fascinating-arch-linux-rice.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/the-fascinating-arch-linux-rice.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -490,7 +661,7 @@ go get github.com/crispgm/go-g@617f32e
 
 &lt;p&gt;There is a &lt;a href=&quot;https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code&quot;&gt;Go modules support&lt;/a&gt; guide in &lt;a href=&quot;https://github.com/microsoft/vscode-go&quot;&gt;vscode-go&lt;/a&gt; plugin. It is actually very easy that we just need to enable Language Server for go by adding one line to &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;go.useLanguageServer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;go.useLanguageServer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;troubles-encountered&quot;&gt;Troubles Encountered&lt;/h2&gt;
@@ -592,7 +763,7 @@ go get github.com/crispgm/go-g@617f32e
 
 &lt;p&gt;Install oh-my-zsh:&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; -&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; -&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And Oh My Zsh indicates its BOOST officially.&lt;/p&gt;
@@ -643,7 +814,7 @@ go get github.com/crispgm/go-g@617f32e
 &lt;p&gt;Install fzf:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fzf
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;/opt/fzf/install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/opt/fzf/install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Enable fzf in &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;:&lt;/p&gt;
@@ -748,7 +919,7 @@ go get github.com/crispgm/go-g@617f32e
 &lt;p&gt;或者，在&lt;a href=&quot;https://developer.apple.com/download/more/&quot;&gt;https://developer.apple.com/download/more/&lt;/a&gt;下载安装。&lt;/p&gt;
 
 &lt;p&gt;然后执行：&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;/usr/bin/ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;/usr/bin/ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;基础功能&quot;&gt;基础功能&lt;/h3&gt;
@@ -1296,243 +1467,6 @@ brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
         <pubDate>Sun, 18 Nov 2018 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/minimal-packing-list-for-a-fast-trip.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/minimal-packing-list-for-a-fast-trip.html</guid>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>我是如何初始化 Mac 环境的</title>
-        <description>&lt;p&gt;每个开发者或许都有自己的 dotfiles，我也不例外。这是对于一些复杂的命令行工具（vim、bash 等）配置的备份，并且衍生出了初始化一台新电脑环境的自动化脚本。&lt;/p&gt;
-
-&lt;p&gt;在 GitHub 可以&lt;a href=&quot;https://github.com/search?q=dotfiles&quot;&gt;搜到很多&lt;/a&gt;点赞很多的 dotfiles 项目，相关配置十分全面，并且几乎自动化了所有东西。这些项目做的都很好很有参考意义，但因为每个人实际的个性化配置需求很强，所以只能说进行参考，没法全盘使用。&lt;/p&gt;
-
-&lt;p&gt;一些无法自动化的东西也需要文档来指导如何手动配置，比如 &lt;a href=&quot;https://github.com/KrauseFx/new-mac&quot;&gt;KrauseFx/new-mac&lt;/a&gt; 就是完全通过文档指导。&lt;/p&gt;
-
-&lt;p&gt;我希望在得到一台崭新 Mac 时，只需要执行自动化脚本完成80%的工作，并且按照文档配置剩余20%无法自动化的部分。&lt;/p&gt;
-
-&lt;h3 id=&quot;准备工作&quot;&gt;准备工作&lt;/h3&gt;
-
-&lt;p&gt;首先，先参照 &lt;a href=&quot;https://github.com/KrauseFx/new-mac&quot;&gt;KrauseFx/new-mac&lt;/a&gt; 撰写 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/README.md&quot;&gt;README&lt;/a&gt; ，把步骤用文本的形式写好。即使自动化了，文档也是有必要的。&lt;/p&gt;
-
-&lt;p&gt;然后，为了让后续工作可以进行，我们先安装 macOS Command Line Tools。&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;也可以选择下载安装 &lt;a href=&quot;https://developer.apple.com/download/more/&quot;&gt;https://developer.apple.com/download/more/&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;homebrew&quot;&gt;Homebrew&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://brew.sh&quot;&gt;Homebrew&lt;/a&gt; 是 macOS 中必备的包管理工具。通过 Homebrew 可以无需 root 一键安装各类软件，省去复杂的依赖管理和编译参数配置。&lt;/p&gt;
-
-&lt;p&gt;同时，Homebrew Cask 还可以安装非命令行编译类程序，也就是平时日常用的软件都可以用 Homebrew Cask 进行安装。&lt;/p&gt;
-
-&lt;p&gt;Homebrew 强大的能力让自动初始化的第一步成为可能。&lt;/p&gt;
-
-&lt;p&gt;所以第一步，我们先安装 Homebrew：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;which brew&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Installing homebrew...&quot;&lt;/span&gt;
-  /usr/bin/ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;homebrew-bundler&quot;&gt;Homebrew Bundler&lt;/h3&gt;
-
-&lt;p&gt;Homebrew 不仅仅是一个包管理器，还具有软件依赖管理能力。通过 &lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Homebrew Bundler&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 可以帮你解决所有软件依赖，包括官方的 formula 以及 cask，甚至还包括 Mac App Store（简称 mas）中的应用。我们只需要一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;，就可以配置好所有需要的应用。&lt;/p&gt;
-
-&lt;p&gt;Homebrew 默认就安装了 Homebrew Bundler。&lt;/p&gt;
-
-&lt;p&gt;如果你的安装列表已经足够干净，那么可以执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew bundle dump&lt;/code&gt; 来生成现有依赖，输出到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew bundle dump
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;Brewfile
-
-brew &lt;span class=&quot;s2&quot;&gt;&quot;git&quot;&lt;/span&gt;
-brew &lt;span class=&quot;s2&quot;&gt;&quot;wget&quot;&lt;/span&gt;
-brew &lt;span class=&quot;s2&quot;&gt;&quot;mas&quot;&lt;/span&gt;
-brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果想自己写也比较容易，&lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt; 是一种简单的 Ruby DSL，写起来比大部分配置文件都简单。熟悉 Ruby 的人应该不太需要解释，毕竟 Ruby 自己就有 Bundler 这套东西，Brewfile 和 Gemfile 属于对应关系。&lt;/p&gt;
-
-&lt;p&gt;普通用户写 &lt;code class=&quot;highlighter-rouge&quot;&gt;Brewfile&lt;/code&gt; 也并不困难，只需要掌握一些常用到的命令，主要有 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;tap&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;cask&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;mas&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;这四条命令分别对应：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew tap&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew cask install&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;就是&lt;a href=&quot;https://crispgm.com/page/awesome-terminal-tools.html#mas&quot;&gt;之前文章中&lt;/a&gt;介绍过的 Mac App Store 命令行工具。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;命令行类应用：&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;wget&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;zsh&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;vim&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;非命令行类：&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;google-chrome&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Chrome 浏览器&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;alfred&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sublime-text&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;visual-studio-code&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;非官方 Formula 应用：&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;heroku/brew&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;heroku&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;homebrew/cask-fonts&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cask&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;font-source-code-pro&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Mac App Store 上的应用：&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mas&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;WeChat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;id: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;836500024&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;因此，只要维护好 &lt;a href=&quot;https://github.com/crispgm/dotfiles/blob/master/Brewfile&quot;&gt;Brewfile&lt;/a&gt; 那么应用自动化安装就完全解决了。&lt;/p&gt;
-
-&lt;p&gt;只需要运行：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew bundle
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;zshoh-my-zsh&quot;&gt;zsh/oh-my-zsh&lt;/h3&gt;
-
-&lt;p&gt;Zsh 也就是 Z Shell，比起更加原生的 Bash。Zsh 的命令补全、主题系统和插件系统等都更加强大&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
-
-&lt;p&gt;但想自己进行配置，学习和开发成本都比较高，因此就需要 Oh My Zsh。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;Oh My Zsh&lt;/a&gt; 是个开源社区驱动的项目，简单的说就是集成一些常见的 Zsh 配置、插件和主题。我们需要做的只是配置一些简单直观的参数。甚至说，什么都不做，也有一个默认的开箱即用的配置。&lt;/p&gt;
-
-&lt;p&gt;Oh My Zsh 的 README &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;中说到：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Oh My Zsh will not make you a 10x developer…but you might feel like one.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;这句话十分风趣。虽然用了 Oh My Zsh 效率不一定能提升10倍，但至少「自我感觉」是这样的 :)&lt;/p&gt;
-
-&lt;p&gt;Zsh 在上一节已经通过 Homebrew Bundler 安装了，这里需要设置成默认 shell：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 把 zsh 加入 shell 列表&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo /usr/local/bin/zsh &amp;gt;&amp;gt; /etc/shells'&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 设置 zsh 为默认 shell&lt;/span&gt;
-chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;which zsh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后安装 Oh My Zsh：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;dotfiles&quot;&gt;dotfiles&lt;/h3&gt;
-
-&lt;p&gt;dotfiles 非常因人而异，对于我来说主要用 vim 和 zsh，因此主要配置这两个。脚本化比较简单，只需要 &lt;code class=&quot;highlighter-rouge&quot;&gt;cp&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; .bash_profile .zshrc .vimrc ~/
-&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; zarniwoop.vim/colors ~/.vim/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;最后，启用 fzf：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;/opt/fzf/install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;开发相关&quot;&gt;开发相关&lt;/h3&gt;
-
-&lt;p&gt;也是因人而异，我平时主要用 Go 和 Ruby。&lt;/p&gt;
-
-&lt;p&gt;Go 需要配置：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; ~/go
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;并在 &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; 加入：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOROOT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt; go&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/libexec
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOPATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/go
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$GOPATH&lt;/span&gt;/bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Ruby 则要配置 &lt;code class=&quot;highlighter-rouge&quot;&gt;.gemrc&lt;/code&gt; 和代理：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; .gemrc ~/
-gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
-bundle config mirror.https://rubygems.org https://gems.ruby-china.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;编辑器用 Sublime Text 和 VS Code，增加快捷方式：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /Applications/Sublime&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Text.app/Contents/SharedSupport/bin/subl ~/Applications/subl
-&lt;span class=&quot;nb&quot;&gt;sudo ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /Applications/Visual&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Studio&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Code.app/Contents/Resources/app/bin/code ~/Applications/code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;应用配置&quot;&gt;应用配置&lt;/h3&gt;
-
-&lt;p&gt;针对配置来说，应用可以分为四种：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;云端配置：各种互联网公司的产品大多都是，不需要太关心配置同步的问题，只需要完成登录就好。比如：Chrome。&lt;/li&gt;
-  &lt;li&gt;dotfiles 风格配置：既然是 dotfiles 风格，那也可以用 dotfiles 的方式，直接提交到 dotfiles 中就好了。比如：Karabiner 和 Shadowsocksx-NG。&lt;/li&gt;
-  &lt;li&gt;可同步配置：可以通过云端网盘进行同步，比如 Alfred 和 Dash。这种国内环境可以使用坚果云同步。&lt;/li&gt;
-  &lt;li&gt;无解的：那就只能无解了。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;具体需要视情况而定，还有一些稍微特殊的。比如说 VS Code，配置部分可以用 &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync&quot;&gt;Settings Sync&lt;/a&gt; 插件同步，插件的话可以通过命令行模式，也能做到自动安装。&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# VS Code CLI 模式安装插件&lt;/span&gt;
-code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; arcticicestudio.nord-visual-studio-code
-code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-vscode.Go
-code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; Shan.code-settings-sync
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;更多此类的东西，需要自己探索和总结。&lt;/p&gt;
-
-&lt;h3 id=&quot;macos-配置&quot;&gt;macOS 配置&lt;/h3&gt;
-
-&lt;p&gt;macOS 的配置目前是手动，按理来说可以通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;defaults&lt;/code&gt; 进行配置。但目前还没有找到每一个的配置项，缺少的暂且手动解决，等 hack 完再来更新。&lt;/p&gt;
-
-&lt;p&gt;已有的可以参考 &lt;a href=&quot;https://github.com/mathiasbynens/dotfiles&quot;&gt;mathiasbynens/dotfiles&lt;/a&gt; 中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;.macos&lt;/code&gt; 文件&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;，覆盖了大多数。&lt;/p&gt;
-
-&lt;h3 id=&quot;最后&quot;&gt;最后&lt;/h3&gt;
-
-&lt;p&gt;为了测试这一套东西的确 work，我把家里的 Mac Book Air 2013 给重置了，创造了一个崭新的 Mac。经过实战测试的确可用 :)&lt;/p&gt;
-
-&lt;p&gt;把成品 &lt;a href=&quot;https://github.com/crispgm/dotfiles&quot;&gt;crispgm/dotfiles&lt;/a&gt; 分享出来，不求能直接用，也是给大家参考。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Homebrew/homebrew-bundle&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/&quot;&gt;What is ZSH, and Why Should You Use It Instead of Bash?&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;robbyrussell/oh-my-zsh&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/mathiasbynens/dotfiles/blob/master/.macos&quot;&gt;mathiasbynens/dotfiles .macos&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Tue, 06 Nov 2018 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/provisioning-a-new-mac.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/provisioning-a-new-mac.html</guid>
         
         
       </item>
