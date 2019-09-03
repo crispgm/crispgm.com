@@ -11,13 +11,13 @@ This time, it’s totally different. [/r/unixporn](https://www.reddit.com/r/unix
 
 ## RICE
 
-RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements.[^1]
+RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements. Let me look up in the dictionary:
 
-> Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell.
+> Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. [^1]
 
-The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel like we get better efficiency.
+The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel as if we get better efficiency.
 
-Just as I remember, my first deep experience on RICE is in the World of Warcraft. WoW is an epic Blizzard game, with great storyline and gaming experience.
+Just as I remember, my first deep experience on RICE is in the MMORPG game -- World of Warcraft. WoW is an epic Blizzard game, with great storyline and gaming experience.
 
 Another fascinating part of WoW is the customizable user interface. For WoW, it provides a simple UI, even lacking of basic functions on quests, timers and so on. But its APIs are full pledged. Developers make lots of WoW plugins. And gamers composite the plugins into their own user interface. It’s a typical RICE art and I like to watch FD (first down) videos because of their great UI in different styles. And I spent a lot of time compositing my own one.
 
@@ -28,21 +28,23 @@ My WoW Interfaces:
 
 ## Linux RICE
 
-Mac/macOS are great hardware and software. But Apple seems never really create the soil for RICE. Apple’s idea is to create great product where hardware and software are seamless and is easy to use for normal users. RICE has nothing to do with easy to use by its definition. And macOS has long time been an authority software and closed ecosystem, so that we can hardly make deep customization into system core.
+Mac/macOS are great hardware and software. But Apple seems never really create the soil for RICE. Apple’s idea is to create great product where hardware and software are seamless and easy to use for normal users. RICE has nothing to do with easy to use by its definition. And macOS has long time been an authority software and closed ecosystem, so that we can hardly make deep customization into system core.
 
 And it’s similar to Windows. RICE should only be great in the Linux world.
 
 Try Ubuntu?
 
-Ubuntu may be the most popular Linux distribution. I was a once Ubuntu user. It is a great distribution, which is maybe the first beginner-friendly Linux distribution. It is a success to get big population within developers and is pre-installed on some cheaper PCs.
+Ubuntu may be the most popular Linux distribution. I was once an Ubuntu user. It is a great distribution, which is maybe the first beginner-friendly Linux distribution. It is a success to get big population within developers and is pre-installed on some cheaper PCs.
 
-But to some extent, it is a failure. For developers, they may use Linux a lot but they may not actually use a Linux desktop. Most of them access Linux remotely with SSH from either Windows or macOS. The basic setup of IT companies is MacBook with real or virtual Linux box. The desktop is just not friendly enough. For others, it is simply hard to find Linux either user-friendly or productive. e.g. The [LiMux Project](https://www.techrepublic.com/article/linux-to-windows-10-why-did-munich-switch-and-why-does-it-matter/).
+But to some extent, it is a failure. For developers, they may use Linux a lot but they may not actually use a Linux desktop. Most of them live in Terminal or even access Linux remotely with SSH from either Windows or macOS. The basic setup of IT companies is MacBook with real or virtual Linux box. The desktop is just not friendly enough. For others, it is simply hard to find Linux either user-friendly or productive. e.g. The [LiMux Project](https://www.techrepublic.com/article/linux-to-windows-10-why-did-munich-switch-and-why-does-it-matter/).
 
 For Unix/Linux RICE, I found ArchLinux and i3 are their major choices on operating system, though Ubuntu sometimes be mentioned.
 
 ### Arch Linux
 
-[Arch Linux](https://www.archlinux.org/) has the best home page (IMO) and wiki of Linux distros in the world. The color scheme of its home page win at its beginning. When I was a simply early Linux enthusiastic, I heard about these main distros. e.g. Redhat/Fedora, Debian, SUES, Slackware, Ubuntu, Gentoo, and also Arch.
+When I was an early Linux enthusiastic, I heard about these main distros. e.g. Redhat/Fedora, Debian, SUES, Slackware, Ubuntu, Gentoo, and also Arch.
+
+[Arch Linux](https://www.archlinux.org/) has the best home page (IMO) and wiki of Linux distros in the world. The color scheme of its home page win at its beginning.
 
 ![arch-linux-org]({{ "/image/rice-arch-linux-org.png" | absolute_url }})
 
@@ -63,9 +65,9 @@ And finally, it is like you make your own system and are responsible for yoursel
 
 The Arch Linux Wiki is so good that I can easily follow the [Installation guide](https://wiki.archlinux.org/index.php/Installation_guide) and it is done.
 
-It is like a non-GUI operating system and we need some more to setup a GUI system.
+It is super easy to install packages with Pacman. Everything is there and Arch also has a repository (ArchLinux User Repository) for user packages. For example, it is like a non-GUI operating system and we need some more to setup a GUI system.
 
-```
+```shell
 # Login Manager
 sudo pacman -s lightdm lightdm-gtk-greeter
 # X Window
@@ -100,19 +102,19 @@ sudo pacman -S alacritty
 
 ### i3wm-themer
 
-For i3 starters, [i3wm-themer](https://github.com/unix121/i3wm-themer) should be mentioned. It is a CLI tool setups simple and minimalistic desktop themes for you. It is best for newcomers to setup a basic theme and have a panorama and basic concepts on what composite a capable desktop.
+For i3 starters, [i3wm-themer](https://github.com/unix121/i3wm-themer) should be mentioned. It is a CLI tool setups simple and minimalistic desktop themes for you. It is best for newcomers to setup a basic theme and have a panoramic and basic concepts on what composite a capable desktop.
 
 i3wm-themer integrates i3-gaps, Polybar, Nitrogen, Rofi, rxvt-unicode, various fonts and others.
 
-__Polybar__ is to help users create awesome status bars.
+__Polybar__ is to help users create awesome status bars. It provides a collection of modules. e.g. Text label, sound volume, Wi-Fi status, date & time, and etc.
 
 __Rofi__ is an application launcher, a replacement of dmenu. dmenu is the default one for X but Rofi seems to be more popular. And there are also Alfred-like application launchers, but for most scenario, Rofi is enough.
 
 __Nitrogen__ is basically a background setter.
 
-And as aforementioned, I replace rxvt-unicode with Alacrity. All configuration files of those parts are stored under `$XDG_CONFIG_HOME`.
+And as aforementioned, I replace rxvt-unicode with Alacritty.
 
-Based on i3wm-themer, I have finally done my first Arch Linux RICE.
+Based on i3wm-themer, I have finally done my first Arch Linux RICE. All configuration files of those parts are stored under `$XDG_CONFIG_HOME`.
 
 ![screenshot]({{ "/image/rice-screenshot.jpg" | absolute_url }})
 
@@ -120,7 +122,7 @@ Based on i3wm-themer, I have finally done my first Arch Linux RICE.
 
 __Ranger__ is a file manager and previewer with terminal interface, and navigation is similar to Vim key bindings.
 
-__vimiv__ may not be a well-known software but it worth a try. There are a variety choice of image viewers and managers. vimiv is a Ranger but for images. It is fast and works with GIF animations. A vim-style image manager is so minimalistic.
+__vimiv__ may not be a well-known software but it worth a try. There are a variety choices of image viewers and managers. vimiv is a Ranger but for images. It is fast and works with GIF animations. A vim-style image manager is so minimalistic.
 
 __Firefox__ is a well-known browser. It is real free software and does not compromise on privacy, comparing to Google. That’s the reason why I did not choose Chrome or Chromium.
 
@@ -134,15 +136,15 @@ RICE on Arch Linux and maybe just Linux could be interesting but it also has obs
 
 And to make things much more difficult, they have their own file specifications.
 
-I have to write Shell Script, JSON, XML, YAML, INI, and other private formatted configuration codes.
+I have to write Shell Script, JSON, XML, YAML, INI, and other private configuration codes.
 
-For tools like Vim, it’s actually Vim Language and we have to learn a lot to make it powerful together with plugins. Luckily, Vim configuration is another topic that I have already dived into before.
+For tools like Vim, it’s actually Vim Language and we have to learn a lot to make it powerful together with plugins. Luckily, Vim configuration is another topic that I have already handled before.
 
 That's the cost of freedom. We as users have the freedom to choose everything and software programmers also have.
 
 ## Conclusion
 
-I think RICE is the art of building things special with our own personalities. I know that not everyone is interested or has the passion on RICE. Once I dived into that, I have had a lot of happiness.
+I think RICE is the art of building things special for personal use and habits, and with our own tastes and personalities. I know that not everyone is interested or has the passion on RICE. Once I dived into that, I have had a lot of happiness.
 
 My Arch Linux dotfiles: [https://github.com/crispgm/arch-linux-dotfiles](https://github.com/crispgm/arch-linux-dotfiles)
 
