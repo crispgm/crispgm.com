@@ -3,7 +3,7 @@
 [![](https://travis-ci.org/crispgm/crispgm.com.svg)](https://travis-ci.org/crispgm/crispgm.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3cb069fc-ecc9-4da8-8ad1-435a9a75bee7/deploy-status)](https://app.netlify.com/sites/crispgm/deploys)
 
-Source of [crispgm.com](https://crispgm.com/). Also available at: <https://crisp.dev> and <https://crisp.lol>.
+Source of [crispgm.com](https://crispgm.com/). Also available at: <https://crisp.dev>.
 
 ## Dev
 
