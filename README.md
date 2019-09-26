@@ -5,6 +5,10 @@
 
 Source of [crispgm.com](https://crispgm.com/). Also available at: <https://crisp.dev>.
 
+## Theme
+
+The theme is called [Minimal](https://github.com/crispgm/minimal). It basically works but not exactly the same as this site.
+
 ## Dev
 
 There are 3 Jekyll sites here and will be built into `gh-pages` branch.
