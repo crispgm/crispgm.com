@@ -1,6 +1,6 @@
 ---
 layout: post
-type: programming
+type: legacy
 title: Go Module in Action
 permalink: /page/go-module-in-action.html
 ---
