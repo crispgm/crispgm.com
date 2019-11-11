@@ -5,8 +5,8 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Aug 2019 15:24:50 +0800</pubDate>
-    <lastBuildDate>Sat, 31 Aug 2019 15:24:50 +0800</lastBuildDate>
+    <pubDate>Mon, 11 Nov 2019 14:55:42 +0800</pubDate>
+    <lastBuildDate>Mon, 11 Nov 2019 14:55:42 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       
@@ -18,15 +18,15 @@
 
 &lt;h2 id=&quot;rice&quot;&gt;RICE&lt;/h2&gt;
 
-&lt;p&gt;RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements. Let me look up in the dictionary:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell.&lt;/p&gt;
+  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel like we get better efficiency.&lt;/p&gt;
+&lt;p&gt;The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel as if we get better efficiency.&lt;/p&gt;
 
-&lt;p&gt;Just as I remember, my first deep experience on RICE is in the World of Warcraft. WoW is an epic Blizzard game, with great storyline and gaming experience.&lt;/p&gt;
+&lt;p&gt;Just as I remember, my first deep experience on RICE is in the MMORPG game – World of Warcraft. WoW is an epic Blizzard game, with great storyline and gaming experience.&lt;/p&gt;
 
 &lt;p&gt;Another fascinating part of WoW is the customizable user interface. For WoW, it provides a simple UI, even lacking of basic functions on quests, timers and so on. But its APIs are full pledged. Developers make lots of WoW plugins. And gamers composite the plugins into their own user interface. It’s a typical RICE art and I like to watch FD (first down) videos because of their great UI in different styles. And I spent a lot of time compositing my own one.&lt;/p&gt;
 
@@ -37,21 +37,23 @@
 
 &lt;h2 id=&quot;linux-rice&quot;&gt;Linux RICE&lt;/h2&gt;
 
-&lt;p&gt;Mac/macOS are great hardware and software. But Apple seems never really create the soil for RICE. Apple’s idea is to create great product where hardware and software are seamless and is easy to use for normal users. RICE has nothing to do with easy to use by its definition. And macOS has long time been an authority software and closed ecosystem, so that we can hardly make deep customization into system core.&lt;/p&gt;
+&lt;p&gt;Mac/macOS are great hardware and software. But Apple seems never really create the soil for RICE. Apple’s idea is to create great product where hardware and software are seamless and easy to use for normal users. RICE has nothing to do with easy to use by its definition. And macOS has long time been an authority software and closed ecosystem, so that we can hardly make deep customization into system core.&lt;/p&gt;
 
 &lt;p&gt;And it’s similar to Windows. RICE should only be great in the Linux world.&lt;/p&gt;
 
 &lt;p&gt;Try Ubuntu?&lt;/p&gt;
 
-&lt;p&gt;Ubuntu may be the most popular Linux distribution. I was a once Ubuntu user. It is a great distribution, which is maybe the first beginner-friendly Linux distribution. It is a success to get big population within developers and is pre-installed on some cheaper PCs.&lt;/p&gt;
+&lt;p&gt;Ubuntu may be the most popular Linux distribution. I was once an Ubuntu user. It is a great distribution, which is maybe the first beginner-friendly Linux distribution. It is a success to get big population within developers and is pre-installed on some cheaper PCs.&lt;/p&gt;
 
-&lt;p&gt;But to some extent, it is a failure. For developers, they may use Linux a lot but they may not actually use a Linux desktop. Most of them access Linux remotely with SSH from either Windows or macOS. The basic setup of IT companies is MacBook with real or virtual Linux box. The desktop is just not friendly enough. For others, it is simply hard to find Linux either user-friendly or productive. e.g. The &lt;a href=&quot;https://www.techrepublic.com/article/linux-to-windows-10-why-did-munich-switch-and-why-does-it-matter/&quot;&gt;LiMux Project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But to some extent, it is a failure. For developers, they may use Linux a lot but they may not actually use a Linux desktop. Most of them live in Terminal or even access Linux remotely with SSH from either Windows or macOS. The basic setup of IT companies is MacBook with real or virtual Linux box. The desktop is just not friendly enough. For others, it is simply hard to find Linux either user-friendly or productive. e.g. The &lt;a href=&quot;https://www.techrepublic.com/article/linux-to-windows-10-why-did-munich-switch-and-why-does-it-matter/&quot;&gt;LiMux Project&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For Unix/Linux RICE, I found ArchLinux and i3 are their major choices on operating system, though Ubuntu sometimes be mentioned.&lt;/p&gt;
 
 &lt;h3 id=&quot;arch-linux&quot;&gt;Arch Linux&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt; has the best home page (IMO) and wiki of Linux distros in the world. The color scheme of its home page win at its beginning. When I was a simply early Linux enthusiastic, I heard about these main distros. e.g. Redhat/Fedora, Debian, SUES, Slackware, Ubuntu, Gentoo, and also Arch.&lt;/p&gt;
+&lt;p&gt;When I was an early Linux enthusiastic, I heard about these main distros. e.g. Redhat/Fedora, Debian, SUES, Slackware, Ubuntu, Gentoo, and also Arch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt; has the best home page (IMO) and wiki of Linux distros in the world. The color scheme of its home page win at its beginning.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-arch-linux-org.png&quot; alt=&quot;arch-linux-org&quot; /&gt;&lt;/p&gt;
 
@@ -74,12 +76,12 @@
 
 &lt;p&gt;The Arch Linux Wiki is so good that I can easily follow the &lt;a href=&quot;https://wiki.archlinux.org/index.php/Installation_guide&quot;&gt;Installation guide&lt;/a&gt; and it is done.&lt;/p&gt;
 
-&lt;p&gt;It is like a non-GUI operating system and we need some more to setup a GUI system.&lt;/p&gt;
+&lt;p&gt;It is super easy to install packages with Pacman. Everything is there and Arch also has a repository (ArchLinux User Repository) for user packages. For example, it is like a non-GUI operating system and we need some more to setup a GUI system.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Login Manager
-sudo pacman -s lightdm lightdm-gtk-greeter
-# X Window
-sudo pacman -S xorg-server xorg-apps xorg-xinit
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Login Manager&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; lightdm lightdm-gtk-greeter
+&lt;span class=&quot;c&quot;&gt;# X Window&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; xorg-server xorg-apps xorg-xinit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;i3&quot;&gt;i3&lt;/h3&gt;
@@ -108,19 +110,19 @@ sudo pacman -S xorg-server xorg-apps xorg-xinit
 
 &lt;h3 id=&quot;i3wm-themer&quot;&gt;i3wm-themer&lt;/h3&gt;
 
-&lt;p&gt;For i3 starters, &lt;a href=&quot;https://github.com/unix121/i3wm-themer&quot;&gt;i3wm-themer&lt;/a&gt; should be mentioned. It is a CLI tool setups simple and minimalistic desktop themes for you. It is best for newcomers to setup a basic theme and have a panorama and basic concepts on what composite a capable desktop.&lt;/p&gt;
+&lt;p&gt;For i3 starters, &lt;a href=&quot;https://github.com/unix121/i3wm-themer&quot;&gt;i3wm-themer&lt;/a&gt; should be mentioned. It is a CLI tool setups simple and minimalistic desktop themes for you. It is best for newcomers to setup a basic theme and have a panoramic and basic concepts on what composite a capable desktop.&lt;/p&gt;
 
 &lt;p&gt;i3wm-themer integrates i3-gaps, Polybar, Nitrogen, Rofi, rxvt-unicode, various fonts and others.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Polybar&lt;/strong&gt; is to help users create awesome status bars.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Polybar&lt;/strong&gt; is to help users create awesome status bars. It provides a collection of modules. e.g. Text label, sound volume, Wi-Fi status, date &amp;amp; time, and etc.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Rofi&lt;/strong&gt; is an application launcher, a replacement of dmenu. dmenu is the default one for X but Rofi seems to be more popular. And there are also Alfred-like application launchers, but for most scenario, Rofi is enough.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Nitrogen&lt;/strong&gt; is basically a background setter.&lt;/p&gt;
 
-&lt;p&gt;And as aforementioned, I replace rxvt-unicode with Alacrity. All configuration files of those parts are stored under &lt;code class=&quot;highlighter-rouge&quot;&gt;$XDG_CONFIG_HOME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And as aforementioned, I replace rxvt-unicode with Alacritty.&lt;/p&gt;
 
-&lt;p&gt;Based on i3wm-themer, I have finally done my first Arch Linux RICE.&lt;/p&gt;
+&lt;p&gt;Based on i3wm-themer, I have finally done my first Arch Linux RICE. All configuration files of those parts are stored under &lt;code class=&quot;highlighter-rouge&quot;&gt;$XDG_CONFIG_HOME&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-screenshot.jpg&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
 
@@ -128,7 +130,7 @@ sudo pacman -S xorg-server xorg-apps xorg-xinit
 
 &lt;p&gt;&lt;strong&gt;Ranger&lt;/strong&gt; is a file manager and previewer with terminal interface, and navigation is similar to Vim key bindings.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;vimiv&lt;/strong&gt; may not be a well-known software but it worth a try. There are a variety choice of image viewers and managers. vimiv is a Ranger but for images. It is fast and works with GIF animations. A vim-style image manager is so minimalistic.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vimiv&lt;/strong&gt; may not be a well-known software but it worth a try. There are a variety choices of image viewers and managers. vimiv is a Ranger but for images. It is fast and works with GIF animations. A vim-style image manager is so minimalistic.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Firefox&lt;/strong&gt; is a well-known browser. It is real free software and does not compromise on privacy, comparing to Google. That’s the reason why I did not choose Chrome or Chromium.&lt;/p&gt;
 
@@ -144,15 +146,15 @@ sudo pacman -S xorg-server xorg-apps xorg-xinit
 
 &lt;p&gt;And to make things much more difficult, they have their own file specifications.&lt;/p&gt;
 
-&lt;p&gt;I have to write Shell Script, JSON, XML, YAML, INI, and other private formatted configuration codes.&lt;/p&gt;
+&lt;p&gt;I have to write Shell Script, JSON, XML, YAML, INI, and other private configuration codes.&lt;/p&gt;
 
-&lt;p&gt;For tools like Vim, it’s actually Vim Language and we have to learn a lot to make it powerful together with plugins. Luckily, Vim configuration is another topic that I have already dived into before.&lt;/p&gt;
+&lt;p&gt;For tools like Vim, it’s actually Vim Language and we have to learn a lot to make it powerful together with plugins. Luckily, Vim configuration is another topic that I have already handled before.&lt;/p&gt;
 
 &lt;p&gt;That’s the cost of freedom. We as users have the freedom to choose everything and software programmers also have.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;I think RICE is the art of building things special with our own personalities. I know that not everyone is interested or has the passion on RICE. Once I dived into that, I have had a lot of happiness.&lt;/p&gt;
+&lt;p&gt;I think RICE is the art of building things special for personal use and habits, and with our own tastes and personalities. I know that not everyone is interested or has the passion on RICE. Once I dived into that, I have had a lot of happiness.&lt;/p&gt;
 
 &lt;p&gt;My Arch Linux dotfiles: &lt;a href=&quot;https://github.com/crispgm/arch-linux-dotfiles&quot;&gt;https://github.com/crispgm/arch-linux-dotfiles&lt;/a&gt;&lt;/p&gt;
 
@@ -549,169 +551,6 @@ sudo pacman -S xorg-server xorg-apps xorg-xinit
       </item>
       
     
-      
-      <item>
-        <title>Go Module in Action</title>
-        <description>&lt;p&gt;For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.&lt;/p&gt;
-
-&lt;p&gt;If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; including the existence of &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;. That is because &lt;strong&gt;Google&lt;/strong&gt; uses monorepo.&lt;/p&gt;
-
-&lt;p&gt;There are some advantages claimed&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and Golang’s dependency management could work on that well.&lt;/p&gt;
-
-&lt;p&gt;However, monorepo does not dominate the world. The dominance of open source community is GitHub. In contrast, GitHub follows fork &amp;amp; pull request workflow.&lt;/p&gt;
-
-&lt;p&gt;This (Go’s dependency management design) leads to lots of issues:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;No tag, no semver. When &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; makes breaking change, it breaks build.&lt;/li&gt;
-  &lt;li&gt;Not compatible with GitHub’s fork model, unless you make some hack on Git remote&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To make it easier, there are some efforts:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://glide.sh/&quot;&gt;Glide&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://labix.org/gopkg.in&quot;&gt;Gopkg.in&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/kardianos/govendor&quot;&gt;Govendor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/golang/dep&quot;&gt;Go Dep&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By these tools, we may handle vendors better. But these tools are not officialy supported and it needs commit all vendor packages to repository! Can you imagine a frontend or Node.js project commits its &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;? This is ridiculous.&lt;/p&gt;
-
-&lt;h2 id=&quot;go-module&quot;&gt;Go Module&lt;/h2&gt;
-
-&lt;p&gt;I don’t know the decision process, but Golang team finally launched Go Module in 1.11, which embraces the non-monorepo part of the world.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt;, and now we can clone to anywhere.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;go get&lt;/code&gt; inside a repo is not global, it works only at local.&lt;/li&gt;
-  &lt;li&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Dependencies are defined in &lt;code class=&quot;highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; with git tags, commit hashes, and semver.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;how-to&quot;&gt;HOW TO&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Install or upgrade to Go &amp;gt;=1.11 (currently 1.12)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enable Go Module, edit &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;:&lt;/p&gt;
-
-    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GO111MODULE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Initialize Go Module&lt;/p&gt;
-
-    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go mod init &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;commands&quot;&gt;Commands&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Add missing and remove unused modules&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go mod tidy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Add new module&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get github.com/crispgm/go-g
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Update a module&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; github.com/crispgm/go-g
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Update all modules&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Get specific version of module&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get github.com/crispgm/go-g@master
-go get github.com/crispgm/go-g@1.0.0
-go get github.com/crispgm/go-g@617f32e
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Make vendored copy of dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go mod vendor
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I highly &lt;strong&gt;not&lt;/strong&gt; recommend this, since getting rid of vendor is one of the major advantages of Go Module.&lt;/p&gt;
-
-&lt;h2 id=&quot;editors-support&quot;&gt;Editor’s Support&lt;/h2&gt;
-
-&lt;h3 id=&quot;vscode&quot;&gt;VSCode&lt;/h3&gt;
-
-&lt;p&gt;There is a &lt;a href=&quot;https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code&quot;&gt;Go modules support&lt;/a&gt; guide in &lt;a href=&quot;https://github.com/microsoft/vscode-go&quot;&gt;vscode-go&lt;/a&gt; plugin. It is actually very easy that we just need to enable Language Server for go by adding one line to &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;go.useLanguageServer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;troubles-encountered&quot;&gt;Troubles Encountered&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Dependency’s Dependency”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One of our in-house library depends on &lt;a href=&quot;https://github.com/satori/go.uuid&quot;&gt;satori/go.uuid&lt;/a&gt;, with traditional &lt;code class=&quot;highlighter-rouge&quot;&gt;go get&lt;/code&gt; it means depend on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;. But Go Module got the latest tag by default. So the solution should be:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; github.com/satori/go.uuid@master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Got “ambiguous import: found github.com/ugorji/go/codec in multiple modules”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is actually caused by &lt;a href=&quot;https://github.com/gin-gonic/gin&quot;&gt;gin-gonic/gin&lt;/a&gt; (the web framework we use) and there is a &lt;a href=&quot;https://github.com/gin-gonic/gin/issues/1673&quot;&gt;solution&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;Add the following to &lt;code class=&quot;highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; to solve the trouble.&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;replace github.com/ugorji/go v1.1.4 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; github.com/ugorji/go/codec v0.0.0-20190204201341-e444a5086c43
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Go Module is not a silver bullet, and it is more a compatibility than a fix. But for me, it is great improvement.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://benjvi.com/2016/07/05/Dependency-Management-In-Golang&quot;&gt;http://benjvi.com/2016/07/05/Dependency-Management-In-Golang&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Monorepo&quot;&gt;https://en.wikipedia.org/wiki/Monorepo&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://dev.to/loderunner/working-with-forks-in-go-3ab6&quot;&gt;https://dev.to/loderunner/working-with-forks-in-go-3ab6&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Wed, 12 Jun 2019 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/go-module-in-action.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/go-module-in-action.html</guid>
-        
-        
-      </item>
       
     
       
