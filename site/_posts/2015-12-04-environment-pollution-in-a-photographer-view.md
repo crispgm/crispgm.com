@@ -13,7 +13,7 @@ tags:
 On November 14th, it was a haze day with an AQI over 200 and I went to Beijing University of Chemical Technology.
 I took some photo in the campus. Thanks to my basic skills of Adobe Photoshop Lightroom and VSCOcam, it looks pretty good now by enhancing the orange and yellow color, removing the arrow on the ground and cropping into a square one.
 
-![]({{ "/photo/beijing-autumn.jpg" | absolute_url }})
+![]({{ "/image/beijing-autumn.jpg" | absolute_url }})
 
 As soon as my surprise fade out, I was feeling sad.
 
