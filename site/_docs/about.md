@@ -12,9 +12,9 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, co
 
 <div class="page-title">Advocation</div>
 
-* [Free and Open Internet](https://www.google.com/intl/en/takeaction/)
+* [Defend free speech. Fight surveillance. Support innovation.](https://act.eff.org/)
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
-* [Againt "996"](https://996.icu/)
+* [Against "996"](https://996.icu/)
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
 
