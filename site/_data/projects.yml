@@ -8,16 +8,6 @@
       href: https://github.com/jekyll/jekyll
     - text: Commits
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
-- name: gorm
-  description: The fantastic ORM library for Golang, aims to be developer friendly.
-  contributed: true
-  links:
-    - text: Homepage
-      href: http://gorm.io/
-    - text: GitHub
-      href: https://github.com/jinzhu/gorm
-    - text: Commits
-      href: https://github.com/jinzhu/gorm/commits?author=crispgm
 - name: Crisp Minimal Résumé
   description: A minimalist résumé template for Jekyll.
   links:
@@ -63,3 +53,20 @@
       href: https://word-kanban.herokuapp.com/
     - text: GitHub
       href: https://github.com/crispgm/word-kanban
+- name: RSS Hub
+  description: 🍰 万物皆可 RSS
+  links:
+    - text: Homepage
+      href: https://docs.rsshub.app/
+    - text: GitHub
+      href: https://github.com/DIYgod/RSSHub
+- name: gorm
+  description: The fantastic ORM library for Golang, aims to be developer friendly.
+  contributed: true
+  links:
+    - text: Homepage
+      href: http://gorm.io/
+    - text: GitHub
+      href: https://github.com/jinzhu/gorm
+    - text: Commits
+      href: https://github.com/jinzhu/gorm/commits?author=crispgm
