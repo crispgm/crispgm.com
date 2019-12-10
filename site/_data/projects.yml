@@ -55,6 +55,7 @@
       href: https://github.com/crispgm/word-kanban
 - name: RSS Hub
   description: 🍰 万物皆可 RSS
+  contributed: true
   links:
     - text: Homepage
       href: https://docs.rsshub.app/
