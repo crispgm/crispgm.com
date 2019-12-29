@@ -6,11 +6,11 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   height: 100%;
   width: 100%; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   html {
     font-size: 14px; } }
 body {
@@ -38,7 +38,7 @@ a {
 .wrapper {
   margin: 0 auto;
   padding: 0;
-  width: 42rem; }
+  width: 36rem; }
 
 .blog-wrapper {
   display: block; }
@@ -50,7 +50,7 @@ a {
 .content-wrapper {
   padding: 1.2rem 0 0; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .wrapper {
     display: block;
     width: 100%; }
@@ -60,9 +60,9 @@ a {
     width: 100%; } }
 img {
   border: 0;
-  max-width: 42rem; }
+  max-width: 36rem; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   img {
     max-width: 100%; } }
 .header {
@@ -99,7 +99,7 @@ img {
   .menu .menu-active a {
     text-decoration: underline; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .menu {
     margin: 0;
     padding: 0 .8rem; }
@@ -138,10 +138,10 @@ footer {
       .contact .contact-links:hover a:hover {
         color: #2E3440; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .contact {
     display: block;
-    padding: .4rem 0 0;
+    padding: 1.2rem 0 0;
     text-align: center; }
     .contact .contact-links {
       float: none;
@@ -349,7 +349,7 @@ code.highlighter-rouge {
   .things ul {
     margin: 0; }
 
-@media (max-width: 42rem) {
+@media (max-width: 36rem) {
   .things .things-item {
     display: block; }
     .things .things-item .things-link {
