@@ -1,11 +1,12 @@
 ---
 title: Home
 permalink: /index.html
+layout: index
 ---
 
-<!-- <div class="page-title" id="programming">Latest Posts</div> -->
+<div class="page-title" id="programming">Latest Posts</div>
 <div class="archive-main">
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts limit:8 %}
     {% if post.type == 'legacy' %}
       {% continue %}
     {% endif %}

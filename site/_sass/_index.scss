@@ -1,0 +1,30 @@
+.index-wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 60rem;
+}
+
+.panel-wrapper {
+  display: flex;
+  margin: 12rem 0 0;
+}
+
+.left-panel {
+  text-align: left;
+  padding: 0 4rem 0 0;
+  width: 24rem;
+}
+
+.right-panel {
+  text-align: left;
+  padding: 0;
+  width: 36rem;
+}
+
+.site-name {
+  font-size: 2rem;
+}
+
+.site-subtitle {
+  margin: 1rem 0 0;
+}

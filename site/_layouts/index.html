@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="index-wrapper">
+      <div class="panel-wrapper">
+        <div class="left-panel">
+          <div class="site-name">
+            David Zhang
+          </div>
+          <div class="site-subtitle">
+            A minimalist programmer & lifehacker.
+          </div>
+        </div>
+        <div class="right-panel">
+          {{ content }}
+        </div>
+      </div>
+      <footer id="contact">
+        <div class="content content-wrapper">
+          <div class="contact">
+            <div class="contact-links">
+              <a href="mailto:{{ site.contact.email }}"><i class="icon-envelope-o"></i></a>
+              <a href="/feed.xml"><i class="icon-rss"></i></a>
+              <a href="https://github.com/{{ site.contact.github }}"><i class="icon-github"></i></a>
+              <a href="https://stackoverflow.com/users/{{ site.contact.stack_overflow }}/"><i class="icon-stack-overflow"></i></a>
+              <a href="https://instagram.com/{{ site.contact.instagram }}"><i class="icon-instagram"></i></a>
+              <a href="https://twitter.com/{{ site.contact.twitter }}"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="contact-left">
+              <a href="{{ site.url }}">{{ site.author }}</a> &copy; {{ site.time | date: "%Y" }}
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    {% include google_analytics.html %}
+  </body>
+</html>
