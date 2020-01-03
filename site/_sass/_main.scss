@@ -1,12 +1,12 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2017
+// Copyright (c) David Zhang, 2020
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 20px;
+  font-size: 18px;
   height: 100%;
   width: 100%;
 }
@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  background-color: $grey-0;
-  color: $grey-9;
+  background-color: $bg;
+  color: $dark-9;
   font-family: $main-font;
   font-size: 1rem;
   -moz-osx-font-smoothing: grayscale;
@@ -31,12 +31,12 @@ body {
   word-wrap: break-word;
 
   ::selection {
-    background-color: $green;
+    background-color: $mild;
   }
 }
 
 a {
-  color: $grey-7;
+  color: $link;
   font-weight: 400;
   text-decoration: none;
 

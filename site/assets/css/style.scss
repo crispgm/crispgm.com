@@ -5,20 +5,22 @@
  * Copyright (c) David Zhang, 2019
  */
 
-$breakpoint: 36rem;
+$breakpoint: 40rem;
 
 // fonts
 $main-font: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 $code-font: "Fira Mono", Menlo, Monaco, Consolas, Courier, monospace;
 
 // colors
-$grey-9: #2E3440;
-$grey-7: #434C5E;
-$grey-5: #4C566A;
-$grey-3: #E5E9F0;
-$grey-0: #FFFFFF;
-$blue-5: #5E81AC;
-$green:  #8FBCBB;
+$dark-9: #2E3440;
+$dark-5: #4C566A;
+$dark-3: #D8DEE9;
+$dark-1: #ECEFF4;
+$bright: #B48EAD;
+$mild:   #8FBCBB;
+
+$link:   #5E81AC;
+$bg:     #FFFFFF;
 
 // mixins
 @import "mixins";

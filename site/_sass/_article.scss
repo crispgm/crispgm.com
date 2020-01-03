@@ -1,8 +1,8 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2018
+// Copyright (c) David Zhang, 2020
 
 .progress-bar {
-  background-color: $grey-3;
+  background-color: $dark-3;
   height: 2px;
   position: fixed;
   top: 0;
@@ -15,7 +15,7 @@
   text-align: left;
 
   a {
-    color: $blue-5;
+    color: $link;
   }
 
   .article-menu {
@@ -24,7 +24,7 @@
     }
 
     a {
-      color: $grey-9;
+      color: $dark-9;
       text-decoration: none;
 
       &:hover {
@@ -39,12 +39,12 @@
     text-align: left;
 
     .article-title {
-      color: $grey-7;
+      color: $dark-5;
       font-size: 2.2rem;
     }
 
     .article-date {
-      color: $grey-5;
+      color: $dark-5;
       font-size: 1rem;
       margin-top: 1rem;
     }
@@ -61,7 +61,7 @@
     text-align: center;
 
     a {
-      color: $grey-7;
+      color: $dark-5;
       padding: 0 .4rem;
 
       &:hover {
@@ -79,7 +79,7 @@
 }
 
 h1 {
-  color: $grey-7;
+  color: $dark-5;
   font-size: 2.4rem;
   font-weight: 400;
   padding-top: 1.6rem;
@@ -87,7 +87,7 @@ h1 {
 }
 
 h2 {
-  color: $grey-7;
+  color: $dark-5;
   font-size: 2rem;
   font-weight: 400;
   padding-top: 1.4rem;
@@ -95,7 +95,7 @@ h2 {
 }
 
 h3 {
-  color: $grey-7;
+  color: $dark-5;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1.2rem;
@@ -103,7 +103,7 @@ h3 {
 }
 
 h4 {
-  color: $grey-7;
+  color: $dark-5;
   font-size: 1.2rem;
   font-weight: 600;
   padding-top: .8rem;
@@ -111,7 +111,7 @@ h4 {
 }
 
 h5 {
-  color: $grey-7;
+  color: $dark-5;
   font-size: 1rem;
   font-weight: 700;
   padding-top: .8rem;
@@ -119,7 +119,7 @@ h5 {
 }
 
 blockquote {
-  border-left: .2rem solid $grey-3;
+  border-left: .2rem solid $dark-3;
   margin-left: 0;
   padding-left: 1rem;
 }
@@ -140,7 +140,7 @@ sup {
 }
 
 hr {
-  border-top: 1px solid $grey-3;
+  border-top: 1px solid $dark-3;
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 30%;
@@ -169,11 +169,11 @@ table {
 
   tr {
     &:hover {
-      background-color: $grey-5;
+      background-color: $dark-5;
     }
 
     th {
-      background-color: $grey-5;
+      background-color: $dark-5;
       padding: .2rem .4rem;
     }
 
