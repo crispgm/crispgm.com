@@ -1,0 +1,35 @@
+- category: Hardware
+  items:
+  - name: MacBook Air/MacBook Pro
+  - name: iPhone X/iPhone SE
+  - name: Sonos Play 1
+  - name: Bose Wave Music System
+  - name: HHKB Professional2 Type-S
+  - name: Kindle Oasis
+  - name: Fujifilm X-Pro2
+
+- category: Software
+  items:
+  - name: Visual Studio Code
+  - name: iTerm2
+  - name: Alfred
+  - name: Microsoft To Do
+  - name: Bear
+  - name: 1Password
+  - name: Scanner Pro
+  - name: Dropbox
+  - name: Pocket Casts
+
+- category: CLI Software
+  items:
+  - name: zsh and oh-my-zsh
+  - name: neovim
+  - name: hledger
+  - name: fzf
+  - name: tmux
+
+- category: Other Gear
+  items:
+  - name: Bellroy Slingbag
+  - name: Bellroy Card Sleeve
+  - name: Sailor Midori Fountain Pen
