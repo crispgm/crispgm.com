@@ -15,6 +15,7 @@
   - name: Alfred
   - name: Microsoft To Do
   - name: Bear
+  - name: Reeder
   - name: 1Password
   - name: Scanner Pro
   - name: Dropbox
@@ -27,6 +28,8 @@
   - name: hledger
   - name: fzf
   - name: tmux
+  - name: See my dotfiles
+    link: https://github.com/crispgm/dotfiles
 
 - category: Other Gear
   items:
