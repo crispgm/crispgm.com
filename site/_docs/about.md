@@ -10,19 +10,20 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, co
 
 {% include buy-me-a-coffee.html %}
 
-<div class="page-title">Advocation</div>
+<div class="page-title">Advocations</div>
 
 * [Defend free speech. Fight surveillance. Support innovation.](https://act.eff.org/)
 * [Fresh Air in China](/page/environment-pollution-in-a-photographer-view.html)
-* [Against "996"](https://996.icu/)
+* [Against "996" Overworking](https://996.icu/)
 * [Against Piracy Software](/page/piracy-software-or-app.html)
 * Against Cyberbullying
 
 <div class="page-title">Links</div>
 
-* [Rugby News Board](http://nbrugby.com/)
-* [Crisp Programming Weekly](https://crispgm.github.io/weekly/)
+* [/uses](/uses.html)
+* [Crisp Minimal Weekly](https://crispgm.github.io/weekly/)
 * [Crisp Wiki](https://crispgm.com/wiki/)
+* [Rugby News Board](http://nbrugby.com/)
 * [Word Kanban](https://word-kanban.herokuapp.com/)
 
 <div class="page-title">License</div>

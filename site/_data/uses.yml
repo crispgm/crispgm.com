@@ -1,37 +1,71 @@
-- category: Hardware
+- category: Hardwares
   items:
   - name: MacBook Air/MacBook Pro
   - name: iPhone X/iPhone SE
+  - name: Sennhaiser Momentum
+  - name: AirPods 2
   - name: Sonos Play 1
   - name: Bose Wave Music System
   - name: HHKB Professional2 Type-S
   - name: Kindle Oasis
   - name: Fujifilm X-Pro2
 
-- category: Software
+- category: Softwares for Productivity
   items:
   - name: Visual Studio Code
   - name: iTerm2
   - name: Alfred
+  - name: Google Chrome
   - name: Microsoft To Do
   - name: Bear
-  - name: Reeder
-  - name: 1Password
-  - name: Scanner Pro
+  - name: Karabiner
+  - name: Lungo
   - name: Dropbox
-  - name: Pocket Casts
-
-- category: CLI Software
-  items:
-  - name: zsh and oh-my-zsh
+  - name: zsh
+  - name: oh-my-zsh
+  - name: git
   - name: neovim
-  - name: hledger
   - name: fzf
+  - name: ripgrep
   - name: tmux
+  - name: Homebrew
+  - name: hledger
   - name: See my dotfiles
     link: https://github.com/crispgm/dotfiles
 
-- category: Other Gear
+- category: Web Services
+  items:
+  - name: GitHub
+  - name: Stack Overflow
+  - name: Netlify
+  - name: Heroku
+  - name: NameCheap
+  - name: Unsplash
+
+- category: Programming Languages
+  items:
+  - name: Go
+  - name: Ruby
+  - name: Shell
+  - name: Python (inactive)
+  - name: PHP (inactive)
+
+- category: Theme & Font
+  items:
+  - name: Nord Theme
+  - name: Menlo
+  - name: Source Code Pro
+
+- category: Softwares for Lifestyle
+  items:
+  - name: 1Password
+  - name: Scanner Pro
+  - name: Reeder
+  - name: Tweetbot
+  - name: Pocket Casts
+  - name: Steam
+
+- category: Other Gears
   items:
   - name: Bellroy Slingbag
   - name: Bellroy Card Sleeve
