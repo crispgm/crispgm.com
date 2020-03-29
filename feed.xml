@@ -5,9 +5,43 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Feb 2020 11:24:02 +0800</pubDate>
-    <lastBuildDate>Wed, 19 Feb 2020 11:24:02 +0800</lastBuildDate>
+    <pubDate>Sun, 29 Mar 2020 15:07:25 +0800</pubDate>
+    <lastBuildDate>Sun, 29 Mar 2020 15:07:25 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      
+      <item>
+        <title>Alfred Nord, A Nord theme for Alred</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crispgm/alfred-nord&quot;&gt;Alfred Nord&lt;/a&gt; is an unofficial port of &lt;a href=&quot;http://nordtheme.com/&quot;&gt;Nord theme&lt;/a&gt; for &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; 3 &amp;amp; 4.&lt;/p&gt;
+
+&lt;p&gt;I have been a big fan of Nord theme for years and I have used official Nord themes for everything. e.g., iTerm2, Sublime Text, Visual Studio Code, neovim, tmux, and so on.&lt;/p&gt;
+
+&lt;p&gt;Alfred Nord theme is not provided officially, so I made this unofficial port, which follows Nord colors and palettes&lt;/p&gt;
+
+&lt;p&gt;Compared to other ports, I chose a smaller icon sizes to make it more neat.&lt;/p&gt;
+
+&lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.alfredapp.com/extras/theme/5Y8E7URIWQ/&quot;&gt;https://www.alfredapp.com/extras/theme/5Y8E7URIWQ/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;or manually download &lt;a href=&quot;https://github.com/crispgm/alfred-nord/raw/master/Nord.alfredappearance&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Nord.alfredappearance&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;You need the &lt;a href=&quot;https://www.alfredapp.com/powerpack/&quot;&gt;Powerpack&lt;/a&gt; for custom themes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;preview&quot;&gt;Preview&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/alfred-nord.jpg&quot; alt=&quot;alfred-nord-screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, thanks Alfred and &lt;a href=&quot;https://github.com/arcticicestudio&quot;&gt;Arctic Ice Studio&lt;/a&gt; (designer of Nord) for making such good tool and color scheme. And hope you enjoy Alfred Nord.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 29 Mar 2020 00:00:00 +0800</pubDate>
+        <link>https://crispgm.com/page/alfred-nord.html</link>
+        <guid isPermaLink="true">https://crispgm.com/page/alfred-nord.html</guid>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -1273,84 +1307,6 @@ brew &lt;span class=&quot;s2&quot;&gt;&quot;p7zip&quot;&lt;/span&gt;
         <pubDate>Mon, 04 Feb 2019 00:00:00 +0800</pubDate>
         <link>https://crispgm.com/page/2018-lifestyle-summary.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/2018-lifestyle-summary.html</guid>
-        
-        
-      </item>
-      
-    
-      
-      <item>
-        <title>Drip Coffee and Nespresso</title>
-        <description>&lt;p&gt;&lt;em&gt;HINT: This is a recommendation post on home coffee making based on my real experience.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I am a big coffee lover and addict. Coffee keeps me energetic with just enough sleep. Without coffee, I have to take a nap or sleep much more.&lt;/p&gt;
-
-&lt;p&gt;I buy coffee on work and go to coffee shop on weekends. It actually took considerable money. Thus, I brew coffee by myself.&lt;/p&gt;
-
-&lt;h3 id=&quot;starter-kit&quot;&gt;Starter Kit&lt;/h3&gt;
-
-&lt;p&gt;My very first kit is Penguin Drip Starter Kit, which includes basic setups for drip  coffee making. And I chose an indie coffee bean shop from Taobao — the Fisher Coffee.&lt;/p&gt;
-
-&lt;p&gt;Penguin Drip Starter Kit includes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Kalita Dripper&lt;/li&gt;
-  &lt;li&gt;Kalita Wave Filter Paper&lt;/li&gt;
-  &lt;li&gt;Bonavita Gooseneck Kettle&lt;/li&gt;
-  &lt;li&gt;WPM Coffee Bean Grinder&lt;/li&gt;
-  &lt;li&gt;Basic electronic weighter&lt;/li&gt;
-  &lt;li&gt;Basic glass server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And later, a Kalita Glass Server because I broke the kit one.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/penguin-starter-kit.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;P.S. Blue Bottle Coffee is not included.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The price (¥1284/$188) is reasonable. It’s great for a new comer to understand how drip coffee works and dive into drip coffee with joy.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-problems&quot;&gt;The Problems&lt;/h3&gt;
-
-&lt;p&gt;Drip coffee is actually &lt;em&gt;convenient&lt;/em&gt;. But it’s not instant for a work morning. There was just not enough time to make one cup of coffee for myself, since I usually get up late.&lt;/p&gt;
-
-&lt;p&gt;Therefore, I made drip coffee only at the weekends. That sounds fine, however, it means a bag of beans would be kept for more than one month and it was not a good way to keep the beans fresh. At the beginning, it really smells and tastes good, especially during grind. In contrary, it becomes much bitter and more astringent. Big difference!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/hario-canister.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I bought a &lt;a href=&quot;https://www.hario.jp/seihin/productdetail.php?product=MCN-200B&quot;&gt;Hario Coffee Canister&lt;/a&gt; to store the beans, hoped to isolate air and reduce oxidation rate. But my experience proved that it made little contribution to the freshness unless I could consume the beans quickly.&lt;/p&gt;
-
-&lt;p&gt;The conclusion is that freshly brewed coffee works only if you brew frequently.&lt;/p&gt;
-
-&lt;h3 id=&quot;drip-coffee-bag&quot;&gt;Drip Coffee Bag&lt;/h3&gt;
-
-&lt;p&gt;Drip Coffee Bag provides a similar experience as typical drip coffee, and even faster and more convenient. More importantly, the oxidation rate is just low enough to keep on a good flavour level. Though it tastes worse than real fresh brewed coffee, its average taste is good enough for me as an occasional brewer.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/fisher-coffee.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another advantage of coffee bag is that we may buy a pack with various kinds of beans, which means we can easily taste lots of beans.&lt;/p&gt;
-
-&lt;p&gt;With Drip Coffee Bag, I omitted the grinder step but it remained to be a weekend pleasure.&lt;/p&gt;
-
-&lt;h3 id=&quot;nespresso&quot;&gt;Nespresso&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/sydney-opera-house.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;When I was staying at Sydney, the hotel provided Delonghi Nespresso coffee maker (however, I don’t know the exact model). I used it several times a day to get caffeinated. That’s great experience for me, both the city and the coffee.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/nespresso-clips.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The machine I bought is Nespresso Clips, which is quite similar to Nespresso Pixie C60.&lt;/p&gt;
-
-&lt;p&gt;It basically need one minute to fill the water tank (if in need) and one more minute to brew and add some sugar. This enables me to get a cup of coffee every morning. In addition, it’s even easier to taste different flavours.&lt;/p&gt;
-
-&lt;p&gt;And there are major differences between Nespresso and drip coffee. Nespresso brews Espresso coffee or its derivatives. The tastes can be quite different, which is the reason why I will keep the drip coffee kit and have a drink when I want.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/coffee-life.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Enjoy the coffee life!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 12 Jan 2019 00:00:00 +0800</pubDate>
-        <link>https://crispgm.com/page/drip-coffee-and-nespresso.html</link>
-        <guid isPermaLink="true">https://crispgm.com/page/drip-coffee-and-nespresso.html</guid>
         
         
       </item>
