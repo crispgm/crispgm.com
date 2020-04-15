@@ -2,6 +2,7 @@
 title: About
 permalink: /about.html
 ---
+
 <div class="page-title">About</div>
 
 Hello, I am David Zhang ([resume](https://crispgm.com/resume/){:target="_blank"}), a.k.a crisp or crispgm on the internet. I am a software engineer of fullstack web development. I make web products, and contribute to [open source community](/project.html). I write [blog posts](/blog.html) here, and post photos on [Instagram](https://instagram.com/crispgm){:target="_blank"}.
@@ -20,11 +21,9 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, co
 
 <div class="page-title">Links</div>
 
-* [/uses](/uses.html)
+* [Crisp Typings](https://crispgm.github.io/typings/)
 * [Crisp Minimal Weekly](https://crispgm.github.io/weekly/)
 * [Crisp Wiki](https://crispgm.com/wiki/)
-* [Rugby News Board](http://nbrugby.com/)
-* [Word Kanban](https://word-kanban.herokuapp.com/)
 
 <div class="page-title">License</div>
 
