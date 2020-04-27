@@ -11,7 +11,8 @@ permalink: /page/programmers-keycaps-compare.html
 
 这里，我希望串联起这些键帽在原来的编辑器中的样子。让广大之前没有接触过这些主题的键帽玩家，也对他们的背景有更为直观的认识。
 
-下面，我会列出最近几个程序员主题配色键帽：
+下面，我会列出近年来几个程序员主题配色键帽：
+- [GMK Solarized Dark](https://geekhack.org/index.php?topic=90192.0)
 - [GMK Oblivion](https://geekhack.org/index.php?topic=99174.0)
 - [GMK Nord](https://geekhack.org/index.php?topic=100646.0)
 - [GMK Dracula](https://geekhack.org/index.php?topic=100727.0)
@@ -24,6 +25,18 @@ permalink: /page/programmers-keycaps-compare.html
 - 语言为 Go 和 JavaScript
 - 编辑器为 Visual Studio Code (VSCode)
 - 分别在 Go 和 JavaScript 下截图，Base 部分渲染图以及60%键盘渲染图
+
+### Solarized Dark
+
+[Solarized](https://github.com/altercation/solarized)创立于2011年3月15日，是一个有[维基百科词条](https://en.wikipedia.org/wiki/Solarized_(color_scheme))的主题，官方支持一些平台，不过已经数年没有更新。
+
+Solarized 有两个版本，分别是 Dark 和 Light。其实很多编辑器主题也有类似的设置，甚至会自带4个不同版本。不过做成键帽的无一例外都是基于暗色模式的。
+
+Solarized Dark 呈现为一种介于蓝绿之间的色彩，GMK Solarized Dark 看起来色彩更少更绿。由于稍显年代久远，我没有找到正面渲染图。
+
+![]({{ "/image/keycaps/solarized-dark-in-go.png" | absolute_url }})
+![]({{ "/image/keycaps/solarized-dark-in-js.png" | absolute_url }})
+![]({{ "/image/keycaps/solarized-dark-set.png" | absolute_url }})
 
 ### Oblivion
 
