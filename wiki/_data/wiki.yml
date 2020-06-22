@@ -90,7 +90,7 @@
     <div>游戏：魔兽(Warcraft)中的奇美拉，类似希腊神话中的描述。</div>
 - id: starbucks-jiangzhehu
   q: 为什么星巴克的活动永远没有江浙沪的份？
-  a: 星巴克中国地区分为不同的两个部分。一部分是星巴克江浙沪，由台湾统一和美国星巴克合资；另一部分是除江浙沪以外的所有门市，属于美国星巴克直营。在产品和管理模式上都会有所不同，但星享卡是通用的。
+  a: 星巴克中国地区分为不同的两个部分。一部分是星巴克江浙沪，由台湾统一和美国星巴克合资；另一部分是除江浙沪以外的所有门市，属于美国星巴克直营。在产品和管理模式上都会有所不同，但星享卡是通用的。ps：星巴克已于2017年7月27日回购星巴克江浙沪经营权。
 - id: wednesday-thursday-friday
   q: 英语中 Wednesday, Thursday, Friday 分别代表了什么？
   a: 分别代表了奥丁、索尔、芙蕾雅。
@@ -102,7 +102,7 @@
   a: |
     macOS 截图会默认保存在桌面上，我们可以通过下面的方法，设置默认的截图保存位置：
     <pre><code># /path/to/screenshot 是要设置的路径
-    
+
     defaults write com.apple.screencapture location /path/to/screenshot
     killall SystemUIServer
     </pre></code>
@@ -120,8 +120,8 @@
   q: "tar: argument list too long 错误"
   a: |
     也就是说 tar 参数太多了。解决方法是，通过列表文件：
-    <pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print > /tmp/20131229.list  
-    tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
+    <pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print > /tmp/20131229.list
+    tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list
     rm /tmp/20131229.list
     </code></pre>
 - id: linux-delete-file-start-with-dash
@@ -153,20 +153,20 @@
     </code></pre>
     OSX 升级到 10.10 Yosemite 后，此问题没有再出现过，应该是苹果彻底修复了。
 - id: mac-terminal-color
-  q: Mac 终端显示颜色
+  q: macOS 终端显示颜色
   a: |
     修改 <code>~/.bash_profile</code>，添加：
     <pre><code>export CLICOLOR=1
     export LSCOLORS=gxfxaxdxcxegedabagacad
     </code></pre>
 - id: mac-ssh-auto-login
-  q: Mac 下 ssh 避免多次输入密码
+  q: macOS 下 ssh 避免多次输入密码
   a: |
     编辑文件：
     <pre><code>sudo vim /etc/ssh_config</code></pre>
     加入：
-    <pre><code>Host *   
-    ControlMaster auto  
+    <pre><code>Host *
+    ControlMaster auto
     ControlPath ~/.ssh/master-%r@%h:%p
     </code></pre>
     保存后，重新启动终端即可生效。
@@ -176,15 +176,15 @@
     使用 awk 统计日志中各项平均耗时
     <h4>基础扫描版</h4>
     <div>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</div>
-    <pre><code>less ui.log | 
-    awk 'BEGIN{FS="Timer\\["}{print $2}' | 
-    awk 'BEGIN{FS="\\]"}{print $1}' | 
-    awk '{for(i=1;i<=NF;i++){if($i!~/tbapi/){print $i}}}' | 
-    awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | 
+    <pre><code>less ui.log |
+    awk 'BEGIN{FS="Timer\\["}{print $2}' |
+    awk 'BEGIN{FS="\\]"}{print $1}' |
+    awk '{for(i=1;i<=NF;i++){if($i!~/tbapi/){print $i}}}' |
+    awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' |
     sort -n
     </pre></code>
     <h4>定时刷新版</h4>
     <div>每 2s 自动 tail 500 条，原理同上（ps：符号转义好恶心啊）</div>
     <pre><code>set +o history
-    watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  
+    watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"
     </pre></code>
