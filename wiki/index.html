@@ -334,7 +334,7 @@ default-character-set=utf8
             <div class="section-title title-a">
             </div>
             <div class="section-content">
-              星巴克中国地区分为不同的两个部分。一部分是星巴克江浙沪，由台湾统一和美国星巴克合资；另一部分是除江浙沪以外的所有门市，属于美国星巴克直营。在产品和管理模式上都会有所不同，但星享卡是通用的。
+              星巴克中国地区分为不同的两个部分。一部分是星巴克江浙沪，由台湾统一和美国星巴克合资；另一部分是除江浙沪以外的所有门市，属于美国星巴克直营。在产品和管理模式上都会有所不同，但星享卡是通用的。ps：星巴克已于2017年7月27日回购星巴克江浙沪经营权。
             </div>
           </div>
         </div>
@@ -447,8 +447,8 @@ sudo killall -HUP mDNSResponder
             </div>
             <div class="section-content">
               也就是说 tar 参数太多了。解决方法是，通过列表文件：
-<pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print > /tmp/20131229.list  
-tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list  
+<pre><code>find /path/to/crash_log/20131229 -name '*crash*' -print > /tmp/20131229.list
+tar zcf /path/to/client_log/20131229.tar.gz --files-from /tmp/20131229.list
 rm /tmp/20131229.list
 </code></pre>
 
@@ -531,7 +531,7 @@ OSX 升级到 10.10 Yosemite 后，此问题没有再出现过，应该是苹果
             <div class="section-title title-q">
             </div>
             <div class="section-content">
-              <a href="#mac-terminal-color">Mac 终端显示颜色</a>
+              <a href="#mac-terminal-color">macOS 终端显示颜色</a>
             </div>
           </div>
           <div class="section-item">
@@ -552,7 +552,7 @@ export LSCOLORS=gxfxaxdxcxegedabagacad
             <div class="section-title title-q">
             </div>
             <div class="section-content">
-              <a href="#mac-ssh-auto-login">Mac 下 ssh 避免多次输入密码</a>
+              <a href="#mac-ssh-auto-login">macOS 下 ssh 避免多次输入密码</a>
             </div>
           </div>
           <div class="section-item">
@@ -562,8 +562,8 @@ export LSCOLORS=gxfxaxdxcxegedabagacad
               编辑文件：
 <pre><code>sudo vim /etc/ssh_config</code></pre>
 加入：
-<pre><code>Host *   
-ControlMaster auto  
+<pre><code>Host *
+ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
 </code></pre>
 保存后，重新启动终端即可生效。
@@ -587,17 +587,17 @@ ControlPath ~/.ssh/master-%r@%h:%p
               使用 awk 统计日志中各项平均耗时
 <h4>基础扫描版</h4>
 <div>扫描整个日志，从 Timer 字段开始定位，过滤掉无用的 tbapi 开头的 timer</div>
-<pre><code>less ui.log | 
-awk 'BEGIN{FS="Timer\\["}{print $2}' | 
-awk 'BEGIN{FS="\\]"}{print $1}' | 
-awk '{for(i=1;i<=NF;i++){if($i!~/tbapi/){print $i}}}' | 
-awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' | 
+<pre><code>less ui.log |
+awk 'BEGIN{FS="Timer\\["}{print $2}' |
+awk 'BEGIN{FS="\\]"}{print $1}' |
+awk '{for(i=1;i<=NF;i++){if($i!~/tbapi/){print $i}}}' |
+awk 'BEGIN{FS=":"}{c[$1]++;s[$1]+=$2;}END{for(i in s){printf("%.2f\t%d\t%s\n",s[i]/c[i]/1000,c[i],i);}}' |
 sort -n
 </pre></code>
 <h4>定时刷新版</h4>
 <div>每 2s 自动 tail 500 条，原理同上（ps：符号转义好恶心啊）</div>
 <pre><code>set +o history
-watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"  
+watch "tail -500 ui.log|awk 'BEGIN{FS=\"Timer\\\[\"}{print \$2}'|awk 'BEGIN{FS=\"\\\]\"}{print \$1}'|awk '{for(i=1;i<=NF;i++){if(\$i!~/tbapi/){print \$i}}}'|awk 'BEGIN{FS=\":\"}{c[\$1]++;s[\$1]+=\$2;}END{for(i in s){printf(\"%.2f\t%d\t%s\n\",s[i]/c[i]/1000,c[i],i);}}'|sort -r -n"
 </pre></code>
 
             </div>

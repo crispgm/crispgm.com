@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1590981046">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1596878389">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -46,7 +46,7 @@
         <div class="article-main">
           <h1 id="这是什么">这是什么？</h1>
 
-<p>看板来源自日本，是丰田生产模式中的重要概念，用于流程管理<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>。看板在生产线中主要分为两类：领取看板和生产看板。在学习单词时，我们也可以类比成：生词看板和已掌握单词看板。</p>
+<p>看板来源自日本，是丰田生产模式中的重要概念，用于流程管理<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>。看板在生产线中主要分为两类：领取看板和生产看板。在学习单词时，我们也可以类比成：生词看板和已掌握单词看板。</p>
 
 <p>在互联网产品的项目管理领域，也有很多借助看板概念的工具，比如 Trello。而我做的就是一个看板风格的背单词工具，可以看作是 Trello 上的两个 kanban，或一个分为生词和已背单词列表的 Wunderlist。</p>
 
@@ -92,7 +92,7 @@
 
 <p>初始化并创建 Migration：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn add sequelize-cli
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn add sequelize-cli
 $ cd server
 $ ../node_modules/.bin/sequelize init
 $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:string,userId:string,status:integer
@@ -100,7 +100,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 
 <p>运行 Migration：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ../node_modules/.bin/sequelize db:migrate
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ../node_modules/.bin/sequelize db:migrate
 </code></pre></div></div>
 
 <p>对于 DB 的操作就不细说了，看文档就好。</p>
@@ -121,26 +121,26 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 
 <p>在 Express 中，创建一个中间件用于校验 JSON Web Token：</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">jwt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express-jwt'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">jwksRsa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jwks-rsa'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cors'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">jwt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express-jwt</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">jwksRsa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">jwks-rsa</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cors</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">checkJwt</span> <span class="o">=</span> <span class="nx">jwt</span><span class="p">({</span>
   <span class="na">secret</span><span class="p">:</span> <span class="nx">jwksRsa</span><span class="p">.</span><span class="nx">expressJwtSecret</span><span class="p">({</span>
     <span class="na">cache</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="na">rateLimit</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="na">jwksRequestsPerMinute</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="na">jwksUri</span><span class="p">:</span> <span class="s1">'https://crispgm.au.auth0.com/.well-known/jwks.json'</span><span class="p">,</span>
+    <span class="na">jwksUri</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://crispgm.au.auth0.com/.well-known/jwks.json</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">}),</span>
-  <span class="na">audience</span><span class="p">:</span> <span class="s1">'api.word-kanban.words'</span><span class="p">,</span>
-  <span class="na">issuer</span><span class="p">:</span> <span class="s1">'https://crispgm.au.auth0.com/'</span><span class="p">,</span>
-  <span class="na">algorithms</span><span class="p">:</span> <span class="p">[</span><span class="s1">'RS256'</span><span class="p">],</span>
+  <span class="na">audience</span><span class="p">:</span> <span class="dl">'</span><span class="s1">api.word-kanban.words</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">issuer</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://crispgm.au.auth0.com/</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">algorithms</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">RS256</span><span class="dl">'</span><span class="p">],</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
 <p>在具体接口中引入中间件：</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/word/create'</span><span class="p">,</span> <span class="nx">checkJwt</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/word/create</span><span class="dl">'</span><span class="p">,</span> <span class="nx">checkJwt</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">Word</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></div>
@@ -154,20 +154,20 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 </code></pre></div></div>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// translate.js</span>
-<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'node-fetch'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">GOOGLE_TRANSLATE_API_KEY</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../token'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">GOOGLE_TRANSLATE_API_KEY</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../token</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">translate</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">word</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">word</span><span class="p">;</span>
 
   <span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">q</span><span class="p">:</span> <span class="nx">word</span><span class="p">,</span>
-    <span class="na">source</span><span class="p">:</span> <span class="s1">'en'</span><span class="p">,</span>
-    <span class="na">target</span><span class="p">:</span> <span class="s1">'zh'</span><span class="p">,</span>
-    <span class="na">format</span><span class="p">:</span> <span class="s1">'text'</span><span class="p">,</span>
+    <span class="na">source</span><span class="p">:</span> <span class="dl">'</span><span class="s1">en</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">target</span><span class="p">:</span> <span class="dl">'</span><span class="s1">zh</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">};</span>
   <span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">`https://translation.googleapis.com/language/translate/v2?key=</span><span class="p">${</span><span class="nx">GOOGLE_TRANSLATE_API_KEY</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
-  <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span> <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span> <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()).</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span> <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()).</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">}</span>
@@ -197,7 +197,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
   <li><a href="https://auth0.com/docs/quickstart/spa/react/02-user-profile">React User Profile</a></li>
 </ul>
 
-<p>不过有一个教训，就是没有使用状态管理（如：Redux/Mobx），导致组件间（<code class="highlighter-rouge">Kanban</code>, <code class="highlighter-rouge">WordList</code>, <code class="highlighter-rouge">WordItem</code>, <code class="highlighter-rouge">WordInput</code>）相互传递数据有些复杂。幸好只有两个列表，否则代码会不太好维护。</p>
+<p>不过有一个教训，就是没有使用状态管理（如：Redux/Mobx），导致组件间（<code class="language-plaintext highlighter-rouge">Kanban</code>, <code class="language-plaintext highlighter-rouge">WordList</code>, <code class="language-plaintext highlighter-rouge">WordItem</code>, <code class="language-plaintext highlighter-rouge">WordInput</code>）相互传递数据有些复杂。幸好只有两个列表，否则代码会不太好维护。</p>
 
 <h3 id="react-trend">React Trend</h3>
 
@@ -209,7 +209,7 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 
 <p>这是个 React Component，我们需要用 <a href="https://github.com/developit/preact-compat">preact-compat</a> 来进行兼容。兼容的方式有很多，我选择在 Webpack 进行。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
@@ -228,11 +228,11 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
         <span class="o">&lt;</span><span class="nx">Trend</span>
           <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span>
           <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">50</span><span class="p">}</span>
-          <span class="nx">gradient</span><span class="o">=</span><span class="p">{[</span><span class="s1">'#343a40'</span><span class="p">,</span> <span class="s1">'#e64980'</span><span class="p">,</span> <span class="s1">'#f03e3e'</span><span class="p">]}</span>
+          <span class="nx">gradient</span><span class="o">=</span><span class="p">{[</span><span class="dl">'</span><span class="s1">#343a40</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#e64980</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#f03e3e</span><span class="dl">'</span><span class="p">]}</span>
           <span class="nx">smooth</span>
           <span class="nx">autoDraw</span>
           <span class="nx">autoDrawDuration</span><span class="o">=</span><span class="p">{</span><span class="mi">3000</span><span class="p">}</span>
-          <span class="nx">autoDrawEasing</span><span class="o">=</span><span class="s2">"ease-out"</span>
+          <span class="nx">autoDrawEasing</span><span class="o">=</span><span class="dl">"</span><span class="s2">ease-out</span><span class="dl">"</span>
         <span class="o">/&gt;</span>
       <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>    <span class="p">);</span>
@@ -267,12 +267,12 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
   <li>Choose from List</li>
   <li>URL
     <ul>
-      <li>添加生词的 API 接口：<code class="highlighter-rouge">https://word-kanban.herokuapp.com/api/v1/word</code></li>
+      <li>添加生词的 API 接口：<code class="language-plaintext highlighter-rouge">https://word-kanban.herokuapp.com/api/v1/word</code></li>
     </ul>
   </li>
   <li>Get Contents from URL
     <ul>
-      <li>选择 <code class="highlighter-rouge">POST</code> 请求，加入 <code class="highlighter-rouge">token</code> 和 <code class="highlighter-rouge">word</code>，<code class="highlighter-rouge">token</code> 在用户页面生成粘贴过来</li>
+      <li>选择 <code class="language-plaintext highlighter-rouge">POST</code> 请求，加入 <code class="language-plaintext highlighter-rouge">token</code> 和 <code class="language-plaintext highlighter-rouge">word</code>，<code class="language-plaintext highlighter-rouge">token</code> 在用户页面生成粘贴过来</li>
     </ul>
   </li>
 </ul>
@@ -292,10 +292,10 @@ $ ../node_modules/.bin/sequelize model:generate --name Words --attributes text:s
 
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://zh.wikipedia.org/wiki/%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86">看板管理</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://zh.wikipedia.org/wiki/%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86">看板管理</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
