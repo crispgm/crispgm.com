@@ -7,3 +7,4 @@ npm-debug.log
 /resume/_site
 /wiki/_site
 .sass-cache
+/site/.jekyll-cache
