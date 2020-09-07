@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1599284266">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1599449767">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -58,7 +58,7 @@
 
 <p>但 3.2.0 版和作为修补的 3.2.1 版本生态还不是很完善，原有的主题大多还没有完成 Gem 化改造。官方目前没有主题分享的网站，第三方主题资源分享网站也基本都没有升级，所以反而难以用新的方式选择主题。</p>
 
-<p>此外，主题 Gem 化带来的好处主要是主题分发的便捷性，但如果需要动手改动主题中的 css 或者 <code class="language-plaintext highlighter-rouge">_layouts</code> 文件，就比较麻烦。</p>
+<p>此外，主题 Gem 化带来的好处主要是主题分发的便捷性，但如果需要动手改动主题中的 css 或者 <code class="highlighter-rouge">_layouts</code> 文件，就比较麻烦。</p>
 
 <p>所以在短期内，我还是比较推荐使用上一个稳定的版本——3.1.6 版的模式。当然，即使程序是 3.2.1 版本也可以按旧的方式来使用，因为 Jekyll 是向下兼容的。</p>
 
@@ -81,17 +81,17 @@
 
 <p>Jekyll 虽然无法像动态网站程序一样读取数据库，但它提供了一种读取静态数据的方式，就是 Jekyll Data Files。</p>
 
-<p>我们可以在 Jekyll Data Files 中使用 YAML, JSON 或 CSV 格式的文件，实现类似动态配置的效果。这些数据会被解析成变量 <code class="language-plaintext highlighter-rouge">site.data.your_data</code> 在 Liquid 模板中使用。</p>
+<p>我们可以在 Jekyll Data Files 中使用 YAML, JSON 或 CSV 格式的文件，实现类似动态配置的效果。这些数据会被解析成变量 <code class="highlighter-rouge">site.data.your_data</code> 在 Liquid 模板中使用。</p>
 
 <h2 id="jekyll-themes">Jekyll Themes</h2>
 
-<p>Jekyll 主题在支持 RubyGems 前，需要通过复制来实现。很简单粗暴，就是把已经做好的 <code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_includes</code>, <code class="language-plaintext highlighter-rouge">_layouts</code> 和相关静态文件一起复制到自己的目录中。</p>
+<p>Jekyll 主题在支持 RubyGems 前，需要通过复制来实现。很简单粗暴，就是把已经做好的 <code class="highlighter-rouge">_config.yml</code>, <code class="highlighter-rouge">_includes</code>, <code class="highlighter-rouge">_layouts</code> 和相关静态文件一起复制到自己的目录中。</p>
 
 <p>Jekyll 原生支持 sass，并且也可以通过插件形式使用 Less 等其它的 CSS 预处理器。</p>
 
 <p>官方目前没有主题分享的网站，第三方主题资源分享网站还算比较丰富，甚至已经有了不少付费的主题。不过，这些网站都还没有迁移成 RubyGems。</p>
 
-<p>3.2.0 版发布后，Jekyll 支持了 <code class="language-plaintext highlighter-rouge">jekyll new-theme</code> 指令，可以方便的创建自己的主题，并且发布到 RubyGems。有兴趣自制主题的 geeks，可以贡献出自己的主题。</p>
+<p>3.2.0 版发布后，Jekyll 支持了 <code class="highlighter-rouge">jekyll new-theme</code> 指令，可以方便的创建自己的主题，并且发布到 RubyGems。有兴趣自制主题的 geeks，可以贡献出自己的主题。</p>
 
 <h2 id="liquid-templates">Liquid Templates</h2>
 
@@ -105,7 +105,7 @@
 
 <p>如下，表示页面的标题：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ page.title }}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ page.title }}
 </code></pre></div></div>
 
 <h4 id="tags">Tags</h4>
@@ -114,7 +114,7 @@
 
 <p>Jekyll 就有一种扩展是通过扩展 Liquid Tags 来实现。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if user %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if user %}
   Hello {{ user.name }}!
 {% endif %}
 </code></pre></div></div>
@@ -123,7 +123,7 @@
 
 <p><strong>Filters</strong> 写法和效果都可以类比于 Shell 中的 Pipe 模式。输出的变量，通过管道符传递进行链式处理。Jekyll 官方扩展了一批 Liquid Filters 配合 Liquid Objects，便于实现博客系统。如：博客的排序、日期的格式化等。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ "/my/fancy/url" | append: ".html" }}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ "/my/fancy/url" | append: ".html" }}
 </code></pre></div></div>
 
 <p>注：以上例子均取自 <a href="https://shopify.github.io/liquid/basics/introduction/">Liquid 官方文档</a>。</p>
@@ -134,9 +134,9 @@
 
 <p>扩展可以通过 Gem 或本地文件分发使用，这块的生态比较杂，主要还是通过 Jekyll 主页 <a href="https://jekyllrb.com/docs/plugins/">Jekyll Plugins 文档</a>的专门区域分享插件。对于插件开发者来说，完成开发后可以发 PR 修改 Jekyll Plugins 页面把你的插件分享出来，一般都会被准许 merge（<del>想骗贡献的速来</del>）。</p>
 
-<p>我自己也写了一个 Jekyll Plugin，名叫 jekyll-taglist。这是一个 <code class="language-plaintext highlighter-rouge">Liquid Tags</code> 扩展，其作用是收集并输出文章的标签 <code class="language-plaintext highlighter-rouge">page.tags</code> 和其计数，支持对标签的条件选择、过滤和排序。输出后，我们可以通过 CSS 实现一些展示效果。</p>
+<p>我自己也写了一个 Jekyll Plugin，名叫 jekyll-taglist。这是一个 <code class="highlighter-rouge">Liquid Tags</code> 扩展，其作用是收集并输出文章的标签 <code class="highlighter-rouge">page.tags</code> 和其计数，支持对标签的条件选择、过滤和排序。输出后，我们可以通过 CSS 实现一些展示效果。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 设定条件：
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 设定条件：
 # - 阈值为1
 # - 显示计数
 # - 使用计数进行降序排序
@@ -158,7 +158,7 @@
 <p>Jekyll 不仅测试做到了自动化，还做到了整体工作流的自动化。Jekyll 启用了 @jekyllbot 辅助项目维护团队：</p>
 
 <ul>
-  <li>Merge PR：通过在 PR 中 <code class="language-plaintext highlighter-rouge">@jekyllbot: merge +site</code> 控制合并，并且在合并后机器人会自动根据后缀内容（+site 代表这个 PR 是对网站文档进行的修改）将变更分类加入到 changelog 中。</li>
+  <li>Merge PR：通过在 PR 中 <code class="highlighter-rouge">@jekyllbot: merge +site</code> 控制合并，并且在合并后机器人会自动根据后缀内容（+site 代表这个 PR 是对网站文档进行的修改）将变更分类加入到 changelog 中。</li>
   <li>版本发布：会在 GitHub 打 tag 并发布 release，release 内容会从更新列表中拉取；自动更新并 push gemspec 文件到 RubyGems；获取这个版本内的所有变更贡献者，加入到版本发布新闻的感谢列表中。</li>
 </ul>
 
@@ -170,9 +170,9 @@
 
 <p>由于种种原因，我的博客并没有部署在 GitHub Pages 上，而是独立的主机。因此，在 push 到 GitHub 之后还需要部署到主机中。我们可以在主机上起一个代码更新部署进程，在 push 后通过 GitHub WebHooks 回调主机上的更新接口，实现自动化部署。这样，只要一 push 代码就会触发主机上的更新。</p>
 
-<p>为了让 push 本身更容易，又通过 <code class="language-plaintext highlighter-rouge">Rakefile</code> 将 <code class="language-plaintext highlighter-rouge">jekyll build</code> 和 push 也自动化，完成 build 之后自动提交如：</p>
+<p>为了让 push 本身更容易，又通过 <code class="highlighter-rouge">Rakefile</code> 将 <code class="highlighter-rouge">jekyll build</code> 和 push 也自动化，完成 build 之后自动提交如：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "Deployed at 2016-08-18 14:50:26 +0800"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "Deployed at 2016-08-18 14:50:26 +0800"
 
 git push origin master
 </code></pre></div></div>
@@ -183,12 +183,12 @@ git push origin master
 
 <p>对于邮件人和抄送人，建立一些 Group，并且通过 Liquid Tags 返回这些人的邮件地址。如：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to: '{% group_members tech_core members %}'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to: '{% group_members tech_core members %}'
 </code></pre></div></div>
 
 <p>对于标题，则使用 Liquid Objects 传入时间等变量，并使用 Liquid Filters 将时间转换为合适的样式。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title: '项目日报 {{ created_time | date: "%Y%m%d" }}' 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title: '项目日报 {{ created_time | date: "%Y%m%d" }}' 
 </code></pre></div></div>
 
 
