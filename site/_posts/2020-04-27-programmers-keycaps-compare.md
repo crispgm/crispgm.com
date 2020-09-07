@@ -67,8 +67,8 @@ GMK Nord 单从发布时间比 GMK Dracula 要早，但遭受了 Oblivion 和 Dr
 
 ![]({{ "/image/keycaps/nord-in-go.png" | absolute_url }})
 ![]({{ "/image/keycaps/nord-in-js.png" | absolute_url }})
-![]({{ "/image/keycaps/nord-set.jpg" | absolute_url }})
-![]({{ "/image/keycaps/nord-render.jpg" | absolute_url }})
+![]({{ "/image/keycaps/nord-set.png" | absolute_url }})
+![]({{ "/image/keycaps/nord-render.png" | absolute_url }})
 
 ### Dracula
 
@@ -82,7 +82,7 @@ ps: GMK Dracula 的 IC 贴也是浓浓的程序员风格，[推荐大家围观�
 
 ![]({{ "/image/keycaps/dracula-in-go.png" | absolute_url }})
 ![]({{ "/image/keycaps/dracula-in-js.png" | absolute_url }})
-![]({{ "/image/keycaps/dracula-set.jpg" | absolute_url }})
+![]({{ "/image/keycaps/dracula-set.png" | absolute_url }})
 ![]({{ "/image/keycaps/dracula-render.png" | absolute_url }})
 
 ### Monokai
@@ -95,8 +95,8 @@ Monokai 不像 Nord 和 Dracula，主题的移植更多的依靠社区贡献，�
 
 ![]({{ "/image/keycaps/monokai-in-go.png" | absolute_url }})
 ![]({{ "/image/keycaps/monokai-in-js.png" | absolute_url }})
-![]({{ "/image/keycaps/monokai-set.jpg" | absolute_url }})
-![]({{ "/image/keycaps/monokai-render.jpg" | absolute_url }})
+![]({{ "/image/keycaps/monokai-set.png" | absolute_url }})
+![]({{ "/image/keycaps/monokai-render.png" | absolute_url }})
 
 ### 最后
 
