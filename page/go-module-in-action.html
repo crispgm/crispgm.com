@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1599449767">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1601707704">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -44,19 +44,19 @@
           </div>
         </div>
         <div class="article-main">
-          <p>For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its <code class="highlighter-rouge">master</code> branch.</p>
+          <p>For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
 
-<p>If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> including the existence of <code class="highlighter-rouge">GOPATH</code>. That is because <strong>Google</strong> uses monorepo.</p>
+<p>If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> including the existence of <code class="language-plaintext highlighter-rouge">GOPATH</code>. That is because <strong>Google</strong> uses monorepo.</p>
 
-<p>There are some advantages claimed<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> and Golang’s dependency management could work on that well.</p>
+<p>There are some advantages claimed<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup> and Golang’s dependency management could work on that well.</p>
 
 <p>However, monorepo does not dominate the world. The dominance of open source community is GitHub. In contrast, GitHub follows fork &amp; pull request workflow.</p>
 
 <p>This (Go’s dependency management design) leads to lots of issues:</p>
 
 <ul>
-  <li>No tag, no semver. When <code class="highlighter-rouge">master</code> makes breaking change, it breaks build.</li>
-  <li>Not compatible with GitHub’s fork model, unless you make some hack on Git remote<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</li>
+  <li>No tag, no semver. When <code class="language-plaintext highlighter-rouge">master</code> makes breaking change, it breaks build.</li>
+  <li>Not compatible with GitHub’s fork model, unless you make some hack on Git remote<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>.</li>
 </ul>
 
 <p>To make it easier, there are some efforts:</p>
@@ -68,17 +68,17 @@
   <li><a href="https://github.com/golang/dep">Go Dep</a></li>
 </ul>
 
-<p>By these tools, we may handle vendors better. But these tools are not officialy supported and it needs commit all vendor packages to repository! Can you imagine a frontend or Node.js project commits its <code class="highlighter-rouge">node_modules</code>? This is ridiculous.</p>
+<p>By these tools, we may handle vendors better. But these tools are not officialy supported and it needs commit all vendor packages to repository! Can you imagine a frontend or Node.js project commits its <code class="language-plaintext highlighter-rouge">node_modules</code>? This is ridiculous.</p>
 
 <h2 id="go-module">Go Module</h2>
 
 <p>I don’t know the decision process, but Golang team finally launched Go Module in 1.11, which embraces the non-monorepo part of the world.</p>
 
 <ul>
-  <li>No <code class="highlighter-rouge">GOPATH</code>, and now we can clone to anywhere.</li>
-  <li><code class="highlighter-rouge">go get</code> inside a repo is not global, it works only at local.</li>
-  <li>No <code class="highlighter-rouge">vendor</code></li>
-  <li>Dependencies are defined in <code class="highlighter-rouge">go.mod</code> with git tags, commit hashes, and semver.</li>
+  <li>No <code class="language-plaintext highlighter-rouge">GOPATH</code>, and now we can clone to anywhere.</li>
+  <li><code class="language-plaintext highlighter-rouge">go get</code> inside a repo is not global, it works only at local.</li>
+  <li>No <code class="language-plaintext highlighter-rouge">vendor</code></li>
+  <li>Dependencies are defined in <code class="language-plaintext highlighter-rouge">go.mod</code> with git tags, commit hashes, and semver.</li>
 </ul>
 
 <h2 id="how-to">HOW TO</h2>
@@ -86,7 +86,7 @@
 <ol>
   <li>Install or upgrade to Go &gt;=1.11 (currently 1.12)</li>
   <li>
-    <p>Enable Go Module, edit <code class="highlighter-rouge">.bashrc</code> or <code class="highlighter-rouge">.zshrc</code>:</p>
+    <p>Enable Go Module, edit <code class="language-plaintext highlighter-rouge">.bashrc</code> or <code class="language-plaintext highlighter-rouge">.zshrc</code>:</p>
 
     <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">export </span><span class="nv">GO111MODULE</span><span class="o">=</span>on
 </code></pre></div>    </div>
@@ -151,9 +151,9 @@ go get github.com/crispgm/go-g@617f32e
 
 <h3 id="vscode">VSCode</h3>
 
-<p>There is a <a href="https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code">Go modules support</a> guide in <a href="https://github.com/microsoft/vscode-go">vscode-go</a> plugin. It is actually very easy that we just need to enable Language Server for go by adding one line to <code class="highlighter-rouge">settings.json</code>:</p>
+<p>There is a <a href="https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code">Go modules support</a> guide in <a href="https://github.com/microsoft/vscode-go">vscode-go</a> plugin. It is actually very easy that we just need to enable Language Server for go by adding one line to <code class="language-plaintext highlighter-rouge">settings.json</code>:</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"go.useLanguageServer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"go.useLanguageServer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></code></pre></div></div>
 
 <h2 id="troubles-encountered">Troubles Encountered</h2>
@@ -162,7 +162,7 @@ go get github.com/crispgm/go-g@617f32e
   <li>“Dependency’s Dependency”</li>
 </ul>
 
-<p>One of our in-house library depends on <a href="https://github.com/satori/go.uuid">satori/go.uuid</a>, with traditional <code class="highlighter-rouge">go get</code> it means depend on <code class="highlighter-rouge">master</code>. But Go Module got the latest tag by default. So the solution should be:</p>
+<p>One of our in-house library depends on <a href="https://github.com/satori/go.uuid">satori/go.uuid</a>, with traditional <code class="language-plaintext highlighter-rouge">go get</code> it means depend on <code class="language-plaintext highlighter-rouge">master</code>. But Go Module got the latest tag by default. So the solution should be:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>go get <span class="nt">-u</span> github.com/satori/go.uuid@master
 </code></pre></div></div>
@@ -173,7 +173,7 @@ go get github.com/crispgm/go-g@617f32e
 
 <p>It is actually caused by <a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a> (the web framework we use) and there is a <a href="https://github.com/gin-gonic/gin/issues/1673">solution</a>:</p>
 
-<p>Add the following to <code class="highlighter-rouge">go.mod</code> to solve the trouble.</p>
+<p>Add the following to <code class="language-plaintext highlighter-rouge">go.mod</code> to solve the trouble.</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>replace github.com/ugorji/go v1.1.4 <span class="o">=&gt;</span> github.com/ugorji/go/codec v0.0.0-20190204201341-e444a5086c43
 </code></pre></div></div>
@@ -184,16 +184,16 @@ go get github.com/crispgm/go-g@617f32e
 
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="http://benjvi.com/2016/07/05/Dependency-Management-In-Golang">http://benjvi.com/2016/07/05/Dependency-Management-In-Golang</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="http://benjvi.com/2016/07/05/Dependency-Management-In-Golang">http://benjvi.com/2016/07/05/Dependency-Management-In-Golang</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p><a href="https://en.wikipedia.org/wiki/Monorepo">https://en.wikipedia.org/wiki/Monorepo</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Monorepo">https://en.wikipedia.org/wiki/Monorepo</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3">
-      <p><a href="https://dev.to/loderunner/working-with-forks-in-go-3ab6">https://dev.to/loderunner/working-with-forks-in-go-3ab6</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://dev.to/loderunner/working-with-forks-in-go-3ab6">https://dev.to/loderunner/working-with-forks-in-go-3ab6</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

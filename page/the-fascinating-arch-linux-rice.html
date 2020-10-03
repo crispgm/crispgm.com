@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1599449767">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1601707704">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -53,7 +53,7 @@
 <p>RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements. Let me look up in the dictionary:</p>
 
 <blockquote>
-  <p>Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+  <p>Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup></p>
 </blockquote>
 
 <p>The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel as if we get better efficiency.</p>
@@ -91,7 +91,7 @@
 
 <p>Arch Linux chooses blue as major color, which is vivid and shows the sense of technology. I kept on copying the color scheme when I was building my own home page. Even though today, I still feel it is a good color scheme.</p>
 
-<p>Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get <em>solid</em> skills on that, I appreciate its idea: <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+<p>Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get <em>solid</em> skills on that, I appreciate its idea: <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup></p>
 
 <ul>
   <li>Simplicity, minimalism, and code elegance</li>
@@ -102,7 +102,7 @@
 
 <p>As soon as I read Arch’s philosophy, I know that the second point is the most important reason why it is popular in RICE culture. And Pacman makes it even easier and powerful.</p>
 
-<p>It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+<p>It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup></p>
 
 <p>And finally, it is like you make your own system and are responsible for yourself. You choose what you need and configure as you like based on what you can do. No surprise, no weird parts, so it is totally in control.</p>
 
@@ -122,10 +122,10 @@
 
 <p>i3-gaps is an i3 fork, which is almost the same and adds more features such as gaps between windows, that’s why it is called i3-gaps.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S i3-gaps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S i3-gaps
 </code></pre></div></div>
 
-<p>After installing X Window and i3-gaps, I got an empty desktop while I can open a terminal with <code class="highlighter-rouge">Mod+Enter</code>.</p>
+<p>After installing X Window and i3-gaps, I got an empty desktop while I can open a terminal with <code class="language-plaintext highlighter-rouge">Mod+Enter</code>.</p>
 
 <h3 id="alacritty">Alacritty</h3>
 
@@ -135,7 +135,7 @@
 
 <p>Then I found that <a href="https://github.com/jwilm/alacritty">Alacritty</a> is the right one for me. It is high-performance, GPU powered and easy configuration.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S alacritty
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S alacritty
 </code></pre></div></div>
 
 <p><img src="https://crispgm.com/image/rice-alacritty.png" alt="alacritty" /></p>
@@ -154,7 +154,7 @@
 
 <p>And as aforementioned, I replace rxvt-unicode with Alacritty.</p>
 
-<p>Based on i3wm-themer, I have finally done my first Arch Linux RICE. All configuration files of those parts are stored under <code class="highlighter-rouge">$XDG_CONFIG_HOME</code>.</p>
+<p>Based on i3wm-themer, I have finally done my first Arch Linux RICE. All configuration files of those parts are stored under <code class="language-plaintext highlighter-rouge">$XDG_CONFIG_HOME</code>.</p>
 
 <p><img src="https://crispgm.com/image/rice-screenshot.jpg" alt="screenshot" /></p>
 
@@ -173,7 +173,7 @@
 <ul>
   <li>Bash or Zsh uses dot rc files</li>
   <li>Most modern softwares use XDG directories</li>
-  <li>GUI apperances are configured under <code class="highlighter-rouge">.Xresources</code> or using GTK (or Qt) themes</li>
+  <li>GUI apperances are configured under <code class="language-plaintext highlighter-rouge">.Xresources</code> or using GTK (or Qt) themes</li>
 </ul>
 
 <p>And to make things much more difficult, they have their own file specifications.</p>
@@ -192,16 +192,16 @@
 
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://www.urbandictionary.com/define.php?term=rice&amp;defid=955541">Urban Dictionary: rice</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://www.urbandictionary.com/define.php?term=rice&amp;defid=955541">Urban Dictionary: rice</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p><a href="https://www.archlinux.org/about/">https://www.archlinux.org/about/</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://www.archlinux.org/about/">https://www.archlinux.org/about/</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3">
-      <p><a href="https://wiki.archlinux.org/index.php/Arch_compared_to_other_distributions#Gentoo/Funtoo_Linux">Arch compared to other distributions</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://wiki.archlinux.org/index.php/Arch_compared_to_other_distributions#Gentoo/Funtoo_Linux">Arch compared to other distributions</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

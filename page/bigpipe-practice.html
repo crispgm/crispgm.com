@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1599449767">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1601707704">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -65,7 +65,7 @@
 <span class="k">echo</span> <span class="s1">'world'</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>这是一个最简单的 BigPipe demo，然而由于 <code class="highlighter-rouge">fastcgi_buffer</code> 的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用 <code class="highlighter-rouge">str_pad</code> 填充一些字符以达到 buffer。ps：吐槽一下 <code class="highlighter-rouge">str_pad</code> 这个函数名，明明 str 系列函数都是不带下划线的，如 <code class="highlighter-rouge">strlen</code>, <code class="highlighter-rouge">strcpy</code> 等，但这个函数却有下划线。str 系列函数表示：我们之间出现了叛徒！</p>
+<p>这是一个最简单的 BigPipe demo，然而由于 <code class="language-plaintext highlighter-rouge">fastcgi_buffer</code> 的存在，并不能看到分段输出的效果。那么，我们把程序进行一下改动，用 <code class="language-plaintext highlighter-rouge">str_pad</code> 填充一些字符以达到 buffer。ps：吐槽一下 <code class="language-plaintext highlighter-rouge">str_pad</code> 这个函数名，明明 str 系列函数都是不带下划线的，如 <code class="language-plaintext highlighter-rouge">strlen</code>, <code class="language-plaintext highlighter-rouge">strcpy</code> 等，但这个函数却有下划线。str 系列函数表示：我们之间出现了叛徒！</p>
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">echo</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">' '</span><span class="p">);</span>
 <span class="nb">flush</span><span class="p">();</span>
@@ -100,30 +100,30 @@
 
 <p>由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t = max(t1, t2, t3...)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t = max(t1, t2, t3...)
 </code></pre></div></div>
 
 <p>框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。</p>
 
-<p>因此，BigPipe 并行框架采用异步-回调模式，通过状态机模拟异步过程。状态机会以深度优先遍历 DataProvider 以及其依赖的 DataProvider，并初始化成 <code class="highlighter-rouge">INITIAL</code> 状态。没有依赖的 DataProvider 会直接执行，进入 <code class="highlighter-rouge">EXECUTING</code> 状态。当一个有依赖的 DataProvider 的依赖已经全部处于 <code class="highlighter-rouge">READY</code> 状态时，则会同一般的 DataProvider 一样 <code class="highlighter-rouge">execute</code> 执行。<code class="highlighter-rouge">execute</code> 函数中会有数据交互和业务逻辑处理，当处理完毕后需要主动调用 <code class="highlighter-rouge">ready</code> 函数将 DataProvider 自身置为 <code class="highlighter-rouge">READY</code>。</p>
+<p>因此，BigPipe 并行框架采用异步-回调模式，通过状态机模拟异步过程。状态机会以深度优先遍历 DataProvider 以及其依赖的 DataProvider，并初始化成 <code class="language-plaintext highlighter-rouge">INITIAL</code> 状态。没有依赖的 DataProvider 会直接执行，进入 <code class="language-plaintext highlighter-rouge">EXECUTING</code> 状态。当一个有依赖的 DataProvider 的依赖已经全部处于 <code class="language-plaintext highlighter-rouge">READY</code> 状态时，则会同一般的 DataProvider 一样 <code class="language-plaintext highlighter-rouge">execute</code> 执行。<code class="language-plaintext highlighter-rouge">execute</code> 函数中会有数据交互和业务逻辑处理，当处理完毕后需要主动调用 <code class="language-plaintext highlighter-rouge">ready</code> 函数将 DataProvider 自身置为 <code class="language-plaintext highlighter-rouge">READY</code>。</p>
 
-<p>Pagelet 依赖的 DataProvider 都 <code class="highlighter-rouge">READY</code> 后，就会渲染页面。</p>
+<p>Pagelet 依赖的 DataProvider 都 <code class="language-plaintext highlighter-rouge">READY</code> 后，就会渲染页面。</p>
 
 <h3 id="buffer问题">Buffer问题</h3>
 
 <p>由于“各路” buffer 的存在，如果包比较小的话 BigPipe 的 chunked 输出很可能会被 buffer 住。针对这种情况，一般来说有两种方式。</p>
 
 <ol>
-  <li>使用 <code class="highlighter-rouge">str_pad</code> 这类函数进行填充，如：填充空格。永远将一次 flush 的数据填充到 <code class="highlighter-rouge">buffer_size</code>。</li>
-  <li>调小 buffer，让数据更容易达到 <code class="highlighter-rouge">buffer_size</code>。</li>
+  <li>使用 <code class="language-plaintext highlighter-rouge">str_pad</code> 这类函数进行填充，如：填充空格。永远将一次 flush 的数据填充到 <code class="language-plaintext highlighter-rouge">buffer_size</code>。</li>
+  <li>调小 buffer，让数据更容易达到 <code class="language-plaintext highlighter-rouge">buffer_size</code>。</li>
   <li>关闭 buffer。</li>
 </ol>
 
-<p>对于 Nginx 来说，会有 <code class="highlighter-rouge">proxy_buffer</code> 和 <code class="highlighter-rouge">fastcgi_buffer</code>。第一种方式，不用调整 buffer，但这种方式很不优雅，而且增加了带宽，并不是很合理。至于调小 buffer，这看起来是一个很好的思路，然而对于 gzip 过的数据来说，最小的 buffer 可能也比较大。因此，我们选择了关闭 <code class="highlighter-rouge">proxy_buffer</code> 和 <code class="highlighter-rouge">fastcgi_buffer</code>。</p>
+<p>对于 Nginx 来说，会有 <code class="language-plaintext highlighter-rouge">proxy_buffer</code> 和 <code class="language-plaintext highlighter-rouge">fastcgi_buffer</code>。第一种方式，不用调整 buffer，但这种方式很不优雅，而且增加了带宽，并不是很合理。至于调小 buffer，这看起来是一个很好的思路，然而对于 gzip 过的数据来说，最小的 buffer 可能也比较大。因此，我们选择了关闭 <code class="language-plaintext highlighter-rouge">proxy_buffer</code> 和 <code class="language-plaintext highlighter-rouge">fastcgi_buffer</code>。</p>
 
-<p>然而，这样带来了一个问题。线上运行中的 Nginx 1.4.4版本过低，关闭 <code class="highlighter-rouge">proxy_buffer</code> 的指令 <code class="highlighter-rouge">proxy_buffering off</code> 原生就支持。而关闭 <code class="highlighter-rouge">fastcgi_buffer</code> 的 <code class="highlighter-rouge">fastcgi_buffering</code> 需要1.5.6版本。所以首先，我们把 Nginx 版本升级到了1.7.8，重编译后上线。</p>
+<p>然而，这样带来了一个问题。线上运行中的 Nginx 1.4.4版本过低，关闭 <code class="language-plaintext highlighter-rouge">proxy_buffer</code> 的指令 <code class="language-plaintext highlighter-rouge">proxy_buffering off</code> 原生就支持。而关闭 <code class="language-plaintext highlighter-rouge">fastcgi_buffer</code> 的 <code class="language-plaintext highlighter-rouge">fastcgi_buffering</code> 需要1.5.6版本。所以首先，我们把 Nginx 版本升级到了1.7.8，重编译后上线。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Syntax: fastcgi_buffering on | off;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Syntax: fastcgi_buffering on | off;
 Default: fastcgi_buffering on;
 Context: http, server, location
 This directive appeared in version 1.5.6.
@@ -131,11 +131,11 @@ This directive appeared in version 1.5.6.
 
 <p>详见 <a href="http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering">http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_buffering</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 旧版本的Nginx并不支持fastcgi_buffering
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 旧版本的Nginx并不支持fastcgi_buffering
 nginx: [emerg] unknown directive "fastcgi_buffering"
 </code></pre></div></div>
 
-<p>还有一个问题，就是我们并不想对所有请求都关闭 buffer。为了将影响面做得最小，我们只想关闭特定模块的 buffer。改 <code class="highlighter-rouge">nginx.conf</code> 固然可以实现，不过对于不支持嵌套 <code class="highlighter-rouge">if</code> 的 <code class="highlighter-rouge">nginx.conf</code> 来说这是个很不舒服的用法。</p>
+<p>还有一个问题，就是我们并不想对所有请求都关闭 buffer。为了将影响面做得最小，我们只想关闭特定模块的 buffer。改 <code class="language-plaintext highlighter-rouge">nginx.conf</code> 固然可以实现，不过对于不支持嵌套 <code class="language-plaintext highlighter-rouge">if</code> 的 <code class="language-plaintext highlighter-rouge">nginx.conf</code> 来说这是个很不舒服的用法。</p>
 
 <p>幸好，在升级的过程中，发现了一个刚好可以用 http header，用于关闭 buffer。</p>
 

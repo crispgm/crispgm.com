@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1599449767">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1601707704">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -63,14 +63,14 @@ in which I have done a small amount of adjustment based on the reading habit of 
 
 <p>我使用一个脚本来测量内存使用情况，这个脚本会测试创建一个 100000 个不同整型数的数组所需要的内存：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = range(1, 100000);
 echo memory_get_usage() - $startMemory, " bytes\n";
 </code></pre></div></div>
 
 <p>下面的这张表展示了 PHP 5.6 和 PHP 7 在 32 位和 64 位系统中的内存占用对比：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |   32 bit |    64 bit
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |   32 bit |    64 bit
 ------------------------------
 PHP 5.6 | 7.37 MiB | 13.97 MiB
 ------------------------------
@@ -97,27 +97,27 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p><img src="https://nikic.github.io/images/basic_hashtable.svg" alt="" /></p>
 
-<p>“冲突处理”链表中的元素是 <code class="highlighter-rouge">bucket</code>。每个 <code class="highlighter-rouge">bucket</code> 会被单独分配。图片隐藏了 <code class="highlighter-rouge">bucket</code> 中实际存储的值（只显示了 key）。值被存储在独立分配的 <code class="highlighter-rouge">zval</code> 结构中，结构有 16 bytes（32 位）或 24 bytes（64 位）。</p>
+<p>“冲突处理”链表中的元素是 <code class="language-plaintext highlighter-rouge">bucket</code>。每个 <code class="language-plaintext highlighter-rouge">bucket</code> 会被单独分配。图片隐藏了 <code class="language-plaintext highlighter-rouge">bucket</code> 中实际存储的值（只显示了 key）。值被存储在独立分配的 <code class="language-plaintext highlighter-rouge">zval</code> 结构中，结构有 16 bytes（32 位）或 24 bytes（64 位）。</p>
 
-<p>另一件事就是图片没有体现出冲突处理链表实际是一个双向链表（这样可以便于删除操作）。在冲突处理链表旁边，还有另一个双向链表用于存储数组元素的顺序。对于一个有以<code class="highlighter-rouge">"a", "b", "c"</code> 3 个 key 为顺序的数组，顺序链表如下：</p>
+<p>另一件事就是图片没有体现出冲突处理链表实际是一个双向链表（这样可以便于删除操作）。在冲突处理链表旁边，还有另一个双向链表用于存储数组元素的顺序。对于一个有以<code class="language-plaintext highlighter-rouge">"a", "b", "c"</code> 3 个 key 为顺序的数组，顺序链表如下：</p>
 
 <p><img src="https://nikic.github.io/images/ordered_hashtable.svg" alt="" /></p>
 
 <p>所以，为什么旧的 Hash 表结构无论是内存消耗还是性能上都如此的低效？这有很多主要的原因：</p>
 
 <ul>
-  <li><code class="highlighter-rouge">bucket</code> 需要独立分配内存。内存分配慢而且需要额外增加 8 / 16 bytes，独立分配内存也意味着 <code class="highlighter-rouge">bucket</code> 在内存中会更分散，降低缓存效果。</li>
-  <li><code class="highlighter-rouge">zval</code> 也需要独立分配内存。同样的，内存分配慢而且会导致更多内存分配。除此之外，这还需要在每个 <code class="highlighter-rouge">bucket</code> 中存储一个指向 <code class="highlighter-rouge">zval</code> 的指针。因为旧的实现过度通用，它实际需要不止一个，而是两个指针。</li>
-  <li>双向链表需要为每个 <code class="highlighter-rouge">bucket</code> 存储 4 个指针，这单独就占用了 16 / 32 bytes… 除此之外，遍历链表是一件对缓存很不友好的操作。</li>
+  <li><code class="language-plaintext highlighter-rouge">bucket</code> 需要独立分配内存。内存分配慢而且需要额外增加 8 / 16 bytes，独立分配内存也意味着 <code class="language-plaintext highlighter-rouge">bucket</code> 在内存中会更分散，降低缓存效果。</li>
+  <li><code class="language-plaintext highlighter-rouge">zval</code> 也需要独立分配内存。同样的，内存分配慢而且会导致更多内存分配。除此之外，这还需要在每个 <code class="language-plaintext highlighter-rouge">bucket</code> 中存储一个指向 <code class="language-plaintext highlighter-rouge">zval</code> 的指针。因为旧的实现过度通用，它实际需要不止一个，而是两个指针。</li>
+  <li>双向链表需要为每个 <code class="language-plaintext highlighter-rouge">bucket</code> 存储 4 个指针，这单独就占用了 16 / 32 bytes… 除此之外，遍历链表是一件对缓存很不友好的操作。</li>
 </ul>
 
 <p>新的 Hash 表实现设法解决（或至少是改善）这些问题。</p>
 
 <h2 id="新的-zval-实现">新的 zval 实现</h2>
 
-<p>在进入实际的 Hash 表之前，我想先简单的看一下新的 <code class="highlighter-rouge">zval</code> 结构并且突出它和旧版的区别。<code class="highlighter-rouge">zval</code> 结构定义如下：</p>
+<p>在进入实际的 Hash 表之前，我想先简单的看一下新的 <code class="language-plaintext highlighter-rouge">zval</code> 结构并且突出它和旧版的区别。<code class="language-plaintext highlighter-rouge">zval</code> 结构定义如下：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct _zval_struct {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct _zval_struct {
     zend_value value;
     union {
         struct {
@@ -138,43 +138,43 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 };
 </code></pre></div></div>
 
-<p>你可以安全的忽略在定义中的宏 <code class="highlighter-rouge">ZEND_ENDIAN_LOHI_4</code>，它只用于在不同字节顺序的机器下保证可预计的内存布局。</p>
+<p>你可以安全的忽略在定义中的宏 <code class="language-plaintext highlighter-rouge">ZEND_ENDIAN_LOHI_4</code>，它只用于在不同字节顺序的机器下保证可预计的内存布局。</p>
 
-<p><code class="highlighter-rouge">zval</code> 结构有三部分：第一个成员是值。<code class="highlighter-rouge">zend_value</code> 联合体占用 8 bytes 用于存储不同类型的值，包括整型、字符串、数组等。具体存储什么依赖于 <code class="highlighter-rouge">zval</code> 的类型。</p>
+<p><code class="language-plaintext highlighter-rouge">zval</code> 结构有三部分：第一个成员是值。<code class="language-plaintext highlighter-rouge">zend_value</code> 联合体占用 8 bytes 用于存储不同类型的值，包括整型、字符串、数组等。具体存储什么依赖于 <code class="language-plaintext highlighter-rouge">zval</code> 的类型。</p>
 
-<p>第二部分是 4 bytes 的 <code class="highlighter-rouge">type_info</code>，包含有实际的类型（像 <code class="highlighter-rouge">IS_STRING</code> 或 <code class="highlighter-rouge">IS_ARRAY</code>），并且有一些额外的提供这个类型信息的标识。比如，如果这个 <code class="highlighter-rouge">zval</code> 存储了一个对象，则类型的标识会表明它是一个非常量、引用计数了的、可垃圾收集的、非复制类型。</p>
+<p>第二部分是 4 bytes 的 <code class="language-plaintext highlighter-rouge">type_info</code>，包含有实际的类型（像 <code class="language-plaintext highlighter-rouge">IS_STRING</code> 或 <code class="language-plaintext highlighter-rouge">IS_ARRAY</code>），并且有一些额外的提供这个类型信息的标识。比如，如果这个 <code class="language-plaintext highlighter-rouge">zval</code> 存储了一个对象，则类型的标识会表明它是一个非常量、引用计数了的、可垃圾收集的、非复制类型。</p>
 
-<p>最后 4 bytes 是 <code class="highlighter-rouge">zval</code> 结构中通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的下标，Hash 表用它存储在冲突处理链表中的下一个元素 —— 最后这一部分对我们很重要。</p>
+<p>最后 4 bytes 是 <code class="language-plaintext highlighter-rouge">zval</code> 结构中通常未使用的（它只是明确的填充物，编译器会自动引入）。然而，在特殊的上下文中，这部分空间会被存储一些额外信息。比如：AST（抽象语法树）节点用它存储行号，虚拟机常量用它存储缓存槽的下标，Hash 表用它存储在冲突处理链表中的下一个元素 —— 最后这一部分对我们很重要。</p>
 
-<p>如果你同之前的 <code class="highlighter-rouge">zval</code> 实现对比，一个最特别的不同是：新的 <code class="highlighter-rouge">zval</code> 结构不再有引用计数 <code class="highlighter-rouge">refcount</code>。这后面的原因是，<code class="highlighter-rouge">zval</code> 不再被单独分配，而是被直接集成在任何存储它的地方（比如：Hash 表中的 <code class="highlighter-rouge">bucket</code>）。</p>
+<p>如果你同之前的 <code class="language-plaintext highlighter-rouge">zval</code> 实现对比，一个最特别的不同是：新的 <code class="language-plaintext highlighter-rouge">zval</code> 结构不再有引用计数 <code class="language-plaintext highlighter-rouge">refcount</code>。这后面的原因是，<code class="language-plaintext highlighter-rouge">zval</code> 不再被单独分配，而是被直接集成在任何存储它的地方（比如：Hash 表中的 <code class="language-plaintext highlighter-rouge">bucket</code>）。</p>
 
-<p><code class="highlighter-rouge">zval</code> 本身不再使用引用计数，而复杂的数据类型如 <code class="highlighter-rouge">string</code>, <code class="highlighter-rouge">array</code>, <code class="highlighter-rouge">object</code> 和 <code class="highlighter-rouge">resource</code> 等还会使用引用计数。事实上，新的 <code class="highlighter-rouge">zval</code> 设计将引用计数从 <code class="highlighter-rouge">zval</code> 提到了 <code class="highlighter-rouge">array</code> 和 <code class="highlighter-rouge">object</code> 等结构上。这种方式会有很多好处，下面列出了部分好处：</p>
+<p><code class="language-plaintext highlighter-rouge">zval</code> 本身不再使用引用计数，而复杂的数据类型如 <code class="language-plaintext highlighter-rouge">string</code>, <code class="language-plaintext highlighter-rouge">array</code>, <code class="language-plaintext highlighter-rouge">object</code> 和 <code class="language-plaintext highlighter-rouge">resource</code> 等还会使用引用计数。事实上，新的 <code class="language-plaintext highlighter-rouge">zval</code> 设计将引用计数从 <code class="language-plaintext highlighter-rouge">zval</code> 提到了 <code class="language-plaintext highlighter-rouge">array</code> 和 <code class="language-plaintext highlighter-rouge">object</code> 等结构上。这种方式会有很多好处，下面列出了部分好处：</p>
 
 <ul>
-  <li><code class="highlighter-rouge">zval</code> 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头的额外消耗，并且通过避免不必要的分配和释放内存改善了缓存访问，提升了性能。</li>
-  <li><code class="highlighter-rouge">zval</code> 存储简单的数值不需要存储引用计数和 GC 根缓冲。</li>
-  <li>我们避免了双重的引用计数。例如：过去，对象会既使用 <code class="highlighter-rouge">zval</code> 的引用计数，又增加了一个额外的对象引用计数，被用于支持对象传值的语法。</li>
-  <li>由于所有复杂的值现在集成了引用计数，它们可以独立共享 <code class="highlighter-rouge">zval</code> 的机制，尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非留存（译者注：此处 interned 没有找到好的翻译，<a href="https://en.wikipedia.org/wiki/String_interning">string interning</a> 是指一种为每个不同的不可变字符串值只存储一个拷贝的方法）的字符串类型的键值。</li>
+  <li><code class="language-plaintext highlighter-rouge">zval</code> 只存简单的数值（比如布尔、整型数或浮点数），不再包涵任何内存分配。因此这节省了分配头的额外消耗，并且通过避免不必要的分配和释放内存改善了缓存访问，提升了性能。</li>
+  <li><code class="language-plaintext highlighter-rouge">zval</code> 存储简单的数值不需要存储引用计数和 GC 根缓冲。</li>
+  <li>我们避免了双重的引用计数。例如：过去，对象会既使用 <code class="language-plaintext highlighter-rouge">zval</code> 的引用计数，又增加了一个额外的对象引用计数，被用于支持对象传值的语法。</li>
+  <li>由于所有复杂的值现在集成了引用计数，它们可以独立共享 <code class="language-plaintext highlighter-rouge">zval</code> 的机制，尤其是现在可以共享字符串。这对 Hash 表的实现很重要，因为它不再需要复制一份非留存（译者注：此处 interned 没有找到好的翻译，<a href="https://en.wikipedia.org/wiki/String_interning">string interning</a> 是指一种为每个不同的不可变字符串值只存储一个拷贝的方法）的字符串类型的键值。</li>
 </ul>
 
 <h2 id="新的-hash-表实现">新的 Hash 表实现</h2>
 
-<p>在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 <code class="highlighter-rouge">bucket</code> 的结构开始：</p>
+<p>在我们所有的准备工作之后，我们最终进入 PHP 7 中新的 Hash 表实现。让我们从 <code class="language-plaintext highlighter-rouge">bucket</code> 的结构开始：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct _Bucket {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct _Bucket {
     zend_ulong        h;
     zend_string      *key;
     zval              val;
 } Bucket;
 </code></pre></div></div>
 
-<p>一个 <code class="highlighter-rouge">bucket</code> 是一个 Hash 表中的入口。它包含了很多你可以预料到的：一个 Hash 值 <code class="highlighter-rouge">h</code>，一个字符串键值 <code class="highlighter-rouge">key</code>，一个 <code class="highlighter-rouge">zval</code> 值 <code class="highlighter-rouge">val</code>。整型的键值会被存储在 <code class="highlighter-rouge">h</code>（键值和 Hash 在这里是一样的），<code class="highlighter-rouge">key</code> 将会被设为 <code class="highlighter-rouge">NULL</code>。</p>
+<p>一个 <code class="language-plaintext highlighter-rouge">bucket</code> 是一个 Hash 表中的入口。它包含了很多你可以预料到的：一个 Hash 值 <code class="language-plaintext highlighter-rouge">h</code>，一个字符串键值 <code class="language-plaintext highlighter-rouge">key</code>，一个 <code class="language-plaintext highlighter-rouge">zval</code> 值 <code class="language-plaintext highlighter-rouge">val</code>。整型的键值会被存储在 <code class="language-plaintext highlighter-rouge">h</code>（键值和 Hash 在这里是一样的），<code class="language-plaintext highlighter-rouge">key</code> 将会被设为 <code class="language-plaintext highlighter-rouge">NULL</code>。</p>
 
-<p>正如你看到的，<code class="highlighter-rouge">zval</code> 直接被 <code class="highlighter-rouge">bucket</code> 所内置，所以它不需要单独的分配，我们不需要为分配付出代价。</p>
+<p>正如你看到的，<code class="language-plaintext highlighter-rouge">zval</code> 直接被 <code class="language-plaintext highlighter-rouge">bucket</code> 所内置，所以它不需要单独的分配，我们不需要为分配付出代价。</p>
 
 <p>主 Hash 表的结构更加有趣：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct _HashTable {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct _HashTable {
     uint32_t          nTableSize;
     uint32_t          nTableMask;
     uint32_t          nNumUsed;
@@ -196,19 +196,19 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 } HashTable;
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">bucket</code>（相当于数组元素）存储在 <code class="highlighter-rouge">arData</code> 数组中，以 2 的幂为大小进行分配，数组的大小存储在 <code class="highlighter-rouge">nTableSize</code>（最小值为 8）。元素的实际数量是 <code class="highlighter-rouge">nNumOfElements</code>。注意，这个数组直接包含有 <code class="highlighter-rouge">bucket</code>。之前，我们使用一个指针数组去单独分配 <code class="highlighter-rouge">bucket</code>，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。</p>
+<p><code class="language-plaintext highlighter-rouge">bucket</code>（相当于数组元素）存储在 <code class="language-plaintext highlighter-rouge">arData</code> 数组中，以 2 的幂为大小进行分配，数组的大小存储在 <code class="language-plaintext highlighter-rouge">nTableSize</code>（最小值为 8）。元素的实际数量是 <code class="language-plaintext highlighter-rouge">nNumOfElements</code>。注意，这个数组直接包含有 <code class="language-plaintext highlighter-rouge">bucket</code>。之前，我们使用一个指针数组去单独分配 <code class="language-plaintext highlighter-rouge">bucket</code>，这意味着我们需要更多的分配/释放，不得不付出分配内存和额外的指针的代价。</p>
 
 <h2 id="元素的顺序">元素的顺序</h2>
 
-<p><code class="highlighter-rouge">arData</code> 数组按照插入的顺序存储元素。所以第一个元素会被存储在 <code class="highlighter-rouge">arData[0]</code>，第二个会被存储在 <code class="highlighter-rouge">arData[1]</code> ，等等。这完全不依赖用过的 key，只跟插入顺序有关。</p>
+<p><code class="language-plaintext highlighter-rouge">arData</code> 数组按照插入的顺序存储元素。所以第一个元素会被存储在 <code class="language-plaintext highlighter-rouge">arData[0]</code>，第二个会被存储在 <code class="language-plaintext highlighter-rouge">arData[1]</code> ，等等。这完全不依赖用过的 key，只跟插入顺序有关。</p>
 
-<p>所以如果你有 5 个 Hash 表元素，从 <code class="highlighter-rouge">arData[0]</code> 到 <code class="highlighter-rouge">arData[4]</code> 将会被占用，下一个空闲的槽式 <code class="highlighter-rouge">arData[5]</code>。我们将这个数存在 <code class="highlighter-rouge">nNumUsed</code>。你可能会疑惑：为什么要分开存储？这和 <code class="highlighter-rouge">nNumOfElements</code> 有区别吗？</p>
+<p>所以如果你有 5 个 Hash 表元素，从 <code class="language-plaintext highlighter-rouge">arData[0]</code> 到 <code class="language-plaintext highlighter-rouge">arData[4]</code> 将会被占用，下一个空闲的槽式 <code class="language-plaintext highlighter-rouge">arData[5]</code>。我们将这个数存在 <code class="language-plaintext highlighter-rouge">nNumUsed</code>。你可能会疑惑：为什么要分开存储？这和 <code class="language-plaintext highlighter-rouge">nNumOfElements</code> 有区别吗？</p>
 
-<p>提出这问题是因为只看了执行插入操作时的情况。如果从 Hash 表删除一个元素时，我们显然不希望通过移动 <code class="highlighter-rouge">arData</code> 中被删除的元素后面的全部元素来使数组保持连续。作为替代，我们只是在 <code class="highlighter-rouge">zval</code> 中标注 <code class="highlighter-rouge">IS_UNDEF</code> 类型。</p>
+<p>提出这问题是因为只看了执行插入操作时的情况。如果从 Hash 表删除一个元素时，我们显然不希望通过移动 <code class="language-plaintext highlighter-rouge">arData</code> 中被删除的元素后面的全部元素来使数组保持连续。作为替代，我们只是在 <code class="language-plaintext highlighter-rouge">zval</code> 中标注 <code class="language-plaintext highlighter-rouge">IS_UNDEF</code> 类型。</p>
 
 <p>用下面的代码作为例子：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$array = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$array = [
     'foo' =&gt; 0,
     'bar' =&gt; 1,
     0     =&gt; 2,
@@ -219,9 +219,9 @@ unset($array[0]);
 unset($array['xyz']);
 </code></pre></div></div>
 
-<p>这会形成如下的 <code class="highlighter-rouge">arData</code> 结构：</p>
+<p>这会形成如下的 <code class="language-plaintext highlighter-rouge">arData</code> 结构：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nTableSize     = 8
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nTableSize     = 8
 nNumOfElements = 3
 nNumUsed       = 5
 
@@ -235,11 +235,11 @@ nNumUsed       = 5
 [7]: NOT INITIALIZED
 </code></pre></div></div>
 
-<p>如你所见，前五个 <code class="highlighter-rouge">arData</code> 元素被使用了，但下标 2（key 为 0） 和 3（key 为 ‘xyz’） 被替换成了 <code class="highlighter-rouge">IS_UNDEF</code>，因为它们被 unset 了。这些元素现在还会浪费内存。然而，一旦 <code class="highlighter-rouge">nNumUsed</code> 达到 <code class="highlighter-rouge">nTableSize</code>，PHP会通过丢弃任何 <code class="highlighter-rouge">UNDEF</code> 的记录，自动压缩 <code class="highlighter-rouge">arData</code> 数组。只有当所有 <code class="highlighter-rouge">bucket</code> 真的有值才会被重分配到两倍大。</p>
+<p>如你所见，前五个 <code class="language-plaintext highlighter-rouge">arData</code> 元素被使用了，但下标 2（key 为 0） 和 3（key 为 ‘xyz’） 被替换成了 <code class="language-plaintext highlighter-rouge">IS_UNDEF</code>，因为它们被 unset 了。这些元素现在还会浪费内存。然而，一旦 <code class="language-plaintext highlighter-rouge">nNumUsed</code> 达到 <code class="language-plaintext highlighter-rouge">nTableSize</code>，PHP会通过丢弃任何 <code class="language-plaintext highlighter-rouge">UNDEF</code> 的记录，自动压缩 <code class="language-plaintext highlighter-rouge">arData</code> 数组。只有当所有 <code class="language-plaintext highlighter-rouge">bucket</code> 真的有值才会被重分配到两倍大。</p>
 
-<p>新的维护数组顺序的方式对于 PHP 5.x 的双向链表有很多优点。一个明显的优点是我们对于每个 <code class="highlighter-rouge">bucket</code> 节省两个指针，相当于 8/16 bytes。并且，这意味着数组迭代粗略如下：</p>
+<p>新的维护数组顺序的方式对于 PHP 5.x 的双向链表有很多优点。一个明显的优点是我们对于每个 <code class="language-plaintext highlighter-rouge">bucket</code> 节省两个指针，相当于 8/16 bytes。并且，这意味着数组迭代粗略如下：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint32_t i;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint32_t i;
 for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
     Bucket *b = &amp;ht-&gt;arData[i];
     if (Z_ISUNDEF(b-&gt;val)) continue;
@@ -250,21 +250,21 @@ for (i = 0; i &lt; ht-&gt;nNumUsed; ++i) {
 
 <p>这相当于一个内存线性扫描，比起链表遍历（需要进行向前向后的相对随机的内存寻址）更能有效缓存。</p>
 
-<p>当前实现的一个问题是 <code class="highlighter-rouge">arData</code> 从不收缩（除非明确告诉它这样做）。所以如果你创建一个几百万个元素的数组并在后来删除，数组还是会占用大量的内存。我们可能应该让 <code class="highlighter-rouge">arData</code> 的大小减半，如果使用降低到一定的程度。</p>
+<p>当前实现的一个问题是 <code class="language-plaintext highlighter-rouge">arData</code> 从不收缩（除非明确告诉它这样做）。所以如果你创建一个几百万个元素的数组并在后来删除，数组还是会占用大量的内存。我们可能应该让 <code class="language-plaintext highlighter-rouge">arData</code> 的大小减半，如果使用降低到一定的程度。</p>
 
 <h2 id="hash-表查找">Hash 表查找</h2>
 
-<p>到现在，我们只是讨论了 PHP 数组如何表示顺序。实际 Hash 表的查找使用了第二个包含有 <code class="highlighter-rouge">uint32_t</code> 值的 <code class="highlighter-rouge">arHash</code> 数组。<code class="highlighter-rouge">arHash</code> 数组合 <code class="highlighter-rouge">arData</code> 有相同的大小（<code class="highlighter-rouge">nTableSize</code>），两者实际上都被分配在同一内存分片上。</p>
+<p>到现在，我们只是讨论了 PHP 数组如何表示顺序。实际 Hash 表的查找使用了第二个包含有 <code class="language-plaintext highlighter-rouge">uint32_t</code> 值的 <code class="language-plaintext highlighter-rouge">arHash</code> 数组。<code class="language-plaintext highlighter-rouge">arHash</code> 数组合 <code class="language-plaintext highlighter-rouge">arData</code> 有相同的大小（<code class="language-plaintext highlighter-rouge">nTableSize</code>），两者实际上都被分配在同一内存分片上。</p>
 
-<p>返回的 Hash 值是由 Hash 函数（对于字符串使用 DJBX33A 算法）返回的 32 位或 64 位无符号整型，它们太大了不能直接用作 Hash 数组的下标。我们需要首先用取余操作将它们转换成表的大小。我们使用 <code class="highlighter-rouge">hash &amp; (ht-&gt;nTableSize - 1)</code> 而不是 <code class="highlighter-rouge">hash % ht-&gt;nTableSize</code>，在数组大小是 2 的幂的情况下，它们结果一致但不需要“昂贵”的整数除法操作。<code class="highlighter-rouge">ht-&gt;nTableSize - 1</code> 的值会被存储在 <code class="highlighter-rouge">ht-&gt;nTableMask</code>。</p>
+<p>返回的 Hash 值是由 Hash 函数（对于字符串使用 DJBX33A 算法）返回的 32 位或 64 位无符号整型，它们太大了不能直接用作 Hash 数组的下标。我们需要首先用取余操作将它们转换成表的大小。我们使用 <code class="language-plaintext highlighter-rouge">hash &amp; (ht-&gt;nTableSize - 1)</code> 而不是 <code class="language-plaintext highlighter-rouge">hash % ht-&gt;nTableSize</code>，在数组大小是 2 的幂的情况下，它们结果一致但不需要“昂贵”的整数除法操作。<code class="language-plaintext highlighter-rouge">ht-&gt;nTableSize - 1</code> 的值会被存储在 <code class="language-plaintext highlighter-rouge">ht-&gt;nTableMask</code>。</p>
 
-<p>接着，我们在 Hash 数组中寻找下标 <code class="highlighter-rouge">idx = ht-&gt;arHash[hash &amp; ht-&gt;nTableMask]</code>。这个下标相当于冲突处理链表的头部，所以 <code class="highlighter-rouge">ht-&gt;arData[idx]</code> 是我们第一个检查的纪录。如果 key 和我们要查找的匹配，事情就完成了。</p>
+<p>接着，我们在 Hash 数组中寻找下标 <code class="language-plaintext highlighter-rouge">idx = ht-&gt;arHash[hash &amp; ht-&gt;nTableMask]</code>。这个下标相当于冲突处理链表的头部，所以 <code class="language-plaintext highlighter-rouge">ht-&gt;arData[idx]</code> 是我们第一个检查的纪录。如果 key 和我们要查找的匹配，事情就完成了。</p>
 
-<p>否则，我们必须继续查找冲突处理链表的下一个。这个元素的下标会被存储在 <code class="highlighter-rouge">bucket-&gt;val.u2.next</code>，这个 <code class="highlighter-rouge">zval</code> 通常不被用到而是在特定上下文下才有意义的 4 bytes。我们继续遍历链表直到找到正确的 <code class="highlighter-rouge">bucket</code>，或者遇到 <code class="highlighter-rouge">INVALID_IDX</code>，也就是并不存在查找的 key 对应的元素。</p>
+<p>否则，我们必须继续查找冲突处理链表的下一个。这个元素的下标会被存储在 <code class="language-plaintext highlighter-rouge">bucket-&gt;val.u2.next</code>，这个 <code class="language-plaintext highlighter-rouge">zval</code> 通常不被用到而是在特定上下文下才有意义的 4 bytes。我们继续遍历链表直到找到正确的 <code class="language-plaintext highlighter-rouge">bucket</code>，或者遇到 <code class="language-plaintext highlighter-rouge">INVALID_IDX</code>，也就是并不存在查找的 key 对应的元素。</p>
 
 <p>查找机制如下代码中所示：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zend_ulong h = zend_string_hash_val(key);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zend_ulong h = zend_string_hash_val(key);
 uint32_t idx = ht-&gt;arHash[h &amp; ht-&gt;nTableMask];
 while (idx != INVALID_IDX) {
     Bucket *b = &amp;ht-&gt;arData[idx];
@@ -276,9 +276,9 @@ while (idx != INVALID_IDX) {
 return NULL;
 </code></pre></div></div>
 
-<p>让我们考虑下对于过去的实现做了怎样的优化：在 PHP 5.x 中，冲突处理链表是一个双向链表。使用 <code class="highlighter-rouge">uint32_t</code> 下标比指针更好，因为在 64 位系统只需要一半的内存。并且，4 bytes 刚好可以将 <code class="highlighter-rouge">next</code> 节点的链接内置在没有用到的 <code class="highlighter-rouge">zval</code> 槽中，所以我们本质上是没有付出任何代价使用的。</p>
+<p>让我们考虑下对于过去的实现做了怎样的优化：在 PHP 5.x 中，冲突处理链表是一个双向链表。使用 <code class="language-plaintext highlighter-rouge">uint32_t</code> 下标比指针更好，因为在 64 位系统只需要一半的内存。并且，4 bytes 刚好可以将 <code class="language-plaintext highlighter-rouge">next</code> 节点的链接内置在没有用到的 <code class="language-plaintext highlighter-rouge">zval</code> 槽中，所以我们本质上是没有付出任何代价使用的。</p>
 
-<p>我们现在还用了单向链表，没有 <code class="highlighter-rouge">prev</code> 节点。<code class="highlighter-rouge">prev</code> 节点对于删除元素很有用，因为当你进行删除时，不得不调整 <code class="highlighter-rouge">prev</code> 节点的 <code class="highlighter-rouge">next</code> 节点。然而，如果按照 key 来删除，你已经在遍历冲突处理链表时知道了前一个元素。</p>
+<p>我们现在还用了单向链表，没有 <code class="language-plaintext highlighter-rouge">prev</code> 节点。<code class="language-plaintext highlighter-rouge">prev</code> 节点对于删除元素很有用，因为当你进行删除时，不得不调整 <code class="language-plaintext highlighter-rouge">prev</code> 节点的 <code class="language-plaintext highlighter-rouge">next</code> 节点。然而，如果按照 key 来删除，你已经在遍历冲突处理链表时知道了前一个元素。</p>
 
 <p>在一些上下文情况下的删除（比如：删除迭代器当前所在的元素）可能会需要遍历冲突链表，以寻找前一个元素。但这不是一个很常见的场景，对于这种情况我们比起减少一次遍历更倾向于节省内存。</p>
 
@@ -286,62 +286,62 @@ return NULL;
 
 <p>PHP 对于任何数组都使用 Hash 表。然而，对于一些很常见的连续、整数下标的数组（比如：实数组），整个 Hash 系统并没有什么用。这是 PHP 7 要引入一个“打包 Hash 表”概念的原因。</p>
 
-<p>在打包 Hash 表中，<code class="highlighter-rouge">arHash</code> 数组是 <code class="highlighter-rouge">NULL</code> 并且直接通过 <code class="highlighter-rouge">arData</code> 查找。如果你查找下标为 5 的元素，元素就在 <code class="highlighter-rouge">arData[5]</code> 或者根本不存在，并没有必要遍历冲突处理链表。</p>
+<p>在打包 Hash 表中，<code class="language-plaintext highlighter-rouge">arHash</code> 数组是 <code class="language-plaintext highlighter-rouge">NULL</code> 并且直接通过 <code class="language-plaintext highlighter-rouge">arData</code> 查找。如果你查找下标为 5 的元素，元素就在 <code class="language-plaintext highlighter-rouge">arData[5]</code> 或者根本不存在，并没有必要遍历冲突处理链表。</p>
 
 <p>注意：即使是整数下标的 PHP 数组也需要维护顺序。数组 [0 =&gt; 1, 1 =&gt; 2] 和 [1 =&gt; 2, 0 =&gt; 1] 并不相同。打包 Hash 表的优化只对按照升序下标排序的数组有用。数组中可以有间隔（下标不连续），但必须是升序的。所以如果元素按照了错误的顺序插入（比如：倒序），打包 Hash 表优化将不会被使用。</p>
 
-<p>除此之外还要注意，打包 Hash 表仍然会存储很多无用信息。例如，我们可以基于内存地址来确定一个 <code class="highlighter-rouge">bucket</code> 的下标，所以 <code class="highlighter-rouge">bucket-&gt;h</code> 是冗余的。<code class="highlighter-rouge">bucket-&gt;key</code> 的值将会一直是 <code class="highlighter-rouge">NULL</code>，所以这也浪费了内存。</p>
+<p>除此之外还要注意，打包 Hash 表仍然会存储很多无用信息。例如，我们可以基于内存地址来确定一个 <code class="language-plaintext highlighter-rouge">bucket</code> 的下标，所以 <code class="language-plaintext highlighter-rouge">bucket-&gt;h</code> 是冗余的。<code class="language-plaintext highlighter-rouge">bucket-&gt;key</code> 的值将会一直是 <code class="language-plaintext highlighter-rouge">NULL</code>，所以这也浪费了内存。</p>
 
-<p>我们留着这些无用的值，所以 <code class="highlighter-rouge">bucket</code> 有一样的结构，与是否使用打包无关。这意味着，迭代可以使用相同的代码。然而，我们可能会在未来切换到“完全打包”的结构，如果可以那时将会使用纯粹的 <code class="highlighter-rouge">zval</code> 数组。</p>
+<p>我们留着这些无用的值，所以 <code class="language-plaintext highlighter-rouge">bucket</code> 有一样的结构，与是否使用打包无关。这意味着，迭代可以使用相同的代码。然而，我们可能会在未来切换到“完全打包”的结构，如果可以那时将会使用纯粹的 <code class="language-plaintext highlighter-rouge">zval</code> 数组。</p>
 
 <h2 id="空-hash-表">空 Hash 表</h2>
 
-<p>空 Hash 表在 PHP 5.x 和 PHP 7 中都会被特殊处理。如果你创建了空数组 <code class="highlighter-rouge">array []</code>，很有可能你不会实际上插入任何元素。<code class="highlighter-rouge">arData/arHash</code> 数组只会在你插入第一个元素时分配内存。</p>
+<p>空 Hash 表在 PHP 5.x 和 PHP 7 中都会被特殊处理。如果你创建了空数组 <code class="language-plaintext highlighter-rouge">array []</code>，很有可能你不会实际上插入任何元素。<code class="language-plaintext highlighter-rouge">arData/arHash</code> 数组只会在你插入第一个元素时分配内存。</p>
 
-<p>为了避免在很多地方对这种特殊情况做校验，在此应用了一个小技巧：当 <code class="highlighter-rouge">nTableSize</code> 被设为暗示的大小或者默认值 8 时，<code class="highlighter-rouge">nTableMask</code>（实际上是 <code class="highlighter-rouge">nTableSize - 1</code>）会被设为 0。这意味着，<code class="highlighter-rouge">hash &amp; ht-&gt;nTableMask</code> 也会得到 0 的结果。</p>
+<p>为了避免在很多地方对这种特殊情况做校验，在此应用了一个小技巧：当 <code class="language-plaintext highlighter-rouge">nTableSize</code> 被设为暗示的大小或者默认值 8 时，<code class="language-plaintext highlighter-rouge">nTableMask</code>（实际上是 <code class="language-plaintext highlighter-rouge">nTableSize - 1</code>）会被设为 0。这意味着，<code class="language-plaintext highlighter-rouge">hash &amp; ht-&gt;nTableMask</code> 也会得到 0 的结果。</p>
 
-<p>所以在这个情况中，<code class="highlighter-rouge">arHash</code> 数组只有一个带有 <code class="highlighter-rouge">INVALID_IDX</code> 值、下标为 0 的元素（这个特殊数组被称为 <code class="highlighter-rouge">uninitialized_bucket</code>，并且被静态分配了内存）。当进行查找时，我们会一直找到 <code class="highlighter-rouge">INVALID_IDX</code> 值，意味着 key（实际上你只想静态分配创建一个空表）没有被找到。</p>
+<p>所以在这个情况中，<code class="language-plaintext highlighter-rouge">arHash</code> 数组只有一个带有 <code class="language-plaintext highlighter-rouge">INVALID_IDX</code> 值、下标为 0 的元素（这个特殊数组被称为 <code class="language-plaintext highlighter-rouge">uninitialized_bucket</code>，并且被静态分配了内存）。当进行查找时，我们会一直找到 <code class="language-plaintext highlighter-rouge">INVALID_IDX</code> 值，意味着 key（实际上你只想静态分配创建一个空表）没有被找到。</p>
 
 <h2 id="内存使用">内存使用</h2>
 
-<p>内存使用应该涉及了 PHP 7 Hash 表实现最重要的方面。首先，我们总结下为什么新的实现省内存。我在这里只会用 64 位系统的数据，并且只看单个元素的大小，会忽略主 <code class="highlighter-rouge">HashTable</code> 结构（这是渐进不重要的）。</p>
+<p>内存使用应该涉及了 PHP 7 Hash 表实现最重要的方面。首先，我们总结下为什么新的实现省内存。我在这里只会用 64 位系统的数据，并且只看单个元素的大小，会忽略主 <code class="language-plaintext highlighter-rouge">HashTable</code> 结构（这是渐进不重要的）。</p>
 
 <p>在 PHP 5.x 每个元素需要巨大的 144 bytes。在 PHP 7 中，降低到了 36 bytes，或者打包情况下 32 bytes。下面这些是两者区别：</p>
 
 <ul>
-  <li><code class="highlighter-rouge">zval</code> 不独立分配，所以我们节省了 16 bytes。</li>
-  <li><code class="highlighter-rouge">bucket</code> 不独立分配，所以我们又节省了 16 bytes。</li>
-  <li>每个 <code class="highlighter-rouge">zval</code> 的值节省 16 bytes。</li>
+  <li><code class="language-plaintext highlighter-rouge">zval</code> 不独立分配，所以我们节省了 16 bytes。</li>
+  <li><code class="language-plaintext highlighter-rouge">bucket</code> 不独立分配，所以我们又节省了 16 bytes。</li>
+  <li>每个 <code class="language-plaintext highlighter-rouge">zval</code> 的值节省 16 bytes。</li>
   <li>保证顺序不再需要 16 bytes 的双向队列，而是绝对的顺序。</li>
-  <li>冲突链表现在是单向的，节省了 8 bytes。此外，它现在是一个有下标的链表，并且下标被内置在 <code class="highlighter-rouge">zval</code> 中，所以我们实际上又节省了 8 bytes。</li>
-  <li>由于 <code class="highlighter-rouge">zval</code> 被内置在 <code class="highlighter-rouge">bucket</code> 中，我们不再需要为它存一个指针。由于之前实现的细节，我们实际上节省了两个指针，所以又省了 16 bytes。</li>
-  <li>key 的长度不再存储在 <code class="highlighter-rouge">bucket</code> 中，这有 8 bytes。然而，如果 key 是字符串而不是整型的话，key 的长度还是会被存到 <code class="highlighter-rouge">zend_string</code> 中。这种情况下确切的内存影响很难去量化，因为 <code class="highlighter-rouge">zend_string</code> 是共享的，鉴于之前如果字符串没被留存，Hash 表就不得不复制字符串。</li>
+  <li>冲突链表现在是单向的，节省了 8 bytes。此外，它现在是一个有下标的链表，并且下标被内置在 <code class="language-plaintext highlighter-rouge">zval</code> 中，所以我们实际上又节省了 8 bytes。</li>
+  <li>由于 <code class="language-plaintext highlighter-rouge">zval</code> 被内置在 <code class="language-plaintext highlighter-rouge">bucket</code> 中，我们不再需要为它存一个指针。由于之前实现的细节，我们实际上节省了两个指针，所以又省了 16 bytes。</li>
+  <li>key 的长度不再存储在 <code class="language-plaintext highlighter-rouge">bucket</code> 中，这有 8 bytes。然而，如果 key 是字符串而不是整型的话，key 的长度还是会被存到 <code class="language-plaintext highlighter-rouge">zend_string</code> 中。这种情况下确切的内存影响很难去量化，因为 <code class="language-plaintext highlighter-rouge">zend_string</code> 是共享的，鉴于之前如果字符串没被留存，Hash 表就不得不复制字符串。</li>
   <li>数组包含的冲突链表现在是基于下标的，所以每个元素节省 4 bytes。对于打包数组，这完全没有必要，我们还可以再省 4 bytes。</li>
 </ul>
 
 <p>然而，需要明确的是这个总结让事情看起来比它们多方面的实际影响看着更好。首先，新的 Hash 表实现使用了很多内置（与分配相对应的）结构。这对事情有什么负面影响呢？</p>
 
-<p>如果你确实注意看了本文开始时的测量后的数据，你会发现 64 位 PHP 7 中的一个 100000 个元素的数组占用 4 MB 内存。在这个事例中，我们用了打包数组来做，所以我们实际上预计会占用 32 * 100000 = 3.05 MB 内存。这后面的原因是，我们给任何东西都分配 2 的幂大小的内存。在这里，<code class="highlighter-rouge">nTableSize</code> 的大小是 2^17 = 131072，所以我们需要分配 32 * 131072 bytes 内存（也就是 4 MB）。</p>
+<p>如果你确实注意看了本文开始时的测量后的数据，你会发现 64 位 PHP 7 中的一个 100000 个元素的数组占用 4 MB 内存。在这个事例中，我们用了打包数组来做，所以我们实际上预计会占用 32 * 100000 = 3.05 MB 内存。这后面的原因是，我们给任何东西都分配 2 的幂大小的内存。在这里，<code class="language-plaintext highlighter-rouge">nTableSize</code> 的大小是 2^17 = 131072，所以我们需要分配 32 * 131072 bytes 内存（也就是 4 MB）。</p>
 
-<p>当然，之前的 Hash 表实现也会按照 2 的幂值来分配内存。然而，它只对有 <code class="highlighter-rouge">bucket</code> 指针的数组按这种方式分配（这里每个指针是 8 bytes），其它任何东西都按需分配。所以，在 PHP 7 中我们在浪费了 32 * 31072 (0.95 MB) 无用内存，而在 PHP 5.x 中我们只浪费 8 * 31072 (0.24 MB)。</p>
+<p>当然，之前的 Hash 表实现也会按照 2 的幂值来分配内存。然而，它只对有 <code class="language-plaintext highlighter-rouge">bucket</code> 指针的数组按这种方式分配（这里每个指针是 8 bytes），其它任何东西都按需分配。所以，在 PHP 7 中我们在浪费了 32 * 31072 (0.95 MB) 无用内存，而在 PHP 5.x 中我们只浪费 8 * 31072 (0.24 MB)。</p>
 
-<p>另一件需要考虑的事情是，如果不是所有存储的值都不相同的情况下会发生什么。为了简单，我们假设所有的值是完全相同的。所以让我们把开头的脚本 <code class="highlighter-rouge">range</code> 函数替换成 <code class="highlighter-rouge">array_fill</code>。</p>
+<p>另一件需要考虑的事情是，如果不是所有存储的值都不相同的情况下会发生什么。为了简单，我们假设所有的值是完全相同的。所以让我们把开头的脚本 <code class="language-plaintext highlighter-rouge">range</code> 函数替换成 <code class="language-plaintext highlighter-rouge">array_fill</code>。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$startMemory = memory_get_usage();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$startMemory = memory_get_usage();
 $array = array_fill(0, 100000, 42);
 echo memory_get_usage() - $startMemory, " bytes\n";
 </code></pre></div></div>
 
 <p>这个脚本的结果如下：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |   32 bit |    64 bit
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |   32 bit |    64 bit
 ------------------------------
 PHP 5.6 | 4.70 MiB |  9.39 MiB
 ------------------------------
 PHP 7.0 | 3.00 MiB |  4.00 MiB
 </code></pre></div></div>
 
-<p>你可以从内存使用中看到，PHP 7 保持了同样的内存占用。这没有理由发生变化，因为每个 <code class="highlighter-rouge">zval</code> 都是分开的。在 PHP 5.x 中内存消耗现在明显降低了，因为只需要一个 <code class="highlighter-rouge">zval</code> 来存储所有值。所以，虽然 PHP 7 还有一些优势，但差距变小了。</p>
+<p>你可以从内存使用中看到，PHP 7 保持了同样的内存占用。这没有理由发生变化，因为每个 <code class="language-plaintext highlighter-rouge">zval</code> 都是分开的。在 PHP 5.x 中内存消耗现在明显降低了，因为只需要一个 <code class="language-plaintext highlighter-rouge">zval</code> 来存储所有值。所以，虽然 PHP 7 还有一些优势，但差距变小了。</p>
 
 <p>事情会变得更加复杂，如果我们考虑字符串作 key（这可能是共享的或者是留存的）和复杂的 value。这种情况下 PHP 7 会显著比 PHP 5.x 节省内存，但介绍里的数字在很多情况下可能过于乐观。</p>
 
@@ -359,15 +359,15 @@ PHP 7.0 | 3.00 MiB |  4.00 MiB
 
 <p>PHP 7 的 Hash 表实现毫无疑问迈进一大步，很多无用的内存不再使用了。</p>
 
-<p>所以问题是：我们何去何从？一个想法是，我前面也提到的，在升序整数 key 的情况下使用完全打包的 Hash。这意味着使用纯 <code class="highlighter-rouge">zval</code> 数组，这是我们可以不开始特殊处理一致类型的数组之前的最好的方法。</p>
+<p>所以问题是：我们何去何从？一个想法是，我前面也提到的，在升序整数 key 的情况下使用完全打包的 Hash。这意味着使用纯 <code class="language-plaintext highlighter-rouge">zval</code> 数组，这是我们可以不开始特殊处理一致类型的数组之前的最好的方法。</p>
 
 <p>我们也有一些其它的方向。比如，从链地址法改为开地址法（比如：使用 Robin Hood 查找法），可以既在内存使用上（没有冲突处理链表）又在性能上（更好的缓存效率，依赖于查找算法的细节）获得优化。然而，开地址法相对难以和排序需求结合，所以这可能在实际情况下并不可行。</p>
 
-<p>另一个想法是把 <code class="highlighter-rouge">bucket</code> 中的 <code class="highlighter-rouge">h</code> 和 <code class="highlighter-rouge">key</code> 字段整合在 <code class="highlighter-rouge">bucket</code> 结构中。整数 key 只使用 <code class="highlighter-rouge">h</code>，字符串 key 也会在 key 中保存 hash 值。然而，这么做可能对性能造成不利影响，因为提取 hash 值也需要额外的内存开销。</p>
+<p>另一个想法是把 <code class="language-plaintext highlighter-rouge">bucket</code> 中的 <code class="language-plaintext highlighter-rouge">h</code> 和 <code class="language-plaintext highlighter-rouge">key</code> 字段整合在 <code class="language-plaintext highlighter-rouge">bucket</code> 结构中。整数 key 只使用 <code class="language-plaintext highlighter-rouge">h</code>，字符串 key 也会在 key 中保存 hash 值。然而，这么做可能对性能造成不利影响，因为提取 hash 值也需要额外的内存开销。</p>
 
-<p>我需要说的最后一件事是，PHP 7 不止是优化了 Hash 表的内部实现，还改进了相关的 API。我通常甚至要查看一些简单的操作如 <code class="highlighter-rouge">zend_hash_find</code> 怎么用，尤其是需要考虑到需要多少层间接的调用（提示：3 层）。在 PHP 7中，你只需要写 <code class="highlighter-rouge">zend_hash_find(ht, key)</code> 然后得到 <code class="highlighter-rouge">*zval</code>。总的来说，为 PHP 7 写扩展变得更有意思了。</p>
+<p>我需要说的最后一件事是，PHP 7 不止是优化了 Hash 表的内部实现，还改进了相关的 API。我通常甚至要查看一些简单的操作如 <code class="language-plaintext highlighter-rouge">zend_hash_find</code> 怎么用，尤其是需要考虑到需要多少层间接的调用（提示：3 层）。在 PHP 7中，你只需要写 <code class="language-plaintext highlighter-rouge">zend_hash_find(ht, key)</code> 然后得到 <code class="language-plaintext highlighter-rouge">*zval</code>。总的来说，为 PHP 7 写扩展变得更有意思了。</p>
 
-<p>希望我能够给你们一些 PHP 7 Hash 表内核的洞见。可能我还会写一篇关于 <code class="highlighter-rouge">zval</code> 的后续文章，我已经在本文中触及到了它的一些不同，但对于这个话题还可以说更多的东西。</p>
+<p>希望我能够给你们一些 PHP 7 Hash 表内核的洞见。可能我还会写一篇关于 <code class="language-plaintext highlighter-rouge">zval</code> 的后续文章，我已经在本文中触及到了它的一些不同，但对于这个话题还可以说更多的东西。</p>
 
         </div>
         <div class="article-share">
