@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1604385018">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1604751489">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -46,7 +46,7 @@
         <div class="article-main">
           <p><a href="http://nbrugby.com/">Rugby News Board</a> is the side project mentioned in title, which is a simple news site for Rugby sport in Chinese. I made it because there is no Rugby news site in Chinese and I love Rugby.</p>
 
-<p>Rugby News Board was <a href="https://github.com/crispgm/rugby-board">firstly built</a> with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a <code class="highlighter-rouge">news</code> table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.</p>
+<p>Rugby News Board was <a href="https://github.com/crispgm/rugby-board">firstly built</a> with Rails, with simple news channels. By Rails, I could be able to make prototype within 2 days. I wrote a <code class="language-plaintext highlighter-rouge">news</code> table with ORM and SQLite. It ran on Linode VPS and I did DevOps by myself.</p>
 
 <h1 id="heroku">Heroku</h1>
 
@@ -61,7 +61,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>By the way, I feel quite strange using CoffeeScript, as part of Rails stacks. Being surrounded by Vanilla JavaScript, EcmaScript of all versions, and TypeScript, I have no interest in learning an unpopular JavaScript replacement, which some dudes said it was dead.</p>
 
-<p>I tried using React with <a href="https://github.com/reactjs/react-rails">react-rails</a> to build translating system of Rugby names. It is merely based on Rails, and we can use React Component with <code class="highlighter-rouge">react_component</code> tag and simply pass the data (Ruby objects) to the component seamlessly.</p>
+<p>I tried using React with <a href="https://github.com/reactjs/react-rails">react-rails</a> to build translating system of Rugby names. It is merely based on Rails, and we can use React Component with <code class="language-plaintext highlighter-rouge">react_component</code> tag and simply pass the data (Ruby objects) to the component seamlessly.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-item"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">react_component</span> <span class="err">"</span><span class="na">RugbyDictQuery</span><span class="err">",</span> <span class="err">{</span><span class="na">title:</span> <span class="err">"</span><span class="na">Rugby</span> <span class="na">Dictionary</span><span class="err">"}</span> <span class="err">%</span><span class="nt">&gt;</span>
@@ -80,49 +80,49 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <h2 id="webpack-with-multiple-entries">Webpack with Multiple Entries</h2>
 
-<p>Examples and boilerplates are typically in one HTML form. However, there are two pages in my application. One is <code class="highlighter-rouge">index.html</code> for user requests, the other is <code class="highlighter-rouge">admin.html</code> for editors. Both of them should be equipped with HMR (Hot Module Replacement).</p>
+<p>Examples and boilerplates are typically in one HTML form. However, there are two pages in my application. One is <code class="language-plaintext highlighter-rouge">index.html</code> for user requests, the other is <code class="language-plaintext highlighter-rouge">admin.html</code> for editors. Both of them should be equipped with HMR (Hot Module Replacement).</p>
 
 <p>This article is great as the title <a href="https://kuzzmi.com/blog/truly-multiple-entries-with-webpack"><em>Truly Multiple Entries with Webpack</em></a> says.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
     <span class="na">index</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s1">'webpack-hot-middleware/client'</span><span class="p">,</span>
-      <span class="s1">'./client/index.jsx'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">webpack-hot-middleware/client</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">./client/index.jsx</span><span class="dl">'</span><span class="p">,</span>
     <span class="p">],</span>
     <span class="na">admin</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s1">'webpack-hot-middleware/client'</span><span class="p">,</span>
-      <span class="s1">'./client/admin.jsx'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">webpack-hot-middleware/client</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">./client/admin.jsx</span><span class="dl">'</span><span class="p">,</span>
     <span class="p">],</span>
   <span class="p">},</span>
   <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
     <span class="c1">// loaders ...</span>
   <span class="p">},</span>
   <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">],</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">.js</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.jsx</span><span class="dl">'</span><span class="p">],</span>
   <span class="p">},</span>
   <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'..'</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
-    <span class="na">filename</span><span class="p">:</span> <span class="s1">'[name]/bundle.js'</span><span class="p">,</span>
-    <span class="na">publicPath</span><span class="p">:</span> <span class="s1">'/'</span><span class="p">,</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">..</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[name]/bundle.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">publicPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">},</span>
   <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
     <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
-      <span class="na">template</span><span class="p">:</span> <span class="s1">'./client/index.html'</span><span class="p">,</span>
-      <span class="na">filename</span><span class="p">:</span> <span class="s1">'index.html'</span><span class="p">,</span>
-      <span class="na">inject</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
-      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="s1">'index'</span><span class="p">],</span>
+      <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./client/index.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">index</span><span class="dl">'</span><span class="p">],</span>
       <span class="na">hash</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="p">}),</span>
     <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
-      <span class="na">template</span><span class="p">:</span> <span class="s1">'./client/admin.html'</span><span class="p">,</span>
-      <span class="na">filename</span><span class="p">:</span> <span class="s1">'admin.html'</span><span class="p">,</span>
-      <span class="na">inject</span><span class="p">:</span> <span class="s1">'body'</span><span class="p">,</span>
-      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="s1">'admin'</span><span class="p">],</span>
+      <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./client/admin.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">admin.html</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">chunks</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">admin</span><span class="dl">'</span><span class="p">],</span>
       <span class="na">hash</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="p">}),</span>
     <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">HotModuleReplacementPlugin</span><span class="p">(),</span>
@@ -138,11 +138,11 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>To get good developer experience, it is important to setup a realtime debugging environment for development. I was prepared to setup dev server for my isomorphic app with webpack-dev-middleware and webpack-hot-middleware.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpackConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../config/webpack.dev.config.js'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpackConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../config/webpack.dev.config.js</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">compiler</span> <span class="o">=</span> <span class="nx">webpack</span><span class="p">(</span><span class="nx">webpackConfig</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpackDevMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack-dev-middleware'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">webpackHotMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack-hot-middleware'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpackDevMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-dev-middleware</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpackHotMiddleware</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-hot-middleware</span><span class="dl">'</span><span class="p">);</span>
 <span class="c1">// Dev</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">webpackDevMiddleware</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">noInfo</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -151,48 +151,48 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 <span class="c1">// HMR</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">webpackHotMiddleware</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">log</span><span class="p">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span>
-  <span class="na">path</span><span class="p">:</span> <span class="s1">'/__webpack_hmr'</span><span class="p">,</span>
+  <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/__webpack_hmr</span><span class="dl">'</span><span class="p">,</span>
   <span class="na">heartbeat</span><span class="p">:</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span>
 <span class="p">}));</span>
 </code></pre></div></div>
 
 <p>However, things became complex with multiple pages. It seemed that webpack-dev-middleware never actually build files into output path.</p>
 
-<p>The <code class="highlighter-rouge">index.html</code> was always accessbile, while the other page - <code class="highlighter-rouge">admin.html</code> was possibly in some black hole. I resolved it by <a href="https://github.com/jantimon/html-webpack-plugin/issues/145#issuecomment-170554832">serve the files from the compiler</a>.</p>
+<p>The <code class="language-plaintext highlighter-rouge">index.html</code> was always accessbile, while the other page - <code class="language-plaintext highlighter-rouge">admin.html</code> was possibly in some black hole. I resolved it by <a href="https://github.com/jantimon/html-webpack-plugin/issues/145#issuecomment-170554832">serve the files from the compiler</a>.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">compiler</span><span class="p">.</span><span class="nx">outputPath</span><span class="p">,</span> <span class="s1">'admin.html'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/admin</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">compiler</span><span class="p">.</span><span class="nx">outputPath</span><span class="p">,</span> <span class="dl">'</span><span class="s1">admin.html</span><span class="dl">'</span><span class="p">);</span>
   <span class="nx">compiler</span><span class="p">.</span><span class="nx">outputFileSystem</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">res</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s1">'content-type'</span><span class="p">,</span> <span class="s1">'text/html'</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">content-type</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">text/html</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
   <span class="p">});</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
-<p>In the end, I managed to make it work that I can simply start to dev by one command <code class="highlighter-rouge">yarn server</code>, with a Node server, a React app and HMR.</p>
+<p>In the end, I managed to make it work that I can simply start to dev by one command <code class="language-plaintext highlighter-rouge">yarn server</code>, with a Node server, a React app and HMR.</p>
 
 <h2 id="build-after-deployment">Build after Deployment</h2>
 
-<p>Deployment on Heroku is easy, but I had to commit <code class="highlighter-rouge">dist</code> folder to codebase at first, which was really a heavy way (hundreds of kilobytes each push). Then I found <code class="highlighter-rouge">heroku-postbuild</code> hook, by which deployment can trigger Webpack build.</p>
+<p>Deployment on Heroku is easy, but I had to commit <code class="language-plaintext highlighter-rouge">dist</code> folder to codebase at first, which was really a heavy way (hundreds of kilobytes each push). Then I found <code class="language-plaintext highlighter-rouge">heroku-postbuild</code> hook, by which deployment can trigger Webpack build.</p>
 
-<p>So let’s add <code class="highlighter-rouge">heroku-postbuild</code> to <code class="highlighter-rouge">package.json</code>:</p>
+<p>So let’s add <code class="language-plaintext highlighter-rouge">heroku-postbuild</code> to <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"heroku-postbuild": "webpack -p --config ./config/webpack.prod.config.js"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"heroku-postbuild": "webpack -p --config ./config/webpack.prod.config.js"
 </code></pre></div></div>
 
 <p><em>Hint</em>: We should ensure that the build process works before pushing codes. Otherwise, deployment fails.</p>
 
 <h1 id="optimizing-and-preact">Optimizing and Preact</h1>
 
-<p>After the launch of new Node/React application, I could hardly ignore the long gap between the response reached and I saw the page finally. Heroku is commonly laggy in China due to geolocation reason and the great firewall. I put it down to this reason until I found the <code class="highlighter-rouge">bundle.js</code> is 1.8 mb.</p>
+<p>After the launch of new Node/React application, I could hardly ignore the long gap between the response reached and I saw the page finally. Heroku is commonly laggy in China due to geolocation reason and the great firewall. I put it down to this reason until I found the <code class="language-plaintext highlighter-rouge">bundle.js</code> is 1.8 mb.</p>
 
-<p>The reason is that the Webpack production configuration was wrong, I fixed it by adding <code class="highlighter-rouge">UglifyJsPlugin</code> and it is now 700 kb.</p>
+<p>The reason is that the Webpack production configuration was wrong, I fixed it by adding <code class="language-plaintext highlighter-rouge">UglifyJsPlugin</code> and it is now 700 kb.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
   <span class="nx">HtmlWebpackPluginConfig</span><span class="p">,</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">NoEmitOnErrorsPlugin</span><span class="p">(),</span>
-  <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span> <span class="s1">'process.env.NODE_ENV'</span><span class="p">:</span> <span class="s1">'"production"'</span> <span class="p">}),</span>
+  <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span> <span class="dl">'</span><span class="s1">process.env.NODE_ENV</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">"production"</span><span class="dl">'</span> <span class="p">}),</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">OccurrenceOrderPlugin</span><span class="p">(),</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
     <span class="na">compress</span><span class="p">:</span> <span class="p">{</span>
@@ -214,21 +214,21 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>I had no many codes so I use Preact directly, without using preact-compat to make it compatible with React.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { h, Component } from 'preact';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { h, Component } from 'preact';
 </code></pre></div></div>
 
 <p>It goes as soon as I change the import statements on the top.</p>
 
-<p><code class="highlighter-rouge">react-router</code> was replaced by <code class="highlighter-rouge">preact-router</code>, which is even more user-friendly. The parameters are simply passed to <code class="highlighter-rouge">props</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">react-router</code> was replaced by <code class="language-plaintext highlighter-rouge">preact-router</code>, which is even more user-friendly. The parameters are simply passed to <code class="language-plaintext highlighter-rouge">props</code>:</p>
 
 <p>Router:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;EventPage path="/event/:name" /&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;EventPage path="/event/:name" /&gt;
 </code></pre></div></div>
 
 <p>EventPage Component:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export default class EventPage extends Component {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export default class EventPage extends Component {
   constructor(props) {
     super(props);
 
@@ -242,7 +242,7 @@ is the future, e.g. React. It is a bit more reasonable, elegant and expressive w
 
 <p>After the optimization, it is <em>only</em> 364 kb and typically takes less than 2 seconds to load the application. Using Preact is a good choice, while we can get the advantage of React and benefit from the lightweight.</p>
 
-<p>At last, <strong>DO NOT</strong> forget to turn on <code class="highlighter-rouge">gzip</code> of your Express server or other static file server like Nginx. That dramatically cuts the bundle size to 1/4, which is less than 100kb now.</p>
+<p>At last, <strong>DO NOT</strong> forget to turn on <code class="language-plaintext highlighter-rouge">gzip</code> of your Express server or other static file server like Nginx. That dramatically cuts the bundle size to 1/4, which is less than 100kb now.</p>
 
 <h1 id="conclusion">Conclusion</h1>
 

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1604385018">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1604751489">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -54,7 +54,7 @@
 
 <h1 id="正文">正文</h1>
 
-<p>在 PHP 中，使用 <code class="highlighter-rouge">(int)$var</code> 方式进行类型转换比使用 <code class="highlighter-rouge">intval($var)</code> 函数方式快 400% 到 650%。</p>
+<p>在 PHP 中，使用 <code class="language-plaintext highlighter-rouge">(int)$var</code> 方式进行类型转换比使用 <code class="language-plaintext highlighter-rouge">intval($var)</code> 函数方式快 400% 到 650%。</p>
 
 <h2 id="运行测试">运行测试</h2>
 
@@ -346,7 +346,7 @@
 
 <h3 id="intval-和-int-的结果对比">intval() 和 int 的结果对比</h3>
 
-<p>为了证明 <code class="highlighter-rouge">intval()</code> 和 <code class="highlighter-rouge">int</code> 得到同样的值，我进行了另一个测试：</p>
+<p>为了证明 <code class="language-plaintext highlighter-rouge">intval()</code> 和 <code class="language-plaintext highlighter-rouge">int</code> 得到同样的值，我进行了另一个测试：</p>
 
 <table>
   <thead>
@@ -509,7 +509,7 @@
 
 <h3 id="settype-和-intval-速度对比系统-1">settype() 和 intval() 速度对比[系统 #1]</h3>
 
-<p>用于对比，我还进行了 <code class="highlighter-rouge">settype()</code> 和 <code class="highlighter-rouge">intval()</code> 速度测试。
+<p>用于对比，我还进行了 <code class="language-plaintext highlighter-rouge">settype()</code> 和 <code class="language-plaintext highlighter-rouge">intval()</code> 速度测试。
 两者的差别并不大，但我不确定这个测试是否合理，因为并不容易直接对这个函数进行测试。既然已经跑了这个测试，我认为值得把结果同前面的数据一起分享出来。</p>
 
 <table>
@@ -654,7 +654,7 @@
 
 <p>更新：</p>
 
-<p>我进行了一些关于 <code class="highlighter-rouge">0 + $var</code> 的测试，因为这也是一种获得数字的方式。
+<p>我进行了一些关于 <code class="language-plaintext highlighter-rouge">0 + $var</code> 的测试，因为这也是一种获得数字的方式。
 这种方法没那么”类型安全”，不过作为对比，我认为有必要一起列出来：</p>
 
 <h3 id="intval-和-0--var-对比结果">intval() 和 0 + $var 对比结果</h3>
@@ -981,7 +981,7 @@
 
 <h3 id="intval">intval()</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 ASSIGN
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 ASSIGN
 1 SEND_VAR
 2 DO_FCALL
 3 ASSIGN
@@ -991,7 +991,7 @@
 
 <h3 id="int">int</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 ASSIGN
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 ASSIGN
 1 CAST
 2 ASSIGN
 3 RETURN
@@ -1001,8 +1001,8 @@
 <h2 id="最终结论">最终结论</h2>
 
 <ol>
-  <li><code class="highlighter-rouge">int</code> 比 <code class="highlighter-rouge">intval()</code> 快3-6倍。</li>
-  <li><code class="highlighter-rouge">SEND_VAR</code> 和 <code class="highlighter-rouge">DO_FCALL</code> 操作，是导致 <code class="highlighter-rouge">int</code> 比 <code class="highlighter-rouge">intval()</code> 快很多的原因。</li>
+  <li><code class="language-plaintext highlighter-rouge">int</code> 比 <code class="language-plaintext highlighter-rouge">intval()</code> 快3-6倍。</li>
+  <li><code class="language-plaintext highlighter-rouge">SEND_VAR</code> 和 <code class="language-plaintext highlighter-rouge">DO_FCALL</code> 操作，是导致 <code class="language-plaintext highlighter-rouge">int</code> 比 <code class="language-plaintext highlighter-rouge">intval()</code> 快很多的原因。</li>
 </ol>
 
         </div>

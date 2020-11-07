@@ -5,9 +5,9 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Nov 2020 14:30:18 +0800</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2020 14:30:18 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Sat, 07 Nov 2020 20:18:09 +0800</pubDate>
+    <lastBuildDate>Sat, 07 Nov 2020 20:18:09 +0800</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
     
       
       <item>
@@ -224,7 +224,7 @@
 &lt;p&gt;Ledger-likes are keeping accounting with double-entry bookkeeping.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;p&gt;For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Double-entry bookkeeping could date back to early-medieval Middle East and it is widely used in modern accounting.&lt;/p&gt;
@@ -235,7 +235,7 @@
 
 &lt;p&gt;Plain Text Accounting is also a minimalist choice. You can log the transaction with simple human readable texts almost everywhere.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2020/01/01 Arabica coffee
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2020/01/01 Arabica coffee
     expenses:drinks:coffee     75
     liabilities:credit:bankcomm
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -282,10 +282,10 @@
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;What is double-entry? https://plaintextaccounting.org/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;What is double-entry? https://plaintextaccounting.org/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -427,7 +427,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.alfredapp.com/extras/theme/5Y8E7URIWQ/&quot;&gt;https://www.alfredapp.com/extras/theme/5Y8E7URIWQ/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;or manually download &lt;a href=&quot;https://github.com/crispgm/alfred-nord/raw/master/Nord.alfredappearance&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Nord.alfredappearance&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;or manually download &lt;a href=&quot;https://github.com/crispgm/alfred-nord/raw/master/Nord.alfredappearance&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Nord.alfredappearance&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;You need the &lt;a href=&quot;https://www.alfredapp.com/powerpack/&quot;&gt;Powerpack&lt;/a&gt; for custom themes.&lt;/em&gt;&lt;/p&gt;
@@ -612,7 +612,7 @@
 &lt;p&gt;RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements. Let me look up in the dictionary:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel as if we get better efficiency.&lt;/p&gt;
@@ -650,7 +650,7 @@
 
 &lt;p&gt;Arch Linux chooses blue as major color, which is vivid and shows the sense of technology. I kept on copying the color scheme when I was building my own home page. Even though today, I still feel it is a good color scheme.&lt;/p&gt;
 
-&lt;p&gt;Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get &lt;em&gt;solid&lt;/em&gt; skills on that, I appreciate its idea: &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get &lt;em&gt;solid&lt;/em&gt; skills on that, I appreciate its idea: &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Simplicity, minimalism, and code elegance&lt;/li&gt;
@@ -661,7 +661,7 @@
 
 &lt;p&gt;As soon as I read Arch’s philosophy, I know that the second point is the most important reason why it is popular in RICE culture. And Pacman makes it even easier and powerful.&lt;/p&gt;
 
-&lt;p&gt;It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;And finally, it is like you make your own system and are responsible for yourself. You choose what you need and configure as you like based on what you can do. No surprise, no weird parts, so it is totally in control.&lt;/p&gt;
 
@@ -681,10 +681,10 @@
 
 &lt;p&gt;i3-gaps is an i3 fork, which is almost the same and adds more features such as gaps between windows, that’s why it is called i3-gaps.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S i3-gaps
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S i3-gaps
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;After installing X Window and i3-gaps, I got an empty desktop while I can open a terminal with &lt;code class=&quot;highlighter-rouge&quot;&gt;Mod+Enter&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;After installing X Window and i3-gaps, I got an empty desktop while I can open a terminal with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mod+Enter&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;alacritty&quot;&gt;Alacritty&lt;/h3&gt;
 
@@ -694,7 +694,7 @@
 
 &lt;p&gt;Then I found that &lt;a href=&quot;https://github.com/jwilm/alacritty&quot;&gt;Alacritty&lt;/a&gt; is the right one for me. It is high-performance, GPU powered and easy configuration.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S alacritty
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S alacritty
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-alacritty.png&quot; alt=&quot;alacritty&quot; /&gt;&lt;/p&gt;
@@ -713,7 +713,7 @@
 
 &lt;p&gt;And as aforementioned, I replace rxvt-unicode with Alacritty.&lt;/p&gt;
 
-&lt;p&gt;Based on i3wm-themer, I have finally done my first Arch Linux RICE. All configuration files of those parts are stored under &lt;code class=&quot;highlighter-rouge&quot;&gt;$XDG_CONFIG_HOME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Based on i3wm-themer, I have finally done my first Arch Linux RICE. All configuration files of those parts are stored under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$XDG_CONFIG_HOME&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/rice-screenshot.jpg&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
 
@@ -732,7 +732,7 @@
 &lt;ul&gt;
   &lt;li&gt;Bash or Zsh uses dot rc files&lt;/li&gt;
   &lt;li&gt;Most modern softwares use XDG directories&lt;/li&gt;
-  &lt;li&gt;GUI apperances are configured under &lt;code class=&quot;highlighter-rouge&quot;&gt;.Xresources&lt;/code&gt; or using GTK (or Qt) themes&lt;/li&gt;
+  &lt;li&gt;GUI apperances are configured under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.Xresources&lt;/code&gt; or using GTK (or Qt) themes&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;And to make things much more difficult, they have their own file specifications.&lt;/p&gt;
@@ -751,16 +751,16 @@
 
 &lt;hr /&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.urbandictionary.com/define.php?term=rice&amp;amp;defid=955541&quot;&gt;Urban Dictionary: rice&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.urbandictionary.com/define.php?term=rice&amp;amp;defid=955541&quot;&gt;Urban Dictionary: rice&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/about/&quot;&gt;https://www.archlinux.org/about/&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/about/&quot;&gt;https://www.archlinux.org/about/&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Arch_compared_to_other_distributions#Gentoo/Funtoo_Linux&quot;&gt;Arch compared to other distributions&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Arch_compared_to_other_distributions#Gentoo/Funtoo_Linux&quot;&gt;Arch compared to other distributions&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;

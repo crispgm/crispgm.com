@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1604385018">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1604751489">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -54,7 +54,7 @@
 
 <p>整体思路是基于 GitHub 构建一套自动化流程，通过 issues 进行收集，然后用脚本调用 GitHub API 处理导入和编译的各项步骤。</p>
 
-<p>由于是 Jekyll 是 Ruby 编写的，因此选择 Ruby 比较合适。并且由于只是一些简单的任务式脚本，所以选择 <code class="highlighter-rouge">Rakefile</code> 作为载体来编写。</p>
+<p>由于是 Jekyll 是 Ruby 编写的，因此选择 Ruby 比较合适。并且由于只是一些简单的任务式脚本，所以选择 <code class="language-plaintext highlighter-rouge">Rakefile</code> 作为载体来编写。</p>
 
 <h3 id="整体流程">整体流程</h3>
 
@@ -77,7 +77,7 @@
 
 <h4 id="access_token">access_token</h4>
 
-<p><code class="highlighter-rouge">access_token</code> 不能对外暴露，因此需要在环境变量中设置或者通过指定环境变量来运行 <code class="highlighter-rouge">rake</code>。</p>
+<p><code class="language-plaintext highlighter-rouge">access_token</code> 不能对外暴露，因此需要在环境变量中设置或者通过指定环境变量来运行 <code class="language-plaintext highlighter-rouge">rake</code>。</p>
 
 <h4 id="msbu-bot">msbu-bot</h4>
 
@@ -85,14 +85,14 @@
 
 <h3 id="文章收集">文章收集</h3>
 
-<p>建立一个专门 Repo 收集周刊内容 <a href="https://github.com/msbu-tech/weekly">msbu-tech/weekly</a>。里面没有代码，只有 <code class="highlighter-rouge">README</code> 来说明投稿的步骤流程，而 issues 则是收集贴。</p>
+<p>建立一个专门 Repo 收集周刊内容 <a href="https://github.com/msbu-tech/weekly">msbu-tech/weekly</a>。里面没有代码，只有 <code class="language-plaintext highlighter-rouge">README</code> 来说明投稿的步骤流程，而 issues 则是收集贴。</p>
 
 <p>开始收集一周的周刊时，先用创建一个收集贴。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake open[2016-12-06]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake open[2016-12-06]
 </code></pre></div></div>
 
-<p>也就是调用 <code class="highlighter-rouge">Octokit.rb</code> 发 issue 接口：</p>
+<p>也就是调用 <code class="language-plaintext highlighter-rouge">Octokit.rb</code> 发 issue 接口：</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">client</span><span class="p">.</span><span class="nf">create_issue</span><span class="p">(</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">issue_name</span><span class="p">,</span> <span class="s2">"MSBU Weekly </span><span class="si">#{</span><span class="n">weekly_date</span><span class="si">}</span><span class="s2"> is now in collecting. Post your entry following the instruction of &lt;https://github.com/msbu-tech/weekly#投稿&gt;."</span><span class="p">)</span>
 </code></pre></div></div>
@@ -103,19 +103,19 @@
 
 <p>周刊文章收集完毕后，我们开始导入：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake weekly[2016-12-06, true]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake weekly[2016-12-06, true]
 </code></pre></div></div>
 
 <p>文章投稿的格式是：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/post
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/post
 - 疯狂的JSONP
 - http://www.cnblogs.com/twobin/p/3395086.html
 - 何为跨域？何为JSONP？JSONP技术能实现什么？是否有必要使用JSONP技术？
 - javascript, jsonp, 跨域
 </code></pre></div></div>
 
-<p>这里面的工作主要是是遍历 issue，识别 <code class="highlighter-rouge">/post</code> 投稿标识，然后获取标签、链接、介绍或评语、标签，而回贴人的 ID 就视为推荐人。</p>
+<p>这里面的工作主要是是遍历 issue，识别 <code class="language-plaintext highlighter-rouge">/post</code> 投稿标识，然后获取标签、链接、介绍或评语、标签，而回贴人的 ID 就视为推荐人。</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">issue_comment</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span>
   <span class="n">body</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="ss">:body</span><span class="p">]</span>
@@ -145,18 +145,18 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>其中，<code class="highlighter-rouge">Spacifier</code> 是我自己做的一个 <a href="https://github.com/crispgm/spacifier">Gem</a>，用于在中英文共存的字符串中，在中英文之间加一个空格。这样可以优化显示效果，之前为了一些完美主义都是手动转的。<code class="highlighter-rouge">Spacifier</code> 目前功能还不太完善，后续会慢慢改善。</p>
+<p>其中，<code class="language-plaintext highlighter-rouge">Spacifier</code> 是我自己做的一个 <a href="https://github.com/crispgm/spacifier">Gem</a>，用于在中英文共存的字符串中，在中英文之间加一个空格。这样可以优化显示效果，之前为了一些完美主义都是手动转的。<code class="language-plaintext highlighter-rouge">Spacifier</code> 目前功能还不太完善，后续会慢慢改善。</p>
 
 <p>导入文件后会提示导入文章数，并创建周刊网页和邮件所需的 Markdown 文件。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[INFO] Imported 8 article(s).
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[INFO] Imported 8 article(s).
 </code></pre></div></div>
 
 <h3 id="测试">测试</h3>
 
 <p>导入了文章后，需要进行一些基本的测试。投稿人和主编们时常会写错写重复一些字段，所以做了个自动化测试进行重复检测和字段缺失检测。这也接了 Travis 进行持续集成。</p>
 
-<p>同时，推荐一个好用的 Gem —— <a href="https://github.com/fazibear/colorize">colorize</a>。<code class="highlighter-rouge">colorize</code> “打开”了 <code class="highlighter-rouge">String</code>，需要报错的时候，只需要在输出的字符串后面调用 <code class="highlighter-rouge">.red</code> 方法，就可以在控制台用红色显示，很醒目。</p>
+<p>同时，推荐一个好用的 Gem —— <a href="https://github.com/fazibear/colorize">colorize</a>。<code class="language-plaintext highlighter-rouge">colorize</code> “打开”了 <code class="language-plaintext highlighter-rouge">String</code>，需要报错的时候，只需要在输出的字符串后面调用 <code class="language-plaintext highlighter-rouge">.red</code> 方法，就可以在控制台用红色显示，很醒目。</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"[ERROR] Import articles error!"</span><span class="p">.</span><span class="nf">red</span>
 </code></pre></div></div>
@@ -165,11 +165,11 @@
 
 <p>最后一步就是发布了。</p>
 
-<p>文件都已经生成好，只需要 <code class="highlighter-rouge">git push</code> 到 GitHub，就能生效了。</p>
+<p>文件都已经生成好，只需要 <code class="language-plaintext highlighter-rouge">git push</code> 到 GitHub，就能生效了。</p>
 
 <p>我们还需要做的是告诉大家周刊发布的好消息，对投稿人表示感谢，然后关闭掉 issue。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake publish
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rake publish
 </code></pre></div></div>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">comment</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOL</span><span class="sh">

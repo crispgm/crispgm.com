@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1604385018">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1604751489">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -97,16 +97,16 @@
 
 <h3 id="get-certificate">Get Certificate</h3>
 
-<p>As the <code class="highlighter-rouge">letsencrypt-nginx</code> is not fully developed, I choose <code class="highlighter-rouge">certonly</code> to generate SSL certificate and configure nginx manually.</p>
+<p>As the <code class="language-plaintext highlighter-rouge">letsencrypt-nginx</code> is not fully developed, I choose <code class="language-plaintext highlighter-rouge">certonly</code> to generate SSL certificate and configure nginx manually.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./letsencrypt-auto certonly --webroot -w /path/to/webroot --email admin@example.com -d example.com
 </code></pre></div></div>
 
 <h3 id="nginx-configuration">Nginx Configuration</h3>
 
 <p>Configure nginx.conf</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl_certificate      /etc/letsencrypt/live/crispgm.com/fullchain.pem;
 ssl_certificate_key  /etc/letsencrypt/live/crispgm.com/privkey.pem;
 
 ssl_session_timeout  1440m;     
