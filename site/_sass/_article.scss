@@ -26,22 +26,22 @@
       transition: color .4s;
 
       &:hover {
-        &:before {
-          visibility: visible;
+        &::before {
           transform: scaleX(1);
+          visibility: visible;
         }
       }
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 0;
-        left: 0;
+      &::before {
         background-color: $dark-9;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
         transform: scaleX(0);
-        transition: all 0.2s cubic-bezier(.82, 0, .12, 1) 0s;
+        transition: all .2s cubic-bezier(.82, 0, .12, 1) 0s;
+        width: 100%;
       }
     }
   }
@@ -74,22 +74,22 @@
       transition: color .4s;
 
       &:hover {
-        &:before {
-          visibility: visible;
+        &::before {
           transform: scaleX(1);
+          visibility: visible;
         }
       }
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 0;
-        left: 0;
+      &::before {
         background-color: $link;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
         transform: scaleX(0);
-        transition: all 0.2s cubic-bezier(.82, 0, .12, 1) 0s;
+        transition: all .2s cubic-bezier(.82, 0, .12, 1) 0s;
+        width: 100%;
       }
     }
   }
