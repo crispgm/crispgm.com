@@ -19,7 +19,7 @@ a:hover { text-decoration: underline; }
 
 .content-wrapper { padding: 1.2rem 0 0; }
 
-@media (max-width: 40rem) { .wrapper { display: block; width: 100%; } .content-wrapper { padding: 0.8rem; width: 100%; } }
+@media (max-width: 40rem) { .wrapper { display: block; width: 100%; } .content-wrapper { padding: .8rem; width: 100%; } }
 
 img { border: 0; max-width: 40rem; }
 
@@ -81,9 +81,9 @@ footer { border-top: 1px dotted #D8DEE9; font-size: 1rem; margin-top: 1.2rem; ov
 
 .article .article-menu a { color: #2E3440; position: relative; text-decoration: none; transition: color .4s; }
 
-.article .article-menu a:hover:before { visibility: visible; transform: scaleX(1); }
+.article .article-menu a:hover::before { transform: scaleX(1); visibility: visible; }
 
-.article .article-menu a:before { content: ""; position: absolute; width: 100%; height: 1px; bottom: 0; left: 0; background-color: #2E3440; transform: scaleX(0); transition: all 0.2s cubic-bezier(0.82, 0, 0.12, 1) 0s; }
+.article .article-menu a::before { background-color: #2E3440; bottom: 0; content: ''; height: 1px; left: 0; position: absolute; transform: scaleX(0); transition: all 0.2s cubic-bezier(0.82, 0, 0.12, 1) 0s; width: 100%; }
 
 .article .article-head { margin-bottom: 3.2rem; margin-top: 4.2rem; text-align: left; }
 
@@ -95,9 +95,9 @@ footer { border-top: 1px dotted #D8DEE9; font-size: 1rem; margin-top: 1.2rem; ov
 
 .article .article-main a { color: #5E81AC; position: relative; text-decoration: none; transition: color .4s; }
 
-.article .article-main a:hover:before { visibility: visible; transform: scaleX(1); }
+.article .article-main a:hover::before { transform: scaleX(1); visibility: visible; }
 
-.article .article-main a:before { content: ""; position: absolute; width: 100%; height: 1px; bottom: 0; left: 0; background-color: #5E81AC; transform: scaleX(0); transition: all 0.2s cubic-bezier(0.82, 0, 0.12, 1) 0s; }
+.article .article-main a::before { background-color: #5E81AC; bottom: 0; content: ''; height: 1px; left: 0; position: absolute; transform: scaleX(0); transition: all 0.2s cubic-bezier(0.82, 0, 0.12, 1) 0s; width: 100%; }
 
 .article .article-share { font-size: 1.4rem; margin: 3.2rem 0; text-align: center; }
 
@@ -164,6 +164,8 @@ code.highlighter-rouge { border: 1px solid #D8DEE9; border-radius: 4px; font-siz
 .things .things-item { border-bottom: 1px solid #D8DEE9; display: flex; margin-bottom: 1rem; padding-bottom: 1rem; width: 100%; }
 
 .things .things-item .things-title { color: #2E3440; font-size: 1rem; min-width: 12.4rem; }
+
+.things .things-item .things-image { max-width: 11.2rem; padding: .4rem 0 0; }
 
 .things .things-item .things-link { font-size: .8rem; line-height: 1.2rem; min-width: 8rem; padding-bottom: .2rem; }
 
