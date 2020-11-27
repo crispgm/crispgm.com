@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1605343528">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1606448724">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -46,13 +46,13 @@
         <div class="article-main">
           <p>大学时因为好奇的原因在图书馆借阅过几次 Ruby 和 Ruby on Rails 的书籍，大概是道行不够的原因，完全体会不到它的优点。</p>
 
-<p>两个月前，因为 <a href="https://jekyllrb.com/">Jekyll</a> 接触到了 Ruby，并且成为了 Jekyll 的忠实贡献者。之后，不仅所有的个人做的网站都变成了 “Powered by Jekyll”，还学会了 Jekyll 整个 Project 极致的自动化工具链。Jekyll 通过测试驱动 (TDD, Test Driven Development) 覆盖 lib 层功能，通过行为驱动 (BDD, Behavior Driven Development) 回归整体功能，并在 Travis 和 AppVeyor 分别进行 Linux 环境和 Windows 环境下的持续集成。Jekyll 还通过 <code class="language-plaintext highlighter-rouge">rake</code> 实现同个 Project 下网站部分的生成发布到 <code class="language-plaintext highlighter-rouge">gh-pages</code> 分支、发布时从打包到上传 <code class="language-plaintext highlighter-rouge">gem push</code> 等操作。甚至说，Jekyll 的维护者还引入了一个账户名为 jekyllbot 的机器人完成 PR Merge、追加 Changelog、Issues/PR 自动分配 assignee 和发布 Releasenotes 等工作。</p>
+<p>两个月前，因为 <a href="https://jekyllrb.com/">Jekyll</a> 接触到了 Ruby，并且成为了 Jekyll 的忠实贡献者。之后，不仅所有的个人做的网站都变成了 “Powered by Jekyll”，还学会了 Jekyll 整个 Project 极致的自动化工具链。Jekyll 通过测试驱动 (TDD, Test Driven Development) 覆盖 lib 层功能，通过行为驱动 (BDD, Behavior Driven Development) 回归整体功能，并在 Travis 和 AppVeyor 分别进行 Linux 环境和 Windows 环境下的持续集成。Jekyll 还通过 <code class="highlighter-rouge">rake</code> 实现同个 Project 下网站部分的生成发布到 <code class="highlighter-rouge">gh-pages</code> 分支、发布时从打包到上传 <code class="highlighter-rouge">gem push</code> 等操作。甚至说，Jekyll 的维护者还引入了一个账户名为 jekyllbot 的机器人完成 PR Merge、追加 Changelog、Issues/PR 自动分配 assignee 和发布 Releasenotes 等工作。</p>
 
-<p>现在，我的网站也成为了自动化工具链的受益者，使用 <code class="language-plaintext highlighter-rouge">rake</code> 来自动完成生成博客和生成简历等各项操作，并且通过 GitHub Webhooks 自动触发更新部署。</p>
+<p>现在，我的网站也成为了自动化工具链的受益者，使用 <code class="highlighter-rouge">rake</code> 来自动完成生成博客和生成简历等各项操作，并且通过 GitHub Webhooks 自动触发更新部署。</p>
 
 <p>受到自动化的 Workflow 以及红火发展的聊天机器人和 ChatOps 的启发，我发起了 <a href="https://github.com/crispgm/heelbot">Heelbot</a> 项目来建设自己的自动化工具链和 Workflow，并能够完成聊天机器人的工作。Jekyll 在测试方面的做法被引入了 Heelbot 的自动化测试中，结合应用了 TDD 和 BDD，以后有时间会专门写文章讲述。达成的结果就是，改过代码后，不需要手动操作任何东西，只需要跑一次测试脚本，就可以完成对底层库和整体功能的测试及回归。</p>
 
-<p>然后，我买了 Matz 的两本书：《松本行弘的程序世界》和《代码的未来》，了解 Ruby 的设计背景和哲学。Matz 对于编程语言的设计有着很深刻的理解，阐述了 Ruby 在各种语法中设计的思路和取舍，尤其是对于面向对象、多继承问题 (mixin) 和 <code class="language-plaintext highlighter-rouge">block</code> 这几方面。</p>
+<p>然后，我买了 Matz 的两本书：《松本行弘的程序世界》和《代码的未来》，了解 Ruby 的设计背景和哲学。Matz 对于编程语言的设计有着很深刻的理解，阐述了 Ruby 在各种语法中设计的思路和取舍，尤其是对于面向对象、多继承问题 (mixin) 和 <code class="highlighter-rouge">block</code> 这几方面。</p>
 
 <p>对 Ruby 最大的感受就是整体体验很舒服，其次就是生态非常完善。Ruby 的舒服体现在方方面面，无论是语法、生态还是库接口的设计。使用 Ruby，你得到的就是完善的生态，包括 RubyGems 包管理机制、Bundler 依赖管理、Ruby-Doc 库文档平台等。而不是一个编译器或者是解析器。现在各种包管理器已经成为了标配，各种新老语言理所当然的都包含了自己的包管理系统，如 Python 的 pip，Node.js 的 NPM，Rust 的 Cargo 之类。但 RubyGems 早在 <strong>2003</strong> 就被创立了！</p>
 

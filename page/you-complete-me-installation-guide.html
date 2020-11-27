@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1605343528">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1606448724">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -51,7 +51,7 @@
 <p>常用的补全插件如 ctags 和 AutoComplPop 等是基于文本的，类似于搜索时的 suggest 功能。不过，前者是事先扫描文本生成 tags 文件，后者是对当前打开的文件内容进行扫描。
 如果 tags 或者打开的文件重不存在的内容，那就无法进行补全。此外，这种补全是基于单词的，所以补全的提示可能是变量、关键字、注释甚至是字符串里的内容。</p>
 
-<p>所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入<code class="language-plaintext highlighter-rouge">.</code>之后 ycm 可以补全提示对象的成员变量和成员函数等。
+<p>所谓的基于语义的代码补全，简单的说就是通过对代码的语义进行分析。举个例子，对于对象或结构操作时，在输入<code class="highlighter-rouge">.</code>之后 ycm 可以补全提示对象的成员变量和成员函数等。
 一般的成熟 IDE 如 Visual Studio 和 Eclipse 都具有这种能力。</p>
 
 <p>目前 ycm 支持5种程序语言:
@@ -82,19 +82,19 @@ C/C++/Objective-C (基于 clang)，Python (基于 <a href="https://github.com/da
 
 <p>安装完 vundle 后，修改 .vimrc</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.vimrc
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.vimrc
 </code></pre></div></div>
 
 <p>加入</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle 'Valloric/YouCompleteMe'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle 'Valloric/YouCompleteMe'
 </code></pre></div></div>
 
-<p>保存重启 vim 后 <code class="language-plaintext highlighter-rouge">:BundleInstall</code>，就开始安装了。这个安装并没有包括编译，只是把 ycm 的 vim、python 以及 C++ 代码下载下来。</p>
+<p>保存重启 vim 后 <code class="highlighter-rouge">:BundleInstall</code>，就开始安装了。这个安装并没有包括编译，只是把 ycm 的 vim、python 以及 C++ 代码下载下来。</p>
 
-<p>然后进入 YouCompleteMe 的目录开始编译，<code class="language-plaintext highlighter-rouge">--clang-completer</code> 是启用 C family languages 提示(为的就是这功能，果断要加上)</p>
+<p>然后进入 YouCompleteMe 的目录开始编译，<code class="highlighter-rouge">--clang-completer</code> 是启用 C family languages 提示(为的就是这功能，果断要加上)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.vim/bundle/YouCompleteMe
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
 </code></pre></div></div>
 
@@ -104,7 +104,7 @@ C/C++/Objective-C (基于 clang)，Python (基于 <a href="https://github.com/da
 
 <p>编辑 ~/.vimrc 文件，加入</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '/Users/crisp/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 </code></pre></div></div>
 
 <p>重新进入 vim，已经可以正常对代码进行提示。</p>

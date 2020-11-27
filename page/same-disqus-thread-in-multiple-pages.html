@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1605343528">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1606448724">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="article-main">
-          <p>我的博客采用了开源界内普遍采用的 Disqus 提供对博客的评论支持。它用起来很简单，只需要注册一个帐户获得一个 <code class="language-plaintext highlighter-rouge">Shortname</code> 然后在 HTML 底部加入一段代码就可以了，Disqus 会自动抓取你的 URL 信息作为 key，在页面滑动到代码所在的区域时自动载入评论。</p>
+          <p>我的博客采用了开源界内普遍采用的 Disqus 提供对博客的评论支持。它用起来很简单，只需要注册一个帐户获得一个 <code class="highlighter-rouge">Shortname</code> 然后在 HTML 底部加入一段代码就可以了，Disqus 会自动抓取你的 URL 信息作为 key，在页面滑动到代码所在的区域时自动载入评论。</p>
 
 <p>博客从最初到现在经历了好多个阶段：</p>
 
@@ -127,9 +127,9 @@
 
 <p>Disqus 官方自带的网页可视化工具已经不能支持，需要进行<a href="https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables">程序级别的参数配置</a>，需在载入代码进行配置参数。</p>
 
-<p>于是，我修改了 Jekyll 的 <code class="language-plaintext highlighter-rouge">_layout/post.html</code> 模板中的 Disqus 片段。</p>
+<p>于是，我修改了 Jekyll 的 <code class="highlighter-rouge">_layout/post.html</code> 模板中的 Disqus 片段。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var disqus_config = function () {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var disqus_config = function () {
   this.page.url = '{{ site.url }}{{ page.permalink }}';
   this.page.identifier = '{{ page.permalink }}';
   this.page.title = '{{ page.title }}';

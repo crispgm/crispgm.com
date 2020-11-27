@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1605343528">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1606448724">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -78,7 +78,7 @@
 
 <p><a href="https://www.zsh.org/">zsh</a> provides more power than bash and <a href="https://ohmyz.sh/">oh-my-zsh</a> make it be powerful out-of-box, with great tab completion, clever aliases, and themes &amp; plugins system.</p>
 
-<p>Here is what happened after I typed <code class="language-plaintext highlighter-rouge">git &lt;tab&gt;</code>:</p>
+<p>Here is what happened after I typed <code class="highlighter-rouge">git &lt;tab&gt;</code>:</p>
 
 <p><img src="https://crispgm.com/image/zsh-git-completion.png" alt="zsh-git-completion" /></p>
 
@@ -90,7 +90,7 @@
 
 <p>Install oh-my-zsh:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh <span class="nt">-O</span> -<span class="si">)</span><span class="s2">"</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>sh <span class="nt">-c</span> <span class="s2">"</span><span class="k">$(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh <span class="nt">-O</span> -<span class="k">)</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <p>And Oh My Zsh indicates its BOOST officially.</p>
@@ -111,7 +111,7 @@
 
 <p><img src="https://crispgm.com/image/tmux-example.png" alt="tmux-example" /></p>
 
-<p>And <a href="https://github.com/gpakosz/.tmux">gpakosz/.tmux</a> is just like <code class="language-plaintext highlighter-rouge">oh-my-tmux</code>. If we do not want to setup tmux configuration by ourselves, checkout this one.</p>
+<p>And <a href="https://github.com/gpakosz/.tmux">gpakosz/.tmux</a> is just like <code class="highlighter-rouge">oh-my-tmux</code>. If we do not want to setup tmux configuration by ourselves, checkout this one.</p>
 
 <p>Install tmux:</p>
 
@@ -141,10 +141,10 @@
 <p>Install fzf:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>fzf
-<span class="nv">$ </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/opt/fzf/install
+<span class="nv">$ </span><span class="k">$(</span>brew <span class="nt">--prefix</span><span class="k">)</span>/opt/fzf/install
 </code></pre></div></div>
 
-<p>Enable fzf in <code class="language-plaintext highlighter-rouge">.zshrc</code>:</p>
+<p>Enable fzf in <code class="highlighter-rouge">.zshrc</code>:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span> <span class="nt">-f</span> ~/.fzf.zsh <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.fzf.zsh
 </code></pre></div></div>
@@ -165,9 +165,9 @@
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s2">"nvim"</span>
 </code></pre></div></div>
 
-<p>HINT: Neovim do not use <code class="language-plaintext highlighter-rouge">.vimrc</code>, it support XDG base directories by default.</p>
+<p>HINT: Neovim do not use <code class="highlighter-rouge">.vimrc</code>, it support XDG base directories by default.</p>
 
-<p>We now should setup in <code class="language-plaintext highlighter-rouge">~/.config/nvim/init.vim</code>. Just copy your <code class="language-plaintext highlighter-rouge">.vimrc</code> here, it mostly works.</p>
+<p>We now should setup in <code class="highlighter-rouge">~/.config/nvim/init.vim</code>. Just copy your <code class="highlighter-rouge">.vimrc</code> here, it mostly works.</p>
 
 <p>And I recommend <a href="https://github.com/Shougo/dein.vim">Shougo/dein.vim</a> as a plugin manager, which is “dark powered”. Vim/Neovim plugins is another big topic. For myself, I use deoplete, NERDTree, and vim-airline.</p>
 
