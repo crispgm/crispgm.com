@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1606448724">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1609681421">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -155,20 +155,20 @@
 
 <p>使用 FidderScript 建议安装第一节所说的插件，安装后就可以直接打开 FiddlerScript 标签，直接修改代码。</p>
 
-<p>在 <code class="highlighter-rouge">OnBeforeRequest</code> 函数中修改：</p>
+<p>在 <code class="language-plaintext highlighter-rouge">OnBeforeRequest</code> 函数中修改：</p>
 
 <ul>
   <li>添加 Headers</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oSession.oRequest["http_net_type"] = "1";
 </code></pre></div></div>
 
 <ul>
   <li>添加 Cookies</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 增加预览机标识
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 增加预览机标识
 oSession.oRequest.headers.Add("Cookie", "pub_env=1");
 </code></pre></div></div>
 
@@ -176,7 +176,7 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");
   <li>匹配 URL，防止添加的字段干扰到其他网页</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (oSession.uriContains("c.tieba.baidu.com")) {  
     // TODO
 }
 </code></pre></div></div>
@@ -212,7 +212,7 @@ oSession.oRequest.headers.Add("Cookie", "pub_env=1");
         <a href="https://twitter.com/crispgm"><i class="icon-twitter"></i></a>
       </div>
       <div class="contact-copyright">
-        <a href="https://crispgm.com">David Zhang</a> &copy; 2020
+        <a href="https://crispgm.com">David Zhang</a> &copy; 2021
       </div>
     </div>
   </div>

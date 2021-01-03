@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1606448724">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1609681421">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -72,11 +72,11 @@
 
 <p>欧美IT企业对于邮件的使用程度远远超过了国内，邮件是主要通知方式，比如 Travis 默认状态下持续集成成功、失败、重新成功等得给你来一封邮件。而作为强迫症的我，就必须点进去删除一封邮件。这种方式既浪费时间又不低碳。</p>
 
-<p>而 Slack 可以集成第三方 Apps，关闭邮件提醒，接管接收各类云服务的通知。于是，我在 Slack 中创建了 <code class="highlighter-rouge">#dev</code> 频道，收取 GitHub、Travis、CodeClimate 的通知。</p>
+<p>而 Slack 可以集成第三方 Apps，关闭邮件提醒，接管接收各类云服务的通知。于是，我在 Slack 中创建了 <code class="language-plaintext highlighter-rouge">#dev</code> 频道，收取 GitHub、Travis、CodeClimate 的通知。</p>
 
-<p>比如 Travis，我们可以直接在 <code class="highlighter-rouge">.travis.yml</code> 指定关闭邮件提醒，并推送到 Slack：</p>
+<p>比如 Travis，我们可以直接在 <code class="language-plaintext highlighter-rouge">.travis.yml</code> 指定关闭邮件提醒，并推送到 Slack：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>notifications:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>notifications:
   email: false
   slack: token-of-your-slack
 </code></pre></div></div>
@@ -89,7 +89,7 @@
 
 <p>ChatOps 就是“聊天式运维”，通过聊天软件集成机器人方式，完成对服务器状态的查看和操作。Slack 就是这一领域的典型代表。</p>
 
-<p>我会把运维相关的内容发送到 <code class="highlighter-rouge">#ops</code> 频道。对于 Heroku 这样成熟、开发体验友好的平台，其实没有什么需要运维的。通过 <code class="highlighter-rouge">heroku-cli</code> 几乎可以干任何事情，因为 <code class="highlighter-rouge">#ops</code> 频道只会接到代码更新部署的事件。而 Linode 那边的确需要运维，对于部署我已经通过 GitHub WebHooks 和部署脚本实现了自动化，所以这里只会接收到 NewRelic 的监控报警。</p>
+<p>我会把运维相关的内容发送到 <code class="language-plaintext highlighter-rouge">#ops</code> 频道。对于 Heroku 这样成熟、开发体验友好的平台，其实没有什么需要运维的。通过 <code class="language-plaintext highlighter-rouge">heroku-cli</code> 几乎可以干任何事情，因为 <code class="language-plaintext highlighter-rouge">#ops</code> 频道只会接到代码更新部署的事件。而 Linode 那边的确需要运维，对于部署我已经通过 GitHub WebHooks 和部署脚本实现了自动化，所以这里只会接收到 NewRelic 的监控报警。</p>
 
 <p><img src="https://crispgm.com/image/slack-ops-msg.jpg" alt="" /></p>
 
@@ -101,7 +101,7 @@
 
 <p>我是稍后阅读类 App 的重度用户，Pocket 世界阅读量排名进入 Top 1%，最近也经常用 Instapaper。我也维持着一套 Reeder 订阅 RSS，然后泛读和稍后阅读的阅读 flow。</p>
 
-<p>但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。于是，我创建了 <code class="highlighter-rouge">#articles</code> 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。至少，这比微信的文件同步助手手感更丝滑。</p>
+<p>但其实很多时候，有些文章属于路上发现，到了电脑前就会立刻阅读。于是，我创建了 <code class="language-plaintext highlighter-rouge">#articles</code> 频道，把一些感兴趣且看着还不错的文章发到 Slack 中。至少，这比微信的文件同步助手手感更丝滑。</p>
 
 <p><img src="https://crispgm.com/image/slack-share-article.jpg" alt="" /></p>
 
@@ -111,15 +111,15 @@
 
 <p>开发间歇的娱乐活动有很多，比如游戏和音乐。而我觉得看照片比较适合 Slack，怡情养眼且不耗时，还会时不时收获灵感。</p>
 
-<p>接收图片的频道有三个: <code class="highlighter-rouge">#girls</code> <code class="highlighter-rouge">#photography</code> <code class="highlighter-rouge">#design</code></p>
+<p>接收图片的频道有三个: <code class="language-plaintext highlighter-rouge">#girls</code> <code class="language-plaintext highlighter-rouge">#photography</code> <code class="language-plaintext highlighter-rouge">#design</code></p>
 
-<p><code class="highlighter-rouge">#girls</code> 的确是美女但不开车，<code class="highlighter-rouge">#photography</code> 是正规摄影小作品，而 <code class="highlighter-rouge">#design</code> 接收设计类的图片。</p>
+<p><code class="language-plaintext highlighter-rouge">#girls</code> 的确是美女但不开车，<code class="language-plaintext highlighter-rouge">#photography</code> 是正规摄影小作品，而 <code class="language-plaintext highlighter-rouge">#design</code> 接收设计类的图片。</p>
 
 <p>为了增加分享图片的仪式感，我引入了 <a href="https://workflow.is/">Workflow</a>：Post Image To Slack，通过 Action Extension 触发分享操作。</p>
 
 <p><img src="https://crispgm.com/image/slack-post-image-workflow.jpg" alt="" /></p>
 
-<p>此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack <code class="highlighter-rouge">#girls</code>。</p>
+<p>此外，还改了改 Save from Instagram 的 Workflow，保存过后通过 Post Image To Slack 直接发给 Slack <code class="language-plaintext highlighter-rouge">#girls</code>。</p>
 
 <h5 id="随机图片">随机图片</h5>
 
@@ -127,14 +127,14 @@
 
 <p>通过 Dribbble，可以随机获取一张设计稿或者是通过关键词搜索一张。虽然我不是设计师，但好的设计让人愉悦，也能激发灵感。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dribbble london
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dribbble london
 </code></pre></div></div>
 
 <p><img src="https://crispgm.com/image/slack-dribbble-london.jpg" alt="" /></p>
 
 <p>Unsplash 我在<a href="/page/unsplash-simple-pure-photos.html">之前的文章</a>进行过介绍，在 Slack 中可以随机获取一张高质量摄影作品，这是一种调节开发节奏的好方法。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/unsplash random
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/unsplash random
 </code></pre></div></div>
 
 <p><img src="https://source.unsplash.com/random" alt="" /></p>
@@ -172,7 +172,7 @@
         <a href="https://twitter.com/crispgm"><i class="icon-twitter"></i></a>
       </div>
       <div class="contact-copyright">
-        <a href="https://crispgm.com">David Zhang</a> &copy; 2020
+        <a href="https://crispgm.com">David Zhang</a> &copy; 2021
       </div>
     </div>
   </div>
