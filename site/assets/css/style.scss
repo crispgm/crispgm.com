@@ -5,7 +5,8 @@
  * Copyright (c) David Zhang, 2020
  */
 
-$breakpoint: 40rem;
+$mobile-breakpoint: 640px;
+$large-screen-breakpoint: 1900px;
 
 // fonts
 $main-font: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;

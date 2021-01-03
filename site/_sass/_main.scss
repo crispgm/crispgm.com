@@ -6,14 +6,20 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   height: 100%;
   width: 100%;
 }
 
-@media (max-width: $breakpoint) {
+@include mobile {
   html {
     font-size: 14px;
+  }
+}
+
+@include large-screen {
+  html {
+    font-size: 18px;
   }
 }
 
@@ -48,7 +54,7 @@ a {
 .wrapper {
   margin: 0 auto;
   padding: 0;
-  width: $breakpoint;
+  width: 36rem;
 }
 
 .blog-wrapper {
@@ -62,6 +68,12 @@ a {
 
 .content-wrapper {
   padding: 1.2rem 0 0;
+}
+
+@include large-screen {
+  .wrapper {
+    width: 40rem;
+  }
 }
 
 @include mobile {
@@ -78,7 +90,7 @@ a {
 
 img {
   border: 0;
-  max-width: $breakpoint;
+  max-width: 100%;
 }
 
 @include mobile {

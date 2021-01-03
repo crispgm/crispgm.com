@@ -1,8 +1,14 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2019
+// Copyright (c) David Zhang, 2021
 
 @mixin mobile() {
-  @media (max-width: #{$breakpoint}) {
+  @media screen and (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media screen and (min-width: #{$large-screen-breakpoint}) {
     @content;
   }
 }
