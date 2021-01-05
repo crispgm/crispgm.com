@@ -66,6 +66,7 @@ GEM
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.7.0)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -77,6 +78,7 @@ DEPENDENCIES
   rake
   scss_lint
   shoulda-context
+  webrick (~> 1.7)
 
 BUNDLED WITH
-   2.0.2
+   2.2.3

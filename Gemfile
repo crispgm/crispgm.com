@@ -9,3 +9,5 @@ group :test do
   gem "minitest"
   gem "shoulda-context"
 end
+
+gem "webrick", "~> 1.7"
