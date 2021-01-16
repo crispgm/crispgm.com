@@ -44,7 +44,7 @@ namespace :site do
     sh "git pull --rebase"
     # Clone to gh-pages
     unless File.exist?("gh-pages")
-      sh "git clone -b gh-pages https://github.com/crispgm/crispgm.com.git gh-pages"
+      sh "git clone --depth=1 -b gh-pages https://github.com/crispgm/crispgm.com.git gh-pages"
     end
     # Checkout and pull
     Dir.chdir("gh-pages") do
