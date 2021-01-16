@@ -5,16 +5,16 @@ jobs:
     name: run
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
-    - name: 'Update Rubygems & Bundler'
-      run: 'gem update --system --no-document && gem update bundler --no-document'
-    - name: 'Install Bundler 2'
-      run: 'gem install bundler -v "2.0.1" --force'
-    - run: 'bundle install'
-    - run: 'bundle exec rake init'
-    - run: 'bundle exec rake'
-    - run: 'bundle exec scss-lint site/_sass'
+      - uses: actions/checkout@master
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: 'Update Rubygems & Bundler'
+        run: 'gem update --system --no-document && gem update bundler --no-document'
+      - name: 'Install Bundler 2'
+        run: 'gem install bundler -v "2.0.1" --force'
+      - run: 'bundle install'
+      - run: 'bundle exec rake init'
+      - run: 'rake test'
+      - run: 'bundle exec scss-lint site/_sass'
