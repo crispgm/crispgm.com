@@ -19,7 +19,7 @@ There are 3 Jekyll sites here and will be built into `gh-pages` branch.
 This is somehow huge. Use a shallow clone may save much time:
 
 ```shell
-$ git clone git@github.com:crispgm/crispgm.com.git --depth 1
+git clone git@github.com:crispgm/crispgm.com.git --depth 1
 ```
 
 ### Init
@@ -61,5 +61,5 @@ git commit -m "feat: new blog [publish]"
 
 ## License
 
-* All blogs are licensed under a CC BY-NC-ND 4.0 license.
+* All blogs and contents are licensed under a CC BY-NC-ND 4.0 license.
 * Site source is licensed under MIT License.
