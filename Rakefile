@@ -75,8 +75,12 @@ namespace :site do
     # end
     # Push
     Dir.chdir("gh-pages") do
+      sh "git config --global user.name 'crispbot'"
+      sh "git config --global user.email 'crispgm@users.noreply.github.com'"
       sh "git add ."
       sh "git commit --allow-empty -m \"Deployed at #{Time.now}\""
+      GITHUB_TOKEN = ENV["GITHUB_TOKEN"]
+      sh "git remote set-url --push origin https://crispgm:#{GITHUB_TOKEN}@github.com/crispgm/crispgm.com"
       sh "git push origin gh-pages"
     end
   end
