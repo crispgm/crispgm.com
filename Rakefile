@@ -58,7 +58,7 @@ namespace :site do
     end
     # Build resume
     Dir.chdir("resume") do
-      sh "bundle exec jekyll build --destination=../gh-pages/resume/"
+      sh "bundle exec jekyll build --destination=../gh-pages/resume/ --trace"
     end
     # Build wiki
     Dir.chdir("wiki") do
