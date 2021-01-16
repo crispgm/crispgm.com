@@ -1,6 +1,7 @@
 # [crispgm.com](crispgm.com)
 
-![GitHub CI](https://github.com/crispgm/crispgm.com/workflows/build/badge.svg)
+![build](https://github.com/crispgm/crispgm.com/workflows/build/badge.svg)
+![publish](https://github.com/crispgm/crispgm.com/workflows/publish/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3cb069fc-ecc9-4da8-8ad1-435a9a75bee7/deploy-status)](https://app.netlify.com/sites/crispgm/deploys)
 
 Source of [crispgm.com](https://crispgm.com/). Also available at: <https://crisp.dev>.
@@ -21,28 +22,41 @@ This is somehow huge. Use a shallow clone may save much time:
 $ git clone git@github.com:crispgm/crispgm.com.git --depth 1
 ```
 
+### Init
+
+```shell
+rake init
+```
+
 ### Serve
 
 ```shell
 # serve site
-$ rake site:serve
+rake site:serve
 # serve wiki
-$ rake wiki:serve
+rake wiki:serve
 # serve resume
-$ rake resume:serve
+rake resume:serve
 # build
-$ rake site:build
+rake site:build
 ```
 
 ### Lint & Tests
 
 ```shell
 # evaluate on different devices
-$ rake site:evaluate
+rake site:evaluate
 # lint scss
-$ rake site:lint
+rake site:lint
 # smoke test
-$ rake test
+rake test
+```
+
+### Publish
+
+```shell
+# commit with [publish]
+git commit -m "feat: new blog [publish]"
 ```
 
 ## License
