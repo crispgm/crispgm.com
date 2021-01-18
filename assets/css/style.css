@@ -167,8 +167,6 @@ code.highlighter-rouge { border: 1px solid #D8DEE9; border-radius: 4px; font-siz
 
 .things .things-item { border-bottom: 1px solid #D8DEE9; display: flex; margin-bottom: 1rem; padding-bottom: 1rem; width: 100%; }
 
-.things .things-item:last-child { border: 0; }
-
 .things .things-item .things-title { color: #2E3440; font-size: 1rem; min-width: 12.4rem; }
 
 .things .things-item .things-image { max-width: 11.2rem; padding: .4rem 0 0; }
