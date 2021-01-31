@@ -23,7 +23,7 @@ I greatly appreciate minimalism and simplicity. I enjoy photography, reading, co
 
 * [Keyboard Inventory](/keyboard.html){:target="_blank"}
 * [Crisp Minimal Weekly](https://crispgm.github.io/weekly/){:target="_blank"}
-* [Crisp Wiki](/wiki/){:target="_blank"}
+* [Crisp Wiki](https://david-zhang.gitbook.io/wiki/){:target="_blank"}
 
 <div class="page-title">License</div>
 

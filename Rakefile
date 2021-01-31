@@ -19,9 +19,6 @@ task :init do
   Dir.chdir("resume") do
     sh "bundle install"
   end
-  Dir.chdir("wiki") do
-    sh "bundle install"
-  end
 end
 
 namespace :site do
@@ -61,9 +58,9 @@ namespace :site do
       sh "bundle exec jekyll build --destination=../gh-pages/resume/ --trace"
     end
     # Build wiki
-    Dir.chdir("wiki") do
-      sh "bundle exec jekyll build --destination=../gh-pages/wiki/"
-    end
+    # Dir.chdir("wiki") do
+      # sh "bundle exec jekyll build --destination=../gh-pages/wiki/"
+    # end
     # Build wedding invitation
     # unless File.exists?("wedding-invitation")
     #   sh "git clone https://github.com/crispgm/wedding-invitation.git"
