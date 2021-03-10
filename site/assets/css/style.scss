@@ -16,12 +16,11 @@ $code-font: "Fira Mono", Menlo, Monaco, Consolas, Courier, monospace;
 $dark-9: #2E3440;
 $dark-5: #4C566A;
 $dark-3: #D8DEE9;
-$dark-1: #ECEFF4;
-$bright: #5E81AC;
-$mild:   #5E81AC;
-
+$bg:     #ECEFF4;
+$bright: #B48EAD;
 $link:   #5E81AC;
-$bg:     #FFFFFF;
+// $dark-1: #E5E9F0;
+// $mild:   #B48EAD;
 
 // mixins
 @import "mixins";
