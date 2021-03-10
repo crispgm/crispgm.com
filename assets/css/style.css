@@ -7,13 +7,13 @@ html { font-size: 16px; height: 100%; width: 100%; }
 
 @media screen and (min-width: 1900px) { html { font-size: 18px; } }
 
-body { background-color: #FFFFFF; color: #2E3440; font-family: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif; font-size: 1rem; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; height: 100%; margin: 0; padding: 0; text-align: center; word-wrap: break-word; }
+body { background-color: #ECEFF4; color: #2E3440; font-family: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif; font-size: 1rem; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; height: 100%; margin: 0; padding: 0; text-align: center; word-wrap: break-word; }
 
 a { color: #5E81AC; font-weight: 400; text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
-.wrapper { margin: 0 auto; padding: 0; width: 36rem; }
+.wrapper { margin: 0 auto; padding: 0; max-width: 1024px; }
 
 .blog-wrapper { display: block; }
 
@@ -29,19 +29,19 @@ img { border: 0; max-width: 100%; }
 
 @media screen and (max-width: 640px) { img { max-width: 100%; } }
 
-.header { background-color: #FFFFFF; width: 100%; }
+.header { background-color: #ECEFF4; width: 100%; }
 
 .menu { color: #4C566A; display: flex; margin-top: 1.8rem; text-align: left; }
 
-.menu .menu-home { font-size: 1.4rem; width: 100%; }
+.menu .menu-home { font-size: 1.6rem; width: 100%; }
 
 .menu .menu-home a { color: inherit; text-decoration: none; }
 
 .menu .menu-home a:hover { text-decoration: underline; }
 
-.menu .menu-links { display: flex; margin-top: .2rem; }
+.menu .menu-links { display: flex; margin-top: .1rem; }
 
-.menu .menu-item { font-size: 1rem; padding-left: .8rem; text-align: left; }
+.menu .menu-item { font-size: 1.2rem; padding-left: 1rem; text-align: left; }
 
 .menu .menu-item:first-of-type { padding-left: 0; }
 
@@ -157,7 +157,7 @@ code.highlighter-rouge { border: 1px solid #D8DEE9; border-radius: 4px; font-siz
 
 .archive-main .archive-item { line-height: 1.8rem; margin-top: .6rem; overflow: auto; }
 
-.archive-main .archive-item .archive-date { color: #5E81AC; font-size: .8rem; margin: 0; }
+.archive-main .archive-item .archive-date { color: #B48EAD; font-size: .8rem; margin: 0; }
 
 .archive-more { color: #4C566A; }
 
