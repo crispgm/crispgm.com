@@ -13,7 +13,7 @@ a { color: #5E81AC; font-weight: 400; text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
-.wrapper { margin: 0 auto; padding: 0; max-width: 1024px; }
+.wrapper { margin: 0 auto; max-width: 1024px; padding: 0; }
 
 .blog-wrapper { display: block; }
 
@@ -165,7 +165,7 @@ code.highlighter-rouge { border: 1px solid #D8DEE9; border-radius: 4px; font-siz
 
 .things { margin-top: 1rem; }
 
-.things .things-item { border-bottom: 1px solid #D8DEE9; display: flex; margin-bottom: 1rem; padding-bottom: 1rem; width: 100%; }
+.things .things-item { border-top: 1px solid #D8DEE9; display: flex; margin-bottom: 1rem; padding-top: 1rem; width: 100%; }
 
 .things .things-item .things-title { color: #2E3440; font-size: 1rem; min-width: 12.4rem; }
 
