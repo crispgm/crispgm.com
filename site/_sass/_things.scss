@@ -1,14 +1,14 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2020
+// Copyright (c) David Zhang, 2021
 
 .things {
   margin-top: 1rem;
 
   .things-item {
-    border-bottom: 1px solid $dark-3;
+    border-top: 1px solid $dark-3;
     display: flex;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
     width: 100%;
 
     .things-title {
