@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <meta name="description" content="Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker."/>
-  <title>Go Module in Action | David Zhang</title>
+  <title>Go Module in Action | CrispDev</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://crispgm.com/page/go-module-in-action.html">
   
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1615968082">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1616250196">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
@@ -29,7 +29,7 @@
       <div class="article">
         <div class="article-menu">
           <div class="article-home">
-            <a href="/">DAVID ZHANG</a>
+            <a href="/">CrispDev</a>
           </div>
           <div class="article-back">
             <a href="/blog.html"><< Back</a>
@@ -46,9 +46,9 @@
         <div class="article-main">
           <p>For a long time, Golang provides an extremely simple dependency management model. It just depends on Git repos and actually its <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
 
-<p>If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> including the existence of <code class="language-plaintext highlighter-rouge">GOPATH</code>. That is because <strong>Google</strong> uses monorepo.</p>
+<p>If you have experience on concepts and tools like monorepo/Gerrit, you can easily get the point why it was initially designed like this<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> including the existence of <code class="language-plaintext highlighter-rouge">GOPATH</code>. That is because <strong>Google</strong> uses monorepo.</p>
 
-<p>There are some advantages claimed<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup> and Golang’s dependency management could work on that well.</p>
+<p>There are some advantages claimed<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> and Golang’s dependency management could work on that well.</p>
 
 <p>However, monorepo does not dominate the world. The dominance of open source community is GitHub. In contrast, GitHub follows fork &amp; pull request workflow.</p>
 
@@ -56,7 +56,7 @@
 
 <ul>
   <li>No tag, no semver. When <code class="language-plaintext highlighter-rouge">master</code> makes breaking change, it breaks build.</li>
-  <li>Not compatible with GitHub’s fork model, unless you make some hack on Git remote<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>.</li>
+  <li>Not compatible with GitHub’s fork model, unless you make some hack on Git remote<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</li>
 </ul>
 
 <p>To make it easier, there are some efforts:</p>

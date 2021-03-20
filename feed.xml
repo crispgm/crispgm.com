@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>David Zhang</title>
+    <title>CrispDev</title>
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Mar 2021 08:01:22 +0000</pubDate>
-    <lastBuildDate>Wed, 17 Mar 2021 08:01:22 +0000</lastBuildDate>
+    <pubDate>Sat, 20 Mar 2021 14:23:16 +0000</pubDate>
+    <lastBuildDate>Sat, 20 Mar 2021 14:23:16 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       
@@ -224,7 +224,7 @@
 &lt;p&gt;Ledger-likes are keeping accounting with double-entry bookkeeping.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;p&gt;For every movement of value (a transaction), both the source and destination are recorded. Simple arithmetic invariants help prevent errors. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Double-entry bookkeeping could date back to early-medieval Middle East and it is widely used in modern accounting.&lt;/p&gt;
@@ -612,7 +612,7 @@
 &lt;p&gt;RICE is not the food rice. Instead, it is the acronym of Race Inspired Cosmetic Enhancements. Let me look up in the dictionary:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;p&gt;Parts put on cars to make them look fast, when they have no internal tuning, and are actually slow as hell. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The definition is quite funny. It is exact the same behavior as we make a great UI for dev and feel as if we get better efficiency.&lt;/p&gt;
@@ -650,7 +650,7 @@
 
 &lt;p&gt;Arch Linux chooses blue as major color, which is vivid and shows the sense of technology. I kept on copying the color scheme when I was building my own home page. Even though today, I still feel it is a good color scheme.&lt;/p&gt;
 
-&lt;p&gt;Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get &lt;em&gt;solid&lt;/em&gt; skills on that, I appreciate its idea: &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Let’s head to Arch Linux’s philosophy. I have no idea of these minimal style distros since you can hardly handle shell/terminal from the beginning. But as soon as I get &lt;em&gt;solid&lt;/em&gt; skills on that, I appreciate its idea: &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Simplicity, minimalism, and code elegance&lt;/li&gt;
@@ -661,7 +661,7 @@
 
 &lt;p&gt;As soon as I read Arch’s philosophy, I know that the second point is the most important reason why it is popular in RICE culture. And Pacman makes it even easier and powerful.&lt;/p&gt;
 
-&lt;p&gt;It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;It is somehow like Gentoo Linux but seems to be a lot easier, because the Gentoo packages and base system are built directly from source code but Arch tends to make user build packages quicker.&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;And finally, it is like you make your own system and are responsible for yourself. You choose what you need and configure as you like based on what you can do. No surprise, no weird parts, so it is totally in control.&lt;/p&gt;
 
