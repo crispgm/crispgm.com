@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker."/>
+  <title>Neovim (0.5) Is Overpowering | CrispDev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://crispgm.com/page/neovim-is-overpowering.html">
+  
+  <link rel="alternate" href="https://crisp.dev/page/neovim-is-overpowering.html">
+  
+  <link rel="alternate" href="https://crispgm.com/feed.xml" type="application/rss+xml" title="RSS">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
+  <link rel="icon" type="image/x-icon" href="/image/logo.png">
+  
+  <link rel="stylesheet" href="/assets/css/font.css?v=1616305540">
+  
+  
+  <link rel="stylesheet" href="/assets/css/nord.css">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://use.typekit.net/syr2mmc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+  <body>
+    <div class="progress-bar"></div>
+    <div class="wrapper blog-wrapper content-wrapper">
+      <div class="article">
+        <div class="article-menu">
+          <div class="article-home">
+            <a href="/">CrispDev</a>
+          </div>
+          <div class="article-back">
+            <a href="/blog.html"><< Back</a>
+          </div>
+        </div>
+        <div class="article-head">
+          <div class="article-title">
+            Neovim (0.5) Is Overpowering
+          </div>
+          <div class="article-date">
+            <time datetime="2021-03-21 00:00:00 +0000">March 21, 2021</time>
+          </div>
+        </div>
+        <div class="article-main">
+          <p>I have heard about Neovim for a long time. I can say that I really appreciate and adopt the ideas of Neovim –
+it’s more progressive, embraces open source community, and tries to make Neovim approachable to more developers.</p>
+
+<p>However, for its functionality, I didn’t see much difference between Vim. There are various reasons.
+Firstly, Neovim is a drop-in Vim, so even the plugins could compat each other without much modification,
+if it is not implemented with Vim or Neovim specific feature.
+And Neovim somehow pushes Vim to evolve and release similar improvement. e.g., asynchronous job.
+For an end-user without much deeper knowledge, the biggest differences might be  <code class="language-plaintext highlighter-rouge">XDG_PATH</code> based directory and <code class="language-plaintext highlighter-rouge">init.vim</code> file name.</p>
+
+<p>Until then, I found Neovim 0.5 and try Neovim nightly because of <a href="https://github.com/ThePrimeagen" target="_blank">ThePrimeagen</a> and <a href="https://github.com/tjdevries" target="_blank">tjdevries</a>, which impacted me with significant differences and power.</p>
+
+<h2 id="modern-editor-technologies">Modern Editor Technologies</h2>
+
+<p>Neovim 0.5 brings in new features that important to a modern code editor:</p>
+<ul>
+  <li>A built-in LSP (Language Server Protocol) client</li>
+  <li>Tree-sitter syntax engine</li>
+  <li>Lua API improvements</li>
+</ul>
+
+<h3 id="built-in-lsp-client">Built-in LSP Client</h3>
+
+<p>There are great language plugins in Vim ecology, but it is not easy to handle.
+For each language, users may need to get a plugin for it and configure a lot. There was not a unified way to make it.
+But language server does.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Language_Server_Protocol">Language Server Protocol</a> is created by Microsoft, RedHat and Codenvy,
+which provides language features (e.g. completion, navigation, formatting, and so on) through JSON-based RPC protocol,
+so IDEs and editors are able to follow a unified protocol for different languages.</p>
+
+<p>Vim use <code class="language-plaintext highlighter-rouge">cscope</code>  to handle these features but it is not good for every language and not intelligent enough.</p>
+
+<p>There are popular Vim LSP clients include <a href="https://github.com/dense-analysis/ale" target="_blank">ale</a>,
+<a href="https://github.com/neoclide/coc.nvim" target="_blank">coc.vim</a>,
+<a href="https://github.com/autozimu/LanguageClient-neovim" target="_blank">LanguageClient-neovim</a>,
+and <a href="https://github.com/prabirshrestha/vim-lsp" target="_blank">vim-lsp</a>, which tries to bring language servers to Vim/Neovim.
+But Neovim 0.5 embeds a built-in LSP client by itself instead of plugins.
+Because <a href="[https://www.youtube.com/watch?v=ArwDgvYEZYk" target="_blank">LSP is built for editors and “we can have nice things”</a>.</p>
+
+<p>We just install any language servers we want. Then, code completion and a bunch of goto features are ready for us.</p>
+
+<p>And a notice here, before moving to Neovim, I have tried LSP with Visual Studio Code.
+It overall works well but for huge repos, there is performance issue.
+When you open repo with tons of codes (e.g. Thrift generated codes),
+language server can be very slow at first and cost much CPU time.</p>
+
+<h3 id="tree-sitter"><a href="https://github.com/tree-sitter/tree-sitter">tree-sitter</a></h3>
+
+<p>Tree-sitter is a parser generator tool and Neovim uses it to build syntax tree, in order to understand source code better.
+As a result, now Neovim provides better highlight
+(here is a <a href="https://github.com/nvim-treesitter/nvim-treesitter/wiki/Gallery">Gallery of tree-sitter powered features in Neovim</a>)
+and it can also be used to create awesome feature, e.g. syntax-based text object.</p>
+
+<p>Showcase of nvim-treesiter:
+<img src="https://raw.githubusercontent.com/nvim-treesitter/nvim-treesitter/master/assets/example-cpp.png" alt="nvim-treesiter" /></p>
+
+<p>And I added <a href="https://github.com/crispgm/nord-vim/blob/develop/colors/nord.vim#L306">highlights patches</a>
+for my favortie colorscheme with support on Tree-sitter symbols:</p>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">"+-----------+</span>
+<span class="c">" treesitter +</span>
+<span class="c">"+-----------+</span>
+
+<span class="k">call</span> <span class="nv">s:hi</span><span class="p">(</span><span class="s2">"TSError"</span> <span class="p">,</span> <span class="nv">s:nord11_gui</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="nv">s:nord11_term</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="k">call</span> <span class="nv">s:hi</span><span class="p">(</span><span class="s2">"TSPunctDelimiter"</span><span class="p">,</span> <span class="nv">s:nord6_gui</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="nv">s:nord6_term</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="k">call</span> <span class="nv">s:hi</span><span class="p">(</span><span class="s2">"TSPunctBracket"</span><span class="p">,</span> <span class="nv">s:nord6_gui</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="nv">s:nord6_term</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="k">call</span> <span class="nv">s:hi</span><span class="p">(</span><span class="s2">"TSPunctSpecial"</span><span class="p">,</span> <span class="nv">s:nord6_gui</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="nv">s:nord6_term</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="k">call</span> <span class="nv">s:hi</span><span class="p">(</span><span class="s2">"TSConstant"</span><span class="p">,</span> <span class="nv">s:nord4_gui</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"NONE"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="k">call</span> <span class="nv">s:hi</span><span class="p">(</span><span class="s2">"TSConstBuiltin"</span><span class="p">,</span> <span class="nv">s:nord4_gui</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"NONE"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="c">" ... more</span>
+</code></pre></div></div>
+
+<h3 id="lua-api-improvements">Lua API Improvements</h3>
+
+<p>Neovim has embraced Lua since v0.2.1 and and it keeps improving.
+From now on, we can setup Neovim with <code class="language-plaintext highlighter-rouge">init.lua</code> over <code class="language-plaintext highlighter-rouge">init.vim</code>.
+Here is a great <a href="https://oroques.dev/notes/neovim-init/">article about init.lua migration</a>.</p>
+
+<p>But the Lua parts are not that ready for production. I think it’s the vim API part.
+We can do config Neovim with <code class="language-plaintext highlighter-rouge">init.lua</code>, but it looks not so native. e.g.:</p>
+<ul>
+  <li>Calling to vim command is literally command string</li>
+  <li>Config options is not that easy</li>
+  <li>No native auto-commands support</li>
+</ul>
+
+<p>There are several pull requests WIP on GitHub to make it easier and more user friendly.
+If you chose to migrate to <code class="language-plaintext highlighter-rouge">init.lua</code> now, you would have faced refactoring though it would not be very hard.</p>
+
+<h2 id="nightly-plugins">Nightly Plugins</h2>
+
+<p>Though Neovim 0.5 is still nightly, a bunch of plugins are made by awesome enthusiasts and contributors,
+which leverage the power of the new features.</p>
+
+<h3 id="nvim-treesitter"><a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a></h3>
+
+<p>Though neovim embeds tree-sitter, it is not out-of-box for users. We need this to install the languages.</p>
+
+<p>Installation:</p>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Plug <span class="s1">'nvim-treesitter/nvim-treesitter'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'do'</span><span class="p">:</span> <span class="s1">':TSUpdate'</span><span class="p">}</span>
+Plug <span class="s1">'nvim-treesitter/playground'</span>
+</code></pre></div></div>
+
+<p>And <code class="language-plaintext highlighter-rouge">:TSInstall [language]</code> to install a language parser. Sometimes, you may not notice what tree-sitter does.
+Just try <code class="language-plaintext highlighter-rouge">:TSPlaygroudToggle</code>, you will have a clearer understanding of tree-sitter.</p>
+
+<h3 id="nvim-lspconfig"><a href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig</a></h3>
+
+<p>It is similar to nvim-treesitter but for LSP client,
+which is needed for install and communicate with language servers of each language.</p>
+
+<p>Installation:</p>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Plug <span class="s1">'neovim/nvim-lspconfig'</span>
+</code></pre></div></div>
+
+<p>The language servers are needed to install externally on system level with any package manager you like.
+I use Homebrew, <code class="language-plaintext highlighter-rouge">go get</code> and npm/yarn all together.
+Follow <a href="https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md" target="_blank"><code class="language-plaintext highlighter-rouge">CONFIG.md</code></a> for details of each language server.</p>
+
+<p>Take Go and <code class="language-plaintext highlighter-rouge">gopls</code> as example:</p>
+
+<p>Install <code class="language-plaintext highlighter-rouge">gopls</code>:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest
+</code></pre></div></div>
+
+<p>Then setup with <code class="language-plaintext highlighter-rouge">lspconfig</code>:</p>
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span><span class="s1">'lspconfig'</span><span class="p">.</span><span class="n">gopls</span><span class="p">.</span><span class="n">setup</span><span class="p">{}</span>
+</code></pre></div></div>
+
+<p>When you open a file, <code class="language-plaintext highlighter-rouge">:LspInfo</code> to know whether a LSP client is attached.</p>
+
+<h3 id="nvim-compe"><a href="https://github.com/hrsh7th/nvim-compe">nvim-compe</a></h3>
+
+<p>nvim-compe is an auto completion plugin for nvim. It completes based on LSP, buffers, and snippets.
+It works with Neovim’s native LSP client.</p>
+
+<p><img src="https://crispgm.com/image/nvim-compe.png" alt="nvim-compe" style="width: 640px;" /></p>
+
+<p>Installation:</p>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Plug <span class="s1">'hrsh7th/nvim-compe'</span>
+</code></pre></div></div>
+
+<p>There are also other choices. But I personally recommend <code class="language-plaintext highlighter-rouge">nvim-compe</code> for its good functionality and design,
+with both well-organized and well-written source codes.</p>
+
+<h3 id="telescope"><a href="https://github.com/nvim-telescope/telescope.nvim">Telescope</a></h3>
+
+<p>Last but the most, Telescope is one of the killer apps of Neovim nightly. It is similar to fzf, but with better user interface. We can do file navigation, live grep, buffer navigation, help tag/keymaps viewer and many more with Telescope.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" dependencies</span>
+Plug <span class="s1">'nvim-lua/popup.nvim'</span>
+Plug <span class="s1">'nvim-lua/plenary.nvim'</span>
+<span class="c">" telescope</span>
+Plug <span class="s1">'nvim-telescope/telescope.nvim'</span>
+</code></pre></div></div>
+
+<p>Find file in Telescope:</p>
+
+<p><img src="https://crispgm.com/image/nvim-telescope.png" alt="nvim-telescope" /></p>
+
+<p>With Telescope, I leave FZF and rarely use file tree plugin again.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I often come across with YouTube videos with <del>clickbait</del> titles like “configure Vim or Neovim like VSCode” (no offence).
+As it says, VSCode is an awesome editor and set a standard for editors.</p>
+
+<p>Neovim 0.5 is overpowering as the title says.
+Give Neovim 0.5 a try, you will find that it is not difficult to make it as powerful as VSCode.
+And I am also looking forward to seeing more nice things with Neovim.</p>
+
+        </div>
+        <div class="article-share">
+          <a href="https://twitter.com/share?url=https%3A%2F%2Fcrispgm.com%2Fpage%2Fneovim-is-overpowering.html&text=Neovim+%280.5%29+Is+Overpowering">
+            <i class="icon-twitter"></i>
+          </a>
+          
+          <a href="tg://msg_url?url=https%3A%2F%2Ft.me%2Fiv%3Furl%3Dhttps%253A%252F%252Fcrispgm.com%252Fpage%252Fneovim-is-overpowering.html%26rhash%3Da3e6c7b51eec6a">
+            <i class="icon-telegram"></i>
+          </a>
+          <a href="https://www.buymeacoffee.com/crispgm">
+            <i class="icon-coffee"></i>
+          </a>
+        </div>
+        <div id="disqus_thread" class="article-comment"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+    <footer class="wrapper" id="contact">
+  <div class="content">
+    <div class="contact">
+      <div class="contact-links">
+        <a href="mailto:crispgm@gmail.com"><i class="icon-envelope-o"></i></a>
+        <a href="/feed.xml"><i class="icon-rss"></i></a>
+        <a href="https://github.com/crispgm"><i class="icon-github"></i></a>
+        <a href="https://stackoverflow.com/users/6858150/david-zhang/"><i class="icon-stack-overflow"></i></a>
+        <a href="https://instagram.com/crispgm"><i class="icon-instagram"></i></a>
+        <a href="https://twitter.com/crispgm"><i class="icon-twitter"></i></a>
+      </div>
+      <div class="contact-copyright">
+        <a href="https://crispgm.com">David Zhang</a> &copy; 2021
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+<script src="/assets/scripts/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+<script>
+var disqus_config = function () {
+  this.page.identifier = '/page/neovim-is-overpowering.html';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://crispgm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+
+  </body>
+  <script>
+document.addEventListener('scroll', function(e) {
+  var wrapper   = document.querySelector('.blog-wrapper');
+  var article   = document.querySelector('.article');
+  var docHeight = wrapper.offsetHeight;
+  var maxHeight = docHeight - window.innerHeight - article.offsetTop;
+  var scrollTop = window.scrollY || window.scollTop || document.getElementsByTagName("html")[0].scrollTop;
+  var ratio = scrollTop / maxHeight;
+  var progressBar = document.querySelector('.progress-bar');
+  var winWidth  = window.innerWidth;
+  if (ratio <= 1.0) {
+    progressBar.style.width = winWidth * ratio + 'px';
+  }
+  else {
+    progressBar.style.width = winWidth + 'px';
+  }
+});
+</script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50708664-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
