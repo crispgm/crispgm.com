@@ -19,9 +19,9 @@ a:hover { text-decoration: underline; }
 
 .content { text-align: center; width: 100%; }
 
-.content-wrapper { padding: 1.2rem 0 0; }
+.content-wrapper { padding: 1.2rem 1.2rem 0; }
 
-@media screen and (min-width: 1900px) { .wrapper { width: 40rem; } }
+@media screen and (min-width: 1900px) { .wrapper { width: 56rem; } }
 
 @media screen and (max-width: 640px) { .wrapper { display: block; width: 100%; } .content-wrapper { padding: .8rem; width: 100%; } }
 
