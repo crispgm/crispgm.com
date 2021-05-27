@@ -5,8 +5,8 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Mar 2021 05:45:40 +0000</pubDate>
-    <lastBuildDate>Sun, 21 Mar 2021 05:45:40 +0000</lastBuildDate>
+    <pubDate>Thu, 27 May 2021 03:00:22 +0000</pubDate>
+    <lastBuildDate>Thu, 27 May 2021 03:00:22 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       
@@ -49,7 +49,7 @@ so IDEs and editors are able to follow a unified protocol for different language
 &lt;a href=&quot;https://github.com/autozimu/LanguageClient-neovim&quot; target=&quot;_blank&quot;&gt;LanguageClient-neovim&lt;/a&gt;,
 and &lt;a href=&quot;https://github.com/prabirshrestha/vim-lsp&quot; target=&quot;_blank&quot;&gt;vim-lsp&lt;/a&gt;, which tries to bring language servers to Vim/Neovim.
 But Neovim 0.5 embeds a built-in LSP client by itself instead of plugins.
-Because &lt;a href=&quot;[https://www.youtube.com/watch?v=ArwDgvYEZYk&quot; target=&quot;_blank&quot;&gt;LSP is built for editors and “we can have nice things”&lt;/a&gt;.&lt;/p&gt;
+Because &lt;a href=&quot;https://www.youtube.com/watch?v=ArwDgvYEZYk&quot; target=&quot;_blank&quot;&gt;LSP is built for editors and “we can have nice things”&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We just install any language servers we want. Then, code completion and a bunch of goto features are ready for us.&lt;/p&gt;
 
