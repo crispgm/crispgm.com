@@ -40,7 +40,7 @@ There are popular Vim LSP clients include [ale](https://github.com/dense-analysi
 [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim){:target="_blank"},
 and [vim-lsp](https://github.com/prabirshrestha/vim-lsp){:target="_blank"}, which tries to bring language servers to Vim/Neovim.
 But Neovim 0.5 embeds a built-in LSP client by itself instead of plugins.
-Because [LSP is built for editors and “we can have nice things”]([https://www.youtube.com/watch?v=ArwDgvYEZYk){:target="_blank"}.
+Because [LSP is built for editors and “we can have nice things”](https://www.youtube.com/watch?v=ArwDgvYEZYk){:target="_blank"}.
 
 We just install any language servers we want. Then, code completion and a bunch of goto features are ready for us.
 
