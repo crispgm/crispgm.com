@@ -33,8 +33,6 @@ rake init
 ```shell
 # serve site
 rake site:serve
-# serve wiki
-rake wiki:serve
 # serve resume
 rake resume:serve
 # build
