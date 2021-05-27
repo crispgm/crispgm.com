@@ -1,6 +1,6 @@
 ---
 layout: post
-type: lifestyle
+type: legacy
 title: Plain Text Accounting - The Fundamental
 permalink: /page/accounting-with-pta-fundamental.html
 ---
