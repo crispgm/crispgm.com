@@ -12,7 +12,7 @@ The theme is called [Minimal](https://github.com/crispgm/minimal). It basically 
 
 ## Dev
 
-There are 3 Jekyll sites here and will be built into `gh-pages` branch.
+There are 2 Jekyll sites here and will be built into `gh-pages` branch.
 
 ### Shallow Clone
 
