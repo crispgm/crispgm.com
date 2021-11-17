@@ -5,6 +5,10 @@ title: 程序员主题配色键帽对比
 permalink: /page/programmers-keycaps-compare.html
 ---
 
+### 更新记录
+
+- 2021-11-17: _加入 EnjoyPBT Be The One
+
 近年来，GeekHack 上出现了多个受到程序员主题配色启发复刻的键帽。在国内讨论中，时常会看到有人觉得「码农风格键帽看起来都差不多」。不得不承认，或许是受到某种设计或者工艺限制的原因，这些主题风格在键帽上的呈现的确颇有相似之处。
 
 但据我之前的使用经验，在实际的编辑器/IDE/终端使用时，不同的主题感官大部分还是很不一样的。个人感觉就是，显示器的色彩饱和度比较高，所以编辑器中的主题背景色会比较突出，让不同主题看起来会有很直观的不同。而在键帽上，就不会那么明显，有一部分「渲染美如画」到手后「翻车」的键帽或许也是这个原因。
@@ -17,6 +21,7 @@ permalink: /page/programmers-keycaps-compare.html
 - [GMK Nord](https://geekhack.org/index.php?topic=100646.0)
 - [GMK Dracula](https://geekhack.org/index.php?topic=100727.0)
 - [GMK Monokai Material](https://geekhack.org/index.php?topic=105160.0)
+- [EnjoyPBT Be The One](https://geekhack.org/index.php?topic=110929.0)
 
 （排序以发布时间为准）
 
@@ -97,6 +102,17 @@ Monokai 不像 Nord 和 Dracula，主题的移植更多的依靠社区贡献，�
 ![]({{ "/image/keycaps/monokai-in-js.png" | absolute_url }})
 ![]({{ "/image/keycaps/monokai-set.png" | absolute_url }})
 ![]({{ "/image/keycaps/monokai-render.png" | absolute_url }})
+
+### One Dark Pro
+
+[One Dark Pro](https://github.com/Binaryify/OneDark-Pro) 是 VSCode 上安装量最大的主题，有超过450万人安装。这一系列主题源自 Atom 编辑器中的 One Dark。
+
+Be The One 键帽彩色部分可以看出是源自 One Dark Pro，但 Base 部分背景色和字符色都是编辑器中不是那么普遍的颜色，所以整体效果两者差异还是比较大的。
+
+![]({{ "/image/keycaps/one-in-go.png" | absolute_url }})
+![]({{ "/image/keycaps/one-in-js.png" | absolute_url }})
+![]({{ "/image/keycaps/one-set.png" | absolute_url }})
+![]({{ "/image/keycaps/one-render.png" | absolute_url }})
 
 ### 最后
 
