@@ -5,8 +5,8 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Oct 2021 09:34:03 +0000</pubDate>
-    <lastBuildDate>Tue, 19 Oct 2021 09:34:03 +0000</lastBuildDate>
+    <pubDate>Wed, 17 Nov 2021 07:11:35 +0000</pubDate>
+    <lastBuildDate>Wed, 17 Nov 2021 07:11:35 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       
@@ -368,7 +368,13 @@ And I am also looking forward to seeing more nice things with Neovim.&lt;/p&gt;
       
       <item>
         <title>程序员主题配色键帽对比</title>
-        <description>&lt;p&gt;近年来，GeekHack 上出现了多个受到程序员主题配色启发复刻的键帽。在国内讨论中，时常会看到有人觉得「码农风格键帽看起来都差不多」。不得不承认，或许是受到某种设计或者工艺限制的原因，这些主题风格在键帽上的呈现的确颇有相似之处。&lt;/p&gt;
+        <description>&lt;h3 id=&quot;更新记录&quot;&gt;更新记录&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2021-11-17: _加入 EnjoyPBT Be The One&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;近年来，GeekHack 上出现了多个受到程序员主题配色启发复刻的键帽。在国内讨论中，时常会看到有人觉得「码农风格键帽看起来都差不多」。不得不承认，或许是受到某种设计或者工艺限制的原因，这些主题风格在键帽上的呈现的确颇有相似之处。&lt;/p&gt;
 
 &lt;p&gt;但据我之前的使用经验，在实际的编辑器/IDE/终端使用时，不同的主题感官大部分还是很不一样的。个人感觉就是，显示器的色彩饱和度比较高，所以编辑器中的主题背景色会比较突出，让不同主题看起来会有很直观的不同。而在键帽上，就不会那么明显，有一部分「渲染美如画」到手后「翻车」的键帽或许也是这个原因。&lt;/p&gt;
 
@@ -381,6 +387,7 @@ And I am also looking forward to seeing more nice things with Neovim.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://geekhack.org/index.php?topic=100646.0&quot;&gt;GMK Nord&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://geekhack.org/index.php?topic=100727.0&quot;&gt;GMK Dracula&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://geekhack.org/index.php?topic=105160.0&quot;&gt;GMK Monokai Material&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://geekhack.org/index.php?topic=110929.0&quot;&gt;EnjoyPBT Be The One&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;（排序以发布时间为准）&lt;/p&gt;
@@ -464,6 +471,17 @@ And I am also looking forward to seeing more nice things with Neovim.&lt;/p&gt;
 &lt;img src=&quot;https://crispgm.com/image/keycaps/monokai-in-js.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;https://crispgm.com/image/keycaps/monokai-set.png&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;https://crispgm.com/image/keycaps/monokai-render.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;one-dark-pro&quot;&gt;One Dark Pro&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Binaryify/OneDark-Pro&quot;&gt;One Dark Pro&lt;/a&gt; 是 VSCode 上安装量最大的主题，有超过450万人安装。这一系列主题源自 Atom 编辑器中的 One Dark。&lt;/p&gt;
+
+&lt;p&gt;Be The One 键帽彩色部分可以看出是源自 One Dark Pro，但 Base 部分背景色和字符色都是编辑器中不是那么普遍的颜色，所以整体效果两者差异还是比较大的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/keycaps/one-in-go.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/keycaps/one-in-js.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/keycaps/one-set.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/keycaps/one-render.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;最后&quot;&gt;最后&lt;/h3&gt;
 
