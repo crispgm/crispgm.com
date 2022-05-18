@@ -21,7 +21,7 @@ education:
     major: Bachelor of Computer Science & Technology.
 skills:
   - title: Backends
-    items: Go, Python, Django, Flask, Ruby, Nginx, MySQL, Memcache, Redis, Ruby on Rails, PHP
+    items: Go, Nginx, MySQL, Memcache, Redis, Ruby, Ruby on Rails, Python, PHP
   - title: Frontends
     items: HTML, CSS/Sass, JavaScript/TypeScript, React, Vue.js
   - title: Architectures
@@ -29,7 +29,7 @@ skills:
   - title: Computer Systems
     items: CI/CD, Design Patterns, Linux, Shell, awk, git, vim
 experience:
-  - title: Senior Software Engineer
+  - title: Staff Software Engineer
     duration: Sep 2017 - present
     company: ByteDance Inc.
     description: >
@@ -38,10 +38,10 @@ experience:
       </div>
       <br>
       <div>
-      - Searching system
+      - Infrastructure of enterprise system
       </div>
       <div>
-      - Infrastructure of web engineering
+      - Searching system
       </div>
   - title: Senior Software Engineer
     duration: Mar 2017 - Aug 2017
@@ -72,12 +72,15 @@ experience:
       <b>Notable projects</b>: Parallelized optimization for Tieba, Tieba BigPipe, Online Test Platform, and Tieba-Specific Ad System.
       </div>
 projects:
+  - name: go-lark
+    description: An easy-to-use SDK for Feishu and Lark Open Platform. It is widely used and tested by ~450 ByteDance in-house developers with over 1.5k Go packages.
+    contribution: Contributor
+  - name: Neovim
+    description: Vim-fork focused on extensibility and usability
+    contribution: Contributor
   - name: Jekyll
     description: Jekyll is a blog-aware, static site generator in Ruby.
     contribution: Contributor
-  - name: Rugby News Board
-    description: "#1 rugby news feed in China."
-    contribution: Creator
   - name: jekyll-crisp-resume
     description: A minimalist resume template for Jekyll. This resume itself uses it, after all. :)
     contribution: Creator
