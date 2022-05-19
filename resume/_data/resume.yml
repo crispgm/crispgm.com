@@ -4,10 +4,9 @@ jobtitle: Senior Software Engineer
 contact:
   - icon: fa-envelope
     text: crispgm@gmail.com
-  - icon: fa-phone-square
-    text: (+86) 15652998660
+  # - icon: fa-phone-square
   - icon: fa-globe
-    text: crispgm.com
+    text: crisp.dev
   - icon: fa-github
     text: crispgm
 education:
@@ -76,7 +75,7 @@ projects:
     description: An easy-to-use SDK for Feishu and Lark Open Platform. It is widely used and tested by ~450 ByteDance in-house developers with over 1.5k Go packages.
     contribution: Contributor
   - name: Neovim
-    description: Vim-fork focused on extensibility and usability
+    description: Vim-fork focused on extensibility and usability.
     contribution: Contributor
   - name: Jekyll
     description: Jekyll is a blog-aware, static site generator in Ruby.
