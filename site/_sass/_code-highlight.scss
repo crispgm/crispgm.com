@@ -1,5 +1,5 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2020
+// Copyright (c) David Zhang, 2022
 
 pre,
 code {
@@ -10,17 +10,17 @@ code {
 pre.highlight {
   border: 1px solid $dark-5;
   border-radius: 4px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 code.hljs {
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 code.highlighter-rouge {
   border: 1px solid $dark-3;
   border-radius: 4px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  padding: .1rem .3rem;
+  padding: 0.1rem 0.3rem;
 }

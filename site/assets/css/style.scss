@@ -1,36 +1,39 @@
 ---
 ---
+
 /*
  * Theme of Crisp Blog
- * Copyright (c) David Zhang, 2020
+ * Copyright (c) David Zhang, 2022
  */
 
 $mobile-breakpoint: 640px;
 $large-screen-breakpoint: 1900px;
 
 // fonts
-$main-font: "Fira Sans", "Segoe UI", Roboto, Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
-$code-font: "Fira Mono", Menlo, Monaco, Consolas, Courier, monospace;
+$main-font: 'Fira Sans', 'Segoe UI', Roboto, Helvetica, Arial,
+  'source-han-sans-simplified-c', 'Hiragino Sans GB', 'Microsoft Yahei',
+  sans-serif;
+$code-font: 'Fira Mono', Menlo, Monaco, Consolas, Courier, monospace;
 
 // colors
-$dark-9: #2E3440;
-$dark-5: #4C566A;
-$dark-3: #D8DEE9;
-$bg:     #ECEFF4;
-$bright: #B48EAD;
-$link:   #5E81AC;
+$dark-9: #2e3440;
+$dark-5: #4c566a;
+$dark-3: #d8dee9;
+$bg: #eceff4;
+$bright: #b48ead;
+$link: #5e81ac;
 // $dark-1: #E5E9F0;
 // $mild:   #B48EAD;
 
 // mixins
-@import "mixins";
+@import 'mixins';
 
 // components
-@import "main";
-@import "menu";
-@import "footer";
-@import "page";
-@import "article";
-@import "code-highlight";
-@import "archive";
-@import "things";
+@import 'main';
+@import 'menu';
+@import 'footer';
+@import 'page';
+@import 'article';
+@import 'code-highlight';
+@import 'archive';
+@import 'things';

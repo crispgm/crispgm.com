@@ -6,3 +6,6 @@ linters:
     enabled: false
   NestingDepth:
     enabled: false
+  LeadingZero:
+    enabled: true
+    style: 'include_zero'

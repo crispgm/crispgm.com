@@ -1,5 +1,5 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2020
+// Copyright (c) David Zhang, 2022
 
 footer {
   border-top: 1px dotted $dark-3;
@@ -14,7 +14,7 @@ footer {
   font-size: 1rem;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding: .8rem 0 0;
+  padding: 0.8rem 0 0;
   text-align: left;
 
   .contact-copyright {
@@ -28,11 +28,11 @@ footer {
 
     a {
       color: $dark-9;
-      padding-left: .8rem;
+      padding-left: 0.8rem;
       text-decoration: none;
 
       &:first-of-type {
-        padding-left: .2rem;
+        padding-left: 0.2rem;
       }
     }
 
@@ -56,7 +56,7 @@ footer {
 
     .contact-links {
       float: none;
-      margin: .4rem 0;
+      margin: 0.4rem 0;
 
       &:first {
         padding: 0;

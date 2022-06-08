@@ -1,5 +1,5 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2020
+// Copyright (c) David Zhang, 2022
 
 .header {
   background-color: $bg;
@@ -28,7 +28,7 @@
 
   .menu-links {
     display: flex;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
   }
 
   .menu-item {
@@ -60,16 +60,16 @@
 @include mobile {
   .menu {
     margin: 0;
-    padding: 0 .8rem;
+    padding: 0 0.8rem;
 
     .menu-home {
       font-size: 1.2rem;
-      margin-top: .8rem;
+      margin-top: 0.8rem;
     }
 
     .menu-links {
       display: flex;
-      margin-top: .8rem;
+      margin-top: 0.8rem;
     }
 
     .menu-item {
