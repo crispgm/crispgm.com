@@ -1,5 +1,5 @@
 // Theme of Crisp Blog
-// Copyright (c) David Zhang, 2020
+// Copyright (c) David Zhang, 2022
 
 .progress-bar {
   background-color: $dark-3;
@@ -23,7 +23,7 @@
       color: $dark-9;
       position: relative;
       text-decoration: none;
-      transition: color .4s;
+      transition: color 0.4s;
 
       &:hover {
         &::before {
@@ -40,7 +40,7 @@
         left: 0;
         position: absolute;
         transform: scaleX(0);
-        transition: all .2s cubic-bezier(.82, 0, .12, 1) 0s;
+        transition: all 0.2s cubic-bezier(0.82, 0, 0.12, 1) 0s;
         width: 100%;
       }
     }
@@ -71,7 +71,7 @@
       color: $link;
       position: relative;
       text-decoration: none;
-      transition: color .4s;
+      transition: color 0.4s;
 
       &:hover {
         &::before {
@@ -88,7 +88,7 @@
         left: 0;
         position: absolute;
         transform: scaleX(0);
-        transition: all .2s cubic-bezier(.82, 0, .12, 1) 0s;
+        transition: all 0.2s cubic-bezier(0.82, 0, 0.12, 1) 0s;
         width: 100%;
       }
     }
@@ -101,7 +101,7 @@
 
     a {
       color: $dark-5;
-      padding: 0 .4rem;
+      padding: 0 0.4rem;
 
       &:hover {
         text-decoration: none;
@@ -113,6 +113,36 @@
   .article-comment {
     iframe {
       text-align: center;
+    }
+  }
+}
+
+@include print {
+  .article {
+    .article-menu {
+      border-bottom: 1px solid $dark-3;
+      padding: .8rem 0;
+
+      .article-home {
+        clear: both;
+        float: none;
+      }
+
+      .article-back {
+        display: none;
+      }
+    }
+
+    .article-head {
+      margin: 2rem 0;
+    }
+
+    .article-share {
+      display: none;
+    }
+
+    .article-comment {
+      display: none;
     }
   }
 }
@@ -145,7 +175,7 @@ h4 {
   color: $dark-5;
   font-size: 1.2rem;
   font-weight: 600;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   text-align: left;
 }
 
@@ -153,12 +183,12 @@ h5 {
   color: $dark-5;
   font-size: 1rem;
   font-weight: 700;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   text-align: left;
 }
 
 blockquote {
-  border-left: .2rem solid $dark-3;
+  border-left: 0.2rem solid $dark-3;
   margin-left: 0;
   padding-left: 1rem;
 }
@@ -173,8 +203,8 @@ p {
 }
 
 sup {
-  font-size: .6rem;
-  line-height: .6rem;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
   vertical-align: auto;
 }
 
@@ -213,11 +243,11 @@ table {
 
     th {
       background-color: $dark-5;
-      padding: .2rem .4rem;
+      padding: 0.2rem 0.4rem;
     }
 
     td {
-      padding: .2rem .4rem;
+      padding: 0.2rem 0.4rem;
     }
   }
 }
