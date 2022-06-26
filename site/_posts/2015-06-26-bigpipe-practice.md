@@ -4,11 +4,7 @@ type: programming
 title: 贴吧 BigPipe 实践 (nginx + hhvm)
 date: 2015/06/26 16:23:00 +0800
 permalink: /page/bigpipe-practice.html
-tags:
-- BigPipe
-- nginx
-- hhvm
-- php
+katex: true
 ---
 
 ## 背景
@@ -65,9 +61,9 @@ BigPipe 的整体方案是需要具体实现环节分为如下几部分：
 
 由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：
 
-```
+{% katex %}
 t = max(t1, t2, t3...)
-```
+{% endkatex %}
 
 框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。
 
@@ -115,7 +111,7 @@ header('X-Accel-Buffering: no');
 
 ### 效果评估
 
-* TTFB时间减少56% (TTFB = time to first byte)
+* TTFB时间减少56% (TTFB: time to first byte)
 * 白屏时间减少59%
 * 降低了局部刷新开发成本
 

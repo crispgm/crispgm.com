@@ -25,7 +25,10 @@ Let me show a example:
 * Tool No.4 (1.6x)
 * Tool No.5 (1.1x)
 
-Total: 10x * 2x * 1.5x * 3x * 1.1x = 100x
+Total:
+{% katex %}
+10x * 2x * 1.5x * 3x * 1.1x = 100x
+{% endkatex %}
 
 # Solutions
 

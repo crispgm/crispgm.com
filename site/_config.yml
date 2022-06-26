@@ -5,7 +5,7 @@ description: "Home page and blog of David Zhang (@crispgm), a minimalist program
 url: "https://crispgm.com"
 alt_url:
   - "https://crisp.dev"
-encoding: utf-8
+encoding: UTF-8
 markdown: kramdown
 assets: /assets
 
@@ -45,3 +45,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - assets/fonts/selection.json
+
+plugins:
+  - jekyll-katex

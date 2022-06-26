@@ -19,6 +19,9 @@
   {% if page.syntax_highlight != false %}
   <link rel="stylesheet" href="{{ site.assets }}/css/nord.css">
   {% endif %}
+  {% if page.katex != false %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
+  {% endif %}
   <link rel="stylesheet" href="{{ site.assets }}/css/style.css">
   <script src="https://use.typekit.net/syr2mmc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
