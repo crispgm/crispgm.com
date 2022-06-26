@@ -16,10 +16,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Mono&display=swap">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   
-  <link rel="stylesheet" href="/assets/css/font.css?v=1654696734">
+  <link rel="stylesheet" href="/assets/css/font.css?v=1656231773">
   
   
   <link rel="stylesheet" href="/assets/css/nord.css">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" crossorigin="anonymous">
   
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="https://use.typekit.net/syr2mmc.js"></script>
@@ -103,8 +106,9 @@
 
 <p>由于贴吧现有框架本身并不支持纯异步调用，只支持阻塞并行的远程调用(ral_multi)，其响应时间为：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t = max(t1, t2, t3...)
-</code></pre></div></div>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mn>1</mn><mo separator="true">,</mo><mi>t</mi><mn>2</mn><mo separator="true">,</mo><mi>t</mi><mn>3...</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+t = max(t1, t2, t3...)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord">3</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mclose">)</span></span></span></span></p>
 
 <p>框架本身需要升级，在升级完成前需要基于现有架构模拟纯异步，并且要在框架支持纯异步后，平滑对 DataProvider 透明地迁移成纯异步模式。</p>
 
@@ -154,7 +158,7 @@ nginx: [emerg] unknown directive "fastcgi_buffering"
 <h3 id="效果评估">效果评估</h3>
 
 <ul>
-  <li>TTFB时间减少56% (TTFB = time to first byte)</li>
+  <li>TTFB时间减少56% (TTFB: time to first byte)</li>
   <li>白屏时间减少59%</li>
   <li>降低了局部刷新开发成本</li>
 </ul>
