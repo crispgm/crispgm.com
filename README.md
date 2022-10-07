@@ -53,8 +53,8 @@ rake test
 ### Publish
 
 ```shell
-# commit with [publish]
-git commit -m "feat: new blog [publish]"
+# commit without publishing
+git commit -m "chore: minor update [no publish]"
 ```
 
 ## License
