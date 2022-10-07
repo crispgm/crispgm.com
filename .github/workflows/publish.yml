@@ -1,5 +1,10 @@
 name: publish
-on: push
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 1 1 *"
 jobs:
   publish:
     name: run
