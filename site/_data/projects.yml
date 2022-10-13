@@ -1,3 +1,50 @@
+- name: neovim
+  description: Vim-fork focused on extensibility and usability
+  contributed: true
+  links:
+    - text: GitHub
+      href: https://github.com/neovim/neovim
+    - text: Commits
+      href: https://github.com/neovim/neovim/commits?author=crispgm
+- name: Crisp Minimal Résumé
+  description: A minimalist résumé template for Jekyll.
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/resume
+    - text: Demo
+      href: https://crispgm.github.io/resume/resume.html
+- name: go-lark
+  description: An easy-to-use SDK for Feishu and Lark Open Platform (Messaging API only)
+  links:
+    - text: GitHub
+      href: https://github.com/go-lark/lark
+- name: nvim-go
+  description: A minimal implementation of Golang development plugin for Neovim
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/nvim-go
+- name: telescope-heading.nvim
+  description: An extension for telescope.nvim that allows you to switch between headings
+  links:
+    - text: GitHub
+      href: https://github.com/crispgm/telescope-heading.nvim
+- name: URL Auto Redirector
+  description: URL Auto Redirector is a Chrome extension that allows you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
+  links:
+    - text: Chrome WebStore
+      href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
+    - text: Homepage
+      href: https://urlautoredirector.github.io/
+    - text: GitHub
+      href: https://github.com/URLAutoRedirector/URLAutoRedirector
+- name: awesome-cn-cafe
+  description: A curated list of awesome café places in China.
+  contributed: true
+  links:
+    - text: Commits
+      href: https://github.com/ElaWorkshop/awesome-cn-cafe/commits?author=crispgm
+    - text: GitHub
+      href: https://github.com/ElaWorkshop/awesome-cn-cafe
 - name: Jekyll
   description: Jekyll is a blog-aware, static site generator in Ruby.
   contributed: true
@@ -8,51 +55,6 @@
       href: https://github.com/jekyll/jekyll
     - text: Commits
       href: https://github.com/jekyll/jekyll/commits?author=crispgm
-- name: Crisp Minimal Résumé
-  description: A minimalist résumé template for Jekyll.
-  links:
-    - text: GitHub
-      href: https://github.com/crispgm/resume
-    - text: Demo
-      href: https://crispgm.github.io/resume/resume.html
-- name: Rugby News Board
-  description: "#1 Rugby news board in Chinese, which is built with Preact, Express, and Rails."
-  links:
-    - text: Homepage
-      href: http://nbrugby.com/
-    - text: GitHub
-      href: https://github.com/rugby-board
-- name: awesome-cn-cafe
-  description: A curated list of awesome café places in China.
-  contributed: true
-  links:
-    - text: Commits
-      href: https://github.com/ElaWorkshop/awesome-cn-cafe/commits?author=crispgm
-    - text: GitHub
-      href: https://github.com/ElaWorkshop/awesome-cn-cafe
-- name: URL Auto Redirector
-  description: URL Auto Redirector is a Chrome extension that allows you to skip certain pages, mostly useless referral/ad pages, after you click on affiliate links. By doing so, it gets you directly to your destination page.
-  links:
-    - text: Chrome WebStore
-      href: https://chrome.google.com/webstore/detail/url-auto-redirector/mckfcfnegaimgcgepikhdnajpkkhdnkn
-    - text: Homepage
-      href: https://urlautoredirector.github.io/
-    - text: GitHub
-      href: https://github.com/URLAutoRedirector/URLAutoRedirector
-- name: Caravan
-  description: Simple project files watcher and deployer.
-  links:
-    - text: RubyGems
-      href: https://rubygems.org/gems/caravan
-    - text: GitHub
-      href: https://github.com/crispgm/caravan
-- name: Word Kanban
-  description: 📘 A simple Kanban-like word book.
-  links:
-    - text: Homepage
-      href: https://word-kanban.herokuapp.com/
-    - text: GitHub
-      href: https://github.com/crispgm/word-kanban
 - name: RSS Hub
   description: 🍰 万物皆可 RSS
   contributed: true
@@ -61,9 +63,26 @@
       href: https://docs.rsshub.app/
     - text: GitHub
       href: https://github.com/DIYgod/RSSHub
+- name: Caravan
+  description: Simple project files watcher and deployer.
+  deprecated: true
+  links:
+    - text: RubyGems
+      href: https://rubygems.org/gems/caravan
+    - text: GitHub
+      href: https://github.com/crispgm/caravan
+- name: Word Kanban
+  description: 📘 A simple Kanban-like word book.
+  deprecated: true
+  links:
+    - text: Homepage
+      href: https://word-kanban.herokuapp.com/
+    - text: GitHub
+      href: https://github.com/crispgm/word-kanban
 - name: gorm
   description: The fantastic ORM library for Golang, aims to be developer friendly.
   contributed: true
+  deprecated: true
   links:
     - text: Homepage
       href: http://gorm.io/
@@ -71,3 +90,11 @@
       href: https://github.com/jinzhu/gorm
     - text: Commits
       href: https://github.com/jinzhu/gorm/commits?author=crispgm
+- name: Rugby News Board
+  description: "#1 Rugby news board in Chinese, which is built with Preact, Express, and Rails."
+  deprecated: true
+  links:
+    - text: Homepage
+      href: http://nbrugby.com/
+    - text: GitHub
+      href: https://github.com/rugby-board

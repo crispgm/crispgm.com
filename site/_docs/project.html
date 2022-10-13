@@ -5,7 +5,7 @@ permalink: /project.html
 <div class="page-title">Project</div>
 
 <div id="project" class="things">
-  {% for project in site.data.projects %}
+  {% for project in site.data.projects %}{% if not project.deprecated %}
   <div class="things-item">
     <div class="things-title">
       {{ project.name }}
@@ -26,7 +26,7 @@ permalink: /project.html
       </div>
     </div>
   </div>
-  {% endfor %}
+  {% endif %}{% endfor %}
 </div>
 
 <p>
