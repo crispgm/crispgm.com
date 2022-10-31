@@ -16,7 +16,7 @@ education:
     major: Master of Information Technology - Software Architecture.
   - university: Southeast University
     duration: Aug 2007 - Jun 2011
-    location: Nanjing, Jiangsu Province, China
+    location: Nanjing, Jiangsu, China
     major: Bachelor of Computer Science & Technology.
 skills:
   - title: Backends
@@ -28,8 +28,13 @@ skills:
   - title: Computer Systems
     items: CI/CD, Design Patterns, Linux, Shell, awk, git, vim
 experience:
+  - title: Engineering Manager
+    duration: Sep 2022 - present
+    company: ByteDance Inc.
+    description: >
+      Engineer Manager: SaaS Product Development
   - title: Staff Software Engineer
-    duration: Sep 2017 - present
+    duration: Sep 2017 - Aug 2022
     company: ByteDance Inc.
     description: >
       <div>
@@ -37,10 +42,10 @@ experience:
       </div>
       <br>
       <div>
-      - Infrastructure of enterprise system
+      - Architect: Enterprise/SaaS System
       </div>
       <div>
-      - Searching system
+      - Product manager & fullstack dev: Searching System
       </div>
   - title: Senior Software Engineer
     duration: Mar 2017 - Aug 2017
