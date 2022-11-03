@@ -7,7 +7,7 @@ permalink: /page/dive-in-homebrew.html
 
 > macOS 上各种软件的管理，只要有 Homebrew 就足够了。
 
-# 简介
+## 简介
 
 Homebrew 是一款享有盛名的包管理工具，是 macOS 上包管理的事实(de facto)标准 。Homebrew 的意思是家酿啤酒。
 
@@ -30,7 +30,7 @@ Homebrew 最早的创建者是 Max Howell，目前的主要维护者是 Mike McQ
 
 目前 Homebrew 的中文内容大多以简单入门级教程为主，对于它的各类能力提之甚少，我希望在这里更全面的分享 Homebrew。
 
-# 快速入门
+## 快速入门
 
 网上基础的教程很多，我这里只简略的介绍下。对于基础功能类的深度用法，推荐这篇 [macOS 包管理工具 Homebrew 不完全指南](https://swiftcafe.io/post/home-brew)。
 
@@ -38,7 +38,7 @@ Homebrew 最早的创建者是 Max Howell，目前的主要维护者是 Mike McQ
 
 开始安装前需要安装 macOS 命令行工具：
 ```shell
-$ xcode-select —install
+$ xcode-select --install
 ```
 
 或者，在<https://developer.apple.com/download/more/>下载安装。
@@ -50,7 +50,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 ### 基础功能
 
-##### 安装
+#### 安装
 
 ```shell
 $ brew install wget
@@ -62,7 +62,7 @@ $ brew list
 wget
 ```
 
-##### 升级
+#### 升级
 
 ```shell
 # 显示可以升级的包
@@ -75,16 +75,16 @@ youtube-dl (2019.03.09) < 2019.03.18
 $ brew upgrade cmake
 ```
 
-##### 删除
+#### 删除
 
 ```shell
 $ brew uninstall wget
 ```
 
-##### 安装桌面程序
+#### 安装桌面程序
 
 ```shell
-$ brew cask install google-chrome
+$ brew install google-chrome --cask
 ```
 
 对于 Homebrew-cask 管理桌面程序，这里先不细说，后面会专门讲。
@@ -105,7 +105,7 @@ Homebrew 把软件安装过程中的各种名词都进行了拟物化命名[^3][
 | cask       | 木桶 | 安装 macOS native 应用的扩展 |
 | bundle     | 捆 | 描述 Homebrew 依赖的扩展 |
 
-# 进阶用法
+## 进阶用法
 
 对于 Homebrew，我们很多时候往往都是上来就`brew search`或是`brew install`。缺什么安什么，没有充分的应用它的强大能力。
 
@@ -149,25 +149,25 @@ $ brew services start mysql
 搜索 Cask 的方法和搜索普通包一样，但安装时需要加上 cask 指令：
 ```shell
 $ brew search google-chrome
-$ brew cask install google-chrome
+$ brew install google-chrome --cask
 ```
 
-##### cask-versions
+#### cask-versions
 
 Homebrew Cask 和 Homebrew 一样，默认库只维护最新版本，但有的时候我们还是需要用旧版的（比如：我只有 Dash 3 的 License，所以需要用 Dash 3 而不是最新的 Dash 4），那就可能需要使用 cask-versions。
 
 ```shell
 $ brew tap homebrew/cask-versions
-$ brew cask install dash3
+$ brew install dash3 --cask
 ```
 
-##### cask-fonts
+#### cask-fonts
 
 Homebrew 官方的字体源，比如 Mozilla 的开源字体 Fira Code：
 
 ```shell
 $ brew tap homebrew/cask-fonts
-$ brew cask install font-fira-code
+$ brew install font-fira-code --cask
 ```
 
 ### Bundle
@@ -238,7 +238,7 @@ mas "WeChat", id: 836500024
 brew bundle
 ```
 
-# 扩展用法
+## 扩展用法
 
 ### 提交 Formula
 
@@ -250,19 +250,19 @@ Homebrew 除了各种官方维护的源外，还支持自建软件库。默认�
 
 比如，Heroku 的自建库在 GitHub 上是`heroku/homebrew-brew`。通过`brew tap heroku/brew`就可以获取库里维护的包了。
 
-## 私有 Tap
+### 私有 Tap
 
 上面说到，Tap 默认维护在 GitHub，那么当我们想安装一些需要**保密**的软件时该怎么办呢？
 
 答案是 Tap 支持指定 Git，因此也可以使用内网域名内的 Git：
 ```shell
-$ brew tap yourcompany/brew git@git.yourcompany.com: yourcompany/homebrew-brew.git
+$ brew tap yourcompany/brew git@git.yourcompany.com:yourcompany/homebrew-brew.git
 $ brew install inhouse-app
 ```
 
-# Tips
+## Tips
 
-##### 禁用自动升级
+### 禁用自动升级
 
 Homebrew 自动升级触发概率很高，由于网络等问题，检查更新会很久有时会比较烦。可以通过环境变量禁用自动升级：
 
@@ -270,7 +270,7 @@ Homebrew 自动升级触发概率很高，由于网络等问题，检查更新�
 HOMEBREW_NO_AUTO_UPDATE=1 brew info mysql
 ```
 
-##### 直接安装 Formula
+### 直接安装 Formula
 
 Homebrew 的安装指令并非只支持名字，也可以用文件安装包括网络文件和本地文件。
 
@@ -281,7 +281,7 @@ $ brew install blabla.rb
 $ brew install https://blablablabla.com/blabla.rb
 ```
 
-##### 安装旧版软件
+### 安装旧版软件
 
 Homebrew 默认情况下只支持最新版软件安装，有些重要的版本会单独存在。但想安装一些小版本就得自己 DIY 了。
 
@@ -291,7 +291,7 @@ Homebrew 默认情况下只支持最新版软件安装，有些重要的版本�
 
 ---
 [^1]: [Max Howell on Twitter: “Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.”](https://twitter.com/mxcl/status/608682016205344768)
-[^2]:  [https://github.com/Linuxbrew/brew/issues/612](https://github.com/Linuxbrew/brew/issues/612) 
+[^2]: [https://github.com/Linuxbrew/brew/issues/612](https://github.com/Linuxbrew/brew/issues/612)
 [^3]: [Formula Cookbook — Homebrew Documentation](https://docs.brew.sh/Formula-Cookbook#homebrew-terminology)
 [^4]: [Glossary of Homebrew Terms](http://tmr08c.github.io/devops/2016/10/24/homebrew-glossary.html)
 [^5]: [Formula Cookbook — Homebrew Documentation](https://docs.brew.sh/Formula-Cookbook#an-introduction)
