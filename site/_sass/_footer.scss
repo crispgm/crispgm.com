@@ -2,7 +2,7 @@
 // Copyright (c) David Zhang, 2022
 
 footer {
-  border-top: 1px dotted $dark-3;
+  border-top: 1px solid $dark-3;
   font-size: 1rem;
   margin-top: 1.2rem;
   overflow: hidden;
@@ -14,7 +14,7 @@ footer {
   font-size: 1rem;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding: 0.8rem 0 0;
+  padding: 0.8rem 1.2rem 0;
   text-align: left;
 
   .contact-copyright {

@@ -49,6 +49,10 @@
     .things-item {
       display: block;
 
+      .things-image {
+        max-width: 100%;
+      }
+
       .things-link {
         display: flex;
         padding: 0.2rem 0;
