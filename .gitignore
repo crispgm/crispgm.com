@@ -2,6 +2,7 @@ gh-pages/
 wiki/wiki/
 /integrated-test/node_modules
 /integrated-test/screenshots
+/integrated-test/package-lock.json
 npm-debug.log
 .DS_Store
 /resume/_site
