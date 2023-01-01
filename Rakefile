@@ -1,7 +1,5 @@
 # coding: utf-8
 require "rake/testtask"
-require "listen"
-
 
 task default: %w[test]
 

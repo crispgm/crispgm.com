@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+      - name: Set up Ruby 2.7
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6
       - name: 'Update Rubygems & Bundler'
         run: 'gem update --system --no-document && gem update bundler --no-document'
       - name: 'Install Bundler 2'
