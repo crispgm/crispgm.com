@@ -5,6 +5,7 @@ permalink: /index.html
 
 <!-- <div class="page-title" id="programming">Latest Posts</div> -->
 <div class="archive-main">
+  <div class="archive-single-column">
   {% for post in site.posts limit:12 %}
     {% if post.type == 'legacy' %}
       {% continue %}
@@ -14,6 +15,7 @@ permalink: /index.html
       <div class="archive-title"><a href="{{ post.permalink }}">{{ post.title }}</a></div>
     </div>
   {% endfor %}
+  </div>
 </div>
 <p class="archive-more">
   <a href="/blog.html">More</a> |

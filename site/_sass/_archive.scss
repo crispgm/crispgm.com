@@ -2,6 +2,8 @@
 // Copyright (c) David Zhang, 2022
 
 .archive-main {
+  display: flex;
+
   a {
     color: $dark-5;
     text-decoration: none;
@@ -9,6 +11,10 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .archive-section {
+    width: 50%;
   }
 
   .archive-item {
@@ -26,6 +32,7 @@
 
 .archive-more {
   color: $dark-5;
+  margin: 0.8rem 0;
 
   a {
     color: $dark-5;
