@@ -1,6 +1,6 @@
 ---
 layout: post
-type: lifestyle
+type: programming
 title: Alfred Nord, A Nord theme for Alred
 permalink: /page/alfred-nord.html
 ---
