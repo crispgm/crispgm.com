@@ -451,12 +451,18 @@ code.highlighter-rouge {
   padding: 0.1rem 0.3rem;
 }
 
+.archive-main {
+  display: flex;
+}
 .archive-main a {
   color: #495057;
   text-decoration: none;
 }
 .archive-main a:hover {
   text-decoration: underline;
+}
+.archive-main .archive-section {
+  width: 50%;
 }
 .archive-main .archive-item {
   line-height: 1.8rem;
@@ -471,6 +477,7 @@ code.highlighter-rouge {
 
 .archive-more {
   color: #495057;
+  margin: 0.8rem 0;
 }
 .archive-more a {
   color: #495057;
