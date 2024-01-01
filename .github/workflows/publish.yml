@@ -12,10 +12,11 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[no publish]')"
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby 2.7
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 3.3
+          bundler-cache: true
       - name: 'Update Rubygems & Bundler'
         run: 'gem update --system --no-document && gem update bundler --no-document'
       - name: 'Install Bundler 2'
