@@ -16,6 +16,5 @@ jobs:
       - name: 'Install Bundler 2'
         run: 'gem install bundler -v "2.0.1" --force'
       - run: 'bundle install'
-      - run: 'bundle exec rake init'
-      - run: 'rake test'
+      - run: 'bundle exec rake test'
       - run: 'bundle exec scss-lint site/_sass'

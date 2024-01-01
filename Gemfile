@@ -1,13 +1,19 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll"
-gem "listen"
-gem "scss_lint", require: false
+gem 'jekyll'
+gem 'listen'
+gem 'scss_lint', require: false
 
-group :test do
-  gem "rake"
-  gem "minitest"
-  gem "shoulda-context"
+group :jekyll_plugins do
+  gem 'jekyll-katex'
+  gem 'jekyll-theme-minimal-resume'
+  gem 'kramdown-parser-gfm'
 end
 
-gem "webrick", "~> 1.7"
+group :test do
+  gem 'minitest'
+  gem 'rake'
+  gem 'shoulda-context'
+end
+
+gem 'webrick', '~> 1.7'

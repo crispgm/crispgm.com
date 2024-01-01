@@ -3,7 +3,7 @@ require "helper"
 class TestSite < Minitest::Test
   context "open crispgm.com" do
     setup do
-      @resp = open("https://crispgm.com/")
+      @resp = URI.open("https://crispgm.com/")
     end
 
     should "status equal to 200" do

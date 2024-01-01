@@ -22,7 +22,6 @@ jobs:
       - name: 'Install Bundler 2'
         run: 'gem install bundler -v "2.0.1" --force'
       - run: 'bundle install'
-      - run: 'rake init'
-      - run: 'rake site:build'
+      - run: 'bundle exec rake site:build'
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
