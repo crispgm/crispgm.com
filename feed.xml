@@ -5,9 +5,9 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 May 2023 13:49:28 +0000</pubDate>
-    <lastBuildDate>Sun, 21 May 2023 13:49:28 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.2</generator>
+    <pubDate>Mon, 01 Jan 2024 09:19:42 +0000</pubDate>
+    <lastBuildDate>Mon, 01 Jan 2024 09:19:42 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.4</generator>
     
       
       <item>
@@ -397,8 +397,8 @@ which leverage the power of the new features.&lt;/p&gt;
 &lt;p&gt;Though neovim embeds tree-sitter, it is not out-of-box for users. We need this to install the languages.&lt;/p&gt;
 
 &lt;p&gt;Installation:&lt;/p&gt;
-&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;'nvim-treesitter/nvim-treesitter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'do'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;':TSUpdate'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-Plug &lt;span class=&quot;s1&quot;&gt;'nvim-treesitter/playground'&lt;/span&gt;
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;&apos;nvim-treesitter/nvim-treesitter&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;do&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;:TSUpdate&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+Plug &lt;span class=&quot;s1&quot;&gt;&apos;nvim-treesitter/playground&apos;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:TSInstall [language]&lt;/code&gt; to install a language parser. Sometimes, you may not notice what tree-sitter does.
@@ -410,7 +410,7 @@ Just try &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:TSP
 which is needed for install and communicate with language servers of each language.&lt;/p&gt;
 
 &lt;p&gt;Installation:&lt;/p&gt;
-&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;'neovim/nvim-lspconfig'&lt;/span&gt;
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;&apos;neovim/nvim-lspconfig&apos;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The language servers are needed to install externally on system level with any package manager you like.
@@ -424,7 +424,7 @@ Follow &lt;a href=&quot;https://github.com/neovim/nvim-lspconfig/blob/master/CON
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Then setup with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lspconfig&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lspconfig'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gopls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;lspconfig&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gopls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;When you open a file, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:LspInfo&lt;/code&gt; to know whether a LSP client is attached.&lt;/p&gt;
@@ -437,7 +437,7 @@ It works with Neovim’s native LSP client.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/nvim-compe.png&quot; alt=&quot;nvim-compe&quot; style=&quot;width: 640px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Installation:&lt;/p&gt;
-&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;'hrsh7th/nvim-compe'&lt;/span&gt;
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;&apos;hrsh7th/nvim-compe&apos;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;There are also other choices. But I personally recommend &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvim-compe&lt;/code&gt; for its good functionality and design,
@@ -448,10 +448,10 @@ with both well-organized and well-written source codes.&lt;/p&gt;
 &lt;p&gt;Last but the most, Telescope is one of the killer apps of Neovim nightly. It is similar to fzf, but with better user interface. We can do file navigation, live grep, buffer navigation, help tag/keymaps viewer and many more with Telescope.&lt;/p&gt;
 
 &lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&quot; dependencies&lt;/span&gt;
-Plug &lt;span class=&quot;s1&quot;&gt;'nvim-lua/popup.nvim'&lt;/span&gt;
-Plug &lt;span class=&quot;s1&quot;&gt;'nvim-lua/plenary.nvim'&lt;/span&gt;
+Plug &lt;span class=&quot;s1&quot;&gt;&apos;nvim-lua/popup.nvim&apos;&lt;/span&gt;
+Plug &lt;span class=&quot;s1&quot;&gt;&apos;nvim-lua/plenary.nvim&apos;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;&quot; telescope&lt;/span&gt;
-Plug &lt;span class=&quot;s1&quot;&gt;'nvim-telescope/telescope.nvim'&lt;/span&gt;
+Plug &lt;span class=&quot;s1&quot;&gt;&apos;nvim-telescope/telescope.nvim&apos;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Find file in Telescope:&lt;/p&gt;
