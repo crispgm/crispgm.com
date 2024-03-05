@@ -5,192 +5,449 @@
     <description>Home page and blog of David Zhang (@crispgm), a minimalist programmer, photographer, and lifehacker.</description>
     <link>https://crispgm.com/</link>
     <atom:link href="https://crispgm.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jan 2024 09:19:42 +0000</pubDate>
-    <lastBuildDate>Mon, 01 Jan 2024 09:19:42 +0000</lastBuildDate>
-    <generator>Jekyll v3.9.4</generator>
+    <pubDate>Tue, 05 Mar 2024 08:26:38 +0000</pubDate>
+    <lastBuildDate>Tue, 05 Mar 2024 08:26:38 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.5</generator>
     
       
       <item>
-        <title>桌式足球 Foosball 入门简介</title>
-        <description>&lt;p&gt;桌式足球是一种带有娱乐性质的室内体育项目，在海内外虽然均有一定受众，但整体都比较小众。&lt;/p&gt;
+        <title>球桌上的速度与激情——桌式足球介绍</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;桌式足球是体育运动。&lt;br /&gt;
+Table soccer is sport.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;在国内，主要参与者多为酒吧消费者和公司职员（特别是一些外企和互联网公司）。这是国内玩家群体比较多的两个来源场景（无数据，偏直观感受）。由于我所在的公司工区配备有桌式足球桌，因此我也是通过「公司职员」转化为桌式足球玩家。&lt;/p&gt;
-
-&lt;p&gt;在深入桌式足球的过程中，我主要遇到的困惑是在有一定基础后，难以系统地学习提升竞技水平，难以找到其他玩家交流。我需要自己在网上搜集各种入门介绍和教程，但面临资料匮乏、桌子差异等问题；对于本地的打球社区和地点，通常难以发现。&lt;/p&gt;
-
-&lt;p&gt;本文旨在科普桌式足球的一些基本概念、教程、视频、赛事和社区信息等，让已经接触到桌式足球并且想进一步深入的玩家，更快的就能找到资料、找到组织、发现自己的提升路径。&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/81HVodmE4eA?si=SpLGfx796ynfOdWB&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
 
-&lt;p&gt;桌式足球 table soccer 或 table football 又称为 foosball，简称 foos，同时也被称为桌上足球、手足球和波比球等。&lt;/p&gt;
+&lt;p&gt;桌式足球是一项在球桌上进行的室内体育运动，它源自对于联合式足球（association football，就是我们平时最熟悉的足球）的粗略模拟。桌式足球的竞技目标同足球一样，将球攻入对方球门。&lt;/p&gt;
 
-&lt;p&gt;1921 年，英国人 Harold Searles Thorton 发明了桌式足球。&lt;/p&gt;
+&lt;h3 id=&quot;名称&quot;&gt;名称&lt;/h3&gt;
 
-&lt;p&gt;桌式足球在 1970-80 年代在美国曾经非常火爆，比赛奖金达到百万美元，是当时美国第8大体育运动。后来，随着电子游戏的兴起等原因，桌式足球球桌逐渐式微。但美国当地的活动室和酒吧中，桌式足球的器材和爱好者群体依然存在，并且发展出了很高的竞技水平。&lt;/p&gt;
+&lt;p&gt;Table Soccer/Table Football 又称为 Foosball，简称为 foos。&lt;/p&gt;
 
-&lt;p&gt;2002 年，世界桌式足球联合会（ITSF&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;）在法国成立，是一个非营利性组织，是桌式足球运动的管理机构。ITSF 目前是国际单项体育联合会总会（GAISF）的观察员成员。ITSF 作为桌式足球运动主体，负责桌式足球运动的监管和规范化、规则制定、赛事组织和运动推广等。&lt;/p&gt;
+&lt;p&gt;在国内，官方名称为桌式足球，坊间也被叫做桌上足球和波比球（源自法国叫法 baby foot）。台湾地区称之为手足球，香港地区称之为足球机。&lt;/p&gt;
 
-&lt;p&gt;桌式足球运动每年都会举行很多专业性的比赛，但参赛人员大部分是非职业选手，平时有自己的工作，有少量顶尖选手是专职桌式足球选手。桌式足球运动的球台并不统一（具体可以参考「球台」章节），不同比赛的球台并不相同。&lt;/p&gt;
+&lt;h3 id=&quot;历史&quot;&gt;历史&lt;/h3&gt;
 
-&lt;h2 id=&quot;器材&quot;&gt;器材&lt;/h2&gt;
+&lt;p&gt;桌式足球起源于欧洲，于1921年由英国人 Harold Searles Thorton 发明。1950年，桌式足球经由德国传到美洲大陆，「foosball」就是基于德语桌式足球「tischfußball」创造的新单词。&lt;/p&gt;
 
-&lt;h3 id=&quot;球台&quot;&gt;球台&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/classic-table.png&quot; alt=&quot;Classic Table&quot; style=&quot;width: 360px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;桌式足球的球台并非统一，单从风格上就分为：美式、法式、德式、意式、捷克式和西班牙式等。常见的（ITSF 世界冠军赛比赛中使用的）主要有 Bonzini（法国）、Roberto Sport（意大利）、Garlando（意大利）、Tornado（美国）和 Leonhart（德国）。此外，Warrior、Rosengart、Jupiter、Metegol 也是认证球桌。&lt;/p&gt;
+&lt;p&gt;桌式足球在1970-80年代在美国曾经非常火爆，比赛奖金达到百万美元，是当时美国第8大体育运动。后来，随着电子游戏的兴起等原因，桌式足球球桌逐渐在美国当地的活动室和酒吧中消失，球桌制造商大规模倒闭，运动进入衰退期。但桌式足球的爱好者群体依然存在，并且发展出了很高的竞技水平。&lt;/p&gt;
 
-&lt;p&gt;不同地区由于制造商和社区等因素，会流行风格截然不同的球台。球台的不统一，也是桌上足球运动难以标准化和职业化的一大原因。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/classic-gameplay.png&quot; alt=&quot;Classic Gameplay&quot; style=&quot;width: 360px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/b90-itsf-competition.jpeg&quot; alt=&quot;Bonzini B90 ITSF&quot; style=&quot;height: 480px;&quot; /&gt;&lt;br /&gt;
-Bonzini B90 ITSF &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;桌式足球运动每年都会举行很多专业性的比赛，但参赛人员大部分是非专职选手，平时有自己的工作，有少量顶尖选手是专职桌式足球选手。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/garlando-pro-champion.jpeg&quot; alt=&quot;Garlando Pro Champion&quot; style=&quot;height: 420px;&quot; /&gt;&lt;br /&gt;
-Garlando Pro Champion &lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/modern-gameplay.png&quot; alt=&quot;Modern Gameplay&quot; style=&quot;width: 360px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;一般来说，美国的比赛通常使用 Tornado，欧洲不同国家流行的球桌大多不大相同，Bonzini、Leonhart、Roberto、Garlando 甚至 Tornado 都有。在亚洲广泛流行的球桌是 Fireball。Fireball 是一种和 Tornado 比较接近的球桌，可以归为一类，基本上技战术都可以互通。&lt;/p&gt;
+&lt;h3 id=&quot;我们为什么喜欢-foosball&quot;&gt;我们为什么喜欢 foosball&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/tornadoplatinumfull.png&quot; alt=&quot;Tornado T3000 ITSF&quot; style=&quot;height: 560px;&quot; /&gt;&lt;br /&gt;
-Tornado T3000 ITSF&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;速度与激情&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/fireball-itsf.jpg&quot; alt=&quot;Fireball ITSF&quot; style=&quot;height: 420px;&quot; /&gt;&lt;br /&gt;
-Fireball ITSF&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;桌式足球的球在场上快速移动，让比赛充满了快节奏的刺激感。而且因为球员必须在短时间内进行判断与反应，这就需要速度和灵敏性。这种速度感和对快速反应的要求使得桌上足球呈现出强烈的竞技性和挑战性。&lt;/p&gt;
 
-&lt;h4 id=&quot;球台推荐&quot;&gt;球台推荐&lt;/h4&gt;
+&lt;p&gt;桌式足球的比赛经常场面紧张，尤其在关键比赛阶段，观众和球员们都会充满激情。球员的投入，加上团队配合所带来的喜悦，让每个参与者都享受在比赛中。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;成长型爱好&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;据粗略测量，球桌占地面积大约要 4 平方米，买之前要提前确认空间足够。&lt;/p&gt;
+  &lt;p&gt;“它起到的是一种滋润的作用，同时也是自驱力的种子，是不断的尝试和找寻后与你的天赋相遇，会在这个过程中不断的给予你积极的体验，积极的心理力量，在痛苦和不开心的时候，它能够带着我们走出困境。” （来自网络）&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;桌式足球是一个成长型爱好，我们可以长期从事这项运动，逐渐掌握各项技巧和手法，攀登天梯的更高处。我们可以从“beginner”变成“pro”，可以从“活动室玩家”变成“专业级选手”，见证自己的成长。&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;火球 Fireball：东亚、东南亚地区事实比赛标准用桌。训练版价格 4000 元左右、比赛版 6000 多元。质量比较好，但做工不稳定。&lt;/li&gt;
-  &lt;li&gt;Tornado：美国产造价和运费都比较高，售价大约要 2200 美元。就我个人来说是心中的「圣物」，但实际上同欧洲球桌一样，如果不参加世界比赛并没有必要。&lt;/li&gt;
-  &lt;li&gt;各种欧洲球桌：通常价格比 Tornado 要低，在 1000 欧元级别。如果不在欧洲发展或者不打算参加多球桌类的比赛没有必要。&lt;/li&gt;
-  &lt;li&gt;九星体育：部分型号神似 Tornado，有些九星赞助的比赛会使用。&lt;/li&gt;
-  &lt;li&gt;霹雳闪雷：一个神似 Tornado 但实际差的多的球桌。能进行基本的练习，但实际手感跟比赛桌差异较大。虽然售价较低，但质量比较差，很容易出现球杆弯曲和小人断裂等问题。&lt;/li&gt;
-  &lt;li&gt;其它国产球桌：多为娱乐桌，不推荐购买，没有长期练习价值。&lt;/li&gt;
+  &lt;li&gt;和顶尖选手交锋&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;配套设备&quot;&gt;配套设备&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ITSF 规则中对可以穿着佩戴的服饰和装备有明确定义，使用前可以先进行确认。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;在乒乓球领域，马龙、樊振东等国乒选手高高在上，我们只能仰望他们的巅峰。在台球比赛中，奥沙利文、丁俊晖等国内外巨星的实力也难以企及。然而，当谈及桌式足球时，我们拥有一种独特的力量。我们可以挑战亚洲级别乃至世界级别的比赛，与世界冠军同场竞技。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;手胶：
-    &lt;ul&gt;
-      &lt;li&gt;一般使用羽毛球手胶，通常选黏性大即可，也可以根据个人爱好挑选。&lt;/li&gt;
-      &lt;li&gt;可以选择 Wilson、Yonex 等各类常见羽毛球器材品牌。其中最好的是 Wilson Overgrip PRO，不过单价较高超过 10 元/条。&lt;/li&gt;
-      &lt;li&gt;可以买不太知名的小品牌手胶，小品牌手胶消耗较快但价格低廉，一般 3 元/条。&lt;/li&gt;
-      &lt;li&gt;手胶需要定期更换，视实际情况而定，磨损严重或者太脏就需要更换。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;手套：
-    &lt;ul&gt;
-      &lt;li&gt;如果手汗较多，或有增加摩擦、保护手部皮肤等原因，可以选择戴手套。&lt;/li&gt;
-      &lt;li&gt;推荐购买高尔夫球手套，如迪卡侬的高尔夫手套。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;其它：
-    &lt;ul&gt;
-      &lt;li&gt;可以根据自己习惯选购服装、护腕、头带等装备。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;没有限制&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;训练装置&quot;&gt;训练装置&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;一些桌式足球爱好者制造了不少训练装置或者球桌增强装置，可以按需购买；通常需要海淘转运。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;老少、男女皆宜，不受年龄、性别和身体限制；&lt;br /&gt;
+场地要求低，仅需 5 m² 即可拥有；&lt;br /&gt;
+人员限制少，1-4人即可开打。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://foosgear.com/products/stretch-goal-trainer&quot;&gt;Foos Trainer&lt;/a&gt;：拉射训练套件，一种用于训练拉射速度的装置。当你安装了之后，拉射时防守球员会快速 race 你。如果拉射速度上不来，可以买一套用于训练。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://foosgear.com/products/rod-lock&quot;&gt;Rod Lock&lt;/a&gt;：球杆固定器，训练传球和射门时可以用于固定球杆。有条件可以购买，会提升个人训练的便利性，必要性一般。&lt;/li&gt;
+  &lt;li&gt;社交和团队&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;赛事&quot;&gt;赛事&lt;/h2&gt;
+&lt;p&gt;社交属性，可以交到很多朋友；&lt;br /&gt;
+注重相互尊重，培养团队精神。&lt;/p&gt;
 
-&lt;h3 id=&quot;itsf&quot;&gt;ITSF&lt;/h3&gt;
+&lt;h2 id=&quot;竞技&quot;&gt;竞技&lt;/h2&gt;
 
-&lt;p&gt;ITSF 世界桌式足球协会会组织一些世界级赛事：&lt;/p&gt;
+&lt;h3 id=&quot;组织&quot;&gt;组织&lt;/h3&gt;
 
-&lt;h4 id=&quot;itsf-world-cup&quot;&gt;ITSF World Cup&lt;/h4&gt;
+&lt;p&gt;2002年，世界桌式足球联合会（ITSF）在法国成立，是一个非营利性组织，是桌式足球运动的管理机构。ITSF 作为桌式足球运动主体，负责桌式足球运动的监管和规范化、规则制定、赛事组织和运动推广等。&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;p&gt;桌式足球世界杯，有个人和团体比赛，包含单打、双打和混双，年龄段上有若干组别，同时还会举办轮椅桌式足球比赛。其中最有含金量的是公开单打、公开双打和团体赛。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/itsf-logo.png&quot; alt=&quot;ITSF Logo&quot; style=&quot;width: 360px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;世界杯的特点是选手需要在多个桌子上比赛，每个参赛方都有自己的主场球桌，双方轮番在对方主场球桌上比赛。如果打到决胜局，会以两球换桌的模式进行。因此，选手们需要能够适应多种球桌的差异性。相对来说，欧洲选手由于更习惯于多种桌子，优势更大。&lt;/p&gt;
+&lt;p&gt;ITSF 目前是国际单项体育联合会（GAISF）的观察员成员，并且已经加入了世界反兴奋剂协会（WADA）、国际群众体育协会（TAFISA）、获承认体育项目联盟（AIMS）等相关体育组织。&lt;/p&gt;
 
-&lt;p&gt;正因为这一特点，世界杯的比赛有时候并不好看。常常会出现在主场桌赢得很轻松，客场桌又大败，最后一局拼谁能在对方主场桌取得一些突破这种情况。&lt;/p&gt;
-
-&lt;h4 id=&quot;itsf-world-championship-series-wcs&quot;&gt;ITSF World Championship Series (WCS)&lt;/h4&gt;
-
-&lt;p&gt;WCS 冠军系列赛是 ITSF 认证举办的单独球桌分类赛事。根据不同球台，分开进行比赛。通常在球桌制造商所在地和球桌流行地举办。&lt;/p&gt;
-
-&lt;h3 id=&quot;ifp&quot;&gt;IFP&lt;/h3&gt;
-
-&lt;p&gt;IFP (International Foosball Promotions) 是美国推动 Tornado 赛事的组织，主要在美国组织各类赛事，球桌普遍都是 Tornado。IFP CEO 是 Mary Moore，是世界冠军 Ryan Moore 的母亲。&lt;/p&gt;
-
-&lt;p&gt;IFP 每年会在美国各州举行 IFP Tour 巡回赛，如：Kentucky State、Colorado State 等。其中最为引人关注的是 Tornado World Cup，同时也是 ITSF 承认的冠军系列赛之一。&lt;/p&gt;
-
-&lt;p&gt;Tornado World Cup 目前都在美国举行，参赛选手和冠军也基本都是美国人。只有比利时选手 Frédéric Collignon 作为欧洲人获得过冠军。&lt;/p&gt;
-
-&lt;p&gt;针对选手的成绩，美国通常会采用一套积分和称号系统，分别为：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Beginner：新手级&lt;/li&gt;
-  &lt;li&gt;Rookie：入门级&lt;/li&gt;
-  &lt;li&gt;Amateur：业余级&lt;/li&gt;
-  &lt;li&gt;Expert：专家级&lt;/li&gt;
-  &lt;li&gt;Pro：专业级&lt;/li&gt;
-  &lt;li&gt;Master：大师级&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;明星选手&quot;&gt;明星选手&lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
-
-&lt;p&gt;桌式足球也有很多知名选手。不同于一些更消耗体力的运动，桌式足球的明星选手往往巅峰期能持续多达几十年。&lt;/p&gt;
-
-&lt;p&gt;由于桌式足球并没有职业化，这里的选手大多工作并不是打球，只有部分选手从事桌式足球相关工作。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tony Spredeman&lt;/strong&gt; 美国知名选手，多项世界冠军得主。基本功极度扎实，尤其是快速的远端 tic-tac 和 stick pass series，射门上擅长 snakeshot。在近年来的 Tornado Worlds 中连续单打连冠。&lt;/p&gt;
+&lt;p&gt;国际体育项目管理体系如下：&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;主页：&lt;a href=&quot;https://tonyspredeman.com/&quot;&gt;https://tonyspredeman.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;百科：&lt;a href=&quot;https://en.wikipedia.org/wiki/Tony_Spredeman&quot;&gt;https://en.wikipedia.org/wiki/Tony_Spredeman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;访谈：
+  &lt;li&gt;GAISF 国际单项体育联合会
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0MsE7iLI2g0&quot;&gt;https://www.youtube.com/watch?v=0MsE7iLI2g0&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://kickernmitkopf.de/2017/07/17/interview-tony-spredeman/&quot;&gt;http://kickernmitkopf.de/2017/07/17/interview-tony-spredeman/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;ASOIF 夏季奥运项目：田径、体操、射箭、乒乓球等&lt;/li&gt;
+      &lt;li&gt;AIOWF 冬季奥运项目：滑雪、滑冰、冰球、冰壶等&lt;/li&gt;
+      &lt;li&gt;ARISF 奥委会承认项目：台球、棒球、保龄球、武术等&lt;/li&gt;
+      &lt;li&gt;AIMS 国际承认项目：围棋、龙舟、飞镖等，桌式足球也属于 AIMS&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Atha&quot;&gt;&lt;strong&gt;Frédéric Collignon&lt;/strong&gt;&lt;/a&gt; 比利时知名选手，2012 年后从职业退役，转为“业余”选手。他在 1999 年至 2012 年之间，获得了大量各种球桌下的比赛世界冠军，除单打外，还和 Todd Loffredo 搭档双打横扫各类赛事。Frédéric Collignon 打法非常稳健，充分利用比赛时间。射门方式为 europin。&lt;/p&gt;
+&lt;p&gt;世界上一些主要国家，也均设有自己国家的桌式足球协会组织：&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Atha&quot;&gt;&lt;strong&gt;Todd Loffredo&lt;/strong&gt;&lt;/a&gt; 老牌职业选手，桌式足球常青树/活化石，主要使用 pullshot。早在 70 年代末期，就活跃在桌式足球圈，冠军奖杯无数。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/ustso-logo.png&quot; alt=&quot;USTSO Logo&quot; style=&quot;width: 240px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/dtfb-logo.png&quot; alt=&quot;DTFB Logo&quot; style=&quot;width: 200px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/FFFT-logo.png&quot; alt=&quot;FFFT Logo&quot; style=&quot;width: 80px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/ktsf-logo.png&quot; alt=&quot;KTSF Logo&quot; style=&quot;width: 130px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/ctsf-logo.png&quot; alt=&quot;CTSF Logo&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Ryan Moore&lt;/strong&gt; 知名职业选手，多项世界冠军得主。他是近年来 Tony Spredeman 最大的挑战者，有最强的后卫射门能力，比赛观赏性很强。是少数可以用后卫打爆对手的球员。Ryan Moore 平时的职业是大麻种植者。&lt;/p&gt;
+&lt;h2 id=&quot;球桌&quot;&gt;球桌&lt;/h2&gt;
 
-&lt;p&gt;其它：&lt;/p&gt;
+&lt;p&gt;桌式足球的球台并非统一，单从风格上就分为：美式、法式、德式、意式、捷克式和西班牙式等。常见的（ITSF世界冠军杯比赛中使用过的）主要有 Bonzini（法式）、Roberto Sport（意式）、Garlando（意式）、Tornado（美式）、Leonhart（德式）和 Fireball（美式）。Ullrich 则主要在 P4P 组织的比赛中使用。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Billy_Pappas&quot;&gt;Billy Pappas&lt;/a&gt;: 本名 William Pappaconstantinou，美国选手，在多个球台获得过多次世界冠军。值得一说的是，他是&lt;a href=&quot;https://www.pokernews.com/news/2015/05/life-changing-money-billy-pappas-21700.htm&quot;&gt;2014 年德州扑克世界大赛&lt;/a&gt;第五名，获得了 210 万美元的奖金。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Atha&quot;&gt;Rob Atha&lt;/a&gt;：英国选手，世界冠军。Atha 比较全能，本身作为欧洲选手就适应很多球桌，同时他还比较积极的参加美国的比赛。&lt;/li&gt;
-  &lt;li&gt;Yannick Correia：卢森堡选手，世界冠军。&lt;/li&gt;
-  &lt;li&gt;Robert Mares：世界冠军，双打时经常和 Tony Spredeman 组队。&lt;/li&gt;
-  &lt;li&gt;Terry Moore：Snakeshot 的发明者，彻底改变了桌式足球的比赛方式。&lt;/li&gt;
-  &lt;li&gt;Terry Rue：Tornado 世界冠军，同时他本人、他夫人（Keisha Rue）和他女儿（Sullivan Rue）均代表美国队获得了 ITSF 世界杯冠军。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;此外，Warrior、Rosengart、Jupiter、Metegol 和九星也是认证球桌。球台的不统一，是桌式足球运动难以标准化和职业化的一大原因。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/bonzini.png&quot; alt=&quot;Bonzini Table&quot; style=&quot;height: 210px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/leonhart.png&quot; alt=&quot;Leonhart Table&quot; style=&quot;height: 210px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/garlando.jpeg&quot; alt=&quot;Garlando Table&quot; style=&quot;height: 210px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/ullrich.png&quot; alt=&quot;Ullrich Table&quot; style=&quot;height: 210px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/tornado.png&quot; alt=&quot;Tornado Table&quot; style=&quot;height: 210px; margin: 0 30px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/fireball.jpg&quot; alt=&quot;Fireball Table&quot; style=&quot;height: 210px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;桌式足球球桌通常模拟足球运动，会有 11 个人偶，一般一个队伍分为 4 排，通常布局为 1-2-5-3。美国球桌一般 13 人，3-2-5-3 布局。一个球桌占地面积大约需要 5 平方米。&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/table-alignment.png&quot; alt=&quot;Table Alignment&quot; style=&quot;height: 360px;&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/table-size.png&quot; alt=&quot;Table Size&quot; style=&quot;height: 360px;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;规则&quot;&gt;规则&lt;/h2&gt;
 
-&lt;p&gt;ITSF 官方提供了&lt;a href=&quot;https://www.tablesoccer.org/rules/documents/GBR-2019%20ITSF%20Standard%20Matchplay%20Rules_def.pdf&quot;&gt;规则书&lt;/a&gt;&lt;sup id=&quot;fnref:7&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;（英文版）进行说明。但规则书首先是英文，而且比较晦涩难懂。建议通过视频教程或线下找 Pro 亲自传授一些核心规则点。&lt;/p&gt;
+&lt;p&gt;桌式足球虽然概念源自足球运动，但规则层面同足球相距甚远。ITSF 制作了&lt;a href=&quot;https://www.tablesoccer.org/rules/documents/GBR-2022%20ITSF%20Standard%20Matchplay%20Rules_def.pdf&quot;&gt;标准比赛规则&lt;/a&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;，这里简单说几个基本规则：&lt;/p&gt;
 
-&lt;h2 id=&quot;教程&quot;&gt;教程&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;开球：
+    &lt;ul&gt;
+      &lt;li&gt;先向对手询问“ready”，得到确认后方可开球（ready protocol）；&lt;/li&gt;
+      &lt;li&gt;必须传球两次（double-transfer）后才能射门或者传给其他排。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;时间：控球时间限制，后卫 15 秒、中场 10 秒、前锋 15 秒。&lt;/li&gt;
+  &lt;li&gt;传球：中场不能静止传球、双击传球；中场控球碰墙壁不能超过 2 次。&lt;/li&gt;
+  &lt;li&gt;禁止：
+    &lt;ul&gt;
+      &lt;li&gt;球杆击球前或击球后旋转超过 360 度；&lt;/li&gt;
+      &lt;li&gt;球杆撞击球桌两壁造成干扰；&lt;/li&gt;
+      &lt;li&gt;比赛中大声说话和交谈。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;桌式足球是一项看似上手很容易的运动，但桌式足球实际打法非常规范化和专业，想真正入门难度颇高。我们建议感兴趣的同学先上手掌握一些基本规则和握杆方式，视自己兴趣进行训练。&lt;/p&gt;
+&lt;h2 id=&quot;打法&quot;&gt;打法&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLKaEfS35UByVqhNKgnW_yz4jNRqj97hoO&quot;&gt;&lt;strong&gt;Road to Pro - Chase Pennell&lt;/strong&gt;&lt;/a&gt; 作者是个 Pro 水准的选手，Road to Pro 就是教你如何成为专业选手，套路都是专业选手风格，比较一步到位让你掌握专业比赛中的常用技能。但缺点是实际技术难度很高，需要长时间的练习，即使看了一时半会也练不出来。&lt;/p&gt;
+&lt;h3 id=&quot;入门打法&quot;&gt;入门打法&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL32C2818A77DC5F60&quot;&gt;&lt;strong&gt;UnrealFoos - Zeke Cevantes&lt;/strong&gt;&lt;/a&gt; 作者也是个 Pro。这个频道教程更系统更细致，对于每一种射门和传球都有单独的教程。不光有常用的专业选手技能，也有很多比赛中不常见的技能，更加适合新手慢慢练，总共有 43 节。&lt;/p&gt;
+&lt;p&gt;ITSF 官方入门教程 &lt;a href=&quot;https://www.tablesoccer.org/sites/default/files/files/Table_Soccer_Basics_EN.pdf&quot;&gt;https://www.tablesoccer.org/sites/default/files/files/Table_Soccer_Basics_EN.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;射门：
+    &lt;ul&gt;
+      &lt;li&gt;力量是技术的体现，前期能左右手合规发力可以击败至少 90%的对手。&lt;/li&gt;
+      &lt;li&gt;纵向发力，横向位移。&lt;/li&gt;
+      &lt;li&gt;摸索点位和手感。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;防守：
+    &lt;ul&gt;
+      &lt;li&gt;前后交错，避免重合。&lt;/li&gt;
+      &lt;li&gt;球在人在，切勿发呆。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;比赛打法&quot;&gt;比赛打法&lt;/h3&gt;
+
+&lt;p&gt;桌式足球入门非常容易，但成长曲线非常陡峭。比赛打法和休闲打法差异巨大，一个比赛级别的射门或传球通常都需要半年到一年的时间才能比较娴熟的掌握，打磨成具备比赛能力需要数年。&lt;/p&gt;
+
+&lt;h4 id=&quot;中场传球&quot;&gt;中场传球&lt;/h4&gt;
+
+&lt;h5 id=&quot;stick-pass-series&quot;&gt;Stick Pass Series&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在两个人偶之间不断带球，然后快速直传&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stick Wall&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/stick-wall.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stick Lane&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/stick-lane.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h5 id=&quot;brush-pass-series&quot;&gt;Brush Pass Series&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;将球调整到靠后的位置，用刷的方式将球斜传到前锋&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Brush Wall&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/brush-wall.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Brush Lane&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/brush-lane.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h4 id=&quot;后卫传球&quot;&gt;后卫传球&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2传5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/2-5-pass.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2传3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/2-3-pass.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h4 id=&quot;前锋射门&quot;&gt;前锋射门&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Snake Shot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/snake-shot.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pull Shot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/pull-shot.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Five-rod Shot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/5-rod-shot.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pull Kick&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/pull-kick.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h4 id=&quot;后卫射门&quot;&gt;后卫射门&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pull Shot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/3-rod-pull-shot.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bank Shot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/bank-shot.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h4 id=&quot;防守&quot;&gt;防守&lt;/h4&gt;
+
+&lt;p&gt;在桌式足球中，进攻者通常更有主动性，速度超越人类反应极限，导致防守非常困难，因此防守基本靠乱晃，因此防守时主要依靠节奏、有目的的晃动和心理斗争。&lt;/p&gt;
+
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/defense-1.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;video height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://crispgm.com/image/foosball/defense-2.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h2 id=&quot;赛事&quot;&gt;赛事&lt;/h2&gt;
+
+&lt;h3 id=&quot;比赛形式&quot;&gt;比赛形式&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;按组织形式划分：
+    &lt;ul&gt;
+      &lt;li&gt;单打&lt;/li&gt;
+      &lt;li&gt;双打：分为固定分组（BYP）和随机分组（DYP）&lt;/li&gt;
+      &lt;li&gt;团体赛&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;按年龄划分：
+    &lt;ul&gt;
+      &lt;li&gt;青年组：类似其他体育运动分U17、U19、U21等等&lt;/li&gt;
+      &lt;li&gt;老年组：通常50岁以上&lt;/li&gt;
+      &lt;li&gt;公开组：所有年龄、性别均可参加&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;比赛结构&quot;&gt;比赛结构&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;预选赛：根据参赛人数打若干轮（通常3-5轮）预选赛，一般为单场定胜负方式。积分方式采用国际象棋常用的“瑞士系统”排名，遇到平分采用 Buchholz 算法排名。&lt;/li&gt;
+  &lt;li&gt;淘汰赛：一般为五局三胜或三局两胜，单败淘汰（常用于传统体育赛事）或双败淘汰（常用于电子竞技比赛）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;itsf-世界杯&quot;&gt;ITSF 世界杯&lt;/h3&gt;
+
+&lt;p&gt;桌式足球世界杯，有团体和个人比赛。世界杯的特点是多个桌子，每个参赛方都有自己的主场球桌，双方轮番在对方主场球桌上比赛。如果打到决胜局，会以两球换桌的模式进行。因此，选手们需要能够适应多种球桌的差异性。相对来说，欧洲选手由于更习惯于多种桌子，有一定优势。&lt;/p&gt;
+
+&lt;p&gt;ITSF世界杯每两年举办一次。由于疫情原因，原定于2021年举办的世界杯取消，2022年在法国南特重新启动。&lt;/p&gt;
+
+&lt;p&gt;由于 ITSF 在持续推进桌式足球体育化，因此 ITSF 世界杯体育属性和专业度比较高，会在体育场所举办，有专门的裁判团队、解说和在线直播，对于运动员有着装要求。&lt;/p&gt;
+
+&lt;p&gt;ITSF世界杯也同时有轮椅桌式足球比赛。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/itsf-world-cup-2022-1.png&quot; alt=&quot;ITSF World Cup 2022 - 1&quot; /&gt;
+&lt;img src=&quot;https://crispgm.com/image/foosball/itsf-world-cup-2022-2.jpeg&quot; alt=&quot;ITSF World Cup 2022 - 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;同时，ITSF 也有针对单独球桌的单项世界锦标赛（World Champion Series），一年一次，通常在该球桌流行的国家举办。其中 Tornado World Champion 即为 Tornado 球桌的单项锦标赛。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/itsf-world-cup-2022-para.jpeg&quot; alt=&quot;ITSF World Cup 2022 - Paralymic&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tornado-world-champion&quot;&gt;Tornado World Champion&lt;/h3&gt;
+
+&lt;p&gt;Tornado 世界锦标赛，Tornado 球桌的最高级赛事，目前都在美国举行，参赛选手和冠军也基本都是美国人，偶尔会有欧洲和亚洲选手自行参加。Tornado 世界杯一年一次，仅在2020年因疫情中断一次。Tornado 比赛场地通常在酒店内部。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/tornado-world-championship.png&quot; alt=&quot;Tornado World Championship&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;国家和选手&quot;&gt;国家和选手&lt;/h2&gt;
+
+&lt;p&gt;桌式足球最发达的地区为美国和西欧，其中美国、德国、法国、英国、奥地利、荷兰以及卢森堡均为一流强队，比利时、瑞士、丹麦等国也颇具竞争力。桌式足球也是一个偏个人的运动，部分个人能力特别强（如比利时「球王」Frédéric Collignon）的球员可以带动整个国家的成绩，因此比利时在「球王」退役后，已经很难保持一流强队水平。&lt;/p&gt;
+
+&lt;p&gt;综合来说，德国的桌式足球普及和发展最为健康和正规。目前德国桌式足球协会（DTFB）举办有桌式足球的德甲联赛（Tischfußball Bundesliga）。&lt;/p&gt;
+
+&lt;p&gt;在亚洲方面，由于地域过于辽阔，中东国家和东亚/东南亚国家基本处于两个世界。其中中东的科威特和伊朗等国实力超过东亚侧。东亚内部马来西亚、日本、中国、香港、中华台北、新加坡等队，均有一定实力，但综合来说，和世界顶尖水平仍有很大差距。&lt;/p&gt;
+
+&lt;h3 id=&quot;知名选手&quot;&gt;知名选手&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;世界范围内知名选手&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tony Spredeman：美国知名选手，多项世界冠军得主。基本功极度扎实，尤其是快速的远端 tic-tac 和 stick pass series，射门上擅长 snake shot。在近年来的 Tornado World 中连续单打夺冠。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/player-tony-spredeman.png&quot; alt=&quot;Tony Spredeman&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frédéric Collignon：比利时知名选手，桌式足球历史上唯一的「球王」，2012年后退役。他在1999年至2012年之间，几乎包揽了各种球桌下的比赛世界冠军，除单打外，还和 Todd Loffredo 搭档双打横扫各类赛事。他是唯一一名既制霸欧洲多种球桌，又能在美国球桌上获得冠军的人。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/player-frederic-collignon.png&quot; alt=&quot;Frédéric Collignon&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ryan Moore：美国知名选手，多项世界冠军得主。他是近年来 Tony Spredeman 最大的挑战者，有最强的后卫射门能力，比赛观赏性很强。是少数可以用后卫打爆对手的球员。Ryan 也出身于桌式足球世家，母亲是美国最大的比赛组织者 IFP 的 CEO，妻子是斯洛文尼亚女选手 Iveta Moore。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/player-ryan-moore.png&quot; alt=&quot;Ryan Moore&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Billy Pappas：本名 William Pappaconstantinou，美国选手，曾四次获得 Tornado 世界冠军，然后也在欧洲「闯荡」过，获得了欧式球台（Garlando）的世界冠军。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;值得一说的是，他是2014年德州扑克世界大赛五名，获得了210万美元的奖金。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/player-billy-pappas.png&quot; alt=&quot;Billy Pappas&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Todd Loffredo: 老牌职业选手，桌式足球常青树/活化石，主要使用 pullshot。早在 70 年代末期，就活跃在桌式足球圈，冠军奖杯无数。&lt;/li&gt;
+  &lt;li&gt;Yannick Correia：ITSF世界冠军，卢森堡球王，曾来北京酒吧交流比赛。&lt;/li&gt;
+  &lt;li&gt;Kevin Hundstorfer：ITSF世界冠军，奥地利球王，Garlando球桌上的王者。&lt;/li&gt;
+  &lt;li&gt;Rob Atha：ITSF世界冠军，英国球王。&lt;/li&gt;
+  &lt;li&gt;Terry Rue：美国选手，Tornado 双打世界冠军，同时他本人、他夫人（Keisha Rue）和他女儿（Sullivan Rue）均代表美国队获得了 ITSF 世界杯冠军。本人职业是麻醉医生。&lt;/li&gt;
+  &lt;li&gt;Ruben Heinrich：德国选手，新科世界冠军。&lt;/li&gt;
+  &lt;li&gt;Brandon Muñoz：哥斯达黎加新兴选手，获得了2022年Tornado世界冠军，打破了美国人的常年垄断。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;中国桌式足球&quot;&gt;中国桌式足球&lt;/h3&gt;
+
+&lt;p&gt;中国桌式足球发展与2000年代，具体起源不详，是ITSF准会员，亚洲桌式足球联盟ATSA成员。&lt;/p&gt;
+
+&lt;p&gt;中国队参加了2017年德国汉堡和2019年西班牙穆尔西亚桌式足球世界杯。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/itsf-world-cup-2017-team-china.png&quot; alt=&quot;ITSF World Cup 2017 - Team China&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我国所在的东亚以及东南亚地区主要使用 Fireball 和九星球台。&lt;/p&gt;
+
+&lt;p&gt;据非官方统计，中国桌式足球主要选手来自与中小学培养（兰州、九江、深圳、张家港等）、企业员工（IT/外企等）、外籍人士和酒吧。&lt;/p&gt;
+
+&lt;h3 id=&quot;国内知名选手&quot;&gt;国内知名选手&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;单作栋：国内成绩最好的桌式足球选手之一，打法以 europin 为主，曾代表中国队参加2017年ITSF世界杯。在兰州居住，从事桌式足球培训工作，培养了一批青少年选手，在兰州本地有桌式足球俱乐部。目前，单作栋在积极承办桌式足球大联盟 PFL 巡回赛。&lt;/li&gt;
+  &lt;li&gt;Johan Hannerstål：中国国内实力最强的选手之一，瑞典人常住于上海。在国内比赛中经常夺冠，在亚洲比赛中多次杀入决赛。Johan 打法非常暴力，传球射门力道极大。&lt;/li&gt;
+  &lt;li&gt;Summer（庄开妙）：亚洲最强的女子选手之一，以强大的防守著称，是第一个获得了亚洲公开单打比赛（男女均可参加）的女子选手。&lt;/li&gt;
+  &lt;li&gt;Abbas Babapour：伊朗人常住于杭州，打法稳健，同时也是ITSF裁判组织成员。Abbas 在2023年状态十分火热多次夺冠。&lt;/li&gt;
+  &lt;li&gt;李彪：李彪在江苏张家港从事桌式足球教育工作，曾代表中国队参加2019年ITSF世界杯。&lt;/li&gt;
+  &lt;li&gt;许传云：深圳桌式足球推广者，在西丽小学推广桌式足球，培养了一大批青少年球手。&lt;/li&gt;
+  &lt;li&gt;吴明炫：派驻于昆山的台湾同胞，多次在东亚的比赛中夺冠。&lt;/li&gt;
+  &lt;li&gt;崔皓阳：德籍华人，在上海生活，得益于早年在欧洲的基础，打法非常细腻。在近些年比赛中多次进入决赛。&lt;/li&gt;
+  &lt;li&gt;张世玉：国内知名桌式足球选手，打法以 pullshot 为主。平时运营了FoosTime自媒体，宣传桌式足球。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;媒体资源&quot;&gt;媒体资源&lt;/h2&gt;
 
@@ -200,25 +457,15 @@ Fireball ITSF&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;
 
 &lt;p&gt;同时，InsideFoos.com 网站有大量桌式足球比赛实况录像（需要付费订阅观看），具有很强的观赏价值和历史意义。&lt;/p&gt;
 
-&lt;p&gt;前往观看：&lt;/p&gt;
+&lt;p&gt;前往观看：&lt;a href=&quot;https://insidefoos.com/&quot;&gt;官网&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/user/insidefoos&quot;&gt;YouTube&lt;/a&gt; &lt;a href=&quot;https://www.twitch.tv/insidefoostv&quot;&gt;Twitch&lt;/a&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/user/insidefoos&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.twitch.tv/insidefoostv&quot;&gt;Twitch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;high-time-sportsinsidefoos-asia&quot;&gt;High Time Sports/InsideFoos Asia&lt;/h3&gt;
+&lt;h3 id=&quot;hightime-sports&quot;&gt;HighTime Sports&lt;/h3&gt;
 
 &lt;p&gt;HighTime 是一个台湾同胞 Jack 老师做的桌式足球在线视频频道，起初是在 YouTube 上，目前在 B 站也开通了自己的账号。&lt;/p&gt;
 
 &lt;p&gt;除去早年 YouTube 视频搬运外，还有一些特有的经典比赛解读节目。Jack 老师和 InsideFoos 进行了合作，成为了 InsideFoos 的亚洲分舵——InsideFoos Asia。&lt;/p&gt;
 
-&lt;p&gt;前往观看：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/c/HighTimeSportsFoosball&quot;&gt;High Time Sports&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://space.bilibili.com/1291704697&quot;&gt;深入桌式足球&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;前往观看：&lt;a href=&quot;https://www.youtube.com/c/HighTimeSportsFoosball&quot;&gt;High Time Sports&lt;/a&gt; &lt;a href=&quot;https://space.bilibili.com/1291704697&quot;&gt;深入桌式足球&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;纪录片&quot;&gt;纪录片&lt;/h3&gt;
 
@@ -227,30 +474,17 @@ Fireball ITSF&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=1S7dm8wqzek&quot;&gt;Deadbar an amercan foosball story&lt;/a&gt;：一个访谈为主的桌式足球纪录片，免费。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;抖音&quot;&gt;抖音&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.douyin.com/user/MS4wLjABAAAA26DYauxm56scLLI5dt5eFXttPTXPcdP614NgJNuWC-U&quot;&gt;FoosTime&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.douyin.com/user/MS4wLjABAAAAXpxFmS9wI61heyoDZel8mlCGC-NDyg9MYS0UAlX69dg&quot;&gt;CrispFoosball&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;其它视频&quot;&gt;其它视频&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://space.bilibili.com/1498047973&quot;&gt;FoosTime&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://space.bilibili.com/1352396640&quot;&gt;Foosball&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://space.bilibili.com/20563734&quot;&gt;Cuinidaye&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;podcast&quot;&gt;Podcast&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.foosballradio.com/&quot;&gt;Foosball Radio&lt;/a&gt; The Ultimate Foosball Podcast. 是目前唯一一档桌式足球播客节目，有很多美国职业选手参与录制。&lt;/p&gt;
 
-&lt;h2 id=&quot;交流群社区&quot;&gt;交流群/社区&lt;/h2&gt;
+&lt;h3 id=&quot;国内自媒体&quot;&gt;国内自媒体&lt;/h3&gt;
 
-&lt;p&gt;平时，国内的桌式足球交流主要都在微信群中进行。如果想加入，可以发邮件 (crispgm+foosball@gmail.com) 找我咨询。&lt;/p&gt;
-
-&lt;p&gt;国外社区主要是 &lt;a href=&quot;https://www.forum.foosball.com&quot;&gt;foosball.com&lt;/a&gt; 和 Reddit &lt;a href=&quot;http://reddit.com/r/foosball/&quot;&gt;/r/foosball&lt;/a&gt;。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;FoosTime：&lt;a href=&quot;https://www.douyin.com/user/MS4wLjABAAAA26DYauxm56scLLI5dt5eFXttPTXPcdP614NgJNuWC-U&quot;&gt;抖音&lt;/a&gt; &lt;a href=&quot;https://space.bilibili.com/1498047973&quot;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;CrispFoosball：&lt;a href=&quot;https://www.douyin.com/user/MS4wLjABAAAAXpxFmS9wI61heyoDZel8mlCGC-NDyg9MYS0UAlX69dg&quot;&gt;抖音&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;桌式足球大联盟PFL：&lt;a href=&quot;https://space.bilibili.com/1352396640&quot;&gt;Bilibili&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;打球场所&quot;&gt;打球场所&lt;/h2&gt;
 
@@ -260,6 +494,12 @@ Fireball ITSF&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;
 
 &lt;p&gt;&lt;img src=&quot;https://crispgm.com/image/foosball/foosball-weapp.png&quot; alt=&quot;Foosball Weapp&quot; style=&quot;height: 480px;&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;交流群社区&quot;&gt;交流群/社区&lt;/h2&gt;
+
+&lt;p&gt;平时，国内的桌式足球交流主要都在微信群中进行。如果想加入，可以发邮件 (crispgm+foosball@gmail.com) 找我咨询。&lt;/p&gt;
+
+&lt;p&gt;国外社区主要是 &lt;a href=&quot;https://www.forum.foosball.com&quot;&gt;foosball.com&lt;/a&gt; 和 Reddit &lt;a href=&quot;http://reddit.com/r/foosball/&quot;&gt;/r/foosball&lt;/a&gt;。&lt;/p&gt;
+
 &lt;h2 id=&quot;相关资料&quot;&gt;&lt;strong&gt;相关资料&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
@@ -268,27 +508,18 @@ Fireball ITSF&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;
       &lt;p&gt;ITSF &lt;a href=&quot;https://www.table-soccer.org/&quot;&gt;https://www.table-soccer.org/&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Bonzini B90 ITSF: &lt;a href=&quot;https://www.bonzini.com/en/b90-models/106-b90-itsf-competition.html&quot;&gt;https://www.bonzini.com/en/b90-models/106-b90-itsf-competition.html&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Table Soccer Basics &lt;a href=&quot;https://www.tablesoccer.org/sites/default/files/files/Table_Soccer_Basics_EN.pdf&quot;&gt;https://www.tablesoccer.org/sites/default/files/files/Table_Soccer_Basics_EN.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Garlando Pro Champion &lt;a href=&quot;http://www.garlando.com/products/the-classics/home-football-tables/pro-champion/&quot;&gt;http://www.garlando.com/products/the-classics/home-football-tables/pro-champion/&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;ITSF 规则书 &lt;a href=&quot;https://www.tablesoccer.org/rules/documents/GBR-2022%20ITSF%20Standard%20Matchplay%20Rules_def.pdf&quot;&gt;https://www.tablesoccer.org/rules/documents/GBR-2022%20ITSF%20Standard%20Matchplay%20Rules_def.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Tornado &lt;a href=&quot;https://www.valley-dynamo.com/tornado-t-3000-itsf/&quot;&gt;https://www.valley-dynamo.com/tornado-t-3000-itsf/&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Fireball &lt;a href=&quot;https://www.amazon.com/dp/B01M260KK2&quot;&gt;https://www.amazon.com/dp/B01M260KK2&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;世界冠军列表 &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_world_table_football_champions&quot;&gt;https://en.wikipedia.org/wiki/List_of_world_table_football_champions&lt;/a&gt; &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:7&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;ITSF 规则书 &lt;a href=&quot;https://www.tablesoccer.org/rules/documents/GBR-2019%20ITSF%20Standard%20Matchplay%20Rules_def.pdf&quot;&gt;https://www.tablesoccer.org/rules/documents/GBR-2019%20ITSF%20Standard%20Matchplay%20Rules_def.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;世界冠军列表 &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_world_table_football_champions&quot;&gt;https://en.wikipedia.org/wiki/List_of_world_table_football_champions&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
         <link>https://crispgm.com/page/foosball-101.html</link>
         <guid isPermaLink="true">https://crispgm.com/page/foosball-101.html</guid>
         
