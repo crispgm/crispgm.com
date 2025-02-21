@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem 'base64'
+gem 'bigdecimal'
+gem 'csv'
 gem 'listen'
+gem 'logger'
 gem 'scss_lint', require: false
 
 group :jekyll_plugins do
