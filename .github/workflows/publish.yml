@@ -15,7 +15,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3
+          ruby-version: 4.0.0
           bundler-cache: true
       - name: 'Update Rubygems & Bundler'
         run: 'gem update --system --no-document && gem update bundler --no-document'
