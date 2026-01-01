@@ -51,7 +51,7 @@ namespace :site do
       sh 'git add .'
       sh "git commit --allow-empty -m \"Deployed at #{Time.now}\""
       github_token = ENV['GITHUB_TOKEN']
-      sh "git remote set-url --push origin https://crispgm:#{github_token}@github.com/crispgm/crispgm.com"
+      sh "git remote set-url --push origin https://x-access-token:#{github_token}@github.com/crispgm/crispgm.com.git"
       sh 'git push origin gh-pages'
     end
   end
